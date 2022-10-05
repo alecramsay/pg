@@ -1,3 +1,15 @@
+# VS Code project file
+.vscode/
+
+# Misc test files
+sandbox.py
+temp/
+logs/
+
+# Ignore Mac DS_Store files
+.DS_Store
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -56,7 +68,7 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
+*.byPriority
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
