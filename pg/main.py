@@ -104,3 +104,7 @@ def sum_area_pop(area, pop_by_geoid):
         total += pop_by_geoid[geoid]
 
     return total
+
+
+def stringify_districts(districts):
+    return "/".join([str(x) for x in districts])

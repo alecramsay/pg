@@ -87,7 +87,7 @@ write_csv(
     [
         {
             "AREA": k,
-            "DISTRICTS": v["districts"],
+            "DISTRICTS": stringify_districts(v["districts"]),
             "BLOCKS": v["blocks"],
             "POPULATION": v["pop"],
         }
