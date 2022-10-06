@@ -45,43 +45,12 @@ verbose = args.verbose
 ### LOAD THE MAPS ###
 
 maps_by_geoid = read_maps(state, year, map_type, verbose)
-
-
-### INVERT THE BLOCK ASSIGNMENTS INTO DISTRICTS ###
-
 maps_by_district = invert_maps(maps_by_geoid)
-
-
-### DEFINE AREAS ###
-
-Area = namedtuple("Area", ["districts", "geoids"])
-# districts is a list of district numbers
-# geoids is a set of geoids
 
 
 ### DIFF THE MAPS ###
 
-areas = list()
-
-# Add the first map's districts as the initial areas
-for district, geoids in maps_by_district[0].items():
-    areas.append(Area([district], geoids))
-
-# Diff each successive map in succession
-for map_by_district in maps_by_district[1:]:
-    new_areas = list()
-
-    for district, geoids in map_by_district.items():
-        for area in areas:
-            intersection = area.geoids.intersection(geoids)
-            if intersection:
-                districts = area.districts + [district]
-                new_areas.append(Area(districts, intersection))
-
-    areas = new_areas
-
-areas.sort(key=lambda area: len(area.geoids), reverse=True)
-
+areas = diff_maps(maps_by_district)
 
 ### PRINT THE RESULTS ###
 
