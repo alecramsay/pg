@@ -4,6 +4,8 @@
 MAIN ROUTINES
 """
 
+import json
+
 from .types import *
 from .io import *
 from .utils import *
@@ -31,7 +33,7 @@ def read_maps(state, year, map_type, verbose=False):
     return maps_by_geoid
 
 
-def invert_maps(maps_by_geoid):
+def invert_maps(maps_by_geoid, verbose=False):
     maps_by_district = list()
 
     for map_by_geoid in maps_by_geoid:
@@ -52,7 +54,7 @@ def invert_maps(maps_by_geoid):
     return maps_by_district
 
 
-def diff_maps(maps_by_district):
+def diff_maps(maps_by_district, verbose=False):
     areas = list()
 
     # Add the first map's districts as the initial areas
@@ -75,3 +77,30 @@ def diff_maps(maps_by_district):
     areas.sort(key=lambda area: len(area.geoids), reverse=True)
 
     return areas
+
+
+def read_census(state, xx, verbose=False):
+    """
+    Read the census data by block for a state.
+    """
+    rel_path = "data/{}/2020vt_Census_block_{}_data2.json".format(state, xx)
+    abs_path = FileSpec(rel_path).abs_path
+    with open(abs_path, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+
+    pop_by_geoid = dict()
+    for feature in data["features"]:
+        geoid = feature["properties"]["GEOID"]
+        pop = feature["properties"]["datasets"]["D20F"]["Tot"]
+
+        pop_by_geoid[geoid] = pop
+
+    return pop_by_geoid
+
+
+def sum_area_pop(area, pop_by_geoid):
+    total = 0
+    for geoid in area.geoids:
+        total += pop_by_geoid[geoid]
+
+    return total

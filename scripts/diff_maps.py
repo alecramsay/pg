@@ -41,6 +41,8 @@ year = args.year
 map_type = args.type
 verbose = args.verbose
 
+FIPS = {"MD": 24}  # TODO: add more states
+xx = FIPS[state]
 
 ### LOAD THE MAPS ###
 
@@ -50,22 +52,56 @@ maps_by_district = invert_maps(maps_by_geoid)
 
 ### DIFF THE MAPS ###
 
-areas = diff_maps(maps_by_district)
+areas = diff_maps(maps_by_district, verbose)
+pop_by_geoid = read_census(state, xx, verbose)
 
-### PRINT THE RESULTS ###
 
-total_blocks = 0
-for district, geoids in maps_by_district[0].items():
-    total_blocks += len(geoids)
+### PREP THE OUTPUT ###
 
-print()
-common_blocks = 0
+area_summary = dict()
+areas_by_block = dict()
+
+i = 1
 for area in areas:
     n_blocks = len(area.geoids)
-    common_blocks += n_blocks
-    print(area.districts, "|", n_blocks)
+    n_pop = sum_area_pop(area, pop_by_geoid)
 
-print()
-print("Areas:", len(areas))
-print("Missing:", total_blocks - common_blocks)
-print()
+    if n_pop > 0:
+        area_summary[i] = {
+            "districts": area.districts,
+            "blocks": n_blocks,
+            "pop": n_pop,
+        }
+        for geoid in area.geoids:
+            areas_by_block[geoid] = i
+
+        i += 1
+
+
+### WRITE OUTPUT FILES ###
+
+areas_csv = "results/{}_areas.csv".format(state)
+
+write_csv(
+    areas_csv,
+    [
+        {
+            "AREA": k,
+            "DISTRICTS": v["districts"],
+            "BLOCKS": v["blocks"],
+            "POPULATION": v["pop"],
+        }
+        for k, v in area_summary.items()
+    ],
+    # rows,
+    ["AREA", "DISTRICTS", "BLOCKS", "POPULATION"],
+)
+
+baf_csv = "results/{}_areas_by_block.csv".format(state)
+
+write_csv(
+    baf_csv,
+    [{"GEOID": k, "AREA": v} for k, v in areas_by_block.items()],
+    # rows,
+    ["GEOID", "AREA"],
+)

@@ -17,6 +17,8 @@ year = 2022
 map_type = "congressional"
 verbose = True
 
+FIPS = {"MD": 24}
+xx = FIPS[state]
 
 ### LOAD THE MAPS ###
 
@@ -26,23 +28,32 @@ maps_by_district = invert_maps(maps_by_geoid)
 
 ### DIFF THE MAPS ###
 
-areas = diff_maps(maps_by_district)
+areas = diff_maps(maps_by_district, verbose)
+pop_by_geoid = read_census(state, xx, verbose)
 
 
-### PRINT THE RESULTS ###
+### PREP THE OUTPUT ###
 
-total_blocks = 0
-for district, geoids in maps_by_district[0].items():
-    total_blocks += len(geoids)
+area_summary = dict()
+areas_by_block = dict()
 
-print()
-common_blocks = 0
+i = 1
 for area in areas:
     n_blocks = len(area.geoids)
-    common_blocks += n_blocks
-    print(area.districts, "|", n_blocks)
+    n_pop = sum_area_pop(area, pop_by_geoid)
 
-print()
-print("Areas:", len(areas))
-print("Missing:", total_blocks - common_blocks)
+    if n_pop > 0:
+        area_summary[i] = {
+            "districts": area.districts,
+            "blocks": n_blocks,
+            "pop": n_pop,
+        }
+        for geoid in area.geoids:
+            areas_by_block[geoid] = i
+
+        i += 1
+
+
+### WRITE OUTPUT FILES ###
+
 print()
