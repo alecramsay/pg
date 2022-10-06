@@ -17,9 +17,6 @@ Exploring redistricting tradeoffs inherent in a state's political geography
 
 ## TODO
 
-* Export BAF's for the other states' notable maps
-* Download census files for other states
-* Download block shapes for other states
 * Sort areas by population instead of # blocks
 * Add block-count validations
 * Diff all states
