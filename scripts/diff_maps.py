@@ -80,7 +80,7 @@ for area in areas:
 
 ### WRITE OUTPUT FILES ###
 
-areas_csv = "results/{}_areas.csv".format(state)
+areas_csv = "results/{}/{}_areas.csv".format(state, state)
 
 write_csv(
     areas_csv,
@@ -97,7 +97,7 @@ write_csv(
     ["AREA", "DISTRICTS", "BLOCKS", "POPULATION"],
 )
 
-baf_csv = "results/{}_areas_by_block.csv".format(state)
+baf_csv = "results/{}/{}_areas_by_block.csv".format(state, state)
 
 write_csv(
     baf_csv,
