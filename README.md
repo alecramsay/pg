@@ -17,5 +17,4 @@ Exploring redistricting tradeoffs inherent in a state's political geography
 
 ## TODO
 
-* Diff all states
 * Figure out how to visualize the diffs
