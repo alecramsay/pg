@@ -17,13 +17,13 @@ year = 2022
 map_type = "congressional"
 verbose = True
 
-FIPS = {"MD": 24}
 xx = FIPS[state]
 
 ### LOAD THE MAPS & DATA ###
 
 maps_by_geoid = read_maps(state, year, map_type, verbose)
 maps_by_district = invert_maps(maps_by_geoid)
+validate_maps(maps_by_district)
 pop_by_geoid = read_census(state, xx, verbose)
 
 

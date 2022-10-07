@@ -54,6 +54,24 @@ def invert_maps(maps_by_geoid, verbose=False):
     return maps_by_district
 
 
+def validate_maps(maps_by_district):
+    blocks_by_map = []
+
+    for m in maps_by_district:
+        n = 0
+        for k, v in m.items():
+            n += len(v)
+        blocks_by_map.append(n)
+
+    n = blocks_by_map[0]
+    all_same = all(x == n for x in blocks_by_map)
+
+    if not all_same:
+        print("ERROR: Maps have different numbers of blocks!")
+        print(blocks_by_map)
+        exit()
+
+
 def diff_maps(maps_by_district, verbose=False):
     areas = list()
 
