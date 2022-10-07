@@ -88,14 +88,28 @@ write_csv(
     [
         {
             "AREA": k,
-            "DISTRICTS": stringify_districts(v["districts"]),
+            "PROPORTIONAL": v["districts"][0],
+            "COMPETITIVE": v["districts"][1],
+            "MINORITY": v["districts"][2],
+            "COMPACT": v["districts"][3],
+            "SPLITTING": v["districts"][4],
+            # "DISTRICTS": stringify_districts(v["districts"]),
             "BLOCKS": v["blocks"],
             "POPULATION": v["pop"],
         }
         for k, v in area_summary.items()
     ],
     # rows,
-    ["AREA", "DISTRICTS", "BLOCKS", "POPULATION"],
+    [
+        "AREA",
+        "PROPORTIONAL",
+        "COMPETITIVE",
+        "MINORITY",
+        "COMPACT",
+        "SPLITTING",
+        "BLOCKS",
+        "POPULATION",
+    ],
 )
 
 baf_csv = "results/{}/{}_areas_by_block.csv".format(state, state)
