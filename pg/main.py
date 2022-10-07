@@ -74,7 +74,7 @@ def diff_maps(maps_by_district, verbose=False):
 
         areas = new_areas
 
-    areas.sort(key=lambda area: len(area.geoids), reverse=True)
+    # areas.sort(key=lambda area: len(area.geoids), reverse=True)
 
     return areas
 
@@ -104,6 +104,23 @@ def sum_area_pop(area, pop_by_geoid):
         total += pop_by_geoid[geoid]
 
     return total
+
+
+def sort_areas_by_pop(areas, pop_by_geoid):
+    sorted_areas = list()
+
+    for area in areas:
+        n_blocks = len(area.geoids)
+        n_pop = sum_area_pop(area, pop_by_geoid)
+
+        if n_pop > 0:
+            sorted_areas.append(
+                AreaExtended(area.districts, area.geoids, n_blocks, n_pop)
+            )
+
+    sorted_areas.sort(key=lambda area: area.population, reverse=True)
+
+    return sorted_areas
 
 
 def stringify_districts(districts):
