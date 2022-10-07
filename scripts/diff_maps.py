@@ -7,6 +7,7 @@ Diff the notable maps for a state & year.
 For example:
 
 $ scripts/diff_maps.py MD 2022 congressional
+$ scripts/diff_maps.py NY 2022 congressional
 
 For documentation, type:
 

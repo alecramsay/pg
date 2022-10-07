@@ -43,6 +43,10 @@ def invert_maps(maps_by_geoid, verbose=False):
             if is_water_only(geoid):
                 continue
 
+            # HACK: These two unpopulated blocks are missing from the NY most compact map.
+            if geoid in ["360610001001001", "360610001001000"]:
+                continue
+
             district = row["District"]
             if district not in inverted:
                 inverted[district] = set()
