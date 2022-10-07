@@ -17,6 +17,5 @@ Exploring redistricting tradeoffs inherent in a state's political geography
 
 ## TODO
 
-* Add block-count validations
 * Diff all states
 * Figure out how to visualize the diffs

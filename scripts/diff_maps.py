@@ -43,6 +43,9 @@ verbose = args.verbose
 
 xx = FIPS[state]
 
+print("Diffing {} {} maps for {}/{} ...".format(year, map_type, state, xx))
+
+
 ### LOAD THE MAPS & DATA ###
 
 maps_by_geoid = read_maps(state, year, map_type, verbose)
