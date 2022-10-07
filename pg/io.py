@@ -55,7 +55,7 @@ def write_csv(rel_path, rows, cols):
                 mod = {}
                 for (k, v) in row.items():
                     if isinstance(v, float):
-                        mod[k] = "{:.6f}".format(v)
+                        mod[k] = "{:.4f}".format(v)
                     else:
                         mod[k] = v
                 writer.writerow(mod)

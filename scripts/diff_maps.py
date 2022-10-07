@@ -6,8 +6,8 @@ Diff the notable maps for a state & year.
 
 For example:
 
-$ scripts/diff_maps.py MD 2022 congressional
-$ scripts/diff_maps.py NY 2022 congressional
+$ scripts/diff_maps.py MD 2022 congressional 8
+$ scripts/diff_maps.py NY 2022 congressional 26
 
 For documentation, type:
 
@@ -30,6 +30,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
 parser.add_argument("year", help="The map year (e.g., 2022)", type=int)
 parser.add_argument("type", help="The type of map (e.g., congressional)", type=str)
+parser.add_argument("districts", help="The # of districts", type=int)
 
 parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -40,6 +41,7 @@ args = parser.parse_args()
 state = args.state
 year = args.year
 map_type = args.type
+districts = args.districts
 verbose = args.verbose
 
 xx = FIPS[state]
@@ -54,6 +56,9 @@ maps_by_district = invert_maps(maps_by_geoid)
 validate_maps(maps_by_district)
 pop_by_geoid = read_census(state, xx, verbose)
 
+total_pop = sum(pop_by_geoid.values())
+district_pop = round(total_pop / districts)
+
 
 ### DIFF THE MAPS & SORT AREAS BY POPULATION ###
 
@@ -67,11 +72,19 @@ area_summary = dict()
 areas_by_block = dict()
 
 i = 1
+cumulative = 0
 for area in sorted_areas:
+    cumulative += area.population
     area_summary[i] = {
-        "districts": area.districts,
-        "blocks": area.blocks,
-        "pop": area.population,
+        "PROPORTIONAL": area.districts[0],
+        "COMPETITIVE": area.districts[1],
+        "MINORITY": area.districts[2],
+        "COMPACT": area.districts[3],
+        "SPLITTING": area.districts[4],
+        "BLOCKS": area.blocks,
+        "POPULATION": area.population,
+        "DISTRICT%": round(area.population / district_pop, 4),
+        "CUMULATIVE%": round(cumulative / total_pop, 4),
     }
     for geoid in area.geoids:
         areas_by_block[geoid] = i
@@ -88,14 +101,15 @@ write_csv(
     [
         {
             "AREA": k,
-            "PROPORTIONAL": v["districts"][0],
-            "COMPETITIVE": v["districts"][1],
-            "MINORITY": v["districts"][2],
-            "COMPACT": v["districts"][3],
-            "SPLITTING": v["districts"][4],
-            # "DISTRICTS": stringify_districts(v["districts"]),
-            "BLOCKS": v["blocks"],
-            "POPULATION": v["pop"],
+            "PROPORTIONAL": v["PROPORTIONAL"],
+            "COMPETITIVE": v["COMPETITIVE"],
+            "MINORITY": v["MINORITY"],
+            "COMPACT": v["COMPACT"],
+            "SPLITTING": v["SPLITTING"],
+            # "BLOCKS": v["BLOCKS"],
+            "POPULATION": v["POPULATION"],
+            "DISTRICT%": v["DISTRICT%"],
+            "CUMULATIVE%": v["CUMULATIVE%"],
         }
         for k, v in area_summary.items()
     ],
@@ -107,8 +121,10 @@ write_csv(
         "MINORITY",
         "COMPACT",
         "SPLITTING",
-        "BLOCKS",
+        # "BLOCKS",
         "POPULATION",
+        "DISTRICT%",
+        "CUMULATIVE%",
     ],
 )
 
