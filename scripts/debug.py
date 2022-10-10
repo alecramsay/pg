@@ -33,7 +33,9 @@ district_pop = round(total_pop / districts)
 
 ### DIFF THE MAPS & SORT AREAS BY POPULATION ###
 
-areas = diff_maps(maps_by_district, verbose)
-sorted_areas = sort_areas_by_pop(areas, pop_by_geoid)
+diffs = diff_map_pairs(maps_by_district, verbose)
+sorted_diffs = list()
+for areas in diffs:
+    sorted_diffs.append(sort_areas_by_pop(areas, pop_by_geoid))
 
 print()

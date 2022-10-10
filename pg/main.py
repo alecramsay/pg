@@ -76,7 +76,11 @@ def validate_maps(maps_by_district):
         exit()
 
 
-def diff_maps(maps_by_district, verbose=False):
+def diff_all_maps(maps_by_district, verbose=False):
+    """
+    Diff all maps in a list of maps.
+    """
+
     areas = list()
 
     # Add the first map's districts as the initial areas
@@ -96,9 +100,30 @@ def diff_maps(maps_by_district, verbose=False):
 
         areas = new_areas
 
-    # areas.sort(key=lambda area: len(area.geoids), reverse=True)
-
     return areas
+
+
+def diff_map_pairs(maps_by_district, verbose=False):
+    """
+    Diff maps 1-N with map 0.
+    """
+
+    diffs = []
+
+    # Diff each map with the first (most proportional)
+    for map_by_district in maps_by_district[1:]:
+        areas = list()
+
+        for base_district, base_geoids in maps_by_district[0].items():
+            for district, geoids in map_by_district.items():
+                intersection = base_geoids.intersection(geoids)
+                if intersection:
+                    districts = [base_district, district]
+                    areas.append(Area(districts, intersection))
+
+        diffs.append(areas)
+
+    return diffs
 
 
 def read_census(state, xx, verbose=False):

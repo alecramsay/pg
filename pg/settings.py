@@ -11,3 +11,11 @@ FIPS = {
     "PA": 42,
     "VA": 51,
 }
+
+NOTABLE_MAPS = [
+    # "PROPORTIONAL",
+    "COMPETITIVE",
+    "MINORITY",
+    "COMPACT",
+    "SPLITTING",
+]

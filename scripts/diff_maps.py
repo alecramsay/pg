@@ -62,77 +62,85 @@ district_pop = round(total_pop / districts)
 
 ### DIFF THE MAPS & SORT AREAS BY POPULATION ###
 
-areas = diff_maps(maps_by_district, verbose)
-sorted_areas = sort_areas_by_pop(areas, pop_by_geoid)
+diffs = diff_map_pairs(maps_by_district, verbose)
+sorted_diffs = list()
+for areas in diffs:
+    sorted_diffs.append(sort_areas_by_pop(areas, pop_by_geoid))
+
+# areas = diff_all_maps(maps_by_district, verbose)
+# sorted_areas = sort_areas_by_pop(areas, pop_by_geoid)
 
 
-### PREP THE OUTPUT ###
+### OUTPUT THE DIFFS ###
 
-area_summary = dict()
-areas_by_block = dict()
+for map, sorted_areas in enumerate(sorted_diffs):
+    area_summary = dict()
+    areas_by_block = dict()
 
-i = 1
-cumulative = 0
-for area in sorted_areas:
-    cumulative += area.population
-    area_summary[i] = {
-        "PROPORTIONAL": area.districts[0],
-        "COMPETITIVE": area.districts[1],
-        "MINORITY": area.districts[2],
-        "COMPACT": area.districts[3],
-        "SPLITTING": area.districts[4],
-        "BLOCKS": area.blocks,
-        "POPULATION": area.population,
-        "DISTRICT%": round(area.population / district_pop, 4),
-        "CUMULATIVE%": round(cumulative / total_pop, 4),
-    }
-    for geoid in area.geoids:
-        areas_by_block[geoid] = i
+    label = NOTABLE_MAPS[map]
+    i = 1
+    cumulative = 0
 
-    i += 1
-
-
-### WRITE OUTPUT FILES ###
-
-areas_csv = "results/{}/{}_areas.csv".format(state, state)
-
-write_csv(
-    areas_csv,
-    [
-        {
-            "AREA": k,
-            "PROPORTIONAL": v["PROPORTIONAL"],
-            "COMPETITIVE": v["COMPETITIVE"],
-            "MINORITY": v["MINORITY"],
-            "COMPACT": v["COMPACT"],
-            "SPLITTING": v["SPLITTING"],
-            # "BLOCKS": v["BLOCKS"],
-            "POPULATION": v["POPULATION"],
-            "DISTRICT%": v["DISTRICT%"],
-            "CUMULATIVE%": v["CUMULATIVE%"],
+    for area in sorted_areas:
+        cumulative += area.population
+        area_summary[i] = {
+            "PROPORTIONAL": area.districts[0],
+            label: area.districts[1],
+            # "COMPETITIVE": area.districts[1],
+            # "MINORITY": area.districts[2],
+            # "COMPACT": area.districts[3],
+            # "SPLITTING": area.districts[4],
+            "BLOCKS": area.blocks,
+            "POPULATION": area.population,
+            "DISTRICT%": round(area.population / district_pop, 4),
+            "CUMULATIVE%": round(cumulative / total_pop, 4),
         }
-        for k, v in area_summary.items()
-    ],
-    # rows,
-    [
-        "AREA",
-        "PROPORTIONAL",
-        "COMPETITIVE",
-        "MINORITY",
-        "COMPACT",
-        "SPLITTING",
-        # "BLOCKS",
-        "POPULATION",
-        "DISTRICT%",
-        "CUMULATIVE%",
-    ],
-)
+        for geoid in area.geoids:
+            areas_by_block[geoid] = i
 
-baf_csv = "results/{}/{}_areas_by_block.csv".format(state, state)
+        i += 1
 
-write_csv(
-    baf_csv,
-    [{"GEOID": k, "AREA": v} for k, v in areas_by_block.items()],
-    # rows,
-    ["GEOID", "AREA"],
-)
+    areas_csv = "results/{}/{}_{}_areas.csv".format(state, state, label)
+
+    write_csv(
+        areas_csv,
+        [
+            {
+                "AREA": k,
+                "PROPORTIONAL": v["PROPORTIONAL"],
+                label: v[label],
+                # "COMPETITIVE": v["COMPETITIVE"],
+                # "MINORITY": v["MINORITY"],
+                # "COMPACT": v["COMPACT"],
+                # "SPLITTING": v["SPLITTING"],
+                # "BLOCKS": v["BLOCKS"],
+                "POPULATION": v["POPULATION"],
+                "DISTRICT%": v["DISTRICT%"],
+                "CUMULATIVE%": v["CUMULATIVE%"],
+            }
+            for k, v in area_summary.items()
+        ],
+        # rows,
+        [
+            "AREA",
+            "PROPORTIONAL",
+            label,
+            # "COMPETITIVE",
+            # "MINORITY",
+            # "COMPACT",
+            # "SPLITTING",
+            # "BLOCKS",
+            "POPULATION",
+            "DISTRICT%",
+            "CUMULATIVE%",
+        ],
+    )
+
+    baf_csv = "results/{}/{}_{}_areas_by_block.csv".format(state, state, label)
+
+    write_csv(
+        baf_csv,
+        [{"GEOID": k, "AREA": v} for k, v in areas_by_block.items()],
+        # rows,
+        ["GEOID", "AREA"],
+    )
