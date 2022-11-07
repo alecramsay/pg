@@ -1,0 +1,2857 @@
+
+{
+	"AK": {
+		"stateCode": "AK", "name": "Alaska", "plans": [
+			{"stateCode": "AK", "year": 2018, "nDistricts": 40, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "AK 2018 Lower State House", "id": "5ab284b5-6786-4494-b4b4-19c8dce4daec", "thumbnail": "401ebf8c-15e5-45dd-b8b4-0c7c290b59d7.png"},
+			{"stateCode": "AK", "year": 2018, "nDistricts": 20, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "AK 2018 Upper State House", "id": "bdba735e-167f-4bb9-80e4-e27c2b294263", "thumbnail": "f1ca771c-99c5-4c1e-bbb0-a47102487f90.png"},
+			{
+				"stateCode": "AK",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "lower",
+				"description": "AK 2020 State House",
+				"title": "AK 2020 State House",
+				"id": "221a3b4c-750b-4ff6-a3a9-34a1f5b77e9f"
+			},
+			{
+				"stateCode": "AK",
+				"year": 2020,
+				"nDistricts": 20,
+				"planType": "upper",
+				"description": "AK 2020 State Senate",
+				"title": "AK 2020 State Senate",
+				"id": "4ab6f5a0-0c30-4fc4-9b2d-706e9026d87f"
+			},
+			{
+				"stateCode": "AK",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "lower",
+				"description": "AK 2022 State House",
+				"title": "AK 2022 State House",
+				"id": "00c40e22-b9d4-4be4-b83c-0fe653360f1c",
+				"pendingCourtApproval": false
+			},
+			{
+				"stateCode": "AK",
+				"year": 2022,
+				"nDistricts": 20,
+				"planType": "upper",
+				"description": "AK 2022 State Senate",
+				"title": "AK 2022 State Senate",
+				"id": "bdb0da36-3ec9-42ab-8971-643d667dbf6b",
+				"pendingCourtApproval": false
+			}
+		]
+	},
+	"AL": {
+		"stateCode": "AL", "name": "Alabama", "plans": [
+			{"stateCode": "AL", "year": 115, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AL 116th Congressional", "id": "a3df66fd-3cb8-4c76-ba40-04a804c80a20", "thumbnail": "14d34dc8-a4eb-46be-9add-62d291444b73.png"},
+			{"stateCode": "AL", "year": 116, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AL 116th Congressional", "id": "a3df66fd-3cb8-4c76-ba40-04a804c80a20", "thumbnail": "14d34dc8-a4eb-46be-9add-62d291444b73.png"},
+			{"stateCode": "AL", "year": 2018, "nDistricts": 105, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "AL 2018 Lower State House", "id": "2f8b0500-89c0-4850-a322-6bbca01ef671", "thumbnail": "bb60f99c-5ec4-4df9-8bf0-cebcc3c839ea.png"},
+			{"stateCode": "AL", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "AL 2018 Upper State House", "id": "dbd4c81b-34c4-4e41-8b1f-da634a6d9a6e", "thumbnail": "6372268f-f089-4fc9-9af9-2dfc9de973bf.png"},
+			{
+				"stateCode": "AL",
+				"year": 2020,
+				"nDistricts": 7,
+				"planType": "congress",
+				"description": "AL 2020 Congressional",
+				"title": "AL 2020 Congressional",
+				"id": "f025ff76-e268-4033-971d-d7d755ea01bb"
+			},
+			{
+				"stateCode": "AL",
+				"year": 2020,
+				"nDistricts": 105,
+				"planType": "lower",
+				"description": "AL 2020 State House",
+				"title": "AL 2020 State House",
+				"id": "344dad94-a85c-4a55-8961-39d88e8835d0"
+			},
+			{
+				"stateCode": "AL",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "AL 2020 State Senate",
+				"title": "AL 2020 State Senate",
+				"id": "d68ce671-e1a9-4806-9eac-ba7478189558"
+			},
+			{
+				"stateCode": "AL",
+				"year": 2022,
+				"nDistricts": 7,
+				"planType": "congress",
+				"description": "AL 2022 Congressional",
+				"title": "AL 2022 Congressional",
+				"id": "b1cfc3f6-27df-498d-a147-0664d75fea88"
+			},
+			{
+				"stateCode": "AL",
+				"year": 2022,
+				"nDistricts": 105,
+				"planType": "lower",
+				"description": "AL 2022 State House",
+				"title": "AL 2022 State House",
+				"id": "642e8d2a-248c-4191-a88a-a6cdad508cdb"
+			},
+			{
+				"stateCode": "AL",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "AL 2022 State Senate",
+				"title": "AL 2022 State Senate",
+				"id": "b694ea80-20d6-45fb-a0e2-09ddaa2880d5"
+			}
+		]
+	},
+	"AR": {
+		"stateCode": "AR", "name": "Arkansas", "plans": [
+			{"stateCode": "AR", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AR 116th Congress", "id": "362b215a-ca8d-4796-b024-afb1b2144472", "thumbnail": "0373168a-2bd9-4f5c-b605-cc77da6b3942.png"},
+			{"stateCode": "AR", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AR 116th Congress", "id": "362b215a-ca8d-4796-b024-afb1b2144472", "thumbnail": "0373168a-2bd9-4f5c-b605-cc77da6b3942.png"},
+			{"stateCode": "AR", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "AR 2018 Lower State House", "id": "6a179e3d-0f5a-4d37-b22e-aedb1180891b", "thumbnail": "d740c29d-6089-4d5e-829e-3b592f5da886.png"},
+			{"stateCode": "AR", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "AR 2018 Upper State House", "id": "23f3b195-d111-449c-afdc-1dab33556c20", "thumbnail": "56875461-3cef-415d-9eaa-2b9b0c1699c5.png"},
+			{
+				"stateCode": "AR",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "AR 2020 Congressional",
+				"title": "AR 2020 Congressional",
+				"id": "1db11e90-c162-4363-847c-a0d34a8864e8"
+			},
+			{
+				"stateCode": "AR",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "AR 2020 State House",
+				"title": "AR 2020 State House",
+				"id": "5ae54dad-eff3-4691-a70a-93a6c4c7d54f"
+			},
+			{
+				"stateCode": "AR",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "AR 2020 State Senate",
+				"title": "AR 2020 State Senate",
+				"id": "675350c0-88b5-4e21-bc75-72ebd663f484"
+			},
+			{
+				"stateCode": "AR",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "AR 2022 Congressional",
+				"title": "AR 2022 Congressional",
+				"id": "fa3434ec-4f52-48de-947b-5998b6937bf0"
+			},
+			{
+				"stateCode": "AR",
+				"year": 2022,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "AR 2022 State House",
+				"title": "AR 2022 State House",
+				"id": "583730d5-1254-4dca-8f73-850940804307"
+			},
+			{
+				"stateCode": "AR",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "AR 2022 State Senate",
+				"title": "AR 2022 State Senate",
+				"id": "083cee53-0d0c-43af-ace1-863ccd3a2fe5"
+			}
+		]
+	},
+	"AZ": {
+		"stateCode": "AZ", "name": "Arizona", "plans": [
+			{"stateCode": "AZ", "year": 115, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AZ 116th Congressional", "id": "411b45cb-5c12-471e-afe2-9440225624b4", "thumbnail": "58ded7ee-cbc5-4044-9617-17e10c24f19d.png"},
+			{"stateCode": "AZ", "year": 116, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "AZ 116th Congressional", "id": "411b45cb-5c12-471e-afe2-9440225624b4", "thumbnail": "58ded7ee-cbc5-4044-9617-17e10c24f19d.png"},
+			{"stateCode": "AZ", "year": 2018, "nDistricts": 30, "planType": "lower", "description": "Districts for the 2018 Upper State House", "title": "AZ 2018 Upper State House", "id": "8c641e70-cbc1-43cd-9458-4fcba1481c08", "thumbnail": "cf407c86-8a24-4533-b997-dfe42c306e91.png"},
+			{"stateCode": "AZ", "year": 2018, "nDistricts": 30, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "AZ 2018 Upper State House", "id": "8c641e70-cbc1-43cd-9458-4fcba1481c08", "thumbnail": "cf407c86-8a24-4533-b997-dfe42c306e91.png"},
+			{
+				"stateCode": "AZ",
+				"year": 2020,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "AZ 2020 Congressional",
+				"title": "AZ 2020 Congressional",
+				"id": "283ef00f-9b80-4547-984f-74c25f554eef"
+			},
+			{
+				"stateCode": "AZ",
+				"year": 2020,
+				"nDistricts": 30,
+				"planType": "upper",
+				"description": "AZ 2020 State Legislatures",
+				"title": "AZ 2020 State Legislatures",
+				"id": "315552d3-98d9-4f42-a421-e8a25bc3de17"
+			},
+			{
+				"stateCode": "AZ",
+				"year": 2022,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "AZ 2022 Congressional",
+				"title": "AZ 2022 Congressional",
+				"id": "4ee8ecf2-14b7-4a8d-99bc-82fa633a9305"
+			},
+			{
+				"stateCode": "AZ",
+				"year": 2022,
+				"nDistricts": 30,
+				"planType": "upper",
+				"description": "AZ 2022 State Legislature",
+				"title": "AZ 2022 State Legislature",
+				"id": "72e34ca5-9ae1-4ddd-96f0-697bd261294e"
+			}
+		]
+	},
+	"CA": {
+		"stateCode": "CA", "name": "California", "plans": [
+			{"stateCode": "CA", "year": 115, "nDistricts": 53, "planType": "congress", "description": "", "title": "CA 116th Congressional", "id": "49552eb5-eb2b-4d2b-b3f3-7fb4479039dd", "thumbnail": "ad21f8d0-e6f4-45b8-9856-a337fffae6db.png"},
+			{"stateCode": "CA", "year": 116, "nDistricts": 53, "planType": "congress", "description": "", "title": "CA 116th Congressional", "id": "49552eb5-eb2b-4d2b-b3f3-7fb4479039dd", "thumbnail": "ad21f8d0-e6f4-45b8-9856-a337fffae6db.png"},
+			{"stateCode": "CA", "year": 2018, "nDistricts": 80, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "CA 2018 Lower State House", "id": "c117a92d-7b7f-4c93-9d31-8e9b023aacbc", "thumbnail": "1993b868-f413-4cb8-ab7a-55c4f6386977.png"},
+			{"stateCode": "CA", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "CA 2018 Upper State House", "id": "384d098d-13bf-464d-ac2d-8691804542b6", "thumbnail": "2e2d7063-3a91-4fcc-b1d7-8be4ae85867c.png"},
+			{
+				"stateCode": "CA",
+				"year": 2020,
+				"nDistricts": 53,
+				"planType": "congress",
+				"description": "CA 2020 Congressional",
+				"title": "CA 2020 Congressional",
+				"id": "d6ccadfa-243e-4ecc-9bb2-716b3f82afee"
+			},
+			{
+				"stateCode": "CA",
+				"year": 2020,
+				"nDistricts": 80,
+				"planType": "lower",
+				"description": "CA 2020 State House",
+				"title": "CA 2020 State House",
+				"id": "c16e04b6-9e99-4be2-bbc7-b37713c0b4a6"
+			},
+			{
+				"stateCode": "CA",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "CA 2020 State Senate",
+				"title": "CA 2020 State Senate",
+				"id": "4767f8bd-f938-4f8b-873a-5f52add3985d"
+			},
+			{
+				"stateCode": "CA",
+				"year": 2022,
+				"nDistricts": 52,
+				"planType": "congress",
+				"description": "CA 2022 Congressional",
+				"title": "CA 2022 Congressional",
+				"id": "fc9d2d06-7c7f-451c-92cb-122127a79c29"
+			},
+			{
+				"stateCode": "CA",
+				"year": 2022,
+				"nDistricts": 80,
+				"planType": "lower",
+				"description": "CA 2022 State House",
+				"title": "CA 2022 State House",
+				"id": "43cea5ab-ef0a-4946-b3e2-c3f2aaf73cf1"
+			},
+			{
+				"stateCode": "CA",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "CA 2022 State Senate",
+				"title": "CA 2022 State Senate",
+				"id": "f0a4ed9d-205f-4122-abab-fa3c75b6b050"
+			}					
+		]
+	},
+	"CO": {
+		"stateCode": "CO", "name": "Colorado", "plans": [
+			{"stateCode": "CO", "year": 115, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "CO 116th Congressional", "id": "8db12fcc-9d2d-4305-8766-505d5fe93d81", "thumbnail": "9308c545-6e23-4b04-852a-1872578a3b8d.png"},
+			{"stateCode": "CO", "year": 116, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "CO 116th Congressional", "id": "8db12fcc-9d2d-4305-8766-505d5fe93d81", "thumbnail": "9308c545-6e23-4b04-852a-1872578a3b8d.png"},
+			{"stateCode": "CO", "year": 2018, "nDistricts": 65, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "CO 2018 Lower State House", "id": "23e50f87-b194-4dd7-89c9-c166ebd69eb2", "thumbnail": "7530ce4a-0209-43ea-80a4-ea866e8bc49b.png"},
+			{"stateCode": "CO", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "CO 2018 Upper State House", "id": "d8bc1a66-0ecc-4cf1-8e35-eb5d615aad3c", "thumbnail": "048e95e6-1711-4cdd-a483-b253327294d8.png"},
+			{
+				"stateCode": "CO",
+				"year": 2020,
+				"nDistricts": 7,
+				"planType": "congress",
+				"description": "CO 2020 Congressional",
+				"title": "CO 2020 Congressional",
+				"id": "22b4dc91-5c29-4d11-a408-108feda65390"
+			},
+			{
+				"stateCode": "CO",
+				"year": 2020,
+				"nDistricts": 65,
+				"planType": "lower",
+				"description": "CO 2020 State House",
+				"title": "CO 2020 State House",
+				"id": "89ac698a-6544-401f-95ba-29d3f2451c7a"
+			},
+			{
+				"stateCode": "CO",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "CO 2020 State Senate",
+				"title": "CO 2020 State Senate",
+				"id": "fc463936-d190-4975-b95c-18a59a899747"
+			},			
+			{
+				"stateCode": "CO",
+				"year": 2022,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "CO 2022 Congressional",
+				"title": "CO 2022 Congressional",
+				"id": "39f44408-23f7-439d-b7eb-923da58b63df"
+			},
+			{
+				"stateCode": "CO",
+				"year": 2022,
+				"nDistricts": 65,
+				"planType": "lower",
+				"description": "CO 2022 State House",
+				"title": "CO 2022 State House",
+				"id": "dee1f8ad-23c1-497b-859c-6d1a9293bbd5"
+			},
+			{
+				"stateCode": "CO",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "CO 2022 State Senate",
+				"title": "CO 2022 State Senate",
+				"id": "9b5ec272-1fba-4a7a-ac6c-f2dcb4c6d0ae"
+			}
+		]
+	},
+	"CT": {
+		"stateCode": "CT", "name": "Connecticut", "plans": [
+			{"stateCode": "CT", "year": 115, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "CT 116th Congressional", "id": "aba6596c-99e3-4af9-8c6f-b0d67b9efbd6", "thumbnail": "88a22c60-6801-4330-9cc5-a57b5837e2a5.png"},
+			{"stateCode": "CT", "year": 116, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "CT 116th Congressional", "id": "aba6596c-99e3-4af9-8c6f-b0d67b9efbd6", "thumbnail": "88a22c60-6801-4330-9cc5-a57b5837e2a5.png"},
+			{"stateCode": "CT", "year": 2018, "nDistricts": 151, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "CT 2018 Lower State House", "id": "5b10f7f3-017d-4ec8-8750-e1011badc02d", "thumbnail": "a986a28d-5ca8-4f6d-9f68-dd890886bcac.png"},
+			{"stateCode": "CT", "year": 2018, "nDistricts": 36, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "CT 2018 Upper State House", "id": "dfa5bc60-e914-4e81-a2d4-9aa6adc17950", "thumbnail": "98ad7d58-7533-43f0-9a07-fafea059c944.png"},
+			{
+				"stateCode": "CT",
+				"year": 2020,
+				"nDistricts": 5,
+				"planType": "congress",
+				"description": "CT 2020 Congressional",
+				"title": "CT 2020 Congressional",
+				"id": "94bd0713-6e46-4041-9eca-75265455c49f"
+			},
+			{
+				"stateCode": "CT",
+				"year": 2020,
+				"nDistricts": 151,
+				"planType": "lower",
+				"description": "CT 2020 State House",
+				"title": "CT 2020 State House",
+				"id": "d667a31e-a2c1-45f7-ad27-73250e674679"
+			},
+			{
+				"stateCode": "CT",
+				"year": 2020,
+				"nDistricts": 36,
+				"planType": "upper",
+				"description": "CT 2020 State Senate",
+				"title": "CT 2020 State Senate",
+				"id": "458c5cf5-f54e-42b4-b8f5-0aa2e2de2721"
+			},
+			{
+				"stateCode": "CT",
+				"year": 2022,
+				"nDistricts": 5,
+				"planType": "congress",
+				"description": "CT 2022 Congressional",
+				"title": "CT 2022 Congressional",
+				"id": "707f203c-ce98-4de8-b150-a2605136e015"
+			},
+			{
+				"stateCode": "CT",
+				"year": 2022,
+				"nDistricts": 151,
+				"planType": "lower",
+				"description": "CT 2022 State House",
+				"title": "CT 2022 State House",
+				"id": "2e38109d-9987-46e3-9ff0-dd6c3caa59e8"
+			},
+			{
+				"stateCode": "CT",
+				"year": 2022,
+				"nDistricts": 36,
+				"planType": "upper",
+				"description": "CT 2022 State Senate",
+				"title": "CT 2022 State Senate",
+				"id": "fc9e83c0-59e2-4dea-b0cf-d2fff1c0b8a3"
+			}
+		]
+	},
+	"DE": {
+		"stateCode": "DE", "name": "Delaware", "plans": [
+			{"stateCode": "DE", "year": 2018, "nDistricts": 41, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "DE 2018 Lower State House", "id": "26b3aa65-eb6f-4af9-a5f7-039528942d20", "thumbnail": "7cabf8b0-abd0-4cb7-8717-ca04bc9229c6.png"}, 
+			{"stateCode": "DE", "year": 2018, "nDistricts": 21, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "DE 2018 Upper State House", "id": "c1407133-974b-4f42-aac5-0507a57c74b5", "thumbnail": "ac4ac48c-e586-4a60-9cb0-f91c114c5f55.png"},
+			{
+				"stateCode": "DE",
+				"year": 2020,
+				"nDistricts": 41,
+				"planType": "lower",
+				"description": "DE 2020 State House",
+				"title": "DE 2020 State House",
+				"id": "6c396af4-564d-477b-841a-9c0b055f74d4"
+			},
+			{
+				"stateCode": "DE",
+				"year": 2020,
+				"nDistricts": 21,
+				"planType": "upper",
+				"description": "DE 2020 State Senate",
+				"title": "DE 2020 State Senate",
+				"id": "c4d257ff-1d98-4901-b720-d50254dbb792"
+			},
+			{
+				"stateCode": "DE",
+				"year": 2022,
+				"nDistricts": 41,
+				"planType": "lower",
+				"description": "DE 2022 State House",
+				"title": "DE 2022 State House",
+				"id": "4c5ea994-efe7-41d0-819e-8f42ea715d57"
+			},
+			{
+				"stateCode": "DE",
+				"year": 2022,
+				"nDistricts": 21,
+				"planType": "upper",
+				"description": "DE 2022 State Senate",
+				"title": "DE 2022 State Senate",
+				"id": "44f96cf9-7f2d-44a5-a989-373aaca36239"
+			}
+		]
+	},
+	"FL": {
+		"stateCode": "FL", "name": "Florida", "plans": [
+			{"stateCode": "FL", "year": 115, "nDistricts": 27, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "FL 116th Congressional", "id": "7d61faa0-1353-4a5c-967f-1cec59cc8f55", "thumbnail": "808b35af-1ee3-48ea-bdf2-5ea15db74e20.png"}, 
+			{"stateCode": "FL", "year": 116, "nDistricts": 27, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "FL 116th Congressional", "id": "7d61faa0-1353-4a5c-967f-1cec59cc8f55", "thumbnail": "808b35af-1ee3-48ea-bdf2-5ea15db74e20.png"}, 
+			{"stateCode": "FL", "year": 2018, "nDistricts": 120, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "FL 2018 Lower State House", "id": "0cdef6da-77c9-4d74-bfed-7905acdd875e", "thumbnail": "27de1973-2ce7-41d5-b7a4-b7e30c9d2117.png"}, 
+			{"stateCode": "FL", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "FL 2018 Upper State House", "id": "82698093-33d3-46d2-ab17-8c83d84a626a", "thumbnail": "a2dc9a42-0790-4e98-8d19-305f7aebd0ef.png"},
+			{
+				"stateCode": "FL",
+				"year": 2020,
+				"nDistricts": 27,
+				"planType": "congress",
+				"description": "FL 2020 Congressional",
+				"title": "FL 2020 Congressional",
+				"id": "96dd2bb5-d35c-4bbe-a28e-f798072e0983"
+			},
+			{
+				"stateCode": "FL",
+				"year": 2020,
+				"nDistricts": 120,
+				"planType": "lower",
+				"description": "FL 2020 State House",
+				"title": "FL 2020 State House",
+				"id": "1316ea9d-fedd-405e-bcdc-e2b234e2c48f"
+			},
+			{
+				"stateCode": "FL",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "FL 2020 State Senate",
+				"title": "FL 2020 State Senate",
+				"id": "07ea1b6e-0d01-4f07-b616-975c846a0800"
+			},
+			{
+				"stateCode": "FL",
+				"year": 2022,
+				"nDistricts": 28,
+				"planType": "congress",
+				"description": "FL 2022 Congressional",
+				"title": "FL 2022 Congressional",
+				"id": "3a6791b9-a186-4691-a95c-5d51dbb3be1c"
+			},
+			{
+				"stateCode": "FL",
+				"year": 2022,
+				"nDistricts": 120,
+				"planType": "lower",
+				"description": "FL 2022 State House",
+				"title": "FL 2022 State House",
+				"id": "488c9284-a2c4-4846-9d7d-08af9d98a6c5"
+			},
+			{
+				"stateCode": "FL",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "FL 2022 State Senate",
+				"title": "FL 2022 State Senate",
+				"id": "91f2ce50-b3c1-4d74-87f2-d3a9fa078129"
+			}
+		]
+	},
+	"GA": {
+		"stateCode": "GA", "name": "Georgia", "plans": [
+			{"stateCode": "GA", "year": 115, "nDistricts": 14, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "GA 116th Congressional", "id": "fddc521a-0e08-4a52-a17c-12f9f81da1b7", "thumbnail": "aabe8adb-2145-4b8f-82c7-6d606bac3e7b.png"}, 
+			{"stateCode": "GA", "year": 116, "nDistricts": 14, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "GA 116th Congressional", "id": "fddc521a-0e08-4a52-a17c-12f9f81da1b7", "thumbnail": "aabe8adb-2145-4b8f-82c7-6d606bac3e7b.png"}, 
+			{"stateCode": "GA", "year": 2018, "nDistricts": 180, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "GA 2018 Lower State House", "id": "e0a2a894-9fe5-452b-82f3-64869e2f2003", "thumbnail": "a298f125-c3d0-4fcc-86f5-b7deb02017b8.png"}, 
+			{"stateCode": "GA", "year": 2018, "nDistricts": 56, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "GA 2018 Upper State House", "id": "2ded4fc6-7347-4065-8207-fb6392af706c", "thumbnail": "20aacf58-1229-4505-b0f6-77061e81819b.png"},
+			{
+				"stateCode": "GA",
+				"year": 2020,
+				"nDistricts": 14,
+				"planType": "congress",
+				"description": "GA 2020 Congressional",
+				"title": "GA 2020 Congressional",
+				"id": "434b0674-aa0b-4c34-837e-d46d5af6e8d6"
+			},
+			{
+				"stateCode": "GA",
+				"year": 2020,
+				"nDistricts": 180,
+				"planType": "lower",
+				"description": "GA 2020 State House",
+				"title": "GA 2020 State House",
+				"id": "372f005d-224d-44cb-9a1a-90724467a7be"
+			},
+			{
+				"stateCode": "GA",
+				"year": 2020,
+				"nDistricts": 56,
+				"planType": "upper",
+				"description": "GA 2020 State Senate",
+				"title": "GA 2020 State Senate",
+				"id": "4ecaf2bf-0b61-4a17-b12e-3310e276ab61"
+			},
+			{
+				"stateCode": "GA",
+				"year": 2022,
+				"nDistricts": 14,
+				"planType": "congress",
+				"description": "GA 2022 Congressional",
+				"title": "GA 2022 Congressional",
+				"id": "3a370cc7-f820-4af4-8fca-a27ec52502b7"
+			},
+			{
+				"stateCode": "GA",
+				"year": 2022,
+				"nDistricts": 180,
+				"planType": "lower",
+				"description": "GA 2022 State House",
+				"title": "GA 2022 State House",
+				"id": "041f73c7-8f4f-48c5-a5ff-cb059e692827"
+			},
+			{
+				"stateCode": "GA",
+				"year": 2022,
+				"nDistricts": 56,
+				"planType": "upper",
+				"description": "GA 2022 State Senate",
+				"title": "GA 2022 State Senate",
+				"id": "f1249844-4b84-45e6-9ca6-e13f6ddddb0d"
+			}
+		]
+	},
+	"HI": {
+		"stateCode": "HI", "name": "Hawaii", "plans": [
+			{"stateCode": "HI", "year": 115, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "HI 116th Congressional", "id": "1b68a414-7d71-4db5-b158-878a3cef3a80", "thumbnail": "e00941b9-f506-41c8-b487-39d993ecdd46.png"}, 
+			{"stateCode": "HI", "year": 116, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "HI 116th Congressional", "id": "1b68a414-7d71-4db5-b158-878a3cef3a80", "thumbnail": "HI-congressional.png"}, 
+			{"stateCode": "HI", "year": 2018, "nDistricts": 51, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "HI 2018 Lower State House", "id": "d5b23ed3-c772-48f4-849e-8080ed43c43a", "thumbnail": "HI-state-lower-house.png"}, 
+			{"stateCode": "HI", "year": 2018, "nDistricts": 25, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "HI 2018 Upper State House", "id": "1187472e-e881-4918-a0ac-884f8a4ab829", "thumbnail": "HI-state-upper-house.png"},
+			{
+				"stateCode": "HI",
+				"year": 2020,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "HI 2020 Congressional",
+				"title": "HI 2020 Congressional",
+				"id": "f0155598-3679-42aa-9ff9-17f7a3b6ad82"
+			},
+			{
+				"stateCode": "HI",
+				"year": 2020,
+				"nDistricts": 51,
+				"planType": "lower",
+				"description": "HI 2020 State House",
+				"title": "HI 2020 State House",
+				"id": "783f9996-34b4-443e-b183-3f555dbc43ac"
+			},
+			{
+				"stateCode": "HI",
+				"year": 2020,
+				"nDistricts": 25,
+				"planType": "upper",
+				"description": "HI 2020 State Senate",
+				"title": "HI 2020 State Senate",
+				"id": "affa089a-a56a-435d-9163-6d1a9ad8eeec"
+			},
+			{
+				"stateCode": "HI",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "HI 2022 Congressional",
+				"title": "HI 2022 Congressional",
+				"id": "021708d3-fda3-45b0-ae4b-9362a4f23fe9"
+			},
+			{
+				"stateCode": "HI",
+				"year": 2022,
+				"nDistricts": 51,
+				"planType": "lower",
+				"description": "HI 2022 State House",
+				"title": "HI 2022 State House",
+				"id": "6e4f9c2e-6a11-4848-adab-22f3113bef79"
+			},
+			{
+				"stateCode": "HI",
+				"year": 2022,
+				"nDistricts": 25,
+				"planType": "upper",
+				"description": "HI 2022 State Senate",
+				"title": "HI 2022 State Senate",
+				"id": "c4d580e8-5bfd-4656-820d-b58c7ccfe92c"
+			}
+		]
+	},
+	"IA": {
+		"stateCode": "IA", "name": "Iowa", "plans": [
+			{"stateCode": "IA", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IA 116th Congressional", "id": "e43359c8-d3cc-4606-ba54-b84e7e7f2e6f", "thumbnail": "c366c461-3ccd-40da-a474-55c8d93e7649.png"}, 
+			{"stateCode": "IA", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IA 116th Congressional", "id": "e43359c8-d3cc-4606-ba54-b84e7e7f2e6f", "thumbnail": "c366c461-3ccd-40da-a474-55c8d93e7649.png"}, 
+			{"stateCode": "IA", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "IA 2018 Lower State House", "id": "b7cdc251-1cff-4857-9496-2de7b0359d2c", "thumbnail": "9cf363a5-1138-4b3a-8e83-1aad233989cd.png"}, 
+			{"stateCode": "IA", "year": 2018, "nDistricts": 50, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "IA 2018 Upper State House", "id": "9b7066c0-54eb-4d3d-b2ca-f8699a15dc2e", "thumbnail": "7ebe43fb-12fa-4948-a211-20741b0aea93.png"},
+			{
+				"stateCode": "IA",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "IA 2020 Congressional",
+				"title": "IA 2020 Congressional",
+				"id": "2d801234-32b3-4a96-a64c-82e27c460716"
+			},
+			{
+				"stateCode": "IA",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "IA 2020 State House",
+				"title": "IA 2020 State House",
+				"id": "208b9eab-83c0-4837-883d-a2541712b676"
+			},
+			{
+				"stateCode": "IA",
+				"year": 2020,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "IA 2020 State Senate",
+				"title": "IA 2020 State Senate",
+				"id": "29dd3b02-60bc-4602-a250-9a9710fdd9e2"
+			},
+			{
+				"stateCode": "IA",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "IA 2022 Congressional",
+				"title": "IA 2022 Congressional",
+				"id": "628d5e9a-bd35-4248-aa8c-73af095e0135"
+			},
+			{
+				"stateCode": "IA",
+				"year": 2022,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "IA 2022 State House",
+				"title": "IA 2022 State House",
+				"id": "3bba1647-f4a4-4374-8021-a8e4aeb6f15a"
+			},
+			{
+				"stateCode": "IA",
+				"year": 2022,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "IA 2022 State Senate",
+				"title": "IA 2022 State Senate",
+				"id": "0e81cf3d-648d-4851-b14b-0ee893f92610"
+			}
+		]
+	},
+	"ID": {
+		"stateCode": "ID", "name": "Idaho", "plans": [
+			{"stateCode": "ID", "year": 115, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "ID 116th Congressional", "id": "e196e984-cd84-45cb-abc1-d82fbad0445b", "thumbnail": "062a2af0-9706-469e-a640-5472e3d078f9.png"}, 
+			{"stateCode": "ID", "year": 116, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "ID 116th Congressional", "id": "e196e984-cd84-45cb-abc1-d82fbad0445b", "thumbnail": "062a2af0-9706-469e-a640-5472e3d078f9.png"}, 
+			{"stateCode": "ID", "year": 2018, "nDistricts": 35, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "ID 2018 Lower State House", "id": "82adcf76-7859-4f78-a9de-a6ad500ae91c", "thumbnail": "fbf8bf3f-451e-44c7-acb5-3a517b50f8fa.png"}, 
+			{"stateCode": "ID", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Lower State House", "title": "ID 2018 Lower State House", "id": "82adcf76-7859-4f78-a9de-a6ad500ae91c", "thumbnail": "fbf8bf3f-451e-44c7-acb5-3a517b50f8fa.png"},
+			{
+				"stateCode": "ID",
+				"year": 2020,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "ID 2020 Congressional",
+				"title": "ID 2020 Congressional",
+				"id": "14e046b2-98a2-4b59-bfe3-6c8afee85f43"
+			},
+			{
+				"stateCode": "ID",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "ID 2020 State Legislatures",
+				"title": "ID 2020 State Legislatures",
+				"id": "b2528343-8aad-4a29-9978-22ab901d6508"
+			},
+			{
+				"stateCode": "ID",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "ID 2022 Congressional",
+				"title": "ID 2022 Congressional",
+				"id": "ebc8cec8-b919-4a66-9b42-9cf5bf7e02a1"
+			},
+			{
+				"stateCode": "ID",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "ID 2022 State Legislature",
+				"title": "ID 2022 State Legislature",
+				"id": "a56da372-79a4-48e7-9fd5-b689d0ccb602"
+			}
+		]
+	},
+	"IL": {
+		"stateCode": "IL", "name": "Illinois", "plans": [
+			{"stateCode": "IL", "year": 115, "nDistricts": 18, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IL 116th Congressional", "id": "032b7ec2-cdf0-4d3e-a02b-77c2d28a2008", "thumbnail": "5df0f1b7-6428-46d9-9b8c-4a8fa5742dab.png"}, 
+			{"stateCode": "IL", "year": 116, "nDistricts": 18, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IL 116th Congressional", "id": "032b7ec2-cdf0-4d3e-a02b-77c2d28a2008", "thumbnail": "5df0f1b7-6428-46d9-9b8c-4a8fa5742dab.png"}, 
+			{"stateCode": "IL", "year": 2018, "nDistricts": 118, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "IL 2018 Lower State House", "id": "8b9ccb4c-d702-433d-9cbd-1e898d521eab", "thumbnail": "94cf5ed7-c565-4c98-baed-7e247295e268.png"}, 
+			{"stateCode": "IL", "year": 2018, "nDistricts": 59, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "IL 2018 Upper State House", "id": "f29396b2-e7ee-44b5-892c-46043fd36017", "thumbnail": "f6214ade-f394-40ea-b2ea-3d2c63d53b8c.png"},
+			{
+				"stateCode": "IL",
+				"year": 2020,
+				"nDistricts": 18,
+				"planType": "congress",
+				"description": "IL 2020 Congressional",
+				"title": "IL 2020 Congressional",
+				"id": "1f28107b-3981-46fc-9be5-6c3be848683d"
+			},
+			{
+				"stateCode": "IL",
+				"year": 2020,
+				"nDistricts": 118,
+				"planType": "lower",
+				"description": "IL 2020 State House",
+				"title": "IL 2020 State House",
+				"id": "8baed7b3-8702-4265-9ab5-0ae0ec9cb187"
+			},
+			{
+				"stateCode": "IL",
+				"year": 2020,
+				"nDistricts": 59,
+				"planType": "upper",
+				"description": "IL 2020 State Senate",
+				"title": "IL 2020 State Senate",
+				"id": "e7eface3-406c-42e0-b7fc-7e0d6471d975"
+			},
+			{
+				"stateCode": "IL",
+				"year": 2022,
+				"nDistricts": 17,
+				"planType": "congress",
+				"description": "IL 2022 Congressional",
+				"title": "IL 2022 Congressional",
+				"id": "8a4586ad-4c58-489b-828c-4477cfd0ce88"
+			},
+			{
+				"stateCode": "IL",
+				"year": 2022,
+				"nDistricts": 118,
+				"planType": "lower",
+				"description": "IL 2022 State House",
+				"title": "IL 2022 State House",
+				"id": "19bc2a13-2ad1-455a-a7cb-4182ff7c6f6f"
+			},
+			{
+				"stateCode": "IL",
+				"year": 2022,
+				"nDistricts": 59,
+				"planType": "upper",
+				"description": "IL 2022 State Senate",
+				"title": "IL 2022 State Senate",
+				"id": "8cd5c7ba-6e69-42a7-89e1-3806a2a05e64"
+			}
+		]
+	},
+	"IN": {
+		"stateCode": "IN", "name": "Indiana", "plans": [
+			{"stateCode": "IN", "year": 115, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IN 116th Congressional", "id": "acf2b347-b496-4e52-9403-cab828d4fab3", "thumbnail": "2e1bbe07-bad5-41ef-9cd9-ecec04e51aa8.png"}, 
+			{"stateCode": "IN", "year": 116, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "IN 116th Congressional", "id": "acf2b347-b496-4e52-9403-cab828d4fab3", "thumbnail": "2e1bbe07-bad5-41ef-9cd9-ecec04e51aa8.png"}, 
+			{"stateCode": "IN", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "IN 2018 Lower State House", "id": "8935736d-bd0c-4f89-927c-4843e156d8ec", "thumbnail": "8ce1fe08-886e-440e-8704-054505952d51.png"}, 
+			{"stateCode": "IN", "year": 2018, "nDistricts": 50, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "IN 2018 Upper State House", "id": "37bc63df-0daa-40c3-8ad9-812afb2fcc6c", "thumbnail": "647c4a29-4128-4f71-b0ce-adb6b23c4d45.png"},
+			{
+				"stateCode": "IN",
+				"year": 2020,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "IN 2020 Congressional",
+				"title": "IN 2020 Congressional",
+				"id": "930472f1-d096-42c0-9e38-10f463ecdb89"
+			},
+			{
+				"stateCode": "IN",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "IN 2020 State House",
+				"title": "IN 2020 State House",
+				"id": "4885f23b-bb9d-45ca-81ea-f56c3d7a0047"
+			},
+			{
+				"stateCode": "IN",
+				"year": 2020,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "IN 2020 State Senate",
+				"title": "IN 2020 State Senate",
+				"id": "dd9c6c14-2199-4e23-933f-14a1f2bb38a6"
+			},
+			{
+				"stateCode": "IN",
+				"year": 2022,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "IN 2022 Congressional",
+				"title": "IN 2022 Congressional",
+				"id": "c08c9df0-9756-4c5a-a7e7-01ff03bbb170"
+			},
+			{
+				"stateCode": "IN",
+				"year": 2022,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "IN 2022 State House",
+				"title": "IN 2022 State House",
+				"id": "db849782-86e9-4293-a492-3e17d7cfceab"
+			},
+			{
+				"stateCode": "IN",
+				"year": 2022,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "IN 2022 State Senate",
+				"title": "IN 2022 State Senate",
+				"id": "f2d2e4a3-f50d-4f77-bc5d-027ba0e2717e"
+			}
+		]
+	},
+	"KS": {
+		"stateCode": "KS", "name": "Kansas", "plans": [
+			{"stateCode": "KS", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "KS 116th Congressional", "id": "e3fd663e-4c82-4d10-b11c-5d1f0c775b0b", "thumbnail": "1b20df18-9489-4e52-8058-f2f013f35286.png"}, 
+			{"stateCode": "KS", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "KS 116th Congressional", "id": "e3fd663e-4c82-4d10-b11c-5d1f0c775b0b", "thumbnail": "1b20df18-9489-4e52-8058-f2f013f35286.png"}, 
+			{"stateCode": "KS", "year": 2018, "nDistricts": 125, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "KS 2018 Lower State House", "id": "eb9f1289-f1cb-49c5-bb8d-a87fec0d150c", "thumbnail": "a14377da-f25d-4a42-b51a-c9b170f0202d.png"}, 
+			{"stateCode": "KS", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "KS 2018 Upper State House", "id": "7db8407a-01bb-43ac-8a82-925fd859c592", "thumbnail": "c9fc194f-2f39-4811-b8bc-d6d91a022509.png"},
+			{
+				"stateCode": "KS",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "KS 2020 Congressional",
+				"title": "KS 2020 Congressional",
+				"id": "d5273801-39a6-4ad6-89fe-c0d1d7460680"
+			},
+			{
+				"stateCode": "KS",
+				"year": 2020,
+				"nDistricts": 125,
+				"planType": "lower",
+				"description": "KS 2020 State House",
+				"title": "KS 2020 State House",
+				"id": "bfa7a21c-4216-4d1e-b00e-350cb9788623"
+			},
+			{
+				"stateCode": "KS",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "KS 2020 State Senate",
+				"title": "KS 2020 State Senate",
+				"id": "8de87032-ce70-47b8-8ba0-c3f0846eedec"
+			},
+			{
+				"stateCode": "KS",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "KS 2022 Congressional",
+				"title": "KS 2022 Congressional",
+				"id": "2ea884cd-5687-48b4-879a-4f780d3de1cf"
+			},
+			{
+				"stateCode": "KS",
+				"year": 2022,
+				"nDistricts": 125,
+				"planType": "lower",
+				"description": "KS 2022 State House",
+				"title": "KS 2022 State House",
+				"id": "781f29f1-259e-4235-8b14-85137bc38893"
+			},
+			{
+				"stateCode": "KS",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "KS 2022 State Senate",
+				"title": "KS 2022 State Senate",
+				"id": "2bc2f97f-a285-4596-9fcd-6108056b229f"
+			}
+		]
+	},
+	"KY": {
+		"stateCode": "KY", "name": "Kentucky", "plans": [
+			{"stateCode": "KY", "year": 115, "nDistricts": 6, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "KY 116th Congressional", "id": "f1f47fec-7014-4008-a104-8b79b35fda3d", "thumbnail": "0bff73f4-bc94-4fad-908e-3d395c01bd69.png"}, 
+			{"stateCode": "KY", "year": 116, "nDistricts": 6, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "KY 116th Congressional", "id": "f1f47fec-7014-4008-a104-8b79b35fda3d", "thumbnail": "0bff73f4-bc94-4fad-908e-3d395c01bd69.png"}, 
+			{"stateCode": "KY", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "KY 2018 Lower State House", "id": "349fa36e-d601-4dc1-8215-dda34470d5fc", "thumbnail": "ac7163ac-50c9-4724-84c2-a89267d1d558.png"}, 
+			{"stateCode": "KY", "year": 2018, "nDistricts": 38, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "KY 2018 Upper State House", "id": "85adc6ee-b822-4e60-b2f6-bebaf9e2e53a", "thumbnail": "ffb38f02-9c54-4202-97d7-dd14ecce6286.png"},
+			{
+				"stateCode": "KY",
+				"year": 2020,
+				"nDistricts": 6,
+				"planType": "congress",
+				"description": "KY 2020 Congressional",
+				"title": "KY 2020 Congressional",
+				"id": "4f9930e4-072e-452d-9b5f-12cab0427ece"
+			},
+			{
+				"stateCode": "KY",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "KY 2020 State House",
+				"title": "KY 2020 State House",
+				"id": "32bc1182-d63b-49d4-b768-b83e75257931"
+			},
+			{
+				"stateCode": "KY",
+				"year": 2020,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "KY 2020 State Senate",
+				"title": "KY 2020 State Senate",
+				"id": "de0f45b2-4654-468b-83a5-eccb63e71bb4"
+			},
+			{
+				"stateCode": "KY",
+				"year": 2022,
+				"nDistricts": 6,
+				"planType": "congress",
+				"description": "KY 2022 Congressional",
+				"title": "KY 2022 Congressional",
+				"id": "0ec1616e-7ed6-4f84-b20d-dcc51221b2bf"
+			},
+			{
+				"stateCode": "KY",
+				"year": 2022,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "KY 2022 State House",
+				"title": "KY 2022 State House",
+				"id": "8eed4db7-46cd-4e09-a179-c0a7e821a963"
+			},
+			{
+				"stateCode": "KY",
+				"year": 2022,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "KY 2022 State Senate",
+				"title": "KY 2022 State Senate",
+				"id": "8ef6d39b-ae52-4587-8ed1-88b781dd4300"
+			}
+		]
+	},
+	"LA": {
+		"stateCode": "LA", "name": "Louisiana", "plans": [
+			{"stateCode": "LA", "year": 115, "nDistricts": 6, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "LA 116th Congressional", "id": "e1c9b1d0-22a4-4330-b615-27dab9740b02", "thumbnail": "95846016-cb7c-4935-8836-392a0764a8ac.png"}, 
+			{"stateCode": "LA", "year": 116, "nDistricts": 6, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "LA 116th Congressional", "id": "e1c9b1d0-22a4-4330-b615-27dab9740b02", "thumbnail": "95846016-cb7c-4935-8836-392a0764a8ac.png"}, 
+			{"stateCode": "LA", "year": 2018, "nDistricts": 105, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "LA 2018 Lower State House", "id": "5f3692f2-6b4b-473b-b23b-9146023f1039", "thumbnail": "374f7e7a-17ba-479c-ae31-6737076bbc6b.png"}, 
+			{"stateCode": "LA", "year": 2018, "nDistricts": 39, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "LA 2018 Upper State House", "id": "9d69e362-cb04-4054-98d2-3b63f7eb50b3", "thumbnail": "d69ecb5f-8d6d-499d-8c7c-12c3f4a6f8e5.png"},
+			{
+				"stateCode": "LA",
+				"year": 2020,
+				"nDistricts": 6,
+				"planType": "congress",
+				"description": "LA 2020 Congressional",
+				"title": "LA 2020 Congressional",
+				"id": "ce81ca33-09da-40a2-8803-35e9cf0a6469"
+			},
+			{
+				"stateCode": "LA",
+				"year": 2020,
+				"nDistricts": 105,
+				"planType": "lower",
+				"description": "LA 2020 State House",
+				"title": "LA 2020 State House",
+				"id": "10a698a3-8b55-46b4-ab7d-6bd9c6fdf724"
+			},
+			{
+				"stateCode": "LA",
+				"year": 2020,
+				"nDistricts": 39,
+				"planType": "upper",
+				"description": "LA 2020 State Senate",
+				"title": "LA 2020 State Senate",
+				"id": "9515fb0b-c59e-4240-a495-6a6f8abcb9f5"
+			},
+			{
+				"stateCode": "LA",
+				"year": 2022,
+				"nDistricts": 6,
+				"planType": "congress",
+				"description": "LA 2022 Congressional",
+				"title": "LA 2022 Congressional",
+				"id": "42873bd9-ce68-4ee1-878e-be420dbf0ee3"
+			},
+			{
+				"stateCode": "LA",
+				"year": 2022,
+				"nDistricts": 105,
+				"planType": "lower",
+				"description": "LA 2022 State House",
+				"title": "LA 2022 State House",
+				"id": "d63b737c-a8b3-46e9-8855-aa20a728c2b5"
+			},
+			{
+				"stateCode": "LA",
+				"year": 2022,
+				"nDistricts": 39,
+				"planType": "upper",
+				"description": "LA 2022 State Senate",
+				"title": "LA 2022 State Senate",
+				"id": "12eedba5-68de-4ab4-a3bb-7f59d9268041"
+			}
+		]
+	},
+	"MA": {
+		"stateCode": "MA", "name": "Massachusetts", "plans": [
+			{"stateCode": "MA", "year": 115, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MA 116th Congressional", "id": "eafbf1a0-c836-4908-a607-aa6b5c63b942", "thumbnail": "bb01f52e-0cf7-416c-a8ad-cafd34ca3c6a.png"}, 
+			{"stateCode": "MA", "year": 116, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MA 116th Congressional", "id": "eafbf1a0-c836-4908-a607-aa6b5c63b942", "thumbnail": "bb01f52e-0cf7-416c-a8ad-cafd34ca3c6a.png"}, 
+			{"stateCode": "MA", "year": 2018, "nDistricts": 160, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MA 2018 Lower State House", "id": "9fb9b073-c5d3-4b93-9c93-c02212a023d4", "thumbnail": "28e5c142-fe66-4b27-8498-ac1ca0e33896.png"}, 
+			{"stateCode": "MA", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MA 2018 Upper State House", "id": "4e245ae5-a6a0-4cbf-ab40-58a36bc387d0", "thumbnail": "ad937b84-00d1-4802-9b99-c368bc1caead.png"},
+			{
+				"stateCode": "MA",
+				"year": 2020,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "MA 2020 Congressional",
+				"title": "MA 2020 Congressional",
+				"id": "63f8c635-75ee-4a08-a798-cec3342feb49"
+			},
+			{
+				"stateCode": "MA",
+				"year": 2020,
+				"nDistricts": 160,
+				"planType": "lower",
+				"description": "MA 2020 State House",
+				"title": "MA 2020 State House",
+				"id": "afbc6011-bf8b-4303-adc3-e322b216e025"
+			},
+			{
+				"stateCode": "MA",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "MA 2020 State Senate",
+				"title": "MA 2020 State Senate",
+				"id": "e6ebd737-2229-495e-9178-1fc902c383a3"
+			},
+			{
+				"stateCode": "MA",
+				"year": 2022,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "MA 2022 Congressional",
+				"title": "MA 2022 Congressional",
+				"id": "791f8174-e00d-4baf-9b0a-206a298eb28b"
+			},
+			{
+				"stateCode": "MA",
+				"year": 2022,
+				"nDistricts": 160,
+				"planType": "lower",
+				"description": "MA 2022 State House",
+				"title": "MA 2022 State House",
+				"id": "f4bfa2f3-1e73-4e0b-a237-cc2aa2e611b8"
+			},
+			{
+				"stateCode": "MA",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "MA 2022 State Senate",
+				"title": "MA 2022 State Senate",
+				"id": "b32decd8-3ed9-4ab2-876b-c92cfa798e33"
+			}
+		]
+	},
+	"MD": {
+		"stateCode": "MD", "name": "Maryland", "plans": [
+			{"stateCode": "MD", "year": 115, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MD 116th Congressional", "id": "52a6108a-4b23-4e22-a4a4-c19837c0bca2", "thumbnail": "498a0084-21d2-4b3f-bb45-e97270f46320.png"}, 
+			{"stateCode": "MD", "year": 116, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MD 116th Congressional", "id": "52a6108a-4b23-4e22-a4a4-c19837c0bca2", "thumbnail": "498a0084-21d2-4b3f-bb45-e97270f46320.png"}, 
+			{"stateCode": "MD", "year": 2018, "nDistricts": 67, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MD 2018 Lower State House", "id": "af64ba50-9cec-40d6-9cf2-f934074d37be", "thumbnail": "5fe21d07-b676-4acb-bd37-3ec2d852914c.png"}, 
+			{"stateCode": "MD", "year": 2018, "nDistricts": 47, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MD 2018 Upper State House", "id": "05f88f2e-eb5a-4115-afd3-97566ecd07c7", "thumbnail": "ec6a12ab-d404-4348-97c6-73eaaaba89e7.png"},
+			{
+				"stateCode": "MD",
+				"year": 2020,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MD 2020 Congressional",
+				"title": "MD 2020 Congressional",
+				"id": "c35703c2-6cd0-4f1d-9fae-5a0826507cfb"
+			},
+			{
+				"stateCode": "MD",
+				"year": 2020,
+				"nDistricts": 67,
+				"planType": "lower",
+				"description": "MD 2020 State House Revised",
+				"title": "MD 2020 State House",
+				"id": "201a40ac-bc4d-4676-9cf3-95db3cb599b1"
+			},
+			{
+				"stateCode": "MD",
+				"year": 2020,
+				"nDistricts": 47,
+				"planType": "upper",
+				"description": "MD 2020 State Senate",
+				"title": "MD 2020 State Senate",
+				"id": "c3244696-9641-4055-88d4-3a49b63bd99c"
+			},
+			{
+				"stateCode": "MD",
+				"year": 2022,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MD 2022 Congressional",
+				"title": "MD 2022 Congressional",
+				"id": "a365ecbd-db5f-4c84-a77f-90310c6a6c1a"
+			},
+			{
+				"stateCode": "MD",
+				"year": 2022,
+				"nDistricts": 71,
+				"planType": "lower",
+				"description": "MD 2022 State House",
+				"title": "MD 2022 State House",
+				"id": "4cf1f21b-2347-457a-bbca-f299c7a8cb2b"
+			},
+			{
+				"stateCode": "MD",
+				"year": 2022,
+				"nDistricts": 47,
+				"planType": "upper",
+				"description": "MD 2022 State Senate",
+				"title": "MD 2022 State Senate",
+				"id": "92ad6e43-2394-4957-b30a-828ca424a034"
+			}
+		]
+	},
+	"ME": {
+		"stateCode": "ME", "name": "Maine", "plans": [
+			{"stateCode": "ME", "year": 115, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "ME 116th Congressional", "id": "9e5d4508-5a2e-4bc2-a0bc-ef716a9abf79", "thumbnail": "d3ac2e51-a7ea-4107-ac85-9600d9f90f80.png"}, 
+			{"stateCode": "ME", "year": 116, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "ME 116th Congressional", "id": "9e5d4508-5a2e-4bc2-a0bc-ef716a9abf79", "thumbnail": "d3ac2e51-a7ea-4107-ac85-9600d9f90f80.png"}, 
+			{"stateCode": "ME", "year": 2018, "nDistricts": 151, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "ME 2018 Lower State House", "id": "bfa42ae5-4f24-42d7-88f2-1aaff619b408", "thumbnail": "0927b3e6-5354-4690-850c-6850cb21fa1b.png"}, 
+			{"stateCode": "ME", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "ME 2018 Upper State House", "id": "6833ceac-aca7-480b-aa64-b6bbeba6f9a7", "thumbnail": "c1e1fae4-aad6-49fd-89f4-fd7084cd45a9.png"},
+			{
+				"stateCode": "ME",
+				"year": 2020,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "ME 2020 Congressional",
+				"title": "ME 2020 Congressional",
+				"id": "9fd5b08c-1830-4d60-a0c8-387c764ecfb0"
+			},
+			{
+				"stateCode": "ME",
+				"year": 2020,
+				"nDistricts": 151,
+				"planType": "lower",
+				"description": "ME 2020 State House",
+				"title": "ME 2020 State House",
+				"id": "933cef6d-489a-4273-88e5-c0552e115a98"
+			},
+			{
+				"stateCode": "ME",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "ME 2020 State Senate",
+				"title": "ME 2020 State Senate",
+				"id": "87060e31-2035-4bb2-a1fe-213b6e3fb0f3"
+			},
+			{
+				"stateCode": "ME",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "ME 2022 Congressional",
+				"title": "ME 2022 Congressional",
+				"id": "91042741-7e4e-423f-8a96-313236f71ac1"
+			},
+			{
+				"stateCode": "ME",
+				"year": 2022,
+				"nDistricts": 151,
+				"planType": "lower",
+				"description": "ME 2022 State House",
+				"title": "ME 2022 State House",
+				"id": "3925e854-a727-40a7-a48f-dc0dc7546c0f"
+			},
+			{
+				"stateCode": "ME",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "ME 2022 State Senate",
+				"title": "ME 2022 State Senate",
+				"id": "9916fa38-8d7a-498b-beb7-af2e530453c7"
+			}
+		]
+	},
+	"MI": {
+		"stateCode": "MI", "name": "Michigan", "plans": [
+			{"stateCode": "MI", "year": 115, "nDistricts": 14, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MI 116th Congressional", "id": "93fb7816-4a76-4b4b-a90f-5504f3f1d96e", "thumbnail": "ada80ff1-aaf5-4a9b-9fc5-491381df3061.png"}, 
+			{"stateCode": "MI", "year": 116, "nDistricts": 14, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MI 116th Congressional", "id": "93fb7816-4a76-4b4b-a90f-5504f3f1d96e", "thumbnail": "ada80ff1-aaf5-4a9b-9fc5-491381df3061.png"}, 
+			{"stateCode": "MI", "year": 2018, "nDistricts": 110, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MI 2018 Lower State House", "id": "321679fb-69a2-4489-a195-78a0f3e40bec", "thumbnail": "89641e55-a994-4379-b36c-ae5d0a2a2a6d.png"}, 
+			{"stateCode": "MI", "year": 2018, "nDistricts": 38, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MI 2018 Upper State House", "id": "bfd73815-53fa-4840-84f3-2e8d19cac4a5", "thumbnail": "fa0d3fa1-8d4a-4272-9300-27a51e067e47.png"},
+			{
+				"stateCode": "MI",
+				"year": 2020,
+				"nDistricts": 14,
+				"planType": "congress",
+				"description": "MI 2020 Congressional",
+				"title": "MI 2020 Congressional",
+				"id": "5a43a57b-ba16-4a6d-ad53-1fcfcd8a253b"
+			},
+			{
+				"stateCode": "MI",
+				"year": 2020,
+				"nDistricts": 110,
+				"planType": "lower",
+				"description": "MI 2020 State House",
+				"title": "MI 2020 State House",
+				"id": "9c633615-dc5f-4b6f-87ce-fe72ca5852c6"
+			},
+			{
+				"stateCode": "MI",
+				"year": 2020,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "MI 2020 State Senate",
+				"title": "MI 2020 State Senate",
+				"id": "e80b756a-c0b6-4e22-9973-1de7a9d806a5"
+			},
+			{
+				"stateCode": "MI",
+				"year": 2022,
+				"nDistricts": 13,
+				"planType": "congress",
+				"description": "MI 2022 Congressional",
+				"title": "MI 2022 Congressional",
+				"id": "287ace43-1a66-4686-b596-949f578971a8"
+			},
+			{
+				"stateCode": "MI",
+				"year": 2022,
+				"nDistricts": 110,
+				"planType": "lower",
+				"description": "MI 2022 State House",
+				"title": "MI 2022 State House",
+				"id": "8f2d562d-9d7f-4d3b-992e-5c52debd8f08"
+			},
+			{
+				"stateCode": "MI",
+				"year": 2022,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "MI 2022 State Senate",
+				"title": "MI 2022 State Senate",
+				"id": "7563fcf7-de01-411a-aa51-c56cf76340b0"
+			}
+		]
+	},
+	"MN": {
+		"stateCode": "MN", "name": "Minnesota", "plans": [
+			{"stateCode": "MN", "year": 115, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MN 116th Congressional", "id": "aff51588-afa7-4f38-9d68-9a9a6775a2a4", "thumbnail": "c2934158-4fd2-4f9e-a31b-ff2f8227909c.png"}, 
+			{"stateCode": "MN", "year": 116, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MN 116th Congressional", "id": "aff51588-afa7-4f38-9d68-9a9a6775a2a4", "thumbnail": "c2934158-4fd2-4f9e-a31b-ff2f8227909c.png"}, 
+			{"stateCode": "MN", "year": 2018, "nDistricts": 134, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MN 2018 Lower State House", "id": "1665fa02-f790-43b9-a2cc-ff9566604e0f", "thumbnail": "c707cf54-a9c8-4d2e-8d6c-f44b1826b515.png"}, 
+			{"stateCode": "MN", "year": 2018, "nDistricts": 67, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MN 2018 Upper State House", "id": "c89fa7c8-e41e-4c0a-bcb3-357acd000226", "thumbnail": "792d1273-d76f-44c0-aff2-89a1bb1a90e1.png"},
+			{
+				"stateCode": "MN",
+				"year": 2020,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MN 2020 Congressional",
+				"title": "MN 2020 Congressional",
+				"id": "f27e6b94-e78f-4726-bf94-4a5d9911d535"
+			},
+			{
+				"stateCode": "MN",
+				"year": 2020,
+				"nDistricts": 134,
+				"planType": "lower",
+				"description": "MN 2020 State House",
+				"title": "MN 2020 State House",
+				"id": "cb969948-ce7a-460b-b391-d6bb2c5a2133"
+			},
+			{
+				"stateCode": "MN",
+				"year": 2020,
+				"nDistricts": 67,
+				"planType": "upper",
+				"description": "MN 2020 State Senate",
+				"title": "MN 2020 State Senate",
+				"id": "dcd08710-5719-4426-9a04-a57819e006e4"
+			},
+			{
+				"stateCode": "MN",
+				"year": 2022,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MN 2022 Congressional",
+				"title": "MN 2022 Congressional",
+				"id": "4b212b88-2b8b-48aa-b2d2-e2f9980ac884"
+			},
+			{
+				"stateCode": "MN",
+				"year": 2022,
+				"nDistricts": 134,
+				"planType": "lower",
+				"description": "MN 2022 State House",
+				"title": "MN 2022 State House",
+				"id": "0e589052-0df8-4b8a-bede-c8e9fcc8814c"
+			},
+			{
+				"stateCode": "MN",
+				"year": 2022,
+				"nDistricts": 67,
+				"planType": "upper",
+				"description": "MN 2022 State Senate",
+				"title": "MN 2022 State Senate",
+				"id": "8d55ed9f-d825-4a8a-95e4-864cbeede612"
+			}
+		]
+	},
+	"MO": {
+		"stateCode": "MO", "name": "Missouri", "plans": [
+			{"stateCode": "MO", "year": 115, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MO 116th Congressional", "id": "53ed6fd8-fea1-4139-a1f0-c8d47943cfe4", "thumbnail": "e8549147-3908-4981-8672-115c49515fb5.png"}, 
+			{"stateCode": "MO", "year": 116, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MO 116th Congressional", "id": "53ed6fd8-fea1-4139-a1f0-c8d47943cfe4", "thumbnail": "e8549147-3908-4981-8672-115c49515fb5.png"}, 
+			{"stateCode": "MO", "year": 2018, "nDistricts": 163, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MO 2018 Lower State House", "id": "96a1e211-471b-433e-8725-f36b83956b3d", "thumbnail": "848906c1-102d-46c6-b4d8-bd80ccf2a29e.png"}, 
+			{"stateCode": "MO", "year": 2018, "nDistricts": 34, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MO 2018 Upper State House", "id": "4fc88c53-829e-4939-a131-98e3a0c19125", "thumbnail": "c99915ca-c127-412e-b155-709f416144aa.png"},
+			{
+				"stateCode": "MO",
+				"year": 2020,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MO 2020 Congressional",
+				"title": "MO 2020 Congressional",
+				"id": "e39cf7d4-f655-4f39-a7ff-178ca55673fa"
+			},
+			{
+				"stateCode": "MO",
+				"year": 2020,
+				"nDistricts": 163,
+				"planType": "lower",
+				"description": "MO 2020 State House",
+				"title": "MO 2020 State House",
+				"id": "fbee4d97-5a12-4790-ac8b-fef44ce6432d"
+			},
+			{
+				"stateCode": "MO",
+				"year": 2020,
+				"nDistricts": 34,
+				"planType": "upper",
+				"description": "MO 2020 State Senate",
+				"title": "MO 2020 State Senate",
+				"id": "3a0e988f-8c6f-4d02-9920-6936eea90b51"
+			},
+			{
+				"stateCode": "MO",
+				"year": 2022,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "MO 2022 Congressional",
+				"title": "MO 2022 Congressional",
+				"id": "68b2b598-69cd-430e-bee2-1dc4b76705f6"
+			},
+			{
+				"stateCode": "MO",
+				"year": 2022,
+				"nDistricts": 163,
+				"planType": "lower",
+				"description": "MO 2022 State House",
+				"title": "MO 2022 State House",
+				"id": "ebb632d0-2569-4a2a-81f6-1d8d6adc0d5e"
+			},
+			{
+				"stateCode": "MO",
+				"year": 2022,
+				"nDistricts": 34,
+				"planType": "upper",
+				"description": "MO 2022 State Senate",
+				"title": "MO 2022 State Senate",
+				"id": "8d25c96a-2a78-40b2-b2f0-c504ecaa6762"
+			}
+		]
+	},
+	"MS": {
+		"stateCode": "MS", "name": "Mississippi", "plans": [
+			{"stateCode": "MS", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MS 116th Congressional", "id": "f661b634-071c-4a35-b6b8-7bac141fec7b", "thumbnail": "a12f5d30-edbc-45cd-87f4-b97f4500521c.png"}, 
+			{"stateCode": "MS", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "MS 116th Congressional", "id": "f661b634-071c-4a35-b6b8-7bac141fec7b", "thumbnail": "a12f5d30-edbc-45cd-87f4-b97f4500521c.png"}, 
+			{"stateCode": "MS", "year": 2018, "nDistricts": 122, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MS 2018 Lower State House", "id": "9c1c699b-28f2-4f42-9cf2-40af296222ed", "thumbnail": "b46ee932-1aff-4e5e-bc25-ff74d111bf18.png"}, 
+			{"stateCode": "MS", "year": 2018, "nDistricts": 52, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MS 2018 Upper State House", "id": "d1d44b19-b72b-475f-8d81-2355abfac5cd", "thumbnail": "99c3cd2a-8ede-43c5-9f0b-af0982102521.png"},
+			{
+				"stateCode": "MS",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "MS 2020 Congressional",
+				"title": "MS 2020 Congressional",
+				"id": "a1d6a28b-18ed-4481-8ae0-c3deaf673308"
+			},
+			{
+				"stateCode": "MS",
+				"year": 2020,
+				"nDistricts": 122,
+				"planType": "lower",
+				"description": "MS 2020 State House",
+				"title": "MS 2020 State House",
+				"id": "b424166f-ca91-4c6c-a6d7-612d49a34f14"
+			},
+			{
+				"stateCode": "MS",
+				"year": 2020,
+				"nDistricts": 52,
+				"planType": "upper",
+				"description": "MS 2020 State Senate",
+				"title": "MS 2020 State Senate",
+				"id": "7d59c9be-3aa0-417d-802f-89436cb878a2"
+			},
+			{
+				"stateCode": "MS",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "MS 2022 Congressional",
+				"title": "MS 2022 Congressional",
+				"id": "2a63d0b3-58db-4e59-9b3b-436b221e078a"
+			},
+			{
+				"stateCode": "MS",
+				"year": 2022,
+				"nDistricts": 122,
+				"planType": "lower",
+				"description": "MS 2022 State House",
+				"title": "MS 2022 State House",
+				"id": "f8554517-7286-461a-9cfa-892b3d4731f7"
+			},
+			{
+				"stateCode": "MS",
+				"year": 2022,
+				"nDistricts": 52,
+				"planType": "upper",
+				"description": "MS 2022 State Senate",
+				"title": "MS 2022 State Senate",
+				"id": "f3908ec6-949f-444b-9fd5-7b2173abcb6e"
+			}
+		]
+	},
+	"MT": {
+		"stateCode": "MT", "name": "Montana", "plans": [
+			{"stateCode": "MT", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "MT 2018 Lower State House", "id": "809245ae-e9ec-4562-a7a4-724e3cacb4b4", "thumbnail": "85cc4204-9b2e-4f7d-a827-2c0b6e2e749a.png"}, 
+			{"stateCode": "MT", "year": 2018, "nDistricts": 50, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "MT 2018 Upper State House", "id": "7ce67766-6035-4077-91a1-2d8de7743a47", "thumbnail": "ec73b721-6fc2-42d3-a851-c8d31051b7c6.png"},
+			{
+				"stateCode": "MT",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "MT 2020 State House",
+				"title": "MT 2020 State House",
+				"id": "fe2f2ff5-f70e-459d-8a1f-48b3786c8e64"
+			},
+			{
+				"stateCode": "MT",
+				"year": 2020,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "MT 2020 State Senate",
+				"title": "MT 2020 State Senate",
+				"id": "0312ecba-7989-480c-bed4-777e2e06c178"
+			},
+			{
+				"stateCode": "MT",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "MT 2022 Congressional",
+				"title": "MT 2022 Congressional",
+				"id": "66ff2b64-826d-48a9-bbe4-08afa4c10873"
+			}
+		]
+	},
+	"NC": {
+		"stateCode": "NC", "name": "North Carolina", "plans": [
+			{"stateCode": "NC", "year": 115, "nDistricts": 13, "planType": "congress", "description": "Current proposed map in response to court ruling. Litigation ongoing.", "title": "NC 118th Congressional (Court Approved - HB 1029)", "id": "78c45418-c70a-4d74-bcde-0d74fae1a27e", "thumbnail": "d64763f1-82c9-4331-b2b7-7361be11f461.png"}, 
+			{"stateCode": "NC", "year": 116, "nDistricts": 13, "planType": "congress", "description": "Current proposed map in response to court ruling. Litigation ongoing.", "title": "NC 118th Congressional (Court Approved - HB 1029)", "id": "78c45418-c70a-4d74-bcde-0d74fae1a27e", "thumbnail": "d64763f1-82c9-4331-b2b7-7361be11f461.png"}, 
+			{"stateCode": "NC", "year": 2018, "nDistricts": 120, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "NC 2018 Lower State House", "id": "241341aa-3e2b-4648-bf91-ec993801d541", "thumbnail": "a7758506-c647-4a6f-8bc5-6281f187ffd5.png"}, 
+			{"stateCode": "NC", "year": 2018, "nDistricts": 50, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NC 2018 Upper State House", "id": "e32b833a-918f-4f46-bf66-1816c02bdc0d", "thumbnail": "a52af8f6-362a-4d62-8fb1-e5e91ffa0a16.png"},
+			{"stateCode":"NC","year":2020,"nDistricts":13,"planType":"congress","description":"Court Approved - HB 1029 for the 118th Congress converted to 2020 shapes (which makes it approximate).","title":"NC 2020 Congressional (Court Approved - HB 1029 - Converted)","id":"87c865df-abda-40b4-aabb-59f9c388c3a0","thumbnail":"d1e0b800-532c-4090-9e19-9d365d8e4d68.png"},
+			{
+				"stateCode": "NC",
+				"year": 2020,
+				"nDistricts": 120,
+				"planType": "lower",
+				"description": "NC 2020 State House",
+				"title": "NC 2020 State House (Enacted 2019 - Converted)",
+				"id": "c5bbacee-c990-4a1b-a63b-85a146c4ca7d"
+			},
+			{
+				"stateCode": "NC",
+				"year": 2020,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "NC 2020 State Senate",
+				"title": "NC 2020 State Senate (Enacted 2019 - Converted)",
+				"id": "e65f635d-af7b-4bb8-8591-72bb6c429f91"
+			},
+			{
+				"stateCode": "NC",
+				"year": 2022,
+				"nDistricts": 14,
+				"planType": "congress",
+				"description": "NC 2022 Congressional",
+				"title": "NC 2022 Congressional",
+				"id": "6e8268a4-3b9b-4140-8f99-e3544a2f0816"
+			},
+			{
+				"stateCode": "NC",
+				"year": 2022,
+				"nDistricts": 120,
+				"planType": "lower",
+				"description": "NC 2022 State House",
+				"title": "NC 2022 State House",
+				"id": "e4b677ba-541f-40bd-ad9f-ba8707515f7d"
+			},
+			{
+				"stateCode": "NC",
+				"year": 2022,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "NC 2022 State Senate",
+				"title": "NC 2022 State Senate",
+				"id": "8288b613-df48-45a7-9bd1-5d9f9ca3d685"
+			}
+		]
+	},
+	"ND": {
+		"stateCode": "ND", "name": "North Dakota", "plans": [
+			{"stateCode": "ND", "year": 2018, "nDistricts": 47, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "ND 2018 Lower State House", "id": "b25e629a-f6ac-4a6d-b7e2-5bc1fb48a999", "thumbnail": "d6510da1-f891-4d90-b452-aaa0fcb5ff7d.png"}, 
+			{"stateCode": "ND", "year": 2018, "nDistricts": 47, "planType": "upper", "description": "Districts for the 2018 Lower State House", "title": "ND 2018 Lower State House", "id": "b25e629a-f6ac-4a6d-b7e2-5bc1fb48a999", "thumbnail": "d6510da1-f891-4d90-b452-aaa0fcb5ff7d.png"},
+			{
+				"stateCode": "ND",
+				"year": 2020,
+				"nDistricts": 47,
+				"planType": "upper",
+				"description": "ND 2020 State Legislatures",
+				"title": "ND 2020 State Legislatures",
+				"id": "ce9f5d2e-7854-4e25-af08-b844c8fd079b"
+			},
+			{
+				"stateCode": "ND",
+				"year": 2022,
+				"nDistricts": 47,
+				"planType": "upper",
+				"description": "ND 2022 State Senate",
+				"title": "ND 2022 State Senate",
+				"id": "93075ffd-76b7-4374-ad3c-b0eb3d94efd3"
+			},
+			{
+				"stateCode": "ND",
+				"year": 2022,
+				"nDistricts": 49,
+				"planType": "lower",
+				"description": "ND 2022 State House",
+				"title": "ND 2022 State House",
+				"id": "3dae0952-0a39-4b93-99c7-d18f67b95bb7"
+			}
+		]
+	},
+	"NE": {
+		"stateCode": "NE", "name": "Nebraska", "plans": [
+			{"stateCode": "NE", "year": 115, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NE 116th Congressional", "id": "08fd73da-d47e-4190-b8b1-f5a7fdb83b75", "thumbnail": "261ffcca-fa5f-47bd-8a4b-297a36638139.png"}, 
+			{"stateCode": "NE", "year": 116, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NE 116th Congressional", "id": "08fd73da-d47e-4190-b8b1-f5a7fdb83b75", "thumbnail": "261ffcca-fa5f-47bd-8a4b-297a36638139.png"}, 
+			{"stateCode": "NE", "year": 2018, "nDistricts": 49, "planType": "upper", "description": "Districts for the 2018 State House", "title": "NE 2018 State House", "id": "0073fbe7-166c-45dc-90f2-4c93cd372ff2", "thumbnail": "75190ed4-5305-47ea-91ba-80df9f10c24d.png"},
+			{
+				"stateCode": "NE",
+				"year": 2020,
+				"nDistricts": 3,
+				"planType": "congress",
+				"description": "NE 2020 Congressional",
+				"title": "NE 2020 Congressional",
+				"id": "a2b03bdb-525c-4082-945f-1150528ec151"
+			},
+			{
+				"stateCode": "NE",
+				"year": 2020,
+				"nDistricts": 49,
+				"planType": "upper",
+				"description": "NE 2020 State Senate",
+				"title": "NE 2020 State Senate",
+				"id": "9d437afb-1aea-4d50-84a0-f3e37e4e6b2d"
+			},
+			{
+				"stateCode": "NE",
+				"year": 2022,
+				"nDistricts": 3,
+				"planType": "congress",
+				"description": "NE 2022 Congressional",
+				"title": "NE 2022 Congressional",
+				"id": "9de1188c-2169-4c5a-a4f3-76179d22b279"
+			},
+			{
+				"stateCode": "NE",
+				"year": 2022,
+				"nDistricts": 49,
+				"planType": "upper",
+				"description": "NE 2022 State Senate",
+				"title": "NE 2022 State Senate",
+				"id": "ab1f2fef-b979-4431-844a-98d93a4d6730"
+			}				
+		]
+	},
+	"NH": {
+		"stateCode": "NH", "name": "New Hampshire", "plans": [
+			{"stateCode": "NH", "year": 115, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NH 116th Congressional", "id": "f65ef53a-5a6d-430d-ae51-e51e6147f3cd", "thumbnail": "69fd80b4-e7e5-4bfa-bb2d-b5ee96d17743.png"}, 
+			{"stateCode": "NH", "year": 116, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NH 116th Congressional", "id": "f65ef53a-5a6d-430d-ae51-e51e6147f3cd", "thumbnail": "69fd80b4-e7e5-4bfa-bb2d-b5ee96d17743.png"}, 
+			{"stateCode": "NH", "year": 2018, "nDistricts": 161, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "NH 2018 Lower State House", "id": "b40925fa-9ef6-470a-a9b6-da316a2ac38c", "thumbnail": "d331dd15-83c0-497d-9b48-31e10d2225ed.png"}, 
+			{"stateCode": "NH", "year": 2018, "nDistricts": 24, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NH 2018 Upper State House", "id": "e9dce281-d65c-4252-a183-9b4634f1978c", "thumbnail": "e78aad4b-3aac-4419-b5f7-de4e6cfb69da.png"},
+			{
+				"stateCode": "NH",
+				"year": 2020,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "NH 2020 Congressional",
+				"title": "NH 2020 Congressional",
+				"id": "dc25e6e9-1e87-439f-8f67-9f20aa842487"
+			},
+			{
+				"stateCode": "NH",
+				"year": 2020,
+				"nDistricts": 161,
+				"planType": "lower",
+				"description": "NH 2020 State House",
+				"title": "NH 2020 State House",
+				"id": "f9d72699-7ef6-4c38-afb0-c6f2d08f0702"
+			},
+			{
+				"stateCode": "NH",
+				"year": 2020,
+				"nDistricts": 24,
+				"planType": "upper",
+				"description": "NH 2020 State Senate",
+				"title": "NH 2020 State Senate",
+				"id": "8617ea05-d3d5-45fe-ab73-de5b1122db69"
+			},
+			{
+				"stateCode": "NH",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "NH 2022 Congressional",
+				"title": "NH 2022 Congressional",
+				"id": "a1a2b285-f862-402c-9e89-b45791a46473"
+			},
+			{
+				"stateCode": "NH",
+				"year": 2022,
+				"nDistricts": 164,
+				"planType": "lower",
+				"description": "NH 2022 State House",
+				"title": "NH 2022 State House",
+				"id": "dfddaed1-5a76-4ca7-8a11-ddc533ea9f6e"
+			},
+			{
+				"stateCode": "NH",
+				"year": 2022,
+				"nDistricts": 24,
+				"planType": "upper",
+				"description": "NH 2022 State Senate",
+				"title": "NH 2022 State Senate",
+				"id": "15bf8903-0c56-4536-9265-7b7177726a73"
+			}
+		]
+	},
+	"NJ": {
+		"stateCode": "NJ", "name": "New Jersey", "plans": [
+			{"stateCode": "NJ", "year": 115, "nDistricts": 12, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NJ 116th Congressional", "id": "0c3e761c-fb70-4745-9da2-b78b949d4122", "thumbnail": "fd2d3aa4-6d88-4cd5-8498-97fa7f20303d.png"}, 
+			{"stateCode": "NJ", "year": 116, "nDistricts": 12, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NJ 116th Congressional", "id": "0c3e761c-fb70-4745-9da2-b78b949d4122", "thumbnail": "fd2d3aa4-6d88-4cd5-8498-97fa7f20303d.png"}, 
+			{"stateCode": "NJ", "year": 2018, "nDistricts": 40, "planType": "lower", "description": "Districts for the 2018 Upper State House", "title": "NJ 2018 Upper State House", "id": "a15d9637-3381-4ad6-b5ad-a85be7368b49", "thumbnail": "abfcd587-e52d-49f9-aa20-3fb040414b99.png"}, 
+			{"stateCode": "NJ", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NJ 2018 Upper State House", "id": "a15d9637-3381-4ad6-b5ad-a85be7368b49", "thumbnail": "abfcd587-e52d-49f9-aa20-3fb040414b99.png"},
+			{
+				"stateCode": "NJ",
+				"year": 2020,
+				"nDistricts": 12,
+				"planType": "congress",
+				"description": "NJ 2020 Congressional",
+				"title": "NJ 2020 Congressional",
+				"id": "c601c3fd-769d-4a46-9c0c-4801ad29fa31"
+			},
+			{
+				"stateCode": "NJ",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "NJ 2020 State Legislatures",
+				"title": "NJ 2020 State Legislatures",
+				"id": "3e874200-c618-42b5-8ed0-55cfc0bc5755"
+			},
+			{
+				"stateCode": "NJ",
+				"year": 2022,
+				"nDistricts": 12,
+				"planType": "congress",
+				"description": "NJ 2022 Congressional",
+				"title": "NJ 2022 Congressional",
+				"id": "6ff0b024-2e5d-4e9b-ba0e-56f6de17ea80"
+			},
+			{
+				"stateCode": "NJ",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "NJ 2022 State Legislatures",
+				"title": "NJ 2022 State Legislatures",
+				"id": "61388384-5d1f-4f3b-9669-31e485b781f1"
+			}
+		]
+	},
+	"NM": {
+		"stateCode": "NM", "name": "New Mexico", "plans": [
+			{"stateCode": "NM", "year": 115, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NM 116th Congressional", "id": "dd6717a4-ea8e-460d-970a-a302d86c1ee1", "thumbnail": "2dbcc783-62e7-4468-8fac-134a15abe34f.png"}, 
+			{"stateCode": "NM", "year": 116, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NM 116th Congressional", "id": "dd6717a4-ea8e-460d-970a-a302d86c1ee1", "thumbnail": "2dbcc783-62e7-4468-8fac-134a15abe34f.png"}, 
+			{"stateCode": "NM", "year": 2018, "nDistricts": 70, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "NM 2018 Lower State House", "id": "4700854a-a08d-4a93-96af-2a2395ed21e6", "thumbnail": "320a310c-b6d6-4fca-8072-b92be39fcd82.png"}, 
+			{"stateCode": "NM", "year": 2018, "nDistricts": 42, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NM 2018 Upper State House", "id": "06869f29-1c53-4fce-8e0b-b6e1e49ad95d", "thumbnail": "af0ae21a-a6d5-4bea-954c-a0c8a83fbef9.png"},
+			{
+				"stateCode": "NM",
+				"year": 2020,
+				"nDistricts": 3,
+				"planType": "congress",
+				"description": "NM 2020 Congressional",
+				"title": "NM 2020 Congressional",
+				"id": "33ecdb53-4a90-4191-88b2-b58148c20a45"
+			},
+			{
+				"stateCode": "NM",
+				"year": 2020,
+				"nDistricts": 70,
+				"planType": "lower",
+				"description": "NM 2020 State House",
+				"title": "NM 2020 State House",
+				"id": "cb331bfa-90f3-4f21-aee0-54edce6e5bfa"
+			},
+			{
+				"stateCode": "NM",
+				"year": 2020,
+				"nDistricts": 42,
+				"planType": "upper",
+				"description": "NM 2020 State Senate",
+				"title": "NM 2020 State Senate",
+				"id": "98f0ac40-b84a-4318-8e3e-9c91c839c6f8"
+			},
+			{
+				"stateCode": "NM",
+				"year": 2022,
+				"nDistricts": 3,
+				"planType": "congress",
+				"description": "NM 2022 Congressional",
+				"title": "NM 2022 Congressional",
+				"id": "ec1c76cd-f59f-445b-8f24-fbffb0e8bdf5"
+			},
+			{
+				"stateCode": "NM",
+				"year": 2022,
+				"nDistricts": 70,
+				"planType": "lower",
+				"description": "NM 2022 State House",
+				"title": "NM 2022 State House",
+				"id": "5e00bd63-7008-4b5e-b570-db5ba1d36785"
+			},
+			{
+				"stateCode": "NM",
+				"year": 2022,
+				"nDistricts": 42,
+				"planType": "upper",
+				"description": "NM 2022 State Senate",
+				"title": "NM 2022 State Senate",
+				"id": "11c9cc63-8521-4785-89f3-58b5e4359507"
+			}
+		]
+	},
+	"NV": {
+		"stateCode": "NV", "name": "Nevada", "plans": [
+			{"stateCode": "NV", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NV 116th Congressional", "id": "0e58977e-bb6b-488f-b6e1-36d6a55a7c0c", "thumbnail": "6fe1ef33-7eec-47bd-af97-15caf48595b1.png"}, 
+			{"stateCode": "NV", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NV 116th Congressional", "id": "0e58977e-bb6b-488f-b6e1-36d6a55a7c0c", "thumbnail": "6fe1ef33-7eec-47bd-af97-15caf48595b1.png"}, 
+			{"stateCode": "NV", "year": 2018, "nDistricts": 42, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "NV 2018 Lower State House", "id": "33d282f2-d93a-4d5f-aadf-88f50ce2da4a", "thumbnail": "5b3b82f0-cd0e-4321-a3ff-4fff3dabd3b5.png"}, 
+			{"stateCode": "NV", "year": 2018, "nDistricts": 21, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NV 2018 Upper State House", "id": "8cb306b0-bdb4-40d2-8816-92e0bb5d982b", "thumbnail": "76d46eda-9dfd-4ff9-ad4e-34b2bb35b373.png"},
+			{
+				"stateCode": "NV",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "NV 2020 Congressional",
+				"title": "NV 2020 Congressional",
+				"id": "43ac26c6-a829-4102-9d40-be3288998318"
+			},
+			{
+				"stateCode": "NV",
+				"year": 2020,
+				"nDistricts": 42,
+				"planType": "lower",
+				"description": "NV 2020 State House",
+				"title": "NV 2020 State House",
+				"id": "deaf50a1-581a-4f1e-a21b-4d798d6d58c9"
+			},
+			{
+				"stateCode": "NV",
+				"year": 2020,
+				"nDistricts": 21,
+				"planType": "upper",
+				"description": "NV 2020 State Senate",
+				"title": "NV 2020 State Senate",
+				"id": "fc1bd6ca-39d6-4326-bed0-4d78991177e2"
+			},
+			{
+				"stateCode": "NV",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "NV 2022 Congressional",
+				"title": "NV 2022 Congressional",
+				"id": "eb89e40d-595f-485f-9a43-d1bbdd6d0cb4"
+			},
+			{
+				"stateCode": "NV",
+				"year": 2022,
+				"nDistricts": 42,
+				"planType": "lower",
+				"description": "NV 2022 State House",
+				"title": "NV 2022 State House",
+				"id": "2a33203f-8725-48dc-ba1b-478bd6012a58"
+			},
+			{
+				"stateCode": "NV",
+				"year": 2022,
+				"nDistricts": 21,
+				"planType": "upper",
+				"description": "NV 2022 State Senate",
+				"title": "NV 2022 State Senate",
+				"id": "99808524-5012-4119-91ce-973ba647806b"
+			}
+		]
+	},
+	"NY": {
+		"stateCode": "NY", "name": "New York", "plans": [
+			{"stateCode": "NY", "year": 115, "nDistricts": 27, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NY 116th Congressional", "id": "8f4e0292-205f-4260-b2f2-717687baa0c6", "thumbnail": "ecc44c78-800e-4c49-b1ec-66876035d062.png"}, 
+			{"stateCode": "NY", "year": 116, "nDistricts": 27, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "NY 116th Congressional", "id": "8f4e0292-205f-4260-b2f2-717687baa0c6", "thumbnail": "ecc44c78-800e-4c49-b1ec-66876035d062.png"}, 
+			{"stateCode": "NY", "year": 2018, "nDistricts": 150, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "NY 2018 Lower State House", "id": "ae6b9fb0-8348-4666-a2bf-1997e26cf4e9", "thumbnail": "1e3b383f-b90f-4594-9228-551308ab0070.png"}, 
+			{"stateCode": "NY", "year": 2018, "nDistricts": 63, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "NY 2018 Upper State House", "id": "3c13df3e-2cbc-4ba1-9ee1-2921d81118f0", "thumbnail": "391d8303-16c4-4bcd-9a30-63deb4b77b0f.png"},
+			{
+				"stateCode": "NY",
+				"year": 2020,
+				"nDistricts": 27,
+				"planType": "congress",
+				"description": "NY 2020 Congressional",
+				"title": "NY 2020 Congressional",
+				"id": "6703b5c2-0849-4fdd-9712-f281849255ab"
+			},
+			{
+				"stateCode": "NY",
+				"year": 2020,
+				"nDistricts": 150,
+				"planType": "lower",
+				"description": "NY 2020 State House",
+				"title": "NY 2020 State House",
+				"id": "a8e775b4-a57d-4899-b5fe-797958d6b9ec"
+			},
+			{
+				"stateCode": "NY",
+				"year": 2020,
+				"nDistricts": 63,
+				"planType": "upper",
+				"description": "NY 2020 State Senate",
+				"title": "NY 2020 State Senate",
+				"id": "f5f5e082-407c-432c-899a-6d615cc5faa8"
+			},
+			{
+				"stateCode": "NY",
+				"year": 2022,
+				"nDistricts": 26,
+				"planType": "congress",
+				"description": "NY 2022 Congressional",
+				"title": "NY 2022 Congressional",
+				"id": "395a7fbe-fa32-47fc-993d-e07d36baff72",
+				"pendingCourtApproval": false
+			},
+			{
+				"stateCode": "NY",
+				"year": 2022,
+				"nDistricts": 150,
+				"planType": "lower",
+				"description": "NY 2022 State House",
+				"title": "NY 2022 State House",
+				"id": "1933abca-db19-40f9-808d-17dd90642cdc"
+			},
+			{
+				"stateCode": "NY",
+				"year": 2022,
+				"nDistricts": 63,
+				"planType": "upper",
+				"description": "NY 2022 State Senate",
+				"title": "NY 2022 State Senate",
+				"id": "bb78268d-ea3c-46a1-a484-c192a6c0e15d",
+				"pendingCourtApproval": false
+			}
+		]
+	},
+	"OH": {
+		"stateCode": "OH", "name": "Ohio", "plans": [
+			{"stateCode": "OH", "year": 115, "nDistricts": 16, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OH 116th Congressional", "id": "4767b727-0165-4901-9e40-3fc135bf1032", "thumbnail": "873117ba-e63d-453d-b445-e3e01f2d5410.png"}, 
+			{"stateCode": "OH", "year": 116, "nDistricts": 16, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OH 116th Congressional", "id": "4767b727-0165-4901-9e40-3fc135bf1032", "thumbnail": "873117ba-e63d-453d-b445-e3e01f2d5410.png"}, 
+			{"stateCode": "OH", "year": 2018, "nDistricts": 99, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "OH 2018 Lower State House", "id": "51c73f00-ffa5-4aa6-8656-9bfd26baf468", "thumbnail": "8efb7f47-2583-4e89-a820-8ec5722c7f0d.png"}, 
+			{"stateCode": "OH", "year": 2018, "nDistricts": 33, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "OH 2018 Upper State House", "id": "6c2c2f9c-5ffe-42f0-9e1f-809c8b9eb10d", "thumbnail": "246b62c6-d1bb-4536-8d39-07542f895c64.png"},
+			{
+				"stateCode": "OH",
+				"year": 2020,
+				"nDistricts": 16,
+				"planType": "congress",
+				"description": "OH 2020 Congressional",
+				"title": "OH 2020 Congressional",
+				"id": "00eb40c5-ef15-4634-af87-72fd2b9d062d"
+			},
+			{
+				"stateCode": "OH",
+				"year": 2020,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "OH 2020 State House",
+				"title": "OH 2020 State House",
+				"id": "8db12bef-0510-4386-be22-19949a43b73c"
+			},
+			{
+				"stateCode": "OH",
+				"year": 2020,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "OH 2020 State Senate",
+				"title": "OH 2020 State Senate",
+				"id": "bc4f22d5-75d7-42f5-a628-c1dc9b0740e4"
+			},
+			{
+				"stateCode": "OH",
+				"year": 2022,
+				"nDistricts": 15,
+				"planType": "congress",
+				"description": "OH 2022 Congressional",
+				"title": "OH 2022 Congressional",
+				"id": "64d56870-70ea-4f4d-b667-9a4fd60ac511",
+				"pendingCourtApproval": false
+			},
+			{
+				"stateCode": "OH",
+				"year": 2022,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "OH 2022 State House",
+				"title": "OH 2022 State House",
+				"id": "90de759b-f81d-44c0-a019-d2714a38cc3a",
+				"pendingCourtApproval": false
+			},
+			{
+				"stateCode": "OH",
+				"year": 2022,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "OH 2022 State Senate",
+				"title": "OH 2022 State Senate",
+				"id": "6eba71b1-18a1-48d1-99c9-62afba432253",
+				"pendingCourtApproval": false
+			}
+		]
+	},
+	"OK": {
+		"stateCode": "OK", "name": "Oklahoma", "plans": [
+			{"stateCode": "OK", "year": 115, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OK 116th Congressional", "id": "a161e79a-cc89-4a86-849b-e9a6983b9900", "thumbnail": "f327f85f-bc05-4b92-a075-d304ade1e109.png"}, 
+			{"stateCode": "OK", "year": 116, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OK 116th Congressional", "id": "a161e79a-cc89-4a86-849b-e9a6983b9900", "thumbnail": "f327f85f-bc05-4b92-a075-d304ade1e109.png"}, 
+			{"stateCode": "OK", "year": 2018, "nDistricts": 101, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "OK 2018 Lower State House", "id": "37520fcb-1dc3-4f90-a834-5f8949219410", "thumbnail": "2329f6e3-9acc-4492-8923-0da721e2a7e0.png"}, 
+			{"stateCode": "OK", "year": 2018, "nDistricts": 48, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "OK 2018 Upper State House", "id": "207bc3fe-c715-48ae-8e9e-d5742db0fa4d", "thumbnail": "d4ec9d91-baed-406d-a3e3-30d012a312ac.png"},
+			{
+				"stateCode": "OK",
+				"year": 2020,
+				"nDistricts": 5,
+				"planType": "congress",
+				"description": "OK 2020 Congressional",
+				"title": "OK 2020 Congressional",
+				"id": "bae848ae-a6fd-4647-a2fc-3af07978eb28"
+			},
+			{
+				"stateCode": "OK",
+				"year": 2020,
+				"nDistricts": 101,
+				"planType": "lower",
+				"description": "OK 2020 State House",
+				"title": "OK 2020 State House",
+				"id": "854457c5-2a04-4288-bcf8-60817508cb57"
+			},
+			{
+				"stateCode": "OK",
+				"year": 2020,
+				"nDistricts": 48,
+				"planType": "upper",
+				"description": "OK 2020 State Senate",
+				"title": "OK 2020 State Senate",
+				"id": "8a4e4017-50e4-4ee4-b07f-54ae5de6cf65"
+			},
+			{
+				"stateCode": "OK",
+				"year": 2022,
+				"nDistricts": 5,
+				"planType": "congress",
+				"description": "OK 2022 Congressional",
+				"title": "OK 2022 Congressional",
+				"id": "f726bcb3-b750-44b2-9d0b-e2df90fe6fa5"
+			},
+			{
+				"stateCode": "OK",
+				"year": 2022,
+				"nDistricts": 101,
+				"planType": "lower",
+				"description": "OK 2022 State House",
+				"title": "OK 2022 State House",
+				"id": "a4a178b9-581b-4591-bcf9-13e18bd850ea"
+			},
+			{
+				"stateCode": "OK",
+				"year": 2022,
+				"nDistricts": 48,
+				"planType": "upper",
+				"description": "OK 2022 State Senate",
+				"title": "OK 2022 State Senate",
+				"id": "0fa6fe25-9db7-4777-a150-d2309188823f"
+			}
+		]
+	},
+	"OR": {
+		"stateCode": "OR", "name": "Oregon", "plans": [
+			{"stateCode": "OR", "year": 115, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OR 116th Congressional", "id": "b4f95111-9fbb-4fd7-8642-53e793155f41", "thumbnail": "af7938cc-c8e6-4784-bfc8-63e79fc9d909.png"}, 
+			{"stateCode": "OR", "year": 116, "nDistricts": 5, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "OR 116th Congressional", "id": "b4f95111-9fbb-4fd7-8642-53e793155f41", "thumbnail": "af7938cc-c8e6-4784-bfc8-63e79fc9d909.png"}, 
+			{"stateCode": "OR", "year": 2018, "nDistricts": 60, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "OR 2018 Lower State House", "id": "62477823-1f28-4099-891e-aaf581940b12", "thumbnail": "e1af11f2-7bbf-4058-99eb-861c8bd06ca1.png"}, 
+			{"stateCode": "OR", "year": 2018, "nDistricts": 30, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "OR 2018 Upper State House", "id": "8a17970d-05bb-4c06-a63e-4e713c682e88", "thumbnail": "12411608-3d79-4faf-904a-c7b2b9bf275d.png"},
+			{
+				"stateCode": "OR",
+				"year": 2020,
+				"nDistricts": 5,
+				"planType": "congress",
+				"description": "OR 2020 Congressional",
+				"title": "OR 2020 Congressional",
+				"id": "d0da4067-8219-48b6-9403-6bb5782d2dba"
+			},
+			{
+				"stateCode": "OR",
+				"year": 2020,
+				"nDistricts": 60,
+				"planType": "lower",
+				"description": "OR 2020 State House",
+				"title": "OR 2020 State House",
+				"id": "9fa8e947-a539-492d-8689-9e40e195b2b9"
+			},
+			{
+				"stateCode": "OR",
+				"year": 2020,
+				"nDistricts": 30,
+				"planType": "upper",
+				"description": "OR 2020 State Senate",
+				"title": "OR 2020 State Senate",
+				"id": "239a73b1-7273-47c9-b7e6-0601f2714112"
+			},
+			{
+				"stateCode": "OR",
+				"year": 2022,
+				"nDistricts": 6,
+				"planType": "congress",
+				"description": "OR 2022 Congressional",
+				"title": "OR 2022 Congressional",
+				"id": "9b2b545f-5cd2-4e0d-a9b9-cc3915a4750f"
+			},
+			{
+				"stateCode": "OR",
+				"year": 2022,
+				"nDistricts": 60,
+				"planType": "lower",
+				"description": "OR 2022 State House",
+				"title": "OR 2022 State House",
+				"id": "c572dfa0-276b-4a76-8531-06669d885f27"
+			},
+			{
+				"stateCode": "OR",
+				"year": 2022,
+				"nDistricts": 30,
+				"planType": "upper",
+				"description": "OR 2022 State Senate",
+				"title": "OR 2022 State Senate",
+				"id": "a5aadfab-0234-489a-a4df-cc008a844926"
+			}
+		]
+	},
+	"PA": {
+		"stateCode": "PA", "name": "Pennsylvania", "plans": [
+			{"stateCode": "PA", "year": 115, "nDistricts": 18, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "PA 116th Congressional", "id": "bee23a27-3796-4f20-99da-98550eebd85a", "thumbnail": "ed6b904a-51e2-444a-b6e5-771563255c91.png"}, 
+			{"stateCode": "PA", "year": 116, "nDistricts": 18, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "PA 116th Congressional", "id": "bee23a27-3796-4f20-99da-98550eebd85a", "thumbnail": "ed6b904a-51e2-444a-b6e5-771563255c91.png"}, 
+			{"stateCode": "PA", "year": 2018, "nDistricts": 203, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "PA 2018 Lower State House", "id": "728464bc-3981-42a1-8f92-2013a074e318", "thumbnail": "b6811e23-3ca1-4cc8-9936-41a6f5e7d9ea.png"}, 
+			{"stateCode": "PA", "year": 2018, "nDistricts": 50, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "PA 2018 Upper State House", "id": "e9610cd5-e72d-4abc-877a-f40faa6ee538", "thumbnail": "d5709cf5-a98d-457a-a4d1-c16fca0c4733.png"},
+			{
+				"stateCode": "PA",
+				"year": 2020,
+				"nDistricts": 18,
+				"planType": "congress",
+				"description": "PA 2020 Congressional",
+				"title": "PA 2020 Congressional",
+				"id": "3d91ae72-035c-49d8-920b-d44012d3ea2d"
+			},
+			{
+				"stateCode": "PA",
+				"year": 2020,
+				"nDistricts": 203,
+				"planType": "lower",
+				"description": "PA 2020 State House",
+				"title": "PA 2020 State House",
+				"id": "1f6aa7de-308c-4ea1-a1bb-bff32d498d77"
+			},
+			{
+				"stateCode": "PA",
+				"year": 2020,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "PA 2020 State Senate",
+				"title": "PA 2020 State Senate",
+				"id": "d395da42-e7b5-4c14-85c8-e76bc6bd6ae6"
+			},
+			{
+				"stateCode": "PA",
+				"year": 2022,
+				"nDistricts": 17,
+				"planType": "congress",
+				"description": "PA 2022 Congressional",
+				"title": "PA 2022 Congressional",
+				"id": "b0a94d77-5d99-41c5-bc01-5859a6e1f3e6"
+			},
+			{
+				"stateCode": "PA",
+				"year": 2022,
+				"nDistricts": 203,
+				"planType": "lower",
+				"description": "PA 2022 State House",
+				"title": "PA 2022 State House",
+				"id": "12a18072-adf1-48ac-a9d1-12280567b824"
+			},
+			{
+				"stateCode": "PA",
+				"year": 2022,
+				"nDistricts": 50,
+				"planType": "upper",
+				"description": "PA 2022 State Senate",
+				"title": "PA 2022 State Senate",
+				"id": "317011f0-6bcd-4df6-a1ee-435a92640426"
+			}
+		]
+	},
+	"RI": {
+		"stateCode": "RI", "name": "Rhode Island", "plans": [
+			{"stateCode": "RI", "year": 115, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "RI 116th Congressional", "id": "9949d8d8-2197-44b7-9768-e163ec5ad6f6", "thumbnail": "d648821c-945d-4796-a592-41c451e48a27.png"}, 
+			{"stateCode": "RI", "year": 116, "nDistricts": 2, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "RI 116th Congressional", "id": "9949d8d8-2197-44b7-9768-e163ec5ad6f6", "thumbnail": "d648821c-945d-4796-a592-41c451e48a27.png"}, 
+			{"stateCode": "RI", "year": 2018, "nDistricts": 75, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "RI 2018 Lower State House", "id": "9ea70b77-998f-4623-9636-2fc03571a43c", "thumbnail": "5af58129-ac5b-4661-a3d9-c7819eb40e37.png"}, 
+			{"stateCode": "RI", "year": 2018, "nDistricts": 38, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "RI 2018 Upper State House", "id": "f6b62d62-4816-4894-bed7-8688bef0a6cd", "thumbnail": "a9c2b98c-426f-4376-b8b8-2e08b3ae8de7.png"},
+			{
+				"stateCode": "RI",
+				"year": 2020,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "RI 2020 Congressional",
+				"title": "RI 2020 Congressional",
+				"id": "413e574e-0568-48f4-8e4e-0a31aefa65c2"
+			},
+			{
+				"stateCode": "RI",
+				"year": 2020,
+				"nDistricts": 75,
+				"planType": "lower",
+				"description": "RI 2020 State House",
+				"title": "RI 2020 State House",
+				"id": "e1f078e4-db50-4312-b37a-f59be0bea45e"
+			},
+			{
+				"stateCode": "RI",
+				"year": 2020,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "RI 2020 State Senate",
+				"title": "RI 2020 State Senate",
+				"id": "921eba30-ae19-469d-9ef8-c34092bc123f"
+			},
+			{
+				"stateCode": "RI",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "RI 2022 Congressional",
+				"title": "RI 2022 Congressional",
+				"id": "cffbb279-824c-47b8-90c7-3070378e37ae"
+			},
+			{
+				"stateCode": "RI",
+				"year": 2022,
+				"nDistricts": 75,
+				"planType": "lower",
+				"description": "RI 2022 State House",
+				"title": "RI 2022 State House",
+				"id": "90ec6599-f715-4a3a-b50b-5858788046ac"
+			},
+			{
+				"stateCode": "RI",
+				"year": 2022,
+				"nDistricts": 38,
+				"planType": "upper",
+				"description": "RI 2022 State Senate",
+				"title": "RI 2022 State Senate",
+				"id": "2aab93a2-7e15-4047-87a8-02b0deb3eb4e"
+			}
+		]
+	},
+	"SC": {
+		"stateCode": "SC", "name": "South Carolina", "plans": [
+			{"stateCode": "SC", "year": 115, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "SC 116th Congressional", "id": "ea290ec9-e65c-42d6-b244-0090ee40ca2d", "thumbnail": "b70ae7d0-1ba3-472c-8b4d-ececbc1fc211.png"}, 
+			{"stateCode": "SC", "year": 116, "nDistricts": 7, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "SC 116th Congressional", "id": "ea290ec9-e65c-42d6-b244-0090ee40ca2d", "thumbnail": "b70ae7d0-1ba3-472c-8b4d-ececbc1fc211.png"}, 
+			{"stateCode": "SC", "year": 2018, "nDistricts": 124, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "SC 2018 Lower State House", "id": "2d9c8c11-858d-4a51-95b7-b132145d68c0", "thumbnail": "78bcc124-f3d6-4674-997b-4ffec7758144.png"}, 
+			{"stateCode": "SC", "year": 2018, "nDistricts": 46, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "SC 2018 Upper State House", "id": "4b582568-5d9e-48c2-9312-aeccbc285365", "thumbnail": "affee558-5d5a-47ed-b870-66c5d6cab406.png"},
+			{
+				"stateCode": "SC",
+				"year": 2020,
+				"nDistricts": 7,
+				"planType": "congress",
+				"description": "SC 2020 Congressional",
+				"title": "SC 2020 Congressional",
+				"id": "ac3c139e-73a1-4391-87f4-1aaaf7ead166"
+			},
+			{
+				"stateCode": "SC",
+				"year": 2020,
+				"nDistricts": 124,
+				"planType": "lower",
+				"description": "SC 2020 State House",
+				"title": "SC 2020 State House",
+				"id": "daa5b74c-5f3f-4793-8bf4-59c3224d97c2"
+			},
+			{
+				"stateCode": "SC",
+				"year": 2020,
+				"nDistricts": 46,
+				"planType": "upper",
+				"description": "SC 2020 State Senate",
+				"title": "SC 2020 State Senate",
+				"id": "b0cf2d82-6dc3-48cd-8ba4-af26dddd964a"
+			},
+			{
+				"stateCode": "SC",
+				"year": 2022,
+				"nDistricts": 7,
+				"planType": "congress",
+				"description": "SC 2022 Congressional",
+				"title": "SC 2022 Congressional",
+				"id": "839561a1-8c15-4c4b-ab56-3275d68092f9"
+			},
+			{
+				"stateCode": "SC",
+				"year": 2022,
+				"nDistricts": 46,
+				"planType": "upper",
+				"description": "SC 2022 State Senate",
+				"title": "SC 2022 State Senate",
+				"id": "7c9df455-6865-4f9e-8172-7c1a26ab28b9"
+			},
+			{
+				"stateCode": "SC",
+				"year": 2022,
+				"nDistricts": 124,
+				"planType": "lower",
+				"description": "SC 2022 State House",
+				"title": "SC 2022 State House",
+				"id": "f886f454-bdf5-463e-823e-7dfe56c8bbdd"
+			}
+		]
+	},
+	"SD": {
+		"stateCode": "SD", "name": "South Dakota", "plans": [
+			{"stateCode": "SD", "year": 2018, "nDistricts": 37, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "SD 2018 Lower State House", "id": "52ffade8-5e0a-4bea-b603-3a884b5ed4b1", "thumbnail": "5373d79d-5257-4eb6-ba62-2dc05d194938.png"}, 
+			{"stateCode": "SD", "year": 2018, "nDistricts": 35, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "SD 2018 Upper State House", "id": "08f2c1ca-c66d-4240-a676-880334fa596b", "thumbnail": "c3c5446e-8309-4dc3-a9c9-018b127a53e4.png"},
+			{
+				"stateCode": "SD",
+				"year": 2020,
+				"nDistricts": 37,
+				"planType": "lower",
+				"description": "SD 2020 State House",
+				"title": "SD 2020 State House",
+				"id": "f4e49e3f-d68f-4300-acf1-8de45271b8eb"
+			},
+			{
+				"stateCode": "SD",
+				"year": 2020,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "SD 2020 State Senate",
+				"title": "SD 2020 State Senate",
+				"id": "106d8866-5d74-4f36-99d2-709a8fbd5b62"
+			},
+			{
+				"stateCode": "SD",
+				"year": 2022,
+				"nDistricts": 37,
+				"planType": "lower",
+				"description": "SD 2022 State House",
+				"title": "SD 2022 State House",
+				"id": "364d2cd2-893a-4582-910c-9d91ffcd5c2a"
+			},
+			{
+				"stateCode": "SD",
+				"year": 2022,
+				"nDistricts": 35,
+				"planType": "upper",
+				"description": "SD 2022 State Senate",
+				"title": "SD 2022 State Senate",
+				"id": "0a226808-0b1c-4049-800b-612e18674828"
+			}
+		]
+	},
+	"TN": {
+		"stateCode": "TN", "name": "Tennessee", "plans": [
+			{"stateCode": "TN", "year": 115, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "TN 116th Congressional", "id": "47e18b49-85c5-4b07-b523-b29c3a4b3b74", "thumbnail": "91e34464-8d72-4c25-b271-6f410f24b99b.png"}, 
+			{"stateCode": "TN", "year": 116, "nDistricts": 9, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "TN 116th Congressional", "id": "47e18b49-85c5-4b07-b523-b29c3a4b3b74", "thumbnail": "91e34464-8d72-4c25-b271-6f410f24b99b.png"}, 
+			{"stateCode": "TN", "year": 2018, "nDistricts": 99, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "TN 2018 Lower State House", "id": "7aaedde7-1d83-4f09-8f40-7165415e093d", "thumbnail": "5bdd999c-4f25-47f8-b882-01fa446da231.png"}, 
+			{"stateCode": "TN", "year": 2018, "nDistricts": 33, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "TN 2018 Upper State House", "id": "cf60c146-2d69-48ec-9d83-aa59337182b1", "thumbnail": "79891cb2-d0f8-4bda-aae1-cc57c9c53dac.png"},
+			{
+				"stateCode": "TN",
+				"year": 2020,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "TN 2020 Congressional",
+				"title": "TN 2020 Congressional",
+				"id": "5324d375-0bc2-4960-9f87-6b9aa8e39b0d"
+			},
+			{
+				"stateCode": "TN",
+				"year": 2020,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "TN 2020 State House",
+				"title": "TN 2020 State House",
+				"id": "e7c9e385-70d4-4fc2-9c84-5537bcab3488"
+			},
+			{
+				"stateCode": "TN",
+				"year": 2020,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "TN 2020 State Senate",
+				"title": "TN 2020 State Senate",
+				"id": "0c73a0f5-005e-4de8-a189-885a0fbbe5b5"
+			},
+			{
+				"stateCode": "TN",
+				"year": 2022,
+				"nDistricts": 9,
+				"planType": "congress",
+				"description": "TN 2022 Congressional",
+				"title": "TN 2022 Congressional",
+				"id": "445d4976-c994-473f-b14c-4b87464b07ee"
+			},
+			{
+				"stateCode": "TN",
+				"year": 2022,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "TN 2022 State House",
+				"title": "TN 2022 State House",
+				"id": "c0ed8258-ce44-4eec-9736-2cc3b86a9d16"
+			},
+			{
+				"stateCode": "TN",
+				"year": 2022,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "TN 2022 State Senate",
+				"title": "TN 2022 State Senate",
+				"id": "62c62bed-a104-4afc-9286-9b3915b45f58"
+			}
+		]
+	},
+	"TX": {
+		"stateCode": "TX", "name": "Texas", "plans": [
+			{"stateCode": "TX", "year": 115, "nDistricts": 36, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "TX 116th Congressional", "id": "c706c1de-408b-46b2-ac5b-498cf1f64058", "thumbnail": "6ecde762-3c69-4a0c-aabe-8e1193f6e841.png"}, 
+			{"stateCode": "TX", "year": 116, "nDistricts": 36, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "TX 116th Congressional", "id": "c706c1de-408b-46b2-ac5b-498cf1f64058", "thumbnail": "6ecde762-3c69-4a0c-aabe-8e1193f6e841.png"}, 
+			{"stateCode": "TX", "year": 2018, "nDistricts": 150, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "TX 2018 Lower State House", "id": "2c003259-5842-4a6f-b05c-2f5574b15705", "thumbnail": "43eae064-7e00-4eb9-a0e6-ed7068b88d25.png"}, 
+			{"stateCode": "TX", "year": 2018, "nDistricts": 31, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "TX 2018 Upper State House", "id": "53df56e8-f151-4b26-88f0-7d5e255b9fac", "thumbnail": "289f0d55-90ff-4169-9cb4-36a01233bafb.png"},
+			{
+				"stateCode": "TX",
+				"year": 2020,
+				"nDistricts": 36,
+				"planType": "congress",
+				"description": "TX 2020 Congressional",
+				"title": "TX 2020 Congressional",
+				"id": "19b1b774-7706-485b-a21a-896bbcbddbba"
+			},
+			{
+				"stateCode": "TX",
+				"year": 2020,
+				"nDistricts": 150,
+				"planType": "lower",
+				"description": "TX 2020 State House",
+				"title": "TX 2020 State House",
+				"id": "d7ff882d-9e26-4958-aaf0-84726cfe22c9"
+			},
+			{
+				"stateCode": "TX",
+				"year": 2020,
+				"nDistricts": 31,
+				"planType": "upper",
+				"description": "TX 2020 State Senate",
+				"title": "TX 2020 State Senate",
+				"id": "2058bfdd-689b-4d8b-9e75-52dc536b66fd"
+			},
+			{
+				"stateCode": "TX",
+				"year": 2022,
+				"nDistricts": 38,
+				"planType": "congress",
+				"description": "TX 2022 Congressional",
+				"title": "TX 2022 Congressional",
+				"id": "1c2c1e0d-2fd1-43a8-a039-73e7023124d1"
+			},
+			{
+				"stateCode": "TX",
+				"year": 2022,
+				"nDistricts": 150,
+				"planType": "lower",
+				"description": "TX 2022 State House",
+				"title": "TX 2022 State House",
+				"id": "e74af879-6ba8-4a5c-b946-0b9364aae40b"
+			},
+			{
+				"stateCode": "TX",
+				"year": 2022,
+				"nDistricts": 31,
+				"planType": "upper",
+				"description": "TX 2022 State Senate",
+				"title": "TX 2022 State Senate",
+				"id": "94b33bee-887d-4170-b154-80aa55c8fe5b"
+			}
+		]
+	},
+	"UT": {
+		"stateCode": "UT", "name": "Utah", "plans": [
+			{"stateCode": "UT", "year": 115, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "UT 116th Congressional", "id": "4603c0e4-0e01-49cf-bc50-a02d5c60afff", "thumbnail": "a28e175e-82ca-42f7-a13f-33c26d971717.png"}, 
+			{"stateCode": "UT", "year": 116, "nDistricts": 4, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "UT 116th Congressional", "id": "4603c0e4-0e01-49cf-bc50-a02d5c60afff", "thumbnail": "a28e175e-82ca-42f7-a13f-33c26d971717.png"}, 
+			{"stateCode": "UT", "year": 2018, "nDistricts": 75, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "UT 2018 Lower State House", "id": "698dda4d-21fd-451c-aa85-8d6431b523bc", "thumbnail": "d78f362d-cf4e-4970-99a4-8a2a588b5520.png"}, 
+			{"stateCode": "UT", "year": 2018, "nDistricts": 29, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "UT 2018 Upper State House", "id": "86a37b77-8c22-4d94-a915-98d9617d4229", "thumbnail": "20b1b91c-dfaf-45c2-a8db-3f4237c7482d.png"},
+			{
+				"stateCode": "UT",
+				"year": 2020,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "UT 2020 Congressional",
+				"title": "UT 2020 Congressional",
+				"id": "34e5ac82-d619-4402-963a-9d1118f318f7"
+			},
+			{
+				"stateCode": "UT",
+				"year": 2020,
+				"nDistricts": 75,
+				"planType": "lower",
+				"description": "UT 2020 State House",
+				"title": "UT 2020 State House",
+				"id": "6063bd3c-36d9-4506-906b-273165a9b739"
+			},
+			{
+				"stateCode": "UT",
+				"year": 2020,
+				"nDistricts": 29,
+				"planType": "upper",
+				"description": "UT 2020 State Senate",
+				"title": "UT 2020 State Senate",
+				"id": "d02d29a1-0927-448d-9f8a-1b50823844db"
+			},
+			{
+				"stateCode": "UT",
+				"year": 2022,
+				"nDistricts": 4,
+				"planType": "congress",
+				"description": "UT 2022 Congressional",
+				"title": "UT 2022 Congressional",
+				"id": "b4d46a7e-4366-4f6c-ac54-ff6640d4e13f"
+			},
+			{
+				"stateCode": "UT",
+				"year": 2022,
+				"nDistricts": 75,
+				"planType": "lower",
+				"description": "UT 2022 State House",
+				"title": "UT 2022 State House",
+				"id": "927e8547-08f9-43e3-8abc-68a7faf89d71"
+			},
+			{
+				"stateCode": "UT",
+				"year": 2022,
+				"nDistricts": 29,
+				"planType": "upper",
+				"description": "UT 2022 State Senate",
+				"title": "UT 2022 State Senate",
+				"id": "cfd457c9-6d3e-496d-9377-4b68de384a57"
+			}
+		]
+	},
+	"VA": {
+		"stateCode": "VA", "name": "Virginia", "plans": [
+			{"stateCode": "VA", "year": 115, "nDistricts": 11, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "VA 116th Congressional", "id": "5b68be53-e6bc-4c73-bc83-f91737056fda", "thumbnail": "893fc4ce-7d63-4e13-b17b-6c177f7e7bab.png"}, 
+			{"stateCode": "VA", "year": 116, "nDistricts": 11, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "VA 116th Congressional", "id": "5b68be53-e6bc-4c73-bc83-f91737056fda", "thumbnail": "893fc4ce-7d63-4e13-b17b-6c177f7e7bab.png"}, 
+			{"stateCode": "VA", "year": 2018, "nDistricts": 100, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "VA 2018 Lower State House", "id": "e3c011c1-df02-42a4-bb6e-1db1a137a734", "thumbnail": "909fe6c5-cebe-450e-8588-68d6498a5faa.png"}, 
+			{"stateCode": "VA", "year": 2018, "nDistricts": 40, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "VA 2018 Upper State House", "id": "caa0ac18-8c6b-414f-a0bb-5f853eb98220", "thumbnail": "99f8b3a8-5737-443f-a815-4ca1f4e63509.png"},
+			{
+				"stateCode": "VA",
+				"year": 2020,
+				"nDistricts": 11,
+				"planType": "congress",
+				"description": "VA 2020 Congressional",
+				"title": "VA 2020 Congressional",
+				"id": "28033d62-2027-4661-95d0-557621f823e9"
+			},
+			{
+				"stateCode": "VA",
+				"year": 2020,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "VA 2020 State House",
+				"title": "VA 2020 State House",
+				"id": "b3ec72b3-0825-4baf-adb9-024486acd234"
+			},
+			{
+				"stateCode": "VA",
+				"year": 2020,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "VA 2020 State Senate",
+				"title": "VA 2020 State Senate",
+				"id": "51e12bec-1f75-4a73-9cc3-975b959e293b"
+			},
+			{
+				"stateCode": "VA",
+				"year": 2022,
+				"nDistricts": 11,
+				"planType": "congress",
+				"description": "VA 2022 Congressional",
+				"title": "VA 2022 Congressional",
+				"id": "bc930c25-236f-46a7-bbe9-d8d77e21d011"
+			},
+			{
+				"stateCode": "VA",
+				"year": 2022,
+				"nDistricts": 100,
+				"planType": "lower",
+				"description": "VA 2022 State House",
+				"title": "VA 2022 State House",
+				"id": "fa427b6b-e057-43e9-8000-9d1ae319870e"
+			},
+			{
+				"stateCode": "VA",
+				"year": 2022,
+				"nDistricts": 40,
+				"planType": "upper",
+				"description": "VA 2022 State Senate",
+				"title": "VA 2022 State Senate",
+				"id": "1b489a5a-f457-428d-b552-9ede8ceb9b99"
+			}
+		]
+	},
+	"VT": {
+		"stateCode": "VT", "name": "Vermont", "plans": [
+			{"stateCode": "VT", "year": 2018, "nDistricts": 104, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "VT 2018 Lower State House", "id": "48582d9b-ef19-49ef-90dc-229c6a38e808", "thumbnail": "431026e8-e96c-4399-9f24-a20fbc6f7e38.png"}, 
+			{"stateCode": "VT", "year": 2018, "nDistricts": 13, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "VT 2018 Upper State House", "id": "44092b13-bf69-4100-b17b-084cd468f40f", "thumbnail": "5b2f62f1-c005-4697-b219-10b89b697a45.png"},
+			{
+				"stateCode": "VT",
+				"year": 2020,
+				"nDistricts": 104,
+				"planType": "lower",
+				"description": "VT 2020 State House",
+				"title": "VT 2020 State House",
+				"id": "a1d50f6d-9296-43a9-ba86-1432b672a86a"
+			},
+			{
+				"stateCode": "VT",
+				"year": 2020,
+				"nDistricts": 13,
+				"planType": "upper",
+				"description": "VT 2020 State Senate",
+				"title": "VT 2020 State Senate",
+				"id": "2826505f-ebf3-40dc-ab8b-099ecc3ff8e4"
+			},
+			{
+				"stateCode": "VT",
+				"year": 2022,
+				"nDistricts": 104,
+				"planType": "lower",
+				"description": "VT 2022 State House",
+				"title": "VT 2022 State House",
+				"id": "b627a7e1-8c66-4425-80f4-2f2958381ee0"
+			},
+			{
+				"stateCode": "VT",
+				"year": 2022,
+				"nDistricts": 13,
+				"planType": "upper",
+				"description": "VT 2022 State Senate",
+				"title": "VT 2022 State Senate",
+				"id": "1cdffaa1-c558-45d1-83f3-8d1dd5f7f203"
+			}
+		]
+	},
+	"WA": {
+		"stateCode": "WA", "name": "Washington", "plans": [
+			{"stateCode": "WA", "year": 115, "nDistricts": 10, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WA 116th Congressional", "id": "1ecd2316-a828-4da3-8fd6-52bfc6345df2", "thumbnail": "dcc3eea9-707f-47dd-9dac-c9592b693f2e.png"}, 
+			{"stateCode": "WA", "year": 116, "nDistricts": 10, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WA 116th Congressional", "id": "1ecd2316-a828-4da3-8fd6-52bfc6345df2", "thumbnail": "dcc3eea9-707f-47dd-9dac-c9592b693f2e.png"}, 
+			{"stateCode": "WA", "year": 2018, "nDistricts": 49, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "WA 2018 Lower State House", "id": "333ad7d0-2466-422c-8fab-0b822b9ef158", "thumbnail": "dc9208f8-5792-4f15-bcc1-f2dc71899861.png"}, 
+			{"stateCode": "WA", "year": 2018, "nDistricts": 49, "planType": "upper", "description": "Districts for the 2018 Lower State House", "title": "WA 2018 Lower State House", "id": "333ad7d0-2466-422c-8fab-0b822b9ef158", "thumbnail": "dc9208f8-5792-4f15-bcc1-f2dc71899861.png"},
+			{
+				"stateCode": "WA",
+				"year": 2020,
+				"nDistricts": 10,
+				"planType": "congress",
+				"description": "WA 2020 Congressional",
+				"title": "WA 2020 Congressional",
+				"id": "66454011-b7c9-4302-a075-0e1146d07d54"
+			},
+			{
+				"stateCode": "WA",
+				"year": 2020,
+				"nDistricts": 49,
+				"planType": "upper",
+				"description": "WA 2020 State Legislatures",
+				"title": "WA 2020 State Legislatures",
+				"id": "e68b6091-ab0b-4ff4-85ed-7ceb86d89053"
+			},
+			{
+				"stateCode": "WA",
+				"year": 2022,
+				"nDistricts": 10,
+				"planType": "congress",
+				"description": "WA 2022 Congressional",
+				"title": "WA 2022 Congressional",
+				"id": "3dd8f07d-8f9b-4905-a155-573bdc084b06"
+			},
+			{
+				"stateCode": "WA",
+				"year": 2022,
+				"nDistricts": 49,
+				"planType": "upper",
+				"description": "WA 2022 State Legislatures",
+				"title": "WA 2022 State Legislatures",
+				"id": "3e3c5f5c-3a83-4847-b1d8-5328fb3b9e31"
+			}
+		]
+	},
+	"WI": {
+		"stateCode": "WI", "name": "Wisconsin", "plans": [
+			{"stateCode": "WI", "year": 115, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WI 116th Congressional", "id": "d604d323-9bba-4ab1-a794-2f32ff7932b0", "thumbnail": "2efc10ae-12d7-449e-8e52-145e329a5ae4.png"}, 
+			{"stateCode": "WI", "year": 116, "nDistricts": 8, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WI 116th Congressional", "id": "d604d323-9bba-4ab1-a794-2f32ff7932b0", "thumbnail": "2efc10ae-12d7-449e-8e52-145e329a5ae4.png"}, 
+			{"stateCode": "WI", "year": 2018, "nDistricts": 99, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "WI 2018 Lower State House", "id": "eed28c2e-d221-4c13-bff4-ad2f0cd7a773", "thumbnail": "c5e19324-6797-49f3-b88c-11c3109b34a2.png"}, 
+			{"stateCode": "WI", "year": 2018, "nDistricts": 33, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "WI 2018 Upper State House", "id": "75d8e83e-469c-4888-9fd4-c3d4df70802a", "thumbnail": "39d286b7-d164-409f-b66f-b2f775298440.png"},
+			{
+				"stateCode": "WI",
+				"year": 2020,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "WI 2020 Congressional",
+				"title": "WI 2020 Congressional",
+				"id": "7d07ec5b-34c7-42a4-bd43-cc076bf366d6"
+			},
+			{
+				"stateCode": "WI",
+				"year": 2020,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "WI 2020 State House",
+				"title": "WI 2020 State House",
+				"id": "a355b8c9-3876-46ac-95f6-02fe5cff742c"
+			},
+			{
+				"stateCode": "WI",
+				"year": 2020,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "WI 2020 State Senate",
+				"title": "WI 2020 State Senate",
+				"id": "a10ad20a-38fe-4b45-a33d-f6a7658ded24"
+			},
+			{
+				"stateCode": "WI",
+				"year": 2022,
+				"nDistricts": 8,
+				"planType": "congress",
+				"description": "WI 2022 Congressional",
+				"title": "WI 2022 Congressional",
+				"id": "aa64c8f5-837c-474f-819f-6eaa1094d776"
+			},
+			{
+				"stateCode": "WI",
+				"year": 2022,
+				"nDistricts": 99,
+				"planType": "lower",
+				"description": "WI 2022 State House",
+				"title": "WI 2022 State House",
+				"id": "6a8a362d-0c59-4d81-aea3-28cba004b502"
+			},
+			{
+				"stateCode": "WI",
+				"year": 2022,
+				"nDistricts": 33,
+				"planType": "upper",
+				"description": "WI 2022 State Senate",
+				"title": "WI 2022 State Senate",
+				"id": "cb8ed0b5-013f-4b1a-ba49-1b03445416c9"
+			}
+		]
+	},
+	"WV": {
+		"stateCode": "WV", "name": "West Virginia", "plans": [
+			{"stateCode": "WV", "year": 115, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WV 116th Congressional", "id": "c0cbb3ea-7c35-4bd3-be17-84a5626004e3", "thumbnail": "21a3e55a-0a4e-423b-9642-c3f20c6d3b44.png"}, 
+			{"stateCode": "WV", "year": 116, "nDistricts": 3, "planType": "congress", "description": "Districts for the 116th US Congress", "title": "WV 116th Congressional", "id": "c0cbb3ea-7c35-4bd3-be17-84a5626004e3", "thumbnail": "21a3e55a-0a4e-423b-9642-c3f20c6d3b44.png"}, 
+			{"stateCode": "WV", "year": 2018, "nDistricts": 67, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "WV 2018 Lower State House", "id": "75694017-79d7-478f-92d1-c92316e04541", "thumbnail": "1f3a88e6-55db-4744-ab61-836dd3a1d235.png"}, 
+			{"stateCode": "WV", "year": 2018, "nDistricts": 17, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "WV 2018 Upper State House", "id": "4c7cdf16-5542-4788-a8fa-8c98c32bb365", "thumbnail": "fd76cd01-2146-429e-87b2-d683f143fe57.png"},
+			{
+				"stateCode": "WV",
+				"year": 2020,
+				"nDistricts": 3,
+				"planType": "congress",
+				"description": "WV 2020 Congressional",
+				"title": "WV 2020 Congressional",
+				"id": "8011bcb2-469b-4546-a6b8-27259586d5a3"
+			},
+			{
+				"stateCode": "WV",
+				"year": 2020,
+				"nDistricts": 67,
+				"planType": "lower",
+				"description": "WV 2020 State House",
+				"title": "WV 2020 State House",
+				"id": "a63592c7-2f60-4f52-b209-43765ee91f6e"
+			},
+			{
+				"stateCode": "WV",
+				"year": 2020,
+				"nDistricts": 17,
+				"planType": "upper",
+				"description": "WV 2020 State Senate",
+				"title": "WV 2020 State Senate",
+				"id": "66a6d69d-bcd7-44ab-a986-db9dba972e0a"
+			},
+			{
+				"stateCode": "WV",
+				"year": 2022,
+				"nDistricts": 2,
+				"planType": "congress",
+				"description": "WV 2022 Congressional",
+				"title": "WV 2022 Congressional",
+				"id": "aaaa571f-f204-4cbe-bcf1-404db0519d36"
+			},
+			{
+				"stateCode": "WV",
+				"year": 2022,
+				"nDistricts": 67,
+				"planType": "lower",
+				"description": "WV 2022 State House",
+				"title": "WV 2022 State House",
+				"id": "bd6eb9ac-ac94-465f-82d6-4e086307d5e5"
+			},
+			{
+				"stateCode": "WV",
+				"year": 2022,
+				"nDistricts": 17,
+				"planType": "upper",
+				"description": "WV 2022 State Senate",
+				"title": "WV 2022 State Senate",
+				"id": "c3ca956f-0b1d-4750-894d-b2e9dadc642c"
+			}
+		]
+	},
+	"WY": {
+		"stateCode": "WY", "name": "Wyoming", "plans": [
+			{"stateCode": "WY", "year": 2018, "nDistricts": 60, "planType": "lower", "description": "Districts for the 2018 Lower State House", "title": "WY 2018 Lower State House", "id": "bf6e11ff-1f0f-476f-9e59-a71e9e9a37d4", "thumbnail": "5541b188-0697-4a4f-a715-b814b725f2ff.png"}, 
+			{"stateCode": "WY", "year": 2018, "nDistricts": 30, "planType": "upper", "description": "Districts for the 2018 Upper State House", "title": "WY 2018 Upper State House", "id": "f6a301b6-f0f1-4ca1-b0a2-6042bce68915", "thumbnail": "9fe8bc3d-95f9-4f2a-b101-7cb3d83b586f.png"},
+			{
+				"stateCode": "WY",
+				"year": 2020,
+				"nDistricts": 60,
+				"planType": "lower",
+				"description": "WY 2020 State House",
+				"title": "WY 2020 State House",
+				"id": "0595f457-19bb-4433-8b08-e4e961309963"
+			},
+			{
+				"stateCode": "WY",
+				"year": 2020,
+				"nDistricts": 30,
+				"planType": "upper",
+				"description": "WY 2020 State Senate",
+				"title": "WY 2020 State Senate",
+				"id": "ba7ba269-14e2-4936-a04a-6cd2a57182f0"
+			},
+			{
+				"stateCode": "WY",
+				"year": 2022,
+				"nDistricts": 62,
+				"planType": "lower",
+				"description": "WY 2022 State House",
+				"title": "WY 2022 State House",
+				"id": "483d3157-343b-451f-9a0e-aebef749205f"
+			},
+			{
+				"stateCode": "WY",
+				"year": 2022,
+				"nDistricts": 31,
+				"planType": "upper",
+				"description": "WY 2022 State Senate",
+				"title": "WY 2022 State Senate",
+				"id": "e2618faf-bad1-4bb1-9a85-7e1c2ccdef91"
+			}
+		]
+	},
+	"DC": {
+		"stateCode": "DC", "name": "District of Columbia", "plans": [
+			{"stateCode": "DC", "year": 2012, "nDistricts": 8, "planType": "upper", "description": "Wards for 2012 Council", "title": "DC 2012 Council", "id": "b187c749-1cc0-44ca-bdec-cc72052f1567", "thumbnail": "b1b2ac15-b423-4c38-900b-c9d3a94668b3.png"}
+		]}
+}

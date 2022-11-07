@@ -7,6 +7,8 @@ I/O HELPERS
 import os
 from csv import DictReader, DictWriter
 import pickle
+import json
+from typing import Any
 
 
 def read_typed_csv(rel_path, field_types):
@@ -66,6 +68,13 @@ def write_csv(rel_path, rows, cols):
 
 def cast(t, v_str):
     return t(v_str)
+
+
+def load_json(rel_path) -> dict[str, Any]:
+    abs_path: str = FileSpec(rel_path).abs_path
+
+    with open(abs_path, "r") as f:
+        return json.load(f)
 
 
 class FileSpec:
