@@ -2,8 +2,6 @@
 #
 # Extract ids for official congressional maps with 3 or more districts
 #
-# Run 11/07/2022 against state_plans.json copied the same day.
-#
 
 import json
 
@@ -21,7 +19,6 @@ for state, data in states.items():
         ):
             official.append([state, "congress", plan["id"]])
             x: str = '"{}": "{}"'.format(state, plan["id"])
-            x = "{ " + x + " },"
-            print(x)
+            print(x, ",")
 
 pass
