@@ -94,7 +94,7 @@ official_maps: dict[str, str] = {
 
 # Notable Maps for the 37 states with > 2 congressional districts
 # Pulled 11/07/2022
-notable_maps: dict[str, str] = {
+notable_maps: dict[str, dict] = {
     "AL": {
         "proportional": "5d573512-b4c2-4f6f-ae2d-c922a10f44fb",
         "competitive": "3cd2a04e-cd87-40f5-a94f-6bdea8949c0d",
