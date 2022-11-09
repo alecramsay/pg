@@ -4,7 +4,7 @@
 #
 # For example:
 #
-# $ scripts/plot_radar_diagram.py NC Official Proportional
+# $ scripts/plot_radar_diagram.py NC Official Baseline
 #
 
 import chart_studio.plotly as py
@@ -20,14 +20,16 @@ from pg import *
 xx: str = "NC"
 yy: str = "22"
 type: str = "Congress"
-from_subtype: str = "Official"
-to_subtype: str = "Proportional"
+current_subtype: str = "Official"
+compare_subtype: str = "Baseline"
 
 
 ### CONSTRUCT PATHS ###
 
-from_file: str = f"temp/{xx}{yy}_{type}_{from_subtype}.json"
-to_file: str = f"temp/{xx}{yy}_{type}_{to_subtype}.json"
+current_file: str = f"temp/{xx}{yy}_{type}_{current_subtype}.json"
+compare_file: str = f"temp/{xx}{yy}_{type}_{compare_subtype}.json"
+
+plot_file: str = f"{xx}{yy}_{type}_{current_subtype}_radar"
 
 
 ### LOAD RATINGS ###
@@ -51,14 +53,14 @@ def cull_ratings(raw_in: dict) -> Ratings:
     }
 
 
-from_ratings: Ratings = cull_ratings(load_json(from_file))
-to_ratings: Ratings = cull_ratings(load_json(to_file))
+current_ratings: Ratings = cull_ratings(load_json(current_file))
+compare_ratings: Ratings = cull_ratings(load_json(compare_file))
 
 
 ### PLOT RADAR DIAGRAM ###
 
-from_title: str = f"{xx}{yy} {type} {from_subtype}"
-to_title: str = f"{xx}{yy} {type} {to_subtype}"
+current_title: str = f"{xx}{yy} {type} {current_subtype}"
+compare_title: str = f"{xx}{yy} {type} {compare_subtype}"
 
 # TODO - plot radar diagram
 def plot_radar_diagram() -> None:
@@ -100,7 +102,7 @@ def plot_radar_diagram() -> None:
     )
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
-    py.plot(fig, filename="radar_diagram")
+    py.plot(fig, filename=plot_file)
 
 
 plot_radar_diagram()
