@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #
-# Extract ids for official congressional maps with 3 or more districts
+# Extract ids for official congressional maps with 3 or more districts,
+# from state_plans.json.
 #
 
 import json
