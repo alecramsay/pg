@@ -91,6 +91,8 @@ official_maps: dict[str, str] = {
     "WI": "aa64c8f5-837c-474f-819f-6eaa1094d776",
 }
 
+# HACK
+officials_copy: dict[str, str] = official_maps
 
 # Notable Maps for the 37 states with > 2 congressional districts
 # Pulled 11/07/2022
@@ -355,3 +357,10 @@ notable_maps: dict[str, dict] = {
         "splitting": "bc908f90-e0ad-4e92-8514-512cebebb637",
     },
 }
+
+# HACK
+notables_copy = notable_maps
+
+
+# HACK
+baseline_maps: dict[str, str] = official_maps
