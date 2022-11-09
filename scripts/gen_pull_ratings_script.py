@@ -13,7 +13,7 @@ import json
 from pg import *
 
 
-def print_command(xx: str, subtype: str, id: str):
+def print_command(xx: str, subtype: str, id: str) -> None:
     print(f"scripts/pull_map_ratings.sh {xx} Congress {subtype} {id}")
 
 

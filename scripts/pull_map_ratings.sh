@@ -12,9 +12,10 @@ XX=$1
 TYPE=$2
 SUBTYPE=$3
 MAP_ID=$4
+YY=22
 
 SCRIPT_DIR=/Users/alecramsay/iCloud/dev/dra-cli
-OUT_FILE=/Users/alecramsay/iCloud/dev/pg/temp/$XX\_$TYPE\_$SUBTYPE.json
+OUT_FILE=/Users/alecramsay/iCloud/dev/pg/temp/$XX$YY\_$TYPE\_$SUBTYPE.json
 
 # $SCRIPT_DIR/getmap.js -m -i $MAP_ID | grep score_ > $OUT_FILE
 
