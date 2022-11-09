@@ -10,6 +10,7 @@
 import chart_studio.plotly as py
 import plotly.graph_objs as go  # https://plotly.com/python-api-reference/plotly.graph_objects.html
 from typing import TypedDict
+import numpy as np  # DELETE
 
 from pg import *
 
@@ -62,10 +63,38 @@ compare_ratings: Ratings = cull_ratings(load_json(compare_file))
 current_title: str = f"{xx}{yy} {type} {current_subtype}"
 compare_title: str = f"{xx}{yy} {type} {compare_subtype}"
 
+# TODO - DELETE
+def example_plot() -> None:
+    np.random.seed(1)
+
+    N = 100
+    x = np.random.rand(N)
+    y = np.random.rand(N)
+    colors = np.random.rand(N)
+    sz = np.random.rand(N) * 30
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=x,
+            y=y,
+            mode="markers",
+            marker=go.scatter.Marker(
+                size=sz, color=colors, opacity=0.6, colorscale="Viridis"
+            ),
+        )
+    )
+
+    # fig.show()
+    fig.write_image("content/" + plot_file + ".png")
+
+
 # TODO - plot radar diagram
 def plot_radar_diagram() -> None:
     """
     https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html
+    https://plotly.com/python/renderers/
+    https://plotly.com/python/static-image-export/
     """
 
     traces: list = []
