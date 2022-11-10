@@ -24,5 +24,6 @@ for xx, maps in notables_copy.items():
     for dim, id in maps.items():
         print_command(xx, dim.capitalize(), id)
 
-for xx, id in baseline_maps.items():
-    print_command(xx, "Baseline", id)
+# Do this a state at a time as baseline maps are completed
+# for xx, id in baseline_maps.items():
+#     print_command(xx, "Baseline", id)

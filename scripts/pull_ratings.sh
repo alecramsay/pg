@@ -236,42 +236,42 @@ scripts/pull_map_ratings.sh WI Congress Minority 1943dc12-a393-4b9f-a688-cd5365e
 scripts/pull_map_ratings.sh WI Congress Compact b6942ec8-9615-4e6a-bdbd-275b196a840f
 scripts/pull_map_ratings.sh WI Congress Splitting bc908f90-e0ad-4e92-8514-512cebebb637
 
-# Baseline maps
+# Baseline maps -- Do this one state at a time
 
-scripts/pull_map_ratings.sh AL Congress Baseline b1cfc3f6-27df-498d-a147-0664d75fea88
-scripts/pull_map_ratings.sh AR Congress Baseline fa3434ec-4f52-48de-947b-5998b6937bf0
-scripts/pull_map_ratings.sh AZ Congress Baseline 4ee8ecf2-14b7-4a8d-99bc-82fa633a9305
-scripts/pull_map_ratings.sh CA Congress Baseline fc9d2d06-7c7f-451c-92cb-122127a79c29
-scripts/pull_map_ratings.sh CO Congress Baseline 39f44408-23f7-439d-b7eb-923da58b63df
-scripts/pull_map_ratings.sh CT Congress Baseline 707f203c-ce98-4de8-b150-a2605136e015
-scripts/pull_map_ratings.sh FL Congress Baseline 3a6791b9-a186-4691-a95c-5d51dbb3be1c
-scripts/pull_map_ratings.sh GA Congress Baseline 3a370cc7-f820-4af4-8fca-a27ec52502b7
-scripts/pull_map_ratings.sh IA Congress Baseline 628d5e9a-bd35-4248-aa8c-73af095e0135
-scripts/pull_map_ratings.sh IL Congress Baseline 8a4586ad-4c58-489b-828c-4477cfd0ce88
-scripts/pull_map_ratings.sh IN Congress Baseline c08c9df0-9756-4c5a-a7e7-01ff03bbb170
-scripts/pull_map_ratings.sh KS Congress Baseline 2ea884cd-5687-48b4-879a-4f780d3de1cf
-scripts/pull_map_ratings.sh KY Congress Baseline 0ec1616e-7ed6-4f84-b20d-dcc51221b2bf
-scripts/pull_map_ratings.sh LA Congress Baseline 42873bd9-ce68-4ee1-878e-be420dbf0ee3
-scripts/pull_map_ratings.sh MA Congress Baseline 791f8174-e00d-4baf-9b0a-206a298eb28b
-scripts/pull_map_ratings.sh MD Congress Baseline a365ecbd-db5f-4c84-a77f-90310c6a6c1a
-scripts/pull_map_ratings.sh MI Congress Baseline 287ace43-1a66-4686-b596-949f578971a8
-scripts/pull_map_ratings.sh MN Congress Baseline 4b212b88-2b8b-48aa-b2d2-e2f9980ac884
-scripts/pull_map_ratings.sh MO Congress Baseline 68b2b598-69cd-430e-bee2-1dc4b76705f6
-scripts/pull_map_ratings.sh MS Congress Baseline 2a63d0b3-58db-4e59-9b3b-436b221e078a
-scripts/pull_map_ratings.sh NC Congress Baseline 6e8268a4-3b9b-4140-8f99-e3544a2f0816
-scripts/pull_map_ratings.sh NE Congress Baseline 9de1188c-2169-4c5a-a4f3-76179d22b279
-scripts/pull_map_ratings.sh NJ Congress Baseline 6ff0b024-2e5d-4e9b-ba0e-56f6de17ea80
-scripts/pull_map_ratings.sh NM Congress Baseline ec1c76cd-f59f-445b-8f24-fbffb0e8bdf5
-scripts/pull_map_ratings.sh NV Congress Baseline eb89e40d-595f-485f-9a43-d1bbdd6d0cb4
-scripts/pull_map_ratings.sh NY Congress Baseline 395a7fbe-fa32-47fc-993d-e07d36baff72
-scripts/pull_map_ratings.sh OH Congress Baseline 64d56870-70ea-4f4d-b667-9a4fd60ac511
-scripts/pull_map_ratings.sh OK Congress Baseline f726bcb3-b750-44b2-9d0b-e2df90fe6fa5
-scripts/pull_map_ratings.sh OR Congress Baseline 9b2b545f-5cd2-4e0d-a9b9-cc3915a4750f
-scripts/pull_map_ratings.sh PA Congress Baseline b0a94d77-5d99-41c5-bc01-5859a6e1f3e6
-scripts/pull_map_ratings.sh SC Congress Baseline 839561a1-8c15-4c4b-ab56-3275d68092f9
-scripts/pull_map_ratings.sh TN Congress Baseline 445d4976-c994-473f-b14c-4b87464b07ee
-scripts/pull_map_ratings.sh TX Congress Baseline 1c2c1e0d-2fd1-43a8-a039-73e7023124d1
-scripts/pull_map_ratings.sh UT Congress Baseline b4d46a7e-4366-4f6c-ac54-ff6640d4e13f
-scripts/pull_map_ratings.sh VA Congress Baseline bc930c25-236f-46a7-bbe9-d8d77e21d011
-scripts/pull_map_ratings.sh WA Congress Baseline 3dd8f07d-8f9b-4905-a155-573bdc084b06
-scripts/pull_map_ratings.sh WI Congress Baseline aa64c8f5-837c-474f-819f-6eaa1094d776
+# scripts/pull_map_ratings.sh AL Congress Baseline b1cfc3f6-27df-498d-a147-0664d75fea88
+# scripts/pull_map_ratings.sh AR Congress Baseline fa3434ec-4f52-48de-947b-5998b6937bf0
+# scripts/pull_map_ratings.sh AZ Congress Baseline 4ee8ecf2-14b7-4a8d-99bc-82fa633a9305
+# scripts/pull_map_ratings.sh CA Congress Baseline fc9d2d06-7c7f-451c-92cb-122127a79c29
+# scripts/pull_map_ratings.sh CO Congress Baseline 39f44408-23f7-439d-b7eb-923da58b63df
+# scripts/pull_map_ratings.sh CT Congress Baseline 707f203c-ce98-4de8-b150-a2605136e015
+# scripts/pull_map_ratings.sh FL Congress Baseline 3a6791b9-a186-4691-a95c-5d51dbb3be1c
+# scripts/pull_map_ratings.sh GA Congress Baseline 3a370cc7-f820-4af4-8fca-a27ec52502b7
+# scripts/pull_map_ratings.sh IA Congress Baseline 628d5e9a-bd35-4248-aa8c-73af095e0135
+# scripts/pull_map_ratings.sh IL Congress Baseline 8a4586ad-4c58-489b-828c-4477cfd0ce88
+# scripts/pull_map_ratings.sh IN Congress Baseline c08c9df0-9756-4c5a-a7e7-01ff03bbb170
+# scripts/pull_map_ratings.sh KS Congress Baseline 2ea884cd-5687-48b4-879a-4f780d3de1cf
+# scripts/pull_map_ratings.sh KY Congress Baseline 0ec1616e-7ed6-4f84-b20d-dcc51221b2bf
+# scripts/pull_map_ratings.sh LA Congress Baseline 42873bd9-ce68-4ee1-878e-be420dbf0ee3
+# scripts/pull_map_ratings.sh MA Congress Baseline 791f8174-e00d-4baf-9b0a-206a298eb28b
+# scripts/pull_map_ratings.sh MD Congress Baseline a365ecbd-db5f-4c84-a77f-90310c6a6c1a
+# scripts/pull_map_ratings.sh MI Congress Baseline 287ace43-1a66-4686-b596-949f578971a8
+# scripts/pull_map_ratings.sh MN Congress Baseline 4b212b88-2b8b-48aa-b2d2-e2f9980ac884
+# scripts/pull_map_ratings.sh MO Congress Baseline 68b2b598-69cd-430e-bee2-1dc4b76705f6
+# scripts/pull_map_ratings.sh MS Congress Baseline 2a63d0b3-58db-4e59-9b3b-436b221e078a
+# scripts/pull_map_ratings.sh NC Congress Baseline 6e8268a4-3b9b-4140-8f99-e3544a2f0816
+# scripts/pull_map_ratings.sh NE Congress Baseline 9de1188c-2169-4c5a-a4f3-76179d22b279
+# scripts/pull_map_ratings.sh NJ Congress Baseline 6ff0b024-2e5d-4e9b-ba0e-56f6de17ea80
+# scripts/pull_map_ratings.sh NM Congress Baseline ec1c76cd-f59f-445b-8f24-fbffb0e8bdf5
+# scripts/pull_map_ratings.sh NV Congress Baseline eb89e40d-595f-485f-9a43-d1bbdd6d0cb4
+# scripts/pull_map_ratings.sh NY Congress Baseline 395a7fbe-fa32-47fc-993d-e07d36baff72
+# scripts/pull_map_ratings.sh OH Congress Baseline 64d56870-70ea-4f4d-b667-9a4fd60ac511
+# scripts/pull_map_ratings.sh OK Congress Baseline f726bcb3-b750-44b2-9d0b-e2df90fe6fa5
+# scripts/pull_map_ratings.sh OR Congress Baseline 9b2b545f-5cd2-4e0d-a9b9-cc3915a4750f
+# scripts/pull_map_ratings.sh PA Congress Baseline b0a94d77-5d99-41c5-bc01-5859a6e1f3e6
+# scripts/pull_map_ratings.sh SC Congress Baseline 839561a1-8c15-4c4b-ab56-3275d68092f9
+# scripts/pull_map_ratings.sh TN Congress Baseline 445d4976-c994-473f-b14c-4b87464b07ee
+# scripts/pull_map_ratings.sh TX Congress Baseline 1c2c1e0d-2fd1-43a8-a039-73e7023124d1
+# scripts/pull_map_ratings.sh UT Congress Baseline b4d46a7e-4366-4f6c-ac54-ff6640d4e13f
+# scripts/pull_map_ratings.sh VA Congress Baseline bc930c25-236f-46a7-bbe9-d8d77e21d011
+# scripts/pull_map_ratings.sh WA Congress Baseline 3dd8f07d-8f9b-4905-a155-573bdc084b06
+# scripts/pull_map_ratings.sh WI Congress Baseline aa64c8f5-837c-474f-819f-6eaa1094d776

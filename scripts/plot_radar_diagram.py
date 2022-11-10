@@ -93,6 +93,18 @@ def text_position(ratings: list[int], move_value: int) -> list[str]:
     return positions
 
 
+def make_title(label: str) -> str:
+    if label == "Official":
+        return label
+    if label == "Splitting":
+        return f"Least {label}"
+    if label in ["Proportional", "Competitive", "Compact"]:
+        return f"Most {label}"
+    if label == "Minority":
+        return f"Best {label} Representation"
+    raise ValueError(f"Unknown map label: {label}")
+
+
 current_name: str = f"{xx}{yy} {type} {current_subtype}"
 compare_name: str = f"{xx}{yy} {type} {compare_subtype}"
 
@@ -138,6 +150,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     current_r: list[int] = [x for x in current["ratings"].values()]
     current_r += current_r[:1]  # close the polygon
+    current_positions: list[str] = text_position(current_r, 80)
 
     current_trace: py.Scatterpolar = go.Scatterpolar(
         name=current["name"],
@@ -145,7 +158,8 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
         r=current_r,
         theta=theta,
         fill="toself",
-        text="",  # Suppress the current ratings
+        text=current_r,
+        textposition=current_positions,
         fillcolor="rgba(44, 160, 44, 0.75)",
         marker=dict(color="black"),
         line=dict(color="black"),
@@ -154,7 +168,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     # Compare trace
 
     compare_r: list[int] = [x for x in compare["ratings"].values()]
-    compare_r += compare_r[:1]
+    compare_r += compare_r[:1]  # close the polygon
     compare_positions: list[str] = text_position(compare_r, 80)
 
     compare_trace: py.Scatterpolar = go.Scatterpolar(
@@ -162,18 +176,18 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
         mode="lines+markers+text",
         r=compare_r,
         theta=theta,
-        text=compare_r,
-        textposition=compare_positions,
+        text="",  # Suppress the ratings -- compare_r,
+        # textposition=compare_positions,
         fill="toself",
         fillcolor="rgba(255, 127, 14, 0.5)",
-        marker=dict(color="orange"),
-        line=dict(color="orange"),
+        marker=dict(color="#1f77b4"),
+        line=dict(color="#1f77b4"),
     )
 
     traces.append(compare_trace)
     traces.append(current_trace)
 
-    title: str = current["nickname"]
+    title: str = make_title(current["nickname"])
     font_size: int = 16
     title_x: float = 0.5  # center
 
