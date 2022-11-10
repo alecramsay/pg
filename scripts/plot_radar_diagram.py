@@ -159,19 +159,26 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     title: str = current["nickname"]
     font_size: int = 16
-    title_x: float = 0.5
+    title_x: float = 0.5  # center
 
     layout: py.Layout = go.Layout(
         title=dict(text=title, x=title_x, font_size=font_size),
         polar=dict(
             bgcolor=bgcolor,
-            angularaxis=dict(linewidth=1, showline=True, linecolor="black"),
+            angularaxis=dict(
+                linewidth=1,
+                linecolor="black",
+                gridcolor="lightgrey",
+                gridwidth=1,
+                layer="below traces",
+            ),
             radialaxis=dict(
                 visible=True,
                 gridcolor="lightgrey",
                 gridwidth=1,
                 range=[0, 100],
                 showticklabels=False,
+                layer="below traces",
             ),
         ),
         width=size,
@@ -182,7 +189,6 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     )
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
-    # py.plot(fig, filename=plot_file)
 
     if show_plot:
         fig.show()
