@@ -17,12 +17,14 @@ from pg import *
 
 ### PARSE ARGS ###
 
-# TODO - Parse command-line args
 xx: str = "NC"
 yy: str = "22"
 type: str = "Congress"
 current_subtype: str = "Official"
 compare_subtype: str = "Baseline"
+
+show_plot: bool = True
+write_png: bool = False
 
 
 ### CONSTRUCT PATHS ###
@@ -88,31 +90,6 @@ class Plan(TypedDict):
 current_plan: Plan = {"name": current_name, "ratings": current_ratings}
 compare_plan: Plan = {"name": compare_name, "ratings": compare_ratings}
 
-# TODO - DELETE
-def example_plot() -> None:
-    np.random.seed(1)
-
-    N = 100
-    x = np.random.rand(N)
-    y = np.random.rand(N)
-    colors = np.random.rand(N)
-    sz = np.random.rand(N) * 30
-
-    fig = go.Figure()
-    fig.add_trace(
-        go.Scatter(
-            x=x,
-            y=y,
-            mode="markers",
-            marker=go.scatter.Marker(
-                size=sz, color=colors, opacity=0.6, colorscale="Viridis"
-            ),
-        )
-    )
-
-    # fig.show()
-    fig.write_image("content/" + plot_file + ".png")
-
 
 def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     """
@@ -120,9 +97,8 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     https://plotly.com/python/static-image-export/
     """
 
-    # TODO
-    # * Border not completing
-    # * Values underneath?
+    size: int = 500
+    bgcolor: str = "#fafafa"
 
     traces: list = []
     theta: list[str] = [
@@ -132,11 +108,12 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
         "Compactness",
         "Splitting",
     ]
+    theta += theta[:1]  # close the polygon
 
     # Current trace
 
     current_r: list[int] = [x for x in current["ratings"].values()]
-    current_r += current_r[:1]
+    current_r += current_r[:1]  # close the polygon
 
     current_trace: py.Scatterpolar = go.Scatterpolar(
         name=current["name"],
@@ -145,9 +122,9 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
         theta=theta,
         fill="toself",
         text="",  # Suppress the current ratings
-        fillcolor="rgba(44, 160, 44, 0.5)",
-        marker={"color": "black"},
-        line={"color": "black"},
+        fillcolor="rgba(44, 160, 44, 0.75)",
+        marker=dict(color="black"),
+        line=dict(color="black"),
     )
 
     # Compare trace
@@ -161,18 +138,14 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
         mode="lines+markers+text",
         r=compare_r,
         theta=theta,
-        # TODO
-        # dimensions: dimensions, TODO - ???
-        fill="toself",
-        fillcolor="rgba(255, 127, 14, 0.5)",
         text=compare_r,
         textposition=compare_positions,
+        fill="toself",
+        fillcolor="rgba(255, 127, 14, 0.5)",
+        marker=dict(color="orange"),
+        line=dict(color="orange"),
     )
 
-    # TODO: HACK - Add ghost traces???
-
-    # traces.append(compare_ghost)
-    # traces.append(current_ghost)
     traces.append(compare_trace)
     traces.append(current_trace)
 
@@ -183,43 +156,32 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     layout: py.Layout = go.Layout(
         title=dict(text=title, x=title_x, font_size=font_size),
-        polar=dict(radialaxis=dict(visible=True, range=[0, 100], showticklabels=False)),
+        polar=dict(
+            bgcolor=bgcolor,
+            angularaxis=dict(linewidth=1, showline=True, linecolor="black"),
+            radialaxis=dict(
+                visible=True,
+                gridcolor="lightgrey",
+                gridwidth=1,
+                range=[0, 100],
+                showticklabels=False,
+            ),
+        ),
+        width=size,
+        height=size,
         showlegend=False,
+        paper_bgcolor=bgcolor,
+        plot_bgcolor=bgcolor,
     )
-    """
-    TODO
-    radarLayout = {
-      title: {
-        text: radarTitle,
-        x: titleX,
-        font: {
-          size: fontSize
-        }
-      },
-      polar:
-      {
-        radialaxis:
-        {
-          visible: true,
-          range: [0, 100],
-          showticklabels: false
-        }
-      },
-      hovermode: 'closest',
-      showlegend: bLegend,
-      legend: {
-        orientation: 'h',   // show entries horizontally
-        xanchor: 'center',  // use center of legend as anchor
-        x: 0.5              // put legend in center of x-axis
-      },
-      annotations: radarAnnotations,
-      paper_bgcolor: MA.appBackgroundColor,
-      plot_bgcolor: MA.appBackgroundColor
-    };
-    """
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
-    py.plot(fig, filename=plot_file)
+    # fig.update_polars(radialaxis_color="black")
+    # py.plot(fig, filename=plot_file)
+
+    if show_plot:
+        fig.show()
+    if write_png:
+        fig.write_image("content/" + plot_file + ".png")
 
 
 plot_radar_diagram(current_plan, compare_plan)
