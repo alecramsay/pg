@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#
 
 """
 Diff the notable maps for a state & year.

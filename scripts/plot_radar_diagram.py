@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-#
-# Plot radar diagram comparing two maps
-#
-# For example:
-#
-# $ scripts/plot_radar_diagram.py NC Official Baseline
-# $ scripts/plot_radar_diagram.py NC Proportional Baseline
-#
+
+"""
+Plot radar diagram comparing two maps
+
+For example:
+
+$ scripts/plot_radar_diagram.py NC Official Baseline
+$ scripts/plot_radar_diagram.py NC Proportional Baseline
+
+For documentation, type:
+
+$ scripts/plot_radar_diagram.py -h
+
+"""
 
 import argparse
 from argparse import ArgumentParser, Namespace
