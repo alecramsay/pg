@@ -10,7 +10,6 @@
 import chart_studio.plotly as py
 import plotly.graph_objs as go  # https://plotly.com/python-api-reference/plotly.graph_objects.html
 from typing import TypedDict, Any
-import numpy as np  # DELETE
 
 from pg import *
 
@@ -84,11 +83,20 @@ compare_name: str = f"{xx}{yy} {type} {compare_subtype}"
 
 class Plan(TypedDict):
     name: str
+    nickname: str
     ratings: Ratings
 
 
-current_plan: Plan = {"name": current_name, "ratings": current_ratings}
-compare_plan: Plan = {"name": compare_name, "ratings": compare_ratings}
+current_plan: Plan = {
+    "name": current_name,
+    "nickname": current_subtype,
+    "ratings": current_ratings,
+}
+compare_plan: Plan = {
+    "name": compare_name,
+    "nickname": compare_subtype,
+    "ratings": compare_ratings,
+}
 
 
 def plot_radar_diagram(current: Plan, compare: Plan) -> None:
@@ -149,8 +157,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     traces.append(compare_trace)
     traces.append(current_trace)
 
-    # TODO - Decide on title template
-    title: str = "Ratings: " + current["name"]
+    title: str = current["nickname"]
     font_size: int = 16
     title_x: float = 0.5
 
@@ -175,7 +182,6 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     )
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
-    # fig.update_polars(radialaxis_color="black")
     # py.plot(fig, filename=plot_file)
 
     if show_plot:
