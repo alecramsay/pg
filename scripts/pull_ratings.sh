@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Pull the ratings for all study maps
+# Pull the ratings for all study maps:
+# - Update this using gen_pull_ratings_script.py output.
 #
 # For example:
 #

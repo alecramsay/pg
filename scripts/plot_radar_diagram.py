@@ -5,28 +5,44 @@
 # For example:
 #
 # $ scripts/plot_radar_diagram.py NC Official Baseline
+# $ scripts/plot_radar_diagram.py NC Proportional Baseline
 #
 
+import argparse
+from argparse import ArgumentParser, Namespace
 import chart_studio.plotly as py
 import plotly.graph_objs as go  # https://plotly.com/python-api-reference/plotly.graph_objects.html
-from typing import TypedDict, Any
+from typing import TypedDict
 
 from pg import *
 
 
 ### PARSE ARGS ###
 
-xx: str = "NC"
+parser: ArgumentParser = argparse.ArgumentParser(
+    description="Plot a radar diagram comparing two maps"
+)
+
+parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
+parser.add_argument("current", help="The current (top) map", type=str)
+parser.add_argument("compare", help="The compare (bottom) map", type=str)
+
+parser.add_argument(
+    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+)
+
+args: Namespace = parser.parse_args()
+
+xx: str = args.state
+current_subtype: str = args.current
+compare_subtype: str = args.compare
+
 yy: str = "22"
 type: str = "Congress"
-current_subtype: str = "Official"
-compare_subtype: str = "Baseline"
-
-show_plot: bool = True
-write_png: bool = False
+out_dir: str = "content/"
 
 
-### CONSTRUCT PATHS ###
+### CONSTRUCT FILE NAMES ###
 
 current_file: str = f"temp/{xx}{yy}_{type}_{current_subtype}.json"
 compare_file: str = f"temp/{xx}{yy}_{type}_{compare_subtype}.json"
@@ -190,10 +206,8 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
 
-    if show_plot:
-        fig.show()
-    if write_png:
-        fig.write_image("content/" + plot_file + ".png")
+    fig.write_image(out_dir + plot_file + ".png")
+    # fig.show()
 
 
 plot_radar_diagram(current_plan, compare_plan)
