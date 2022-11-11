@@ -12,11 +12,9 @@
 * Set the Colors and Overlays (in DRA)
 * Collect the ids for the new maps in pg/constants.py
 
-(3) Pull the ratings for the Official and Notable maps
-* Generate the commands, using the gen_pull_ratings.py script
-* Update the pull_ratings.sh script with those commands & run it
+(3) Pull the ratings for the Official and Notable maps, using the pull_ratings.py script
 
-(4) Create a baseline map, using the tools in the 'baseline' repo
+(4) Create a baseline map for a state, using the tools in the 'baseline' repo
 
 (5) For each baseline map:
 * Import the map, using the import_base_map.sh script
