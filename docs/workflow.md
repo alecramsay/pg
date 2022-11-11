@@ -2,13 +2,13 @@
 
 (1) Copy Official maps
 * Snapshot Official map ids in pg/constants.py -- DONE
-* Copy the Official maps, using the {TBD} script
+* Copy the Official maps, using the duplicate_official_maps.py script
 * Set the Colors and Overlays (in DRA)
 * Collect the ids for the new maps in pg/constants.py
 
 (2) Copy Notable Maps
 * Snapshot Notable map ids in pg/constants.py -- DONE
-* Copy Notable maps, using the {TBD} script
+* Copy Notable maps, using the duplicate_notable_maps.py script
 * Set the Colors and Overlays (in DRA)
 * Collect the ids for the new maps in pg/constants.py
 
