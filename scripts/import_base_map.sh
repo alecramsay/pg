@@ -4,7 +4,7 @@
 #
 # For example:
 #
-# scripts/import_base_map.sh NC Congress block
+# scripts/import_base_map.sh NC Congress blocks
 #
 
 XX=$1

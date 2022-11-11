@@ -18,7 +18,7 @@ import os
 from pg import *
 
 
-def make_command(xx: str, subtype: str, id: str) -> None:
+def make_command(xx: str, subtype: str, id: str) -> str:
     return f"scripts/pull_map_ratings.sh {xx} Congress {subtype} {id}"
 
 
