@@ -99,18 +99,6 @@ def text_position(ratings: list[int], move_value: int) -> list[str]:
     return positions
 
 
-def make_title(label: str) -> str:
-    if label == "Official":
-        return label
-    if label == "Splitting":
-        return f"Least {label}"
-    if label in ["Proportional", "Competitive", "Compact"]:
-        return f"Most {label}"
-    if label == "Minority":
-        return f"Best {label} Representation"
-    raise ValueError(f"Unknown map label: {label}")
-
-
 current_name: str = f"{xx}{yy} {type} {current_subtype}"
 compare_name: str = f"{xx}{yy} {type} {compare_subtype}"
 
@@ -193,7 +181,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
     traces.append(compare_trace)
     traces.append(current_trace)
 
-    title: str = make_title(current["nickname"])
+    title: str = qualify_label(current["nickname"])
     font_size: int = 16
     title_x: float = 0.5  # center
 

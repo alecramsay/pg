@@ -8,7 +8,7 @@ import json
 
 from .types import *
 from .io import *
-from .utils import *
+from .helpers import *
 
 
 def read_maps(state, year, map_type, verbose=False):
