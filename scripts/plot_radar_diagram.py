@@ -59,26 +59,6 @@ plot_file: str = f"{xx}{yy}_{type}_{current_subtype}_radar"
 ### LOAD RATINGS ###
 
 
-class Ratings(TypedDict):
-    proportionality: int
-    competitiveness: int
-    minority_opportunity: int
-    compactness: int
-    splitting: int
-
-
-def cull_ratings(raw_in: dict) -> Ratings:
-    r: Ratings = {
-        "proportionality": int(raw_in["score_proportionality"]),
-        "competitiveness": int(raw_in["score_competitiveness"]),
-        "minority_opportunity": int(raw_in["score_minorityRights"]),
-        "compactness": int(raw_in["score_compactness"]),
-        "splitting": int(raw_in["score_splitting"]),
-    }
-
-    return r
-
-
 current_ratings: Ratings = cull_ratings(load_json(current_file))
 compare_ratings: Ratings = cull_ratings(load_json(compare_file))
 
