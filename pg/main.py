@@ -11,23 +11,36 @@ from .io import *
 from .helpers import *
 
 
-def read_maps(state, year, map_type, verbose=False):
+root_dir: str = "data"
+
+
+def read_maps(state, year, map_type, verbose=False) -> list:
     """
     Read the maps for a state and year.
     """
 
-    notables = ["proportional", "competitive", "minority", "compact", "splitting"]
-    file_names = list()
+    notables: list[str] = [
+        "proportional",
+        "competitive",
+        "minority",
+        "compact",
+        "splitting",
+    ]
+    file_names: list = list()
 
     for notable in notables:
+        data_dir: str = path_to_file([root_dir, state])
+        data_file: str = file_name([state, year, map_type, notable], "_", "csv")
         file_names.append(
-            "data/{}/{}_{}_{}_{}.csv".format(state, state, year, map_type, notable)
+            data_dir
+            + data_file
+            # "data/{}/{}_{}_{}_{}.csv".format(state, state, year, map_type, notable)
         )
 
-    types = [str, int]
-    maps_by_geoid = list()
+    types: list = [str, int]
+    maps_by_geoid: list = list()
     for csv in file_names:
-        rows = read_typed_csv(csv, types)
+        rows: list = read_typed_csv(csv, types)
         maps_by_geoid.append(rows)
 
     return maps_by_geoid
@@ -126,19 +139,23 @@ def diff_map_pairs(maps_by_district, verbose=False):
     return diffs
 
 
-def read_census(state, xx, verbose=False):
+def read_census(state, xx, verbose=False) -> dict[str, int]:
     """
     Read the census data by block for a state.
     """
-    rel_path = "data/{}/2020vt_Census_block_{}_data2.json".format(state, xx)
-    abs_path = FileSpec(rel_path).abs_path
-    with open(abs_path, "r", encoding="utf-8-sig") as f:
-        data = json.load(f)
+    data_dir: str = path_to_file([root_dir, state])
+    data_file: str = file_name(["2020vt", "Census", "block", xx, "data2"], "_", "json")
+    rel_path = data_dir + data_file
+    # rel_path = "data/{}/2020vt_Census_block_{}_data2.json".format(state, xx)
+    abs_path: str = FileSpec(rel_path).abs_path
 
-    pop_by_geoid = dict()
+    with open(abs_path, "r", encoding="utf-8-sig") as f:
+        data: dict = json.load(f)
+
+    pop_by_geoid: dict[str, int] = dict()
     for feature in data["features"]:
-        geoid = feature["properties"]["GEOID"]
-        pop = feature["properties"]["datasets"]["D20F"]["Tot"]
+        geoid: str = feature["properties"]["GEOID"]
+        pop: int = feature["properties"]["datasets"]["D20F"]["Tot"]
 
         pop_by_geoid[geoid] = pop
 
@@ -170,5 +187,6 @@ def sort_areas_by_pop(areas, pop_by_geoid):
     return sorted_areas
 
 
-def stringify_districts(districts):
-    return "/".join([str(x) for x in districts])
+# TODO - Why do I have this?
+# def stringify_districts(districts) -> str:
+#     return "/".join([str(x) for x in districts])

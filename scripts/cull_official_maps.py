@@ -10,7 +10,9 @@ import json
 
 from pg import *
 
-states: dict[str, Any] = load_json("data/state_plans.json")
+in_dir: str = path_to_file(["data"])
+in_file: str = file_name(["state", "plans"], "_", "json")
+states: dict[str, Any] = load_json(in_dir + in_file)
 
 official: list = list()
 for state, data in states.items():

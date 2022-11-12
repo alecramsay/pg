@@ -8,21 +8,45 @@ import os
 from csv import DictReader, DictWriter
 import pickle
 import json
-from typing import Any
+from typing import Any, Optional
 
 
-def read_typed_csv(rel_path, field_types):
+### READ & WRITE A CSV ###
+
+
+def write_csv(rel_path, rows, cols, precision="{:.6f}") -> None:
+    try:
+        abs_path: str = FileSpec(rel_path).abs_path
+
+        with open(abs_path, "w") as f:
+            writer: DictWriter = DictWriter(f, fieldnames=cols)
+            writer.writeheader()
+
+            for row in rows:
+                mod: dict = {}
+                for (k, v) in row.items():
+                    if isinstance(v, float):
+                        mod[k] = precision.format(v)
+                    else:
+                        mod[k] = v
+                writer.writerow(mod)
+
+    except:
+        raise Exception("Exception writing CSV.")
+
+
+def read_typed_csv(rel_path, field_types) -> list:
     """
     Read a CSV with DictReader
     Patterned after: https://stackoverflow.com/questions/8748398/python-csv-dictreader-type
     """
 
-    abs_path = FileSpec(rel_path).abs_path
+    abs_path: str = FileSpec(rel_path).abs_path
 
     try:
-        rows = []
+        rows: list = []
         with open(abs_path, "r", encoding="utf-8-sig") as file:
-            reader = DictReader(
+            reader: DictReader[str] = DictReader(
                 file, fieldnames=None, restkey=None, restval=None, dialect="excel"
             )
 
@@ -32,10 +56,12 @@ def read_typed_csv(rel_path, field_types):
                     ivalues = map(row_in.get, reader.fieldnames)
 
                     # Apply type conversions
-                    iconverted = [cast(x, y) for (x, y) in zip(field_types, ivalues)]
+                    iconverted: list = [
+                        cast(x, y) for (x, y) in zip(field_types, ivalues)
+                    ]
 
                     # Pass the field names and the converted values to the dict constructor
-                    row_out = dict(zip(reader.fieldnames, iconverted))
+                    row_out: dict = dict(zip(reader.fieldnames, iconverted))
 
                 rows.append(row_out)
 
@@ -45,29 +71,11 @@ def read_typed_csv(rel_path, field_types):
         raise Exception("Exception reading CSV with explicit types.")
 
 
-def write_csv(rel_path, rows, cols):
-    try:
-        abs_path = FileSpec(rel_path).abs_path
-
-        with open(abs_path, "w") as f:
-            writer = DictWriter(f, fieldnames=cols)
-            writer.writeheader()
-
-            for row in rows:
-                mod = {}
-                for (k, v) in row.items():
-                    if isinstance(v, float):
-                        mod[k] = "{:.4f}".format(v)
-                    else:
-                        mod[k] = v
-                writer.writerow(mod)
-
-    except:
-        raise Exception("Exception writing CSV.")
-
-
-def cast(t, v_str):
+def cast(t, v_str) -> str | int | float:
     return t(v_str)
+
+
+### READ JSON FILE ###
 
 
 def load_json(rel_path) -> dict[str, Any]:
@@ -77,21 +85,11 @@ def load_json(rel_path) -> dict[str, Any]:
         return json.load(f)
 
 
-class FileSpec:
-    def __init__(self, path, name=None):
-        file_name, file_extension = os.path.splitext(path)
-
-        self.rel_path = path
-        self.abs_path = os.path.abspath(path)
-        self.name = name.lower() if (name) else os.path.basename(file_name).lower()
-        self.extension = file_extension
+### PICKLING & UNPICKLING ###
 
 
-### PICKLING ###
-
-
-def write_pickle(rel_path, obj):
-    abs_path = FileSpec(rel_path).abs_path
+def write_pickle(rel_path, obj) -> bool:
+    abs_path: str = FileSpec(rel_path).abs_path
 
     try:
         with open(abs_path, "wb") as handle:
@@ -102,12 +100,27 @@ def write_pickle(rel_path, obj):
         return False
 
 
-def read_pickle(rel_path):
-    abs_path = FileSpec(rel_path).abs_path
+def read_pickle(rel_path) -> Optional[bytes]:
+    abs_path: str = FileSpec(rel_path).abs_path
 
     try:
         with open(abs_path, "rb") as handle:
             return pickle.load(handle)
     except Exception as e:
         print("Exception unpickling: ", e)
-        return False
+        return None
+
+
+### FILE NAMES ###
+
+
+class FileSpec:
+    def __init__(self, path: str, name=None) -> None:
+        file_name: str
+        file_extension: str
+        file_name, file_extension = os.path.splitext(path)
+
+        self.rel_path: str = path
+        self.abs_path: str = os.path.abspath(path)
+        self.name: str = name.lower() if (name) else os.path.basename(file_name).lower()
+        self.extension: str = file_extension
