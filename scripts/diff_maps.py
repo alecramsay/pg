@@ -115,7 +115,9 @@ for map, sorted_areas in enumerate(sorted_diffs):
 
         i += 1
 
-    areas_csv = "results/{}/{}_{}_areas.csv".format(xx, xx, label)
+    areas_csv: str = path_to_file([results_dir, xx]) + file_name(
+        [xx, label, "areas"], "_", "csv"
+    )
 
     write_csv(
         areas_csv,
@@ -124,11 +126,6 @@ for map, sorted_areas in enumerate(sorted_diffs):
                 "AREA": k,
                 "PROPORTIONAL": v["PROPORTIONAL"],
                 label: v[label],
-                # "COMPETITIVE": v["COMPETITIVE"],
-                # "MINORITY": v["MINORITY"],
-                # "COMPACT": v["COMPACT"],
-                # "SPLITTING": v["SPLITTING"],
-                # "BLOCKS": v["BLOCKS"],
                 "POPULATION": v["POPULATION"],
                 "DISTRICT%": v["DISTRICT%"],
                 "CUMULATIVE%": v["CUMULATIVE%"],
@@ -140,18 +137,15 @@ for map, sorted_areas in enumerate(sorted_diffs):
             "AREA",
             "PROPORTIONAL",
             label,
-            # "COMPETITIVE",
-            # "MINORITY",
-            # "COMPACT",
-            # "SPLITTING",
-            # "BLOCKS",
             "POPULATION",
             "DISTRICT%",
             "CUMULATIVE%",
         ],
     )
 
-    baf_csv = "results/{}/{}_{}_areas_by_block.csv".format(xx, xx, label)
+    baf_csv: str = path_to_file([results_dir, xx]) + file_name(
+        [xx, label, "areas_by_block"], "_", "csv"
+    )
 
     write_csv(
         baf_csv,

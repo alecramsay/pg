@@ -46,17 +46,23 @@ compare_subtype: str = args.compare
 
 ### CONSTRUCT FILE NAMES ###
 
-current_file: str = f"temp/{xx}{yy}_{type}_{current_subtype}.json"
-compare_file: str = f"temp/{xx}{yy}_{type}_{compare_subtype}.json"
+current_path: str = path_to_file([temp_dir]) + file_name(
+    [xx + yy, type, current_subtype], "_", "json"
+)
+compare_path: str = path_to_file([temp_dir]) + file_name(
+    [xx + yy, type, compare_subtype], "_", "json"
+)
 
-plot_file: str = f"{xx}{yy}_{type}_{current_subtype}_radar"
+plot_path: str = path_to_file([content_dir]) + file_name(
+    [xx, yy, type, current_subtype, "radar"], "_", "png"
+)
 
 
 ### LOAD RATINGS ###
 
 
-current_ratings: Ratings = cull_ratings(load_json(current_file))
-compare_ratings: Ratings = cull_ratings(load_json(compare_file))
+current_ratings: Ratings = cull_ratings(load_json(current_path))
+compare_ratings: Ratings = cull_ratings(load_json(compare_path))
 
 
 ### PLOT RADAR DIAGRAM ###
@@ -190,7 +196,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
 
-    fig.write_image(content_dir + plot_file + ".png")
+    fig.write_image(plot_path)
     # fig.show()
 
 

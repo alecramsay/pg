@@ -63,12 +63,6 @@ for label in [
 
 print("Writing ratings to CSV file ...")
 
-in_dir: str = path_to_file(["temp"])
-
-out_dir: str = path_to_file(["content"])
-csv_file: str = file_name([xx + yy, plan_type, "ratings"], "_", "csv")
-
-
 ratings_table: list[dict] = list()
 
 for label in [
@@ -80,8 +74,12 @@ for label in [
     "Official",
     "Baseline",
 ]:
-    file: str = file_name([xx + yy, plan_type, label], "_", "json")
-    ratings: Ratings = cull_ratings(load_json(in_dir + file))
+    ratings: Ratings = cull_ratings(
+        load_json(
+            path_to_file([temp_dir])
+            + file_name([xx + yy, plan_type, label], "_", "json")
+        )
+    )
 
     row: dict = dict()
     row["Map"] = label
@@ -95,7 +93,8 @@ for label in [
     ratings_table.append(row)
 
 write_csv(
-    out_dir + csv_file,
+    path_to_file([content_dir])
+    + file_name([xx + yy, plan_type, "ratings"], "_", "csv"),
     ratings_table,
     # rows,
     [
