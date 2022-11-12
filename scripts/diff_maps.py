@@ -36,24 +36,28 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
+fips_map: dict[str, str] = make_state_codes()
 
-state = args.state
+xx: str = args.state
+fips: str = fips_map[xx]
 year = args.year
 map_type = args.type
 districts = args.districts
 verbose = args.verbose
 
-xx = FIPS[state]
-
-print("Diffing {} {} maps for {}/{} ...".format(year, map_type, state, xx))
+print("Diffing {} {} maps for {}/{} ...".format(year, map_type, xx, fips))
 
 
 ### LOAD THE MAPS & DATA ###
 
-maps_by_geoid = read_maps(state, year, map_type, verbose)
+maps_by_geoid = read_notable_maps(xx, year, map_type, verbose)
 maps_by_district = invert_maps(maps_by_geoid)
 validate_maps(maps_by_district)
-pop_by_geoid = read_census(state, xx, verbose)
+
+rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
+    ["2020vt", "Census", "block", fips, "data2"], "_", "json"
+)
+pop_by_geoid = read_census_json(rel_path)
 
 total_pop = sum(pop_by_geoid.values())
 district_pop = round(total_pop / districts)
@@ -72,11 +76,23 @@ for areas in diffs:
 
 ### OUTPUT THE DIFFS ###
 
+
+def notable_map(i: int) -> str:
+    labels: list[str] = [
+        # "PROPORTIONAL",
+        "COMPETITIVE",
+        "MINORITY",
+        "COMPACT",
+        "SPLITTING",
+    ]
+    return labels[i]
+
+
 for map, sorted_areas in enumerate(sorted_diffs):
     area_summary = dict()
     areas_by_block = dict()
 
-    label = NOTABLE_MAPS[map]
+    label = notable_map(map)
     i = 1
     cumulative = 0
 
@@ -99,7 +115,7 @@ for map, sorted_areas in enumerate(sorted_diffs):
 
         i += 1
 
-    areas_csv = "results/{}/{}_{}_areas.csv".format(state, state, label)
+    areas_csv = "results/{}/{}_{}_areas.csv".format(xx, xx, label)
 
     write_csv(
         areas_csv,
@@ -135,7 +151,7 @@ for map, sorted_areas in enumerate(sorted_diffs):
         ],
     )
 
-    baf_csv = "results/{}/{}_{}_areas_by_block.csv".format(state, state, label)
+    baf_csv = "results/{}/{}_{}_areas_by_block.csv".format(xx, xx, label)
 
     write_csv(
         baf_csv,

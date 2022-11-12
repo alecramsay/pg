@@ -17,8 +17,6 @@ import os
 
 from pg import *
 
-yyyy: str = 2022
-plan_type: str = "Congress"
 group: str = "Notable"
 label: str = "PG-" + group.upper()
 

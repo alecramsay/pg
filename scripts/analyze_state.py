@@ -35,8 +35,6 @@ parser.add_argument(
 args: Namespace = parser.parse_args()
 
 xx: str = args.state
-yy: str = "22"
-plan_type: str = "Congress"
 
 
 ### PULL THE BASELINE RATINGS ###

@@ -43,10 +43,6 @@ xx: str = args.state
 current_subtype: str = args.current
 compare_subtype: str = args.compare
 
-yy: str = "22"
-type: str = "Congress"
-out_dir: str = "content/"
-
 
 ### CONSTRUCT FILE NAMES ###
 
@@ -194,7 +190,7 @@ def plot_radar_diagram(current: Plan, compare: Plan) -> None:
 
     fig: py.Figure = go.Figure(data=traces, layout=layout)
 
-    fig.write_image(out_dir + plot_file + ".png")
+    fig.write_image(content_dir + plot_file + ".png")
     # fig.show()
 
 
