@@ -23,24 +23,25 @@ def from_baf(rel_path) -> list:
     return districts_by_geoid
 
 
-def from_preprocessed(rel_path, id="GEOID") -> dict[str, dict]:
+def rehydrate_features(rel_path, id="GEOID") -> dict[str, Feature]:
     """
-    Read a preprocessed data file (CSV).
-    Return a dict of population by feature geoid.
+    Re-hydrate a dict of Features serialized to a CSV.
     """
+    features: defaultdict[str, Feature] = defaultdict(Feature)
 
     types: list = [str, int, float, float]
     rows: list[dict[str, int, float, float]] = read_typed_csv(rel_path, types)
 
-    by_geoid: dict[str, dict] = dict()
     for row in rows:
         geoid: str = row[id]
         pop: int = row["POP"]
         x: float = row["X"]
         y: float = row["Y"]
-        by_geoid[geoid] = {"pop": pop, "x": x, "y": y}
 
-    return by_geoid
+        feature: Feature = {"xy": Coordinate(x, y), "pop": pop}
+        features[geoid] = feature
+
+    return features
 
 
 def is_water_only(geoid) -> bool:
@@ -93,7 +94,7 @@ def validate_plans(inverted_plans) -> bool:
     return all_same
 
 
-def diff_two_plans(to_plan, from_plan) -> list[Region]:
+def diff_two_plans(to_plan, from_plan, features) -> list[Region]:
     """
     Diff two inverted plans, a current/to plan and a from/compare plan.
     """
@@ -105,36 +106,22 @@ def diff_two_plans(to_plan, from_plan) -> list[Region]:
             intersection: set[str] = from_geoids.intersection(to_geoids)
             if intersection:
                 districts: list[int] = [from_district, to_district]
-                regions.append(Region(districts, intersection, 0, 0))
+                n: int = len(intersection)
+                pop: int = 0
+                for geoid in intersection:
+                    n += 1
+                    pop += features[geoid]["pop"]
+                region: Region = {
+                    "districts": districts,
+                    "geoids": intersection,
+                    "n": n,
+                    "pop": pop,
+                }
+                regions.append(region)
+
+    regions.sort(key=lambda region: region["pop"], reverse=True)
 
     return regions
-
-
-def agg_regions(regions: list[Region], by_geoid: dict[str, dict]) -> list[Region]:
-    new_regions: list[Region] = list()
-
-    for region in regions:
-        n: int = 0
-        pop: int = 0
-
-        for geoid in region.geoids:
-            n += 1
-            pop += by_geoid[geoid]["pop"]
-
-        new_regions.append(Region(region.districts, region.geoids, n, pop))
-
-    return new_regions
-
-
-def sort_regions_by_pop(
-    regions: list[Region], by_geoid: dict[str, dict]
-) -> list[Region]:
-    """
-    Sort regions in descending order of population.
-    """
-    # Cull empty regions?
-
-    regions.sort(key=lambda region: region.pop, reverse=True)
 
 
 #

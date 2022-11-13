@@ -32,17 +32,25 @@ baseline_plan: list[dict[str, int]] = from_baf(baseline_path)
 inverted_compare: dict[int, set[str]] = invert_plan(compare_plan)
 inverted_baseline: dict[int, set[str]] = invert_plan(baseline_plan)
 
+preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
+    [xx, cycle, "block", "data"], "_", "csv"
+)
+features: defaultdict[Feature] = rehydrate_features(preprocessed_path)
+
+n: int = districts_by_state[xx][plan_type.lower()]
+total: int = 0
+for geoid, feature in features.items():
+    total += feature["pop"]
+
 if validate_plans([inverted_compare, inverted_baseline]):
-    # Plans have the same # of blocks
-
-    regions: list[Region] = diff_two_plans(inverted_compare, inverted_baseline)
-
-    preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-        [xx, cycle, "block", "data"], "_", "csv"
+    regions: list[Region] = diff_two_plans(
+        inverted_compare, inverted_baseline, features
     )
-    by_geoid: dict[str, dict] = from_preprocessed(preprocessed_path)
-    regions = agg_regions(regions, by_geoid)
 
-    sort_regions_by_pop(regions, by_geoid)
+    top_n_pct: float = sum([r["pop"] for r in regions[:n]]) / total
+    print(f"The top {n} common regions have {top_n_pct:4.2%} of the population.")
+
+else:
+    print("Plans have different # of blocks")
 
 pass

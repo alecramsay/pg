@@ -4,16 +4,30 @@
 TYPES
 """
 
-from collections import namedtuple
 from typing import NamedTuple, TypedDict
 
 
-Region: NamedTuple = namedtuple("Region", ["districts", "geoids", "blocks", "pop"])
-"""
-* districts is a list of district numbers
-* geoids is a set of geoids
-* blocks is # of blocks
-* pop is # of people 
-"""
+class Region(NamedTuple):
+    districts: list[int]
+    geoids: set[str]
+    n: int  # number of features (blocks)
+    pop: int  # total population
+
+
+# Modified versions of types in the 'baseline' repo
+
+
+class Coordinate(NamedTuple):
+    x: int
+    y: int
+
+    def __repr__(self) -> str:
+        return f"({self.x}, {self.y})"
+
+
+class Feature(TypedDict):
+    xy: Coordinate
+    pop: int
+
 
 #
