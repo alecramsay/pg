@@ -57,6 +57,7 @@ study_states: list[str] = [
 ### ENVIRONMENT CONSTANTS ###
 
 rawdata_dir: str = "../../../local/pg/rawdata"
+preprocessed_data_dir: str = "../../dev/baseline/data"
 data_dir: str = "data"
 temp_dir: str = "temp"
 results_dir: str = "results"

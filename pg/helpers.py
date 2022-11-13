@@ -48,8 +48,4 @@ def qualify_label(label: str) -> str:
     raise ValueError(f"Unknown map label: {label}")
 
 
-def is_water_only(geoid) -> bool:
-    """
-    Return True if the block geoid has a water-only signature, False otherwise.
-    """
-    return geoid[5:7] == "99"
+#

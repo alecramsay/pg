@@ -5,12 +5,15 @@ TYPES
 """
 
 from collections import namedtuple
+from typing import NamedTuple, TypedDict
 
 
-Area = namedtuple("Area", ["districts", "geoids"])
-# districts is a list of district numbers
-# geoids is a set of geoids
+Region: NamedTuple = namedtuple("Region", ["districts", "geoids", "blocks", "pop"])
+"""
+* districts is a list of district numbers
+* geoids is a set of geoids
+* blocks is # of blocks
+* pop is # of people 
+"""
 
-AreaExtended = namedtuple(
-    "AreaExtended", ["districts", "geoids", "blocks", "population"]
-)
+#

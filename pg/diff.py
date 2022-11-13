@@ -1,166 +1,140 @@
 #!/usr/bin/env python3
 
 """
-MAIN ROUTINES
+TOOLS TO DIFF TWO PLANS (DISTRICT IDS BY FEATURE GEOID)
 """
 
-import json
+from collections import defaultdict
 
 from .types import *
 from .io import *
 from .helpers import *
 
 
-# TODO - Use local/rawdata
-root_dir: str = "data"
-
-
-def read_notable_maps(state, year, map_type, verbose=False) -> list:
+def from_baf(rel_path) -> list:
     """
-    Read the maps for a state and year.
+    Read a plan from a block-assignment file (BAF).
+    Return a list of dicts with keys "GEOID20" (str) and "District" (int).
     """
-
-    notables: list[str] = [
-        "proportional",
-        "competitive",
-        "minority",
-        "compact",
-        "splitting",
-    ]
-    file_names: list = list()
-
-    for notable in notables:
-        data_dir: str = path_to_file([root_dir, state])
-        data_file: str = file_name([state, year, map_type, notable], "_", "csv")
-        file_names.append(data_dir + data_file)
 
     types: list = [str, int]
-    maps_by_geoid: list = list()
-    for csv in file_names:
-        rows: list = read_typed_csv(csv, types)
-        maps_by_geoid.append(rows)
+    districts_by_geoid: list[dict[str, int]] = read_typed_csv(rel_path, types)
 
-    return maps_by_geoid
+    return districts_by_geoid
 
 
-def invert_maps(maps_by_geoid, verbose=False):
-    maps_by_district = list()
+def from_preprocessed(rel_path, id="GEOID") -> dict[str, dict]:
+    """
+    Read a preprocessed data file (CSV).
+    Return a dict of population by feature geoid.
+    """
 
-    for map_by_geoid in maps_by_geoid:
-        inverted = dict()
-        for row in map_by_geoid:
-            geoid = row["GEOID20"]
-            if is_water_only(geoid):
-                continue
+    types: list = [str, int, float, float]
+    rows: list[dict[str, int, float, float]] = read_typed_csv(rel_path, types)
 
-            # HACK: These two unpopulated blocks are missing from the NY most compact map.
-            if geoid in ["360610001001001", "360610001001000"]:
-                continue
+    by_geoid: dict[str, dict] = dict()
+    for row in rows:
+        geoid: str = row[id]
+        pop: int = row["POP"]
+        x: float = row["X"]
+        y: float = row["Y"]
+        by_geoid[geoid] = {"pop": pop, "x": x, "y": y}
 
-            district = row["District"]
-            if district not in inverted:
-                inverted[district] = set()
-
-            inverted[district].add(geoid)
-
-        maps_by_district.append(inverted)
-
-    return maps_by_district
+    return by_geoid
 
 
-def validate_maps(maps_by_district):
-    blocks_by_map = []
+def is_water_only(geoid) -> bool:
+    """
+    Return True if the block geoid has a water-only signature, False otherwise.
+    """
+    return geoid[5:7] == "99"
 
-    for m in maps_by_district:
-        n = 0
-        for k, v in m.items():
+
+def invert_plan(plan) -> dict:
+    """
+    Invert a plan by GEOID to sets of GEOIDs by District ID.
+    """
+
+    inverted: defaultdict[int, set] = defaultdict(set)
+
+    for row in plan:  # type: dict[str, int]
+        geoid: str = row["GEOID20"]
+        if is_water_only(geoid):
+            continue
+
+        # HACK: These two unpopulated blocks are missing from the NY Most Compact plan.
+        if geoid in ["360610001001001", "360610001001000"]:
+            continue
+
+        district: int = row["District"]
+        # if district not in inverted:
+        #     inverted[district] = set()
+
+        inverted[district].add(geoid)
+
+    return inverted
+
+
+def validate_plans(inverted_plans) -> bool:
+    """
+    Validate that all plans have the same number of blocks.
+    """
+    blocks_by_plan: list[int] = []
+
+    for plan in inverted_plans:
+        n: int = 0
+        for k, v in plan.items():
             n += len(v)
-        blocks_by_map.append(n)
+        blocks_by_plan.append(n)
 
-    n = blocks_by_map[0]
-    all_same = all(x == n for x in blocks_by_map)
+    n = blocks_by_plan[0]
+    all_same: bool = all(x == n for x in blocks_by_plan)
 
-    if not all_same:
-        print("ERROR: Maps have different numbers of blocks!")
-        print(blocks_by_map)
-        exit()
+    return all_same
 
 
-def diff_all_maps(maps_by_district, verbose=False):
+def diff_two_plans(to_plan, from_plan) -> list[Region]:
     """
-    Diff all maps in a list of maps.
+    Diff two inverted plans, a current/to plan and a from/compare plan.
     """
 
-    areas = list()
+    regions: list[Region] = list()
 
-    # Add the first map's districts as the initial areas
-    for district, geoids in maps_by_district[0].items():
-        areas.append(Area([district], geoids))
+    for from_district, from_geoids in from_plan.items():
+        for to_district, to_geoids in to_plan.items():
+            intersection: set[str] = from_geoids.intersection(to_geoids)
+            if intersection:
+                districts: list[int] = [from_district, to_district]
+                regions.append(Region(districts, intersection, 0, 0))
 
-    # Diff each successive map in succession
-    for map_by_district in maps_by_district[1:]:
-        new_areas = list()
-
-        for district, geoids in map_by_district.items():
-            for area in areas:
-                intersection = area.geoids.intersection(geoids)
-                if intersection:
-                    districts = area.districts + [district]
-                    new_areas.append(Area(districts, intersection))
-
-        areas = new_areas
-
-    return areas
+    return regions
 
 
-def diff_map_pairs(maps_by_district, verbose=False):
+def agg_regions(regions: list[Region], by_geoid: dict[str, dict]) -> list[Region]:
+    new_regions: list[Region] = list()
+
+    for region in regions:
+        n: int = 0
+        pop: int = 0
+
+        for geoid in region.geoids:
+            n += 1
+            pop += by_geoid[geoid]["pop"]
+
+        new_regions.append(Region(region.districts, region.geoids, n, pop))
+
+    return new_regions
+
+
+def sort_regions_by_pop(
+    regions: list[Region], by_geoid: dict[str, dict]
+) -> list[Region]:
     """
-    Diff maps 1-N with map 0.
+    Sort regions in descending order of population.
     """
+    # Cull empty regions?
 
-    diffs = []
-
-    # Diff each map with the first (most proportional)
-    for map_by_district in maps_by_district[1:]:
-        areas = list()
-
-        for base_district, base_geoids in maps_by_district[0].items():
-            for district, geoids in map_by_district.items():
-                intersection = base_geoids.intersection(geoids)
-                if intersection:
-                    districts = [base_district, district]
-                    areas.append(Area(districts, intersection))
-
-        diffs.append(areas)
-
-    return diffs
+    regions.sort(key=lambda region: region.pop, reverse=True)
 
 
-def sum_area_pop(area, pop_by_geoid):
-    total = 0
-    for geoid in area.geoids:
-        total += pop_by_geoid[geoid]
-
-    return total
-
-
-def sort_areas_by_pop(areas, pop_by_geoid):
-    sorted_areas = list()
-
-    for area in areas:
-        n_blocks = len(area.geoids)
-        n_pop = sum_area_pop(area, pop_by_geoid)
-
-        if n_pop > 0:
-            sorted_areas.append(
-                AreaExtended(area.districts, area.geoids, n_blocks, n_pop)
-            )
-
-    sorted_areas.sort(key=lambda area: area.population, reverse=True)
-
-    return sorted_areas
-
-
-# TODO - Why did I have this?
-# def stringify_districts(districts) -> str:
-#     return "/".join([str(x) for x in districts])
+#
