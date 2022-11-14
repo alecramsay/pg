@@ -53,9 +53,9 @@ preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
 features: defaultdict[Feature] = rehydrate_features(preprocessed_path)
 
 n: int = districts_by_state[xx][plan_type.lower()]
-total: int = 0
+total_pop: int = 0
 for geoid, feature in features.items():
-    total += feature["pop"]
+    total_pop += feature["pop"]
 
 
 ### DIFF EACH PLAN AGAINST THE BASELINE ###
@@ -80,7 +80,7 @@ for label in [
         regions: list[Region] = diff_two_plans(
             inverted_compare, inverted_baseline, features
         )
-        top_n_pct: float = sum([r["pop"] for r in regions[:n]]) / total
+        top_n_pct: float = sum([r["pop"] for r in regions[:n]]) / total_pop
         print(f"The top {n} common regions have {top_n_pct:4.2%} of the population.")
         print()
     else:
