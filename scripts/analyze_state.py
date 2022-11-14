@@ -108,6 +108,11 @@ write_csv(
 )
 
 
+### DIFF THE PLANS ###
+
+os.system(f"scripts/diff_plans.py {xx}")
+
+
 print("Done.")
 
 pass
