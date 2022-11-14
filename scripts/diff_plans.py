@@ -56,6 +56,7 @@ n: int = districts_by_state[xx][plan_type.lower()]
 total_pop: int = 0
 for geoid, feature in features.items():
     total_pop += feature["pop"]
+district_pop: int = total_pop // n
 
 
 ### DIFF EACH PLAN AGAINST THE BASELINE ###
