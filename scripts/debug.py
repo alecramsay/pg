@@ -50,67 +50,6 @@ if validate_plans([inverted_compare, inverted_baseline]):
 
     ###
 
-    regions_summary: list[dict] = list()
-    regions_by_block: list[dict] = list()
-
-    i: int = 1
-    cumulative: int = 0
-
-    for region in regions:
-        cumulative += region["pop"]
-        regions_summary.append(
-            {
-                "REGION": i,
-                "BASELINE": region["districts"][0],
-                "OTHER": region["districts"][1],
-                # "BLOCKS": region["n"],
-                "POPULATION": region["pop"],
-                "DISTRICT%": round(region["pop"] / district_pop, 4),
-                "CUMULATIVE%": round(cumulative / total_pop, 4),
-            }
-        )
-        for geoid in region["geoids"]:
-            regions_by_block.append(
-                {
-                    "GEOID": geoid,
-                    "REGION": i,
-                }
-            )
-
-        i += 1
-
-    # Write a summary of regions to a CSV file
-
-    regions_csv: str = path_to_file([content_dir]) + file_name(
-        [xx + yy, label, "regions_summary"], "_", "csv"
-    )
-
-    write_csv(
-        regions_csv,
-        regions_summary,
-        [
-            "REGION",
-            "BASELINE",
-            "OTHER",
-            # "BLOCKS",
-            "POPULATION",
-            "DISTRICT%",
-            "CUMULATIVE%",
-        ],
-    )
-
-    # Write a BAF file for the regions for further processing in QGIS
-
-    baf_csv: str = path_to_file([temp_dir]) + file_name(
-        [xx + yy, label, "regions_BAF"], "_", "csv"
-    )
-
-    write_csv(
-        baf_csv,
-        regions_by_block,
-        ["GEOID", "REGION"],
-    )
-
     ###
 
 else:
