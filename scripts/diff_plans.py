@@ -33,6 +33,7 @@ parser.add_argument(
 args: Namespace = parser.parse_args()
 
 xx: str = args.state
+n: int = districts_by_state[xx][plan_type.lower()]
 verbose: bool = args.verbose
 
 
@@ -52,7 +53,6 @@ preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
 )
 features: defaultdict[Feature] = rehydrate_features(preprocessed_path)
 
-n: int = districts_by_state[xx][plan_type.lower()]
 total_pop: int = 0
 for geoid, feature in features.items():
     total_pop += feature["pop"]

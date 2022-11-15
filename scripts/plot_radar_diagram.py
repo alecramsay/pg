@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Plot radar diagram comparing two maps
+Plot a radar diagram comparing two maps
 
 For example:
 
