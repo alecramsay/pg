@@ -6,3 +6,4 @@ from .io import *
 from .helpers import *
 from .diff import *
 from .radar import *
+from .moi import *

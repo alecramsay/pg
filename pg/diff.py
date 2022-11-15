@@ -51,6 +51,7 @@ def is_water_only(geoid) -> bool:
     return geoid[5:7] == "99"
 
 
+# TODO - Move this to a Plan class
 def invert_plan(plan) -> dict:
     """
     Invert a plan by GEOID to sets of GEOIDs by District ID.
