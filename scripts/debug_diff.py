@@ -11,26 +11,26 @@ xx: str = "NC"
 n: int = districts_by_state[xx][plan_type.lower()]
 cycle: str = "2020"
 
-### LOAD THE BASELINE PLAN ###
-
-baseline_path: str = path_to_file([data_dir, xx]) + file_name(
-    [xx, cycle, plan_type, "Baseline"], "_", "csv"
-)
-baseline_plan: list[dict[str, int]] = from_baf(baseline_path)
-inverted_baseline: dict[int, set[str]] = invert_plan(baseline_plan)
-
-
 ### LOAD STATE DATA ###
 
 preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
     [xx, cycle, "block", "data"], "_", "csv"
 )
-features: defaultdict[Feature] = rehydrate_features(preprocessed_path)
+state: State = State()
+state.load_features(preprocessed_path)
 
-total_pop: int = 0
-for geoid, feature in features.items():
-    total_pop += feature.pop  # NOTE
+total_pop: int = state.total_pop
 district_pop: int = total_pop // n
+
+
+### LOAD THE BASELINE PLAN ###
+
+baseline_path: str = path_to_file([data_dir, xx]) + file_name(
+    [xx, cycle, plan_type, "Baseline"], "_", "csv"
+)
+baseline_plan: Plan = Plan()
+baseline_plan.state = state
+baseline_plan.load_assignments(baseline_path)
 
 
 ### DIFF EACH PLAN AGAINST THE BASELINE ###
@@ -48,15 +48,13 @@ for label in [
     compare_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, yyyy, plan_type, label], "_", "csv"
     )
-    compare_plan: list[dict[str, int]] = from_baf(compare_path)
-    inverted_compare: dict[int, set[str]] = invert_plan(compare_plan)
+    compare_plan: Plan = Plan()
+    compare_plan.state = state
+    compare_plan.load_assignments(compare_path)
 
-    if validate_plans([inverted_compare, inverted_baseline]):
-        regions: list[Region] = diff_two_plans(
-            inverted_compare, inverted_baseline, features
-        )
-        top_n_pct: float = sum([r.pop for r in regions[:n]]) / total_pop  # NOTE
-        # top_n_pct: float = sum([r["pop"] for r in regions[:n]]) / total_pop
+    if validate_plans([compare_plan.districts(), baseline_plan.districts()]):
+        regions: list[Region] = diff_two_plans(compare_plan, baseline_plan)
+        top_n_pct: float = sum([r.pop for r in regions[:n]]) / total_pop
         print(f"The top {n} common regions have {top_n_pct:4.2%} of the population.")
         print()
 
@@ -69,8 +67,7 @@ for label in [
         cumulative: int = 0
 
         for region in regions:
-            cumulative += region.pop  # NOTE
-            # cumulative += region["pop"]
+            cumulative += region.pop
             regions_summary.append(
                 {
                     "REGION": i,
