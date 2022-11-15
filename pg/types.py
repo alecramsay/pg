@@ -30,4 +30,18 @@ class Feature(TypedDict):
     pop: int
 
 
+class Ratings(TypedDict):
+    proportionality: int
+    competitiveness: int
+    minority_opportunity: int
+    compactness: int
+    splitting: int
+
+
+class Plan(TypedDict):
+    name: str
+    nickname: str
+    ratings: Ratings
+
+
 #

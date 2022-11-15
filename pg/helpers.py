@@ -6,16 +6,10 @@ HELPERS
 
 from typing import TypedDict
 
+from .types import *
+
 
 # RATINGS
-
-
-class Ratings(TypedDict):
-    proportionality: int
-    competitiveness: int
-    minority_opportunity: int
-    compactness: int
-    splitting: int
 
 
 def cull_ratings(raw_in: dict) -> Ratings:
