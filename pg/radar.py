@@ -11,7 +11,9 @@ from .types import *
 from .helpers import *
 
 
-def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
+def plot_radar_diagram(
+    current: SimplePlan, compare: SimplePlan, plot_path: str
+) -> None:
     """
     https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html
     https://plotly.com/python/static-image-export/
@@ -32,7 +34,7 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
 
     # Current trace
 
-    current_r: list[int] = [x for x in current["ratings"].values()]
+    current_r: list[int] = [x for x in list(current["ratings"])]
     current_r += current_r[:1]  # close the polygon
     current_positions: list[str] = text_position(current_r, 80)
 
@@ -51,7 +53,7 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
 
     # Compare trace
 
-    compare_r: list[int] = [x for x in compare["ratings"].values()]
+    compare_r: list[int] = [x for x in list(compare["ratings"])]
     compare_r += compare_r[:1]  # close the polygon
     compare_positions: list[str] = text_position(compare_r, 80)
 

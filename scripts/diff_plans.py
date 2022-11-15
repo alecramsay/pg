@@ -55,7 +55,7 @@ features: defaultdict[Feature] = rehydrate_features(preprocessed_path)
 
 total_pop: int = 0
 for geoid, feature in features.items():
-    total_pop += feature["pop"]
+    total_pop += feature.pop
 district_pop: int = total_pop // n
 
 
@@ -81,7 +81,7 @@ for label in [
         regions: list[Region] = diff_two_plans(
             inverted_compare, inverted_baseline, features
         )
-        top_n_pct: float = sum([r["pop"] for r in regions[:n]]) / total_pop
+        top_n_pct: float = sum([r.pop for r in regions[:n]]) / total_pop
         print(f"The top {n} common regions have {top_n_pct:4.2%} of the population.")
         print()
 
@@ -94,19 +94,19 @@ for label in [
         cumulative: int = 0
 
         for region in regions:
-            cumulative += region["pop"]
+            cumulative += region.pop
             regions_summary.append(
                 {
                     "REGION": i,
-                    "BASELINE": region["districts"][0],
-                    "OTHER": region["districts"][1],
-                    # "BLOCKS": region["n"],
-                    "POPULATION": region["pop"],
-                    "DISTRICT%": round(region["pop"] / district_pop, 4),
+                    "BASELINE": region.districts[0],
+                    "OTHER": region.districts[1],
+                    # "BLOCKS": region.n,
+                    "POPULATION": region.pop,
+                    "DISTRICT%": round(region.pop / district_pop, 4),
                     "CUMULATIVE%": round(cumulative / total_pop, 4),
                 }
             )
-            for geoid in region["geoids"]:
+            for geoid in region.geoids:
                 regions_by_block.append(
                     {
                         "GEOID": geoid,

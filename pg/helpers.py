@@ -4,8 +4,6 @@
 HELPERS
 """
 
-from typing import TypedDict
-
 from .types import *
 
 
@@ -13,13 +11,13 @@ from .types import *
 
 
 def cull_ratings(raw_in: dict) -> Ratings:
-    r: Ratings = {
-        "proportionality": int(raw_in["score_proportionality"]),
-        "competitiveness": int(raw_in["score_competitiveness"]),
-        "minority_opportunity": int(raw_in["score_minorityRights"]),
-        "compactness": int(raw_in["score_compactness"]),
-        "splitting": int(raw_in["score_splitting"]),
-    }
+    r: Ratings = Ratings(
+        proportionality=int(raw_in["score_proportionality"]),
+        competitiveness=int(raw_in["score_competitiveness"]),
+        minority_opportunity=int(raw_in["score_minorityRights"]),
+        compactness=int(raw_in["score_compactness"]),
+        splitting=int(raw_in["score_splitting"]),
+    )
 
     return r
 

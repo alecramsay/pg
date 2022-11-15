@@ -27,6 +27,7 @@ def rehydrate_features(rel_path, id="GEOID") -> dict[str, Feature]:
     """
     Re-hydrate a dict of Features serialized to a CSV.
     """
+    # features: dict[str, Feature] = dict()
     features: defaultdict[str, Feature] = defaultdict(Feature)
 
     types: list = [str, int, float, float]
@@ -38,7 +39,7 @@ def rehydrate_features(rel_path, id="GEOID") -> dict[str, Feature]:
         x: float = row["X"]
         y: float = row["Y"]
 
-        feature: Feature = {"xy": Coordinate(x, y), "pop": pop}
+        feature: Feature = Feature(xy=Coordinate(x, y), pop=pop)
         features[geoid] = feature
 
     return features
@@ -111,16 +112,16 @@ def diff_two_plans(to_plan, from_plan, features) -> list[Region]:
                 pop: int = 0
                 for geoid in intersection:
                     n += 1
-                    pop += features[geoid]["pop"]
-                region: Region = {
-                    "districts": districts,
-                    "geoids": intersection,
-                    "n": n,
-                    "pop": pop,
-                }
+                    pop += features[geoid].pop
+                region: Region = Region(
+                    districts=districts,
+                    geoids=intersection,
+                    n=n,
+                    pop=pop,
+                )
                 regions.append(region)
 
-    regions.sort(key=lambda region: region["pop"], reverse=True)
+    regions.sort(key=lambda region: region.pop, reverse=True)
 
     return regions
 

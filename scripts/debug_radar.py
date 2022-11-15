@@ -1,44 +1,18 @@
 #!/usr/bin/env python3
+#
 
 """
-Plot a radar diagram comparing two maps
-
-For example:
-
-$ scripts/plot_radar_diagram.py NC Official Baseline
-$ scripts/plot_radar_diagram.py NC Proportional Baseline
-
-For documentation, type:
-
-$ scripts/plot_radar_diagram.py -h
-
+DEBUGGING DRIVER
 """
-
-import argparse
-from argparse import ArgumentParser, Namespace
 
 from pg import *
 
+xx: str = "NC"
+n: int = districts_by_state[xx][plan_type.lower()]
+cycle: str = "2020"
 
-### PARSE ARGS ###
-
-parser: ArgumentParser = argparse.ArgumentParser(
-    description="Plot a radar diagram comparing two maps"
-)
-
-parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
-parser.add_argument("current", help="The current (top) map", type=str)
-parser.add_argument("compare", help="The compare (bottom) map", type=str)
-
-parser.add_argument(
-    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)
-
-args: Namespace = parser.parse_args()
-
-xx: str = args.state
-current_subtype: str = args.current
-compare_subtype: str = args.compare
+current_subtype: str = "Official"
+compare_subtype: str = "Baseline"
 
 
 ### CONSTRUCT FILE NAMES ###

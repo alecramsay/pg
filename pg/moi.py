@@ -36,8 +36,8 @@ def calc_district_moi(
 
     for geoid in geoids:
         feature: Feature = fc[geoid]
-        xy: Coordinate = feature["xy"]
-        pop: int = feature["pop"]
+        xy: Coordinate = feature.xy
+        pop: int = feature.pop
 
         moi += pop * distance_squared(xy, centroid)
         total += pop
@@ -70,10 +70,11 @@ def district_centroid(geoids: set[str], fc: dict[str, Feature]) -> Coordinate:
     total: int = 0
     for geoid in geoids:
         feature: Feature = fc[geoid]
-        pop: int = feature["pop"]
-        total += pop
-        xsum += feature["xy"].x * pop
-        ysum += feature["xy"].y * pop
+        # pop: int = feature["pop"]
+        total += feature.pop
+        xsum += feature.xy.x * feature.pop
+        ysum += feature.xy.y * feature.pop
+
     return Coordinate(xsum / total, ysum / total)
 
 
