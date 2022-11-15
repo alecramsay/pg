@@ -26,6 +26,14 @@ class Feature(NamedTuple):
         return f"xy={self.xy}, pop={self.pop}"
 
 
+class Assignment(NamedTuple):
+    geoid: str
+    district: int
+
+    def __repr__(self) -> str:
+        return f"{self.geoid} => {self.district}"
+
+
 class Ratings(NamedTuple):
     proportionality: int
     competitiveness: int
@@ -47,13 +55,9 @@ class Region(NamedTuple):
 ### DICTIONARIES -- MUTABLE ###
 
 
-### TODO - LEGACY ###
-
-
-class SimplePlan(TypedDict):
-    name: str
-    nickname: str
-    ratings: Ratings
+class District(TypedDict):
+    geoids: set[str]
+    xy: Coordinate
 
 
 #

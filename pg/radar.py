@@ -8,12 +8,11 @@ import chart_studio.plotly as py
 import plotly.graph_objs as go  # https://plotly.com/python-api-reference/plotly.graph_objects.html
 
 from .types import *
+from .data import *
 from .helpers import *
 
 
-def plot_radar_diagram(
-    current: SimplePlan, compare: SimplePlan, plot_path: str
-) -> None:
+def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
     """
     https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html
     https://plotly.com/python/static-image-export/
@@ -34,12 +33,12 @@ def plot_radar_diagram(
 
     # Current trace
 
-    current_r: list[int] = [x for x in list(current["ratings"])]
+    current_r: list[int] = [x for x in list(current.ratings)]
     current_r += current_r[:1]  # close the polygon
     current_positions: list[str] = text_position(current_r, 80)
 
     current_trace: py.Scatterpolar = go.Scatterpolar(
-        name=current["name"],
+        name=current.name,
         mode="lines+markers+text",
         r=current_r,
         theta=theta,
@@ -53,12 +52,12 @@ def plot_radar_diagram(
 
     # Compare trace
 
-    compare_r: list[int] = [x for x in list(compare["ratings"])]
+    compare_r: list[int] = [x for x in list(compare.ratings)]
     compare_r += compare_r[:1]  # close the polygon
     compare_positions: list[str] = text_position(compare_r, 80)
 
     compare_trace: py.Scatterpolar = go.Scatterpolar(
-        name=compare["name"],
+        name=compare.name,
         mode="lines+markers+text",
         r=compare_r,
         theta=theta,
@@ -73,7 +72,7 @@ def plot_radar_diagram(
     traces.append(compare_trace)
     traces.append(current_trace)
 
-    title: str = qualify_label(current["nickname"])
+    title: str = qualify_label(current.nickname)
     font_size: int = 16
     title_x: float = 0.5  # center
 

@@ -11,6 +11,7 @@ from .io import *
 from .helpers import *
 
 
+# TODO - DELETE
 def from_baf(rel_path) -> list:
     """
     Read a plan from a block-assignment file (BAF).
@@ -23,6 +24,7 @@ def from_baf(rel_path) -> list:
     return districts_by_geoid
 
 
+# TODO - DELETE
 def rehydrate_features(rel_path, id="GEOID") -> dict[str, Feature]:
     """
     Re-hydrate a dict of Features serialized to a CSV.
@@ -45,6 +47,7 @@ def rehydrate_features(rel_path, id="GEOID") -> dict[str, Feature]:
     return features
 
 
+# TODO - DELETE
 def is_water_only(geoid) -> bool:
     """
     Return True if the block geoid has a water-only signature, False otherwise.
@@ -52,7 +55,7 @@ def is_water_only(geoid) -> bool:
     return geoid[5:7] == "99"
 
 
-# TODO - Move this to a Plan class
+# TODO - DELETE
 def invert_plan(plan) -> dict:
     """
     Invert a plan by GEOID to sets of GEOIDs by District ID.

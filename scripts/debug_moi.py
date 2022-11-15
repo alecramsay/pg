@@ -3,7 +3,6 @@
 # CALCULATE MOMENT OF INERTIA
 #
 
-import math
 from collections import defaultdict
 
 from pg import *
@@ -15,7 +14,8 @@ xx: str = "NC"
 preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
     [xx, cycle, "block", "data"], "_", "csv"
 )
-fc: dict[str, Feature] = rehydrate_features(preprocessed_path)
+state: State = State()
+state.load_features(preprocessed_path)
 
 n: int = districts_by_state[xx][plan_type.lower()]
 
@@ -35,14 +35,11 @@ for label in [
     plan_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, year, plan_type, label], "_", "csv"
     )
-    plan: list[dict[str, int]] = from_baf(plan_path)
-    inverted_plan: dict[int, set[str]] = invert_plan(plan)
+    plan: Plan = Plan()
+    plan.state = state
+    plan.load_assignments(plan_path)
 
-    centroids: dict[int, Coordinate] = defaultdict(Coordinate)
-    for district_id, geoids in inverted_plan.items():
-        centroids[district_id] = district_centroid(geoids, fc)
-
-    moi: float = calc_moi(inverted_plan, centroids, fc)
+    moi: float = plan.calc_moi()
     print(f"{label} plan has a moment of inertia of {moi:4.2f}.")
 
 pass

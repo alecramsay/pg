@@ -41,17 +41,15 @@ compare_ratings: Ratings = cull_ratings(load_json(compare_path))
 current_name: str = f"{xx}{yy} {type} {current_subtype}"
 compare_name: str = f"{xx}{yy} {type} {compare_subtype}"
 
-current_plan: SimplePlan = {
-    "name": current_name,
-    "nickname": current_subtype,
-    "ratings": current_ratings,
-}
-compare_plan: SimplePlan = {
-    "name": compare_name,
-    "nickname": compare_subtype,
-    "ratings": compare_ratings,
-}
+current_plan: Plan = Plan()
+current_plan.name = current_name
+current_plan.nickname = current_subtype
+current_plan.ratings = current_ratings
 
+compare_plan: Plan = Plan()
+compare_plan.name = compare_name
+compare_plan.nickname = compare_subtype
+compare_plan.ratings = compare_ratings
 
 plot_radar_diagram(current_plan, compare_plan, plot_path)
 
