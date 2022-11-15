@@ -115,7 +115,7 @@ class Plan:
 
             i: int = row.district
             if i not in inverted:
-                d: District = {"geoids": set(), "xy": Coordinate(0, 0)}
+                d: District = {"geoids": set(), "xy": Coordinate(0, 0), "pop": 0}
                 inverted[i] = d
 
             inverted[i]["geoids"].add(geoid)
@@ -138,6 +138,7 @@ class Plan:
                 ysum += feature.xy.y * feature.pop
 
             district["xy"] = Coordinate(xsum / total, ysum / total)
+            district["pop"] = total
 
     def calc_moi(self) -> float:
         districts: dict[int, District] = self.districts()

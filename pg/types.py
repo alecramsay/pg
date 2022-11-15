@@ -58,6 +58,7 @@ class Region(NamedTuple):
 class District(TypedDict):
     geoids: set[str]
     xy: Coordinate
+    pop: int
 
 
 #
