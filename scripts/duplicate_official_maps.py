@@ -28,6 +28,7 @@ def make_command(group: str, label: str, xx: str, id: str) -> str:
 
 for xx, id in official_maps.items():
     os.system(make_command(group, label, xx, id))
-    pass
+
+pass
 
 #

@@ -21,5 +21,14 @@ SCRIPT_DIR=$ROOT\dra-cli
 USER=alec@davesredistricting.org
 PW=Front.Seat
 
-# $SCRIPT_DIR/draclient.js -u $USER -x $PW -i $ID -d -N \"$XX $YYYY $PLAN_TYPE \($GROUP\)\" -D \"Copy of $XX $GROUP\" -L $LABEL
-echo $SCRIPT_DIR/draclient.js -u $USER -x $PW -i $ID -d -N \"$XX $YYYY $PLAN_TYPE \($GROUP\)\" -D \"Copy of $XX $GROUP\" -L $LABEL
+NAME="\"$XX $YYYY $PLAN_TYPE - $GROUP\""
+DESC="\"Copy of $XX $GROUP\""
+
+echo $SCRIPT_DIR/draclient.js -u $USER -x $PW -i $ID -d -N "$NAME" -D "$DESC" -L $LABEL
+$SCRIPT_DIR/draclient.js  -u $USER -x $PW -i $ID -d -N "$NAME" -D "$DESC" -L $LABEL
+
+# NOTE - Have to add the double quotes around $NAME and $DESC above.
+# Without them doesn't work:
+# $SCRIPT_DIR/draclient.js  -u $USER -x $PW -i $ID -d -N $NAME -D $DESC -L $LABEL
+# even though that generates the text below which does!
+# /Users/alecramsay/iCloud/dev/dra-cli/draclient.js -u alec@davesredistricting.org -x Front.Seat -i b1cfc3f6-27df-498d-a147-0664d75fea88 -d -N "AL 2022 Congress - Official" -D "Copy of AL Official" -L PG-OFFICIAL
