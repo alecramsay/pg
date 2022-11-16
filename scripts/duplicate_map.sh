@@ -21,5 +21,5 @@ SCRIPT_DIR=$ROOT\dra-cli
 USER=alec@davesredistricting.org
 PW=Front.Seat
 
-# $SCRIPT_DIR/draclient.js -u alec@davesredistricting.org -x Front.Seat -i 052e108a-b9f9-4c83-a135-5d5a839e176d -d -N "NC 2022 test name" -D "Copy of ..." -L PG-OFFICIAL
-echo $SCRIPT_DIR/draclient.js -i $ID -u $USER -x $PW -N "$XX $YYYY $PLAN_TYPE ($GROUP)" -D "Copy of $XX $GROUP" -L $LABEL
+$SCRIPT_DIR/draclient.js -u $USER -x $PW -i $ID -d -N \"$XX $YYYY $PLAN_TYPE \($GROUP\)\" -D \"Copy of $XX $GROUP\" -L $LABEL
+# echo $SCRIPT_DIR/draclient.js -u $USER -x $PW -i $ID -d -N \"$XX $YYYY $PLAN_TYPE \($GROUP\)\" -D \"Copy of $XX $GROUP\" -L $LABEL
