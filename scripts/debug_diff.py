@@ -53,7 +53,7 @@ for label in [
     compare_plan.load_assignments(compare_path)
 
     if validate_plans([compare_plan.districts(), baseline_plan.districts()]):
-        regions: list[Region] = diff_two_plans(compare_plan, baseline_plan)
+        regions: list[Region] = diff_two_plans_WRAPPER(compare_plan, baseline_plan)
         top_n_pct: float = sum([r.pop for r in regions[:n]]) / total_pop
         print(f"The top {n} common regions have {top_n_pct:4.2%} of the population.")
         print()

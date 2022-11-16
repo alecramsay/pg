@@ -11,17 +11,33 @@ from .io import *
 from .helpers import *
 
 
-def diff_two_plans(to_plan, from_plan) -> list[Region]:
+def diff_two_plans_WRAPPER(to_plan, from_plan) -> list[Region]:
     """
-    Diff two inverted plans, a current/to plan and a from/compare plan.
+    Isolate the class knowledge in this wrapper, so diff_two_plans() doesn't depend on it.
+    """
+    to_districts: dict[int, District] = to_plan.districts()
+    from_districts: dict[int, District] = from_plan.districts()
+    features: dict[str, Feature] = from_plan.state.features
+
+    regions: list[Region] = diff_two_plans(to_districts, from_districts, features)
+
+    return regions
+
+
+def diff_two_plans(
+    to_districts: dict[int, District],
+    from_districts: dict[int, District],
+    features: dict[str, Feature],
+) -> list[Region]:
+    """
+    Diff two inverted plans (sets of districts), a current/to plan and a from/compare plan.
     """
 
-    features: dict[str, Feature] = from_plan.state.features
     regions: list[Region] = list()
 
-    for from_id, from_district in from_plan.districts().items():
+    for from_id, from_district in from_districts.items():
         from_geoids: set = from_district["geoids"]
-        for to_id, to_district in to_plan.districts().items():
+        for to_id, to_district in to_districts.items():
             to_geoids: set = to_district["geoids"]
             intersection: set[str] = from_geoids.intersection(to_geoids)
             if intersection:
