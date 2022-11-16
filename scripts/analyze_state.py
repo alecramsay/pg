@@ -62,50 +62,7 @@ for label in [
 ### WRITE THE RATINGS TO A CSV FILE ###
 
 print("Writing ratings to CSV file ...")
-
-ratings_table: list[dict] = list()
-
-for label in [
-    "Proportional",
-    "Competitive",
-    "Minority",
-    "Compact",
-    "Splitting",
-    "Official",
-    "Baseline",
-]:
-    ratings: Ratings = cull_ratings(
-        load_json(
-            path_to_file([temp_dir])
-            + file_name([xx + yy, plan_type, label, "ratings"], "_", "json")
-        )
-    )
-
-    row: dict = dict()
-    row["Map"] = label
-    # Prettify the dict keys for column names
-    row["Most Proportional"] = ratings.proportionality
-    row["Most Competitive"] = ratings.competitiveness
-    row["Best Minority"] = ratings.minority_opportunity
-    row["Most Compact"] = ratings.compactness
-    row["Least Splitting"] = ratings.splitting
-
-    ratings_table.append(row)
-
-write_csv(
-    path_to_file([content_dir])
-    + file_name([xx + yy, plan_type, "ratings"], "_", "csv"),
-    ratings_table,
-    # rows,
-    [
-        "Map",
-        "Most Proportional",
-        "Most Competitive",
-        "Best Minority",
-        "Most Compact",
-        "Least Splitting",
-    ],
-)
+os.system(f"scripts/write_ratings_table.py {xx}")
 
 
 ### DIFF THE PLANS ###
