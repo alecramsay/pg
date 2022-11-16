@@ -26,7 +26,7 @@ def make_command(group: str, label: str, xx: str, id: str) -> str:
     return f"scripts/duplicate_map.sh {xx} {plan_type} {yyyy} {group} {label} {id}"
 
 
-for xx, id in officials_copy.items():
+for xx, id in official_maps.items():
     os.system(make_command(group, label, xx, id))
     pass
 

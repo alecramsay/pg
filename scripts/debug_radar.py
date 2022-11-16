@@ -18,10 +18,10 @@ compare_subtype: str = "Baseline"
 ### CONSTRUCT FILE NAMES ###
 
 current_path: str = path_to_file([temp_dir]) + file_name(
-    [xx + yy, plan_type, current_subtype], "_", "json"
+    [xx + yy, plan_type, current_subtype, "ratings"], "_", "json"
 )
 compare_path: str = path_to_file([temp_dir]) + file_name(
-    [xx + yy, plan_type, compare_subtype], "_", "json"
+    [xx + yy, plan_type, compare_subtype, "ratings"], "_", "json"
 )
 
 plot_path: str = path_to_file([content_dir]) + file_name(

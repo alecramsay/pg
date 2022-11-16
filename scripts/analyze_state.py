@@ -77,7 +77,7 @@ for label in [
     ratings: Ratings = cull_ratings(
         load_json(
             path_to_file([temp_dir])
-            + file_name([xx + yy, plan_type, label], "_", "json")
+            + file_name([xx + yy, plan_type, label, "ratings"], "_", "json")
         )
     )
 

@@ -5,14 +5,14 @@
 * Copy the Official maps, using the duplicate_official_maps.py script
 * Set the Colors and Overlays (in DRA)
 * Collect the ids for the new maps in pg/constants.py
-* Export the new maps, using the {TBD} script
+* Export the new maps.
 
 (2) Copy Notable Maps
 * Snapshot Notable map ids in pg/constants.py -- DONE
 * Copy Notable maps, using the duplicate_notable_maps.py script
 * Set the Colors and Overlays (in DRA)
 * Collect the ids for the new maps in pg/constants.py
-* Export the new maps, using the {TBD} script
+* Export the new maps.
 
 (3) Pull the ratings for the Official and Notable maps, using the pull_ratings.py script
 
