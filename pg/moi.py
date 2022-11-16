@@ -44,4 +44,7 @@ def distance_squared(pt1: Coordinate, pt2: Coordinate) -> float:
     return d
 
 
-#
+# LIMIT WHAT GETS EXPORTED.
+
+
+__all__: list[str] = ["calc_moi"]

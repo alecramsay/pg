@@ -109,6 +109,9 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
     # fig.show()
 
 
+### HELPERS ###
+
+
 def text_position(ratings: list[int], move_value: int) -> list[str]:
     positions: list[str] = [
         "top right" if (ratings[0] < move_value) else "top left",
@@ -122,4 +125,7 @@ def text_position(ratings: list[int], move_value: int) -> list[str]:
     return positions
 
 
-#
+# LIMIT WHAT GETS EXPORTED.
+
+
+__all__: list[str] = ["plot_radar_diagram"]

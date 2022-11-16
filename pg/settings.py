@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 """
-GLOBAL CONSTANTS
+GLOBAL SETTINGS
 """
 
-pass
+pass  # No settings
+
+# DON'T LIMIT WHAT GETS EXPORTED.
