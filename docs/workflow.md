@@ -14,7 +14,7 @@
 * Snapshot Notable map ids in pg/constants.py -- DONE
 * Copy Notable maps, using the duplicate_notable_maps.py script -- DONE
 
-  For each new map in DRA:
+  For each new map in DRA -- DONE
 
 * Set the Colors and Overlays
 * Collect the id into pg/constants.py
