@@ -23,10 +23,12 @@ def make_command(xx: str, subtype: str, id: str) -> str:
 
 
 for xx, id in officials_copy.items():
+    print(f"Pulling ratings for {xx} Official map ...")
     os.system(make_command(xx, "Official", id))
 
 for xx, maps in notables_copy.items():
     for dim, id in maps.items():
+        print(f"Pulling ratings for {xx} Notable {dim.capitalize()} map ...")
         os.system(make_command(xx, dim.capitalize(), id))
 
 #

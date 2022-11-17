@@ -22,7 +22,7 @@ MAP_ID=$4
 YY=22
 
 SCRIPT_DIR=/Users/alecramsay/iCloud/dev/dra-cli
-OUT_FILE=/Users/alecramsay/iCloud/dev/pg/temp/$XX$YY\_$TYPE\_$SUBTYPE\_ratings.json
+OUT_FILE=/Users/alecramsay/iCloud/dev/pg/data/$XX/$XX$YY\_$TYPE\_$SUBTYPE\_ratings.json
 
 echo "{" > $OUT_FILE
 $SCRIPT_DIR/getmap.js -m -i $MAP_ID | grep score_ >> $OUT_FILE

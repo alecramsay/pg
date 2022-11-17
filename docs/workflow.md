@@ -20,8 +20,9 @@
 * Collect the id into pg/constants.py
 * Export it
 
-(3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script
+(3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script -- DONE
 
+>>> HERE <<<
 
 (4) Create a baseline map for a state, using the tools in the 'baseline' repo
 
@@ -30,11 +31,12 @@
 
   Then in DRA:
 
-* Set the Colors and Overlays
+* Set the Colors and Overlays -- 'Change Palette' to Jet
 * Collect the id into pg/constants.py
 * Export it
 
 (6) For each duplicated Official and Notable map in DRA:
+* Change the color palette to Jet
 * Add the baseline map as a Custom Overlay
 * Download the map image, using right-click in Chrome
 
