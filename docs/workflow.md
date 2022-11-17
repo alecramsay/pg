@@ -2,9 +2,9 @@
 
 (1) Copy Official maps
 * Snapshot Official map ids in pg/constants.py -- DONE
-* Copy the Official maps, using the duplicate_official_maps.py script
+* Copy the Official maps, using the duplicate_official_maps.py script -- DONE
 
-  For each new map in DRA:
+  For each new map in DRA -- DONE
 
 * Set the Colors and Overlays
 * Collect the id into pg/constants.py
@@ -12,7 +12,7 @@
 
 (2) Copy Notable Maps
 * Snapshot Notable map ids in pg/constants.py -- DONE
-* Copy Notable maps, using the duplicate_notable_maps.py script
+* Copy Notable maps, using the duplicate_notable_maps.py script -- DONE
 
   For each new map in DRA:
 
@@ -21,6 +21,7 @@
 * Export it
 
 (3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script
+
 
 (4) Create a baseline map for a state, using the tools in the 'baseline' repo
 

@@ -19,7 +19,7 @@ ROOT=/Users/alecramsay/iCloud/dev/
 SCRIPT_DIR=$ROOT\dra-cli
 
 USER=alec@davesredistricting.org
-PW=Front.Seat
+PW=???
 
 NAME="$XX $YYYY $PLAN_TYPE - $GROUP"
 DESC="Copy of $XX $GROUP"
