@@ -53,9 +53,13 @@ study_states: list[str] = [
     "WI",
 ]  # 37 states with > 2 congressional districts
 
-disqualified_states: list[
-    str
-] = []  # States disqualified from the study, for some reason (specified)
+disqualified_states: list[str] = [
+    "AZ",  # Splitting notable is wildly not contiguous
+    "CO",  # Compact & Splitting have embedded districts
+    "KS",  # Proportional, Competitive piggyback on a river for contiguity
+    "NM",  # Proportional, Competitive, Minority, Compact are not contiguous
+    "OK",  # Compact is empty; Competitive piggybacks on a river for contiguity
+]  # States disqualified from the study, for some reason (specified)
 
 ### ENVIRONMENT CONSTANTS ###
 
