@@ -18,14 +18,14 @@ compare_subtype: str = "Baseline"
 ### CONSTRUCT FILE NAMES ###
 
 current_path: str = path_to_file([temp_dir]) + file_name(
-    [xx + yy, plan_type, current_subtype, "ratings"], "_", "json"
+    [xx, yyyy, plan_type, current_subtype, "ratings"], "_", "json"
 )
 compare_path: str = path_to_file([temp_dir]) + file_name(
-    [xx + yy, plan_type, compare_subtype, "ratings"], "_", "json"
+    [xx, yyyy, plan_type, compare_subtype, "ratings"], "_", "json"
 )
 
 plot_path: str = path_to_file([content_dir]) + file_name(
-    [xx, yy, plan_type, current_subtype, "radar"], "_", "png"
+    [xx, yyyy, plan_type, current_subtype, "radar"], "_", "png"
 )
 
 
@@ -38,8 +38,8 @@ compare_ratings: Ratings = cull_ratings(load_json(compare_path))
 
 ### PLOT RADAR DIAGRAM ###
 
-current_name: str = f"{xx}{yy} {type} {current_subtype}"
-compare_name: str = f"{xx}{yy} {type} {compare_subtype}"
+current_name: str = f"{xx} {yyyy} {type} {current_subtype}"
+compare_name: str = f"{xx} {yyyy} {type} {compare_subtype}"
 
 current_plan: Plan = Plan()
 current_plan.name = current_name

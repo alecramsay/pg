@@ -53,7 +53,7 @@ for label in [
     ratings: Ratings = cull_ratings(
         load_json(
             path_to_file([temp_dir])
-            + file_name([xx + yy, plan_type, label, "ratings"], "_", "json")
+            + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
         )
     )
 
@@ -70,7 +70,7 @@ for label in [
 
 write_csv(
     path_to_file([content_dir])
-    + file_name([xx + yy, plan_type, "ratings"], "_", "csv"),
+    + file_name([xx, yyyy, plan_type, "ratings"], "_", "csv"),
     ratings_table,
     # rows,
     [

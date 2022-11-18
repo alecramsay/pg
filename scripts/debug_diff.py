@@ -43,7 +43,7 @@ for label in [
     "Compact",
     "Splitting",
 ]:
-    print(f"Diffing {xx}{yy} {plan_type} {label} plan with Baseline plan:")
+    print(f"Diffing {xx} {yyyy} {plan_type} {label} plan with Baseline plan:")
 
     compare_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, yyyy, plan_type, label], "_", "csv"

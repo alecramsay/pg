@@ -69,7 +69,7 @@ for label in [
     "Compact",
     "Splitting",
 ]:
-    print(f"Diffing {xx}{yy} {plan_type} {label} plan with Baseline plan:")
+    print(f"Diffing {xx} {yyyy} {plan_type} {label} plan with Baseline plan:")
 
     compare_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, yyyy, plan_type, label], "_", "csv"
@@ -118,7 +118,7 @@ for label in [
         # Write a summary of regions to a CSV file
 
         regions_csv: str = path_to_file([content_dir]) + file_name(
-            [xx + yy, plan_type, label, "regions_summary"], "_", "csv"
+            [xx, yyyy, plan_type, label, "regions_summary"], "_", "csv"
         )
 
         write_csv(
@@ -138,7 +138,7 @@ for label in [
         # Write a BAF file for the regions for further processing in QGIS
 
         baf_csv: str = path_to_file([temp_dir]) + file_name(
-            [xx + yy, plan_type, label, "regions_BAF"], "_", "csv"
+            [xx, yyyy, plan_type, label, "regions_BAF"], "_", "csv"
         )
 
         write_csv(
