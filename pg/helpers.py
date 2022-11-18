@@ -37,7 +37,7 @@ def qualify_label(label: str) -> str:
         return f"Most {label}"
     if label == "Minority":
         return f"Best {label} Representation"
-    raise ValueError(f"Unknown map label: {label}")
+    return label
 
 
 # DON'T LIMIT WHAT GETS EXPORTED.

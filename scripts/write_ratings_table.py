@@ -56,15 +56,15 @@ for label in [
         )
     )
 
-    # TODO
     row: dict = dict()
-    row["Map"] = label
-    # Prettify the dict keys for column names
-    row["Most Proportional"] = ratings.proportionality
-    row["Most Competitive"] = ratings.competitiveness
-    row["Best Minority"] = ratings.minority_opportunity
-    row["Most Compact"] = ratings.compactness
-    row["Least Splitting"] = ratings.splitting
+    row = {
+        "Map": qualify_label(label),
+        "Proportionality": ratings.proportionality,
+        "Competitiveness": ratings.competitiveness,
+        "Minority": ratings.minority_opportunity,
+        "Compactness": ratings.compactness,
+        "Splitting": ratings.splitting,
+    }
 
     ratings_table.append(row)
 
@@ -75,11 +75,11 @@ write_csv(
     # rows,
     [
         "Map",
-        "Most Proportional",
-        "Most Competitive",
-        "Best Minority",
-        "Most Compact",
-        "Least Splitting",
+        "Proportionality",
+        "Competitiveness",
+        "Minority",
+        "Compactness",
+        "Splitting",
     ],
 )
 
