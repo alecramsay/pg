@@ -53,6 +53,9 @@ study_states: list[str] = [
     "WI",
 ]  # 37 states with > 2 congressional districts
 
+disqualified_states: list[
+    str
+] = []  # States disqualified from the study, for some reason (specified)
 
 ### ENVIRONMENT CONSTANTS ###
 
