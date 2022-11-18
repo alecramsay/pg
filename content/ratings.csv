@@ -1,0 +1,186 @@
+Map,Plan,Proportional,Competitive,Minority,Compact,Splitting
+AL,Most Proportional,100,33,100,75,93
+AL,Most Competitive,82,76,93,30,44
+AL,Best Minority Representation,100,33,100,75,93
+AL,Most Compact,20,18,92,100,31
+AL,Least Splitting,39,21,98,32,100
+AZ,Most Proportional,100,100,68,100,80
+AZ,Most Competitive,100,100,68,100,80
+AZ,Best Minority Representation,69,53,98,42,52
+AZ,Most Compact,100,100,68,100,80
+AZ,Least Splitting,68,45,67,51,85
+AR,Most Proportional,100,27,91,79,99
+AR,Most Competitive,100,36,93,20,24
+AR,Best Minority Representation,100,20,100,42,27
+AR,Most Compact,100,30,86,96,34
+AR,Least Splitting,100,26,92,64,100
+CA,Most Proportional,100,38,81,61,57
+CA,Most Competitive,92,56,78,32,64
+CA,Best Minority Representation,46,10,92,34,32
+CA,Most Compact,79,21,81,97,68
+CA,Least Splitting,73,28,83,61,95
+CO,Most Proportional,100,62,48,82,81
+CO,Most Competitive,68,100,49,65,71
+CO,Best Minority Representation,61,45,68,21,20
+CO,Most Compact,90,27,33,100,65
+CO,Least Splitting,82,38,44,33,99
+CT,Most Proportional,58,51,50,20,21
+CT,Most Competitive,39,68,50,24,26
+CT,Best Minority Representation,28,31,50,96,70
+CT,Most Compact,7,39,49,100,60
+CT,Least Splitting,24,50,50,35,78
+FL,Most Proportional,100,35,69,100,54
+FL,Most Competitive,80,85,66,33,21
+FL,Best Minority Representation,83,26,84,60,29
+FL,Most Compact,100,35,69,100,54
+FL,Least Splitting,76,28,67,62,76
+GA,Most Proportional,100,45,92,67,92
+GA,Most Competitive,100,100,98,35,29
+GA,Best Minority Representation,83,52,100,64,60
+GA,Most Compact,76,34,98,93,9
+GA,Least Splitting,100,45,92,67,92
+IL,Most Proportional,100,38,80,96,95
+IL,Most Competitive,100,72,60,24,31
+IL,Best Minority Representation,100,27,91,64,43
+IL,Most Compact,100,22,59,100,0
+IL,Least Splitting,100,28,67,81,99
+IN,Most Proportional,100,25,37,53,76
+IN,Most Competitive,82,89,0,56,25
+IN,Best Minority Representation,29,10,65,25,20
+IN,Most Compact,42,16,25,100,93
+IN,Least Splitting,31,19,25,83,95
+IA,Most Proportional,100,23,0,36,43
+IA,Most Competitive,49,99,0,59,97
+IA,Best Minority Representation,44,95,0,90,99
+IA,Most Compact,72,46,0,100,73
+IA,Least Splitting,73,47,0,94,100
+KS,Most Proportional,100,32,44,43,77
+KS,Most Competitive,21,80,0,20,26
+KS,Best Minority Representation,39,48,50,32,26
+KS,Most Compact,19,68,0,100,97
+KS,Least Splitting,25,60,0,76,100
+KY,Most Proportional,100,22,0,47,96
+KY,Most Competitive,93,64,0,25,64
+KY,Best Minority Representation,93,20,49,20,29
+KY,Most Compact,86,18,0,92,34
+KY,Least Splitting,99,22,0,25,97
+LA,Most Proportional,100,23,100,52,93
+LA,Most Competitive,75,66,97,29,26
+LA,Best Minority Representation,100,23,100,52,93
+LA,Most Compact,75,4,94,84,44
+LA,Least Splitting,81,19,100,27,99
+MD,Most Proportional,100,82,75,63,48
+MD,Most Competitive,100,82,75,63,48
+MD,Best Minority Representation,100,23,100,60,40
+MD,Most Compact,99,24,75,88,27
+MD,Least Splitting,100,39,87,33,86
+MA,Most Proportional,86,43,41,19,0
+MA,Most Competitive,65,50,46,16,11
+MA,Best Minority Representation,17,25,50,40,0
+MA,Most Compact,23,27,17,96,2
+MA,Least Splitting,20,26,17,40,98
+MI,Most Proportional,100,59,65,82,80
+MI,Most Competitive,100,100,33,45,25
+MI,Best Minority Representation,47,54,94,55,28
+MI,Most Compact,69,48,66,100,27
+MI,Least Splitting,67,48,49,57,85
+MN,Most Proportional,100,72,22,46,76
+MN,Most Competitive,78,100,0,29,24
+MN,Best Minority Representation,88,32,41,29,20
+MN,Most Compact,97,55,0,100,12
+MN,Least Splitting,95,44,0,60,88
+MS,Most Proportional,100,31,100,39,89
+MS,Most Competitive,65,100,100,23,32
+MS,Best Minority Representation,60,55,100,78,99
+MS,Most Compact,37,63,100,89,43
+MS,Least Splitting,56,51,100,63,100
+MO,Most Proportional,100,17,99,90,76
+MO,Most Competitive,100,96,0,32,37
+MO,Best Minority Representation,100,16,100,87,75
+MO,Most Compact,100,17,98,100,66
+MO,Least Splitting,100,4,24,60,93
+NE,Most Proportional,100,43,0,57,73
+NE,Most Competitive,81,54,0,25,36
+NE,Best Minority Representation,59,46,0,100,97
+NE,Most Compact,59,46,0,100,97
+NE,Least Splitting,60,46,0,68,100
+NV,Most Proportional,100,71,89,100,63
+NV,Most Competitive,55,100,50,64,50
+NV,Best Minority Representation,57,43,99,20,25
+NV,Most Compact,100,71,89,100,63
+NV,Least Splitting,80,27,60,96,63
+NJ,Most Proportional,100,63,63,63,46
+NJ,Most Competitive,88,89,59,40,23
+NJ,Best Minority Representation,100,39,75,60,28
+NJ,Most Compact,76,21,60,100,24
+NJ,Least Splitting,75,35,59,72,80
+NM,Most Proportional,100,89,100,97,66
+NM,Most Competitive,100,89,100,97,66
+NM,Best Minority Representation,100,89,100,97,66
+NM,Most Compact,100,88,100,100,42
+NM,Least Splitting,100,17,100,76,99
+NY,Most Proportional,100,29,74,75,67
+NY,Most Competitive,100,57,71,30,32
+NY,Best Minority Representation,66,10,88,25,20
+NY,Most Compact,75,41,73,98,19
+NY,Least Splitting,81,31,73,67,77
+NC,Most Proportional,100,49,50,76,76
+NC,Most Competitive,79,100,50,24,30
+NC,Best Minority Representation,79,17,92,26,21
+NC,Most Compact,97,35,50,98,16
+NC,Least Splitting,86,28,50,66,90
+OH,Most Proportional,100,36,47,100,76
+OH,Most Competitive,88,100,0,47,29
+OH,Best Minority Representation,78,35,80,49,53
+OH,Most Compact,100,36,47,100,76
+OH,Least Splitting,68,34,33,62,89
+OK,Most Proportional,73,10,25,40,23
+OK,Most Competitive,56,46,49,33,23
+OK,Best Minority Representation,51,25,50,38,53
+OK,Most Compact,5,19,25,100,70
+OK,Least Splitting,5,19,45,63,99
+OR,Most Proportional,100,77,0,38,66
+OR,Most Competitive,46,100,0,48,21
+OR,Best Minority Representation,52,51,25,42,34
+OR,Most Compact,42,50,0,96,15
+OR,Least Splitting,67,64,0,25,96
+PA,Most Proportional,100,35,49,58,73
+PA,Most Competitive,100,94,37,27,28
+PA,Best Minority Representation,100,29,74,23,25
+PA,Most Compact,0,35,49,100,4
+PA,Least Splitting,85,37,49,46,89
+SC,Most Proportional,100,30,75,71,30
+SC,Most Competitive,66,76,71,22,27
+SC,Best Minority Representation,65,9,100,39,32
+SC,Most Compact,45,53,50,91,31
+SC,Least Splitting,47,52,49,37,100
+TN,Most Proportional,100,24,93,39,92
+TN,Most Competitive,100,68,91,27,36
+TN,Best Minority Representation,100,18,97,48,34
+TN,Most Compact,100,0,73,80,45
+TN,Least Splitting,100,0,72,23,96
+TX,Most Proportional,100,39,77,79,74
+TX,Most Competitive,100,100,68,34,21
+TX,Best Minority Representation,100,29,86,47,41
+TX,Most Compact,100,25,73,95,24
+TX,Least Splitting,100,21,73,70,80
+UT,Most Proportional,100,33,0,100,82
+UT,Most Competitive,100,36,0,64,47
+UT,Best Minority Representation,80,18,44,31,28
+UT,Most Compact,100,33,0,100,82
+UT,Least Splitting,100,33,0,100,82
+VA,Most Proportional,100,30,72,58,90
+VA,Most Competitive,95,85,60,29,40
+VA,Best Minority Representation,100,26,83,46,34
+VA,Most Compact,60,33,60,80,32
+VA,Least Splitting,82,42,62,27,94
+WA,Most Proportional,100,69,44,55,67
+WA,Most Competitive,100,91,50,37,20
+WA,Best Minority Representation,100,40,53,33,40
+WA,Most Compact,100,41,50,100,26
+WA,Least Splitting,96,37,30,27,81
+WI,Most Proportional,100,31,47,88,79
+WI,Most Competitive,79,100,0,39,28
+WI,Best Minority Representation,49,28,85,27,38
+WI,Most Compact,85,22,45,99,32
+WI,Least Splitting,70,43,47,36,94

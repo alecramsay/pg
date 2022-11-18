@@ -54,11 +54,12 @@ study_states: list[str] = [
 ]  # 37 states with > 2 congressional districts
 
 disqualified_states: list[str] = [
-    "AZ",  # Splitting notable is wildly not contiguous
-    "CO",  # Compact & Splitting have embedded districts
-    "KS",  # Proportional, Competitive piggyback on a river for contiguity
-    "NM",  # Proportional, Competitive, Minority, Compact are not contiguous
-    "OK",  # Compact is empty; Competitive piggybacks on a river for contiguity
+    "AZ",  # Splitting notable is wildly not contiguous  <<< Inspect the graph
+    "CO",  # Compact & Splitting have embedded districts <<< User gamed the checks. Skip CO.
+    "KS",  # Proportional, Competitive piggyback on a river for contiguity <<< Raise the compactness threshold?
+    "MO",  # Competitive piggybacks on a river for contiguity <<< Raise the compactness threshold?
+    "NM",  # Proportional, Competitive, Minority, Compact are not contiguous <<< Inspect the graph
+    "OK",  # Compact is empty; Competitive piggybacks on a river for contiguity <<< Raise the compactness threshold?
 ]  # States disqualified from the study, for some reason (specified)
 
 ### ENVIRONMENT CONSTANTS ###

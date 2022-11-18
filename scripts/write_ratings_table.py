@@ -16,7 +16,6 @@ $ scripts/write_ratings_table.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
-import os
 
 from pg import *
 
@@ -52,11 +51,12 @@ for label in [
 ]:
     ratings: Ratings = cull_ratings(
         load_json(
-            path_to_file([temp_dir])
+            path_to_file([data_dir, xx])
             + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
         )
     )
 
+    # TODO
     row: dict = dict()
     row["Map"] = label
     # Prettify the dict keys for column names
