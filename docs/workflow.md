@@ -22,6 +22,7 @@
 
 (3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script -- DONE
 
+---
 
 (4) Create a baseline map for a state, using the tools in the 'baseline' repo
 

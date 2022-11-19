@@ -9,7 +9,7 @@ $ scripts/pull_ratings.py
 
 For documentation, type:
 
-$ scripts/gen_pull_ratings.py -h
+$ scripts/pull_ratings.py -h
 
 """
 

@@ -53,14 +53,6 @@ study_states: list[str] = [
     "WI",
 ]  # 37 states with > 2 congressional districts
 
-disqualified_states: list[str] = [
-    "CO",  # Compact & Splitting have embedded districts <<< User gamed the checks!
-    "KS",  # Proportional, Competitive piggyback on a river for contiguity
-    "MO",  # Competitive piggybacks on a river for contiguity
-    "OK",  # Compact is empty; Competitive piggybacks on a river for contiguity
-    "AZ",  # Splitting notable is wildly not contiguous  <<< Inspect the graph
-    "NM",  # Proportional, Competitive, Minority, Compact are not contiguous <<< Inspect the graph
-]  # States disqualified from the study, for some reason (specified)
 
 ### ENVIRONMENT CONSTANTS ###
 
@@ -735,7 +727,8 @@ notables_copy: dict[str, dict] = {
         "competitive": "17345788-c122-43be-a62a-5c43a696a22c",
         "minority": "5b4dfad5-ee34-469d-bdef-7f07a749b2c5",
         "compact": "970224ba-4373-48fd-9e3e-15527b63c9c5",
-        "splitting": "01aecc9a-2a4b-4d43-9ca7-96385c0d1daa",
+        "splitting": "7ff7eec5-1b01-422b-bb34-d78da0f8fcb8",  # copy of "2dff53e3-4c0a-499b-b3c9-26e409318e83"
+        # "splitting": "01aecc9a-2a4b-4d43-9ca7-96385c0d1daa",
     },
     "AR": {
         "proportional": "4331cceb-5317-4921-a620-1197799add51",
@@ -755,8 +748,10 @@ notables_copy: dict[str, dict] = {
         "proportional": "69886296-e646-4bb8-841f-40faf888463e",
         "competitive": "d11c4b86-1f01-4adb-8b70-7d17d640de46",
         "minority": "2427fc2b-4907-4fac-a1fd-54fe225db227",
-        "compact": "5970deaa-8306-4728-8933-3a74d1f2f298",
-        "splitting": "896e564c-ddfa-4596-9c3d-a6dbd9b6e886",
+        "compact": "e9e9c486-bb80-4ce5-9666-4466947f7ab0",  # copy of "7d34443b-3e8c-4108-9074-2e565805b89d"
+        # "compact": "5970deaa-8306-4728-8933-3a74d1f2f298",
+        "splitting": "d639dbaf-cf30-4998-b794-7cfba3312a0b",  # copy of "fe586498-24d8-4c7c-a6db-8437ed0b9ca6"
+        # "splitting": "896e564c-ddfa-4596-9c3d-a6dbd9b6e886",
     },
     "CT": {
         "proportional": "6411d3ac-8523-44b2-a9e1-4abc0469790c",
@@ -801,8 +796,10 @@ notables_copy: dict[str, dict] = {
         "splitting": "311d779b-9cfc-4983-a589-a9d6877e3f1e",
     },
     "KS": {
-        "proportional": "659e9adf-713c-4375-9528-f384d043f1b0",
-        "competitive": "e2021c4b-281c-451a-ad9e-49fef9c2f57b",
+        "proportional": "177278c7-822b-414c-a6e4-47c49e6d8e31",  # copy of "5e0fe356-4f7f-49eb-b36b-693b1a156845"
+        # "proportional": "659e9adf-713c-4375-9528-f384d043f1b0",
+        "competitive": "cadda27c-9616-45b6-a872-2d5a6e60c6a1",  # copy of dfabfef9-429c-4b81-a893-da79e7e26214
+        # "competitive": "e2021c4b-281c-451a-ad9e-49fef9c2f57b",
         "minority": "5e4b3a7d-cb16-4cee-ac4b-05086203c64d",
         "compact": "d86bf787-674a-4a6e-8cb8-e84c45762077",
         "splitting": "7ac2a17a-c287-41ff-b624-67efe0bea826",
@@ -858,7 +855,8 @@ notables_copy: dict[str, dict] = {
     },
     "MO": {
         "proportional": "a39beb81-f839-4755-a35f-05bc79ee68a0",
-        "competitive": "a110a70b-d083-4934-905c-2ba0dae7256f",
+        "competitive": "f07502f1-f94d-47c6-b083-f41aadb0f7ee",  # copy of "127dfd4d-094a-4cdc-ac9e-e98829a664dc"
+        # "competitive": "a110a70b-d083-4934-905c-2ba0dae7256f",
         "minority": "d1ce2e50-1c28-4aae-a95e-71b1ab361c8a",
         "compact": "9cc3d9c3-44c6-4a62-8db9-7846ac12688f",
         "splitting": "abc98af0-3ef8-4861-96cc-40f7173d9d14",
@@ -885,10 +883,14 @@ notables_copy: dict[str, dict] = {
         "splitting": "a3afe5ca-4430-483f-82ca-39922fa5d3dc",
     },
     "NM": {
-        "proportional": "1739a3fd-0a61-40b4-affe-2d9943568477",
-        "competitive": "2e487b62-e26b-4c96-92de-0ffd20feade6",
-        "minority": "5dcbf4ee-ad06-4fb2-9d30-45b7b1496a3f",
-        "compact": "a569b54b-eebb-42c7-af2a-373d13142d05",
+        "proportional": "2051bf23-0195-4d89-aceb-252d78c32dc4",  # copy of "3cab7943-cc5d-4c56-a460-307ca987324a"
+        # "proportional": "1739a3fd-0a61-40b4-affe-2d9943568477",
+        "competitive": "57893e66-fd7d-464a-8e6f-c39b69609b73",  # copy of "0852f3ca-438e-43be-858c-72e6fd797f98"
+        # "competitive": "2e487b62-e26b-4c96-92de-0ffd20feade6",
+        "minority": "46afff6c-1f2c-43bb-bfeb-1c69f75fa403",  # copy of "3cab7943-cc5d-4c56-a460-307ca987324a"
+        # "minority": "5dcbf4ee-ad06-4fb2-9d30-45b7b1496a3f",
+        "compact": "769b245f-4c5d-4a93-98a5-6cd2e66420a2",  # copy of "e7ac5c2a-ce36-4780-ab04-0fc82faac874"
+        # "compact": "a569b54b-eebb-42c7-af2a-373d13142d05",
         "splitting": "cd28107e-5ede-4f74-bbf5-dae7f54c17e3",
     },
     "NY": {
@@ -914,9 +916,11 @@ notables_copy: dict[str, dict] = {
     },
     "OK": {
         "proportional": "2943140f-a1bd-45c1-a455-dc14c5393eed",
-        "competitive": "b8794457-352e-4412-9908-027f95cc9b1d",
+        "competitive": "ca3b3e26-9a73-422f-a40c-cd7b240e053d",  # copy of "2de2dd82-508d-4c6d-a626-b41373f1a9b7"
+        # "competitive": "b8794457-352e-4412-9908-027f95cc9b1d",
         "minority": "9d2fa2d3-a6fa-4b65-b902-3d26e8c7b41a",
-        "compact": "5d052539-7560-4200-9e96-c920cda86b4f",  # BAD
+        "compact": "fbec07f7-2c67-4928-aedc-956f551aee08",  # copy of "10e4bc47-38a4-4b0d-9329-81b40bc039f4"
+        # "compact": "5d052539-7560-4200-9e96-c920cda86b4f",
         "splitting": "d47c3741-ec79-48d4-8c95-f938a526cf4b",
     },
     "OR": {
