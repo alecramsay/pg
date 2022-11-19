@@ -8,7 +8,7 @@ AZ,Most Proportional,100,100,68,100,80
 AZ,Most Competitive,100,100,68,100,80
 AZ,Best Minority Representation,69,53,98,42,52
 AZ,Most Compact,100,100,68,100,80
-AZ,Least Splitting,68,45,67,51,85
+AZ,Least Splitting,93,31,58,50,83
 AR,Most Proportional,100,27,91,79,99
 AR,Most Competitive,100,36,93,20,24
 AR,Best Minority Representation,100,20,100,42,27
@@ -22,8 +22,8 @@ CA,Least Splitting,73,28,83,61,95
 CO,Most Proportional,100,62,48,82,81
 CO,Most Competitive,68,100,49,65,71
 CO,Best Minority Representation,61,45,68,21,20
-CO,Most Compact,90,27,33,100,65
-CO,Least Splitting,82,38,44,33,99
+CO,Most Compact,91,29,31,100,42
+CO,Least Splitting,71,38,46,29,99
 CT,Most Proportional,58,51,50,20,21
 CT,Most Competitive,39,68,50,24,26
 CT,Best Minority Representation,28,31,50,96,70
@@ -54,8 +54,8 @@ IA,Most Competitive,49,99,0,59,97
 IA,Best Minority Representation,44,95,0,90,99
 IA,Most Compact,72,46,0,100,73
 IA,Least Splitting,73,47,0,94,100
-KS,Most Proportional,100,32,44,43,77
-KS,Most Competitive,21,80,0,20,26
+KS,Most Proportional,100,29,0,53,26
+KS,Most Competitive,20,71,0,47,34
 KS,Best Minority Representation,39,48,50,32,26
 KS,Most Compact,19,68,0,100,97
 KS,Least Splitting,25,60,0,76,100
@@ -95,7 +95,7 @@ MS,Best Minority Representation,60,55,100,78,99
 MS,Most Compact,37,63,100,89,43
 MS,Least Splitting,56,51,100,63,100
 MO,Most Proportional,100,17,99,90,76
-MO,Most Competitive,100,96,0,32,37
+MO,Most Competitive,100,83,0,37,40
 MO,Best Minority Representation,100,16,100,87,75
 MO,Most Compact,100,17,98,100,66
 MO,Least Splitting,100,4,24,60,93
@@ -114,10 +114,10 @@ NJ,Most Competitive,88,89,59,40,23
 NJ,Best Minority Representation,100,39,75,60,28
 NJ,Most Compact,76,21,60,100,24
 NJ,Least Splitting,75,35,59,72,80
-NM,Most Proportional,100,89,100,97,66
-NM,Most Competitive,100,89,100,97,66
-NM,Best Minority Representation,100,89,100,97,66
-NM,Most Compact,100,88,100,100,42
+NM,Most Proportional,100,17,100,76,99
+NM,Most Competitive,54,82,100,54,56
+NM,Best Minority Representation,100,17,100,76,99
+NM,Most Compact,94,21,100,100,22
 NM,Least Splitting,100,17,100,76,99
 NY,Most Proportional,100,29,74,75,67
 NY,Most Competitive,100,57,71,30,32
@@ -135,9 +135,9 @@ OH,Best Minority Representation,78,35,80,49,53
 OH,Most Compact,100,36,47,100,76
 OH,Least Splitting,68,34,33,62,89
 OK,Most Proportional,73,10,25,40,23
-OK,Most Competitive,56,46,49,33,23
+OK,Most Competitive,29,38,48,39,25
 OK,Best Minority Representation,51,25,50,38,53
-OK,Most Compact,5,19,25,100,70
+OK,Most Compact,43,26,44,78,29
 OK,Least Splitting,5,19,45,63,99
 OR,Most Proportional,100,77,0,38,66
 OR,Most Competitive,46,100,0,48,21

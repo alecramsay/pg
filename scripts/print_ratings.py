@@ -5,7 +5,7 @@ Print all Notable map ratings
 
 For example:
 
-$ scripts/print_ratings.py
+$ scripts/print_ratings.py > ratings.csv
 
 For documentation, type:
 
