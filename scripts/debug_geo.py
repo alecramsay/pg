@@ -30,7 +30,9 @@ regions_baf_path: str = path_to_file([temp_dir]) + file_name(
 regions_summary_path: str = path_to_file(["content"]) + file_name(
     [xx, yyyy, plan_type, label, "regions", "summary"], "_", "csv"
 )
-
+regions_map_path: str = path_to_file(["content"]) + file_name(
+    [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
+)
 
 ### LOAD BLOCK SHAPES & BLOCK REGION ASSIGNMENTS ###
 
@@ -85,6 +87,6 @@ regions_gdf = regions_gdf[
 
 ### WRITE THE REGIONS TO A SHAPEFILE ###
 
-# TODO
+regions_gdf.to_file(regions_map_path, driver="GeoJSON")
 
 pass
