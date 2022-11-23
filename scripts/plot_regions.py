@@ -138,7 +138,7 @@ for label in [
             cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax)
         )
         sm._A = []
-        fig.colorbar(sm, orientation=orientation, shrink=0.5)
+        fig.colorbar(sm, orientation=orientation, ax=ax, shrink=0.5)
 
     # Region labels
     for idx, row in regions_gdf.iterrows():
