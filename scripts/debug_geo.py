@@ -18,12 +18,26 @@ xx: str = "NC"
 fips: str = fips_map[xx]
 label: str = "Official"
 
+w: int = 8  # 6 inches is the default
+h: int = 8  # 4 inches is the default
+legend: bool = True
+orientation: str = "vertical"
+# orientation: str = "horizontal"
+
+save: bool = False
+
 
 ### CONSTRUCT PATHS ###
 
 regions_path: str = path_to_file(["content"]) + file_name(
     [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
 )
+regions_plot_path: str = path_to_file(["content"]) + file_name(
+    [xx, yyyy, plan_type, label, "regions"], "_", "png"
+)
+
+
+# LOAD THE REGIONS
 
 regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
 regions_gdf = regions_gdf[
@@ -37,39 +51,54 @@ regions_gdf = regions_gdf[
         "CUMULATIVE%",
     ]
 ]
+# Add points for label placement
+regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()
 
-regions_plot_path: str = path_to_file(["content"]) + file_name(
-    [xx, yyyy, plan_type, label, "regions"], "_", "png"
-)
 
+### PLOT REGIONS ON A MAP ###
+
+# Instead of simply this:
 # regions_gdf.plot()
+# the code below follows this example:
+# https://towardsdatascience.com/mapping-with-matplotlib-pandas-geopandas-and-basemap-in-python-d11b57ab5dac
 
-# Following this example -- https://towardsdatascience.com/mapping-with-matplotlib-pandas-geopandas-and-basemap-in-python-d11b57ab5dac
-
-gradient: str = "DISTRICT%"
+dimension: str = "DISTRICT%"
 colors: str = "Blues"
 lines: float = 1.25
 title: str = "% of District Population by Region"
 
 fig: Figure
 ax: List[Axes]
-fig, ax = plt.subplots(1, figsize=(10, 6))  # TODO: figsize
+
+fig, ax = plt.subplots(1, figsize=(w, h))
 
 ax.axis("off")
 ax.set_title(title, fontdict={"fontsize": "14", "fontweight": "3"})
 
-# colorbar as a legend
-vmin: int = 0
-vmax: int = 100
-sm = plt.cm.ScalarMappable(cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax))
-sm._A = []
-fig.colorbar(sm)
+# A colorbar legend
+if legend:
+    vmin: int = 0
+    vmax: int = 100
+    # sm = plt.cm.ScalarMappable(cmap=colors, norm=plt.Normalize(hmin=vmin, hmax=vmax))
+    sm = plt.cm.ScalarMappable(cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax))
+    sm._A = []
+    fig.colorbar(sm, orientation=orientation, shrink=0.5)
+    # fig.colorbar(sm, location="bottom", orientation="horizontal", shrink=0.5)
+    # fig.colorbar(sm, location="right", orientation="vertical", shrink=0.5)
 
-# TODO: label regions
+# Region labels
+for idx, row in regions_gdf.iterrows():
+    ax.annotate(
+        "{}".format(row["REGION"]),
+        xy=row["labelpos"].coords[0],
+        ha="center",
+        va="center",
+        fontsize=8,
+    )
 
-regions_gdf.plot(column=gradient, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8")
+regions_gdf.plot(column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8")
 
-# saving our map as .png file.
-# fig.savefig(regions_plot_path, dpi=300)
+if save:
+    fig.savefig(regions_plot_path, dpi=300)
 
 pass
