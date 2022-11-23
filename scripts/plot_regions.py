@@ -5,10 +5,10 @@ Plot the intersecting regions of a map wrto the baseline map on a map.
 
 For example:
 
-$ scripts/plot_regions.py NC Official
-$ scripts/plot_regions.py NC Official -v
-$ scripts/plot_regions.py NC Official -o vertical -v
-$ scripts/plot_regions.py NC Official -H 6 -W 4 -v
+$ scripts/plot_regions.py NC
+$ scripts/plot_regions.py NC -t
+$ scripts/plot_regions.py NC -o vertical -t
+$ scripts/plot_regions.py NC -H 6 -W 4 -t
 
 For documentation, type:
 
@@ -32,7 +32,6 @@ from pg import *
 parser: ArgumentParser = argparse.ArgumentParser(description="Plot regions on a map")
 
 parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
-parser.add_argument("label", help="The map the regions belong to", type=str)
 
 parser.add_argument(
     "-o",
@@ -46,15 +45,18 @@ parser.add_argument(
     "-H", "--height", help="The height of the plot", type=int, default=8
 )
 parser.add_argument(
+    "-t", "--test", dest="test", action="store_true", help="Test mode"
+)  # Show one plot vs. write all plots
+
+parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)  # Shows the plot
+)  # NOOP
 
 args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
 fips: str = fips_map[xx]
-label: str = args.label
 
 w: int = args.width  # 6 inches is the matplotlib default
 h: int = args.height  # 4 inches is the matplotlib default
@@ -65,86 +67,97 @@ if args.orientation in ["vertical", "horizontal"]:
 else:
     raise ValueError("Orientation must be 'vertical' or 'horizontal'")
 
-save: bool = True  # No interactive mode for scripts
+test: bool = args.test
 verbose: bool = args.verbose  # Show the plot
 
+for label in [
+    "Official",
+    "Proportional",
+    "Competitive",
+    "Minority",
+    "Compact",
+    "Splitting",
+]:
+    print("Making shapefile for the", label, "map ...")
 
-### CONSTRUCT PATHS ###
+    ### CONSTRUCT PATHS ###
 
-regions_path: str = path_to_file(["content"]) + file_name(
-    [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
-)
-regions_plot_path: str = path_to_file(["content"]) + file_name(
-    [xx, yyyy, plan_type, label, "regions"], "_", "png"
-)
-
-
-### LOAD THE REGIONS ###
-
-regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
-regions_gdf = regions_gdf[
-    [
-        "geometry",
-        "REGION",
-        "BASELINE",
-        "OTHER",
-        "POPULATION",
-        "DISTRICT%",
-        "CUMULATIVE%",
-    ]
-]
-# Add points for label placement
-regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()
-
-
-### PLOT THE REGIONS ON A MAP ###
-
-# Instead of simply this:
-# regions_gdf.plot()
-# the code below follows this example:
-# https://towardsdatascience.com/mapping-with-matplotlib-pandas-geopandas-and-basemap-in-python-d11b57ab5dac
-
-dimension: str = "DISTRICT%"
-colors: str = "Blues"
-lines: float = 1.25
-title: str = "% of District Population by Region"
-title_font_size: int = 12
-label_font_size: int = 4
-
-#
-
-fig: Figure
-ax: List[Axes]
-
-fig, ax = plt.subplots(1, figsize=(w, h))
-
-ax.axis("off")
-ax.set_title(title, fontdict={"size": title_font_size, "weight": "normal"})
-
-# A colorbar legend
-if legend:
-    vmin: int = 0
-    vmax: int = 100
-    sm = plt.cm.ScalarMappable(cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax))
-    sm._A = []
-    fig.colorbar(sm, orientation=orientation, shrink=0.5)
-
-# Region labels
-for idx, row in regions_gdf.iterrows():
-    ax.annotate(
-        "{}".format(row["REGION"]),
-        xy=row["labelpos"].coords[0],
-        ha="center",
-        va="center",
-        fontsize=label_font_size,
+    regions_path: str = path_to_file(["content"]) + file_name(
+        [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
+    )
+    regions_plot_path: str = path_to_file(["content"]) + file_name(
+        [xx, yyyy, plan_type, label, "regions"], "_", "png"
     )
 
-regions_gdf.plot(column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8")
+    ### LOAD THE REGIONS ###
 
-if save:
-    fig.savefig(regions_plot_path, dpi=300)
+    regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
+    regions_gdf = regions_gdf[
+        [
+            "geometry",
+            "REGION",
+            "BASELINE",
+            "OTHER",
+            "POPULATION",
+            "DISTRICT%",
+            "CUMULATIVE%",
+        ]
+    ]
+    # Add points for label placement
+    regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()
 
-if verbose:
-    plt.show()
+    ### PLOT THE REGIONS ON A MAP ###
+
+    # Instead of simply this:
+    # regions_gdf.plot()
+    # the code below follows this example:
+    # https://towardsdatascience.com/mapping-with-matplotlib-pandas-geopandas-and-basemap-in-python-d11b57ab5dac
+
+    dimension: str = "DISTRICT%"
+    colors: str = "Blues"
+    lines: float = 1.25
+    title: str = "% of District Population by Region"
+    title_font_size: int = 12
+    label_font_size: int = 4
+
+    #
+
+    fig: Figure
+    ax: List[Axes]
+
+    fig, ax = plt.subplots(1, figsize=(w, h))
+
+    ax.axis("off")
+    ax.set_title(title, fontdict={"size": title_font_size, "weight": "normal"})
+
+    # A colorbar legend
+    if legend:
+        vmin: int = 0
+        vmax: int = 100
+        sm = plt.cm.ScalarMappable(
+            cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax)
+        )
+        sm._A = []
+        fig.colorbar(sm, orientation=orientation, shrink=0.5)
+
+    # Region labels
+    for idx, row in regions_gdf.iterrows():
+        ax.annotate(
+            "{}".format(row["REGION"]),
+            xy=row["labelpos"].coords[0],
+            ha="center",
+            va="center",
+            fontsize=label_font_size,
+        )
+
+    regions_gdf.plot(
+        column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8"
+    )
+
+    if test:
+        plt.show()
+        break
+    else:
+        fig.savefig(regions_plot_path, dpi=300)
 
 #
