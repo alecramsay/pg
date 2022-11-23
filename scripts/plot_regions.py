@@ -6,6 +6,8 @@ Plot the intersecting regions of a map wrto the baseline map on a map.
 For example:
 
 $ scripts/plot_regions.py NC Official
+$ scripts/plot_regions.py NC Official -v
+$ scripts/plot_regions.py NC Official -o vertical -v
 $ scripts/plot_regions.py NC Official -H 6 -W 4 -v
 
 For documentation, type:
@@ -32,6 +34,13 @@ parser: ArgumentParser = argparse.ArgumentParser(description="Plot regions on a 
 parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
 parser.add_argument("label", help="The map the regions belong to", type=str)
 
+parser.add_argument(
+    "-o",
+    "--orientation",
+    help="The orientation of the color bar",
+    type=str,
+    default="horizontal",
+)
 parser.add_argument("-W", "--width", help="The width of the plot", type=int, default=8)
 parser.add_argument(
     "-H", "--height", help="The height of the plot", type=int, default=8
@@ -49,13 +58,16 @@ label: str = args.label
 
 w: int = args.width  # 6 inches is the matplotlib default
 h: int = args.height  # 4 inches is the matplotlib default
-# No need to repeat the colorbar on every plot
-legend: bool = False
-orientation: str = "vertical"  # "horizontal"
+
+legend: bool = True
+if args.orientation in ["vertical", "horizontal"]:
+    orientation: str = args.orientation
+else:
+    raise ValueError("Orientation must be 'vertical' or 'horizontal'")
 
 save: bool = True  # No interactive mode for scripts
+verbose: bool = args.verbose  # Show the plot
 
-verbose: bool = args.verbose
 
 ### CONSTRUCT PATHS ###
 
