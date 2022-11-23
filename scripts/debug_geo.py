@@ -5,12 +5,12 @@
 
 import geopandas
 from geopandas import GeoDataFrame
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import Figure, Axes
+from typing import List
 
 from pg import *
 
-### Make a shapefile for the regions of the {label} map wrto the baseline mao
-
-### PARSE ARGS ###
 
 fips_map: dict[str, str] = make_state_codes()
 
@@ -21,57 +21,11 @@ label: str = "Official"
 
 ### CONSTRUCT PATHS ###
 
-block_shps_path: str = path_to_file([rawdata_dir, xx]) + file_name(
-    ["tl", cycle, fips, "tabblock20"], "_"
-)
-regions_baf_path: str = path_to_file([temp_dir]) + file_name(
-    [xx, yyyy, plan_type, label, "regions", "BAF"], "_", "csv"
-)
-regions_summary_path: str = path_to_file(["content"]) + file_name(
-    [xx, yyyy, plan_type, label, "regions", "summary"], "_", "csv"
-)
-regions_map_path: str = path_to_file(["content"]) + file_name(
+regions_path: str = path_to_file(["content"]) + file_name(
     [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
 )
 
-### LOAD BLOCK SHAPES & BLOCK REGION ASSIGNMENTS ###
-
-blocks_gdf: GeoDataFrame = geopandas.read_file(block_shps_path)
-blocks_gdf = blocks_gdf[["geometry", "GEOID20"]]
-
-regions_gdf: GeoDataFrame = geopandas.read_file(regions_baf_path)
-regions_gdf = regions_gdf[["GEOID", "REGION"]]
-
-
-### JOIN THE REGIONS TO THE BLOCK SHAPES ###
-
-blocks_gdf = blocks_gdf.merge(
-    regions_gdf,
-    how="left",
-    left_on="GEOID20",
-    right_on="GEOID",
-)
-blocks_gdf = blocks_gdf[["geometry", "GEOID", "REGION"]]
-del regions_gdf
-
-
-### DISSOLVE BLOCKS BY REGION ###
-
-regions_gdf: GeoDataFrame = blocks_gdf.dissolve(by="REGION", as_index=False)
-del blocks_gdf
-
-
-### LOAD THE REGION SUMMARY DATA ###
-
-regions_summary: GeoDataFrame = geopandas.read_file(regions_summary_path)
-regions_summary = regions_summary[
-    ["REGION", "BASELINE", "OTHER", "POPULATION", "DISTRICT%", "CUMULATIVE%"]
-]
-regions_gdf = regions_gdf.merge(
-    regions_summary,
-    on="REGION",
-    how="left",
-)
+regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
 regions_gdf = regions_gdf[
     [
         "geometry",
@@ -84,9 +38,38 @@ regions_gdf = regions_gdf[
     ]
 ]
 
+regions_plot_path: str = path_to_file(["content"]) + file_name(
+    [xx, yyyy, plan_type, label, "regions"], "_", "png"
+)
 
-### WRITE THE REGIONS TO A SHAPEFILE ###
+# regions_gdf.plot()
 
-regions_gdf.to_file(regions_map_path, driver="GeoJSON")
+# Following this example -- https://towardsdatascience.com/mapping-with-matplotlib-pandas-geopandas-and-basemap-in-python-d11b57ab5dac
+
+gradient: str = "DISTRICT%"
+colors: str = "Blues"
+lines: float = 1.25
+title: str = "% of District Population by Region"
+
+fig: Figure
+ax: List[Axes]
+fig, ax = plt.subplots(1, figsize=(10, 6))  # TODO: figsize
+
+ax.axis("off")
+ax.set_title(title, fontdict={"fontsize": "14", "fontweight": "3"})
+
+# colorbar as a legend
+vmin: int = 0
+vmax: int = 100
+sm = plt.cm.ScalarMappable(cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax))
+sm._A = []
+fig.colorbar(sm)
+
+# TODO: label regions
+
+regions_gdf.plot(column=gradient, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8")
+
+# saving our map as .png file.
+# fig.savefig(regions_plot_path, dpi=300)
 
 pass
