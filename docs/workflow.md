@@ -42,4 +42,6 @@
 * Add the baseline map as a Custom Overlay -- no fill, line thickness = 2
 * Download the map image, using right-click in Chrome
 
-(7) Finally, Analyze the Official & Notable maps, using the analyze_state.py script
+(7) Analyze the Official & Notable maps, using the analyze_state.py script
+
+(8) Finally, map the regions identified above, using the map_regions.py script
