@@ -44,4 +44,6 @@
 
 (7) Analyze the Official & Notable maps, using the analyze_state.py script
 
-(8) Finally, map the regions identified above, using the map_regions.py script
+(8) Finally, map the regions identified above:
+* First run the map_regions.py script to create maps (.geojson) of the regions for the various maps
+* Then use the plot_regions.py script to generate plots for those maps -- experiment with the height & width that work best for the state's shape
