@@ -1,3 +1,4 @@
 # pg
-Exploring redistricting tradeoffs inherent in a state's political geography
+
+Explores the tradeoffs for redistricting inherent in states' political geography 
 
