@@ -1,0 +1,17 @@
+# file: `_config.yml`
+
+url: https://alecramsay.github.io/
+baseurl: /pg
+
+author:
+  name:  Alec Ramsay
+  email: alec@davesredistricting.org
+
+markdown: kramdown
+theme: minima
+# remote_theme: THEME-NAME
+
+
+# Resources:
+# - https://paulcalvano.com/docs/config/
+# - https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_config.yml
