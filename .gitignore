@@ -19,5 +19,4 @@ __pycache__/
 # Jekyll
 _site/
 .jekyll-cache/
-Gemfile.lock
 .bundles_cache/
