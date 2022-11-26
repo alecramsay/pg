@@ -8,8 +8,8 @@ author:
   email: alec@davesredistricting.org
 
 markdown: kramdown
-theme: minima
-# remote_theme: THEME-NAME
+# theme: minima
+remote_theme: benbalter/retlab
 
 
 # Resources:
