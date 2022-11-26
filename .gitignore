@@ -15,3 +15,7 @@ map0.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+# Jekyll
+_site/
+.jekyll-cache/
