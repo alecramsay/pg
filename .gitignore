@@ -19,4 +19,6 @@ __pycache__/
 # Jekyll
 _site/
 .jekyll-cache/
+.sass-cache
+.jekyll-metadata
 .bundles_cache/
