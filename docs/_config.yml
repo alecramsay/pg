@@ -45,3 +45,16 @@ theme: minima
 # Other resources:
 # - https://paulcalvano.com/docs/config/
 # - https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_config.yml
+
+# Info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at 
+# [jekyllrb.com](https://jekyllrb.com/)
+
+# The source code for Minima at GitHub:
+# [jekyll][jekyll-organization] /
+# [minima](https://github.com/jekyll/minima)
+
+# The source code for Jekyll at GitHub:
+# [jekyll][jekyll-organization] /
+# [jekyll](https://github.com/jekyll/jekyll)
+
+# [jekyll-organization]: https://github.com/jekyll
