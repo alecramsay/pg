@@ -1,6 +1,6 @@
 # file: `_config.yml`
 
-title: PG
+title: Redistricting & Political Geography
 author:
   name:  Alec Ramsay
   email: alec@davesredistricting.org
@@ -12,11 +12,16 @@ twitter_username: alecramsay
 github_username:  alecramsay
 
 # Build settings
-markdown: kramdown
 theme: minima
 # remote_theme: THEME-NAME
 #plugins:
 #  - jekyll-feed
+sass:
+  sass_dir: _sass
+include: ['_pages']
+# markdown: kramdown
+kramdown:
+  input: GFM
 
 # Exclude from processing.
 # The following items will not be processed, by default.
