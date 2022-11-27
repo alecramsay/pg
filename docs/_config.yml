@@ -39,8 +39,8 @@ theme: minima
 #   - vendor/ruby/
 
 # Help with YAML syntax:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
+# - https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# - https://learnxinyminutes.com/docs/yaml/
 
 # Other resources:
 # - https://paulcalvano.com/docs/config/
