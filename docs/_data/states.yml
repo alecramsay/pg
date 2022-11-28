@@ -1,74 +1,111 @@
 - xx: AL
   name: Alabama
+  ready: false
 - xx: AZ
   name: Arizona
+  ready: false
 - xx: AR
   name: Arkansas
+  ready: false
 - xx: CA
   name: California
+  ready: false
 - xx: CO
   name: Colorado
+  ready: false
 - xx: CT
   name: Connecticut
+  ready: false
 - xx: FL
   name: Florida
+  ready: false
 - xx: GA
   name: Georgia
+  ready: false
 - xx: IL
   name: Illinois
+  ready: false
 - xx: IN
   name: Indiana
+  ready: false
 - xx: IA
   name: Iowa
+  ready: false
 - xx: KS
   name: Kansas
+  ready: false
 - xx: KY
   name: Kentucky
+  ready: false
 - xx: LA
   name: Louisiana
+  ready: false
 - xx: MD
   name: Maryland
+  ready: false
 - xx: MA
   name: Massachusetts
+  ready: false
 - xx: MI
   name: Michigan
+  ready: false
 - xx: MN
   name: Minnesota
+  ready: false
 - xx: MS
   name: Mississippi
+  ready: false
 - xx: MO
   name: Missouri
+  ready: false
 - xx: NE
   name: Nebraska
+  ready: false
 - xx: NV
   name: Nevada
+  ready: false
 - xx: NJ
   name: New Jersey
+  ready: false
 - xx: NM
   name: New Mexico
+  ready: false
 - xx: NY
   name: New York
+  ready: false
 - xx: NC
   name: North Carolina
+  ready: true
 - xx: OH
   name: Ohio
+  ready: false
 - xx: OK
   name: Oklahoma
+  ready: false
 - xx: OR
   name: Oregon
+  ready: false
 - xx: PA
   name: Pennsylvania
+  ready: false
 - xx: SC
   name: South Carolina
+  ready: false
 - xx: TN
   name: Tennessee
+  ready: false
 - xx: TX
   name: Texas
+  ready: false
 - xx: UT
   name: Utah
+  ready: false
 - xx: VA
   name: Virginia
+  ready: false
 - xx: WA
   name: Washington
+  ready: false
 - xx: WI
   name: Wisconsin
+  ready: false
