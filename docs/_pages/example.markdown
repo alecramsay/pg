@@ -7,14 +7,49 @@ xx: "NC"
 width: 400
 ---
 
-State: {{ page.xx }}
+An example for {{ page.xx }}.
 
----|---|---
-<img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Official" title="Official" width="{{ page.width }}"/> | <img src="../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png" alt="Most Proportional" title="Most Proportional" width="{{ page.width }}"/> | <img src="../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png" alt="Most Competitive" title="Most Competitive" width="{{ page.width }}"/>
-<img src="../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png" alt="Best Minority" title="Best Minority" width="{{ page.width }}"/> | <img src="../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png" alt="Most Compact" title="Most Compact" width="{{ page.width }}"/> | <img src="../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png" alt="Least Splitting" title="Least Splitting" width="{{ page.width }}"/>
+### Radar Diagrams
 
-<!-- Pure Markdown:
----|---|---
-![Official](../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png "Official") | ![Most Proportional](../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png "Most Proportional") | ![Most Competitive](../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png "Most Competitive")
-![Best Minority](../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png "Best Minority") | ![Most Compact](../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png "Most Compact") | ![Least Splitting](../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png "Least Splitting") -->
+<table style="border:0px">
+  <tr>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Official" title="Official" width="{{ page.width }}"/>
+    </td>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png" alt="Most Proportional" title="Most Proportional" width="{{ page.width }}"/>
+    </td>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png" alt="Most Competitive" title="Most Competitive" width="{{ page.width }}"/>
+    </td>
+  </tr>
+  <tr>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png" alt="Best Minority" title="Best Minority" width="{{ page.width }}"/>
+    </td>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png" alt="Most Compact" title="Most Compact" width="{{ page.width }}"/>
+    </td>
+    <td style="border:0px">
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png" alt="Least Splitting" title="Least Splitting" width="{{ page.width }}"/>
+    </td>
+  </tr>
+</table>
 
+### Ratings
+
+<table>
+  {% for row in site.data.NC_2022_Congress_ratings %}
+    {% if forloop.first %}
+    <tr>
+      {% for pair in row %}
+        <th>{{ pair[0] }}</th>
+      {% endfor %}
+    </tr>
+    {% endif %}
+
+    {% tablerow pair in row %}
+      {{ pair[1] }}
+    {% endtablerow %}
+  {% endfor %}
+</table>
