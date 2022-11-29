@@ -90,7 +90,7 @@ An example for {{ page.xx }}.
 
   <h4>Regions Data</h4>
   <table>
-    {% for row in site.data.NC_2022_Congress_Official_regions_summary %}
+    {% for row in site.data.NC_2022_Congress_Official_regions %}
       {% if forloop.first %}
       <tr>
         {% for pair in row %}
