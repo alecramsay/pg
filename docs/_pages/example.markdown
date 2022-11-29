@@ -9,31 +9,33 @@ big-radar-width: 500
 map-width: 700
 ---
 
-An example for {{ page.xx }}.
+{% assign xx = page.xx %}
+
+An example page for {{ xx }}.
 
 <h3>Radar Diagrams</h3>
 
 <table style="border:0px">
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0]["id"] }}" title="{{ site.data.maps[0]["id"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0]["id"] }}" title="{{ site.data.maps[0]["id"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1]["id"]["label"] }}" title="{{ site.data.maps[1]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1]["id"]["label"] }}" title="{{ site.data.maps[1]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2]["id"]["label"] }}" title="{{ site.data.maps[2]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2]["id"]["label"] }}" title="{{ site.data.maps[2]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4]["id"]["label"] }}" title="{{ site.data.maps[4]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4]["id"]["label"] }}" title="{{ site.data.maps[4]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
 </table>
@@ -75,17 +77,17 @@ An example for {{ page.xx }}.
   
   <h4>Ratings Compared to Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
   </p>
 
   <h4>Map With Baseline Overlay</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Intersecting With Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Data</h4>
