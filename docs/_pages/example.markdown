@@ -87,6 +87,29 @@ An example for {{ page.xx }}.
   <p style="text-align: center">
     <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
+
+  <h4>Regions Data</h4>
+  <table>
+    {% for row in site.data.NC_2022_Congress_Official_regions_summary %}
+      {% if forloop.first %}
+      <tr>
+        {% for pair in row %}
+          <th>{{ pair[0] }}</th>
+        {% endfor %}
+      </tr>
+      {% endif %}
+
+      {% tablerow pair in row %}
+        {% if pair[0] == "DISTRICT%" or pair[0] == "CUMULATIVE%"%}
+          {{ pair[1] | times: 100 | round: 2 }}
+        {% elsif pair[0] == "POPULATION" %}
+          {{ pair[1] | intcomma }}
+        {% else %}
+          {{ pair[1] }}
+        {% endif %}
+      {% endtablerow %}
+    {% endfor %}
+  </table>
 </div>
 
 <div id="Proportional" class="tabcontent">
