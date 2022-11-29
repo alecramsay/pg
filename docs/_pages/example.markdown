@@ -75,7 +75,7 @@ An example for {{ page.xx }}.
   
   <h4>Ratings Compared to Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }} al" />
+    <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
   </p>
 
   <h4>Map With Baseline Overlay</h4>

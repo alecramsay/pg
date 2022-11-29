@@ -12,7 +12,6 @@ GEM
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
-    humanize (2.5.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jekyll (4.3.1)
@@ -73,7 +72,6 @@ PLATFORMS
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
-  humanize
   jekyll-feed (~> 0.12)
   minima (~> 2.5)
   tzinfo (>= 1, < 3)

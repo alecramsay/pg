@@ -14,8 +14,8 @@ github_username:  alecramsay
 # Build settings
 theme: minima
 # remote_theme: THEME-NAME
-plugins:
-  - humanize
+# plugins:
+#   - humanize
 #  - jekyll-feed
 sass:
   sass_dir: _sass
