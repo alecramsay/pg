@@ -16,24 +16,24 @@ An example for {{ page.xx }}.
 <table style="border:0px">
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Official" title="Official" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0]["id"] }}" title="{{ site.data.maps[0]["id"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png" alt="Most Proportional" title="Most Proportional" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1]["id"]["label"] }}" title="{{ site.data.maps[1]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png" alt="Most Competitive" title="Most Competitive" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2]["id"]["label"] }}" title="{{ site.data.maps[2]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png" alt="Best Minority" title="Best Minority" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png" alt="Most Compact" title="Most Compact" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4]["id"]["label"] }}" title="{{ site.data.maps[4]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png" alt="Least Splitting" title="Least Splitting" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ page.xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
 </table>
@@ -62,30 +62,30 @@ An example for {{ page.xx }}.
 
  <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Official')" id="defaultOpen">Official</button>
-  <button class="tablinks" onclick="openCity(event, 'Proportional')">Most Proportional</button>
-  <button class="tablinks" onclick="openCity(event, 'Competitive')">Most Competitive</button>
-  <button class="tablinks" onclick="openCity(event, 'Minority')">Best Minority</button>
-  <button class="tablinks" onclick="openCity(event, 'Compact')">Most Compact</button>
-  <button class="tablinks" onclick="openCity(event, 'Splitting')">Least Splitting</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0]["id"] }}')" id="defaultOpen">{{ site.data.maps[0]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1]["id"] }}')">{{ site.data.maps[1]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2]["id"] }}')">{{ site.data.maps[2]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3]["id"] }}')">{{ site.data.maps[3]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4]["id"] }}')">{{ site.data.maps[4]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5]["id"] }}')">{{ site.data.maps[5]["label"] }}</button>
 </div>
 
 <!-- Tab content -->
-<div id="Official" class="tabcontent">
+<div id="{{ site.data.maps[0]["id"] }}" class="tabcontent">
   
   <h4>Ratings Compared to Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
+    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
   </p>
 
   <h4>Map With Baseline Overlay</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Intersecting With Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ page.xx }}_2022_Congress_Official_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ page.xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Data</h4>
