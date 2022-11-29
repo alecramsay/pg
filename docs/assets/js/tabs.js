@@ -1,3 +1,4 @@
+// https://www.w3schools.com/howto/howto_js_tabs.asp
 function openCity(evt, cityName)
 {
   // Declare all variables

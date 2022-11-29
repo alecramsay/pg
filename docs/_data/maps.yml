@@ -1,0 +1,12 @@
+- id: Official
+  label: Official
+- id: Proportional
+  label: Most Proportional
+- id: Competitive
+  label: Most Competitive
+- id: Minority
+  label: Best Minority
+- id: Compact
+  label: Most Compact
+- id: Splitting
+  label: Least Splitting

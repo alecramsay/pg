@@ -46,4 +46,4 @@
 
 (8) Finally, map the regions identified above:
 * First run the map_regions.py script to create maps (.geojson) of the regions for the various maps
-* Then use the plot_regions.py script to generate plots for those maps -- experiment with the height & width that work best for the state's shape
+* Then use the plot_regions.py script to generate plots for those maps -- experiment with the height & width that work best for the state's shape; cut the resulting image down to the right size
