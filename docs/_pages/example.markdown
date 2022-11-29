@@ -13,6 +13,8 @@ map-width: 700
 
 An example page for {{ xx }}.
 
+<!-- RADAR DIAGRAMS -->
+
 <h3>Radar Diagrams</h3>
 
 <table style="border:0px">
@@ -40,10 +42,19 @@ An example page for {{ xx }}.
   </tr>
 </table>
 
+<!-- RATINGS -->
+
+{% capture ratings-file %}
+{{ xx }}_2022_Congress_ratings
+{% endcapture %}
+{% assign ratings-file = ratings-file | strip_newlines %}
+
+{% assign ratings = site.data[ratings-file] %}
+
 <h3>Ratings</h3>
 
 <table>
-  {% for row in site.data.NC_2022_Congress_ratings %}
+  {% for row in ratings %}
     {% if forloop.first %}
     <tr>
       {% for pair in row %}
@@ -57,6 +68,8 @@ An example page for {{ xx }}.
     {% endtablerow %}
   {% endfor %}
 </table>
+
+<!-- MAPS TABS -->
 
 <h3>Maps</h3>
 
@@ -90,14 +103,16 @@ An example page for {{ xx }}.
     <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
 
-
-{% capture filename %}
-site.data.{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions
+{% capture regions-file %}
+{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions
 {% endcapture %}
+{% assign regions-file = regions-file | strip_newlines %}
+
+{% assign regions = site.data[regions-file] %}
 
   <h4>Regions Data</h4>
   <table>
-    {% for row in site.data.NC_2022_Congress_Official_regions %}
+    {% for row in regions %}
       {% if forloop.first %}
       <tr>
         {% for pair in row %}
