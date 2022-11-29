@@ -1,3 +1,4 @@
+states:
 - xx: AL
   name: Alabama
   ready: false

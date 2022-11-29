@@ -90,6 +90,11 @@ An example page for {{ xx }}.
     <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
 
+
+{% capture filename %}
+site.data.{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions
+{% endcapture %}
+
   <h4>Regions Data</h4>
   <table>
     {% for row in site.data.NC_2022_Congress_Official_regions %}
