@@ -11,7 +11,7 @@ map-width: 700
 
 {% assign xx = page.xx %}
 
-An example page for {{ xx }}.
+A sample page for {{ xx }}.
 
 <!-- RADAR DIAGRAMS -->
 
@@ -20,24 +20,24 @@ An example page for {{ xx }}.
 <table style="border:0px">
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0]["id"] }}" title="{{ site.data.maps[0]["id"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0].id }}" title="{{ site.data.maps[0].id }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1]["id"]["label"] }}" title="{{ site.data.maps[1]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1].label }}" title="{{ site.data.maps[1].label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2]["id"]["label"] }}" title="{{ site.data.maps[2]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2].label }}" title="{{ site.data.maps[2].label }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
   <tr>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3].label }}" title="{{ site.data.maps[3].label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4]["id"]["label"] }}" title="{{ site.data.maps[4]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4].label }}" title="{{ site.data.maps[4].label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="../assets/images/{{ xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3]["id"]["label"] }}" title="{{ site.data.maps[3]["id"]["label"] }}" width="{{ page.small-radar-width }}"/>
+      <img src="../assets/images/{{ xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3].label }}" title="{{ site.data.maps[3].label }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
 </table>
@@ -77,34 +77,34 @@ An example page for {{ xx }}.
 
  <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0]["id"] }}')" id="defaultOpen">{{ site.data.maps[0]["label"] }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1]["id"] }}')">{{ site.data.maps[1]["label"] }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2]["id"] }}')">{{ site.data.maps[2]["label"] }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3]["id"] }}')">{{ site.data.maps[3]["label"] }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4]["id"] }}')">{{ site.data.maps[4]["label"] }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5]["id"] }}')">{{ site.data.maps[5]["label"] }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0].id }}')" id="defaultOpen">{{ site.data.maps[0].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1].id }}')">{{ site.data.maps[1].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2].id }}')">{{ site.data.maps[2].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3].id }}')">{{ site.data.maps[3].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4].id }}')">{{ site.data.maps[4].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5].id }}')">{{ site.data.maps[5].label }}</button>
 </div>
 
 <!-- Tab content -->
-<div id="{{ site.data.maps[0]["id"] }}" class="tabcontent">
+<div id="{{ site.data.maps[0].id }}" class="tabcontent">
   
   <h4>Ratings Compared to Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
   </p>
 
   <h4>Map With Baseline Overlay</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Intersecting With Baseline</h4>
   <p style="text-align: center">
-    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
+    <img src="../assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
 
 {% capture regions-file %}
-{{ xx }}_2022_Congress_{{ site.data.maps[0]["id"] }}_regions
+{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_regions
 {% endcapture %}
 {% assign regions-file = regions-file | strip_newlines %}
 
