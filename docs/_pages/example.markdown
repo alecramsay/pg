@@ -86,29 +86,54 @@ A sample page for {{ xx }}.
 </div>
 
 <!-- Tab content -->
-<div id="{{ site.data.maps[0].id }}" class="tabcontent">
+
+{% capture index %}
+0
+{% endcapture %}
+{% assign index = index | strip_newlines %}
+
+{% capture id %}
+{{ site.data.maps[0].id }}
+{% endcapture %}
+{% assign id = id | strip_newlines %}
+
+{% capture radar-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_radar.png
+{% endcapture %}
+{% assign radar-png = radar-png | strip_newlines %}
+
+{% capture map-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_map.png
+{% endcapture %}
+{% assign map-png = map-png | strip_newlines %}
+
+{% capture regions-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_regions.png
+{% endcapture %}
+{% assign regions-png = regions-png | strip_newlines %}
+
+{% capture regions-csv %}
+{{ xx }}_2022_Congress_{{ id }}_regions
+{% endcapture %}
+{% assign regions-csv = regions-csv | strip_newlines %}
+{% assign regions = site.data[regions-csv] %}
+
+<div id="{{ id }}" class="tabcontent">
   
   <h4>Ratings Compared to Baseline</h4>
   <p style="text-align: center">
-    <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_radar.png" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
+    <img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
   </p>
 
   <h4>Map With Baseline Overlay</h4>
   <p style="text-align: center">
-    <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_map.png" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
+    <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
   </p>
 
   <h4>Regions Intersecting With Baseline</h4>
   <p style="text-align: center">
-    <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_regions.png" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
+    <img src="{{ region-png }}" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
   </p>
-
-{% capture regions-file %}
-{{ xx }}_2022_Congress_{{ site.data.maps[0].id }}_regions
-{% endcapture %}
-{% assign regions-file = regions-file | strip_newlines %}
-
-{% assign regions = site.data[regions-file] %}
 
   <h4>Regions Data</h4>
   <table>
