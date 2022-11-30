@@ -1,7 +1,7 @@
 ---
 layout: state
 title: North Carolina
-permalink: /States/Pages/NC/
+permalink: /states/NC/
 
 small-radar-width: 300
 big-radar-width: 500
