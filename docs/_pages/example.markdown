@@ -87,102 +87,23 @@ A sample page for {{ xx }}.
 
 <!-- Tab content -->
 
-{% capture index %}
-0
-{% endcapture %}
-{% assign index = index | strip_newlines %}
+<!-- Official -->
+{% include detail.html index=0 %}
 
-{% capture id %}
-{{ site.data.maps[0].id }}
-{% endcapture %}
-{% assign id = id | strip_newlines %}
+<!-- Most Proportional -->
+{% include detail.html index=1 %}
 
-{% capture radar-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_radar.png
-{% endcapture %}
-{% assign radar-png = radar-png | strip_newlines %}
+<!-- Most Competitive -->
+{% include detail.html index=2 %}
 
-{% capture map-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_map.png
-{% endcapture %}
-{% assign map-png = map-png | strip_newlines %}
+<!-- Best Minority -->
+{% include detail.html index=3 %}
 
-{% capture regions-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ id }}_regions.png
-{% endcapture %}
-{% assign regions-png = regions-png | strip_newlines %}
+<!-- Most Compact -->
+{% include detail.html index=4 %}
 
-{% capture regions-csv %}
-{{ xx }}_2022_Congress_{{ id }}_regions
-{% endcapture %}
-{% assign regions-csv = regions-csv | strip_newlines %}
-{% assign regions = site.data[regions-csv] %}
-
-<div id="{{ id }}" class="tabcontent">
-  
-  <h4>Ratings Compared to Baseline</h4>
-  <p style="text-align: center">
-    <img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}"/>
-  </p>
-
-  <h4>Map With Baseline Overlay</h4>
-  <p style="text-align: center">
-    <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}"/>
-  </p>
-
-  <h4>Regions Intersecting With Baseline</h4>
-  <p style="text-align: center">
-    <img src="{{ region-png }}" alt="Regions" title="Intersecting regions" width="{{ page.map-width }}"/>
-  </p>
-
-  <h4>Regions Data</h4>
-  <table>
-    {% for row in regions %}
-      {% if forloop.first %}
-      <tr>
-        {% for pair in row %}
-          <th>{{ pair[0] }}</th>
-        {% endfor %}
-      </tr>
-      {% endif %}
-
-      {% tablerow pair in row %}
-        {% if pair[0] == "DISTRICT%" or pair[0] == "CUMULATIVE%"%}
-          {{ pair[1] | times: 100 | round: 2 }}
-        {% elsif pair[0] == "POPULATION" %}
-          {{ pair[1] | intcomma }}
-        {% else %}
-          {{ pair[1] }}
-        {% endif %}
-      {% endtablerow %}
-    {% endfor %}
-  </table>
-</div>
-
-<div id="Proportional" class="tabcontent">
-  <h4>Most Proportional</h4>
-  <p>Most proportional maps ...</p>
-</div>
-
-<div id="Competitive" class="tabcontent">
-  <h4>Most Competitive</h4>
-  <p>Most competitive map ...</p>
-</div> 
-
-<div id="Minority" class="tabcontent">
-  <h4>Best Minority</h4>
-  <p>Best minority map ...</p>
-</div> 
-
-<div id="Compact" class="tabcontent">
-  <h4>Most Compact</h4>
-  <p>Most compact map ...</p>
-</div> 
-
-<div id="Splitting" class="tabcontent">
-  <h4>Least Splitting</h4>
-  <p>Least splitting map ...</p>
-</div> 
+<!-- Least Splitting -->
+{% include detail.html index=5 %}
 
 <!-- Show the Official tab by default -->
 <script>
