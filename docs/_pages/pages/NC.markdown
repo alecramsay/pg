@@ -10,4 +10,4 @@ map-width: 700
 xx: "NC"
 ---
 
-TODO: Summarize the tradeoffs for congressional redistricting inherent in NC's political geography.
+TODO: Summarize the tradeoffs for congressional redistricting inherent in NC's political geography ...
