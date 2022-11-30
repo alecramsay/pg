@@ -6,7 +6,7 @@ author:
   email: alec@davesredistricting.org
 description: >- # this means to ignore newlines until "baseurl:"
   Explores the tradeoffs for redistricting inherent in states' political geography 
-baseurl: /pg/
+baseurl: /pg
 url: https://alecramsay.github.io/
 twitter_username: alecramsay
 github_username:  alecramsay
