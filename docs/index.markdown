@@ -2,4 +2,4 @@
 layout: default
 ---
 
-Describe the project here.
+TODO: Describe the project here.
