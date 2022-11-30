@@ -9,9 +9,9 @@ big-radar-width: 500
 map-width: 700
 ---
 
-{% assign xx = page.xx %}
+A sample page for {{ page.xx }}.
 
-A sample page for {{ xx }}.
+{% assign xx = page.xx %}
 
 <!-- RADAR DIAGRAMS -->
 
