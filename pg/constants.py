@@ -61,7 +61,8 @@ preprocessed_data_dir: str = "../../dev/baseline/data"
 data_dir: str = "data"
 temp_dir: str = "temp"
 results_dir: str = "results"
-content_dir: str = "content"
+assets_dir: str = "docs/assets/images"
+site_data_dir: str = "docs/_data"
 
 
 def unit_id(units: str) -> str:

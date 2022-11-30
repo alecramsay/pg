@@ -36,7 +36,7 @@ def qualify_label(label: str) -> str:
     if label in ["Proportional", "Competitive", "Compact"]:
         return f"Most {label}"
     if label == "Minority":
-        return f"Best {label} Representation"
+        return f"Best {label}"
     return label
 
 

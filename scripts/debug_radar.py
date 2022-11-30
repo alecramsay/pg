@@ -24,7 +24,7 @@ compare_path: str = path_to_file([temp_dir]) + file_name(
     [xx, yyyy, plan_type, compare_subtype, "ratings"], "_", "json"
 )
 
-plot_path: str = path_to_file([content_dir]) + file_name(
+plot_path: str = path_to_file([assets_dir]) + file_name(
     [xx, yyyy, plan_type, current_subtype, "radar"], "_", "png"
 )
 

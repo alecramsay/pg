@@ -61,10 +61,10 @@ for label in [
     regions_baf_path: str = path_to_file([temp_dir]) + file_name(
         [xx, yyyy, plan_type, label, "regions", "BAF"], "_", "csv"
     )
-    regions_summary_path: str = path_to_file(["content"]) + file_name(
-        [xx, yyyy, plan_type, label, "regions", "summary"], "_", "csv"
+    regions_summary_path: str = path_to_file([assets_dir]) + file_name(
+        [xx, yyyy, plan_type, label, "regions"], "_", "csv"
     )
-    regions_map_path: str = path_to_file(["content"]) + file_name(
+    regions_map_path: str = path_to_file([temp_dir]) + file_name(
         [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
     )
 

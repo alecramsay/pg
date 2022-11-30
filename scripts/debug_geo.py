@@ -29,10 +29,10 @@ save: bool = False
 
 ### CONSTRUCT PATHS ###
 
-regions_path: str = path_to_file(["content"]) + file_name(
+regions_path: str = path_to_file([temp_dir]) + file_name(
     [xx, yyyy, plan_type, label, "regions"], "_", "geojson"
 )
-regions_plot_path: str = path_to_file(["content"]) + file_name(
+regions_plot_path: str = path_to_file([assets_dir]) + file_name(
     [xx, yyyy, plan_type, label, "regions"], "_", "png"
 )
 
