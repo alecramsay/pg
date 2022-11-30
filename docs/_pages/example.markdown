@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Example
-permalink: /example/
+permalink: example/
 
 xx: "NC"
 small-radar-width: 300

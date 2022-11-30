@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: about/
 ---
 
 This analysis covers the 37 states apportioned three or more congressional districts in the 2020 census.

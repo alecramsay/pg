@@ -1,7 +1,7 @@
 ---
 layout: page
 title: States
-permalink: /states/
+permalink: states/
 ---
 
 <!-- A placeholder state picker -->
