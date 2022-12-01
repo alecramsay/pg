@@ -11,7 +11,7 @@ permalink: states/
   {% if state.ready == true %}
     <li><a href="{{ site.baseurl }}/states/{{ state.xx }}">{{ state.name }} ({{ state.xx }})</a></li>
   {% else %}
-    <li>{{ state.name }} ({{ state.xx }}) -- not available yet</li>
+    <li>{{ state.name }} ({{ state.xx }}) -- TBD</li>
   {% endif %}
 {% endfor %}
 </ul>
