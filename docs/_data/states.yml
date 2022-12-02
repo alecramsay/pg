@@ -1,112 +1,371 @@
 states:
 - xx: AL
   name: Alabama
+  official: 8c611540-7cb1-424c-b6b9-7ddc7f39abeb
+  proportional: e9851c4d-2b32-4da0-adaf-86762af78e26
+  competitive: 9f3cd446-144f-4824-9ce2-3f6d52ebf74c
+  minority: 14942ba2-c86f-4e7b-a1e7-51d7f243dd84
+  compact: b556aea8-e259-40e1-9b29-4e7572d6cbae
+  splitting: 94c7b2b9-f8d0-4d89-aae1-53cfd9009f97
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: AZ
   name: Arizona
+  official: 4a3d07fd-382c-441c-9c8d-af5d52987b87
+  proportional: 318578e0-ae95-4319-aa7a-34838c016cdd
+  competitive: 17345788-c122-43be-a62a-5c43a696a22c
+  minority: 5b4dfad5-ee34-469d-bdef-7f07a749b2c5
+  compact: 970224ba-4373-48fd-9e3e-15527b63c9c5
+  splitting: 7ff7eec5-1b01-422b-bb34-d78da0f8fcb8
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: AR
   name: Arkansas
+  official: bba50394-d34c-4f0d-9056-8b9e6a029bfd
+  proportional: 4331cceb-5317-4921-a620-1197799add51
+  competitive: 9ff90f72-33bb-4d70-a7d6-91fb30502bf8
+  minority: d6e55da9-dd51-4429-ba40-78bbfe3105e4
+  compact: c53002fd-1f4e-4f3f-86c8-00e738d7cbe5
+  splitting: ea810d0f-a507-416e-a0f6-58adbf93df6e
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: CA
   name: California
+  official: 4daa293f-a347-4ba0-926e-3caebce864ea
+  proportional: e2b59dd7-629e-4856-9f35-b37751ee101e
+  competitive: ade2f538-fe9b-4e37-9a7e-d9c87ea717d5
+  minority: 07cd471f-0ebc-449e-ad7f-534ec8d9e78d
+  compact: 42bf9029-6e68-481a-be75-a1f339248cba
+  splitting: fbefc34b-ac86-4081-8731-b731d95e67f9
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: CO
   name: Colorado
+  official: 1d2c7749-d9bc-47b3-971f-e8025cc6d1da
+  proportional: 69886296-e646-4bb8-841f-40faf888463e
+  competitive: d11c4b86-1f01-4adb-8b70-7d17d640de46
+  minority: 2427fc2b-4907-4fac-a1fd-54fe225db227
+  compact: e9e9c486-bb80-4ce5-9666-4466947f7ab0
+  splitting: d639dbaf-cf30-4998-b794-7cfba3312a0b
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: CT
   name: Connecticut
+  official: 22a81014-0b6f-407d-acfa-99f464ed1039
+  proportional: 6411d3ac-8523-44b2-a9e1-4abc0469790c
+  competitive: b10fcc44-6db9-435f-bd37-f1b8524e32b2
+  minority: 2ce70cfc-ab32-48eb-a485-7d33bd201ff0
+  compact: d8e5dbfd-c7b1-48a9-a3ee-c606867acfe7
+  splitting: 76865f59-03ed-4647-95a2-c6d64a7b9270
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: FL
   name: Florida
+  official: 2e7debf0-c99b-4b54-9b99-df65d413d629
+  proportional: 6ba89c54-906b-4753-85d1-c82caff8a597
+  competitive: 19f48062-920f-4659-bcad-9b7b10b7a150
+  minority: 9191dc5d-fef4-4920-825d-c1b29f842dc7
+  compact: 35789bfa-b77d-4a42-a86d-5ce161d24514
+  splitting: 94248293-2880-49b1-9dc3-cb8ff77f3e58
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: GA
   name: Georgia
+  official: e61aaae9-8af9-4339-8959-9c27f02e55d4
+  proportional: 0f6d64be-4cdc-457e-8712-90514e74de9b
+  competitive: d83f0a86-bea5-4728-869b-207072f53bb3
+  minority: f3527d3c-41b5-4758-8560-6ba52695c3b8
+  compact: daec754f-45d0-43d3-bdbf-e8637e7cfe8d
+  splitting: bf30be3a-0924-4790-a353-83ca0152504a
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: IL
   name: Illinois
+  official: a5e1ee97-3727-4be1-80c7-8bfa7c72ee13
+  proportional: 0764d8de-7366-4572-8617-cdf5f00bbcbc
+  competitive: 6e6ecb9a-2385-4b40-a0ce-b2217ce92c47
+  minority: 0d4b32d4-bf9d-41a1-b15e-807daf0cc128
+  compact: 6ff3964a-0009-4cc0-a643-0f8f9b2096b8
+  splitting: 0cfac142-a509-447c-95a7-77c3b87d467d
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: IN
   name: Indiana
+  official: da195dcd-381e-4598-bae4-9dad2ea12a8d
+  proportional: 1f6ff4fa-53ed-499a-81e7-cd80296c6946
+  competitive: 32ee9012-f4d6-4425-9f88-b38c6ae4a70c
+  minority: 101f80a9-cfc0-423b-b0d6-29e81403b46c
+  compact: f59e9631-2abe-4753-bc3a-b9a5186d233c
+  splitting: 07f032b2-ec89-4bde-8ec5-57224285172c
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: IA
   name: Iowa
+  official: ccbacbb9-dac8-4c48-b30b-42b0a6627e8f
+  proportional: b8cff1b2-059a-421c-92f1-168eecb0860d
+  competitive: a62a4544-8ab9-4641-849c-ab9f68e842bc
+  minority: d6e9ebe5-9e71-4e1d-adad-584868220635
+  compact: 3888d170-52fe-44fb-8428-d0e08b8cdcf5
+  splitting: 311d779b-9cfc-4983-a589-a9d6877e3f1e
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: KS
   name: Kansas
+  official: cd94aec1-6e84-48d6-8922-5eea4f4c471f
+  proportional: 177278c7-822b-414c-a6e4-47c49e6d8e31
+  competitive: cadda27c-9616-45b6-a872-2d5a6e60c6a1
+  minority: 5e4b3a7d-cb16-4cee-ac4b-05086203c64d
+  compact: d86bf787-674a-4a6e-8cb8-e84c45762077
+  splitting: 7ac2a17a-c287-41ff-b624-67efe0bea826
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: KY
   name: Kentucky
+  official: b38aeac3-297e-4ec4-9073-66215b9763c1
+  proportional: da1a0bdd-7f3d-43e4-892e-b1c111b46d4d
+  competitive: 5c8fe427-5ca5-4168-a225-7c510aa85ef1
+  minority: 036aeb13-a3c3-4ef6-8be8-5af7bab6b730
+  compact: 424d91c3-a26e-4083-8790-06f8384d2c44
+  splitting: 37c63cb2-3bec-418f-8fee-c841ddc5e3c1
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: LA
   name: Louisiana
+  official: a56db05b-6066-4cdc-89f3-e0b12ab7ea37
+  proportional: 38b5cae0-cc85-4eb7-aa0a-ff1cfd3db549
+  competitive: cc002cfc-68a1-4884-9cf1-f9a33c9b1add
+  minority: 0be18b01-7044-4055-8de8-596a2cae3039
+  compact: fcc9a519-3aaa-4003-84cf-9807ec8bad4a
+  splitting: 02689947-7712-4139-aa39-2e5ea6add817
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MD
   name: Maryland
+  official: 96d5e235-58de-4a46-a443-f5b6fabe0244
+  proportional: 55459ef3-26a1-421a-9267-d7a113c306dc
+  competitive: f98eba6b-5297-47d1-bc38-9d5548077fe7
+  minority: af482991-ee6c-4180-8782-57f667a55919
+  compact: 530f41fb-d39f-492a-9028-8886bd499eed
+  splitting: d26ec0e1-f53a-4ebd-9aa8-7e18accb04af
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MA
   name: Massachusetts
+  official: 8b9bdb2d-da5e-43db-acf1-08175c1718ba
+  proportional: 9cf86106-cfc2-402d-9365-8206ef77f6ee
+  competitive: 7cda7048-7362-4543-998a-2c1b89de88a8
+  minority: 6fdf3a89-1b63-4856-bcbb-d777b01f51a2
+  compact: ff5a5d69-1c81-4ce2-927b-ddb010968b33
+  splitting: 6e745232-b017-47de-b20a-09de51e720f1
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MI
   name: Michigan
+  official: 55420ff6-a8a2-4291-afb3-6ec8c93e6872
+  proportional: 4c1a46f3-3eed-4b0b-9f1e-74e1e1c63a97
+  competitive: fd5de4ef-5069-4aa3-987e-0c4faa50f9d9
+  minority: 2d2c9c5a-8812-408b-9343-36317052bd95
+  compact: 6a943e97-c4d7-4111-939a-6eef1fb652d8
+  splitting: b0c02efc-6507-4e73-93c2-1ced3d8d469f
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MN
   name: Minnesota
+  official: b382eee8-0eb8-4b5c-a9bb-7886972ed6b7
+  proportional: e96c7448-d5ba-4500-b158-06f2ff6e1453
+  competitive: 7e2f65af-b848-4ecc-83d3-f0e958b9406f
+  minority: fcfc1a01-7ad3-46c3-a3e6-41222ea0cf48
+  compact: 64858a6b-6511-4f16-834f-776ab91205e0
+  splitting: 1d7a0cc7-7199-42a8-805d-8f7e14c60d6e
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MS
   name: Mississippi
+  official: 7edecbd8-cdc5-4972-bcab-07bbd38259bb
+  proportional: 78f2536f-c30f-41f0-ace3-d0f2597f7c27
+  competitive: e7be9ef9-d9ff-42ca-8e04-3226b3b413d8
+  minority: cf2ebd05-d118-4ecf-a8f4-824c6cb6ba67
+  compact: 9e1d67b8-162c-4c44-b15a-263d3ae6f026
+  splitting: 35c56e88-6ac3-4f3e-b732-7e37221395c7
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: MO
   name: Missouri
+  official: 57337b6a-45fc-4ee4-97a1-11540fd6c8a6
+  proportional: a39beb81-f839-4755-a35f-05bc79ee68a0
+  competitive: f07502f1-f94d-47c6-b083-f41aadb0f7ee
+  minority: d1ce2e50-1c28-4aae-a95e-71b1ab361c8a
+  compact: 9cc3d9c3-44c6-4a62-8db9-7846ac12688f
+  splitting: abc98af0-3ef8-4861-96cc-40f7173d9d14
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NE
   name: Nebraska
+  official: 413dfcb2-0ec6-4459-9e3b-7cef2ddd8638
+  proportional: a2d83af8-8aab-492f-9f10-9be4b9a263f1
+  competitive: adacc8ce-05c6-4d86-8fb3-99d0ace9f25d
+  minority: eb4be8c9-3ea4-494f-a98d-226f597bd5da
+  compact: f7720b75-58d6-4e2d-bff0-894e2c7b5f41
+  splitting: 4ff0b106-818d-4f7a-987a-39205bdcb008
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NV
   name: Nevada
+  official: c4077907-6605-4fd3-9493-50527ceee352
+  proportional: c9b38b70-d05a-4d6f-b6ec-f237da8ca34f
+  competitive: 3ac3a189-ea62-4d90-baec-6e7e46c9893d
+  minority: 789fe206-aa13-4b04-a984-67647eceecbb
+  compact: 8da2d779-b8bd-4e27-bae7-340fa87a4376
+  splitting: baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NJ
   name: New Jersey
+  official: 1f7c8393-0b8a-49ea-8fb4-60c393cfb661
+  proportional: 5cb13428-1e13-4e5e-b4ab-547478caed4b
+  competitive: 3c54c696-ae75-4eda-a260-5a95a2c276ef
+  minority: ddc291dc-1f0b-4b88-b57a-ff410c75af81
+  compact: f254884d-267e-43b4-9d7e-2d9812c13788
+  splitting: a3afe5ca-4430-483f-82ca-39922fa5d3dc
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NM
   name: New Mexico
+  official: d2db917f-b700-4738-9a93-a38a43630c86
+  proportional: 2051bf23-0195-4d89-aceb-252d78c32dc4
+  competitive: 57893e66-fd7d-464a-8e6f-c39b69609b73
+  minority: 46afff6c-1f2c-43bb-bfeb-1c69f75fa403
+  compact: 769b245f-4c5d-4a93-98a5-6cd2e66420a2
+  splitting: cd28107e-5ede-4f74-bbf5-dae7f54c17e3
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NY
   name: New York
+  official: 11dc2c25-27a6-4259-b3dc-8e24fa21a086
+  proportional: 65aaf6b6-2abf-4f2f-9313-7fb0c32aca2c
+  competitive: 48987808-7ab5-4846-b281-54f58bd24d67
+  minority: 20775253-b960-4542-8a7b-165635b006cc
+  compact: 6d9a1e16-c5d2-48a0-80f1-d06fe6d56b7f
+  splitting: 149fe85d-04c2-4d11-b959-98fe52f1772b
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: NC
   name: North Carolina
-  ready: true
+  official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
+  proportional: eb89e54f-69aa-4742-90e9-83b696871348
+  competitive: 3ba3e193-414c-4a17-a9ef-57b326ede3d9
+  minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
+  compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
+  splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
+  baseline: c62fa27b-1f4b-40ba-bcd7-9e2ca6f9df87
+  ready: false
 - xx: OH
   name: Ohio
+  official: 8290f680-abf8-4877-84a7-6075b31f9468
+  proportional: 43ac2051-66af-46d4-817f-3fca031b4008
+  competitive: e7043d87-a24a-41fd-b3e3-f4a1162548a7
+  minority: b95bb90a-426f-40a0-a06d-d3027e646617
+  compact: 486a1fd0-f56e-435b-8e69-a080e99fe58d
+  splitting: 5c6e887d-49a8-426f-8b7b-5f3400cc62a1
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: OK
   name: Oklahoma
+  official: bdd4c054-9a75-4117-9819-18673c1f9412
+  proportional: 2943140f-a1bd-45c1-a455-dc14c5393eed
+  competitive: ca3b3e26-9a73-422f-a40c-cd7b240e053d
+  minority: 9d2fa2d3-a6fa-4b65-b902-3d26e8c7b41a
+  compact: fbec07f7-2c67-4928-aedc-956f551aee08
+  splitting: d47c3741-ec79-48d4-8c95-f938a526cf4b
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: OR
   name: Oregon
+  official: 9255d54b-36cc-4ca2-972d-fc330c975990
+  proportional: 49749f47-8d78-4d36-a8b3-1265cd3b0191
+  competitive: 37764638-8e2d-45d0-8322-28c4a171d71c
+  minority: b914939e-5e90-4e73-a51b-60e157670b24
+  compact: 6d9ec3b7-e462-401f-ac5b-9ef37b35f32e
+  splitting: 6a9fdbbb-01ce-4a5d-8fcb-38788646368b
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: PA
   name: Pennsylvania
+  official: bca4620c-bc4a-457e-a472-631ac20c3389
+  proportional: 60f36296-fdbc-420c-9094-91efbe53041e
+  competitive: e3c3b909-508a-4095-8c22-93ba9fc5b030
+  minority: 17290afc-2e93-407b-af6c-c6a26d051dad
+  compact: e0fa7e79-26a4-4d27-8028-745a84fea1c1
+  splitting: dc16b2ec-4609-42ca-9ea8-02697564d52c
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: SC
   name: South Carolina
+  official: 68e91af2-1a68-4bc7-aa85-a48e52f07da3
+  proportional: 5132f119-2ca1-4b91-9c67-9517ae1824be
+  competitive: 521725a2-3c2a-498a-bb95-0a64622b5d52
+  minority: 206ddd70-ef2d-48ff-ba91-c7db687cb9a6
+  compact: bf225fbb-c06b-4a26-a00c-e98bd9344347
+  splitting: 61d2f566-0939-4ced-8586-2c216a6b1965
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: TN
   name: Tennessee
+  official: e142df57-8dd5-44c3-a316-c2675e0e2fe4
+  proportional: c9ec1171-e733-41be-ae73-faadbd4f9eff
+  competitive: cea6a3dc-70e7-4be3-8eb2-d994a237226b
+  minority: c0c61d14-db2e-44db-8b81-c9f535808b3a
+  compact: 57c3bb60-5f54-4cc1-a1b7-4942584fdc6f
+  splitting: 512a7c6f-4dde-4773-a8b0-a933014e7982
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: TX
   name: Texas
+  official: 89c7b67a-6164-42ee-89d4-072a4fca82c1
+  proportional: 5a8bcd01-5b7b-4cb0-ba97-775c127412c2
+  competitive: b3168e80-5ec4-49e2-b3bd-928cf2ffffdc
+  minority: 55687012-5c38-4fc2-9b19-a6b325e5e8cb
+  compact: 3670b0b1-7083-4d20-9cee-5c5389dfdcf4
+  splitting: 959c211a-e7db-40fe-9703-0082de3fd50f
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: UT
   name: Utah
+  official: a2845eee-af70-4c54-944f-08abd5b05471
+  proportional: cb2cd60d-74db-41a4-bcd3-d2908033a17a
+  competitive: 29776f42-efdb-485d-942d-9ec738756de9
+  minority: 0c38f235-f832-43a6-b77d-98ffcc4a196f
+  compact: d4b7682f-e1df-40d0-9770-6d85a1176a12
+  splitting: a26f10a5-cfeb-4989-919c-5df3c79dcb29
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: VA
   name: Virginia
+  official: 837303a3-ac0a-4fe3-b99e-b4e98f71d26a
+  proportional: e629d89d-0ba5-4cfb-af0d-1f5a26540847
+  competitive: b2e40a2b-d0c3-4394-bd6c-9a387977d577
+  minority: 3ff32d6a-1ddc-47df-ba3f-d1004f6ec6ab
+  compact: 30a7dba3-43b0-4815-8ccd-7abbcfcf5cfa
+  splitting: 9bd6b5b4-f8f6-4372-a45f-77b6b1668596
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: WA
   name: Washington
+  official: be06fce9-90a2-4bc0-9659-8eacafcd4afc
+  proportional: c8ac870c-f608-4f06-a519-fca814cd87c9
+  competitive: ee915375-d42d-4be8-8858-18302b68e684
+  minority: 9b6064ae-6aa8-4ea7-af3e-2e0dde3c123f
+  compact: 5ece8404-5181-4aef-8dbf-126029f60dad
+  splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
 - xx: WI
   name: Wisconsin
+  official: 130feb94-6532-4102-91de-92777af7c0d9
+  proportional: e2a8430d-0721-4a77-a70c-f1b39423f76f
+  competitive: 98421457-d1bf-4036-bb54-acf3b87c93c3
+  minority: ab4e662f-3113-4415-b046-4a41ab2fc6e2
+  compact: ee9bc88a-f00a-4284-be14-a6b61b9ca203
+  splitting: 4ad1f885-3b85-4dc7-bf36-605a122f4b13
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   ready: false
