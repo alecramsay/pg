@@ -1,4 +1,3 @@
-states:
 - xx: AL
   name: Alabama
   official: 8c611540-7cb1-424c-b6b9-7ddc7f39abeb
@@ -258,7 +257,7 @@ states:
   compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
   splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
   baseline: c62fa27b-1f4b-40ba-bcd7-9e2ca6f9df87
-  ready: false
+  ready: true
 - xx: OH
   name: Ohio
   official: 8290f680-abf8-4877-84a7-6075b31f9468

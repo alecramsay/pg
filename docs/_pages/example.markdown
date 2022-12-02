@@ -25,24 +25,24 @@ Then there are a set of pairwise radar diagrams. They compare six comparison map
 <table style="border:0px">
   <tr>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0].id }}" title="{{ site.data.maps[0].id }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Official_radar.png" alt="{{ site.data.maps[0].label }}" title="{{ site.data.maps[0].label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1].label }}" title="{{ site.data.maps[1].label }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Proportional_radar.png" alt="{{ site.data.maps[1].qualified-label }}" title="{{ site.data.maps[1].qualified-label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2].label }}" title="{{ site.data.maps[2].label }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Competitive_radar.png" alt="{{ site.data.maps[2].qualified-label }}" title="{{ site.data.maps[2].qualified-label }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
   <tr>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3].label }}" title="{{ site.data.maps[3].label }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Minority_radar.png" alt="{{ site.data.maps[3].qualified-label }}" title="{{ site.data.maps[3].qualified-label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4].label }}" title="{{ site.data.maps[4].label }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Compact_radar.png" alt="{{ site.data.maps[4].qualified-label }}" title="{{ site.data.maps[4].qualified-label }}" width="{{ page.small-radar-width }}"/>
     </td>
     <td style="border:0px">
-      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3].label }}" title="{{ site.data.maps[3].label }}" width="{{ page.small-radar-width }}"/>
+      <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Splitting_radar.png" alt="{{ site.data.maps[3].qualified-label }}" title="{{ site.data.maps[3].qualified-label }}" width="{{ page.small-radar-width }}"/>
     </td>
   </tr>
 </table>
@@ -94,12 +94,12 @@ The first is the district in the baseline map, and the second is the district in
 
  <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0].id }}')" id="defaultOpen">{{ site.data.maps[0].label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1].id }}')">{{ site.data.maps[1].label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2].id }}')">{{ site.data.maps[2].label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3].id }}')">{{ site.data.maps[3].label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4].id }}')">{{ site.data.maps[4].label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5].id }}')">{{ site.data.maps[5].label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{ site.data.maps[0].qualified-label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1].label }}')">{{ site.data.maps[1].qualified-label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2].label }}')">{{ site.data.maps[2].qualified-label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3].label }}')">{{ site.data.maps[3].qualified-label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4].label }}')">{{ site.data.maps[4].qualified-label }}</button>
+  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5].label }}')">{{ site.data.maps[5].qualified-label }}</button>
 </div>
 
 <!-- Tab content -->

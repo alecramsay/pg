@@ -3,9 +3,6 @@
 # MAKE STATES.YML CONTENT
 #
 
-import math
-from collections import defaultdict
-
 from pg import *
 
 states: dict[str, str] = make_state_names()
@@ -13,6 +10,7 @@ states: dict[str, str] = make_state_names()
 print("states:")
 for xx in study_states:
     name: str = states[xx]
+    # print("{}:".format(xx))
     print("- xx:", xx)
     print("  name:", name)
     print("  official:", officials_copy[xx])
