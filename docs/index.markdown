@@ -70,16 +70,16 @@ My plan mirrored the hypotheses:
     tools to automate as much of the workflow as possible to produce the
     tabular and visual artifacts for this web site.
 
-Of course, the latter depends on the former: without a well-defined,
+Of course, the latter depended on the former: without a well-defined,
 defensible baseline map, there's no easy way to compare the notable maps
 for a state.
 
-### Results
-
-I tried to reimplement the C++ moment of inertia code in Python with
+I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
 Todd Proebsting, he got intrigued, and developed a theoretically sound
-solution, based on Balzer's work.
+solution, based on Balzer's work. 
+
+### Results
 
 TBD: More ...
 
