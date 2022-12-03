@@ -38,7 +38,8 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 {% assign map-link = map-link | strip_newlines %}
 
 <div id="{{ label }}" class="tabcontent">
-	<p><a href="{{ map-link }}">This map.</a> The <a href="{{ baseline-link }}">baseline map.</a></p>
+	<p>This <a href="{{ map-link }}">{{ label-qualified }} map.</a> The <a href="{{ baseline-link }}">baseline map.</a>
+	</p>
 
 	<h4>Ratings Compared to Baseline</h4>
 	<p style="text-align: center">
