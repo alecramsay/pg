@@ -53,6 +53,22 @@ study_states: list[str] = [
     "WI",
 ]  # 37 states with > 2 congressional districts
 
+"""
+Not included:
+AK 1
+DE 1
+HI 2
+ID 2
+ME 2
+MT 2
+NH 2
+ND 1
+RI 2
+SD 1
+VT 1
+WV 2
+WY 1
+"""
 
 ### ENVIRONMENT CONSTANTS ###
 
