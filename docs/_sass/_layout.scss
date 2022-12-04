@@ -192,4 +192,36 @@ img {
 	border-top: none;
 }
 
+// Tooltips
+
+.tooltip {
+	position: absolute;
+	// position: relative;
+	display: inline-block;
+	cursor: default;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	padding: 0.25em 0.5em;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 0.25em;
+	white-space: nowrap;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	margin-left: 650px;
+	margin-top: -100px;
+	transition-property: visibility;
+	transition-delay: 0s;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	transition-delay: 0.3s;
+}
+
 // End
