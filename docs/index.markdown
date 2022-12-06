@@ -6,6 +6,9 @@ This project characterizes the redistricting tradeoffs inherent in a
 state\'s political geography, using the 37 states apportioned three or
 more congressional districts in the 2020 census.[^1]
 
+*Note: This web site is all fleshed out and ready to go, but I'm waiting on baseline maps.
+Check back in January--I hope to be able to start generating them then.*
+
 ### Background
 
 This analysis uses maps drawn in Dave's Redistricting. Besides the
