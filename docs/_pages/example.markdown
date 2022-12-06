@@ -94,12 +94,12 @@ The first is the district in the baseline map, and the second is the district in
 
  <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{ site.data.maps[0].qualified-label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[1].label }}')">{{ site.data.maps[1].qualified-label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[2].label }}')">{{ site.data.maps[2].qualified-label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[3].label }}')">{{ site.data.maps[3].qualified-label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[4].label }}')">{{ site.data.maps[4].qualified-label }}</button>
-  <button class="tablinks" onclick="openCity(event, '{{ site.data.maps[5].label }}')">{{ site.data.maps[5].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{ site.data.maps[0].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{ site.data.maps[1].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{ site.data.maps[2].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{ site.data.maps[3].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{ site.data.maps[4].qualified-label }}</button>
+  <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{ site.data.maps[5].qualified-label }}</button>
 </div>
 
 <!-- Tab content -->

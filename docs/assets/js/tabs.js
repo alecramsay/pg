@@ -1,5 +1,5 @@
 // https://www.w3schools.com/howto/howto_js_tabs.asp
-function openCity(evt, cityName)
+function openTab(evt, cityName)
 {
   // Declare all variables
   var i, tabcontent, tablinks;
