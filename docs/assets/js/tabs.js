@@ -1,5 +1,5 @@
 // https://www.w3schools.com/howto/howto_js_tabs.asp
-function openTab(evt, cityName)
+function openTab(evt, tabName)
 {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -19,6 +19,6 @@ function openTab(evt, cityName)
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 } 
