@@ -4,7 +4,7 @@
 POPULATION COMPACTNESS aka MOMENT OF INERTIA (MOI)
 """
 
-from .pgtypes import Coordinate, Feature
+from .datatypes import Coordinate, Feature
 
 
 def calc_moi(

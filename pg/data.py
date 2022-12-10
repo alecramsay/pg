@@ -4,7 +4,7 @@
 #
 
 from .readwrite import *
-from .pgtypes import *
+from .datatypes import *
 from .moi import *
 
 
