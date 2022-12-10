@@ -3,8 +3,8 @@
 # DATA STRUCTURES
 #
 
-from .io import *
-from .types import *
+from .readwrite import *
+from .pgtypes import *
 from .moi import *
 
 

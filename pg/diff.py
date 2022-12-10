@@ -6,8 +6,8 @@ TOOLS TO DIFF TWO PLANS (DISTRICT IDS BY FEATURE GEOID)
 
 from collections import defaultdict
 
-from .types import *
-from .io import *
+from .pgtypes import *
+from .readwrite import *
 from .helpers import *
 
 

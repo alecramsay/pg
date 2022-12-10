@@ -2,8 +2,8 @@
 
 from .settings import *
 from .constants import *
-from .io import *
-from .types import *
+from .readwrite import *
+from .pgtypes import *
 from .data import *
 from .helpers import *
 from .diff import *

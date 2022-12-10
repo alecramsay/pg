@@ -7,7 +7,7 @@ PLOT RADAR DIAGRAMS
 import chart_studio.plotly as py
 import plotly.graph_objs as go  # https://plotly.com/python-api-reference/plotly.graph_objects.html
 
-from .types import *
+from .pgtypes import *
 from .data import *
 from .helpers import *
 

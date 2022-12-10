@@ -4,7 +4,7 @@
 HELPERS
 """
 
-from .types import *
+from .pgtypes import *
 
 
 # RATINGS
