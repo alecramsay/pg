@@ -1,6 +1,5 @@
 # pg/__init__.py
 
-from .settings import *
 from .constants import *
 from .readwrite import *
 from .datatypes import *
