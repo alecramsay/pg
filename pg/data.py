@@ -5,7 +5,7 @@ DATA STRUCTURES
 """
 
 from shapely.geometry import shape, Polygon, MultiPolygon
-from typing import Optional
+from typing import Optional, Tuple, cast, Any, Union
 
 from .readwrite import *
 from .datatypes import *
@@ -57,24 +57,32 @@ class State:
         Load the shape for a state from a shapefile.
         """
         self.shape: Polygon | MultiPolygon = load_state_shape(rel_path, "GEOID20")
-        # TYPE HINT
-        self.xmin, self.ymin, self.xmax, self.ymax = self.shape.bounds
+        # HACK - To make PyLance happy. The "type" being returned by bounds is weird.
+        bounds: Any = self.shape.bounds
+        self.xmin, self.ymin, self.xmax, self.ymax = bounds
 
 
 class Plan:
-    """
-    A container for all things related to a plan.
-    """
+    """A container for all things related to a plan"""
+
+    name: Optional[str]
+    nickname: Optional[str]
+
+    state: Optional[State]
+
+    _assignments: Optional[list[Assignment]]
+    _districts: Optional[dict[int, District]]
+    ratings: Optional[Ratings]
 
     def __init__(self) -> None:
-        self.name: str = None
-        self.nickname: str = None
+        self.name = None
+        self.nickname = None
 
-        self.state: State = None
+        self.state = None
 
-        self._assignments: list[Assignment] = None
-        self._districts: dict[int, District] = None
-        self.ratings: Ratings = None
+        self._assignments = None
+        self._districts = None
+        self.ratings = None
 
         # TODO - More ...
 
@@ -88,7 +96,8 @@ class Plan:
         types: list = [str, int]
         districts_by_geoid: list[dict[str, int]] = read_typed_csv(rel_path, types)
         self._assignments = [
-            Assignment(item["GEOID20"], item["District"]) for item in districts_by_geoid
+            Assignment(str(item["GEOID20"]), int(item["District"]))
+            for item in districts_by_geoid
         ]
 
     def assignments(self) -> list[Assignment]:
@@ -134,6 +143,11 @@ class Plan:
         return self._districts
 
     def _calc_district_centroids(self) -> None:
+        """Calculate the centroids for each district"""
+
+        assert self.state is not None
+        assert self.state.features is not None
+
         for _, district in self.districts().items():
             xsum: float = 0
             ysum: float = 0
@@ -149,6 +163,11 @@ class Plan:
             district["pop"] = total
 
     def calc_moi(self) -> float:
+        """Calculate the moment of inertia for the plan"""
+
+        assert self.state is not None
+        assert self.state.features is not None
+
         districts: dict[int, District] = self.districts()
         n: int = len(districts)
         moi: float = 0.0

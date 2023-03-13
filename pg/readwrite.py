@@ -79,8 +79,10 @@ def load_shapes(shp_file: str, id: str) -> tuple[dict, Optional[dict[str, Any]]]
 
 
 def load_state_shape(shp_file: str, id: str) -> Polygon | MultiPolygon:
-    shapes: tuple[dict, Optional[dict[str, Any]]] = load_shapes(shp_file, id)
-    state_shp: Polygon | MultiPolygon = list(shapes[0].items())[0][1]
+    shapes: dict
+    meta: Optional[dict[str, Any]]
+    shapes, meta = load_shapes(shp_file, id)
+    state_shp: Polygon | MultiPolygon = list(shapes.items())[0][1]
 
     return state_shp
 
