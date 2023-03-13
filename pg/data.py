@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-#
-# DATA STRUCTURES
-#
+
+"""
+DATA STRUCTURES
+"""
+
+from shapely.geometry import shape, Polygon, MultiPolygon
+from typing import Optional
 
 from .readwrite import *
 from .datatypes import *
@@ -9,34 +13,37 @@ from .moi import *
 
 
 class State:
-    """
-    A container for all things related to a state.
-    """
+    """A container for all things related to a state"""
+
+    features: Optional[dict[str, Feature]]
+    total_pop: Optional[int]
+    xmin: Optional[float]
+    ymin: Optional[float]
+    xmax: Optional[float]
+    ymax: Optional[float]
 
     def __init__(self) -> None:
-        self.features: dict[str, Feature] = None
-        self.total_pop: int = None
-        self.xmin: float = None
-        self.ymin: float = None
-        self.xmax: float = None
-        self.ymax: float = None
+        self.features = None
+        self.total_pop = None
+        self.xmin = None
+        self.ymin = None
+        self.xmax = None
+        self.ymax = None
 
     def load_features(self, rel_path: str) -> None:
-        """
-        Re-hydrate a dict of Features serialized to a CSV.
-        """
+        """Re-hydrate a dict of Features serialized to a CSV"""
 
-        features: defaultdict[str, Feature] = defaultdict(Feature)
+        features: dict[str, Feature] = dict()
         self.total_pop = 0
 
         types: list = [str, int, float, float]
-        rows: list[dict[str, int, float, float]] = read_typed_csv(rel_path, types)
+        rows: list[dict[str, int | float]] = read_typed_csv(rel_path, types)
 
         for row in rows:
-            geoid: str = row["GEOID"]
-            pop: int = row["POP"]
-            x: float = row["X"]
-            y: float = row["Y"]
+            geoid: str = str(row["GEOID"])
+            pop: int = int(row["POP"])
+            x: float = float(row["X"])
+            y: float = float(row["Y"])
 
             feature: Feature = Feature(xy=Coordinate(x, y), pop=pop)
             features[geoid] = feature
@@ -50,6 +57,7 @@ class State:
         Load the shape for a state from a shapefile.
         """
         self.shape: Polygon | MultiPolygon = load_state_shape(rel_path, "GEOID20")
+        # TYPE HINT
         self.xmin, self.ymin, self.xmax, self.ymax = self.shape.bounds
 
 

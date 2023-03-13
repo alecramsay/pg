@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-#
-# CONSTANTS
-#
+
+"""
+CONSTANTS
+"""
 
 from typing import Any
 
@@ -1047,3 +1048,5 @@ baseline_maps: dict[str, str] = {
 }
 
 # DON'T LIMIT WHAT GETS EXPORTED.
+
+### END ###

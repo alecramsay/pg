@@ -9,7 +9,17 @@ import json
 from csv import DictReader, DictWriter
 import pickle
 from collections import defaultdict
-from shapely.geometry import shape, Polygon, MultiPolygon
+from shapely.geometry import (
+    shape,
+    Polygon,
+    MultiPolygon,
+    Point,
+    MultiPoint,
+    LineString,
+    MultiLineString,
+    LinearRing,
+    GeometryCollection,
+)
 import fiona
 from typing import Any, Optional
 
@@ -48,24 +58,28 @@ def load_json(rel_path) -> dict[str, Any]:
 ### LOAD A SHAPEFILE ###
 
 
-def load_shapes(shp_file: str, id: str) -> tuple[dict, dict[str, Any]]:
-    shp_file: str = os.path.expanduser(shp_file)
+def load_shapes(shp_file: str, id: str) -> tuple[dict, Optional[dict[str, Any]]]:
+    shp_path: str = os.path.expanduser(shp_file)
     shapes_by_id: dict = dict()
+    meta: Optional[dict[str, Any]] = None
 
     with fiona.Env():
-        with fiona.open(shp_file) as source:
-            meta: dict[str, Any] = source.meta
-            for item in source:
-                obj_id: str = item["properties"][id]
-                shp: Polygon | MultiPolygon = shape(item["geometry"])
+        with fiona.open(shp_path) as source:
+            if source:
+                meta = source.meta
+                for item in source:
+                    obj_id: str = item["properties"][id]
+                    shp: Point | MultiPoint | LineString | MultiLineString | Polygon | MultiPolygon | LinearRing | GeometryCollection = shape(
+                        item["geometry"]
+                    )
 
-                shapes_by_id[obj_id] = shp
+                    shapes_by_id[obj_id] = shp
 
     return shapes_by_id, meta
 
 
 def load_state_shape(shp_file: str, id: str) -> Polygon | MultiPolygon:
-    shapes: tuple[dict, dict[str, Any]] = load_shapes(shp_file, id)
+    shapes: tuple[dict, Optional[dict[str, Any]]] = load_shapes(shp_file, id)
     state_shp: Polygon | MultiPolygon = list(shapes[0].items())[0][1]
 
     return state_shp
@@ -111,9 +125,12 @@ def read_typed_csv(rel_path, field_types) -> list:
             )
 
             for row_in in reader:
-                if len(field_types) >= len(reader.fieldnames):
+                fieldnames: list[str] = (
+                    list(reader.fieldnames) if reader.fieldnames else []
+                )
+                if len(field_types) >= len(fieldnames):
                     # Extract the values in the same order as the csv header
-                    ivalues = map(row_in.get, reader.fieldnames)
+                    ivalues = map(row_in.get, fieldnames)
 
                     # Apply type conversions
                     iconverted: list = [
@@ -121,9 +138,9 @@ def read_typed_csv(rel_path, field_types) -> list:
                     ]
 
                     # Pass the field names and the converted values to the dict constructor
-                    row_out: dict = dict(zip(reader.fieldnames, iconverted))
+                    row_out: dict = dict(zip(fieldnames, iconverted))
 
-                rows.append(row_out)
+                    rows.append(row_out)
 
         return rows
 
@@ -176,7 +193,7 @@ class FileSpec:
         self.extension: str = file_extension
 
 
-def file_name(parts: list[str], delim: str = "_", ext: str = None) -> str:
+def file_name(parts: list[str], delim: str = "_", ext: Optional[str] = None) -> str:
     """
     Construct a file name with parts separated by the delimeter and ending with the extension.
     """
