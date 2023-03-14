@@ -132,3 +132,5 @@ def text_position(ratings: list[int], move_value: int) -> list[str]:
 
 
 __all__: list[str] = ["plot_radar_diagram"]
+
+### END ###

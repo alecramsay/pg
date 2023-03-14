@@ -48,3 +48,5 @@ def distance_squared(pt1: Coordinate, pt2: Coordinate) -> float:
 
 
 __all__: list[str] = ["calc_moi"]
+
+### END ###
