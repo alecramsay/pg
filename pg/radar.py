@@ -33,11 +33,12 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
 
     # Current trace
 
+    assert current.ratings is not None
     current_r: list[int] = [x for x in list(current.ratings)]
     current_r += current_r[:1]  # close the polygon
     current_positions: list[str] = text_position(current_r, 80)
 
-    current_trace: py.Scatterpolar = go.Scatterpolar(
+    current_trace: go.Scatterpolar = go.Scatterpolar(
         name=current.name,
         mode="lines+markers+text",
         r=current_r,
@@ -52,11 +53,12 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
 
     # Compare trace
 
+    assert compare.ratings is not None
     compare_r: list[int] = [x for x in list(compare.ratings)]
     compare_r += compare_r[:1]  # close the polygon
     compare_positions: list[str] = text_position(compare_r, 80)
 
-    compare_trace: py.Scatterpolar = go.Scatterpolar(
+    compare_trace: go.Scatterpolar = go.Scatterpolar(
         name=compare.name,
         mode="lines+markers+text",
         r=compare_r,
@@ -72,11 +74,12 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
     traces.append(compare_trace)
     traces.append(current_trace)
 
+    assert current.nickname is not None
     title: str = qualify_label(current.nickname)
     font_size: int = 16
     title_x: float = 0.5  # center
 
-    layout: py.Layout = go.Layout(
+    layout: go.Layout = go.Layout(
         title=dict(text=title, x=title_x, font_size=font_size),
         polar=dict(
             bgcolor=bgcolor,
@@ -103,7 +106,7 @@ def plot_radar_diagram(current: Plan, compare: Plan, plot_path: str) -> None:
         plot_bgcolor=bgcolor,
     )
 
-    fig: py.Figure = go.Figure(data=traces, layout=layout)
+    fig: go.Figure = go.Figure(data=traces, layout=layout)
 
     fig.write_image(plot_path)
     # fig.show()
