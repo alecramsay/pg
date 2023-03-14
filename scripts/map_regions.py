@@ -70,14 +70,17 @@ for label in [
 
     ### LOAD BLOCK SHAPES & BLOCK REGION ASSIGNMENTS ###
 
+    # TYPE HINT
     blocks_gdf: GeoDataFrame = geopandas.read_file(block_shps_path)
     blocks_gdf = blocks_gdf[["geometry", "GEOID20"]]
 
+    # TYPE HINT
     regions_gdf: GeoDataFrame = geopandas.read_file(regions_baf_path)
     regions_gdf = regions_gdf[["GEOID", "REGION"]]
 
     ### JOIN THE REGIONS TO THE BLOCK SHAPES ###
 
+    # TYPE HINT
     blocks_gdf = blocks_gdf.merge(
         regions_gdf,
         how="left",
@@ -89,11 +92,13 @@ for label in [
 
     ### DISSOLVE BLOCKS BY REGION ###
 
+    # TYPE HINT
     regions_gdf: GeoDataFrame = blocks_gdf.dissolve(by="REGION", as_index=False)
     del blocks_gdf
 
     ### LOAD THE REGION SUMMARY DATA ###
 
+    # TYPE HINT
     regions_summary: GeoDataFrame = geopandas.read_file(regions_summary_path)
     regions_summary = regions_summary[
         ["REGION", "BASELINE", "OTHER", "POPULATION", "DISTRICT%", "CUMULATIVE%"]

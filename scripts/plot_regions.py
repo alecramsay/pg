@@ -21,7 +21,7 @@ from argparse import ArgumentParser, Namespace
 import geopandas
 from geopandas import GeoDataFrame
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import Figure, Axes
+from matplotlib.pyplot import Figure, Axes  # type: ignore
 from typing import List
 
 from pg import *
@@ -91,6 +91,7 @@ for label in [
 
     ### LOAD THE REGIONS ###
 
+    # TYPE HINT
     regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
     regions_gdf = regions_gdf[
         [
@@ -127,9 +128,11 @@ for label in [
 
     fig, ax = plt.subplots(1, figsize=(w, h))
 
+    # TYPE HINT
     ax.axis("off")
     ax.set_title(title, fontdict={"size": title_font_size, "weight": "normal"})
 
+    # TYPE HINT
     # A colorbar legend
     if legend:
         vmin: int = 0
@@ -150,6 +153,7 @@ for label in [
             fontsize=label_font_size,
         )
 
+    # TYPE HINT
     regions_gdf.plot(
         column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8"
     )
