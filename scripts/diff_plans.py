@@ -45,6 +45,7 @@ preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
 state: State = State()
 state.load_features(preprocessed_path)
 
+assert state.total_pop is not None
 total_pop: int = state.total_pop
 district_pop: int = total_pop // n
 

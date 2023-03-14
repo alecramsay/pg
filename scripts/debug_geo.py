@@ -40,17 +40,18 @@ regions_plot_path: str = path_to_file([assets_dir]) + file_name(
 # LOAD THE REGIONS
 
 regions_gdf: GeoDataFrame = geopandas.read_file(regions_path)
-regions_gdf = regions_gdf[
-    [
-        "geometry",
-        "REGION",
-        "BASELINE",
-        "OTHER",
-        "POPULATION",
-        "DISTRICT%",
-        "CUMULATIVE%",
-    ]
-]
+# TODO - Something is not right with this next statement. Not sure what I was trying to do.
+# regions_gdf = regions_gdf[
+#     [
+#         "geometry",
+#         "REGION",
+#         "BASELINE",
+#         "OTHER",
+#         "POPULATION",
+#         "DISTRICT%",
+#         "CUMULATIVE%",
+#     ]
+# ]
 # Add points for label placement
 regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()
 
