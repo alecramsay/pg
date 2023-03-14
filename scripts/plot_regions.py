@@ -21,9 +21,6 @@ from argparse import ArgumentParser, Namespace
 import pandas as pd
 import geopandas
 from geopandas import GeoDataFrame
-
-# import matplotlib
-# from matplotlib import cm
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import Figure, Axes  # type: ignore
 from typing import List
