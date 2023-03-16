@@ -37,7 +37,7 @@ class State:
         self.total_pop = 0
 
         types: list = [str, int, float, float]
-        rows: list[dict[str, int | float]] = read_typed_csv(rel_path, types)
+        rows: list[dict[str, int | float]] = read_csv(rel_path, types)
 
         for row in rows:
             geoid: str = str(row["GEOID"])
@@ -94,7 +94,7 @@ class Plan:
         Load assignments from a CSV file.
         """
         types: list = [str, int]
-        districts_by_geoid: list[dict[str, int]] = read_typed_csv(rel_path, types)
+        districts_by_geoid: list[dict[str, int]] = read_csv(rel_path, types)
         self._assignments = [
             Assignment(str(item["GEOID20"]), int(item["District"]))
             for item in districts_by_geoid

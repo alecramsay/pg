@@ -3,14 +3,12 @@
 """
 Extract ids for official congressional maps with 3 or more districts,
 from state_plans.json.
-
 """
 
-import json
 
 from pg import *
 
-states: dict[str, Any] = load_json(
+states: dict[str, Any] = read_json(
     path_to_file([data_dir]) + file_name(["state", "plans"], "_", "json")
 )
 
