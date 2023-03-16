@@ -5,7 +5,7 @@
 
 from pg import *
 
-states: dict[str, str] = make_state_names()
+states: dict[str, str] = STATE_NAMES
 
 print("states:")
 for xx in study_states:

@@ -12,7 +12,7 @@ from typing import List
 from pg import *
 
 
-fips_map: dict[str, str] = make_state_codes()
+fips_map: dict[str, str] = STATE_FIPS
 
 xx: str = "NC"
 fips: str = fips_map[xx]
