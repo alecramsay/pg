@@ -32,8 +32,8 @@ plot_path: str = path_to_file([assets_dir]) + file_name(
 ### LOAD RATINGS ###
 
 
-current_ratings: Ratings = cull_ratings(load_json(current_path))
-compare_ratings: Ratings = cull_ratings(load_json(compare_path))
+current_ratings: Ratings = cull_ratings(read_json(current_path))
+compare_ratings: Ratings = cull_ratings(read_json(compare_path))
 
 
 ### PLOT RADAR DIAGRAM ###

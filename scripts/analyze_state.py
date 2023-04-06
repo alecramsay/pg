@@ -67,6 +67,7 @@ os.system(f"scripts/write_ratings_table.py {xx}")
 
 ### DIFF THE PLANS ###
 
+print("Diffing plans ...")
 os.system(f"scripts/diff_plans.py {xx}")
 
 

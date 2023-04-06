@@ -12,7 +12,7 @@
 # scripts/pull_map_ratings.sh NC Congress Compact 3bacb15d-e014-4764-9e8c-f238eb687d50
 # scripts/pull_map_ratings.sh NC Congress Splitting 82e6303c-e842-469b-b364-918bcacf9ef3
 #
-# scripts/pull_map_ratings.sh NC Congress Baseline 2c056ca5-6949-4445-9a65-b4694360c9d1
+# scripts/pull_map_ratings.sh NC Congress Baseline 48ea8e69-e6b8-4ddf-89f1-bcc65254ff00
 #
 
 XX=$1

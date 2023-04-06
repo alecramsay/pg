@@ -20,7 +20,7 @@ print("Map,Plan,Proportional,Competitive,Minority,Compact,Splitting")
 for xx, maps in notable_maps.items():
     for dim, id in maps.items():
         ratings: Ratings = cull_ratings(
-            load_json(
+            read_json(
                 path_to_file([data_dir, xx])
                 + file_name(
                     [xx, yyyy, plan_type, dim.capitalize(), "ratings"], "_", "json"

@@ -40,6 +40,4 @@ def qualify_label(label: str) -> str:
     return label
 
 
-# DON'T LIMIT WHAT GETS EXPORTED.
-
 ### END ###

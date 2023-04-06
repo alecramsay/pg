@@ -81,6 +81,4 @@ def validate_plans(inverted_plans) -> bool:
     return all_same
 
 
-# DON'T LIMIT WHAT GETS EXPORTED.
-
 ### END ###

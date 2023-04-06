@@ -13,7 +13,6 @@ $ scripts/write_ratings_table.py -h
 
 """
 
-
 import argparse
 from argparse import ArgumentParser, Namespace
 
@@ -50,7 +49,7 @@ for label in [
     "Baseline",
 ]:
     ratings: Ratings = cull_ratings(
-        load_json(
+        read_json(
             path_to_file([data_dir, xx])
             + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
         )
