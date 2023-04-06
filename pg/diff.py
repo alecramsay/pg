@@ -4,19 +4,19 @@
 TOOLS TO DIFF TWO PLANS (DISTRICT IDS BY FEATURE GEOID)
 """
 
-from collections import defaultdict
-
+from .data import *
 from .datatypes import *
 from .readwrite import *
 from .helpers import *
 
 
-def diff_two_plans_WRAPPER(to_plan, from_plan) -> list[Region]:
-    """
-    Isolate the class knowledge in this wrapper, so diff_two_plans() doesn't depend on it.
-    """
+def diff_two_plans_WRAPPER(to_plan: Plan, from_plan: Plan) -> list[Region]:
+    """Isolate the class knowledge in this wrapper, so diff_two_plans() doesn't depend on it."""
+
     to_districts: dict[int, District] = to_plan.districts()
     from_districts: dict[int, District] = from_plan.districts()
+    assert from_plan.state is not None
+    assert from_plan.state.features is not None
     features: dict[str, Feature] = from_plan.state.features
 
     regions: list[Region] = diff_two_plans(to_districts, from_districts, features)

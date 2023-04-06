@@ -90,9 +90,8 @@ class Plan:
         self.state = state
 
     def load_assignments(self, rel_path: str) -> None:
-        """
-        Load assignments from a CSV file.
-        """
+        """Load assignments from a CSV file."""
+
         types: list = [str, int]
         districts_by_geoid: list[dict[str, int]] = read_csv(rel_path, types)
         self._assignments = [
@@ -107,9 +106,8 @@ class Plan:
         raise Exception("Assignments not loaded.")
 
     def districts(self) -> dict[int, District]:
-        """
-        Return a list of Districts.
-        """
+        """Return a list of Districts."""
+
         if self._districts:
             return self._districts
 
@@ -123,12 +121,13 @@ class Plan:
         for row in self.assignments():
             geoid: str = row.geoid
 
-            # HACK - Skip water-only blocks.
-            if geoid[5:7] == "99":
-                continue
-            # HACK: These two unpopulated blocks are missing from the NY Most Compact plan.
-            if geoid in ["360610001001001", "360610001001000"]:
-                continue
+            # TODO - DELETE
+            # # HACK - Skip water-only blocks.
+            # if geoid[5:7] == "99":
+            #     continue
+            # # HACK: These two unpopulated blocks are missing from the NY Most Compact plan.
+            # if geoid in ["360610001001001", "360610001001000"]:
+            #     continue
 
             i: int = row.district
             if i not in inverted:
@@ -138,29 +137,31 @@ class Plan:
             inverted[i]["geoids"].add(geoid)
 
         self._districts = inverted
-        self._calc_district_centroids()
+        # TODO - DELETE
+        # self._calc_district_centroids()
 
         return self._districts
 
-    def _calc_district_centroids(self) -> None:
-        """Calculate the centroids for each district"""
+    # TODO - DELETE
+    # def _calc_district_centroids(self) -> None:
+    #     """Calculate the centroids for each district"""
 
-        assert self.state is not None
-        assert self.state.features is not None
+    #     assert self.state is not None
+    #     assert self.state.features is not None
 
-        for _, district in self.districts().items():
-            xsum: float = 0
-            ysum: float = 0
-            total: int = 0
+    #     for _, district in self.districts().items():
+    #         xsum: float = 0
+    #         ysum: float = 0
+    #         total: int = 0
 
-            for geoid in district["geoids"]:
-                feature: Feature = self.state.features[geoid]
-                total += feature.pop
-                xsum += feature.xy.x * feature.pop
-                ysum += feature.xy.y * feature.pop
+    #         for geoid in district["geoids"]:
+    #             feature: Feature = self.state.features[geoid]
+    #             total += feature.pop
+    #             xsum += feature.xy.x * feature.pop
+    #             ysum += feature.xy.y * feature.pop
 
-            district["xy"] = Coordinate(xsum / total, ysum / total)
-            district["pop"] = total
+    #         district["xy"] = Coordinate(xsum / total, ysum / total)
+    #         district["pop"] = total
 
     def calc_moi(self) -> float:
         """Calculate the moment of inertia for the plan"""

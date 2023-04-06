@@ -27,13 +27,6 @@ parser: ArgumentParser = argparse.ArgumentParser(
 
 parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
 parser.add_argument(
-    "-u",
-    "--unit",
-    default="vtd",
-    help="The geographic unit (e.g., vtd)",
-    type=str,
-)
-parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
 )
 
@@ -41,14 +34,13 @@ args: Namespace = parser.parse_args()
 
 xx: str = args.state
 n: int = districts_by_state[xx][plan_type.lower()]
-unit: str = args.unit
 verbose: bool = args.verbose
 
 
 ### LOAD STATE DATA ###
 
 preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-    [xx, cycle, unit, "data"], "_", "csv"
+    [xx, cycle, "block", "data"], "_", "csv"
 )
 state: State = State()
 state.load_features(preprocessed_path)
