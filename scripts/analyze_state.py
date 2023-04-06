@@ -71,8 +71,8 @@ print("Diffing plans ...")
 os.system(f"scripts/diff_plans.py {xx}")
 
 
-### TODO - QGIS ###
-
+# TODO - Add map regions
+# TODO - Plot regions
 
 print("Done.")
 

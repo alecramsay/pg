@@ -121,13 +121,12 @@ class Plan:
         for row in self.assignments():
             geoid: str = row.geoid
 
-            # TODO - DELETE
-            # # HACK - Skip water-only blocks.
-            # if geoid[5:7] == "99":
-            #     continue
-            # # HACK: These two unpopulated blocks are missing from the NY Most Compact plan.
-            # if geoid in ["360610001001001", "360610001001000"]:
-            #     continue
+            # HACK - Skip water-only blocks.
+            if geoid[5:7] == "99":
+                continue
+            # HACK: These two unpopulated blocks are missing from the NY Most Compact plan.
+            if geoid in ["360610001001001", "360610001001000"]:
+                continue
 
             i: int = row.district
             if i not in inverted:
@@ -137,12 +136,10 @@ class Plan:
             inverted[i]["geoids"].add(geoid)
 
         self._districts = inverted
-        # TODO - DELETE
         # self._calc_district_centroids()
 
         return self._districts
 
-    # TODO - DELETE
     # def _calc_district_centroids(self) -> None:
     #     """Calculate the centroids for each district"""
 
