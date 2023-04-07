@@ -32,7 +32,7 @@ For each state:
 
 (6) Open the map in DRA:
 
-* Add the Share guid to constants.py
+* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
 * Set the Colors and Overlays -- 'Change Palette' to Plasma
 * Export the block-assignment file
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
@@ -45,7 +45,7 @@ For each state:
 * Turn District Lines on
 * Turn on the background map
 * [Change Palette] to Plasma
-* Add the baseline map as a Custom Overlay -- no fill, no labels, line thickness = 2
+* Add the baseline map as a Custom Overlay -- no fill, no labels, (line thickness = 1)
 * Download the map image, using right-click in Chrome
 * Rename it to XX_2022_Congress_<label>_map.png <<< NOTE - 2022 not 2020!
 * Move it to the docs/assets/images/ folder
