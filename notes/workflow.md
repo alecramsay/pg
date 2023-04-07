@@ -32,8 +32,8 @@ For each state:
 
 (6) Open the map in DRA:
 
-* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
 * Set the Colors and Overlays -- 'Change Palette' to Plasma
+* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
 * Export the block-assignment file
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 * Move it to the data/XX/ folder
