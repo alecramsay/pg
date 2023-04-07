@@ -26,7 +26,7 @@
 
 For each state:
 
-(4) Create a baseline map using the tools in the 'baseline' repo
+(4) Create a baseline map using the 'baseline' workflow
 
 (5) Import the map, using the import_base_map.sh script
 
