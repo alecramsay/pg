@@ -84,8 +84,6 @@ class Plan:
         self._districts = None
         self.ratings = None
 
-        # TODO - More ...
-
     def set_state(self, state: State) -> None:
         self.state = state
 
