@@ -121,24 +121,10 @@ def main() -> None:
                 "DISTRICT%",
                 "CUMULATIVE%",
             ]
-        ]
-        # TYPE HINT
-        # regions_df: pd.Series[Any] | pd.DataFrame | Any = regions_gdf[
-        #     [
-        #         "geometry",
-        #         "REGION",
-        #         "BASELINE",
-        #         "OTHER",
-        #         "POPULATION",
-        #         "DISTRICT%",
-        #         "CUMULATIVE%",
-        #     ]
-        # ]
-        # assert isinstance(regions_df, pd.DataFrame)
+        ]  # type: ignore
 
         # Add points for label placement
-        regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()
-        # regions_df["labelpos"] = regions_df["geometry"].representative_point()
+        regions_gdf["labelpos"] = regions_gdf["geometry"].representative_point()  # type: ignore
 
         ### PLOT THE REGIONS ON A MAP ###
 
@@ -161,51 +147,32 @@ def main() -> None:
 
         fig, ax = plt.subplots(1, figsize=(w, h))
 
-        # TYPE HINT
-        ax.axis("off")
-        ax.set_title(title, fontdict={"size": title_font_size, "weight": "normal"})
-        # ax[0].axis("off")
-        # ax[0].set_title(title, fontdict={"size": title_font_size, "weight": "normal"})
+        ax.axis("off")  # type: ignore
+        ax.set_title(title, fontdict={"size": title_font_size, "weight": "normal"})  # type: ignore
 
         # A colorbar legend
         if legend:
             vmin: int = 0
             vmax: int = 100
-            sm: plt.cm.ScalarMappable = plt.cm.ScalarMappable(
-                cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax)
+            sm: plt.cm.ScalarMappable = plt.cm.ScalarMappable(  # type: ignore
+                cmap=colors, norm=plt.Normalize(vmin=vmin, vmax=vmax)  # type: ignore
             )
-            # TYPE HINT
-            # sm: plt.colorbar.ScalarMappable = plt.colorbar.cm.ScalarMappable(
-            #     cmap=colors, norm=plt.colorbar.Normalize(vmin=vmin, vmax=vmax)
-            # )
             sm._A = []
             fig.colorbar(sm, orientation=orientation, ax=ax, shrink=0.5)
 
         # Region labels
         for idx, row in regions_gdf.iterrows():
-            ax.annotate(
+            ax.annotate(  # type: ignore
                 "{}".format(row["REGION"]),
                 xy=row["labelpos"].coords[0],
                 ha="center",
                 va="center",
                 fontsize=label_font_size,
             )
-            # TYPE HINT
-            # ax[0].annotate(
-            #     "{}".format(row["REGION"]),
-            #     xy=row["labelpos"].coords[0],
-            #     ha="center",
-            #     va="center",
-            #     fontsize=label_font_size,
-            # )
 
         regions_gdf.plot(
-            column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8"
+            column=dimension, cmap=colors, linewidth=lines, ax=ax, edgecolor="0.8"  # type: ignore
         )
-        # TYPE HINT
-        # regions_gdf.plot(
-        #     column=dimension, cmap=colors, linewidth=lines, ax=ax[0], edgecolor="0.8"
-        # )
 
         if test:
             plt.show()

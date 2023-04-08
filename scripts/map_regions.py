@@ -82,20 +82,10 @@ def main() -> None:
         ### LOAD BLOCK SHAPES & BLOCK REGION ASSIGNMENTS ###
 
         blocks_gdf: GeoDataFrame = geopandas.read_file(block_shps_path)
-        blocks_gdf = blocks_gdf[["geometry", "GEOID20"]]
-        # TYPE HINT
-        # blocks_df: pd.Series[Any] | pd.DataFrame | Any = blocks_gdf[
-        #     ["geometry", "GEOID20"]
-        # ]
-        # assert isinstance(blocks_df, pd.DataFrame)
+        blocks_gdf = blocks_gdf[["geometry", "GEOID20"]]  # type: ignore
 
         regions_gdf: GeoDataFrame = geopandas.read_file(regions_baf_path)
-        regions_gdf = regions_gdf[["GEOID", "REGION"]]
-        # TYPE HINT
-        # regions_df: pd.Series[Any] | pd.DataFrame | Any = regions_gdf[
-        #     ["GEOID", "REGION"]
-        # ]
-        # assert isinstance(regions_df, pd.DataFrame)
+        regions_gdf = regions_gdf[["GEOID", "REGION"]]  # type: ignore
 
         ### JOIN THE REGIONS TO THE BLOCK SHAPES ###
 
@@ -104,50 +94,27 @@ def main() -> None:
             how="left",
             left_on="GEOID20",
             right_on="GEOID",
-        )
-        # TYPE HINT
-        # blocks_df = blocks_df.merge(
-        #     regions_df,
-        #     how="left",
-        #     left_on="GEOID20",
-        #     right_on="GEOID",
-        # )
+        )  # type: ignore
 
-        blocks_gdf = blocks_gdf[["geometry", "GEOID", "REGION"]]
+        blocks_gdf = blocks_gdf[["geometry", "GEOID", "REGION"]]  # type: ignore
         del regions_gdf
-        # blocks_df = blocks_df[["geometry", "GEOID", "REGION"]]
-        # del regions_df
 
         ### DISSOLVE BLOCKS BY REGION ###
 
-        regions_gdf: GeoDataFrame = blocks_gdf.dissolve(by="REGION", as_index=False)
+        regions_gdf: GeoDataFrame = blocks_gdf.dissolve(by="REGION", as_index=False)  # type: ignore
         del blocks_gdf
-        # TYPE HINT
-        # regions_df = blocks_df.dissolve(by="REGION", as_index=False)
-        # del blocks_df
 
         ### LOAD THE REGION SUMMARY DATA ###
 
-        # TYPE HINT
-        regions_summary_gdf: GeoDataFrame = geopandas.read_file(
-            regions_summary_path
-        )  # HERE
+        regions_summary_gdf: GeoDataFrame = geopandas.read_file(regions_summary_path)
         regions_summary_gdf = regions_summary_gdf[
             ["REGION", "BASELINE", "OTHER", "POPULATION", "DISTRICT%", "CUMULATIVE%"]
-        ]
-        # regions_summary_df: pd.Series[Any] | pd.DataFrame | Any = regions_summary_gdf[
-        #     ["REGION", "BASELINE", "OTHER", "POPULATION", "DISTRICT%", "CUMULATIVE%"]
-        # ]
+        ]  # type: ignore
         regions_gdf = regions_gdf.merge(
             regions_summary_gdf,
             on="REGION",
             how="left",
-        )
-        # regions_df = regions_df.merge(
-        #     regions_summary_df,
-        #     on="REGION",
-        #     how="left",
-        # )
+        )  # type: ignore
         regions_gdf = regions_gdf[
             [
                 "geometry",
@@ -158,18 +125,7 @@ def main() -> None:
                 "DISTRICT%",
                 "CUMULATIVE%",
             ]
-        ]
-        # regions_df = regions_df[
-        #     [
-        #         "geometry",
-        #         "REGION",
-        #         "BASELINE",
-        #         "OTHER",
-        #         "POPULATION",
-        #         "DISTRICT%",
-        #         "CUMULATIVE%",
-        #     ]
-        # ]
+        ]  # type: ignore
 
         ### WRITE THE REGIONS TO A SHAPEFILE ###
 
