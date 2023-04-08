@@ -33,7 +33,7 @@ For each state:
 (6) Open the map in DRA:
 
 * Set the Colors and Overlays -- 'Change Palette' to Plasma
-* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos, and to states.yml here
+* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
 * Export the block-assignment file
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 * Move it to the data/XX/ folder
@@ -51,3 +51,9 @@ For each state:
 * Move it to the docs/assets/images/ folder
 
 (9) Analyze the Official & Notable maps, using the analyze_state.py script
+
+(10) Add population deviation & runtime to the abstract spreadsheet
+
+	cat intermediate/XX/XX20C_log_100.txt | awk 'END{print}'
+	
+(11) Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
