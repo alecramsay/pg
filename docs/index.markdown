@@ -106,4 +106,4 @@ TBD: More ...
 [^4]: See "Baseline Congressional Districts: A Benchmark for Comparison"
     \[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3\].
 
-[^5]: So, five comparisons instead ten (5 choose 2).
+[^5]: So, five comparisons instead of ten (5 choose 2).
