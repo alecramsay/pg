@@ -10,4 +10,4 @@ map-width: 700
 xx: "VA"
 ---
 
-<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
+TODO: Summarize the tradeoffs for congressional redistricting inherent in VA's political geography.
