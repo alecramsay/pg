@@ -16,8 +16,8 @@
   minority: 5b4dfad5-ee34-469d-bdef-7f07a749b2c5
   compact: 970224ba-4373-48fd-9e3e-15527b63c9c5
   splitting: 7ff7eec5-1b01-422b-bb34-d78da0f8fcb8
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: 8ab10e95-a8cb-4bdc-94ca-b6d7d3af8b28
+  ready: true
 - xx: AR
   name: Arkansas
   official: bba50394-d34c-4f0d-9056-8b9e6a029bfd
@@ -76,8 +76,8 @@
   minority: f3527d3c-41b5-4758-8560-6ba52695c3b8
   compact: daec754f-45d0-43d3-bdbf-e8637e7cfe8d
   splitting: bf30be3a-0924-4790-a353-83ca0152504a
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: ffa00454-8e5d-44bb-8ee2-a6d4488bb68f
+  ready: true
 - xx: IL
   name: Illinois
   official: a5e1ee97-3727-4be1-80c7-8bfa7c72ee13
@@ -136,8 +136,8 @@
   minority: 0be18b01-7044-4055-8de8-596a2cae3039
   compact: fcc9a519-3aaa-4003-84cf-9807ec8bad4a
   splitting: 02689947-7712-4139-aa39-2e5ea6add817
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: c1bbd7f1-ce04-4bb4-bdff-963bc92ff340
+  ready: true
 - xx: MD
   name: Maryland
   official: 96d5e235-58de-4a46-a443-f5b6fabe0244
@@ -256,7 +256,7 @@
   minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
   compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
   splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
-  baseline: c62fa27b-1f4b-40ba-bcd7-9e2ca6f9df87
+  baseline: 48ea8e69-e6b8-4ddf-89f1-bcc65254ff00
   ready: true
 - xx: OH
   name: Ohio
@@ -346,8 +346,8 @@
   minority: 3ff32d6a-1ddc-47df-ba3f-d1004f6ec6ab
   compact: 30a7dba3-43b0-4815-8ccd-7abbcfcf5cfa
   splitting: 9bd6b5b4-f8f6-4372-a45f-77b6b1668596
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: 9981cdbe-ac6a-41f1-ab61-5ddebdd4f715
+  ready: true
 - xx: WA
   name: Washington
   official: be06fce9-90a2-4bc0-9659-8eacafcd4afc

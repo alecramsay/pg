@@ -28,12 +28,12 @@ For each state:
 
 (4) Create a baseline map using the 'baseline' workflow
 
-(5) Import the map, using the import_base_map.sh script
+(5) Import the map into DRA, using the import_base_map.sh script
 
 (6) Open the map in DRA:
 
 * Set the Colors and Overlays -- 'Change Palette' to Plasma
-* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos, and to states.yml here
 * Export the block-assignment file
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 * Move it to the data/XX/ folder
