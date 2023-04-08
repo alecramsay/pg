@@ -56,4 +56,7 @@ For each state:
 
 	cat intermediate/XX/XX20C_log_100.txt | awk 'END{print}'
 	
-(11) Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+(11) Turn the state on in the website
+
+* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+* Remove the NYI one-liner from the state's page in docs/_pages/pages/XX.markdown
