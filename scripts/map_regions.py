@@ -72,7 +72,7 @@ def main() -> None:
         regions_baf_path: str = path_to_file([temp_dir]) + file_name(
             [xx, yyyy, plan_type, label, "regions", "BAF"], "_", "csv"
         )
-        regions_summary_path: str = path_to_file([assets_dir]) + file_name(
+        regions_summary_path: str = path_to_file([site_data_dir]) + file_name(
             [xx, yyyy, plan_type, label, "regions", "summary"], "_", "csv"
         )
         regions_map_path: str = path_to_file([temp_dir]) + file_name(

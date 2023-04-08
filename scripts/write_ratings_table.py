@@ -68,7 +68,7 @@ for label in [
     ratings_table.append(row)
 
 write_csv(
-    path_to_file([assets_dir])
+    path_to_file([site_data_dir])
     + file_name([xx, yyyy, plan_type, "ratings"], "_", "csv"),
     ratings_table,
     # rows,
