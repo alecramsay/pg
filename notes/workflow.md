@@ -59,4 +59,4 @@ For each state:
 (11) Turn the state on in the website
 
 * Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-* Remove the NYI one-liner from the state's page in docs/_pages/pages/XX.markdown
+* On the state's page in docs/_pages/pages/XX.markdown, change the layout to 'state' and remove the NYI one-liner
