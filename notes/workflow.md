@@ -38,7 +38,7 @@ For each state:
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 * Move it to the data/XX/ folder
 
-(7) Pull the ratings for it, using the pull_map_ratings.py script
+(x) Pull the ratings for it, using the pull_map_ratings.py script <<< This is done by analyze_state.py. Dup?
 
 (8) For each duplicated Official and Notable map in DRA:
 

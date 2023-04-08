@@ -29,9 +29,7 @@ def diff_two_plans(
     from_districts: dict[int, District],
     features: dict[str, Feature],
 ) -> list[Region]:
-    """
-    Diff two inverted plans (sets of districts), a current/to plan and a from/compare plan.
-    """
+    """Diff two inverted plans (sets of districts), a current/to plan and a from/compare plan."""
 
     regions: list[Region] = list()
 
@@ -64,9 +62,8 @@ def diff_two_plans(
 
 
 def validate_plans(inverted_plans) -> bool:
-    """
-    Validate that all plans have the same number of blocks.
-    """
+    """Validate that all plans have the same number of blocks."""
+
     blocks_by_plan: list[int] = []
 
     for plan in inverted_plans:

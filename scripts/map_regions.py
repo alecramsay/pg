@@ -30,7 +30,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-s",
         "--state",
-        default="AZ",
+        default="NC",
         help="The two-character state code (e.g., MD)",
         type=str,
     )

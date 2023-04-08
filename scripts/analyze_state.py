@@ -68,7 +68,7 @@ os.system(f"scripts/write_ratings_table.py {xx}")
 ### DIFF THE PLANS ###
 
 print("Diffing plans ...")
-os.system(f"scripts/diff_plans.py {xx}")
+os.system(f"scripts/diff_plans.py -s {xx}")
 
 
 # TODO - Add map regions
