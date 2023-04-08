@@ -51,8 +51,3 @@ For each state:
 * Move it to the docs/assets/images/ folder
 
 (9) Analyze the Official & Notable maps, using the analyze_state.py script
-
-(10) Finally, map the regions identified above: <<< TODO: Fix these scripts
-
-* First run the map_regions.py script to create maps (.geojson) of the regions for the various maps
-* Then use the plot_regions.py script to generate plots for those maps -- experiment with the height & width that work best for the state's shape; cut the resulting image down to the right size

@@ -71,9 +71,14 @@ print("Diffing plans ...")
 os.system(f"scripts/diff_plans.py -s {xx}")
 
 
-# TODO - Add map regions
-# TODO - Plot regions
+### ADD & PLOT MAP REGIONS ###
 
-print("Done.")
+print("Add map regions ...")
+os.system(f"scripts/map_regions.py -s {xx}")
+
+print("Plot regions ...")
+os.system(f"scripts/plot_regions.py -s {xx}")
+
+print("Done!\n")
 
 pass
