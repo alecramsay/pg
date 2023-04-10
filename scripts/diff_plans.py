@@ -128,7 +128,7 @@ def main() -> None:
 
         # Write a summary of regions to a CSV file
 
-        regions_csv: str = path_to_file([assets_dir]) + file_name(
+        regions_csv: str = path_to_file([site_data_dir]) + file_name(
             [xx, yyyy, plan_type, label, "regions_summary"], "_", "csv"
         )
 

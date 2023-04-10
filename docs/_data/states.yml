@@ -356,8 +356,8 @@
   minority: 9b6064ae-6aa8-4ea7-af3e-2e0dde3c123f
   compact: 5ece8404-5181-4aef-8dbf-126029f60dad
   splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: 8a1857af-5926-4371-acf5-321d233bdb04
+  ready: true
 - xx: WI
   name: Wisconsin
   official: 130feb94-6532-4102-91de-92777af7c0d9
