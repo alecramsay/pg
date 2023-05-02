@@ -2,7 +2,7 @@
 layout: default
 ---
 
-This site introduces a new concept for understanding & evaluating redistricting maps: baseline districts.[^1]
+This site introduces a new concept -- baseline districts -- and uses it to illustrate the tradeoffs inherent redistricting states.[^1]
 
 *Note: This web site is still a work in progress, but I've started to add preliminary results for some states.*
 
@@ -13,7 +13,7 @@ This site introduces a new concept for understanding & evaluating redistricting 
 - [Sample](#sample)
 - [Motivation](#motivation)
 - [Plan](#plan)
-- [Solution](#solution)
+- [Method](#method)
 - [Example](#example)
 
 ## Concept
@@ -92,7 +92,7 @@ one effectively must start with the baseline districts and modify them.
 
 My plan mirrored the hypotheses:
 
-1.  First, develop an automated solution generating baseline districts \--
+1.  First, develop an automated method for generating baseline districts \--
     Justin Levitt keyed me into the idea that baseline districts are
     maximally population compact (vs. geometric compact), based on
     physics concept of moment of inertia. Some searching led me to
@@ -111,16 +111,18 @@ Of course, the latter depended on the former: without a well-defined,
 defensible baseline map, there's no easy way to compare the notable maps
 for a state.
 
-## Solution 
+## Method 
 
 I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
-Todd Proebsting, he got intrigued, and he developed a solution based on Balzer's work.
-The evolution of our approach is described [here](./_pages/history.markdown).
+Todd Proebsting, he got intrigued, and he developed a solution based on 
+[Balzer's work](Capacity-Constrained Voronoi Tessellations: Computation and Applications).
+The evolution of our approach is described [here](./_pages/method.markdown).
 
 ## Example
 
-You can see a representative example of the analysis that baseline districts enable on the [Example](./_pages/example.markdown) page.
+You can see a representative example of the analysis that baseline districts enable 
+on the [Example](./_pages/example.markdown) page.
 
 ---
 
@@ -129,6 +131,8 @@ You can see a representative example of the analysis that baseline districts ena
 [^1]: The name of this site -- Redistricting Almanac -- is a hat tip to FiveThirtyEight's magisterial
     [Atlas of Redistricting](https://medium.com/dra-2020/atlas-of-redistricting-maps-14ea4d0874e5). 
     The [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
+    I use the term "almanac" instead, to suggest that this analysis could be updated periodically as new data are released,
+    e.g., in 2030.
 
 [^2]: I wrote the analytics portion of Dave\'s Redistricting (DRA). I
     would like to thank my DRA colleague Terry Crowley for the

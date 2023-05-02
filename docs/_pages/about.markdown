@@ -35,7 +35,7 @@ Given the number of maps involved -- 37 states x 7 Official, Notable, and baseli
 
 3. Pulled the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script
 
-4. Created a baseline map for a state, using the tools in the 'baseline' repo
+4. Created a baseline map for a state, using the tools in my ['baseline' repo](https://github.com/alecramsay/baseline)
 
 5. For each baseline map:
   - Imported the map, using the import_base_map.sh script -- then in DRA:

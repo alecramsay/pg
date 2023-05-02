@@ -1,8 +1,9 @@
-Our solution for generating baseline districts evolved through an exploratory process:
+The method for generating baseline districts that [Todd Proebsting](http://proebsting.cs.arizona.edu/) & I 
+developed evolved through an exploratory process:
 
 -   I started trying to port Andrew Spann, Dan Gulotta, Daniel Kane's C code to Python. 
     But I could never quite get the solver to reliably work with multiple states.
--   When Todd Proebsting got involved, he found and implemented Balzer's algorithm for computing Voronoi tessellations, 
+-   When Todd got involved, he found and implemented Balzer's algorithm for computing Voronoi tessellations, 
     adapting it slightly to redistricting. With that in hand, we proceeded through a series of experiments.
 -   First, we got Balzer to work with single pass, using various geographic granularities, e.g. blockgroups (BGs), blocks.
 -   Then, to try to make the resulting maps stable -- invariant to specific starting points -- we generated maps by iterating on 
@@ -24,4 +25,14 @@ Our solution for generating baseline districts evolved through an exploratory pr
     This prompted us to revise the approach to zero population precincts which Todd's process ignored. Rather than remove them, we started assigning them infinitesimally small populations so they would be assigned to districts in the normal course of processing
     and connectivity would be maintained.
     
-TODO - We are here ...
+This is the method as it stands today (elliding I/O details):
+
+-   Generate random district centroids ("sites", in Balzer terminology).
+-   Assign each precinct to the nearest centroid. TODO - is this right? NOTE - The results may not be contiguous.
+-   Run Balzer, to create an initial, population balanced, but not necessarily contiguous set of assignments with lowest energy.
+-   Modify those assignments to make the districts contiguous but possibly not 'roughly equal' in population.
+-   Run Balzer again, to create the lowest energy contiguous set of assignments, still possibly not 'roughly equal' in population.
+-   Rebalance the assignments so that the districts remain contiguous and now are 'roughly equal' in population.
+-   Run Balzer a third time, to create population balanced, contiguous, lowest energy assignments.
+-   TODO: Consolidate -- What is the one-liner on what this does?
+-   TODO: Complete -- Ditto
