@@ -14,6 +14,7 @@ This site introduces a new concept for understanding & evaluating redistricting 
 - [Motivation](#motivation)
 - [Plan](#plan)
 - [Solution](#solution)
+- [Example](#example)
 
 ## Concept
 
@@ -26,7 +27,7 @@ The resulting districts are convex and not oddly shaped like other simple geomet
 Map drawers use additional information -- demographic data, election results, municipal boundaries, etc. -- to, in effect,
 stretch these baseline boundaries to achieve their desired mix of policy goals, e.g., more proportional, less county splitting, etc.
 In other words, baseline districts are not only the implicit starting point -- *not* a blank canvas -- for redistricting a state,
-they can also illustrate tradeoffs inherent in a redistricting a state.
+they can also illustrate the tradeoffs inherent in a redistricting a state.
 
 ## Definition
 
@@ -39,10 +40,11 @@ Then we selected the map that met the following criteria:
 4. Had a population deviation within +/– 1% of the target district population.
 
 The specifics of our heuristic approach are not main contribution of this study.
-Nor are the specific baseline maps we generated, though we think they are strong contenders for the lowest energy maps.
-The important contribution here is the idea of baseline districts and what they reveal about other maps, the tradeoffs inherent in a state\'s political geography.
-If others can find lower energy maps that meet the four criteria above, that's great. 
-Those should be considered the baseline instead.
+Nor are the specific baseline maps we generated, though we think they are strong contenders for the lowest energy maps
+and interesting in their own right.
+The important contribution here is the *idea* of baseline districts and what they reveal about other maps, the tradeoffs inherent in a state\'s political geography.
+If someone else can find a lower energy map for a state that meets the four criteria above, that's great. 
+It should be considered the baseline instead.
 
 ## Sample
 
@@ -73,7 +75,8 @@ Hence, two hypotheses motivated this research:
 2.  The districts for the notable maps for a state overlap significantly
     -- It seems obvious that -- barring extremely serpentine districts
     -- valid redistricting maps for a state *must* share common core
-    areas. I wanted to show this empirically and visually, by comparing
+    areas because of the underlying population geography. 
+    I wanted to show this empirically and visually, by comparing
     each map to the baseline map.[^6]
 
 To the extent that the latter were true, it would formalize my intuition
@@ -89,7 +92,7 @@ one effectively must start with the baseline districts and modify them.
 
 My plan mirrored the hypotheses:
 
-1.  Develop an automated solution generating baseline districts \--
+1.  First, develop an automated solution generating baseline districts \--
     Justin Levitt keyed me into the idea that baseline districts are
     maximally population compact (vs. geometric compact), based on
     physics concept of moment of inertia. Some searching led me to
@@ -99,7 +102,7 @@ My plan mirrored the hypotheses:
     and Diminishing Halves Models\" at MCM 07. My plan was to
     reimplement it in Python.
 
-2.  Then compare each notable map to the baseline map -- Given the
+2.  Then compare each notable map to the baseline map for the state -- Given the
     number of maps involved (222), I planned to develop a pipeline of
     tools to automate as much of the workflow as possible to produce the
     tabular and visual artifacts for this web site.
@@ -114,6 +117,10 @@ I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
 Todd Proebsting, he got intrigued, and he developed a solution based on Balzer's work.
 The evolution of our approach is described [here](./_pages/history.markdown).
+
+## Example
+
+You can see a representative example of the analysis that baseline districts enable on the [Example](./_pages/example.markdown) page.
 
 ---
 
