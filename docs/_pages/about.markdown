@@ -5,7 +5,7 @@ permalink: about/
 ---
 
 This analysis covers the 37 states apportioned three or more congressional districts in the 2020 census.
-States with only two congressional districts were excluded, because the baseline districts aren't interesting.
+States with only two congressional districts were excluded, because the baseline districts aren't well-defined.
 
 ## Data
 

@@ -2,18 +2,20 @@
 layout: default
 ---
 
-This site introduces a new concept for understanding & evaluating redistricting maps: baseline districts.
+This site introduces a new concept for understanding & evaluating redistricting maps: baseline districts.[^1]
 
 *Note: This web site is still a work in progress, but I've started to add preliminary results for some states.*
 
 ## Contents
 
-- [Baseline Districts](#baseline-districts)
-- [Study](#study)
-- [Hypotheses](#hypotheses)
+- [Concept](#concept)
+- [Definition](#definition)
+- [Sample](#sample)
+- [Motivation](#motivation)
 - [Plan](#plan)
+- [Solution](#solution)
 
-## Baseline Districts
+## Concept
 
 The "baseline districts" for a state are generated only using total census population. 
 They characterize the "population geography" of a state, i.e., how many people live where.
@@ -24,11 +26,9 @@ The resulting districts are convex and not oddly shaped like other simple geomet
 Map drawers use additional information -- demographic data, election results, municipal boundaries, etc. -- to, in effect,
 stretch these baseline boundaries to achieve their desired mix of policy goals, e.g., more proportional, less county splitting, etc.
 In other words, baseline districts are not only the implicit starting point -- *not* a blank canvas -- for redistricting a state,
-they also illustrate tradeoffs inherent in a redistricting a state.
+they can also illustrate tradeoffs inherent in a redistricting a state.
 
-## Study
-
-This study covers the 37 states apportioned three or more congressional districts in the 2020 census.[^1]
+## Definition
 
 To generate the baseline maps presented here, we developed a heuristic approach for finding the lowest energy assignment of precincts to districts, given random starting points, and we ran this process 100 times for each state.
 Then we selected the map that met the following criteria:
@@ -41,17 +41,22 @@ Then we selected the map that met the following criteria:
 The specifics of our heuristic approach are not main contribution of this study.
 Nor are the specific baseline maps we generated, though we think they are strong contenders for the lowest energy maps.
 The important contribution here is the idea of baseline districts and what they reveal about other maps, the tradeoffs inherent in a state\'s political geography.
-If others can find lower energy maps that meet the four criteria above, that's great. Those should be considered the baseline instead.
+If others can find lower energy maps that meet the four criteria above, that's great. 
+Those should be considered the baseline instead.
+
+## Sample
+
+This study covers the 37 states apportioned three or more congressional districts in the 2020 census.[^2]
 
 This analysis uses maps drawn in Dave's Redistricting. Besides the
 official maps used for the 2022 congressional elections, it uses the
 five "notable maps" for each state that have the highest ratings for
 proportionality, competitiveness, minority representation, compactness,
-and county--district splitting.[^2] 
+and county--district splitting.[^3] 
 
-For [each state](./_pages/states.markdown), we compare these six maps to the baseline districts we generated.[^3]
+For [each state](./_pages/states.markdown), we compare these six maps to the baseline districts we generated.[^4]
 
-### Hypotheses
+## Motivation
 
 The notable maps in DRA during the 2020 redistricting
 cycle made it clear to me that there were tradeoffs between the five dimensions:
@@ -62,25 +67,25 @@ Hence, two hypotheses motivated this research:
 
 1.  There are well-defined "baseline districts" for a state that only
     depend on total census population -- While I introduced the concept
-    several years ago,[^4] I had not developed an algorithm for
+    several years ago,[^5] I had not developed an algorithm for
     generating them automatically.
 
 2.  The districts for the notable maps for a state overlap significantly
     -- It seems obvious that -- barring extremely serpentine districts
     -- valid redistricting maps for a state *must* share common core
     areas. I wanted to show this empirically and visually, by comparing
-    each map to the baseline map.[^5]
+    each map to the baseline map.[^6]
 
-To the extent that the latter were true, it would confirm my intuition
+To the extent that the latter were true, it would formalize my intuition
 that the essence of non-gerrymandering districting can be thought of as
 the rubber band-like stretching of the boundaries of baseline districts
-to achieve a mix of goals, e.g., more proportional, more competitive,
+to achieve a mix of policy goals, e.g., more proportional, more competitive,
 etc. In other words, the non-gerrymandering redistricting problem is
 relatively constrained by the context of a state's political geography
-and, even more fundamentally, it's population geography. In effect,
-one effectively starts with baseline districts and modifies them.
+and, even more fundamentally, by it's population geography. In effect,
+one effectively must start with the baseline districts and modify them.
 
-### Plan
+## Plan
 
 My plan mirrored the hypotheses:
 
@@ -103,16 +108,22 @@ Of course, the latter depended on the former: without a well-defined,
 defensible baseline map, there's no easy way to compare the notable maps
 for a state.
 
+## Solution 
+
 I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
-Todd Proebsting, he got intrigued, and developed a solution, based on Balzer's work.
-The evolution of this solution is described in [History](./_pages/history.markdown).
+Todd Proebsting, he got intrigued, and he developed a solution based on Balzer's work.
+The evolution of our approach is described [here](./_pages/history.markdown).
 
 ---
 
-### Footnotes
+## Footnotes
 
-[^1]: I wrote the analytics portion of Dave\'s Redistricting (DRA). I
+[^1]: The name of this site -- Redistricting Almanac -- is a hat tip to FiveThirtyEight's magisterial
+    [Atlas of Redistricting](https://medium.com/dra-2020/atlas-of-redistricting-maps-14ea4d0874e5). 
+    The [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
+
+[^2]: I wrote the analytics portion of Dave\'s Redistricting (DRA). I
     would like to thank my DRA colleague Terry Crowley for the
     command-line tool support that made the scope of this project
     feasible, the DRA community for pushing the dimensional limits of
@@ -121,12 +132,12 @@ The evolution of this solution is described in [History](./_pages/history.markdo
     Balzer's algorithm for generating capacity-constrained Vornonoi
     tessellations to redistricting.
 
-[^2]: See "Notable Maps"
+[^3]: See "Notable Maps"
     \[https://medium.com/dra-2020/notable-maps-66d744933a48\].
 
-[^3]: See GitHub \[https://github.com/proebsting/dccvt\].
+[^4]: See GitHub \[https://github.com/proebsting/dccvt\].
 
-[^4]: See "Baseline Congressional Districts: A Benchmark for Comparison"
+[^5]: See "Baseline Congressional Districts: A Benchmark for Comparison"
     \[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3\].
 
-[^5]: So, five comparisons instead of ten (5 choose 2).
+[^6]: So, five comparisons instead of ten (5 choose 2).

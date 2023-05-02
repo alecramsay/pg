@@ -1,6 +1,4 @@
-# History
-
-Our code for generating baseline districts came to be through an evolutionary process:
+Our solution for generating baseline districts evolved through an exploratory process:
 
 -   I started trying to port Andrew Spann, Dan Gulotta, Daniel Kane's C code to Python. 
     But I could never quite get the solver to reliably work with multiple states.
