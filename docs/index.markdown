@@ -2,37 +2,63 @@
 layout: default
 ---
 
-This project characterizes the redistricting tradeoffs inherent in a
-state\'s political geography, using the 37 states apportioned three or
-more congressional districts in the 2020 census.[^1]
+This site introduces a new concept for understanding & evaluating redistricting maps: baseline districts.
 
 *Note: This web site is still a work in progress, but I've started to add preliminary results for some states.*
 
-### Background
+## Contents
+
+- [Baseline Districts](#baseline-districts)
+- [Study](#study)
+- [Hypotheses](#hypotheses)
+- [Plan](#plan)
+
+## Baseline Districts
+
+The "baseline districts" for a state are generated only using total census population. 
+They characterize the "population geography" of a state, i.e., how many people live where.
+Broadly speaking, they are the "least information" maps that maximize population compactness.
+In physics terms, they can be thought of as minimizing the moment of inertia or energy.
+The resulting districts are convex and not oddly shaped like other simple geometric approaches.
+
+Map drawers use additional information -- demographic data, election results, municipal boundaries, etc. -- to, in effect,
+stretch these baseline boundaries to achieve their desired mix of policy goals, e.g., more proportional, less county splitting, etc.
+In other words, baseline districts are not only the implicit starting point -- *not* a blank canvas -- for redistricting a state,
+they also illustrate tradeoffs inherent in a redistricting a state.
+
+## Study
+
+This study covers the 37 states apportioned three or more congressional districts in the 2020 census.[^1]
+
+To generate the baseline maps presented here, we developed a heuristic approach for finding the lowest energy assignment of precincts to districts, given random starting points, and we ran this process 100 times for each state.
+Then we selected the map that met the following criteria:
+
+1. The lowest energy
+2. That was contiguous
+3. That didn't split any precincts, and
+4. Had a population deviation within +/– 1% of the target district population.
+
+The specifics of our heuristic approach are not main contribution of this study.
+Nor are the specific baseline maps we generated, though we think they are strong contenders for the lowest energy maps.
+The important contribution here is the idea of baseline districts and what they reveal about other maps, the tradeoffs inherent in a state\'s political geography.
+If others can find lower energy maps that meet the four criteria above, that's great. Those should be considered the baseline instead.
 
 This analysis uses maps drawn in Dave's Redistricting. Besides the
 official maps used for the 2022 congressional elections, it uses the
 five "notable maps" for each state that have the highest ratings for
 proportionality, competitiveness, minority representation, compactness,
-and county--district splitting.[^2]
+and county--district splitting.[^2] 
 
-It compares them to "baseline districts" which are algorithmically drawn
-only using total census population.[^3] These are "least information"
-maps that maximize population compactness. The resulting districts are
-convex and not oddly shaped like other simple geometric approaches. Maps
-that maximize one of notable dimensions, such as partisan
-proportionality or opportunity for minority representation, necessarily
-include more data, such as past elections or race & ethnicity,
-respectively.
+For [each state](./_pages/states.markdown), we compare these six maps to the baseline districts we generated.[^3]
 
 ### Hypotheses
 
-Comparing other maps to the notable maps during the 2020 redistricting
-cycle made clear that there were tradeoffs between the five dimensions:
+The notable maps in DRA during the 2020 redistricting
+cycle made it clear to me that there were tradeoffs between the five dimensions:
 for example, the most proportional map might be less compact than the
 most compact map, and vice versa.
 
-Two hypotheses motivated this research:
+Hence, two hypotheses motivated this research:
 
 1.  There are well-defined "baseline districts" for a state that only
     depend on total census population -- While I introduced the concept
@@ -51,7 +77,8 @@ the rubber band-like stretching of the boundaries of baseline districts
 to achieve a mix of goals, e.g., more proportional, more competitive,
 etc. In other words, the non-gerrymandering redistricting problem is
 relatively constrained by the context of a state's political geography
-and, even more fundamentally, it's population geography.
+and, even more fundamentally, it's population geography. In effect,
+one effectively starts with baseline districts and modifies them.
 
 ### Plan
 
@@ -78,12 +105,7 @@ for a state.
 
 I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
-Todd Proebsting, he got intrigued, and developed a theoretically sound
-solution, based on Balzer's work. 
-
-### Results
-
-TBD: More ...
+Todd Proebsting, he got intrigued, and developed a solution, based on Balzer's work. 
 
 ---
 
@@ -101,7 +123,7 @@ TBD: More ...
 [^2]: See "Notable Maps"
     \[https://medium.com/dra-2020/notable-maps-66d744933a48\].
 
-[^3]: See GitHub \[https://github.com/proebsting/balzer\].
+[^3]: See GitHub \[https://github.com/proebsting/dccvt\].
 
 [^4]: See "Baseline Congressional Districts: A Benchmark for Comparison"
     \[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3\].

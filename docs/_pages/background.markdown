@@ -1,14 +1,11 @@
 ---
 layout: page
-title: Framework
-permalink: framework/
+title: Background
+permalink: background/
 ---
 
-This is a high-level, "three C's" framework for thinking about the redistricting
-problem.
-
-Aside from the obvious politics, drawing a redistricting map involves
-three considerations:
+Aside from the obvious politics, 
+one can think about the problem of drawing redistricting maps as involving three C's:
 
 -   Constraints
 
@@ -16,7 +13,7 @@ three considerations:
 
 -   Context
 
-Each is described below.
+Each is described below. This site introduces an important concept for understanding context: baseline districts.
 
 ### Constraints
 
@@ -65,7 +62,7 @@ measurements to a common \[0--100\] scale where bigger is better.
 
 -   Competitiveness
 
--   Minority representation
+-   Opportunity for minority representation
 
 -   Compactness, and
 
@@ -77,7 +74,7 @@ is anointed as a "notable" map.[^6]
 ### Context
 
 Finally, and generally less well appreciated, redistricting in each
-state is different: the challenges, tradeoffs, and what is possible in
+state is unique: the challenges, tradeoffs, and what is possible in
 Maryland are different than in North Carolina. This is due to each
 state's unique 'political geography': the geographic distribution of
 people with different characteristics throughout the state.
@@ -88,6 +85,8 @@ label the total population for a state by census block the state's
 other characteristics, such as age, race & ethnicity, partisan lean,
 etc. Political geography is a superset of population geography that
 considers these other characteristics as well.
+
+The population geography of a state can be characterized by a set of "baseline districts."
 
 ---
 
