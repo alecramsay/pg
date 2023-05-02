@@ -105,7 +105,8 @@ for a state.
 
 I tried to reimplement Gulotta's C++ moment of inertia code in Python with
 only partial success. Fortunately, I shared what I was working on with
-Todd Proebsting, he got intrigued, and developed a solution, based on Balzer's work. 
+Todd Proebsting, he got intrigued, and developed a solution, based on Balzer's work.
+The evolution of this solution is described in [History](./_pages/history.markdown).
 
 ---
 
