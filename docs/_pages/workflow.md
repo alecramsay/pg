@@ -4,7 +4,7 @@ title: Workflow
 permalink: workflow/
 ---
 
-This describes the workflow for creating the maps for this site.
+This note describes the workflow that I used for creating the maps for this study.
 
 (1) Copy Official maps
 * Snapshot Official map ids in pg/constants.py -- DONE
@@ -30,7 +30,7 @@ This describes the workflow for creating the maps for this site.
 
 Then, for each state:
 
-(4) Create a baseline map using [the 'baseline' workflow](baseline-workflow.md)
+(4) Create a baseline map using [the 'baseline' workflow](baseline_workflow.md)
 
 (5) Import the map into DRA, using the import_base_map.sh script
 

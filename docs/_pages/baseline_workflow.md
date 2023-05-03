@@ -4,8 +4,9 @@ title: Baseline Workflow
 permalink: baseline-workflow/
 ---
 
-This pages describes the workflow for generating a baseline map for a state, using the code
-in my [baseline repository](https://github.com/alecramsay/baseline).
+This page describes the workflow for generating a baseline map for a state, using the code
+in my [baseline repository](https://github.com/alecramsay/baseline) which in turn used the
+code in Todd's [dccvt repository](https://github.com/proebsting/dccvt).
 
 ## Summary
 

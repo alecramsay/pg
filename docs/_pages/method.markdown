@@ -24,11 +24,12 @@ developed evolved through an exploratory process:
 -   These issues prompted us modify the pure Balzer approach of randomly assigning the precincts to districts to assigning them 
     based on a real, contiguous map and then running Balzer on the precincts maintaining contiguity across all swaps. 
     Unfortunately, it seemed that this approach was very sensitive to the map chosen to establish the initial precinct-to-district assignments.
--   To regain the benefit of random seeds and multiple iterations, Todd created a multi-pass approach. [TODO: Describe create.sh.]
--   Then, to generalize the approach to states with water-only precincts -- e.g., MD and MI -- I identified and removed water-only 
-    precincts from the data and graphs. Todd's code did not have to change. That let us handle most other states.
+-   To regain the benefit of random seeds and multiple iterations, Todd created a multi-pass approach very similar to the one
+    described below.
+-   To generalize the approach to states with water-only precincts -- e.g., MD and MI -- I identified and removed them
+    from the data and graphs. Todd's code did not have to change. That let us handle most other states.
 -   However, we ultimately ran into issues with unpopulated land surrounding populated precincts, e.g., in KS, NV, and UT. 
-    This prompted us to revise the approach to zero population precincts which Todd's process ignored. Rather than remove them, we started assigning them infinitesimally small populations so they would be assigned to districts in the normal course of processing
+    This prompted us to further revise the approach to zero population precincts which Todd's process ignored. Rather than remove them, we started assigning them infinitesimally small populations so they would be assigned to districts in the normal course of processing
     and connectivity would be maintained.
     
 This is the method as it stands today (elliding I/O details):
@@ -43,6 +44,4 @@ This is the method as it stands today (elliding I/O details):
 -   TODO: Consolidate -- What is the one-liner on what this does?
 -   TODO: Complete -- Ditto
 
-
-[Workflow](workflow.md)
-[Baseline Workflow](baseline_workflow.md)
+I used this solution in Step 4 of the overall workflow described [here](workflow.md).
