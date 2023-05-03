@@ -1,4 +1,8 @@
-# Baseline Workflow
+---
+layout: page
+title: Baseline Workflow
+permalink: baseline-workflow/
+---
 
 This pages describes the workflow for generating a baseline map for a state, using the code
 in my [baseline repository](https://github.com/alecramsay/baseline).

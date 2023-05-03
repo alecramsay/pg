@@ -1,3 +1,9 @@
+---
+layout: page
+title: Method
+permalink: method/
+---
+
 The method for generating baseline districts that [Todd Proebsting](http://proebsting.cs.arizona.edu/) & I 
 developed evolved through an exploratory process:
 
@@ -36,3 +42,7 @@ This is the method as it stands today (elliding I/O details):
 -   Run Balzer a third time, to create population balanced, contiguous, lowest energy assignments.
 -   TODO: Consolidate -- What is the one-liner on what this does?
 -   TODO: Complete -- Ditto
+
+
+[Workflow](workflow.md)
+[Baseline Workflow](baseline_workflow.md)

@@ -1,4 +1,8 @@
-# Analysis Workflow
+---
+layout: page
+title: Workflow
+permalink: workflow/
+---
 
 This describes the workflow for creating the maps for this site.
 
