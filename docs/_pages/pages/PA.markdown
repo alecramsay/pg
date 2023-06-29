@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Pennsylvania
 permalink: states/PA/
 
@@ -10,4 +10,4 @@ map-width: 700
 xx: "PA"
 ---
 
-<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
+TODO: Summarize the tradeoffs for congressional redistricting inherent in PA's political geography.

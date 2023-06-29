@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Maryland
 permalink: states/MD/
 
@@ -10,4 +10,4 @@ map-width: 700
 xx: "MD"
 ---
 
-<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
+TODO: Summarize the tradeoffs for congressional redistricting inherent in MD's political geography.

@@ -16,8 +16,8 @@
   minority: 5b4dfad5-ee34-469d-bdef-7f07a749b2c5
   compact: 970224ba-4373-48fd-9e3e-15527b63c9c5
   splitting: 7ff7eec5-1b01-422b-bb34-d78da0f8fcb8
-  baseline: 8ab10e95-a8cb-4bdc-94ca-b6d7d3af8b28
-  ready: false
+  baseline: 82cdf840-22b9-4af7-9e5a-0c6a17c4b88c
+  ready: true
 - xx: AR
   name: Arkansas
   official: bba50394-d34c-4f0d-9056-8b9e6a029bfd
