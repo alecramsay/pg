@@ -139,7 +139,6 @@ One can even imagine a contest with prize money for finding the lowest energy ma
 
 ## Acknowledgements
 
-I wrote the analytics portion of Dave\'s Redistricting (DRA). 
 I would like to thank my DRA colleague Terry Crowley for the
 command-line tool support that made the scope of this project
 feasible, the DRA community for pushing the dimensional limits of
