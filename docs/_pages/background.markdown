@@ -86,7 +86,8 @@ other characteristics, such as age, race & ethnicity, partisan lean,
 etc. Political geography is a superset of population geography that
 considers these other characteristics as well.
 
-The population geography of a state can be characterized by a set of "baseline districts."
+As this study demonstrates, 
+the population geography of a state can be characterized by a set of "baseline districts."
 
 ---
 
