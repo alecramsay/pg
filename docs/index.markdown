@@ -13,7 +13,6 @@ This site introduces a new concept -- baseline districts -- and uses it to show 
 - [Plan](#plan)
 - [Scope](#scope)
 - [Method](#method)
-- [Example](#example)
 - [Acknowledgements](#acknowledgements)
 
 ## Motivation
@@ -108,6 +107,9 @@ maximize these dimensions, and together they illustrate the tradeoffs between th
 
 For [each state](./_pages/states.markdown), I compare these six maps to the baseline districts I generated.
 
+You can see a representative example of the analysis that baseline districts enable 
+on the [Example](./_pages/example.markdown) page.
+
 ## Method 
 
 At first I tried to reimplement Gulotta's C++ moment of inertia code in Python with
@@ -118,7 +120,8 @@ The evolution of our heuristic approach for finding the lowest energy assignment
 is described [here](./_pages/method.markdown).
 
 To generate the baseline maps presented here, we ran this process 100 times for each state
-using random starting points.
+using random starting points,
+using the 2020 Census VTD shapes and population data.[^5]
 Then we selected the lowest energy map that met the following constraints:
 
 1. Contiguous
@@ -134,11 +137,6 @@ If someone else can find a lower energy map for a state that meets the four crit
 It should be considered the baseline instead.
 One can even imagine a contest with prize money for finding the lowest energy map for a state.
 
-## Example
-
-You can see a representative example of the analysis that baseline districts enable 
-on the [Example](./_pages/example.markdown) page.
-
 ## Acknowledgements
 
 I wrote the analytics portion of Dave\'s Redistricting (DRA). 
@@ -149,6 +147,7 @@ congressional redistricting in each state with their Notable Maps,
 and Todd Proebsting for making baseline districts real by adapting
 Balzer's algorithm for generating capacity-constrained Vornonoi
 tessellations to redistricting.
+
 ---
 
 ## Footnotes
@@ -166,3 +165,5 @@ tessellations to redistricting.
 
 [^4]: It turns out, one cannot simply run a Voronoi algorithm over the precincts. There are lots of practical issues 
     and real-world complications to deal with. See GitHub \[https://github.com/proebsting/dccvt\].
+
+[^5]: California and Oregon don't have VTDs, so we used blockgroups instead like DRA. Also, the official Florida data is pretty messed up, so we used DRA's GeoJSON file of corrected Florida VTDs.
