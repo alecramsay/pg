@@ -317,7 +317,7 @@
   compact: 57c3bb60-5f54-4cc1-a1b7-4942584fdc6f
   splitting: 512a7c6f-4dde-4773-a8b0-a933014e7982
   baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  ready: false 
 - xx: TX
   name: Texas
   official: 89c7b67a-6164-42ee-89d4-072a4fca82c1
