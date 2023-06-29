@@ -296,8 +296,8 @@
   minority: 17290afc-2e93-407b-af6c-c6a26d051dad
   compact: e0fa7e79-26a4-4d27-8028-745a84fea1c1
   splitting: dc16b2ec-4609-42ca-9ea8-02697564d52c
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: 34f4ae9c-c4cb-42e4-b551-841bcf4a95f1
+  ready: true
 - xx: SC
   name: South Carolina
   official: 68e91af2-1a68-4bc7-aa85-a48e52f07da3
@@ -346,8 +346,8 @@
   minority: 3ff32d6a-1ddc-47df-ba3f-d1004f6ec6ab
   compact: 30a7dba3-43b0-4815-8ccd-7abbcfcf5cfa
   splitting: 9bd6b5b4-f8f6-4372-a45f-77b6b1668596
-  baseline: 9981cdbe-ac6a-41f1-ab61-5ddebdd4f715
-  ready: false
+  baseline: c7cba809-9d12-428c-b013-9b4b9f9a5a91
+  ready: true
 - xx: WA
   name: Washington
   official: be06fce9-90a2-4bc0-9659-8eacafcd4afc
