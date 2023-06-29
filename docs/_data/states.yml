@@ -146,8 +146,8 @@
   minority: af482991-ee6c-4180-8782-57f667a55919
   compact: 530f41fb-d39f-492a-9028-8886bd499eed
   splitting: d26ec0e1-f53a-4ebd-9aa8-7e18accb04af
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: f6624aac-a170-4b52-a9b4-121322b12a9a
+  ready: true
 - xx: MA
   name: Massachusetts
   official: 8b9bdb2d-da5e-43db-acf1-08175c1718ba
