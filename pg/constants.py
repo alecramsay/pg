@@ -776,43 +776,42 @@ notables_copy: dict[str, dict] = {
 
 
 baseline_maps: dict[str, str] = {
-    "AL": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "AR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "AZ": "83e28203-c0c9-4034-bc99-9aa024945b3a",  # 04/24/23
-    "CA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "CO": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "CT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "FL": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "GA": "fc0fd1f1-38f8-4513-aa26-f69e111ca3a1",  # 04/24/23
-    "IA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "IL": "ed830071-22bf-4a30-92ce-a4d2f9a7dd8a",  # 04/24/23
-    "IN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "KS": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "KY": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "LA": "c1bbd7f1-ce04-4bb4-bdff-963bc92ff340",  # 04/07/23
-    "MA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MD": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MI": "be025e39-40e6-40ce-87a1-87270b188a50",  # 04/23/23
-    "MN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MO": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MS": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NC": "3fa75c2e-3790-483a-8664-2cc5e38250dc",  # 04/23/23
-    "NE": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NJ": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NM": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NV": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NY": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "OH": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "OK": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "OR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "PA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "SC": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "TN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "TX": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "UT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "VA": "9981cdbe-ac6a-41f1-ab61-5ddebdd4f715",  # 04/06/23
-    "WA": "8a1857af-5926-4371-acf5-321d233bdb04",  # 04/10/23
-    "WI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "AL": "d16848f7-22a0-41a5-b19e-719923c54ee3",  # 06/27/23
+    "AR": "c82e8e31-bd27-4f10-bf28-cf92a67a6c79",  # 06/27/23
+    "AZ": "82cdf840-22b9-4af7-9e5a-0c6a17c4b88c",  # 06/27/23
+    "CA": "239aeac7-3a09-4d6a-98d8-3de61f890b70",  # 06/27/23
+    "CO": "867ed109-5f5b-4aa7-bc21-36f5d8b122c9",  # 06/27/23
+    "CT": "1dbaa1de-68f0-4547-b6e9-db81617eb904",  # 06/27/23
+    "FL": "25a30adb-d32e-4f5e-a45a-42b2e08183ef",  # 06/28/23
+    "GA": "a44aa7ca-8fa0-43a2-9ba2-2b7f45a3c0f0",  # 06/28/23
+    "IA": "7292b0dc-4911-4878-9960-68ae3a6abc10",  # 06/28/23
+    "IL": "4dd9fe52-b38b-4f63-a041-36e3cd7afde0",  # 06/28/23
+    "IN": "75a78afd-46b9-427f-9410-62204c3c5939",  # 06/27/23
+    "KS": "9901f45d-6169-4577-ba9b-43c2fe2893d8",  # 06/28/23
+    "KY": "a3a061bc-3178-4ae6-bdf0-a525ad6639b2",  # 06/28/23
+    "LA": "e59f8d73-e552-4fd3-98d0-368722302720",  # 06/27/23
+    "MA": "cfc4a446-c1d1-451e-affa-a79c52ea671e",  # 06/28/23
+    "MD": "f6624aac-a170-4b52-a9b4-121322b12a9a",  # 06/28/23
+    "MI": "0e074091-d3a7-4a79-bec7-a6c4641db018",  # 06/28/23
+    "MN": "41893bfd-df1e-49b7-9322-6c134575dd35",  # 06/28/23
+    "MO": "d1fdc45c-7d5e-45f5-af95-832094008465",  # 06/28/23
+    "MS": "83d7ca09-2016-4b5a-b19c-e3009726557e",  # 06/28/23
+    "NC": "5e651803-4c40-4b04-a5ca-0c4e267b7036",  # 06/28/23
+    "NE": "9cda0d21-d033-45d8-b901-ada2d95e4a59",  # 06/28/23
+    "NJ": "b687ee33-5fae-43ce-b161-d49a1ddfab98",  # 06/28/23
+    "NM": "ce4101f0-3fed-4902-88d0-170b7d0e3ca9",  # 06/28/23
+    "NV": "b11b591a-94cf-475f-bb54-8f186e2cf12a",  # 06/28/23
+    "NY": "bea0efc4-52e7-4bbb-b942-67637ed4ab8a",  # 06/28/23
+    "OH": "82aca24a-0bf3-4e3d-abb2-ff51d934be01",  # 06/28/23
+    "OK": "09062ff7-ce80-42ad-bb8d-74cb9815e974",  # 06/28/23
+    "OR": "84976420-5049-4e8e-bafa-985d4a392d97",  # 06/28/23
+    "PA": "34f4ae9c-c4cb-42e4-b551-841bcf4a95f1",  # 06/28/23
+    "SC": "adb40672-45a8-43ba-bf72-a73bef7c98ab",  # 06/28/23
+    "TN": "9a80c60b-a2ec-4696-af5e-0653039fcbaf",  # 06/28/23
+    "TX": "bb716f76-f6b9-4f61-8590-451007a1190b",  # 06/28/23
+    "UT": "e1d41beb-0f2f-4029-b31f-ffa1593e2d9e",  # 06/28/23
+    "VA": "c7cba809-9d12-428c-b013-9b4b9f9a5a91",  # 06/28/23
+    "WA": "989ac5b1-debe-4960-b7ca-d29d089c858d",  # 06/28/23
+    "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
 }
-
 ### END ###
