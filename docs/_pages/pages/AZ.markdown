@@ -10,4 +10,10 @@ map-width: 700
 xx: "AZ"
 ---
 
-TODO: Summarize the tradeoffs for congressional redistricting inherent in AZ's political geography.
+The baseline congressional districts have middling proportionality (71), 
+opportunity for minority representation (67), and compactness (70), and
+poor competitiveness (32) and county-district splitting (21).
+
+Yet all five dimensions can be improved upon and nearly optimized without tradeoffs
+(71 &#x2192; 100, 32 &#x2192; 100, 67 &#x2192; 98, 70 &#x2192; 100, and 21 &#x2192; 83).
+There are essentially no policy tradeoffs in Arizona redistricting.
