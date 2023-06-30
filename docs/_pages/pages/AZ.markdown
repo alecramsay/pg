@@ -18,7 +18,7 @@ All five dimensions can be improved upon and nearly optimized at the same time w
 (71 &#x2192; 100, 32 &#x2192; 100, 67 &#x2192; 98, 70 &#x2192; 100, and 21 &#x2192; 83).
 
 There are essentially no policy tradeoffs.
-An average of 54% of population-weighted precincts assignments are shared between notable maps and the baseline.
+An average of 54% of population-weighted precincts assignments are shared between a notable map and the baseline.
 
 Relative to the baseline map, 
 the official map marginally improves proportionality (71 &#x2192; 82),

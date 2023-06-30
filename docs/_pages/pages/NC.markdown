@@ -20,7 +20,7 @@ but have only moderate competitiveness (56) and opportunity for minority represe
 - County-district splitting can be minimized (14 &#x2192; 90) at the expense of some competitiveness (56 &#x2192; 28).
 
 Those are the policy tradeoffs.
-An average of 62% of population-weighted precincts assignments are shared between notable maps and the baseline.
+An average of 62% of population-weighted precincts assignments are shared between a notable map and the baseline.
 
 The official map was ordered by the NC Supreme Court and challenged in Moore v. Harper.
 Relative to the baseline map, 
