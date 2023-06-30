@@ -20,3 +20,7 @@ but poor competitiveness (22) and county-district splitting (0).
 - County-district splitting can be minimized at the expense of some compactness (75 &#x2192; 33).
 
 Those are the policy tradeoffs. 
+An average of 62% of population-weighted precincts assignments are shared between notable maps and the baseline.
+
+Relative to the baseline map, 
+the official map reduces county-district splitting significantly (0 &#x2192; 45) at the expense of significant compactness (75 &#x2192; 35).
