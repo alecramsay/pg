@@ -29,10 +29,11 @@ developed evolved through an exploratory process:
 -   To generalize the approach to states with water-only precincts -- e.g., MD and MI -- I identified and removed them
     from the data and graphs. Todd's code did not have to change. That let us handle most other states.
 -   However, we ultimately ran into issues with unpopulated land surrounding populated precincts, e.g., in KS, NV, and UT. 
-    This prompted us to further revise the approach to zero population precincts which Todd's process ignored. Rather than remove them, we started assigning them infinitesimally small populations so they would be assigned to districts in the normal course of processing
+    This prompted us to further revise the approach to zero population precincts which Todd's process had ignored. 
+    Rather than remove them, we started assigning them infinitesimally small populations so they would be assigned to districts in the normal course of processing
     and connectivity would be maintained.
     
-This is the method as it stands today (elliding I/O details):
+This is the method as it stands today (elliding I/O details) <<< TODO: flesh this out with Todd
 
 -   Generate random district centroids ("sites", in Balzer terminology).
 -   Assign each precinct to the nearest centroid. TODO - is this right? NOTE - The results may not be contiguous.

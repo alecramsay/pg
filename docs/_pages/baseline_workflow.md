@@ -5,14 +5,14 @@ permalink: baseline-workflow/
 ---
 
 This page describes the workflow for generating a baseline map for a state, using the code
-in my [baseline repository](https://github.com/alecramsay/baseline) which in turn used the
+in my [baseline repository](https://github.com/alecramsay/baseline) which in turn uses the
 code in Todd's [dccvt repository](https://github.com/proebsting/dccvt).
 
 ## Summary
 
 -   Download files
 -   Create output directories
--   Extract & format precinct data
+-   Extract precinct data
 -   Extract a graph of precincts
 -   Generate candidate baselines
 -   Compare the candidate maps, and
@@ -54,7 +54,7 @@ scripts/extract_graph.py -s XX
 
 ## Generate candidate baselines
 
-Use the baseline_state.py script to generate a set of candidate baselines.
+Use the baseline_state.py script to generate 100 baseline candidates.
 
 ```
 scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
@@ -76,3 +76,6 @@ scripts/compare_maps.py -s XX -i 100 -v
 Designate the lowest energy contiguous candidate with population deviation <= 2% (+/– 1%) as the baseline.
 
 -   Copy it to the maps/XX directory as XX20C_baseline_100.csv.
+
+
+The specific workflow for each state -- along with command arguments -- are in the workflows/ directory of my baseline repository.

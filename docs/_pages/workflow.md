@@ -1,40 +1,40 @@
 ---
 layout: page
-title: Workflow
+title: Overall Workflow
 permalink: workflow/
 ---
 
 This note describes the workflow that I used for creating the maps for this study.
 
 (1) Copy Official maps
-* Snapshot Official map ids in pg/constants.py -- DONE
-* Copy the Official maps, using the duplicate_official_maps.py script -- DONE
+* Snapshot Official map ids in pg/constants.py 
+* Copy the Official maps, using the duplicate_official_maps.py script 
 
-  For each new map in DRA -- DONE
+  For each new map in DRA 
 
 * Set the Colors and Overlays
 * Collect the id into pg/constants.py
 * Export it
 
 (2) Copy Notable Maps
-* Snapshot Notable map ids in pg/constants.py -- DONE
-* Copy Notable maps, using the duplicate_notable_maps.py script -- DONE
+* Snapshot Notable map ids in pg/constants.py 
+* Copy Notable maps, using the duplicate_notable_maps.py script 
 
-  For each new map in DRA -- DONE
+  For each new map in DRA 
 
 * Set the Colors and Overlays
 * Collect the id into pg/constants.py
 * Export it
 
-(3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script -- DONE
+(3) Pull the ratings for the duplicated Official and Notable maps, using the pull_ratings.py script 
 
 Then, for each state:
 
-(4) Create a baseline map using [the 'baseline' workflow](baseline_workflow.md)
+(4) Create a baseline map using [the 'baseline' workflow](baseline_workflow.md) 
 
-(5) Import the map into DRA, using the import_base_map.sh script
+(5) Import the map into DRA, using the import_base_map.sh script 
 
-(6) Open the map in DRA:
+(6) Open the map in DRA 
 
 * Set the Colors and Overlays -- 'Change Palette' to Plasma
 * Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
@@ -42,7 +42,7 @@ Then, for each state:
 * Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 * Move it to the data/XX/ folder
 
-(7) For each duplicated Official and Notable map in DRA:
+(7) For each duplicated Official and Notable map in DRA 
 
 * Turn District Lines on
 * Turn on the background map
