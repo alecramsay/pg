@@ -46,7 +46,7 @@
   minority: 2427fc2b-4907-4fac-a1fd-54fe225db227
   compact: e9e9c486-bb80-4ce5-9666-4466947f7ab0
   splitting: d639dbaf-cf30-4998-b794-7cfba3312a0b
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 867ed109-5f5b-4aa7-bc21-36f5d8b122c9
   ready: false
 - xx: CT
   name: Connecticut
@@ -56,7 +56,7 @@
   minority: 2ce70cfc-ab32-48eb-a485-7d33bd201ff0
   compact: d8e5dbfd-c7b1-48a9-a3ee-c606867acfe7
   splitting: 76865f59-03ed-4647-95a2-c6d64a7b9270
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 1dbaa1de-68f0-4547-b6e9-db81617eb904
   ready: false
 - xx: FL
   name: Florida
@@ -66,7 +66,7 @@
   minority: 9191dc5d-fef4-4920-825d-c1b29f842dc7
   compact: 35789bfa-b77d-4a42-a86d-5ce161d24514
   splitting: 94248293-2880-49b1-9dc3-cb8ff77f3e58
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 25a30adb-d32e-4f5e-a45a-42b2e08183ef
   ready: false
 - xx: GA
   name: Georgia
