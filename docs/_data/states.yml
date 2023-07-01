@@ -6,7 +6,7 @@
   minority: 14942ba2-c86f-4e7b-a1e7-51d7f243dd84
   compact: b556aea8-e259-40e1-9b29-4e7572d6cbae
   splitting: 94c7b2b9-f8d0-4d89-aae1-53cfd9009f97
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: d16848f7-22a0-41a5-b19e-719923c54ee3
   ready: false # ready
 - xx: AZ
   name: Arizona
@@ -26,8 +26,8 @@
   minority: d6e55da9-dd51-4429-ba40-78bbfe3105e4
   compact: c53002fd-1f4e-4f3f-86c8-00e738d7cbe5
   splitting: ea810d0f-a507-416e-a0f6-58adbf93df6e
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: c82e8e31-bd27-4f10-bf28-cf92a67a6c79
+  ready: false # ready
 - xx: CA
   name: California
   official: 4daa293f-a347-4ba0-926e-3caebce864ea
@@ -36,8 +36,8 @@
   minority: 07cd471f-0ebc-449e-ad7f-534ec8d9e78d
   compact: 42bf9029-6e68-481a-be75-a1f339248cba
   splitting: fbefc34b-ac86-4081-8731-b731d95e67f9
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  baseline: 239aeac7-3a09-4d6a-98d8-3de61f890b70
+  ready: false # ready
 - xx: CO
   name: Colorado
   official: 1d2c7749-d9bc-47b3-971f-e8025cc6d1da
