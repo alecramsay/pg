@@ -47,7 +47,7 @@
   compact: e9e9c486-bb80-4ce5-9666-4466947f7ab0
   splitting: d639dbaf-cf30-4998-b794-7cfba3312a0b
   baseline: 867ed109-5f5b-4aa7-bc21-36f5d8b122c9
-  ready: false
+  ready: false # ready
 - xx: CT
   name: Connecticut
   official: 22a81014-0b6f-407d-acfa-99f464ed1039
