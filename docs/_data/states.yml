@@ -7,7 +7,7 @@
   compact: b556aea8-e259-40e1-9b29-4e7572d6cbae
   splitting: 94c7b2b9-f8d0-4d89-aae1-53cfd9009f97
   baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false
+  ready: false # ready
 - xx: AZ
   name: Arizona
   official: 4a3d07fd-382c-441c-9c8d-af5d52987b87
