@@ -67,7 +67,7 @@
   compact: 35789bfa-b77d-4a42-a86d-5ce161d24514
   splitting: 94248293-2880-49b1-9dc3-cb8ff77f3e58
   baseline: 25a30adb-d32e-4f5e-a45a-42b2e08183ef
-  ready: false
+  ready: false # ready
 - xx: GA
   name: Georgia
   official: e61aaae9-8af9-4339-8959-9c27f02e55d4
@@ -76,7 +76,7 @@
   minority: f3527d3c-41b5-4758-8560-6ba52695c3b8
   compact: daec754f-45d0-43d3-bdbf-e8637e7cfe8d
   splitting: bf30be3a-0924-4790-a353-83ca0152504a
-  baseline: ffa00454-8e5d-44bb-8ee2-a6d4488bb68f
+  baseline: a44aa7ca-8fa0-43a2-9ba2-2b7f45a3c0f0
   ready: false
 - xx: IL
   name: Illinois
@@ -86,7 +86,7 @@
   minority: 0d4b32d4-bf9d-41a1-b15e-807daf0cc128
   compact: 6ff3964a-0009-4cc0-a643-0f8f9b2096b8
   splitting: 0cfac142-a509-447c-95a7-77c3b87d467d
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 4dd9fe52-b38b-4f63-a041-36e3cd7afde0
   ready: false
 - xx: IN
   name: Indiana
@@ -96,7 +96,7 @@
   minority: 101f80a9-cfc0-423b-b0d6-29e81403b46c
   compact: f59e9631-2abe-4753-bc3a-b9a5186d233c
   splitting: 07f032b2-ec89-4bde-8ec5-57224285172c
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 75a78afd-46b9-427f-9410-62204c3c5939
   ready: false
 - xx: IA
   name: Iowa
@@ -106,7 +106,7 @@
   minority: d6e9ebe5-9e71-4e1d-adad-584868220635
   compact: 3888d170-52fe-44fb-8428-d0e08b8cdcf5
   splitting: 311d779b-9cfc-4983-a589-a9d6877e3f1e
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 7292b0dc-4911-4878-9960-68ae3a6abc10
   ready: false
 - xx: KS
   name: Kansas
@@ -116,7 +116,7 @@
   minority: 5e4b3a7d-cb16-4cee-ac4b-05086203c64d
   compact: d86bf787-674a-4a6e-8cb8-e84c45762077
   splitting: 7ac2a17a-c287-41ff-b624-67efe0bea826
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 9901f45d-6169-4577-ba9b-43c2fe2893d8
   ready: false
 - xx: KY
   name: Kentucky
@@ -126,7 +126,7 @@
   minority: 036aeb13-a3c3-4ef6-8be8-5af7bab6b730
   compact: 424d91c3-a26e-4083-8790-06f8384d2c44
   splitting: 37c63cb2-3bec-418f-8fee-c841ddc5e3c1
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: a3a061bc-3178-4ae6-bdf0-a525ad6639b2
   ready: false
 - xx: LA
   name: Louisiana
@@ -136,7 +136,7 @@
   minority: 0be18b01-7044-4055-8de8-596a2cae3039
   compact: fcc9a519-3aaa-4003-84cf-9807ec8bad4a
   splitting: 02689947-7712-4139-aa39-2e5ea6add817
-  baseline: c1bbd7f1-ce04-4bb4-bdff-963bc92ff340
+  baseline: e59f8d73-e552-4fd3-98d0-368722302720
   ready: false
 - xx: MD
   name: Maryland
@@ -156,7 +156,7 @@
   minority: 6fdf3a89-1b63-4856-bcbb-d777b01f51a2
   compact: ff5a5d69-1c81-4ce2-927b-ddb010968b33
   splitting: 6e745232-b017-47de-b20a-09de51e720f1
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: cfc4a446-c1d1-451e-affa-a79c52ea671e
   ready: false
 - xx: MI
   name: Michigan
@@ -166,7 +166,7 @@
   minority: 2d2c9c5a-8812-408b-9343-36317052bd95
   compact: 6a943e97-c4d7-4111-939a-6eef1fb652d8
   splitting: b0c02efc-6507-4e73-93c2-1ced3d8d469f
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 0e074091-d3a7-4a79-bec7-a6c4641db018
   ready: false
 - xx: MN
   name: Minnesota
@@ -176,7 +176,7 @@
   minority: fcfc1a01-7ad3-46c3-a3e6-41222ea0cf48
   compact: 64858a6b-6511-4f16-834f-776ab91205e0
   splitting: 1d7a0cc7-7199-42a8-805d-8f7e14c60d6e
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 41893bfd-df1e-49b7-9322-6c134575dd35
   ready: false
 - xx: MS
   name: Mississippi
@@ -186,7 +186,7 @@
   minority: cf2ebd05-d118-4ecf-a8f4-824c6cb6ba67
   compact: 9e1d67b8-162c-4c44-b15a-263d3ae6f026
   splitting: 35c56e88-6ac3-4f3e-b732-7e37221395c7
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 83d7ca09-2016-4b5a-b19c-e3009726557e
   ready: false
 - xx: MO
   name: Missouri
@@ -196,7 +196,7 @@
   minority: d1ce2e50-1c28-4aae-a95e-71b1ab361c8a
   compact: 9cc3d9c3-44c6-4a62-8db9-7846ac12688f
   splitting: abc98af0-3ef8-4861-96cc-40f7173d9d14
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: d1fdc45c-7d5e-45f5-af95-832094008465
   ready: false
 - xx: NE
   name: Nebraska
@@ -206,7 +206,7 @@
   minority: eb4be8c9-3ea4-494f-a98d-226f597bd5da
   compact: f7720b75-58d6-4e2d-bff0-894e2c7b5f41
   splitting: 4ff0b106-818d-4f7a-987a-39205bdcb008
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 9cda0d21-d033-45d8-b901-ada2d95e4a59
   ready: false
 - xx: NV
   name: Nevada
@@ -216,7 +216,7 @@
   minority: 789fe206-aa13-4b04-a984-67647eceecbb
   compact: 8da2d779-b8bd-4e27-bae7-340fa87a4376
   splitting: baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: b11b591a-94cf-475f-bb54-8f186e2cf12a
   ready: false
 - xx: NJ
   name: New Jersey
@@ -226,7 +226,7 @@
   minority: ddc291dc-1f0b-4b88-b57a-ff410c75af81
   compact: f254884d-267e-43b4-9d7e-2d9812c13788
   splitting: a3afe5ca-4430-483f-82ca-39922fa5d3dc
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: b687ee33-5fae-43ce-b161-d49a1ddfab98
   ready: false
 - xx: NM
   name: New Mexico
@@ -236,7 +236,7 @@
   minority: 46afff6c-1f2c-43bb-bfeb-1c69f75fa403
   compact: 769b245f-4c5d-4a93-98a5-6cd2e66420a2
   splitting: cd28107e-5ede-4f74-bbf5-dae7f54c17e3
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: ce4101f0-3fed-4902-88d0-170b7d0e3ca9
   ready: false
 - xx: NY
   name: New York
@@ -246,7 +246,7 @@
   minority: 20775253-b960-4542-8a7b-165635b006cc
   compact: 6d9a1e16-c5d2-48a0-80f1-d06fe6d56b7f
   splitting: 149fe85d-04c2-4d11-b959-98fe52f1772b
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: bea0efc4-52e7-4bbb-b942-67637ed4ab8a
   ready: false
 - xx: NC
   name: North Carolina
@@ -266,7 +266,7 @@
   minority: b95bb90a-426f-40a0-a06d-d3027e646617
   compact: 486a1fd0-f56e-435b-8e69-a080e99fe58d
   splitting: 5c6e887d-49a8-426f-8b7b-5f3400cc62a1
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 82aca24a-0bf3-4e3d-abb2-ff51d934be01
   ready: false
 - xx: OK
   name: Oklahoma
@@ -276,7 +276,7 @@
   minority: 9d2fa2d3-a6fa-4b65-b902-3d26e8c7b41a
   compact: fbec07f7-2c67-4928-aedc-956f551aee08
   splitting: d47c3741-ec79-48d4-8c95-f938a526cf4b
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 09062ff7-ce80-42ad-bb8d-74cb9815e974
   ready: false
 - xx: OR
   name: Oregon
@@ -286,7 +286,7 @@
   minority: b914939e-5e90-4e73-a51b-60e157670b24
   compact: 6d9ec3b7-e462-401f-ac5b-9ef37b35f32e
   splitting: 6a9fdbbb-01ce-4a5d-8fcb-38788646368b
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 84976420-5049-4e8e-bafa-985d4a392d97
   ready: false
 - xx: PA
   name: Pennsylvania
@@ -306,7 +306,7 @@
   minority: 206ddd70-ef2d-48ff-ba91-c7db687cb9a6
   compact: bf225fbb-c06b-4a26-a00c-e98bd9344347
   splitting: 61d2f566-0939-4ced-8586-2c216a6b1965
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: adb40672-45a8-43ba-bf72-a73bef7c98ab
   ready: false
 - xx: TN
   name: Tennessee
@@ -316,7 +316,7 @@
   minority: c0c61d14-db2e-44db-8b81-c9f535808b3a
   compact: 57c3bb60-5f54-4cc1-a1b7-4942584fdc6f
   splitting: 512a7c6f-4dde-4773-a8b0-a933014e7982
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 9a80c60b-a2ec-4696-af5e-0653039fcbaf
   ready: false
 - xx: TX
   name: Texas
@@ -326,7 +326,7 @@
   minority: 55687012-5c38-4fc2-9b19-a6b325e5e8cb
   compact: 3670b0b1-7083-4d20-9cee-5c5389dfdcf4
   splitting: 959c211a-e7db-40fe-9703-0082de3fd50f
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: bb716f76-f6b9-4f61-8590-451007a1190b
   ready: false
 - xx: UT
   name: Utah
@@ -336,7 +336,7 @@
   minority: 0c38f235-f832-43a6-b77d-98ffcc4a196f
   compact: d4b7682f-e1df-40d0-9770-6d85a1176a12
   splitting: a26f10a5-cfeb-4989-919c-5df3c79dcb29
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: e1d41beb-0f2f-4029-b31f-ffa1593e2d9e
   ready: false
 - xx: VA
   name: Virginia
@@ -356,7 +356,7 @@
   minority: 9b6064ae-6aa8-4ea7-af3e-2e0dde3c123f
   compact: 5ece8404-5181-4aef-8dbf-126029f60dad
   splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
-  baseline: 8a1857af-5926-4371-acf5-321d233bdb04
+  baseline: 989ac5b1-debe-4960-b7ca-d29d089c858d
   ready: false
 - xx: WI
   name: Wisconsin
@@ -366,5 +366,5 @@
   minority: ab4e662f-3113-4415-b046-4a41ab2fc6e2
   compact: ee9bc88a-f00a-4284-be14-a6b61b9ca203
   splitting: 4ad1f885-3b85-4dc7-bf36-605a122f4b13
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: 4d17758d-3a3b-4b62-87a9-bac8da1fd645
   ready: false
