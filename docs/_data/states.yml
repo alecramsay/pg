@@ -87,7 +87,7 @@
   compact: 6ff3964a-0009-4cc0-a643-0f8f9b2096b8
   splitting: 0cfac142-a509-447c-95a7-77c3b87d467d
   baseline: 4dd9fe52-b38b-4f63-a041-36e3cd7afde0
-  ready: false
+  ready: false # ready
 - xx: IN
   name: Indiana
   official: da195dcd-381e-4598-bae4-9dad2ea12a8d
