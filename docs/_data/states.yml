@@ -127,7 +127,7 @@
   compact: 424d91c3-a26e-4083-8790-06f8384d2c44
   splitting: 37c63cb2-3bec-418f-8fee-c841ddc5e3c1
   baseline: a3a061bc-3178-4ae6-bdf0-a525ad6639b2
-  ready: false
+  ready: false # ready
 - xx: LA
   name: Louisiana
   official: a56db05b-6066-4cdc-89f3-e0b12ab7ea37
