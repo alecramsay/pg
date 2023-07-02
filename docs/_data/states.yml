@@ -137,7 +137,7 @@
   compact: fcc9a519-3aaa-4003-84cf-9807ec8bad4a
   splitting: 02689947-7712-4139-aa39-2e5ea6add817
   baseline: e59f8d73-e552-4fd3-98d0-368722302720
-  ready: false
+  ready: false # ready
 - xx: MD
   name: Maryland
   official: 96d5e235-58de-4a46-a443-f5b6fabe0244
