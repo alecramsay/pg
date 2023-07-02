@@ -97,7 +97,7 @@
   compact: f59e9631-2abe-4753-bc3a-b9a5186d233c
   splitting: 07f032b2-ec89-4bde-8ec5-57224285172c
   baseline: 75a78afd-46b9-427f-9410-62204c3c5939
-  ready: false
+  ready: false # ready
 - xx: IA
   name: Iowa
   official: ccbacbb9-dac8-4c48-b30b-42b0a6627e8f
