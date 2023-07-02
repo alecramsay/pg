@@ -117,7 +117,7 @@
   compact: d86bf787-674a-4a6e-8cb8-e84c45762077
   splitting: 7ac2a17a-c287-41ff-b624-67efe0bea826
   baseline: 9901f45d-6169-4577-ba9b-43c2fe2893d8
-  ready: false
+  ready: false # ready
 - xx: KY
   name: Kentucky
   official: b38aeac3-297e-4ec4-9073-66215b9763c1
