@@ -157,7 +157,7 @@
   compact: ff5a5d69-1c81-4ce2-927b-ddb010968b33
   splitting: 6e745232-b017-47de-b20a-09de51e720f1
   baseline: cfc4a446-c1d1-451e-affa-a79c52ea671e
-  ready: false
+  ready: false # ready
 - xx: MI
   name: Michigan
   official: 55420ff6-a8a2-4291-afb3-6ec8c93e6872
