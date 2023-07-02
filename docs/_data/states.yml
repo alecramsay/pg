@@ -107,7 +107,7 @@
   compact: 3888d170-52fe-44fb-8428-d0e08b8cdcf5
   splitting: 311d779b-9cfc-4983-a589-a9d6877e3f1e
   baseline: 7292b0dc-4911-4878-9960-68ae3a6abc10
-  ready: false
+  ready: false # ready
 - xx: KS
   name: Kansas
   official: cd94aec1-6e84-48d6-8922-5eea4f4c471f
