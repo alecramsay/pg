@@ -187,7 +187,7 @@
   compact: 9e1d67b8-162c-4c44-b15a-263d3ae6f026
   splitting: 35c56e88-6ac3-4f3e-b732-7e37221395c7
   baseline: 83d7ca09-2016-4b5a-b19c-e3009726557e
-  ready: false
+  ready: false # ready
 - xx: MO
   name: Missouri
   official: 57337b6a-45fc-4ee4-97a1-11540fd6c8a6
@@ -197,7 +197,7 @@
   compact: 9cc3d9c3-44c6-4a62-8db9-7846ac12688f
   splitting: abc98af0-3ef8-4861-96cc-40f7173d9d14
   baseline: d1fdc45c-7d5e-45f5-af95-832094008465
-  ready: false
+  ready: false # ready
 - xx: NE
   name: Nebraska
   official: 413dfcb2-0ec6-4459-9e3b-7cef2ddd8638
