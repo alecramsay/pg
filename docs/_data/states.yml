@@ -267,7 +267,7 @@
   compact: 486a1fd0-f56e-435b-8e69-a080e99fe58d
   splitting: 5c6e887d-49a8-426f-8b7b-5f3400cc62a1
   baseline: 82aca24a-0bf3-4e3d-abb2-ff51d934be01
-  ready: false
+  ready: false # ready
 - xx: OK
   name: Oklahoma
   official: bdd4c054-9a75-4117-9819-18673c1f9412
