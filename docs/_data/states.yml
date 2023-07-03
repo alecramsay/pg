@@ -207,7 +207,7 @@
   compact: f7720b75-58d6-4e2d-bff0-894e2c7b5f41
   splitting: 4ff0b106-818d-4f7a-987a-39205bdcb008
   baseline: 9cda0d21-d033-45d8-b901-ada2d95e4a59
-  ready: false
+  ready: false # ready
 - xx: NV
   name: Nevada
   official: c4077907-6605-4fd3-9493-50527ceee352
