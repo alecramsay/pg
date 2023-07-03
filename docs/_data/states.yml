@@ -167,7 +167,7 @@
   compact: 6a943e97-c4d7-4111-939a-6eef1fb652d8
   splitting: b0c02efc-6507-4e73-93c2-1ced3d8d469f
   baseline: 0e074091-d3a7-4a79-bec7-a6c4641db018
-  ready: false
+  ready: false # ready
 - xx: MN
   name: Minnesota
   official: b382eee8-0eb8-4b5c-a9bb-7886972ed6b7
