@@ -217,7 +217,7 @@
   compact: 8da2d779-b8bd-4e27-bae7-340fa87a4376
   splitting: baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff
   baseline: b11b591a-94cf-475f-bb54-8f186e2cf12a
-  ready: false
+  ready: false # ready
 - xx: NJ
   name: New Jersey
   official: 1f7c8393-0b8a-49ea-8fb4-60c393cfb661
@@ -247,7 +247,7 @@
   compact: 6d9a1e16-c5d2-48a0-80f1-d06fe6d56b7f
   splitting: 149fe85d-04c2-4d11-b959-98fe52f1772b
   baseline: bea0efc4-52e7-4bbb-b942-67637ed4ab8a
-  ready: false
+  ready: false # ready
 - xx: NC
   name: North Carolina
   official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
