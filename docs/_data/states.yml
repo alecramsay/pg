@@ -227,7 +227,7 @@
   compact: f254884d-267e-43b4-9d7e-2d9812c13788
   splitting: a3afe5ca-4430-483f-82ca-39922fa5d3dc
   baseline: b687ee33-5fae-43ce-b161-d49a1ddfab98
-  ready: false
+  ready: false # ready
 - xx: NM
   name: New Mexico
   official: d2db917f-b700-4738-9a93-a38a43630c86
