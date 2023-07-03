@@ -177,7 +177,7 @@
   compact: 64858a6b-6511-4f16-834f-776ab91205e0
   splitting: 1d7a0cc7-7199-42a8-805d-8f7e14c60d6e
   baseline: 41893bfd-df1e-49b7-9322-6c134575dd35
-  ready: false
+  ready: false # ready
 - xx: MS
   name: Mississippi
   official: 7edecbd8-cdc5-4972-bcab-07bbd38259bb
