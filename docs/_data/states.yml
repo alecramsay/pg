@@ -237,7 +237,7 @@
   compact: 769b245f-4c5d-4a93-98a5-6cd2e66420a2
   splitting: cd28107e-5ede-4f74-bbf5-dae7f54c17e3
   baseline: ce4101f0-3fed-4902-88d0-170b7d0e3ca9
-  ready: false
+  ready: false # ready
 - xx: NY
   name: New York
   official: 11dc2c25-27a6-4259-b3dc-8e24fa21a086
