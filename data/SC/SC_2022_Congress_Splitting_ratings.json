@@ -1,12 +1,12 @@
 {
-  "score_competitiveness": "52",
+  "score_competitiveness": "46",
   "score_equalpopulation": "0",
   "score_complete": "0",
   "score_freeofholes": "0",
   "score_contiguous": "0",
-  "score_compactness": "37",
-  "score_minorityRights": "49",
-  "score_deviation": "0.1750084126044188",
-  "score_proportionality": "47",
-  "score_splitting": "100"
+  "score_compactness": "51",
+  "score_minorityRights": "46",
+  "score_deviation": "0.20980046608669697",
+  "score_proportionality": "29",
+  "score_splitting": "99"
 }
