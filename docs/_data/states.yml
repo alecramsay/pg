@@ -327,7 +327,7 @@
   compact: 3670b0b1-7083-4d20-9cee-5c5389dfdcf4
   splitting: 959c211a-e7db-40fe-9703-0082de3fd50f
   baseline: bb716f76-f6b9-4f61-8590-451007a1190b
-  ready: false
+  ready: false # ready
 - xx: UT
   name: Utah
   official: a2845eee-af70-4c54-944f-08abd5b05471
