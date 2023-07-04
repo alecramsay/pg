@@ -307,7 +307,7 @@
   compact: bf225fbb-c06b-4a26-a00c-e98bd9344347
   splitting: 61d2f566-0939-4ced-8586-2c216a6b1965
   baseline: adb40672-45a8-43ba-bf72-a73bef7c98ab
-  ready: false
+  ready: false # ready
 - xx: TN
   name: Tennessee
   official: e142df57-8dd5-44c3-a316-c2675e0e2fe4
