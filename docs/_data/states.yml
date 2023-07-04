@@ -277,7 +277,7 @@
   compact: fbec07f7-2c67-4928-aedc-956f551aee08
   splitting: d47c3741-ec79-48d4-8c95-f938a526cf4b
   baseline: 09062ff7-ce80-42ad-bb8d-74cb9815e974
-  ready: false
+  ready: false # ready
 - xx: OR
   name: Oregon
   official: 9255d54b-36cc-4ca2-972d-fc330c975990
