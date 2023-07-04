@@ -337,7 +337,7 @@
   compact: d4b7682f-e1df-40d0-9770-6d85a1176a12
   splitting: a26f10a5-cfeb-4989-919c-5df3c79dcb29
   baseline: e1d41beb-0f2f-4029-b31f-ffa1593e2d9e
-  ready: false
+  ready: false # ready
 - xx: VA
   name: Virginia
   official: 837303a3-ac0a-4fe3-b99e-b4e98f71d26a
