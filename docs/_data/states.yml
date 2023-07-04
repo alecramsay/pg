@@ -357,7 +357,7 @@
   compact: 5ece8404-5181-4aef-8dbf-126029f60dad
   splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
   baseline: 989ac5b1-debe-4960-b7ca-d29d089c858d
-  ready: false
+  ready: false # ready
 - xx: WI
   name: Wisconsin
   official: 130feb94-6532-4102-91de-92777af7c0d9
