@@ -4,9 +4,7 @@ title: Background
 permalink: background/
 ---
 
-This page sketches the motivation, concept, plan, scope, and method for this research.
-
-TODO - Edit this page for consistency / contrast with the home page.
+This page provides more details on the motivation, concept, plan, scope, and method for this research.
 
 ## Contents
 
@@ -22,21 +20,20 @@ The [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in
 [Dave's Redistricting](https://davesredistricting.org/) (DRA)
 are the maps that maximize five rated dimensions: 
 proportionality, competitiveness, minority representation, compactness, and county--district splitting.
-The maps for the 2020 congressional redistricting cycle demonstrated that there were tradeoffs between them.
+These maps for the 2020 congressional redistricting cycle demonstrated that there were tradeoffs between them.
 For example, the most proportional map for a state might be less compact than the
 most compact map one, and vice versa.
 
-This led to two hypotheses that motivated this research:
+This led to the two hypotheses that motivated this research:
 
 1.  In contrast to the notable and official maps that use a broad spectrum of data,
     my first hypothesis was that
     there are well-defined "baseline districts" for a state that only
-    depend on total census population -- While I introduced the concept
+    depend on total census population &#8212; While I introduced the concept
     several years ago,[^1] I had not written code to generate them automatically.
 
-2.  My second hypothesis was that 
-    the districts for the notable maps for a state overlap significantly. 
-    It seems obvious that –- barring extremely serpentine districts –- valid redistricting maps 
+2.  The districts for the notable maps for a state overlap significantly. 
+    It seems obvious that &#8212; barring extremely serpentine districts &#8212; valid redistricting maps 
     for a state *must* share common core areas because of the underlying "population geography" for a state,
     i.e., how many people live where.
     This is precisely what is characterized by baseline districts.
@@ -53,25 +50,28 @@ Perhaps implicitly, one effectively has to start with the baseline districts and
 
 The baseline map for a state are the contigous, 'roughly equal' population districts
 that are soley a function of total census population by precinct.
-Baselines are the *least information* maps -- all other maps incorporate more information 
+Baselines are the *least information* maps &#8212; all other maps incorporate more information 
 into their district boundaries.
-Conceptually, baseline districts are the [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) for a state.[^3]
+Conceptually, baseline districts are the [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram)
+for a state.[^3]
 In physics terms, baseline districts can be thought of as minimizing the moment of inertia or energy, or
 more informally, the districts that maximize "population compactness."
 The resulting districts are convex and not oddly shaped like other simple geometric approaches.
 Baseline districts characterize the "population geography" of a state, i.e., how many people live where.
 
-Map drawers use lots of additional information -- demographic data, election results, municipal boundaries, etc. -- to, in effect,
-stretch these baseline boundaries to achieve their desired mix of policy goals, e.g., more proportional, less county splitting, etc.
+Map drawers use lots of additional information &#8212; demographic data, election results, 
+municipal boundaries, etc. &#8212; to, in effect,
+stretch these baseline boundaries to achieve their desired mix of policy goals, e.g., more 
+proportional, less county splitting, etc.
 Consequently, baseline districts are not only the implicit starting point for redistricting a state
--- redistricting does *not* start with a blank canvas! -- but
+&#8212; redistricting does *not* start with a blank canvas! &#8212; but
 baseline districts can also illustrate the tradeoffs inherent in a redistricting a state.
 
 ## Plan
 
 My plan mirrored my hypotheses:
 
-1.  First, develop an automated method for generating baseline districts --
+1.  First, develop an automated method for generating baseline districts &#8212;
     Justin Levitt keyed me into the idea that baseline districts are
     maximally population compact (vs. geometrically compact), based on
     physics concept of moment of inertia. Some searching led me to
@@ -81,7 +81,7 @@ My plan mirrored my hypotheses:
     and Diminishing Halves Models\" at MCM 07. My plan was to
     reimplement it in Python.
 
-2.  Then compare each notable & official map to the baseline map for the state -- Given the
+2.  Then compare each notable & official map to the baseline map for the state &#8212; Given the
     number of maps involved (222), I planned to develop a pipeline of
     tools to automate as much of the workflow as possible to produce the
     tabular and visual artifacts for this web site.
@@ -102,13 +102,11 @@ proportionality, competitiveness, minority representation, compactness,
 and county--district splitting.
 While these are not definitively the *best* on their respective dimensions (globally optimal),
 DRA users work hard to find maps that optimize these dimensions and have their
-map be the notable map, so they are good proxies for maps that
-maximize these dimensions and they illustrate the tradeoffs between these dimensions.
+map be selected as the notable map, so they are good proxies for maps that
+maximize these dimensions.
+As such, they illustrate the tradeoffs between these dimensions.
 
-For [each state](./_pages/states.markdown), I compare these six maps to the baseline districts I generated.
-
-You can see a representative example of the analysis that baseline districts enable 
-on the [Example](./_pages/example.markdown) page.
+For each state, I compare these six maps to the baseline districts I generated.
 
 ## Method 
 

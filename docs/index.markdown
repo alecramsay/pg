@@ -5,16 +5,16 @@ layout: default
 The Redistricting Almanac shows the tradeoffs inherent in congressional redistricting state by state,
 for the 37 states apportioned three or more congressional districts in the 2020 census.[^1]
 
-We introduce a new concept &#8212; baseline districts &#8212; which are solely a function of total census population by precinct.
+I introduce a new concept &#8212; baseline districts &#8212; which are solely a function of total census population by precinct.
 If you squint, the baseline districts for a state are a [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram),
 the districts that maximize "population compactness" (as opposed to geometric compactness).
 As such, baseline districts characterize the underlying "population geography" of a state
 &#8212; i.e., how many people live where &#8212;
 which constrain every other map to some degree. 
 
-We excluded states with only two districts, because the baseline districts for them aren't unique.
+I excluded states with only two districts, because the baseline districts for them aren't unique.
 
-To understand the redistricting tradeoffs for a state, we compared the
+To understand the redistricting tradeoffs for a state, I compared the
 the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) 
 from [Dave's Redistricting](https://davesredistricting.org/) (DRA) &#8212;
 these maximize proportionality, competitiveness, minority representation, compactness, and county--district splitting 
@@ -31,11 +31,11 @@ The important results here are twofold:
 2. Redistricting a state involves inherent tradeoffs that can be *a priori* revealed by comparing policy-maximizing maps to the baseline districts.
 
 The specifics of our heuristic approach to generating baseline districts are *not* the main contribution of this study.
-Neither are the specific baseline maps we generated, though we think they are good proxies for the lowest energy maps for states and interesting in their own right.
+Neither are the specific baseline maps I generated, though I think they are good proxies for the lowest energy maps for states and interesting in their own right.
 If someone else can find a lower energy map for a state that meets the definitional constraints of a baseline map, great:
 it should be considered the baseline instead.[^3]
 
-One could use the same technique to analyze state legislative redistricting, though we haven't done that yet.
+One could use the same technique to analyze state legislative redistricting, though I haven't done that yet.
 
 ## Acknowledgements
 
