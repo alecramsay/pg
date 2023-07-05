@@ -8,9 +8,11 @@ for the 37 states apportioned three or more congressional districts in the 2020 
 We introduce a new concept &#8212; baseline districts &#8212; which are solely a function of total census population by precinct.
 If you squint, the baseline districts for a state are a [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram),
 the districts that maximize "population compactness" (as opposed to geometric compactness).
-As such, baseline districts characterize the underlying "population geography" of a state, i.e., how many people live where, which constrain every other map to some degree. 
+As such, baseline districts characterize the underlying "population geography" of a state
+&#8212; i.e., how many people live where &#8212;
+which constrain every other map to some degree. 
 
-We excluded states with only two districts, because the baseline districts aren't well-defined.
+We excluded states with only two districts, because the baseline districts for them aren't unique.
 
 To understand the redistricting tradeoffs for a state, we compared the
 the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) 
@@ -30,8 +32,8 @@ The important results here are twofold:
 
 The specifics of our heuristic approach to generating baseline districts are *not* the main contribution of this study.
 Neither are the specific baseline maps we generated, though we think they are good proxies for the lowest energy maps for states and interesting in their own right.
-If someone else can find a lower energy map for a state that meets the definitional constraints of a baseline map, great.
-It should be considered the baseline instead.[^3]
+If someone else can find a lower energy map for a state that meets the definitional constraints of a baseline map, great:
+it should be considered the baseline instead.[^3]
 
 One could use the same technique to analyze state legislative redistricting, though we haven't done that yet.
 
@@ -42,16 +44,15 @@ command-line tool support that made the large scope of this project feasible,
 Todd Proebsting for realizing the concept of baseline districts in code &#8212;
 persisting in the adaptation of Balzer's algorithm to redistricting with all its real world, 
 complicating issues &#8212;
-
 and
-the DRA community for pushing the dimensional limits of
-congressional redistricting in each state with their notable maps,
+the DRA user community for pushing the dimensional limits of
+congressional redistricting in each state with their notable maps.
 
 ---
 
 ## Footnotes
 
-[^1]: The name of this site -- Redistricting Almanac -- is a nod to FiveThirtyEight's magisterial
+[^1]: The name of this site &#8212; Redistricting Almanac &#8212; is a nod to FiveThirtyEight's magisterial
     [Atlas of Redistricting](https://medium.com/dra-2020/atlas-of-redistricting-maps-14ea4d0874e5). 
     The [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
     I use the term "almanac" here instead, to suggest that this analysis could be updated periodically as new data are released,
