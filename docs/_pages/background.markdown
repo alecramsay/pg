@@ -6,6 +6,8 @@ permalink: background/
 
 This page sketches the motivation, concept, plan, scope, and method for this research.
 
+TODO - Edit this page for consistency / contrast with the home page.
+
 ## Contents
 
 - [Motivation](#motivation)
