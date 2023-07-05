@@ -4,7 +4,7 @@ title: Background
 permalink: background/
 ---
 
-This page provides more details on the motivation, concept, plan, scope, and method for this research.
+This page provides more details about this research.
 
 ## Contents
 
@@ -13,6 +13,8 @@ This page provides more details on the motivation, concept, plan, scope, and met
 - [Plan](#plan)
 - [Scope](#scope)
 - [Method](#method)
+- [Data](#data)
+- [Workflow](#workflow)
 
 ## Motivation
 
@@ -134,6 +136,18 @@ The important contribution here is the *idea* of baseline districts and what the
 If someone else can find a lower energy map for a state that meets the four constraints above, that's great. 
 It should be considered the baseline instead.
 One can even imagine a contest with prize money for finding the lowest energy map for a state.
+
+## Data
+
+The data used came from several sources:
+- The block-assignment files for Notable Maps were exported from DRA on 10/06/22. A few of the maps violated basic requirements (like contiguity) and were replaced by the next best maps that didn't.
+- The district shapes for Notable Maps were also exported from DRA on 10/06/22.
+- Census data were downloaded from the dra2020/dra-data repository on 10/06/22.
+- The block shapes were downloaded from [census.gov](https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/) on 10/06/22.
+
+## Workflow
+
+My overall workflow is described [here](workflow.md).
 
 ---
 
