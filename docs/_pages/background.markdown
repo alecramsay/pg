@@ -4,9 +4,7 @@ title: Background
 permalink: background/
 ---
 
-This site introduces a new concept -- baseline districts -- and uses it to show the tradeoffs inherent redistricting a state.[^1]
-
-*Note: This web site is still a work in progress, but I've added preliminary results for AZ, MD, NC, PA, and VA.*
+This page sketches the motivation, concept, plan, scope, and method for this research.
 
 ## Contents
 
@@ -32,7 +30,7 @@ This led to two hypotheses that motivated this research:
     my first hypothesis was that
     there are well-defined "baseline districts" for a state that only
     depend on total census population -- While I introduced the concept
-    several years ago,[^2] I had not written code to generate them automatically.
+    several years ago,[^1] I had not written code to generate them automatically.
 
 2.  My second hypothesis was that 
     the districts for the notable maps for a state overlap significantly. 
@@ -40,7 +38,7 @@ This led to two hypotheses that motivated this research:
     for a state *must* share common core areas because of the underlying "population geography" for a state,
     i.e., how many people live where.
     This is precisely what is characterized by baseline districts.
-    I wanted to show this empirically and visually, by comparing each map to the baseline map.[^3]
+    I wanted to show this empirically and visually, by comparing each map to the baseline map.[^2]
 
 To the extent that the latter were true, it would formalize my intuition
 that the essence of redistricting can be thought of as
@@ -55,7 +53,7 @@ The baseline map for a state are the contigous, 'roughly equal' population distr
 that are soley a function of total census population by precinct.
 Baselines are the *least information* maps -- all other maps incorporate more information 
 into their district boundaries.
-Conceptually, baseline districts are the [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) for a state.[^4]
+Conceptually, baseline districts are the [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) for a state.[^3]
 In physics terms, baseline districts can be thought of as minimizing the moment of inertia or energy, or
 more informally, the districts that maximize "population compactness."
 The resulting districts are convex and not oddly shaped like other simple geometric approaches.
@@ -120,7 +118,7 @@ The evolution of our heuristic approach for finding the lowest energy assignment
 is described [here](./_pages/method.markdown).
 
 To generate the baseline maps presented here, we ran this process 100 times for each state
-using random starting points and the 2020 Census VTD shapes and population data.[^5]
+using random starting points and the 2020 Census VTD shapes and population data.[^4]
 Then we selected the lowest energy map that met four constraints:
 
 1. Complete -- all precincts assigned to districts
@@ -133,7 +131,7 @@ Nor are the specific baseline maps we generated, though we think they are strong
 and interesting in their own right.
 The important contribution here is the *idea* of baseline districts and what they reveal about other maps, the tradeoffs inherent in a state\'s political geography.
 
-If someone else can find a lower energy map for a state that meets the three constraints above, that's great. 
+If someone else can find a lower energy map for a state that meets the four constraints above, that's great. 
 It should be considered the baseline instead.
 One can even imagine a contest with prize money for finding the lowest energy map for a state.
 
@@ -141,18 +139,12 @@ One can even imagine a contest with prize money for finding the lowest energy ma
 
 ## Footnotes
 
-[^1]: The name of this site -- Redistricting Almanac -- is a nod to FiveThirtyEight's magisterial
-    [Atlas of Redistricting](https://medium.com/dra-2020/atlas-of-redistricting-maps-14ea4d0874e5). 
-    The [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
-    I use the term "almanac" here instead, to suggest that this analysis could be updated periodically as new data are released,
-    e.g., in 2030.
-
-[^2]: See "Baseline Congressional Districts: A Benchmark for Comparison"
+[^1]: See "Baseline Congressional Districts: A Benchmark for Comparison"
     \[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3\].
 
-[^3]: So, five comparisons instead of ten (5 choose 2).
+[^2]: So, five comparisons instead of ten (5 choose 2).
 
-[^4]: It turns out, one cannot simply run a Voronoi algorithm over the precincts. There are lots of practical issues 
+[^3]: It turns out, one cannot simply run a Voronoi algorithm over the precincts. There are lots of practical issues 
     and real-world complications to deal with. See GitHub \[https://github.com/proebsting/dccvt\].
 
-[^5]: California and Oregon don't have VTDs, so we used blockgroups instead like DRA. Also, the official Florida data is pretty messed up, so we used DRA's GeoJSON file of corrected Florida VTDs.
+[^4]: California and Oregon don't have VTDs, so we used blockgroups instead like DRA. Also, the official Florida data is pretty messed up, so we used DRA's GeoJSON file of corrected Florida VTDs.
