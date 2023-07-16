@@ -370,7 +370,7 @@
   ready: false # ready
 - xx: ID
   name: Idaho
-  official: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  official: ab09bc34-c83d-4327-9b59-c53c71682151
   proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -380,7 +380,7 @@
   ready: false 
 - xx: MT
   name: Montana
-  official: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  official: d7fd9cdb-4677-47b0-930a-f53f6b044b8f
   proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -390,17 +390,7 @@
   ready: false 
 - xx: NH
   name: New Hampshire
-  official: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  compact: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  splitting: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  ready: false 
-- xx: WV
-  name: West Virginia
-  official: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  official: 8624cdac-7fd1-40ca-a47f-c196f8a84df7
   proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -410,7 +400,17 @@
   ready: false 
 - xx: RI
   name: Rhode Island
-  official: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  official: ee4cfa0f-930b-4f74-9adc-e3b4fc939a63
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  splitting: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  baseline: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  ready: false 
+- xx: WV
+  name: West Virginia
+  official: 8b2f8ec2-1d12-468a-b445-11c9f6097f74
   proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx

@@ -194,12 +194,12 @@ official_maps: dict[str, str] = {
     "VA": "bc930c25-236f-46a7-bbe9-d8d77e21d011",
     "WA": "3dd8f07d-8f9b-4905-a155-573bdc084b06",
     "WI": "aa64c8f5-837c-474f-819f-6eaa1094d776",
-    # TODO - States w/ 2 congressional districts
-    "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NH": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "RI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "WV": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    # States w/ 2 congressional districts as of 07/16/23
+    "ID": "ebc8cec8-b919-4a66-9b42-9cf5bf7e02a1",
+    "MT": "66ff2b64-826d-48a9-bbe4-08afa4c10873",
+    "NH": "a1a2b285-f862-402c-9e89-b45791a46473",
+    "RI": "cffbb279-824c-47b8-90c7-3070378e37ae",
+    "WV": "aaaa571f-f204-4cbe-bcf1-404db0519d36",
 }
 
 officials_copy: dict[str, str] = {
@@ -240,16 +240,16 @@ officials_copy: dict[str, str] = {
     "VA": "837303a3-ac0a-4fe3-b99e-b4e98f71d26a",
     "WA": "be06fce9-90a2-4bc0-9659-8eacafcd4afc",
     "WI": "130feb94-6532-4102-91de-92777af7c0d9",
-    # TODO - States w/ 2 congressional districts
-    "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "MT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NH": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "RI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "WV": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-}  # Duplicated 11-16-22
+    # States w/ 2 congressional districts: duplicated 07-16-23
+    "ID": "ab09bc34-c83d-4327-9b59-c53c71682151",
+    "MT": "d7fd9cdb-4677-47b0-930a-f53f6b044b8f",
+    "NH": "8624cdac-7fd1-40ca-a47f-c196f8a84df7",
+    "RI": "ee4cfa0f-930b-4f74-9adc-e3b4fc939a63",
+    "WV": "8b2f8ec2-1d12-468a-b445-11c9f6097f74",
+}  # Duplicated 11-16-22 (except for states w/ 2 congressional districts)
 
-# Notable Maps for the 37 states with > 2 congressional districts
-# Pulled 11/07/2022
+# Notable Maps for 42 states with 2 or congressional districts (except HI and ME -- see above)
+# Pulled 11/07/2022 (except for states w/ 2 congressional districts)
 notable_maps: dict[str, dict] = {
     "AL": {
         "proportional": "5d573512-b4c2-4f6f-ae2d-c922a10f44fb",

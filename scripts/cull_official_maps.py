@@ -18,7 +18,7 @@ for state, data in states.items():
         if (
             plan["year"] == 2022
             and plan["planType"] == "congress"
-            and plan["nDistricts"] > 2
+            and plan["nDistricts"] >= 2
         ):
             official.append([state, "congress", plan["id"]])
             x: str = '"{}": "{}"'.format(state, plan["id"])
