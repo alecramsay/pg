@@ -194,7 +194,13 @@ official_maps: dict[str, str] = {
     "VA": "bc930c25-236f-46a7-bbe9-d8d77e21d011",
     "WA": "3dd8f07d-8f9b-4905-a155-573bdc084b06",
     "WI": "aa64c8f5-837c-474f-819f-6eaa1094d776",
-}  # TODO
+    # TODO - States w/ 2 congressional districts
+    "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "MT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "NH": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "RI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "WV": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+}
 
 officials_copy: dict[str, str] = {
     "AL": "8c611540-7cb1-424c-b6b9-7ddc7f39abeb",
@@ -234,7 +240,13 @@ officials_copy: dict[str, str] = {
     "VA": "837303a3-ac0a-4fe3-b99e-b4e98f71d26a",
     "WA": "be06fce9-90a2-4bc0-9659-8eacafcd4afc",
     "WI": "130feb94-6532-4102-91de-92777af7c0d9",
-}  # Duplicated 11-16-22 # TODO
+    # TODO - States w/ 2 congressional districts
+    "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "MT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "NH": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "RI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "WV": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+}  # Duplicated 11-16-22
 
 # Notable Maps for the 37 states with > 2 congressional districts
 # Pulled 11/07/2022
@@ -498,7 +510,43 @@ notable_maps: dict[str, dict] = {
         "compact": "b6942ec8-9615-4e6a-bdbd-275b196a840f",
         "splitting": "bc908f90-e0ad-4e92-8514-512cebebb637",
     },
-}  # TODO
+    # TODO - States w/ 2 congressional districts
+    "ID": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "MT": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "NH": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "RI": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "WV": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+}
 
 notables_copy: dict[str, dict] = {
     "AL": {
@@ -772,7 +820,43 @@ notables_copy: dict[str, dict] = {
         "compact": "ee9bc88a-f00a-4284-be14-a6b61b9ca203",
         "splitting": "4ad1f885-3b85-4dc7-bf36-605a122f4b13",
     },
-}  # TODO
+    # TODO - States w/ 2 congressional districts
+    "ID": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "MT": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "NH": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "RI": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+    "WV": {
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    },
+}
 
 
 baseline_maps: dict[str, str] = {
