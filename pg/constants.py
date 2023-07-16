@@ -24,19 +24,24 @@ study_states: list[str] = [
     "CT",
     "FL",
     "GA",
+    # "HI", # Hawaii BG's have contiguity issues that can't be corrected.
+    "ID",
     "IL",
     "IN",
     "IA",
     "KS",
     "KY",
     "LA",
-    "MD",
     "MA",
+    "MD",
+    # "ME", # Maine uses a mix of VTD's and BG's, which I can't easily handle.
     "MI",
     "MN",
     "MS",
     "MO",
+    "MT",
     "NE",
+    "NH",
     "NV",
     "NJ",
     "NM",
@@ -46,6 +51,7 @@ study_states: list[str] = [
     "OK",
     "OR",
     "PA",
+    "RI",
     "SC",
     "TN",
     "TX",
@@ -53,22 +59,16 @@ study_states: list[str] = [
     "VA",
     "WA",
     "WI",
-]  # 37 states with > 2 congressional districts
+    "WV",
+]  # 42 states with 2 or congressional districts (except HI and ME -- see above)
 
 """
-Not included:
+States w/ only 1 congressional district not included:
 AK 1
 DE 1
-HI 2
-ID 2
-ME 2
-MT 2
-NH 2
 ND 1
-RI 2
 SD 1
 VT 1
-WV 2
 WY 1
 """
 
@@ -194,7 +194,7 @@ official_maps: dict[str, str] = {
     "VA": "bc930c25-236f-46a7-bbe9-d8d77e21d011",
     "WA": "3dd8f07d-8f9b-4905-a155-573bdc084b06",
     "WI": "aa64c8f5-837c-474f-819f-6eaa1094d776",
-}
+}  # TODO
 
 officials_copy: dict[str, str] = {
     "AL": "8c611540-7cb1-424c-b6b9-7ddc7f39abeb",
@@ -234,7 +234,7 @@ officials_copy: dict[str, str] = {
     "VA": "837303a3-ac0a-4fe3-b99e-b4e98f71d26a",
     "WA": "be06fce9-90a2-4bc0-9659-8eacafcd4afc",
     "WI": "130feb94-6532-4102-91de-92777af7c0d9",
-}  # Duplicated 11-16-22
+}  # Duplicated 11-16-22 # TODO
 
 # Notable Maps for the 37 states with > 2 congressional districts
 # Pulled 11/07/2022
@@ -498,7 +498,7 @@ notable_maps: dict[str, dict] = {
         "compact": "b6942ec8-9615-4e6a-bdbd-275b196a840f",
         "splitting": "bc908f90-e0ad-4e92-8514-512cebebb637",
     },
-}
+}  # TODO
 
 notables_copy: dict[str, dict] = {
     "AL": {
@@ -772,10 +772,11 @@ notables_copy: dict[str, dict] = {
         "compact": "ee9bc88a-f00a-4284-be14-a6b61b9ca203",
         "splitting": "4ad1f885-3b85-4dc7-bf36-605a122f4b13",
     },
-}
+}  # TODO
 
 
 baseline_maps: dict[str, str] = {
+    # States w/ 3 or more congressional districts
     "AL": "d16848f7-22a0-41a5-b19e-719923c54ee3",  # 06/27/23
     "AR": "c82e8e31-bd27-4f10-bf28-cf92a67a6c79",  # 06/27/23
     "AZ": "82cdf840-22b9-4af7-9e5a-0c6a17c4b88c",  # 06/27/23
@@ -813,5 +814,13 @@ baseline_maps: dict[str, str] = {
     "VA": "c7cba809-9d12-428c-b013-9b4b9f9a5a91",  # 06/28/23
     "WA": "989ac5b1-debe-4960-b7ca-d29d089c858d",  # 06/28/23
     "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
+    # Additional states w/ 2 congressional districts
+    "ID": "e6f75d1c-4756-4ebe-99fe-9012d6777ed8",  # 07/15/23
+    "MT": "62590347-4639-4f63-b505-6bb2409c66eb",  # 07/15/23
+    "NH": "9309e340-f8f7-46f3-81dc-69805f9fbeca",  # 07/15/23
+    "WV": "a0a0dbd0-e472-47c1-b3c6-e1e51219fabc",  # 07/16/23
+    "RI": "c7e73ead-eeb0-4a81-9708-caadff6428e6",  # 07/16/23
 }
+
+
 ### END ###
