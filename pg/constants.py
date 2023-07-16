@@ -510,41 +510,41 @@ notable_maps: dict[str, dict] = {
         "compact": "b6942ec8-9615-4e6a-bdbd-275b196a840f",
         "splitting": "bc908f90-e0ad-4e92-8514-512cebebb637",
     },
-    # TODO - States w/ 2 congressional districts
+    # States w/ 2 congressional districts
     "ID": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "competitive": "5f1c3e67-1895-4230-80c6-e7d286b6e89e",  # 07-16-23 replaced
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "compact": "206912f7-878a-4f21-b188-f40320ab558d",  # 07-16-23
+        "splitting": "abd274f0-847c-4c53-934e-646c84d81aac",  # 07-16-23
     },
     "MT": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "0c96f1a2-d4c9-4294-b2d4-a20aa9d2b04d",  # 07-16-23
+        "competitive": "e1058b7d-1cca-46a0-98ec-d95dd3d353a1",  # 07-16-23
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "compact": "7838e111-d287-43c5-97ac-d04366cb6d1c",  # 07-16-23
+        "splitting": "a50422e4-5596-4385-808b-7bf0639b5d63",  # 07-16-23
     },
     "NH": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "7b509654-2390-440b-a022-211cb977b074",  # 07-16-23 replaced
+        "competitive": "adce2bd3-8f35-4437-9dd5-86bb5e1864b1",  # 07-16-23
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "compact": "3ed6cd29-1807-4a82-a4e8-c6512d28ab77",  # 07-16-23
+        "splitting": "adce2bd3-8f35-4437-9dd5-86bb5e1864b1",  # 07-16-23 replaced
     },
     "RI": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "competitive": "40aef9df-2406-4c9b-8e80-b48b273dfd32",  # 07-16-23 replaced
+        "minority": "ffddb68e-700a-4d85-85f5-edfe061ec821",  # 07-16-23
+        "compact": "344ecc9b-b641-44e7-87b2-1ffd6d69da87",  # 07-16-23
+        "splitting": "344ecc9b-b641-44e7-87b2-1ffd6d69da87",  # 07-16-23
     },
     "WV": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
+        "compact": "b497117a-9d00-471e-9d1a-b69ae960c48d",  # 07-16-23
+        "splitting": "5e630f86-6a48-4942-b613-51d4c572af93",  # 07-16-23
     },
 }
 
@@ -820,41 +820,41 @@ notables_copy: dict[str, dict] = {
         "compact": "ee9bc88a-f00a-4284-be14-a6b61b9ca203",
         "splitting": "4ad1f885-3b85-4dc7-bf36-605a122f4b13",
     },
-    # TODO - States w/ 2 congressional districts
+    # States w/ 2 congressional districts
     "ID": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "f404dcbc-4763-4405-8ee8-9de38763ab9c",
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "c04b3d59-ad9b-4d34-a56c-a40e4a2faaaf",
+        "splitting": "0549f613-9577-4a0f-ba17-f821552e3512",
     },
     "MT": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "968024a3-66d9-40fb-8503-963475d9ec3a",
+        "competitive": "00899589-f1ed-47be-bed4-2977ad156b5e",
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "7ef9c6cc-9009-4a46-a135-b02a015e0588",
+        "splitting": "a8bbd540-253e-4c9b-aa51-492925c0a896",
     },
     "NH": {
-        "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "proportional": "9c0a775c-8886-4fcf-852a-c3cd8aad2ff5",
+        "competitive": "4dc15785-8867-4a13-9c06-bb2a7ffecbb7",
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "7a525a0e-d481-4f1a-a3c7-380134fabd02",
+        "splitting": "fddf7e78-d454-497f-b9a6-d5b5740f21d6",
     },
     "RI": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "competitive": "9b7b2ce0-e1dc-48fe-89ec-0b2298cdb8f9",
+        "minority": "bd87b715-1286-4ffa-9f42-056f18693d9f",
+        "compact": "56621991-7577-42cf-ae24-8b1cb8fb0587",
+        "splitting": "83816f12-ddf0-4a45-a49d-a9908e2922e1",
     },
     "WV": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "competitive": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "compact": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "splitting": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "compact": "d0785c40-b290-4c44-9f29-48f28edaf96e",
+        "splitting": "0556f0d1-950d-4581-8777-67cc912d7280",
     },
 }
 
