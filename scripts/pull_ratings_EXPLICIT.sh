@@ -4,17 +4,17 @@
 #
 # For example:
 #
-# scripts/run_batch.sh
+# scripts/pull_ratings_EXPLICIT.sh
 #
 
-XX=ID
-OFFICIAL=ab09bc34-c83d-4327-9b59-c53c71682151
+XX=WV
+OFFICIAL=8b2f8ec2-1d12-468a-b445-11c9f6097f74
 PROPORTIONAL=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-COMPETITIVE=f404dcbc-4763-4405-8ee8-9de38763ab9c
+COMPETITIVE=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 MINORITY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-COMPACT=c04b3d59-ad9b-4d34-a56c-a40e4a2faaaf
-SPLITTING=0549f613-9577-4a0f-ba17-f821552e3512
-BASELINE=e6f75d1c-4756-4ebe-99fe-9012d6777ed8
+COMPACT=d0785c40-b290-4c44-9f29-48f28edaf96e
+SPLITTING=0556f0d1-950d-4581-8777-67cc912d7280
+BASELINE=a0a0dbd0-e472-47c1-b3c6-e1e51219fabc
 
 scripts/pull_map_ratings.sh $XX Congress Official $OFFICIAL
 scripts/pull_map_ratings.sh $XX Congress Proportional $PROPORTIONAL
