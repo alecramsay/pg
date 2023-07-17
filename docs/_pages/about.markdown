@@ -8,7 +8,7 @@ This site is a collaboration between Alec Ramsay and Todd Proebsting.
 
 ### Alec Ramsay
 
-My career was in tech ([bio])(alecramsay.github.io).
+My career was in tech ([bio])(https://alecramsay.github.io/).
 I've been working on redistricting since 2017.
 I wrote the analytics engine for [Dave's Redistricting](https://davesredistricting.org/) (DRA).
 
