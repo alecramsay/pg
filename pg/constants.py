@@ -75,12 +75,18 @@ WY 1
 ### ENVIRONMENT CONSTANTS ###
 
 rawdata_dir: str = "../../../local/pg/rawdata"
+vtd_dir: str = "../../../local/vtd_data/2020_vtd"
+
 preprocessed_data_dir: str = "../../dev/baseline/data"
+
 data_dir: str = "data"
 temp_dir: str = "temp"
-results_dir: str = "results"
+
 assets_dir: str = "docs/assets/images"
 site_data_dir: str = "docs/_data"
+
+dccvt_py: str = "../dccvt/examples/redistricting"
+dccvt_go: str = "../dccvt/bin"
 
 
 def unit_id(units: str) -> str:
