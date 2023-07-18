@@ -256,6 +256,7 @@ officials_copy: dict[str, str] = {
 
 # Notable Maps for 42 states with 2 or congressional districts (except HI and ME -- see above)
 # Pulled 11/07/2022 (except for states w/ 2 congressional districts)
+# These were the *reported* Notable Maps. We used a few different ones for the analysis.
 notable_maps: dict[str, dict] = {
     "AL": {
         "proportional": "5d573512-b4c2-4f6f-ae2d-c922a10f44fb",
@@ -407,7 +408,7 @@ notable_maps: dict[str, dict] = {
     "NV": {
         "proportional": "628a65f3-abf3-412b-9ef6-7cd20bfeac73",
         "competitive": "ad048a79-af54-4092-aa8f-f14a0947df4d",
-        "minority": "cd1c643b-7353-4d8e-b9ab-072ef603508d",  # replaced
+        "minority": "cd1c643b-7353-4d8e-b9ab-072ef603508d",
         "compact": "628a65f3-abf3-412b-9ef6-7cd20bfeac73",
         "splitting": "7b4f4269-1c31-4fa8-a282-cd8f1fa3b5e6",
     },
@@ -519,7 +520,7 @@ notable_maps: dict[str, dict] = {
     # States w/ 2 congressional districts
     "ID": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
-        "competitive": "5f1c3e67-1895-4230-80c6-e7d286b6e89e",  # 07-16-23 replaced
+        "competitive": "53a1b547-3a7e-4fe7-ab58-7badc6274e6b",  # 07-16-23
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
         "compact": "206912f7-878a-4f21-b188-f40320ab558d",  # 07-16-23
         "splitting": "abd274f0-847c-4c53-934e-646c84d81aac",  # 07-16-23
@@ -532,15 +533,15 @@ notable_maps: dict[str, dict] = {
         "splitting": "a50422e4-5596-4385-808b-7bf0639b5d63",  # 07-16-23
     },
     "NH": {
-        "proportional": "7b509654-2390-440b-a022-211cb977b074",  # 07-16-23 replaced
+        "proportional": "c180d0a8-cd75-492e-9fe4-98cf3df931d1",  # 07-16-23
         "competitive": "adce2bd3-8f35-4437-9dd5-86bb5e1864b1",  # 07-16-23
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
         "compact": "3ed6cd29-1807-4a82-a4e8-c6512d28ab77",  # 07-16-23
-        "splitting": "adce2bd3-8f35-4437-9dd5-86bb5e1864b1",  # 07-16-23 replaced
+        "splitting": "5fc07325-9519-4bfb-9279-6701e9026af1",  # 07-16-23
     },
     "RI": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",  # N/A
-        "competitive": "40aef9df-2406-4c9b-8e80-b48b273dfd32",  # 07-16-23 replaced
+        "competitive": "f4a1138f-fe7e-4127-bd76-d2cb718d3bfb",  # 07-16-23
         "minority": "ffddb68e-700a-4d85-85f5-edfe061ec821",  # 07-16-23
         "compact": "344ecc9b-b641-44e7-87b2-1ffd6d69da87",  # 07-16-23
         "splitting": "344ecc9b-b641-44e7-87b2-1ffd6d69da87",  # 07-16-23
@@ -623,7 +624,7 @@ notables_copy: dict[str, dict] = {
     },
     "IN": {
         "proportional": "1f6ff4fa-53ed-499a-81e7-cd80296c6946",
-        "competitive": "32ee9012-f4d6-4425-9f88-b38c6ae4a70c",
+        "competitive": "ee9ba611-992d-4c0f-b947-80979f23e38e",  # copy of ???
         "minority": "101f80a9-cfc0-423b-b0d6-29e81403b46c",
         "compact": "f59e9631-2abe-4753-bc3a-b9a5186d233c",
         "splitting": "07f032b2-ec89-4bde-8ec5-57224285172c",
@@ -666,7 +667,7 @@ notables_copy: dict[str, dict] = {
         "splitting": "d26ec0e1-f53a-4ebd-9aa8-7e18accb04af",
     },
     "MA": {
-        "proportional": "9cf86106-cfc2-402d-9365-8206ef77f6ee",
+        "proportional": "b9eff778-303e-49ec-a4f0-a0165a05a665",  # copy of b9eff778-303e-49ec-a4f0-a0165a05a665
         "competitive": "7cda7048-7362-4543-998a-2c1b89de88a8",
         "minority": "6fdf3a89-1b63-4856-bcbb-d777b01f51a2",
         "compact": "ff5a5d69-1c81-4ce2-927b-ddb010968b33",
@@ -703,7 +704,7 @@ notables_copy: dict[str, dict] = {
     },
     "NE": {
         "proportional": "a2d83af8-8aab-492f-9f10-9be4b9a263f1",
-        "competitive": "adacc8ce-05c6-4d86-8fb3-99d0ace9f25d",
+        "competitive": "64d87e1d-766e-4907-9324-bfec457e1711",  # copy of "c15b16b9-65f9-4814-9958-1aeec10d3ab0"
         "minority": "eb4be8c9-3ea4-494f-a98d-226f597bd5da",
         "compact": "f7720b75-58d6-4e2d-bff0-894e2c7b5f41",
         "splitting": "4ff0b106-818d-4f7a-987a-39205bdcb008",
@@ -711,14 +712,14 @@ notables_copy: dict[str, dict] = {
     "NV": {
         "proportional": "c9b38b70-d05a-4d6f-b6ec-f237da8ca34f",
         "competitive": "3ac3a189-ea62-4d90-baec-6e7e46c9893d",
-        "minority": "387a0b00-171b-4821-8479-63bcdaf2d79a",  # a copy of cd1c643b-7353-4d8e-b9ab-072ef603508d
+        "minority": "387a0b00-171b-4821-8479-63bcdaf2d79a",  # copy of cd1c643b-7353-4d8e-b9ab-072ef603508d
         "compact": "8da2d779-b8bd-4e27-bae7-340fa87a4376",
         "splitting": "baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff",
     },
     "NJ": {
         "proportional": "5cb13428-1e13-4e5e-b4ab-547478caed4b",
         "competitive": "3c54c696-ae75-4eda-a260-5a95a2c276ef",
-        "minority": "ddc291dc-1f0b-4b88-b57a-ff410c75af81",
+        "minority": "7a67aa4f-a75a-4958-9d91-ae6cdbf91d80",  # copy of b794c93f-5033-4c36-bd93-1a93b48de442
         "compact": "f254884d-267e-43b4-9d7e-2d9812c13788",
         "splitting": "a3afe5ca-4430-483f-82ca-39922fa5d3dc",
     },
@@ -782,14 +783,14 @@ notables_copy: dict[str, dict] = {
         "competitive": "521725a2-3c2a-498a-bb95-0a64622b5d52",
         "minority": "206ddd70-ef2d-48ff-ba91-c7db687cb9a6",
         "compact": "bf225fbb-c06b-4a26-a00c-e98bd9344347",
-        "splitting": "61d2f566-0939-4ced-8586-2c216a6b1965",
+        "splitting": "31408783-0ca1-4c94-abf4-20270ef87c22",  # copy of "46a975e5-30b4-4277-9dbc-2609b452eaa2"
     },
     "TN": {
         "proportional": "c9ec1171-e733-41be-ae73-faadbd4f9eff",
-        "competitive": "cea6a3dc-70e7-4be3-8eb2-d994a237226b",
+        "competitive": "b44dbb99-35d6-4a09-97ec-0f0654bb0d83",  # copy of ba9b21a7-da1f-46cc-ac5e-11b12215268d
         "minority": "c0c61d14-db2e-44db-8b81-c9f535808b3a",
         "compact": "57c3bb60-5f54-4cc1-a1b7-4942584fdc6f",
-        "splitting": "512a7c6f-4dde-4773-a8b0-a933014e7982",
+        "splitting": "812ca788-8a2c-4300-ab53-3979518f16bb",  # copy of 32587b8e-f18b-463f-8f30-86a3fdbb8bd7
     },
     "TX": {
         "proportional": "5a8bcd01-5b7b-4cb0-ba97-775c127412c2",
@@ -822,14 +823,14 @@ notables_copy: dict[str, dict] = {
     "WI": {
         "proportional": "e2a8430d-0721-4a77-a70c-f1b39423f76f",
         "competitive": "98421457-d1bf-4036-bb54-acf3b87c93c3",
-        "minority": "ab4e662f-3113-4415-b046-4a41ab2fc6e2",
+        "minority": "5af5a6bf-92cd-4467-ad0e-5d513df5f2ed",  # copy of "e8d8bf63-0f1b-4b7b-bb19-f124438a9e79"
         "compact": "ee9bc88a-f00a-4284-be14-a6b61b9ca203",
         "splitting": "4ad1f885-3b85-4dc7-bf36-605a122f4b13",
     },
     # States w/ 2 congressional districts
     "ID": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "f404dcbc-4763-4405-8ee8-9de38763ab9c",
+        "competitive": "f404dcbc-4763-4405-8ee8-9de38763ab9c",  # copy of "5f1c3e67-1895-4230-80c6-e7d286b6e89e"
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "compact": "c04b3d59-ad9b-4d34-a56c-a40e4a2faaaf",
         "splitting": "0549f613-9577-4a0f-ba17-f821552e3512",
@@ -842,15 +843,15 @@ notables_copy: dict[str, dict] = {
         "splitting": "a8bbd540-253e-4c9b-aa51-492925c0a896",
     },
     "NH": {
-        "proportional": "9c0a775c-8886-4fcf-852a-c3cd8aad2ff5",
+        "proportional": "9c0a775c-8886-4fcf-852a-c3cd8aad2ff5",  # copy of "7b509654-2390-440b-a022-211cb977b074"
         "competitive": "4dc15785-8867-4a13-9c06-bb2a7ffecbb7",
         "minority": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "compact": "7a525a0e-d481-4f1a-a3c7-380134fabd02",
-        "splitting": "fddf7e78-d454-497f-b9a6-d5b5740f21d6",
+        "splitting": "fddf7e78-d454-497f-b9a6-d5b5740f21d6",  # copy of "adce2bd3-8f35-4437-9dd5-86bb5e1864b1"
     },
     "RI": {
         "proportional": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "competitive": "9b7b2ce0-e1dc-48fe-89ec-0b2298cdb8f9",
+        "competitive": "9b7b2ce0-e1dc-48fe-89ec-0b2298cdb8f9",  # copy of "40aef9df-2406-4c9b-8e80-b48b273dfd32"
         "minority": "bd87b715-1286-4ffa-9f42-056f18693d9f",
         "compact": "56621991-7577-42cf-ae24-8b1cb8fb0587",
         "splitting": "83816f12-ddf0-4a45-a49d-a9908e2922e1",

@@ -92,7 +92,7 @@
   name: Indiana
   official: da195dcd-381e-4598-bae4-9dad2ea12a8d
   proportional: 1f6ff4fa-53ed-499a-81e7-cd80296c6946
-  competitive: ee9ba611-992d-4c0f-b947-80979f23e38e # Replaced
+  competitive: ee9ba611-992d-4c0f-b947-80979f23e38e
   minority: 101f80a9-cfc0-423b-b0d6-29e81403b46c
   compact: f59e9631-2abe-4753-bc3a-b9a5186d233c
   splitting: 07f032b2-ec89-4bde-8ec5-57224285172c
@@ -151,7 +151,7 @@
 - xx: MA
   name: Massachusetts
   official: 8b9bdb2d-da5e-43db-acf1-08175c1718ba
-  proportional: b9eff778-303e-49ec-a4f0-a0165a05a665 # Replaced
+  proportional: b9eff778-303e-49ec-a4f0-a0165a05a665
   competitive: 7cda7048-7362-4543-998a-2c1b89de88a8
   minority: 6fdf3a89-1b63-4856-bcbb-d777b01f51a2
   compact: ff5a5d69-1c81-4ce2-927b-ddb010968b33
@@ -213,7 +213,7 @@
   official: c4077907-6605-4fd3-9493-50527ceee352
   proportional: c9b38b70-d05a-4d6f-b6ec-f237da8ca34f
   competitive: 3ac3a189-ea62-4d90-baec-6e7e46c9893d
-  minority: 789fe206-aa13-4b04-a984-67647eceecbb
+  minority: 387a0b00-171b-4821-8479-63bcdaf2d79a
   compact: 8da2d779-b8bd-4e27-bae7-340fa87a4376
   splitting: baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff
   baseline: b11b591a-94cf-475f-bb54-8f186e2cf12a
@@ -223,7 +223,7 @@
   official: 1f7c8393-0b8a-49ea-8fb4-60c393cfb661
   proportional: 5cb13428-1e13-4e5e-b4ab-547478caed4b
   competitive: 3c54c696-ae75-4eda-a260-5a95a2c276ef
-  minority: 7a67aa4f-a75a-4958-9d91-ae6cdbf91d80 # Replaced
+  minority: 7a67aa4f-a75a-4958-9d91-ae6cdbf91d80
   compact: f254884d-267e-43b4-9d7e-2d9812c13788
   splitting: a3afe5ca-4430-483f-82ca-39922fa5d3dc
   baseline: b687ee33-5fae-43ce-b161-d49a1ddfab98
@@ -305,14 +305,14 @@
   competitive: 521725a2-3c2a-498a-bb95-0a64622b5d52
   minority: 206ddd70-ef2d-48ff-ba91-c7db687cb9a6
   compact: bf225fbb-c06b-4a26-a00c-e98bd9344347
-  splitting: 31408783-0ca1-4c94-abf4-20270ef87c22 # Replaced
+  splitting: 31408783-0ca1-4c94-abf4-20270ef87c22
   baseline: adb40672-45a8-43ba-bf72-a73bef7c98ab
   ready: false # ready
 - xx: TN
   name: Tennessee
   official: e142df57-8dd5-44c3-a316-c2675e0e2fe4
   proportional: c9ec1171-e733-41be-ae73-faadbd4f9eff
-  competitive: cea6a3dc-70e7-4be3-8eb2-d994a237226b
+  competitive: b44dbb99-35d6-4a09-97ec-0f0654bb0d83
   minority: c0c61d14-db2e-44db-8b81-c9f535808b3a
   compact: 57c3bb60-5f54-4cc1-a1b7-4942584fdc6f
   splitting: 512a7c6f-4dde-4773-a8b0-a933014e7982
@@ -325,7 +325,7 @@
   competitive: b3168e80-5ec4-49e2-b3bd-928cf2ffffdc
   minority: 55687012-5c38-4fc2-9b19-a6b325e5e8cb
   compact: 3670b0b1-7083-4d20-9cee-5c5389dfdcf4
-  splitting: 959c211a-e7db-40fe-9703-0082de3fd50f
+  splitting: 812ca788-8a2c-4300-ab53-3979518f16bb
   baseline: bb716f76-f6b9-4f61-8590-451007a1190b
   ready: false # ready
 - xx: UT
@@ -353,7 +353,7 @@
   official: be06fce9-90a2-4bc0-9659-8eacafcd4afc
   proportional: c8ac870c-f608-4f06-a519-fca814cd87c9
   competitive: ee915375-d42d-4be8-8858-18302b68e684
-  minority: 9b6064ae-6aa8-4ea7-af3e-2e0dde3c123f
+  minority: 5af5a6bf-92cd-4467-ad0e-5d513df5f2ed
   compact: 5ece8404-5181-4aef-8dbf-126029f60dad
   splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
   baseline: 989ac5b1-debe-4960-b7ca-d29d089c858d
