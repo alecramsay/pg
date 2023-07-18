@@ -7,8 +7,10 @@ DEBUGGING DRIVER
 
 from pg import *
 
-xx: str = "NC"
-n: int = districts_by_state[xx][plan_type.lower()]
-cycle: str = "2020"
+./geoid.py cores \
+--assignments ~/personal/pg/data/NC/*{Baseline,Compact,Competitive,Minority,Proportional,Splitting}*.csv \
+--maxcores ~/Downloads/NC-all-maxcore-pop.csv \
+--diff ~/Downloads/NC-all-diff.csv \
+--population ~/personal/baseline/data/NC/NC_2020_block_data.csv
 
 pass

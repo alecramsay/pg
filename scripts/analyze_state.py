@@ -5,7 +5,7 @@ Analyze the Official & Notable maps for a state vs. the Baseline map
 
 For example:
 
-$ scripts/analyze_state.py NC
+$ scripts/analyze_state.py -s NC
 
 For documentation, type:
 
@@ -21,64 +21,92 @@ import os
 from pg import *
 
 
-### PARSE ARGS ###
+def find_district_cores(
+    *, assignments_csv: str, data_csv: str, label: str, debug: bool = False
+) -> None:
+    """Find district "cores" for multiple maps.
 
-parser: ArgumentParser = argparse.ArgumentParser(
-    description="Analyze the Official & Notable maps for a state vs. the Baseline map"
-)
+    python3 ../dccvt/examples/redistricting/geoid.py cores \
+    --assignments ~/iCloud/dev/pg/data/NC/*{Baseline,Proportional}*.csv \
+    --maxcores ~/iCloud/dev/pg/data/NC/NC_Proportional_Baseline_cores_max.csv \
+    --diff ~/iCloud/dev/pg/data/NC/NC_Proportional_Baseline_cores_all.csv \
+    --population ~/iCloud/dev/baseline/data/NC/NC_2020_block_data.csv
+    """
 
-parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
-parser.add_argument(
-    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)
-
-args: Namespace = parser.parse_args()
-
-xx: str = args.state
-
-
-### PULL THE BASELINE RATINGS ###
-
-print()
-print("Pulling ratings for baseline map ...")
-based_id: str = baseline_maps[xx]
-os.system(f"scripts/pull_map_ratings.sh {xx} {plan_type} Baseline {based_id}")
+    command: str = f"python3  {dccvt_py}/geoid.py energy --assignment  {assignments_csv} --redistricting_input {data_csv} --label {label}"
+    os.system(command)
 
 
-### PLOT PAIRWISE RADAR DIAGRAMS ###
+def parse_args() -> Namespace:
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Analyze the Official & Notable maps for a state vs. the Baseline map"
+    )
 
-for label in [
-    "Official",
-    "Proportional",
-    "Competitive",
-    "Minority",
-    "Compact",
-    "Splitting",
-]:
-    print("Plotting radar diagram for", label, "map ...")
-    os.system(f"scripts/plot_radar_diagram.py {xx} {label} Baseline")
+    parser.add_argument(
+        "-s",
+        "--state",
+        default="NC",
+        help="The two-character state code (e.g., NC)",
+        type=str,
+    )
+    parser.add_argument(
+        "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+    )
 
-
-### WRITE THE RATINGS TO A CSV FILE ###
-
-print("Writing ratings to CSV file ...")
-os.system(f"scripts/write_ratings_table.py {xx}")
-
-
-### DIFF THE PLANS ###
-
-print("Diffing plans ...")
-os.system(f"scripts/diff_plans.py -s {xx}")
+    args: Namespace = parser.parse_args()
+    return args
 
 
-### ADD & PLOT MAP REGIONS ###
+def main() -> None:
+    """Log energies for all the maps generated for a state."""
 
-print("Add map regions ...")
-os.system(f"scripts/map_regions.py -s {xx}")
+    args: Namespace = parse_args()
 
-print("Plot regions ...")
-os.system(f"scripts/plot_regions.py -s {xx}")
+    xx: str = args.state
 
-print("Done!\n")
+    # NOTE - Make sure ratings have already been pulled for the baseline map.
+    # ### PULL THE BASELINE RATINGS ###
 
-pass
+    # print()
+    # print("Pulling ratings for baseline map ...")
+    # based_id: str = baseline_maps[xx]
+    # os.system(f"scripts/pull_map_ratings.sh {xx} {plan_type} Baseline {based_id}")
+
+    # TODO - Uncomment this
+    # ### PLOT PAIRWISE RADAR DIAGRAMS ###
+
+    # for label in [
+    #     "Official",
+    #     "Proportional",
+    #     "Competitive",
+    #     "Minority",
+    #     "Compact",
+    #     "Splitting",
+    # ]:
+    #     print("Plotting radar diagram for", label, "map ...")
+    #     os.system(f"scripts/plot_radar_diagram.py {xx} {label} Baseline")
+
+    # TODO - Uncomment this
+    # ### WRITE THE RATINGS TO A CSV FILE ###
+
+    # print("Writing ratings to CSV file ...")
+    # os.system(f"scripts/write_ratings_table.py {xx}")
+
+    ### FIND DISTRICT CORES ###
+
+    print("Diffing plans ...")
+    # os.system(f"scripts/diff_plans.py -s {xx}")
+
+    # TODO - Compute population by district CSV
+    # TODO - Import core "maps" into DRA
+    # TODO - What else?
+
+    print("Done!\n")
+
+    pass
+
+
+if __name__ == "__main__":
+    main()
+
+### END ###
