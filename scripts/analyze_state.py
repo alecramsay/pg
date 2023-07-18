@@ -21,22 +21,6 @@ import os
 from pg import *
 
 
-def find_district_cores(
-    *, assignments_csv: str, data_csv: str, label: str, debug: bool = False
-) -> None:
-    """Find district "cores" for multiple maps.
-
-    python3 ../dccvt/examples/redistricting/geoid.py cores \
-    --assignments ~/iCloud/dev/pg/data/NC/*{Baseline,Proportional}*.csv \
-    --maxcores ~/iCloud/dev/pg/data/NC/NC_Proportional_Baseline_cores_max.csv \
-    --diff ~/iCloud/dev/pg/data/NC/NC_Proportional_Baseline_cores_all.csv \
-    --population ~/iCloud/dev/baseline/data/NC/NC_2020_block_data.csv
-    """
-
-    command: str = f"python3  {dccvt_py}/geoid.py energy --assignment  {assignments_csv} --redistricting_input {data_csv} --label {label}"
-    os.system(command)
-
-
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
         description="Analyze the Official & Notable maps for a state vs. the Baseline map"
