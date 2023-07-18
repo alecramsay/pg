@@ -407,7 +407,7 @@ notable_maps: dict[str, dict] = {
     "NV": {
         "proportional": "628a65f3-abf3-412b-9ef6-7cd20bfeac73",
         "competitive": "ad048a79-af54-4092-aa8f-f14a0947df4d",
-        "minority": "5a31eb05-bdce-4d5c-9b24-69eb5cb5304c",
+        "minority": "cd1c643b-7353-4d8e-b9ab-072ef603508d",  # replaced
         "compact": "628a65f3-abf3-412b-9ef6-7cd20bfeac73",
         "splitting": "7b4f4269-1c31-4fa8-a282-cd8f1fa3b5e6",
     },
@@ -711,7 +711,7 @@ notables_copy: dict[str, dict] = {
     "NV": {
         "proportional": "c9b38b70-d05a-4d6f-b6ec-f237da8ca34f",
         "competitive": "3ac3a189-ea62-4d90-baec-6e7e46c9893d",
-        "minority": "789fe206-aa13-4b04-a984-67647eceecbb",
+        "minority": "387a0b00-171b-4821-8479-63bcdaf2d79a",  # a copy of cd1c643b-7353-4d8e-b9ab-072ef603508d
         "compact": "8da2d779-b8bd-4e27-bae7-340fa87a4376",
         "splitting": "baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff",
     },
