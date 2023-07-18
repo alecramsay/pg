@@ -87,13 +87,15 @@ class Plan:
     def set_state(self, state: State) -> None:
         self.state = state
 
-    def load_assignments(self, rel_path: str) -> None:
+    def load_assignments(
+        self, rel_path: str, *, geoid: str = "GEOID20", district: str = "District"
+    ) -> None:
         """Load assignments from a CSV file."""
 
         types: list = [str, int]
         districts_by_geoid: list[dict[str, int]] = read_csv(rel_path, types)
         self._assignments = [
-            Assignment(str(item["GEOID20"]), int(item["District"]))
+            Assignment(str(item[geoid]), int(item[district]))
             for item in districts_by_geoid
         ]
 
