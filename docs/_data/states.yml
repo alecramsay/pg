@@ -377,7 +377,7 @@
   compact: c04b3d59-ad9b-4d34-a56c-a40e4a2faaaf
   splitting: 0549f613-9577-4a0f-ba17-f821552e3512
   baseline: e6f75d1c-4756-4ebe-99fe-9012d6777ed8
-  ready: false 
+  ready: false # ready
 - xx: MT
   name: Montana
   official: d7fd9cdb-4677-47b0-930a-f53f6b044b8f
@@ -397,7 +397,7 @@
   compact: 7a525a0e-d481-4f1a-a3c7-380134fabd02
   splitting: fddf7e78-d454-497f-b9a6-d5b5740f21d6
   baseline: 9309e340-f8f7-46f3-81dc-69805f9fbeca
-  ready: false 
+  ready: false # ready
 - xx: RI
   name: Rhode Island
   official: ee4cfa0f-930b-4f74-9adc-e3b4fc939a63
@@ -407,7 +407,7 @@
   compact: 56621991-7577-42cf-ae24-8b1cb8fb0587
   splitting: 83816f12-ddf0-4a45-a49d-a9908e2922e1
   baseline: c7e73ead-eeb0-4a81-9708-caadff6428e6
-  ready: false 
+  ready: false # ready
 - xx: WV
   name: West Virginia
   official: 8b2f8ec2-1d12-468a-b445-11c9f6097f74
