@@ -387,7 +387,7 @@
   compact: 7ef9c6cc-9009-4a46-a135-b02a015e0588
   splitting: a8bbd540-253e-4c9b-aa51-492925c0a896
   baseline: 62590347-4639-4f63-b505-6bb2409c66eb
-  ready: false 
+  ready: false # ready
 - xx: NH
   name: New Hampshire
   official: 8624cdac-7fd1-40ca-a47f-c196f8a84df7
