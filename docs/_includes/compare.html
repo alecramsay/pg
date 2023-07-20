@@ -1,0 +1,82 @@
+<!-- A tab for map index = [Official, Proportional, Competitive, Minority, Compact, Splitting] -->
+
+{% assign label = site.data.maps[include.index].label %}
+{% assign label-qualified = site.data.maps[include.index].qualified-label | downcase %}
+{% assign label-lower = label | downcase %}
+
+{% capture radar-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
+{% endcapture %}
+{% assign radar-png = radar-png | strip_newlines %}
+
+{% capture map-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
+{% endcapture %}
+{% assign map-png = map-png | strip_newlines %}
+
+{% capture cores-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_district_cores.png
+{% endcapture %}
+{% assign cores-png = cores-png | strip_newlines %}
+
+{% capture cores-csv %}
+{{ xx }}_2022_Congress_{{ label }}_cores_summary
+{% endcapture %}
+{% assign cores-csv = cores-csv | strip_newlines %}
+{% assign cores = site.data[cores-csv] %}
+
+{% assign state = site.data.states | where:"xx", xx | first %}
+
+{% capture baseline-link %}
+https://davesredistricting.org/join/{{ state["baseline"] }}
+{% endcapture %}
+{% assign baseline-link = baseline-link | strip_newlines %}
+
+{% capture map-link %}
+https://davesredistricting.org/join/{{ state[label-lower] }}
+{% endcapture %}
+{% assign map-link = map-link | strip_newlines %}
+
+<div id="{{ label }}" class="tabcontent">
+	<p>This tab compares the <a href="{{ map-link }}">{{ label-qualified }} map</a> and the <a
+			href="{{ baseline-link }}">baseline map.</a>
+	</p>
+
+	<h4>Ratings Compared to Baseline</h4>
+	<p style="text-align: center">
+		<img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}" />
+	</p>
+
+	<h4>Map With Baseline Overlay</h4>
+	<p style="text-align: center">
+		<img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
+	</p>
+
+	<h4>District Cores From Baseline</h4>
+	<p style="text-align: center">
+		<img src="{{ cores-png }}" alt="Regions" title="District cores for" width="{{ page.map-width }}" />
+	</p>
+
+	<h4>Cores Data</h4>
+	<table>
+		{% for row in cores %}
+		{% if forloop.first %}
+		<tr>
+			{% for pair in row %}
+			<th>{{ pair[0] }}</th>
+			{% endfor %}
+		</tr>
+		{% endif %}
+
+		{% tablerow pair in row %}
+		{% if pair[0] == "DISTRICT%" or pair[0] == "CUMULATIVE%"%}
+		{{ pair[1] | times: 100 | round: 2 }}
+		{% elsif pair[0] == "POPULATION" %}
+		{{ pair[1] | intcomma }}
+		{% else %}
+		{{ pair[1] }}
+		{% endif %}
+		{% endtablerow %}
+		{% endfor %}
+	</table>
+</div>
