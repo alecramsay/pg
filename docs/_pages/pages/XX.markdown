@@ -1,7 +1,7 @@
 ---
 layout: template
 title: North Carolina
-permalink: states/NC/
+permalink: states/XX/
 
 small-radar-width: 300
 big-radar-width: 500
