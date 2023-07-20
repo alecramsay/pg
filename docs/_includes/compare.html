@@ -1,4 +1,6 @@
 <!-- A tab for map index = [Official, Proportional, Competitive, Minority, Compact, Splitting] -->
+<!-- https://alecramsay.github.io/pg/states/NC/ -->
+<!-- https://alecramsay.github.io/pg/states/XX/ -->
 
 {% assign label = site.data.maps[include.index].label %}
 {% assign label-qualified = site.data.maps[include.index].qualified-label | downcase %}
@@ -52,12 +54,11 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 		<img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
 	</p>
 
-	<h4>District Cores From Baseline</h4>
+	<h4>District Cores Relative to Baseline</h4>
 	<p style="text-align: center">
-		<img src="{{ cores-png }}" alt="Regions" title="District cores for" width="{{ page.map-width }}" />
+		<img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
 	</p>
 
-	<h4>Cores Data</h4>
 	<table>
 		{% for row in cores %}
 		{% if forloop.first %}
