@@ -15,4 +15,5 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Align left
-- State hex map; take 2
+- State hex map: colored additional states
+
