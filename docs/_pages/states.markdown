@@ -155,7 +155,30 @@ permalink: states/
     <area shape="circle" coords="444,118,30" alt="Wisconsin" href="{{ site.baseurl }}states/WI">
     <span class="tooltiptext">Wisconsin</span>
   </div>
+  <!-- States w/ just two congressional districts -->
+  <div class="tooltip">
+    <area shape="circle" coords="444,118,30" alt="Idaho" href="{{ site.baseurl }}states/ID">
+    <span class="tooltiptext">Idaho</span>
+  </div>
+  <div class="tooltip">
+    <area shape="circle" coords="444,118,30" alt="Montana" href="{{ site.baseurl }}states/MT">
+    <span class="tooltiptext">Montana</span>
+  </div>
+  <div class="tooltip">
+    <area shape="circle" coords="444,118,30" alt="New Hampshire" href="{{ site.baseurl }}states/NH">
+    <span class="tooltiptext">New Hampshire</span>
+  </div>
+    <div class="tooltip">
+    <area shape="circle" coords="444,118,30" alt="Rhode Island" href="{{ site.baseurl }}states/RI">
+    <span class="tooltiptext">Rhode Island</span>
+  </div>
+  <div class="tooltip">
+    <area shape="circle" coords="444,118,30" alt="West Virginia" href="{{ site.baseurl }}states/WV">
+    <span class="tooltiptext">West Virginia</span>
+  </div>
 </map> 
 
 
-<p>The states with white backgrounds have fewer than three congressional districts and are not included in this analysis. The colors for other states have no intrinsic meaning: they're simply meant to evoke redistricting.</p>
+<p>The states with white backgrounds only have congressional districts,
+except for Maine which is not included in this analysis because of problems with its data. 
+The colors for other states have no intrinsic meaning: they're simply meant to evoke redistricting.</p>

@@ -5,7 +5,7 @@ permalink: baseline-workflow/
 ---
 
 This page describes the workflow for generating a baseline map for a state, using the code
-in my [baseline repository](https://github.com/alecramsay/baseline) which in turn uses the
+in Alec's [baseline repository](https://github.com/alecramsay/baseline) which in turn uses the
 code in Todd's [dccvt repository](https://github.com/proebsting/dccvt).
 
 ## Summary
@@ -78,4 +78,4 @@ Designate the lowest energy contiguous candidate with population deviation <= 2%
 -   Copy it to the maps/XX directory as XX20C_baseline_100.csv.
 
 
-The specific workflow for each state -- along with command arguments -- are in the workflows/ directory of my baseline repository.
+The specific workflow for each state -- along with command arguments -- are in the workflows/ directory of Alec's baseline repository.

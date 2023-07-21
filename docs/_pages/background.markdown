@@ -29,19 +29,19 @@ most compact map one, and vice versa.
 This led to the two hypotheses that motivated this research:
 
 1.  In contrast to the notable and official maps that use a broad spectrum of data,
-    my first hypothesis was that
+    Alec's first hypothesis was that
     there are well-defined "baseline districts" for a state that only
-    depend on total census population &#8212; While I introduced the concept
-    several years ago,[^1] I had not written code to generate them automatically.
+    depend on total census population &#8212; While he had introduced the concept
+    several years ago,[^1] he had not written code to generate them automatically.
 
 2.  The districts for the notable maps for a state overlap significantly. 
     It seems obvious that &#8212; barring extremely serpentine districts &#8212; valid redistricting maps 
     for a state *must* share common core areas because of the underlying "population geography" for a state,
     i.e., how many people live where.
     This is precisely what is characterized by baseline districts.
-    I wanted to show this empirically and visually, by comparing each map to the baseline map.[^2]
+    He wanted to show this empirically and visually, by comparing each map to the baseline map.[^2]
 
-To the extent that the latter were true, it would formalize my intuition
+To the extent that the latter were true, it would formalize Alec's intuition
 that the essence of redistricting can be thought of as
 the rubber band-like stretching of the boundaries of baseline districts
 to achieve a mix of policy goals, e.g., partisan fairness, competitiveness, etc.
@@ -71,20 +71,20 @@ baseline districts can also illustrate the tradeoffs inherent in a redistricting
 
 ## Plan
 
-My plan mirrored my hypotheses:
+Alec's plan mirrored his hypotheses:
 
 1.  First, develop an automated method for generating baseline districts &#8212;
-    Justin Levitt keyed me into the idea that baseline districts are
+    Justin Levitt had keyed him into the idea that baseline districts are
     maximally population compact (vs. geometrically compact), based on
-    physics concept of moment of inertia. Some searching led me to
+    physics concept of moment of inertia. Some searching led him to
     Andrew Spann, Dan Gulotta, Daniel Kane\'s work on the latter. Daniel
     Gulotta wrote a C++ implementation of their heuristic approach to
     support their paper \"Electoral Redistricting with Moment of Inertia
-    and Diminishing Halves Models\" at MCM 07. My plan was to
+    and Diminishing Halves Models\" at MCM 07. His plan was to
     reimplement it in Python.
 
 2.  Then compare each notable & official map to the baseline map for the state &#8212; Given the
-    number of maps involved (222), I planned to develop a pipeline of
+    number of maps involved (222), heplanned to develop a pipeline of
     tools to automate as much of the workflow as possible to produce the
     tabular and visual artifacts for this web site.
 
@@ -94,8 +94,8 @@ for a state.
 
 ## Scope
 
-I chose to study the 37 states apportioned three or more congressional districts in the 2020 census.
-With only two districts, a state has many Voronoi diagrams.
+Alec chose to study the states apportioned two or more congressional districts in the 2020 census.
+Maine has to be skipped due to data issues, leaving 42 states in the study.
 
 This analysis uses maps drawn in Dave's Redistricting. 
 Besides the official maps used for the 2022 congressional elections, 
@@ -108,13 +108,13 @@ map be selected as the notable map, so they are good proxies for maps that
 maximize these dimensions.
 As such, they illustrate the tradeoffs between these dimensions.
 
-For each state, I compare these six maps to the baseline districts I generated.
+For each state, we compare these six maps to the baseline districts we generated.
 
 ## Method 
 
-At first I tried to reimplement Gulotta's C++ moment of inertia code in Python with
-only partial success. Fortunately, I shared what I was working on with
-Todd Proebsting, he got intrigued, and then developed a solution based on 
+At first Alec tried to reimplement Gulotta's C++ moment of inertia code in Python with
+only partial success. Fortunately, he shared what he was working on with his friend.
+Todd Proebsting, Todd got intrigued, and then he developed a solution based on 
 [Balzer's work](Capacity-Constrained Voronoi Tessellations: Computation and Applications).
 The evolution of our heuristic approach for finding the lowest energy assignment of precincts to districts 
 is described [here](./_pages/method.markdown).
@@ -147,7 +147,7 @@ The data used came from several sources:
 
 ## Workflow
 
-My overall workflow is described [here](workflow.md).
+Alec's overall workflow is described [here](workflow.md).
 
 ---
 

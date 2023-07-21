@@ -6,7 +6,7 @@ categories: news
 ---
 I've added *preliminary* results for five states:
 
-- NC -- I *always* start with NC!
+- NC -- Alec *always* starts with NC!
 - AZ
 - GA
 - LA
