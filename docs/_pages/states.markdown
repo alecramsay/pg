@@ -157,28 +157,28 @@ permalink: states/
   </div>
   <!-- States w/ just two congressional districts -->
   <div class="tooltip">
-    <area shape="circle" coords="444,118,30" alt="Idaho" href="{{ site.baseurl }}states/ID">
+    <area shape="circle" coords="181,174,30" alt="Idaho" href="{{ site.baseurl }}states/ID">
     <span class="tooltiptext">Idaho</span>
   </div>
   <div class="tooltip">
-    <area shape="circle" coords="444,118,30" alt="Montana" href="{{ site.baseurl }}states/MT">
+    <area shape="circle" coords="242,174,30" alt="Montana" href="{{ site.baseurl }}states/MT">
     <span class="tooltiptext">Montana</span>
   </div>
   <div class="tooltip">
-    <area shape="circle" coords="444,118,30" alt="New Hampshire" href="{{ site.baseurl }}states/NH">
+    <area shape="circle" coords="743,118,30" alt="New Hampshire" href="{{ site.baseurl }}states/NH">
     <span class="tooltiptext">New Hampshire</span>
   </div>
     <div class="tooltip">
-    <area shape="circle" coords="444,118,30" alt="Rhode Island" href="{{ site.baseurl }}states/RI">
+    <area shape="circle" coords="743,223,30" alt="Rhode Island" href="{{ site.baseurl }}states/RI">
     <span class="tooltiptext">Rhode Island</span>
   </div>
   <div class="tooltip">
-    <area shape="circle" coords="444,118,30" alt="West Virginia" href="{{ site.baseurl }}states/WV">
+    <area shape="circle" coords="477,279,30" alt="West Virginia" href="{{ site.baseurl }}states/WV">
     <span class="tooltiptext">West Virginia</span>
   </div>
 </map> 
 
 
 <p>The states with white backgrounds only have congressional districts,
-except for Maine which is not included in this analysis because of problems with its data. 
+except for Hawaii and Maine which can't be included due to data issues. 
 The colors for other states have no intrinsic meaning: they're simply meant to evoke redistricting.</p>

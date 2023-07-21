@@ -95,7 +95,7 @@ for a state.
 ## Scope
 
 Alec chose to study the states apportioned two or more congressional districts in the 2020 census.
-Maine has to be skipped due to data issues, leaving 42 states in the study.
+Hawaii and Maine had to be skipped due to data issues, leaving 42 states in the study.
 
 This analysis uses maps drawn in Dave's Redistricting. 
 Besides the official maps used for the 2022 congressional elections, 
