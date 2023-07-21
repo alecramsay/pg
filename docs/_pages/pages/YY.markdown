@@ -1,7 +1,7 @@
 ---
 layout: test
 title: North Carolina
-permalink: states/XX/
+permalink: states/YY/
 
 small-radar-width: 300
 big-radar-width: 500
