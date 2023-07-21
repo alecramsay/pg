@@ -428,3 +428,13 @@
   splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
   baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
   ready: true
+- xx: YY
+  name: North Carolina - Test
+  official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
+  proportional: eb89e54f-69aa-4742-90e9-83b696871348
+  competitive: 3ba3e193-414c-4a17-a9ef-57b326ede3d9
+  minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
+  compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
+  splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
+  baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
+  ready: true
