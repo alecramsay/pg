@@ -2,8 +2,15 @@
 layout: default
 ---
 
-The Redistricting Almanac shows the tradeoffs inherent in congressional redistricting state by state,
-for the 37 states apportioned three or more congressional districts in the 2020 census.[^1]
+This site illustrates three things:[^1]
+
+1. Redistricting maps are constrained by a state's underlying "population geography," i.e., how many people live where. 
+2. When you draw a redistricting map, you, in effect, distort the boundaries of the districts in this underlying political geography making tradeoffs between various policy objectives. Because of the underlying constraint, most maps share many of the same precinct assignments.
+3. The underlying political geography can be used to characterize the tradeoffs for redistricting a state.
+
+We show the tradeoffs inherent in congressional redistricting state by state,
+for 42 states apportioned two or more congressional districts in the 2020 census.
+Hawaii and Maine are excluded due to data issues.
 
 We introduce a new concept &#8212; baseline districts &#8212; which are solely a function of total census population by precinct.
 If you squint, the baseline districts for a state are a [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram),
@@ -25,13 +32,13 @@ You can choose a specific state to look at, on the [States](./_pages/states.mark
 
 The important results here are twofold:
 
-1. The baseline districts for a state are the districts that maximize population compactness.[^2]
+1. The baseline districts for a state are the districts that maximize population compactness (minimize energy).[^3]
 2. Redistricting a state involves inherent tradeoffs that can be *a priori* revealed by comparing policy-maximizing maps to the baseline districts.
 
 The specifics of our heuristic approach to generating baseline districts are *not* the main contribution of this study.
 Neither are the specific baseline maps we generated, though we think they are good proxies for the lowest energy maps for states and interesting in their own right.
 If someone else can find a lower energy map for a state that meets the definitional constraints of a baseline map, great:
-it should be considered the baseline instead.[^3]
+it should be considered the baseline instead.[^4]
 
 One could use the same technique to analyze state legislative redistricting, though we haven't done that yet.
 
@@ -56,6 +63,8 @@ complicating issues.
     We use the term "almanac" here instead, to suggest that this analysis could be updated periodically as new data are released,
     e.g., in 2030.
 
-[^2]: Baseline maps are the lowest energy maps that meet four constraints: complete, contiguous, doesn't split any precincts, and has a population deviation of 2% or less.
+[^2]: Here "energy" means energy as Balzer defined it in formula 2.13 in "Capacity-Constrained Voronoi Tessellations: Computation and Applications." TODO: provide a link to the paper? a one-line summary of the formula?
 
-[^3]: You can even imagine a contest with prize money for finding the lowest energy map for a state.
+[^3]: Baseline maps are the lowest energy maps that meet four constraints: complete, contiguous, doesn't split any precincts, and has a population deviation of 2% or less.
+
+[^4]: You can even imagine a contest with prize money for finding the lowest energy map for a state.
