@@ -2,15 +2,17 @@
 layout: default
 ---
 
-This site illustrates three things:[^1]
+This site makes a series of claims:[^1]
 
-1. Redistricting maps are constrained by a state's underlying "population geography," i.e., how many people live where. 
-2. When you draw a redistricting map, you, in effect, distort the boundaries of the districts in this underlying political geography making tradeoffs between various policy objectives. Because of the underlying constraint, most maps share many of the same precinct assignments.
-3. The underlying political geography can be used to characterize the tradeoffs for redistricting a state.
+1. A state's "population geography" -- i.e., how many people live in each precinct -- can be characterized in a well-defined redistricting map that satisfies the basic legal constraints that districts are contiguous and have 'roughly equal' populations. Since they only depend on precinct shapes and populations, these "baseline" districts are the "low information" districts for a state.
+2. On the one hand, because valid redistricting plans must have 'roughly equal' populations, other redistricting maps are, to a large degree, constrained by this underlying population geography. The boundaries of these districts can only be distorted so much before they become visibly engineered towards specific, typically partisan and/or racial, ends. Hence, most maps in a state -- even when optimizing to one end, such as maximal proportionality -- share many of the same precinct assignments or district cores.
+3. On the other, because mapmakers use considerable data to draw districts that reflect their preferred mix of policy objectives -- e.g., voting age population, demographics, past election results, etc. -- the boundaries in these "high information" plans reflect that data and those decisions.
+4. Finally, macro policy tradeoffs inherent in redistricting a state can be characterized.
 
-We show the tradeoffs inherent in congressional redistricting state by state,
-for 42 states apportioned two or more congressional districts in the 2020 census.
-Hawaii and Maine are excluded due to data issues.
+We show these tradeoffs for congressional redistricting for 42 states apportioned two or more congressional districts in the 2020 census.
+(We excluded Hawaii and Maine, due to data issues.)
+
+## Summary
 
 We introduce a new concept &#8212; baseline districts &#8212; which are solely a function of total census population by precinct.
 If you squint, the baseline districts for a state are a [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram),
