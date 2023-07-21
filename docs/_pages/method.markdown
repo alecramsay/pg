@@ -5,7 +5,9 @@ permalink: method/
 ---
 
 The method for generating baseline districts that Todd & I 
-developed evolved through an exploratory process:
+developed evolved through an exploratory process.
+Note that in all cases we used Cartesian (flat earth) calculations, as opposed to geodesic (spherical) calculations.
+Over short distances, these calculations are sufficiently accurate for our purposes.
 
 -   Alec started trying to port Andrew Spann, Dan Gulotta, Daniel Kane's C code to Python. 
     But he could never quite get the solver to reliably work with multiple states.

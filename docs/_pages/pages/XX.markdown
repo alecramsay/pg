@@ -17,4 +17,4 @@ NOTES
 - Align left
 - State hex map: colored additional states
 - Update energy definition
-
+- Flat earth not geodesic calculations
