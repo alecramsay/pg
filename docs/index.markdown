@@ -2,12 +2,15 @@
 layout: default
 ---
 
-This site makes a series of claims:[^1]
+The purpose of this site is to characterize the tradeoffs inherent in congressional redistricting state by state.
 
-1. A state's "population geography" -- i.e., how many people live in each precinct -- can be characterized in a well-defined redistricting map that satisfies the basic legal constraints that districts are contiguous and have 'roughly equal' populations. Since they only depend on precinct shapes and populations, these "baseline" districts are the "low information" districts for a state.
-2. On the one hand, because valid redistricting plans must have 'roughly equal' populations, other redistricting maps are, to a large degree, constrained by this underlying population geography. The boundaries of these districts can only be distorted so much before they become visibly engineered towards specific, typically partisan and/or racial, ends. Hence, most maps in a state -- even when optimizing to one end, such as maximal proportionality -- share many of the same precinct assignments or district cores.
-3. On the other, because mapmakers use considerable data to draw districts that reflect their preferred mix of policy objectives -- e.g., voting age population, demographics, past election results, etc. -- the boundaries in these "high information" plans reflect that data and those decisions.
-4. Finally, macro policy tradeoffs inherent in redistricting a state can be characterized.
+Along the way, we make a series of claims:[^1]
+
+1. Where people live in a state constitutes a distinct "population geography." It can be characterized in a well-defined redistricting map (set of districts) that satisfies basic legal constraints, i.e., districts are contiguous and have 'roughly equal' populations. Since this "baseline" map only depends on precinct shapes and populations, it is the "least information" map for the state.
+2. Because valid redistricting plans must have 'roughly equal' populations, they are, to a large degree, constrained by this underlying population geography. The boundaries of baseline districts can only be distorted so much before they become visibly engineered towards specific, typically partisan and/or racial, ends. Hence, even when they optimize on one dimension, such as proportionality, a plan tends to share many of the same precinct assignments as the baseline producing identifiable "district cores."
+3. Conversely, because a mapmaker uses considerable data -- e.g., voting age population, demographics, past election results, etc. -- to draw districts that reflect their preferred mix of policy objectives, the boundaries in such a "high information" plan reflects that data and those decisions.
+4. Moreover, due the complex blend of demographic, economic, cultural, and political attributes determined by a state's underlying population geography, redistricting often tradeoffs between various policy objectives, such as proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, among others. Sometimes two macro goals can be pursued in tandem, but often they are in tension with each other. For example, a plan that maximizes proportionality might not be very compact, or vice versa.
+5. The policy tradeoffs inherent in redistricting a state can be characterized *a priori*.
 
 We show these tradeoffs for congressional redistricting for 42 states apportioned two or more congressional districts in the 2020 census.
 (We excluded Hawaii and Maine, due to data issues.)
