@@ -19,3 +19,4 @@ NOTES
 - Update energy definition
 - Flat earth not geodesic calculations
 - Fleshed out data sources
+- Trying to get back to things building ...
