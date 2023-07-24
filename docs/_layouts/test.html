@@ -53,30 +53,69 @@ map-width: 700
 
 <!-- RATINGS -->
 
-{% capture ratings-file %}
-{{ xx }}_2022_Congress_ratings
-{% endcapture %}
-{% assign ratings-file = ratings-file | strip_newlines %}
+<div id="ratings-table" class="ag-theme-balham">
+</div>
 
-{% assign ratings = site.data[ratings-file] %}
+<script type="text/javascript" charset="utf-8">
+  const centeredColumn = {
+    headerClass: 'text-center',
+    cellStyle: {
+      textAlign: 'center',
+    }
+  }
 
-<h3>Ratings</h3>
+  function numericComparator(val1, val2)
+  {
+    return val1 - val2;
+  }
 
-<table>
-  {% for row in ratings %}
-  {% if forloop.first %}
-  <tr>
-    {% for pair in row %}
-    <th>{{ pair[0] }}</th>
-    {% endfor %}
-  </tr>
-  {% endif %}
+  // Ratings Table
 
-  {% tablerow pair in row %}
-  {{ pair[1] }}
-  {% endtablerow %}
-  {% endfor %}
-</table>
+  const ratingsColumns = [
+    {field: 'Map', unSortIcon: true},
+    {field: 'Proportionality', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},
+    {field: 'Competitiveness', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},
+    {field: 'Minority', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},
+    {field: 'Compactness', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},
+    {field: 'Splitting', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},
+  ];
+
+  const ratingsOptions = {
+    defaultColDef: {
+      sortable: true,
+      // resizable: true,
+    },
+    rowClassRules: {
+      'bold-row': function (params) {return params.data.Map === "Official" || params.data.Map === "Baseline";},
+    },
+    columnDefs: ratingsColumns,
+    domLayout: 'autoHeight',
+    onGridReady: (event) => {renderRatingsTable(event.api)}
+  };
+
+  const eRatingsGridDiv = document.getElementById('ratings-table');
+  new agGrid.Grid(eRatingsGridDiv, ratingsOptions);
+
+  const ratingsCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/NC_2022_Congress_ratings.csv';
+
+  function renderRatingsTable(api)
+  {
+    Papa.parse(ratingsCSV, {
+      header: true,
+      download: true,
+      complete: response =>
+      {
+        data = response.data;
+        data.pop();
+        // console.log("Finished:", data);
+
+        api.setRowData(data);
+        api.sizeColumnsToFit();
+      }
+    })
+  }
+
+</script>
 
 <!-- MAPS TABS -->
 
