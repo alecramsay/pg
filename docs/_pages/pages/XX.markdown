@@ -14,4 +14,9 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Take 2 ...
+- Align left
+- State hex map: colored additional states
+- Update energy definition
+- Flat earth not geodesic calculations
+- Fleshed out data sources
+- Trying to get back to things building ...
