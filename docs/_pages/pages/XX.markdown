@@ -14,4 +14,5 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Commented out AG stylesheets in _includes/head.html
+- Take 2 ...
+- Switched order in header
