@@ -15,4 +15,3 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Reverted everything back to the original state.
-- Take 3 -- tweaked link format
