@@ -15,4 +15,3 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Commented out AG stylesheets in _includes/head.html
-- Commented out script tags in _includes/head.html
