@@ -103,26 +103,4 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
             })
         }
     </script>
-
-    <!-- <table>
-		{% for row in cores %}
-		{% if forloop.first %}
-		<tr>
-			{% for pair in row %}
-			<th>{{ pair[0] }}</th>
-			{% endfor %}
-		</tr>
-		{% endif %}
-
-		{% tablerow pair in row %}
-		{% if pair[0] == "DISTRICT%" or pair[0] == "CUMULATIVE%"%}
-		{{ pair[1] | times: 100 | round: 2 }}
-		{% elsif pair[0] == "POPULATION" %}
-		{{ pair[1] | intcomma }}
-		{% else %}
-		{{ pair[1] }}
-		{% endif %}
-		{% endtablerow %}
-		{% endfor %}
-	</table> -->
 </div>
