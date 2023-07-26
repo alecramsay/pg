@@ -136,7 +136,8 @@ map-width: 700
     const eRatingsGridDiv = document.getElementById('ratings-table');
     new agGrid.Grid(eRatingsGridDiv, ratingsOptions);
 
-    const ratingsCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/NC_2022_Congress_ratings.csv';
+    const ratingsCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{% ratings %}.csv';
+    // const ratingsCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/NC_2022_Congress_ratings.csv';
 
     function renderRatingsTable(api)
     {
