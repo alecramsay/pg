@@ -1,11 +1,11 @@
-const centeredColumn = {
+var centeredColumn = {
     headerClass: 'text-center',
     cellStyle: {
         textAlign: 'center',
     }
 }
 
-const rightJustifiedColumn = {
+var rightJustifiedColumn = {
     headerClass: 'text-right',
     cellStyle: {
         textAlign: 'right',
@@ -37,7 +37,7 @@ function percentage(x)
 
 // District Cores Table
 
-const coresColumns = [
+var coresColumns = [
     {headerName: 'ID', field: 'DISTRICT', width: 60, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
     {headerName: 'Population', field: 'POPULATION', width: 120, valueFormatter: numberWithCommas, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
     {headerName: '% of District', field: 'DISTRICT%', width: 120, valueFormatter: percentage, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
