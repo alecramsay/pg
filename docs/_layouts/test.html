@@ -62,6 +62,22 @@ map-width: 700
 
 <h3>Ratings</h3>
 
+<style>
+  #ratings-table {
+    width: 800px;
+  }
+
+  .bold-row {
+    font-weight: bold;
+  }
+
+  .ag-header-cell.text-center {
+    .ag-header-cell-label {
+      justify-content: center;
+    }
+  }
+</style>
+
 <table>
   {% for row in ratings %}
   {% if forloop.first %}
