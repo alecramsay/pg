@@ -15,3 +15,4 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Integrated AG Grid into test state page templates
+- NC sample w/o canonicalized district ids

@@ -129,7 +129,7 @@ def main() -> None:
     # Load the comparison plan
 
     compare_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, yyyy, plan_type, label, "cores_max"], "_", "csv"
+        [xx, yyyy, plan_type, label, "cores_all"], "_", "csv"
     )
     compare_plan: Plan = Plan()
     compare_plan.state = state
@@ -140,7 +140,7 @@ def main() -> None:
     assert compare_plan.state.features is not None
     features: dict[str, Feature] = compare_plan.state.features
 
-    cores: list[int] = [0] * n  # Zero-indexed; maybe too many
+    cores: list[int] = [0] * 100  # Zero-indexed. Might need more than 100 cores.
 
     for row in compare_plan.assignments():
         geoid: str = row.geoid
