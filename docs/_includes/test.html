@@ -78,15 +78,15 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
             // },
             columnDefs: coresColumns,
             domLayout: 'autoHeight',
-            onGridReady: (event) => {render{{label} } Table(event.api)}
+            onGridReady: (event) => {render{{ label }}Table(event.api)}
         };
 
-        var eCoresGridDiv = document.getElementById('proportional-cores-table');
+        var eCoresGridDiv = document.getElementById('{{ label-lower }}-cores-table');
         new agGrid.Grid(eCoresGridDiv, coresOptions);
 
         var coresCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
 
-        function render{{label} } Table(api)
+        function render{{ label }}Table(api)
         {
             Papa.parse(coresCSV, {
                 header: true,
