@@ -84,11 +84,11 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
         var eCoresGridDiv = document.getElementById('{{ label-lower }}-cores-table');
         new agGrid.Grid(eCoresGridDiv, coresOptions);
 
-        var coresCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
+        const cores{{ label }}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
 
         function render{{ label }}Table(api)
         {
-            Papa.parse(coresCSV, {
+            Papa.parse(cores{{ label }}CSV, {
                 header: true,
                 download: true,
                 complete: response =>
