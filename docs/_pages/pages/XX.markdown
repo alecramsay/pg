@@ -15,3 +15,4 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Initial core grid ...
+- ... rest of core grid.

@@ -71,48 +71,51 @@ map-width: 700
         font-weight: bold;
     }
 
+    #official-cores-table {
+        width: 420px;
+    }
+
+    #proportional-cores-table {
+        width: 420px;
+    }
+
+    #competitive-cores-table {
+        width: 420px;
+    }
+
+    #minority-cores-table {
+        width: 420px;
+    }
+
+    #compact-cores-table {
+        width: 420px;
+    }
+
+    #splitting-cores-table {
+        width: 420px;
+    }
+
     .ag-header-cell.text-center {
         .ag-header-cell-label {
             justify-content: center;
+        }
+    }
+
+    .ag-header-cell.text-right {
+        .ag-header-cell-label {
+            justify-content: right;
         }
     }
 </style>
 
 <div id="ratings-table" class="ag-theme-balham">
 </div>
-<!-- <table>
-  {% for row in ratings %}
-  {% if forloop.first %}
-  <tr>
-    {% for pair in row %}
-    <th>{{ pair[0] }}</th>
-    {% endfor %}
-  </tr>
-  {% endif %}
 
-  {% tablerow pair in row %}
-  {{ pair[1] }}
-  {% endtablerow %}
-  {% endfor %}
-</table> -->
-
+<!-- Common grid functionality -->
 <script src="{{ site.baseurl }}/assets/js/grid.js"></script>
 
+<!-- Ratings Table -->
 <script type="text/javascript" charset="utf-8">
-    // const centeredColumn = {
-    //     headerClass: 'text-center',
-    //     cellStyle: {
-    //         textAlign: 'center',
-    //     }
-    // }
-
-    // function numericComparator(val1, val2)
-    // {
-    //     return val1 - val2;
-    // }
-
-    // Ratings Table
-
     const ratingsColumns = [
         {field: 'Map', unSortIcon: true},
         {field: 'Proportionality', comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...centeredColumn},

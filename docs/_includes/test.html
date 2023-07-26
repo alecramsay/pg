@@ -1,4 +1,4 @@
-<!-- A tab for map index = [Official, Proportional, Competitive, Minority, Compact, Splitting] -->
+<!-- A tab for map index = [Official, {{ label }}, Competitive, Minority, Compact, Splitting] -->
 <!-- https://alecramsay.github.io/pg/states/NC/ -->
 <!-- https://alecramsay.github.io/pg/states/XX/ -->
 <!-- https://alecramsay.github.io/pg/states/YY/ -->
@@ -41,26 +41,70 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 {% assign map-link = map-link | strip_newlines %}
 
 <div id="{{ label }}" class="tabcontent">
-	<p>This tab compares the <a href="{{ map-link }}">{{ label-qualified }} map</a> and the <a
-			href="{{ baseline-link }}">baseline map.</a>
-	</p>
+    <p>This tab compares the <a href="{{ map-link }}">{{ label-qualified }} map</a> and the <a
+            href="{{ baseline-link }}">baseline map.</a>
+    </p>
 
-	<h4>Ratings Compared to Baseline</h4>
-	<p style="text-align: left">
-		<img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}" />
-	</p>
+    <h4>Ratings Compared to Baseline</h4>
+    <p style="text-align: left">
+        <img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}" />
+    </p>
 
-	<h4>Map With Baseline Overlay</h4>
-	<p style="text-align: left">
-		<img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
-	</p>
+    <h4>Map With Baseline Overlay</h4>
+    <p style="text-align: left">
+        <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
+    </p>
 
-	<h4>District Cores Relative to Baseline</h4>
-	<p style="text-align: left">
-		<img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
-	</p>
+    <h4>District Cores Relative to Baseline</h4>
+    <p style="text-align: left">
+        <img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
+    </p>
 
-	<table>
+    <!-- Cores Table -->
+    <div id="{{ label-lower }}-cores-table" class="ag-theme-balham">
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+        var coresColumns = [
+            {headerName: 'ID', field: 'DISTRICT', width: 60, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
+            {headerName: 'Population', field: 'POPULATION', width: 120, valueFormatter: numberWithCommas, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
+            {headerName: '% of District', field: 'DISTRICT%', width: 120, valueFormatter: percentage, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
+            // {headerName: 'Cumulative %', field: 'CUMULATIVE%', width: 120, valueFormatter: percentage, ...rightJustifiedColumn},
+        ];
+
+        var coresOptions = {
+            // defaultColDef: {
+            //     resizable: true,
+            // },
+            columnDefs: coresColumns,
+            domLayout: 'autoHeight',
+            onGridReady: (event) => {render{{label} } Table(event.api)}
+        };
+
+        var eCoresGridDiv = document.getElementById('proportional-cores-table');
+        new agGrid.Grid(eCoresGridDiv, coresOptions);
+
+        var coresCSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
+
+        function render{{label} } Table(api)
+        {
+            Papa.parse(coresCSV, {
+                header: true,
+                download: true,
+                complete: response =>
+                {
+                    data = response.data;
+                    data.pop();
+                    // console.log("Finished:", data);
+
+                    api.setRowData(data);
+                    api.sizeColumnsToFit();
+                }
+            })
+        }
+    </script>
+
+    <!-- <table>
 		{% for row in cores %}
 		{% if forloop.first %}
 		<tr>
@@ -80,5 +124,5 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 		{% endif %}
 		{% endtablerow %}
 		{% endfor %}
-	</table>
+	</table> -->
 </div>
