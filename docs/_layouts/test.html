@@ -6,13 +6,42 @@ big-radar-width: 500
 map-width: 700
 ---
 
+<!-- SUMMARY ANALYSIS -->
+
 {{ content }}
 
 {% assign xx = page.xx %}
 
-<!-- RADAR DIAGRAMS -->
+<!-- BASELINE DISTRICTS -->
 
-<h3>Radar Diagrams</h3>
+{% capture baseline-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Baseline_map.png
+{% endcapture %}
+{% assign baseline-png = baseline-png | strip_newlines %}
+
+{% assign state = site.data.states | where:"xx", xx | first %}
+
+{% capture baseline-link %}
+https://davesredistricting.org/join/{{ state["baseline"] }}
+{% endcapture %}
+{% assign baseline-link = baseline-link | strip_newlines %}
+
+<h3>Baseline Districts</h3>
+
+<p>These are the baseline districts:</p>
+<p style="text-align: left">
+    <a href="{{ map-link }}">
+        <img src="{{ baseline-png }}" alt="Baseline districts" title="Baseline districts" width="{{ page.map-width }}" />
+    </a>
+</p>
+
+<p>The next two sections compare the official map and the five notable maps 
+    &#8212; most proportional, most competitive, best minority opportunity, most compact, and least splitting &#8212; 
+    with the baseline map.</p>
+
+<h3>Ratings vs. Baseline</h3>
+
+<!-- RADAR DIAGRAMS -->
 
 <table style="border:0px">
     <tr>
@@ -51,7 +80,7 @@ map-width: 700
     </tr>
 </table>
 
-<!-- RATINGS -->
+<!-- RATINGS TABLE -->
 
 {% capture ratings-file %}
 {{ xx }}_2022_Congress_ratings
@@ -59,8 +88,6 @@ map-width: 700
 {% assign ratings-file = ratings-file | strip_newlines %}
 
 {% assign ratings = site.data[ratings-file] %}
-
-<h3>Ratings</h3>
 
 <style>
     #ratings-table {
@@ -114,7 +141,7 @@ map-width: 700
 <!-- Common grid functionality -->
 <script src="{{ site.baseurl }}/assets/js/grid.js"></script>
 
-<!-- Ratings Table -->
+<!-- Grid -->
 <script type="text/javascript" charset="utf-8">
     const ratingsColumns = [
         {field: 'Map', unSortIcon: true},
@@ -165,8 +192,7 @@ map-width: 700
 
 <!-- MAPS TABS -->
 
-<!-- TODO: What's a better name for this section? Comparisons? -->
-<h3>Maps</h3>
+<h3>Districts vs. Baseline</h3>
 
 <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 

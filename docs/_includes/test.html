@@ -40,25 +40,27 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 {% endcapture %}
 {% assign map-link = map-link | strip_newlines %}
 
+{% assign cores-label = label-lower | append: '-cores' %}
+
+{% capture cores-link %}
+https://davesredistricting.org/join/{{ state[cores-label] }}
+{% endcapture %}
+{% assign cores-link = cores-link | strip_newlines %}
+
 <div id="{{ label }}" class="tabcontent">
-    <p>This tab compares the <a href="{{ map-link }}">{{ label-qualified }} map</a> and the <a
-            href="{{ baseline-link }}">baseline map.</a>
+    <p>This is the {{ label-lower }} map:</p>
+    <p style="text-align: left">
+        <a href="{{ map-link }}">
+            <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
+        </a>
     </p>
 
-    <!-- TODO: Delete? Redundant. -->
-    <!-- <h4>Ratings Compared to Baseline</h4>
+    <h4>[TODO: District Cores Relative to Baseline]</h4>
+    <p>These are the TODO:term relative to the {{ label-lower }} map:</p>
     <p style="text-align: left">
-        <img src="{{ radar-png }}" alt="Radar diagram" title="Radar Diagram" width="{{ page.big-radar-width }}" />
-    </p> -->
-
-    <h4>Map With Baseline Overlay</h4>
-    <p style="text-align: left">
-        <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
-    </p>
-
-    <h4>District Cores Relative to Baseline</h4>
-    <p style="text-align: left">
-        <img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
+        <a href="{{ cores-link }}">
+            <img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
+        </a>
     </p>
 
     <!-- Cores Table -->

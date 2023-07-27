@@ -257,6 +257,13 @@
   compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
   splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
   baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
+  official-cores: 3aa54819-8006-4f2f-abd5-c8371dc01b85
+  proportional-cores: cecc5bfb-bda4-4c6b-8e5f-8d97bb42d7c4
+  competitive-cores: f14e53d1-7630-4875-9c71-49bd18b15fe9
+  minority-cores: 1e8877ef-a245-48bd-866e-05bfa4611e33
+  compact-cores: c5c10377-a683-467c-b3e9-2377de5a4c57
+  splitting-cores: 3b242926-c8e1-423b-b514-c04a4b6441fc
+
   ready: true
 - xx: OH
   name: Ohio
