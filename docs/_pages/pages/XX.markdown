@@ -15,3 +15,4 @@ TODO - Insert summary analysis here.
 NOTES
 
 - New template + NC except canonicalized district ids
+- Fleshed out detailed workflow

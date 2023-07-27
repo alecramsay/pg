@@ -20,7 +20,7 @@ Then, for each state:
 
 (6) Opened it in DRA & tweaked a few settings
 
-(7) For each duplicated Official and Notable map, he added the baseline map as a Custom Overlay 
+(7) Tweaked each duplicated Official and Notable map in DRA
 
 (8) Analyzed the Official & Notable maps relative to the baseline map
 
