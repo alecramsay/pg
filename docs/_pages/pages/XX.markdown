@@ -14,7 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Integrated AG Grid into test state page templates
-- NC sample w/o canonicalized district ids
-- Re-worked the test template
-- Tweaks
+- New template + NC except canonicalized district ids
