@@ -48,22 +48,24 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
 {% assign cores-link = cores-link | strip_newlines %}
 
 <div id="{{ label }}" class="tabcontent">
-    <p>This is the {{ label-lower }} map:</p>
+    <p>This is the {{ label-qualified }} map:</p>
+    <!-- TODO: Remove baseline overlay? -->
     <p style="text-align: left">
         <a href="{{ map-link }}">
-            <img src="{{ map-png }}" alt="Map" title="Map with baseline overlay" width="{{ page.map-width }}" />
+            <img src="{{ map-png }}" alt="Map" title="{{ label}} map" width="{{ page.map-width }}" />
         </a>
     </p>
 
-    <h4>[TODO: District Cores Relative to Baseline]</h4>
-    <p>These are the TODO:term relative to the {{ label-lower }} map:</p>
+    <p>These are the intersections of the {{ label-lower }} districts with the baseline districts:</p>
+    <!-- TODO: Canonicalize the district ids -->
     <p style="text-align: left">
         <a href="{{ cores-link }}">
             <img src="{{ cores-png }}" alt="Regions" title="District cores" width="{{ page.map-width }}" />
         </a>
     </p>
 
-    <!-- Cores Table -->
+    <!-- Grid -->
+    <!-- TODO: Canonicalize the district ids -->
     <div id="{{ label-lower }}-cores-table" class="ag-theme-balham">
     </div>
 
