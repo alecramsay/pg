@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Overall Workflow
-permalink: workflow/
+permalink: workflow_detailed/
 ---
 
 This note describes the detailed workflow that Alec used for creating the maps for this study:
