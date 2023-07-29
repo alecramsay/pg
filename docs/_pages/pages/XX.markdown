@@ -18,3 +18,4 @@ NOTES
 - Fleshed out detailed workflow
 - Click tooltip
 - Sketched out the workflow for canonicalizing district ids
+- Fleshed out variations
