@@ -14,9 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- New template + NC except canonicalized district ids
-- Fleshed out detailed workflow
-- Click tooltip
-- Sketched out the workflow for canonicalizing district ids
-- Fleshed out variations
-- Added script to renumber districts in an assignment file
+- Made grid font monospace for easier reading.
