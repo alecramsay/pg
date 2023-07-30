@@ -80,9 +80,6 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
         ];
 
         const cores{{ label }}Options = {
-            // defaultColDef: {
-            //     resizable: true,
-            // },
             columnDefs: cores{{ label }}Columns,
                 domLayout: 'autoHeight',
                     onGridReady: (event) => {render{{ label }}Table(event.api)}
@@ -93,7 +90,7 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
 
         const cores{{ label }}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
 
-        function render{{ label }} Table(api)
+        function render{{ label }}Table(api)
         {
             Papa.parse(cores{{ label }}CSV, {
                 header: true,
