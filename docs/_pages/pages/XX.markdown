@@ -15,3 +15,4 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Tweaked monospace font
+- Widened grids so headers aren’t truncated
