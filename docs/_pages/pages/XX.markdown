@@ -14,5 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Revert to Balham theme
-- Added Insolata monospace font
+- Tweaked monospace font
