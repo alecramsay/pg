@@ -19,3 +19,4 @@ NOTES
 - Click tooltip
 - Sketched out the workflow for canonicalizing district ids
 - Fleshed out variations
+- Added script to renumber districts in an assignment file
