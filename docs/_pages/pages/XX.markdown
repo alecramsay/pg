@@ -14,6 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Made grid font monospace for easier reading.
-- ...
-- ...
+- Revert to Balham theme
