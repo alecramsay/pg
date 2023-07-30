@@ -72,30 +72,30 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
     </div>
 
     <script type="text/javascript" charset="utf-8">
-        const cores{{label}}Columns = [
+        const cores{{ label }}Columns = [
             {headerName: 'ID', field: 'DISTRICT', width: 60, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
             {headerName: 'Population', field: 'POPULATION', width: 120, valueFormatter: numberWithCommas, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             {headerName: '% of District', field: 'DISTRICT%', width: 120, valueFormatter: percentage, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             // {headerName: 'Cumulative %', field: 'CUMULATIVE%', width: 120, valueFormatter: percentage, ...rightJustifiedColumn},
         ];
 
-        const cores{{label}}Options = {
+        const cores{{ label }}Options = {
             // defaultColDef: {
             //     resizable: true,
             // },
-            columnDefs: cores{{label} } Columns,
+            columnDefs: cores{{ label }}Columns,
                 domLayout: 'autoHeight',
-                    onGridReady: (event) => {render{{label} } Table(event.api)}
+                    onGridReady: (event) => {render{{ label }}Table(event.api)}
         };
 
         var eCoresGridDiv = document.getElementById('{{ label-lower }}-cores-table');
-        new agGrid.Grid(eCoresGridDiv, cores{{label}}Options);
+        new agGrid.Grid(eCoresGridDiv, cores{{ label }}Options);
 
-        const cores{{label}}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
+        const cores{{ label }}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
 
-        function render{{label} } Table(api)
+        function render{{ label }} Table(api)
         {
-            Papa.parse(cores{{label}} CSV, {
+            Papa.parse(cores{{ label }}CSV, {
                 header: true,
                 download: true,
                 complete: response =>
