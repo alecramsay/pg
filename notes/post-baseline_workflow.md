@@ -50,11 +50,14 @@ to the output directory so it contains the inputs and outputs.
 
 ### Convert the baseline assignments from precincts to blocks
 
-I need to write a script to do this, but it's straightforward.
-
 TODO: I should pull out of individual scripts which states uses blockgroups (BGs) instead of precincts (VTDs), and
 consolidate that metadata into a reusable file (like constants.py).
 This step needs to know whether to use BGs or VTDs.
+
+TODO: Also need to ensure that the VTD- or BG-to-block mappings have been created.
+They weren't in the most recent series of extract_data.py runs.
+
+TODO: Then I need to write a script to do this, but it's straightforward.
 
 Once this is done, there are BAFs for the official map, the five notable maps, and the baseline map.
 The district ids in the BAFs are not canonicalized though.
