@@ -4,6 +4,8 @@ title: Overall Workflow
 permalink: workflow/
 ---
 
+TODO: Update this to reflect the new post-baseline workflow.
+
 This note describes the high-level workflow that Alec used for creating the maps for this study:
 
 (1) Copied the Official maps

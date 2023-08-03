@@ -4,6 +4,8 @@ title: Canonicalizing District IDs
 permalink: workflow_canonical_districts/
 ---
 
+TODO: Update and keep or delete this?
+
 This note describes how we could canonicalize district ids.
 
 ### Existing Maps
@@ -18,7 +20,7 @@ For the official map and each of the other maps:
 
 - Run a script to produce a from/to map of district ids for the map -- Todd would need to write this script.
 - Run a script to update the district ids in the DRA map -- Terry would need to write this script.
-- Run a script to update the district ids in the block-assignment file -- I could write this script.
+- Run a script to update the district ids in the block-assignment file -- I have written this script.
 
 I could also write a meta script that would generate the script calls for each map and state, so this could all be done with a single command.
 
