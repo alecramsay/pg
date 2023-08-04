@@ -43,9 +43,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 var puppeteer = require('puppeteer');
-console.log("Taking a screenshot...");
 (function () { return __awaiter(_this, void 0, void 0, function () {
-    var browser, page;
+    var browser, page, VWIDTH, VHEIGHT, VIEWPORT, url, image, body, err_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, puppeteer.launch()];
@@ -54,20 +53,56 @@ console.log("Taking a screenshot...");
                 return [4 /*yield*/, browser.newPage()];
             case 2:
                 page = _a.sent();
-                return [4 /*yield*/, page.goto('https://example.com')];
+                VWIDTH = 1382;
+                VHEIGHT = 790;
+                VIEWPORT = { width: VWIDTH, height: VHEIGHT };
+                return [4 /*yield*/, page.setViewport(VIEWPORT)];
             case 3:
                 _a.sent();
-                return [4 /*yield*/, page.screenshot({ path: 'example.png' })];
+                url = 'https://davesredistricting.org/';
+                image = '/Users/alecramsay/Downloads/screenshot.png';
+                _a.label = 4;
             case 4:
+                _a.trys.push([4, 7, , 8]);
+                return [4 /*yield*/, page.goto(url, {
+                        waitUntil: 'domcontentloaded'
+                        // waitUntil: 'networkidle0'
+                        // waitUntil: 'networkidle2'
+                        // timeout: 10000
+                    })];
+            case 5:
+                _a.sent();
+                return [4 /*yield*/, page.$("body")];
+            case 6:
+                body = _a.sent();
+                return [3 /*break*/, 8];
+            case 7:
+                err_1 = _a.sent();
+                console.error(err_1);
+                throw new Error('Loading page timed out.');
+            case 8: return [4 /*yield*/, page.screenshot({ path: image })];
+            case 9:
                 _a.sent();
                 return [4 /*yield*/, browser.close()];
-            case 5:
+            case 10:
                 _a.sent();
                 return [2 /*return*/];
         }
     });
 }); })();
-console.log("... done.");
 // Resources:
 // - https://code.visualstudio.com/docs/typescript/typescript-tutorial
+// - https://developer.chrome.com/blog/headless-chrome/
 // - https://developer.chrome.com/docs/puppeteer/get-started/
+//
+// - https://stackoverflow.com/questions/71656606/getting-blank-screenshot-from-puppeteer
+// - https://github.com/puppeteer/puppeteer/issues/2423
+//
+// - https://stackoverflow.com/questions/52497252/puppeteer-wait-until-page-is-completely-loaded
+// - https://medium.com/@jaredpotter1/connecting-puppeteer-to-existing-chrome-window-8a10828149e0
+// - https://github.com/puppeteer/puppeteer/issues/3543
+// - https://stackoverflow.com/questions/48218584/tell-puppeteer-to-open-chrome-tab-instead-of-window
+// - https://stackoverflow.com/questions/62852714/pyppeteer-wait-until-all-elements-of-page-is-loaded
+//
+// - https://stackoverflow.com/questions/53236692/how-to-use-chrome-profile-in-puppeteer
+// - https://stackoverflow.com/questions/57623828/in-puppeteer-how-to-switch-to-chrome-window-from-default-profile-to-desired-prof/57662769#57662769
