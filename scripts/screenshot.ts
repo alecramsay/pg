@@ -1,5 +1,7 @@
 // Take a screenshot of map in DRA, using headless Chrome.
 //
+// Thanks to Steve Marx for working out how to do this!
+//
 // To build:
 // tsc scripts/screenshot.ts
 //

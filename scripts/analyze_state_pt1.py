@@ -6,7 +6,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 
 For example:
 
-$ scripts/analyze_state_pt1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/ -y
+$ scripts/analyze_state_pt1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
 
@@ -92,7 +92,7 @@ def main() -> None:
         os.mkdir(output_dir)
 
     # Copy CSVs for the official, notable, and baseline maps to the output directory,
-    # building a list of comparison maps
+    # building a list of comparison maps. Save it for Part 2.
 
     print(f"Copying CSVs for the official, notable, and baseline maps ...")
     shutil.copy(base_path, output_dir)
@@ -116,9 +116,19 @@ def main() -> None:
             shutil.copy(map_path, output_dir)
             comparisons.append(label)
 
+    # TODO - Save the comparisons list for Part 2
+
     # Expand the baseline map to blocks
 
-    print(f"TODO - Expanding the baseline CSV to a block-assignment file ...")
+    print(f"Expanding the baseline CSV to a block-assignment file ...")
+
+    # scripts/expand_vtds_to_blocks.py -s NC -o ~/Downloads/NC/ -f ~/Downloads/NC/NC20C_baseline_100.csv
+    command: str = (
+        f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
+    )
+    os.system(command)
+
+    # HERE
 
     # Renumber & compare the maps to the baseline
 
