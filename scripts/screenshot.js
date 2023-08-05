@@ -1,5 +1,7 @@
 // Take a screenshot of map in DRA, using headless Chrome.
 //
+// Thanks to Steve Marx for working out how to do this!
+//
 // To build:
 // tsc scripts/screenshot.ts
 //
@@ -68,13 +70,20 @@ var screenshotPath = "/Users/alecramsay/Downloads/screenshot.png";
                 return [4 /*yield*/, browser.newPage()];
             case 3:
                 page = _a.sent();
-                // await page.setViewport({width: 2560, height: 1600});
-                // await page.setViewport({width: 1998, height: 1394});
-                return [4 /*yield*/, page.setViewport({ width: 1280, height: 1024 })];
+                // Desired output:
+                // 1998,1382
+                // Viewport:
+                // 2381,1481
+                return [4 /*yield*/, page.setViewport({ width: 2381, height: 1481 })];
             case 4:
+                // Desired output:
+                // 1998,1382
+                // Viewport:
+                // 2381,1481
+                _a.sent();
+                // await page.setViewport({width: 1280, height: 1024});
                 // await page.setViewport({width: 2560, height: 1600});
                 // await page.setViewport({width: 1998, height: 1394});
-                _a.sent();
                 console.log("Loading the page. This can take 30 seconds or so... ");
                 return [4 /*yield*/, page.goto(url, { waitUntil: ['load', 'domcontentloaded', 'networkidle0'], timeout: 0 })];
             case 5:

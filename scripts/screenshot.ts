@@ -34,9 +34,17 @@ const screenshotPath = "/Users/alecramsay/Downloads/screenshot.png";
   {
     const page = await browser.newPage();
 
+    // Desired output:
+    // 1998,1382
+
+    // Viewport:
+    // 2381,1481
+
+    await page.setViewport({width: 2381, height: 1481});
+    // await page.setViewport({width: 1280, height: 1024});
+
     // await page.setViewport({width: 2560, height: 1600});
     // await page.setViewport({width: 1998, height: 1394});
-    await page.setViewport({width: 1280, height: 1024});
 
     console.log("Loading the page. This can take 30 seconds or so... ");
     await page.goto(url, {waitUntil: ['load', 'domcontentloaded', 'networkidle0'], timeout: 0});
