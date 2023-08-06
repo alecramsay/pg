@@ -53,12 +53,10 @@ var puppeteer = require('puppeteer');
 //   console.log("Usage: node mapscreenshot.js <url> [<screenshot PNG path>]");
 // }
 var url = 'https://davesredistricting.org/maps#viewmap::bbd90d8a-b4c3-4875-8ffe-4f931e141211';
-// const url = 'https://www.nakedcapitalism.com/';
-// const url = 'https://davesredistricting.org/';
 var screenshotPath = "/Users/alecramsay/Downloads/screenshot.png";
 // const screenshotPath = pathInput ?? "screenshot.png";
 (function () { return __awaiter(_this, void 0, void 0, function () {
-    var browser, page, canvas, e_1;
+    var browser, page, client, canvas, dpr, e_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, puppeteer.launch({ headless: "new" })];
@@ -66,51 +64,58 @@ var screenshotPath = "/Users/alecramsay/Downloads/screenshot.png";
                 browser = _a.sent();
                 _a.label = 2;
             case 2:
-                _a.trys.push([2, 9, 10, 12]);
+                _a.trys.push([2, 12, 13, 15]);
                 return [4 /*yield*/, browser.newPage()];
             case 3:
                 page = _a.sent();
-                // Desired output:
+                // Desired image size:
                 // 1998,1382
-                // Viewport:
+                // Corresponding viewport:
                 // 2381,1481
                 return [4 /*yield*/, page.setViewport({ width: 2381, height: 1481 })];
             case 4:
-                // Desired output:
+                // Desired image size:
                 // 1998,1382
-                // Viewport:
+                // Corresponding viewport:
                 // 2381,1481
                 _a.sent();
-                // await page.setViewport({width: 1280, height: 1024});
-                // await page.setViewport({width: 2560, height: 1600});
-                // await page.setViewport({width: 1998, height: 1394});
+                return [4 /*yield*/, page.target().createCDPSession()];
+            case 5:
+                client = _a.sent();
+                return [4 /*yield*/, client.send('Emulation.clearDeviceMetricsOverride')];
+            case 6:
+                _a.sent();
                 console.log("Loading the page. This can take 30 seconds or so... ");
                 return [4 /*yield*/, page.goto(url, { waitUntil: ['load', 'domcontentloaded', 'networkidle0'], timeout: 0 })];
-            case 5:
+            case 7:
                 _a.sent();
                 return [4 /*yield*/, page.addStyleTag({
                         content: '.MuiModal-backdrop, .MuiDialog-container, .MuiButtonBase-root, .MuiTypography-root, .mapboxgl-control-container { display: none; }'
                     })];
-            case 6:
-                _a.sent();
-                return [4 /*yield*/, page.$('canvas')];
-            case 7:
-                canvas = _a.sent();
-                console.log("Saving PNG to ".concat(screenshotPath, "..."));
-                return [4 /*yield*/, canvas.screenshot({ type: 'png', path: screenshotPath })];
             case 8:
                 _a.sent();
-                console.log("Done!");
-                return [3 /*break*/, 12];
+                return [4 /*yield*/, page.$('canvas')];
             case 9:
-                e_1 = _a.sent();
-                console.log(e_1);
-                return [3 /*break*/, 12];
-            case 10: return [4 /*yield*/, browser.close()];
+                canvas = _a.sent();
+                return [4 /*yield*/, page.evaluate('window.devicePixelRatio')];
+            case 10:
+                dpr = _a.sent();
+                console.log("DPR = ".concat(dpr));
+                console.log("Saving PNG to ".concat(screenshotPath, "..."));
+                return [4 /*yield*/, canvas.screenshot({ type: 'png', path: screenshotPath })];
             case 11:
                 _a.sent();
+                console.log("Done!");
+                return [3 /*break*/, 15];
+            case 12:
+                e_1 = _a.sent();
+                console.log(e_1);
+                return [3 /*break*/, 15];
+            case 13: return [4 /*yield*/, browser.close()];
+            case 14:
+                _a.sent();
                 return [7 /*endfinally*/];
-            case 12: return [2 /*return*/];
+            case 15: return [2 /*return*/];
         }
     });
 }); })();
@@ -118,3 +123,9 @@ var screenshotPath = "/Users/alecramsay/Downloads/screenshot.png";
 // - https://developer.chrome.com/blog/headless-chrome/
 // - https://developer.chrome.com/docs/puppeteer/
 // - https://pptr.dev/
+//
+// - chrome://version/
+// - Profile path: /Users/alecramsay/Library/Application Support/Google/Chrome/Profile 1
+//
+// - https://stackoverflow.com/questions/53236692/how-to-use-chrome-profile-in-puppeteer
+// - https://stackoverflow.com/questions/57623828/in-puppeteer-how-to-switch-to-chrome-window-from-default-profile-to-desired-prof/57662769#57662769
