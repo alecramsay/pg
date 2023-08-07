@@ -181,7 +181,27 @@ def main() -> None:
 
     # Import the BAFs into DRA maps
 
-    print(f"TODO - Importing the BAFs into DRA ...")
+    print(f"Importing the BAFs into DRA ...")
+
+    for label in comparisons + ["Baseline"]:
+        year: str = cycle if label == "Baseline" else yyyy
+
+        plan: str = (
+            f"{xx}_{year}_Congress_Official.csv"
+            if label == "Official"
+            else f"{xx}_{year}_Congress_{label}_canonical.csv"
+        )
+
+        command: str = (
+            f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
+        )
+        os.system(command)
+
+        if label != "Baseline":
+            plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
+
+            command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
+            os.system(command)
 
     # Create & save a dict of maps & guids
 
