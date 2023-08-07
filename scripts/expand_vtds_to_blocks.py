@@ -76,6 +76,10 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
+    #
+
+    year: str = cycle if label == "Baseline" else yyyy
+
     # Unpickle blocks by vtd
 
     rel_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
@@ -86,7 +90,7 @@ def main() -> None:
     # Read the precinct-assignment file
 
     out_dir: str = FileSpec(output).abs_path + "/"
-    out_path: str = out_dir + file_name([xx, yyyy, "Congress", label], "_", "csv")
+    out_path: str = out_dir + file_name([xx, year, "Congress", label], "_", "csv")
 
     # print("Expanding precinct-assignment file:")
     # print(f"- Input:  {paf}")

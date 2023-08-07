@@ -6,6 +6,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 
 For example:
 
+$ scripts/analyze_state_pt1.py
 $ scripts/analyze_state_pt1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
@@ -128,11 +129,55 @@ def main() -> None:
     )
     os.system(command)
 
-    # HERE
-
     # Renumber & compare the maps to the baseline
 
-    print(f"TODO - Renumbering & comparing the maps to the baseline ...")
+    print(
+        f"Comparing maps to the baseline & canonicalizing districts to the official ids ..."
+    )
+
+    for label in comparisons:
+        base_csv: str = (
+            output_dir
+            + "/"
+            + (
+                f"{xx}_{yyyy}_Congress_Official.csv"
+                if label == "Official"
+                else f"{xx}_{cycle}_Congress_Baseline.csv"
+            )
+        )
+        compare_csv: str = (
+            output_dir
+            + "/"
+            + (
+                f"{xx}_{cycle}_Congress_Baseline.csv"
+                if label == "Official"
+                else f"{xx}_{yyyy}_Congress_{label}.csv"
+            )
+        )
+        intersections_csv: str = (
+            output_dir + "/" + f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        )
+
+        renumbered_csv: str = (
+            output_dir
+            + "/"
+            + (
+                f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
+                if label == "Official"
+                else f"{xx}_{yyyy}_Congress_{label}_canonical.csv"
+            )
+        )
+
+        if verbose:
+            print()
+            print(f"label: {label}")
+            print(f"base_csv: {base_csv}")
+            print(f"compare_csv: {compare_csv}")
+            print(f"intersections: {intersections_csv}")
+            print(f"renumbered_csv: {renumbered_csv}")
+
+        command: str = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
+        os.system(command)
 
     # Import the BAFs into DRA maps
 

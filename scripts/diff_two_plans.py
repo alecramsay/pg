@@ -106,7 +106,7 @@ def main() -> None:
         --diff {intersections_csv} \
         --maxcores {os.path.expanduser('~/Downloads/NC/ignore.csv')} \
         --renumber {renumbered_csv}"
-    print(command)
+    # print(command)
     os.system(command)
 
     pass
