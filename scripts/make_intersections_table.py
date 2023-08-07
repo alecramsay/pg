@@ -5,22 +5,23 @@ Make the CSV for an intersections table.
 
 For example:
 
-$ scripts/make_intersection_table.py -s NC -l Proportional
+$ scripts/make_intersections_table.py
+$ scripts/make_intersections_table.py -s NC -i intersections.csv -o intersections_summary.csv
 
 For documentation, type:
 
-$ scripts/make_intersection_table.py -h
+$ scripts/make_intersections_table.py -h
 
 """
-
-import os
 
 import argparse
 from argparse import ArgumentParser, Namespace
 
-from pg import *
+import os
+from collections import defaultdict
+import functools
 
-# TODO - Flesh this out
+from pg import *
 
 
 def parse_args() -> Namespace:
@@ -36,10 +37,17 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
-        "-l",
-        "--label",
-        default="Proportional",
-        help="The type of map (e.g., Proportional)",
+        "-i",
+        "--intersections",
+        default="~/Downloads/NC/NC_2022_Congress_Proportional_intersections.csv",
+        help="Path to a base x compare plan intersections CSV",
+        type=str,
+    )
+    parser.add_argument(
+        "-o",
+        "--summary",
+        default="~/Downloads/NC/NC_2022_Congress_Proportional_intersections_summary.csv",
+        help="Path to a base x compare plan intersections summary CSV",
         type=str,
     )
     parser.add_argument(
@@ -50,26 +58,16 @@ def parse_args() -> Namespace:
     return args
 
 
-def find_district_cores(
-    *,
-    assignments_csv: str,
-    max_cores_csv: str,
-    all_cores_csv: str,
-    data_csv: str,
-    debug: bool = False,
-) -> None:
-    """Find district "cores" for one map vs. the baseline.
+def compare_compound_ids(x: dict, y: dict) -> int:
+    """Order compound district IDs by first component, then second component."""
 
-    python3 ../dccvt/examples/redistricting/geoid.py cores \
-    --assignments ~/iCloud/dev/pg/data/NC/NC_2020_Congress_Baseline.csv ~/iCloud/dev/pg/data/NC/NC_2022_Congress_Proportional.csv \
-    --maxcores ~/iCloud/dev/pg/data/NC/NC_2022_Congress_Proportional_cores_max.csv \
-    --diff ~/iCloud/dev/pg/data/NC/NC_2022_Congress_Proportional_cores_all.csv \
-    --population ~/iCloud/dev/baseline/data/NC/NC_2020_block_data.csv
-    """
+    x1, x2 = x["DISTRICT"].split("/")
+    y1, y2 = y["DISTRICT"].split("/")
 
-    command: str = f"python3 {dccvt_py}/geoid.py cores --assignments {assignments_csv} --maxcores {max_cores_csv} --diff {all_cores_csv} --population {data_csv}"
-    # print(command)
-    os.system(command)
+    if x1 == y1:
+        return int(x2) - int(y2)
+    else:
+        return int(x1) - int(y1)
 
 
 def main() -> None:
@@ -78,45 +76,14 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    label: str = args.label
-    verbose: bool = args.verbose
+    assignments_csv: str = os.path.expanduser(args.intersections)
+    summary_csv: str = os.path.expanduser(args.summary)
 
     n: int = districts_by_state[xx][plan_type.lower()]
 
-    ### FIND DISTRICT "CORES" FOR ONE MAP VS. THE BASELINE. ###
+    verbose: bool = args.verbose
 
-    assignments_csv: str = (
-        path_to_file([data_dir, xx])
-        + file_name([xx, cycle, plan_type, "Baseline"], "_", "csv")
-        + " "
-        + path_to_file([data_dir, xx])
-        + file_name([xx, yyyy, plan_type, label], "_", "csv")
-    )
-    max_cores_csv: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, yyyy, plan_type, label, "cores_max"], "_", "csv"
-    )
-    all_cores_csv: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, yyyy, plan_type, label, "cores_all"], "_", "csv"
-    )
-    data_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-        [xx, cycle, "block", "data"], "_", "csv"
-    )
-
-    find_district_cores(
-        assignments_csv=assignments_csv,
-        max_cores_csv=max_cores_csv,
-        all_cores_csv=all_cores_csv,
-        data_csv=data_csv,
-    )
-
-    ### IMPORT THE DISTRICT CORES INTO A DRA MAP ###
-
-    command: str = f"scripts/import_cores_map.sh {xx} {label}"
-    os.system(command)
-
-    ### SUM POPULATION BY CORE DISTRICT ###
-
-    # Load the state data
+    # Load the population data
 
     preprocessed_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
         [xx, cycle, "block", "data"], "_", "csv"
@@ -128,61 +95,52 @@ def main() -> None:
     total_pop: int = state.total_pop
     district_pop: int = total_pop // n
 
-    # Load the comparison plan
+    # Load the intersections CSV
 
-    compare_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, yyyy, plan_type, label, "cores_all"], "_", "csv"
+    intersections_plan: Plan = Plan()
+    intersections_plan.state = state
+    intersections_plan.load_assignments(
+        assignments_csv, geoid="GEOID", district="DISTRICT"
     )
-    compare_plan: Plan = Plan()
-    compare_plan.state = state
-    compare_plan.load_assignments(compare_path, geoid="GEOID", district="DISTRICT")
 
-    # Sum population by core district
+    # Sum population by intersection district
 
-    assert compare_plan.state.features is not None
-    features: dict[str, Feature] = compare_plan.state.features
+    assert intersections_plan.state.features is not None
+    features: dict[str, Feature] = intersections_plan.state.features
 
-    cores: list[int] = [0] * 100  # Zero-indexed. Might need more than 100 cores.
+    intersections: defaultdict[str, int] = defaultdict(int)
 
-    for row in compare_plan.assignments():
+    for row in intersections_plan.assignments():
         geoid: str = row.geoid
-        core: int = row.district
-        # print(f"GeoID: {geoid}, core: {core}, pop: {features[geoid].pop}")
+        intersection_id: str = str(row.district)
+        # print(f"GeoID: {geoid}, intersection: {intersection}, pop: {features[geoid].pop}")
 
-        cores[core - 1] += features[geoid].pop
+        intersections[intersection_id] += features[geoid].pop
 
-    # Write the district core populations to a CSV file
+    # Write the district intersection populations to a CSV file
 
-    cores_summary: list[dict] = list()
+    intersections_summary: list[dict] = list()
 
-    cumulative: int = 0
-
-    for i, pop in enumerate(cores):
-        if pop == 0:
-            break  # Fewer cores than districts
-
-        cumulative += pop
-        cores_summary.append(
+    for id, pop in intersections.items():
+        intersections_summary.append(
             {
-                "DISTRICT": i + 1,
+                "DISTRICT": id,
                 "POPULATION": pop,
                 "DISTRICT%": round(pop / district_pop, 4),
-                "CUMULATIVE%": round(cumulative / total_pop, 4),
             }
         )
 
-    cores_csv: str = path_to_file([site_data_dir]) + file_name(
-        [xx, yyyy, plan_type, label, "cores_summary"], "_", "csv"
+    intersections_summary = sorted(
+        intersections_summary, key=functools.cmp_to_key(compare_compound_ids)
     )
 
     write_csv(
-        cores_csv,
-        cores_summary,
+        summary_csv,
+        intersections_summary,
         [
             "DISTRICT",
             "POPULATION",
             "DISTRICT%",
-            "CUMULATIVE%",
         ],
     )
 

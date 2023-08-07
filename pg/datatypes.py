@@ -28,7 +28,7 @@ class Feature(NamedTuple):
 
 class Assignment(NamedTuple):
     geoid: str
-    district: int
+    district: int | str
 
     def __repr__(self) -> str:
         return f"{self.geoid} => {self.district}"

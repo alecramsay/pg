@@ -92,10 +92,15 @@ class Plan:
     ) -> None:
         """Load assignments from a CSV file."""
 
-        types: list = [str, int]
-        districts_by_geoid: list[dict[str, int]] = read_csv(rel_path, types)
+        # NOTE - Compound district ids
+
+        types: list = [str, str]
+        # types: list = [str, int]
+        districts_by_geoid: list[dict[str, str]] = read_csv(rel_path, types)
+        # districts_by_geoid: list[dict[str, int]] = read_csv(rel_path, types)
         self._assignments = [
-            Assignment(str(item[geoid]), int(item[district]))
+            Assignment(str(item[geoid]), str(item[district]))
+            # Assignment(str(item[geoid]), int(item[district]))
             for item in districts_by_geoid
         ]
 
