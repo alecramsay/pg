@@ -108,9 +108,8 @@ def main() -> None:
     #
 
     command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type} -N '{name}' -D '{description}' -L {tag}"
-    # TODO - Enable this command
-    print(command)
-    # os.system(command)
+    # print(command)
+    os.system(command)
 
     pass
 

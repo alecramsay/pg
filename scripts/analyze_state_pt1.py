@@ -201,7 +201,8 @@ def main() -> None:
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
 
             command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
-            os.system(command)
+            print(command)  # TODO - Comment this out
+            # os.system(command)
 
     # Create & save a dict of maps & guids
 
@@ -210,6 +211,10 @@ def main() -> None:
     # Generate a YAML fragment
 
     print(f"TODO - Generating a YAML fragment ...")
+
+    # Generate intersection tables
+
+    print(f"TODO - Generating intersection tables ...")
 
     print("... done!\n")
 
