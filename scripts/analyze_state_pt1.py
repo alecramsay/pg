@@ -123,7 +123,6 @@ def main() -> None:
 
     print(f"Expanding the baseline CSV to a block-assignment file ...")
 
-    # scripts/expand_vtds_to_blocks.py -s NC -o ~/Downloads/NC/ -f ~/Downloads/NC/NC20C_baseline_100.csv
     command: str = (
         f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
     )
@@ -142,7 +141,7 @@ def main() -> None:
             + (
                 f"{xx}_{yyyy}_Congress_Official.csv"
                 if label == "Official"
-                else f"{xx}_{cycle}_Congress_Baseline.csv"
+                else f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
             )
         )
         compare_csv: str = (
@@ -195,13 +194,14 @@ def main() -> None:
         command: str = (
             f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
         )
-        os.system(command)
+        print("TODO - Import map commented out ...")
+        # os.system(command)
 
         if label != "Baseline":
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
 
             command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
-            print(command)  # TODO - Comment this out
+            print("TODO - Import intersections commented out ...")
             # os.system(command)
 
     # Create & save a dict of maps & guids
