@@ -182,6 +182,7 @@ def main() -> None:
 
     print(f"Importing the BAFs into DRA ...")
 
+    do_import: bool = False  # TODO
     for label in comparisons + ["Baseline"]:
         year: str = cycle if label == "Baseline" else yyyy
 
@@ -194,15 +195,19 @@ def main() -> None:
         command: str = (
             f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
         )
-        print("TODO - Import map commented out ...")
-        # os.system(command)
+        if do_import:
+            os.system(command)
+        else:
+            print("Import not executed ...")
 
         if label != "Baseline":
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
 
             command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
-            print("TODO - Import intersections commented out ...")
-            # os.system(command)
+            if do_import:
+                os.system(command)
+            else:
+                print("Import not executed ...")
 
     # Create & save a dict of maps & guids
 
@@ -214,7 +219,19 @@ def main() -> None:
 
     # Generate intersection tables
 
-    print(f"TODO - Generating intersection tables ...")
+    print(f"Generating intersection tables ...")
+
+    for label in comparisons:
+        assignments_csv: str = (
+            output_dir + f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        )
+        summary_csv: str = (
+            output_dir + f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
+        )
+
+        command: str = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"
+        # print(command)
+        os.system(command)
 
     print("... done!\n")
 

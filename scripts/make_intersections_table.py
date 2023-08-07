@@ -6,7 +6,7 @@ Make the CSV for an intersections table.
 For example:
 
 $ scripts/make_intersections_table.py
-$ scripts/make_intersections_table.py -s NC -i intersections.csv -o intersections_summary.csv
+$ scripts/make_intersections_table.py -s NC -i assignments.csv -o summary.csv
 
 For documentation, type:
 
@@ -113,7 +113,6 @@ def main() -> None:
     for row in intersections_plan.assignments():
         geoid: str = row.geoid
         intersection_id: str = str(row.district)
-        # print(f"GeoID: {geoid}, intersection: {intersection}, pop: {features[geoid].pop}")
 
         intersections[intersection_id] += features[geoid].pop
 
