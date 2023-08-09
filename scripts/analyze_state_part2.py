@@ -104,7 +104,10 @@ def main() -> None:
 
     # Load the map guids from Part 1
 
-    print("TODO - Loading the map guids from Part 1 ...")
+    print("Loading the map guids ...")
+
+    guids_path: str = output_dir + "/" + "map_guids.json"
+    guids: dict[str, Any] = read_json(guids_path)
 
     # Edit the display properties of each map
 
