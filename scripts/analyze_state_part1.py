@@ -125,8 +125,6 @@ def main() -> None:
             shutil.copy(map_path, output_dir)
             comparisons.append(label)
 
-    # TODO - Save the comparisons list for Part 2
-
     # Expand the baseline map to blocks
 
     print(f"Expanding the baseline CSV to a block-assignment file ...")
@@ -190,7 +188,6 @@ def main() -> None:
 
     print(f"Importing the BAFs into DRA ...")
 
-    do_import: bool = False  # TODO
     for label in comparisons + ["Baseline"]:
         year: str = cycle if label == "Baseline" else yyyy
 
@@ -200,22 +197,17 @@ def main() -> None:
             else f"{xx}_{year}_Congress_{label}_canonical.csv"
         )
 
+        # TODO - Capture the output of the import command & save it for Part 2
         command: str = (
             f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
         )
-        if do_import:
-            os.system(command)
-        else:
-            print("Import not executed ...")
+        os.system(command)
 
         if label != "Baseline":
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
 
             command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
-            if do_import:
-                os.system(command)
-            else:
-                print("Import not executed ...")
+            os.system(command)
 
     # Create & save a dict of maps & guids
 
@@ -223,7 +215,12 @@ def main() -> None:
 
     # Generate a YAML fragment
 
-    print(f"TODO - Generating a YAML fragment ...")
+    print(f"Generating a YAML fragment ...")
+
+    command: str = (
+        f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}
+    )
+    os.system(command)
 
     # Generate intersection tables
 

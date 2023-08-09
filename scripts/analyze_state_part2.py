@@ -7,7 +7,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 For example:
 
 $ scripts/analyze_state_part2.py
-$ scripts/analyze_state_part2.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
+$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/
 
 For documentation, type:
 
@@ -106,7 +106,8 @@ def main() -> None:
 
     print("Loading the map guids ...")
 
-    guids_path: str = output_dir + "/" + "map_guids.json"
+    guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
+    guids_path: str = output_dir + "/" + guids_json
     guids: dict[str, Any] = read_json(guids_path)
 
     # Edit the display properties of each map
