@@ -77,6 +77,8 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
+    print(f"Analyzing {xx} maps...")
+
     # Validate arguments & create the output directory
 
     print(f"Validating arguments & creating the output directory ...")

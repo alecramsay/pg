@@ -69,6 +69,8 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
+    print(f"Analyzing {xx} maps...")
+
     # Validate arguments & create the output directory
 
     print(f"Validating arguments ...")
@@ -83,7 +85,7 @@ def main() -> None:
         print(f"ERROR - {xx} subdirectory not found.")
         exit(1)
 
-    # Build a list of comparison maps.
+    # Build a list of comparison maps
 
     potential_comparisons: list[str] = [
         "Official",
@@ -100,7 +102,29 @@ def main() -> None:
         if os.path.isfile(map_path):
             comparisons.append(label)
 
-    # TODO - More ...
+    # Load the map guids from Part 1
+
+    print("TODO - Loading the map guids from Part 1 ...")
+
+    # Edit the display properties of each map
+
+    print("TODO - Editing the display properties of each map ...")
+
+    # Take a screenshot of each map
+
+    print("TODO - Taking a screenshot of each map ...")
+
+    # Pull the ratings for each map
+
+    print("TODO - Pulling the ratings for each map ...")
+
+    # Plot the pairwise radar diagrams
+
+    print("TODO - Plotting the pairwise radar diagrams ...")
+
+    # Write the ratings to a CSV
+
+    print("TODO - Writing the ratings to a CSV ...")
 
     print("... done!\n")
 
