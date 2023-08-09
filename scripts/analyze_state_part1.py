@@ -6,12 +6,12 @@ Analyze the official & notable maps for a state compared to a given baseline map
 
 For example:
 
-$ scripts/analyze_state_pt1.py
-$ scripts/analyze_state_pt1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
+$ scripts/analyze_state_part1.py
+$ scripts/analyze_state_part1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/analyze_state_pt1.py -h
+$ scripts/analyze_state_part1.py -h
 
 """
 
@@ -61,7 +61,13 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Analyze the official & notable maps for a state compared to a given baseline map."""
+    """Analyze the official & notable maps for a state compared to a given baseline map.
+
+    Part 1 of 2:
+    - Run this command, and after the maps are imported into DRA
+    - Run analyze_state_part2.py
+
+    """
 
     args: Namespace = parse_args()
 
