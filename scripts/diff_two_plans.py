@@ -44,21 +44,21 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-c",
         "--compareplan",
-        default="~/Downloads/NC/NC_2022_Congress_Baseline.csv",
+        default="~/Downloads/NC/NC_2020_Congress_Baseline.csv",
         help="Path to the plan to compare to the base plan",
         type=str,
     )
     parser.add_argument(
         "-r",
         "--renumbered",
-        default="~/Downloads/NC/NC_2022_Congress_Baseline_canonical.csv",
+        default="~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv",
         help="Path to the renumbered compare plan",
         type=str,
     )
     parser.add_argument(
         "-i",
         "--intersections",
-        default="~/Downloads/NC/NC_2022_Congress_Baseline_intersections.csv",
+        default="~/Downloads/NC/NC_2020_Congress_Baseline_intersections.csv",
         help="Path to the base x compare plan intersections",
         type=str,
     )
@@ -98,8 +98,20 @@ def main() -> None:
         [xx, cycle, "block", "data"], "_", "csv"
     )
 
-    # TODO - Remove --maxcores option
+    # TODO - Todd: Fix the 'cores' command (#51)
 
+    print("First pass ...")
+    command: str = f"python3 {dccvt_py}/geoid.py cores \
+        --assignments {assignments_csv} \
+        --population {data_csv} \
+        --diff {intersections_csv} \
+        --maxcores {os.path.expanduser('~/Downloads/NC/ignore.csv')} \
+        --renumber {renumbered_csv}"
+    # print(command)
+    os.system(command)
+
+    print("Second pass ...")
+    assignments_csv = base_csv + " " + renumbered_csv
     command: str = f"python3 {dccvt_py}/geoid.py cores \
         --assignments {assignments_csv} \
         --population {data_csv} \

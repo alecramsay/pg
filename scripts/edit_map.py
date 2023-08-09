@@ -163,6 +163,8 @@ def main() -> None:
 
     #
 
+    # TODO - Todd: assign district colors (#49).
+
     n: int = districts_by_state[xx][plan_type.lower()]
     display_settings: str = generate_display_settings(n)
 
