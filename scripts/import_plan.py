@@ -84,7 +84,6 @@ def main() -> None:
     year: str = cycle if label == "Baseline" else yyyy
 
     user: str = "alec@davesredistricting.org"
-    plan_type: str = "congress"
 
     name: str = f"{xx} {year} {plan_type.title()} - {label}"
     if intersections:

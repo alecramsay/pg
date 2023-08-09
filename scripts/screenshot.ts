@@ -8,6 +8,8 @@
 // To run:
 // node scripts/screenshot.js
 
+// TODO - Parameterize this
+
 const puppeteer = require('puppeteer');
 
 // TODO - add command line args:
