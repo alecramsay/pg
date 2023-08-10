@@ -112,19 +112,43 @@ def main() -> None:
 
     # Edit the display properties of each map
 
-    print("TODO - Editing the display properties of each map ...")
+    print("Editing the display properties of each map ...")
+
+    for label, guid in guids.items():
+        if label in ["name", "ready"]:
+            continue
+        print(f"TODO - Editing the display properties of {label} / {guid} ...")
 
     # Take a screenshot of each map
 
-    print("TODO - Taking a screenshot of each map ...")
+    print("Taking a screenshot of each map ...")
+
+    for label, guid in guids.items():
+        if label in ["name", "ready"]:
+            continue
+        print(f"TODO - Taking a screenshot of {label} / {guid} ...")
 
     # Pull the ratings for each map
 
-    print("TODO - Pulling the ratings for each map ...")
+    print("Pulling the ratings for each map ...")
+
+    for label, guid in guids.items():
+        if label in ["name", "ready"] or label.endswith("-intersections"):
+            continue
+        print(f"TODO - Pulling the ratings for {label} / {guid} ...")
 
     # Plot the pairwise radar diagrams
 
-    print("TODO - Plotting the pairwise radar diagrams ...")
+    print("Plotting the pairwise radar diagrams ...")
+
+    for label, guid in guids.items():
+        if (
+            label in ["name", "ready"]
+            or label == "baseline"
+            or label.endswith("-intersections")
+        ):
+            continue
+        print(f"TODO - Pulling the ratings for {label} / {guid} ...")
 
     # Write the ratings to a CSV
 
