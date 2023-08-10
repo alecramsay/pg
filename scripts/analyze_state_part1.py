@@ -51,6 +51,13 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    parser.add_argument(
+        "-x",
+        "--execute",
+        dest="execute",
+        action="store_true",
+        help="Execute the commands",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -74,6 +81,7 @@ def main() -> None:
     xx: str = args.state
     baseline: str = os.path.expanduser(args.baseline)
     output: str = os.path.expanduser(args.output)
+    execute: bool = args.execute
 
     verbose: bool = args.verbose
 
@@ -98,13 +106,16 @@ def main() -> None:
         print(f"ERROR - {xx} subdirectory already exists. Please remove it first.")
         exit(1)
     else:
-        os.mkdir(output_dir)
+        if execute:
+            os.mkdir(output_dir)
 
     # Copy CSVs for the official, notable, and baseline maps to the output directory,
     # building a list of comparison maps. Save it for Part 2.
 
     print(f"Copying CSVs for the official, notable, and baseline maps ...")
-    shutil.copy(base_path, output_dir)
+
+    if execute:
+        shutil.copy(base_path, output_dir)
 
     maps_root: str = FileSpec(os.path.expanduser("data")).abs_path
     maps_dir: str = os.path.join(maps_root, xx)
@@ -122,22 +133,26 @@ def main() -> None:
     for label in potential_comparisons:
         map_path: str = os.path.join(maps_dir, f"{xx}_2022_Congress_{label}.csv")
         if os.path.isfile(map_path):
-            shutil.copy(map_path, output_dir)
+            if execute:
+                shutil.copy(map_path, output_dir)
             comparisons.append(label)
+
+    command: str = ""
 
     # Expand the baseline map to blocks
 
-    print(f"Expanding the baseline CSV to a block-assignment file ...")
+    print("Expanding the baseline CSV to a block-assignment file ...")
 
-    command: str = (
-        f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
-    )
-    os.system(command)
+    command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
+    if execute:
+        os.system(command)
+    else:
+        print(command)
 
     # Renumber & compare the maps to the baseline
 
     print(
-        f"Comparing maps to the baseline & canonicalizing districts to the official ids ..."
+        "Comparing maps to the baseline & canonicalizing districts to the official ids ..."
     )
 
     for label in comparisons:
@@ -181,8 +196,11 @@ def main() -> None:
             print(f"intersections: {intersections_csv}")
             print(f"renumbered_csv: {renumbered_csv}")
 
-        command: str = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
-        os.system(command)
+        command = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     # Import the BAFs into DRA maps
 
@@ -198,29 +216,36 @@ def main() -> None:
         )
 
         # TODO - Capture the output of the import command & save it for Part 2
-        command: str = (
+        command = (
             f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
         )
-        os.system(command)
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
         if label != "Baseline":
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
 
             command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
-            os.system(command)
+            if execute:
+                os.system(command)
+            else:
+                print(command)
 
     # Create & save a dict of maps & guids
 
-    print(f"TODO - Creating & saving a dict of maps & guids ...")
+    print("TODO - Creating & saving a dict of maps & guids ...")
 
     # Generate a YAML fragment
 
     print(f"Generating a YAML fragment ...")
 
-    command: str = (
-        f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}
-    )
-    os.system(command)
+    command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"
+    if execute:
+        os.system(command)
+    else:
+        print(command)
 
     # Generate intersection tables
 
@@ -234,9 +259,11 @@ def main() -> None:
             output_dir + f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
         )
 
-        command: str = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"
-        # print(command)
-        os.system(command)
+        command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     print("... done!\n")
 
