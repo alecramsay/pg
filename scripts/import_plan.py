@@ -6,10 +6,8 @@ Import a BAF into a DRA map.
 
 For example:
 
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2020_Congress_Official.csv -l Official
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2020_Congress_Proportional_canonical.csv -l Proportional
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv -l Baseline
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2020_Congress_Official_intersections.csv -l Official -i
+$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2022_Congress_Official.csv -l Official -g ~/Downloads/NC/NC_2022_Congress_Official_guids.txt
+$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2022_Congress_Official_intersections.csv -l Official -g ~/Downloads/NC/NC_2022xw_Congress_Official_intersections_guids.txt -i
 
 For documentation, type:
 
@@ -40,15 +38,15 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-f",
         "--file",
-        default="~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv",
+        default="~/Downloads/NC/NC_2022_Congress_Official.csv",
         help="Path to the plan CSV",
         type=str,
     )
     parser.add_argument(
         "-l",
         "--label",
-        default="Baseline",
-        help="The type of map (e.g., Baseline)",
+        default="Official",
+        help="The type of map (e.g., Official)",
         type=str,
     )
     parser.add_argument(
@@ -57,6 +55,13 @@ def parse_args() -> Namespace:
         dest="intersections",
         action="store_true",
         help="Intersections map",
+    )
+    parser.add_argument(
+        "-g",
+        "--guids",
+        default="~/Downloads/NC/NC_2022_Congress_Official_guids.txt",
+        help="Path to the resulting DRA map GUIDs",
+        type=str,
     )
 
     parser.add_argument(
@@ -76,6 +81,7 @@ def main() -> None:
     plan: str = os.path.expanduser(args.file)
     label: str = args.label
     intersections: bool = args.intersections
+    guids: str = os.path.expanduser(args.guids)
 
     verbose: bool = args.verbose
 
@@ -106,15 +112,17 @@ def main() -> None:
 
     #
 
-    # TODO - Terry: Capture import breadcrumbs (#50).
     """
     On success, the importmap.js script echoes something like this:
+    
     importmap: import succeeded: /Users/alecramsay/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv (elapsed: 0:16)
     importmap: guid: e9fb3d3e-9e11-4e73-ad21-680b2feac04a
     importmap: shareguid: ff009f31-8017-4ae2-bc71-07a8f085f09e
+
+    Capture these for downstream processing.
     """
 
-    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag}"
+    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag} &> {guids}"
     print(command)
     os.system(command)
 
