@@ -7,7 +7,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 For example:
 
 $ scripts/analyze_state_part2.py
-$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/
+$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/ -x
 
 For documentation, type:
 
@@ -44,6 +44,13 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    parser.add_argument(
+        "-x",
+        "--execute",
+        dest="execute",
+        action="store_true",
+        help="Execute the commands",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -66,6 +73,7 @@ def main() -> None:
 
     xx: str = args.state
     output: str = os.path.expanduser(args.output)
+    execute: bool = args.execute
 
     verbose: bool = args.verbose
 
@@ -110,6 +118,8 @@ def main() -> None:
     guids_path: str = output_dir + "/" + guids_json
     guids: dict[str, Any] = read_json(guids_path)
 
+    command: str = ""
+
     # Edit the display properties of each map
 
     print("Editing the display properties of each map ...")
@@ -117,7 +127,11 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"]:
             continue
-        print(f"TODO - Editing the display properties of {label} / {guid} ...")
+        command = f"scripts/edit_map.py -s {xx} -i {guid} -f ~/Downloads/NC/display_settings.json"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     # Take a screenshot of each map
 
@@ -126,7 +140,11 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"]:
             continue
-        print(f"TODO - Taking a screenshot of {label} / {guid} ...")
+        command = f"scripts/save_map_image -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     # Pull the ratings for each map
 
@@ -135,7 +153,11 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"] or label.endswith("-intersections"):
             continue
-        print(f"TODO - Pulling the ratings for {label} / {guid} ...")
+        command = f"scripts/pull_map_ratings -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     # Plot the pairwise radar diagrams
 
@@ -148,11 +170,21 @@ def main() -> None:
             or label.endswith("-intersections")
         ):
             continue
-        print(f"TODO - Pulling the ratings for {label} / {guid} ...")
+        command = f"scripts/plot_radar_diagram.py {xx} {label.capitalize()} Baseline -o {output_dir}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
 
     # Write the ratings to a CSV
 
-    print("TODO - Writing the ratings to a CSV ...")
+    print("Writing the ratings to a CSV file ...")
+
+    command = f"scripts/write_ratings_table.py {xx} -o {output_dir}"
+    if execute:
+        os.system(command)
+    else:
+        print(command)
 
     print("... done!\n")
 

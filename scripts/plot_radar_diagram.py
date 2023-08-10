@@ -12,6 +12,8 @@ For documentation, type:
 
 $ scripts/plot_radar_diagram.py -h
 
+TODO - Add output directory
+
 """
 
 import argparse

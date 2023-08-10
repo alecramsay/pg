@@ -11,6 +11,8 @@ For documentation, type:
 
 $ scripts/write_ratings_table.py -h
 
+TODO - Add output directory
+
 """
 
 import argparse
