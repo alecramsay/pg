@@ -232,7 +232,9 @@ def main() -> None:
 
     # Create & save a dict of maps & guids
 
-    print(">>> TODO - Creating & saving a dict of maps & guids ...")
+    print(">>> Creating & saving a dict of maps & guids ...")
+
+    # TODO - Loop over the echo output files & save the guids to a dict
 
     # Generate a YAML fragment
 

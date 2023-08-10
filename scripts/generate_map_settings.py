@@ -164,6 +164,7 @@ def main() -> None:
 
     # TODO - Assign better district colors (#49).
 
+    ## Read the precinct adjacencies & convert them a graph
     adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
         [xx, cycle, "vtd", "adjacencies"], "_", "csv"
     )
@@ -176,11 +177,27 @@ def main() -> None:
         for row in reader:
             vtd_adjacencies.append(row)
 
+    vtd_graph: dict[str, list[str]] = dict()
+    for row in vtd_adjacencies:
+        if row["one"] not in vtd_graph:
+            vtd_graph[row["one"]] = []
+        if row["two"] not in vtd_graph:
+            vtd_graph[row["two"]] = []
+        vtd_graph[row["one"]].append(row["two"])
+        vtd_graph[row["two"]].append(row["one"])
+
+    ## Read the block-to-vtd mapping
     types: list = [str, str]
     block_vtd_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
         [xx, cycle, "block", "vtd"], "_", "csv"
     )
     block_vtd: list[dict] = read_csv(block_vtd_csv, types)
+
+    ## Condense block assignments to non-unique precinct assignments
+
+    ## Invert precincts by district
+
+    ## Construct a pseudo district graph
 
     # Write the display settings file
 

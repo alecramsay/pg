@@ -107,9 +107,15 @@ def main() -> None:
     #
 
     # TODO - Terry: Capture import breadcrumbs (#50).
+    """
+    On success, the importmap.js script echoes something like this:
+    importmap: import succeeded: /Users/alecramsay/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv (elapsed: 0:16)
+    importmap: guid: e9fb3d3e-9e11-4e73-ad21-680b2feac04a
+    importmap: shareguid: ff009f31-8017-4ae2-bc71-07a8f085f09e
+    """
 
-    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type} -N '{name}' -D '{description}' -L {tag}"
-    # print(command)
+    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag}"
+    print(command)
     os.system(command)
 
     pass
