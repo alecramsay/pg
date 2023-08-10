@@ -5,83 +5,116 @@ Write Official map, Notable maps, and Baseline map ratings to a table in a CSV.
 
 For example:
 
-$ scripts/write_ratings_table.py NC
+$ scripts/write_ratings_table.py NC -o ~/Downloads/
 
 For documentation, type:
 
 $ scripts/write_ratings_table.py -h
-
-TODO - Add output directory
 
 """
 
 import argparse
 from argparse import ArgumentParser, Namespace
 
+import os
+
 from pg import *
 
 
-### PARSE ARGS ###
-
-parser: ArgumentParser = argparse.ArgumentParser(
-    description="Analyze the Official & Notable maps for a state vs. the Baseline map"
-)
-
-parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
-parser.add_argument(
-    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)
-
-args: Namespace = parser.parse_args()
-
-xx: str = args.state
-
-
-### WRITE THE RATINGS TO A CSV FILE ###
-
-ratings_table: list[dict] = list()
-
-for label in [
-    "Official",
-    "Proportional",
-    "Competitive",
-    "Minority",
-    "Compact",
-    "Splitting",
-    "Baseline",
-]:
-    ratings: Ratings = cull_ratings(
-        read_json(
-            path_to_file([data_dir, xx])
-            + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
-        )
+def parse_args() -> Namespace:
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Analyze the Official & Notable maps for a state vs. the Baseline map"
     )
 
-    row: dict = dict()
-    row = {
-        "Map": qualify_label(label),
-        "Proportionality": ratings.proportionality,
-        "Competitiveness": ratings.competitiveness,
-        "Minority": ratings.minority_opportunity,
-        "Compactness": ratings.compactness,
-        "Splitting": ratings.splitting,
-    }
+    parser.add_argument(
+        "-s",
+        "--state",
+        default="NC",
+        help="The two-character state code (e.g., NC)",
+        type=str,
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/",
+        help="Path to output directory",
+        type=str,
+    )
 
-    ratings_table.append(row)
+    parser.add_argument(
+        "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+    )
 
-write_csv(
-    path_to_file([site_data_dir])
-    + file_name([xx, yyyy, plan_type, "ratings"], "_", "csv"),
-    ratings_table,
-    # rows,
-    [
-        "Map",
-        "Proportionality",
-        "Competitiveness",
+    args: Namespace = parser.parse_args()
+    return args
+
+
+def main() -> None:
+    """Write the ratings to a CSV file."""
+
+    args: Namespace = parse_args()
+
+    xx: str = args.state
+    output: str = os.path.expanduser(args.output)
+
+    verbose: bool = args.verbose
+
+    #
+
+    output_root: str = FileSpec(output).abs_path
+    output_dir: str = os.path.join(output_root, xx)
+
+    #
+
+    ratings_table: list[dict] = list()
+
+    for label in [
+        "Official",
+        "Proportional",
+        "Competitive",
         "Minority",
-        "Compactness",
+        "Compact",
         "Splitting",
-    ],
-)
+        "Baseline",
+    ]:
+        map_path: str = os.path.join(output_dir, f"{xx}_2022_Congress_{label}.csv")
+        if os.path.isfile(map_path):
+            ratings: Ratings = cull_ratings(
+                read_json(
+                    output_dir
+                    + "/"
+                    + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
+                )
+            )
 
-pass
+            row: dict = dict()
+            row = {
+                "Map": qualify_label(label),
+                "Proportionality": ratings.proportionality,
+                "Competitiveness": ratings.competitiveness,
+                "Minority": ratings.minority_opportunity,
+                "Compactness": ratings.compactness,
+                "Splitting": ratings.splitting,
+            }
+
+            ratings_table.append(row)
+
+    write_csv(
+        output_dir + "/" + file_name([xx, yyyy, plan_type, "ratings"], "_", "csv"),
+        ratings_table,
+        # rows,
+        [
+            "Map",
+            "Proportionality",
+            "Competitiveness",
+            "Minority",
+            "Compactness",
+            "Splitting",
+        ],
+    )
+
+
+if __name__ == "__main__":
+    main()
+
+### END ###

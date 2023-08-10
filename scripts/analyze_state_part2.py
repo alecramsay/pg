@@ -20,7 +20,6 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 import os
-import shutil
 
 from pg import *
 
