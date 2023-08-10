@@ -78,6 +78,7 @@ rawdata_dir: str = "../../../local/pg/rawdata"
 vtd_dir: str = "../../../local/vtd_data/2020_vtd"
 
 preprocessed_data_dir: str = "../../dev/baseline/data"
+preprocessed_temp_dir: str = "../../dev/baseline/temp"
 
 data_dir: str = "data"
 temp_dir: str = "temp"

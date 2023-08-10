@@ -18,6 +18,7 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 import os
+from csv import DictReader
 
 from pg import *
 
@@ -156,12 +157,32 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    #
-
-    # TODO - Assign better district colors (#49).
+    # TODO - HACK district colors
 
     n: int = districts_by_state[xx][plan_type.lower()]
     display_settings: str = generate_display_settings(n)
+
+    # TODO - Assign better district colors (#49).
+
+    adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
+        [xx, cycle, "vtd", "adjacencies"], "_", "csv"
+    )
+    vtd_adjacencies: list[dict] = list()
+    fieldnames: list[str] = ["one", "two"]
+    with open(adjacencies_csv, "r", encoding="utf-8-sig") as file:
+        reader: DictReader[str] = DictReader(
+            file, fieldnames=fieldnames, restkey=None, restval=None, dialect="excel"
+        )
+        for row in reader:
+            vtd_adjacencies.append(row)
+
+    types: list = [str, str]
+    block_vtd_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
+        [xx, cycle, "block", "vtd"], "_", "csv"
+    )
+    block_vtd: list[dict] = read_csv(block_vtd_csv, types)
+
+    # Write the display settings file
 
     with open(settings_json, "w") as text_file:
         text_file.write(display_settings)
