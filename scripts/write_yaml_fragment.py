@@ -19,6 +19,7 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 import os
+from datetime import datetime
 
 from pg import *
 
@@ -76,6 +77,7 @@ def main() -> None:
     yaml_path: str = output_dir + "/" + guids_yaml
 
     lines: list[str] = []
+    lines.append("{:# Generated at %m/%d/%Y @ %H:%M}".format(datetime.now()))
     lines.append(f"- xx: {xx}")
     lines.append(f"  name: {STATE_NAMES[xx]}")
     lines.append(f"  official: {guids['official']}")
