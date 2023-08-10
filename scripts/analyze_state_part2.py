@@ -169,7 +169,7 @@ def main() -> None:
             or label.endswith("-intersections")
         ):
             continue
-        command = f"scripts/plot_radar_diagram.py {xx} {label.capitalize()} Baseline -o {output_dir}"
+        command = f"scripts/plot_radar_diagram.py -s {xx} {label.capitalize()} Baseline -o {output_dir}"
         if execute:
             os.system(command)
         else:
@@ -179,7 +179,7 @@ def main() -> None:
 
     print("Writing the ratings to a CSV file ...")
 
-    command = f"scripts/write_ratings_table.py {xx} -o {output_dir}"
+    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
     if execute:
         os.system(command)
     else:
