@@ -44,8 +44,15 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--guid",
-        default="60ab513e-197b-40a3-970b-3d8e27354775",
+        default="820378d9-43a4-43c5-aa31-999e6da2702a",
         help="The map guid or sharing guid",
+        type=str,
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/",
+        help="Path to output directory",
         type=str,
     )
 
@@ -65,6 +72,7 @@ def main() -> None:
     xx: str = args.state
     label: str = args.label
     guid: str = args.guid
+    output: str = os.path.expanduser(args.output)
 
     verbose: bool = args.verbose
 
@@ -72,7 +80,21 @@ def main() -> None:
 
     year: str = cycle if label == "Baseline" else yyyy
 
-    print("TODO - Wrap a screenshot solution ...")
+    output_root: str = FileSpec(output).abs_path
+    output_dir: str = os.path.join(output_root, xx)
+
+    url: str = f"https://davesredistricting.org/join/{guid}"
+
+    image_png: str = f"{xx}_{yyyy}_{plan_type}_{label}_map.png"
+    image_path: str = output_dir + "/" + image_png
+
+    # TODO - Take the screenshot, using some solution.
+
+    print(f"Taking screenshot of {xx} / {label} / {guid} ...")
+
+    command: str = f"node scripts/screenshot.js {url} {image_path}"
+    # print(command)
+    os.system(command)
 
     pass
 
