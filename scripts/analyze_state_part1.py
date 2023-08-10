@@ -7,6 +7,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 For example:
 
 $ scripts/analyze_state_part1.py
+$ scripts/analyze_state_part1.py -s NC
 $ scripts/analyze_state_part1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
@@ -40,7 +41,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-b",
         "--baseline",
-        default="../baseline/maps/NC/NC20C_baseline_100.csv",
+        # default="../baseline/maps/NC/NC20C_baseline_100.csv",
         help="Path to the baseline map",
         type=str,
     )
@@ -79,7 +80,11 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    baseline: str = os.path.expanduser(args.baseline)
+    baseline: str = (
+        os.path.expanduser(args.baseline)
+        if args.baseline
+        else f"../baseline/maps/{xx}/{xx}20C_baseline_100.csv"
+    )
     output: str = os.path.expanduser(args.output)
     execute: bool = args.execute
 
