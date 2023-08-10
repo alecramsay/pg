@@ -94,7 +94,7 @@ def main() -> None:
 
     # Validate arguments & create the output directory
 
-    print(f"Validating arguments & creating the output directory ...")
+    print(">>> Validating arguments & creating the output directory ...")
 
     base_path: str = FileSpec(baseline).abs_path
     if not os.path.isfile(base_path):
@@ -117,7 +117,7 @@ def main() -> None:
     # Copy CSVs for the official, notable, and baseline maps to the output directory,
     # building a list of comparison maps. Save it for Part 2.
 
-    print(f"Copying CSVs for the official, notable, and baseline maps ...")
+    print(">>> Copying CSVs for the official, notable, and baseline maps ...")
 
     if execute:
         shutil.copy(base_path, output_dir)
@@ -146,7 +146,7 @@ def main() -> None:
 
     # Expand the baseline map to blocks
 
-    print("Expanding the baseline CSV to a block-assignment file ...")
+    print(">>> Expanding the baseline CSV to a block-assignment file ...")
 
     command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
     if execute:
@@ -157,7 +157,7 @@ def main() -> None:
     # Renumber & compare the maps to the baseline
 
     print(
-        "Comparing maps to the baseline & canonicalizing districts to the official ids ..."
+        ">>> Comparing maps to the baseline & canonicalizing districts to the official ids ..."
     )
 
     for label in comparisons:
@@ -193,14 +193,6 @@ def main() -> None:
             )
         )
 
-        if verbose:
-            print()
-            print(f"label: {label}")
-            print(f"base_csv: {base_csv}")
-            print(f"compare_csv: {compare_csv}")
-            print(f"intersections: {intersections_csv}")
-            print(f"renumbered_csv: {renumbered_csv}")
-
         command = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
         if execute:
             os.system(command)
@@ -209,7 +201,7 @@ def main() -> None:
 
     # Import the BAFs into DRA maps
 
-    print(f"Importing the BAFs into DRA ...")
+    print(">>> Importing the BAFs into DRA ...")
 
     for label in comparisons + ["Baseline"]:
         year: str = cycle if label == "Baseline" else yyyy
@@ -240,11 +232,11 @@ def main() -> None:
 
     # Create & save a dict of maps & guids
 
-    print("TODO - Creating & saving a dict of maps & guids ...")
+    print(">>> TODO - Creating & saving a dict of maps & guids ...")
 
     # Generate a YAML fragment
 
-    print(f"Generating a YAML fragment ...")
+    print(">>> Generating a YAML fragment ...")
 
     command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"
     if execute:
@@ -254,7 +246,7 @@ def main() -> None:
 
     # Generate intersection tables
 
-    print(f"Generating intersection tables ...")
+    print(">>> Generating intersection tables ...")
 
     for label in comparisons:
         assignments_csv: str = (

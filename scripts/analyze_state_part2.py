@@ -80,7 +80,7 @@ def main() -> None:
 
     # Validate arguments & create the output directory
 
-    print(f"Validating arguments ...")
+    print(">>> Validating arguments ...")
 
     output_root: str = FileSpec(output).abs_path
     if not os.path.isdir(output_root):
@@ -111,7 +111,7 @@ def main() -> None:
 
     # Load the map guids from Part 1
 
-    print("Loading the map guids ...")
+    print(">>> Loading the map guids ...")
 
     guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
     guids_path: str = output_dir + "/" + guids_json
@@ -119,14 +119,33 @@ def main() -> None:
 
     command: str = ""
 
+    # Assign colors to districts for each map, and
     # Edit the display properties of each map
 
-    print("Editing the display properties of each map ...")
+    print(
+        ">>> Assigning district colors & editing the display properties of each map ..."
+    )
 
     for label, guid in guids.items():
         if label in ["name", "ready"]:
             continue
-        command = f"scripts/edit_map.py -s {xx} -i {guid} -f ~/Downloads/NC/display_settings.json"
+
+        year: str = cycle if label == "Baseline" else yyyy
+
+        assignments_csv: str = (
+            f"{xx}_{year}_Congress_{label.capitalize().replace('-', '_')}.csv"
+        )
+        assignments_path: str = os.path.join(output_dir, assignments_csv)
+        edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
+        edits_path: str = os.path.join(output_dir, edits_json)
+
+        command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_path} -f {edits_path}"
+        if execute:
+            os.system(command)
+        else:
+            print(command)
+
+        command = f"scripts/edit_map.py -s {xx} -i {guid} -f {edits_path}"
         if execute:
             os.system(command)
         else:
@@ -134,7 +153,7 @@ def main() -> None:
 
     # Take a screenshot of each map
 
-    print("Taking a screenshot of each map ...")
+    print(">>> Taking a screenshot of each map ...")
 
     for label, guid in guids.items():
         if label in ["name", "ready"]:
@@ -147,7 +166,7 @@ def main() -> None:
 
     # Pull the ratings for each map
 
-    print("Pulling the ratings for each map ...")
+    print(">>> Pulling the ratings for each map ...")
 
     for label, guid in guids.items():
         if label in ["name", "ready"] or label.endswith("-intersections"):
@@ -160,7 +179,7 @@ def main() -> None:
 
     # Plot the pairwise radar diagrams
 
-    print("Plotting the pairwise radar diagrams ...")
+    print(">>> Plotting the pairwise radar diagrams ...")
 
     for label, guid in guids.items():
         if (
@@ -177,7 +196,7 @@ def main() -> None:
 
     # Write the ratings to a CSV
 
-    print("Writing the ratings to a CSV file ...")
+    print(">>> Writing the ratings to a CSV file ...")
 
     command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
     if execute:

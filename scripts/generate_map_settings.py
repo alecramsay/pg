@@ -2,16 +2,15 @@
 #
 
 """
-Edit the properties of a DRA map.
+Generate display settings for a BAF that will be imported into a DRA map.
 
 For example:
 
-$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -f ~/Downloads/NC/display_settings.json
-$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -f ~/Downloads/NC/display_settings.json -n
+$ scripts/generate_map_settings.py -s NC -a ~/Downloads/NC/NC_2022_Congress_Official.csv -f ~/Downloads/NC/NC_2022_Congress_Official_display_settings.json
 
 For documentation, type:
 
-$ scripts/edit_map.py -h
+$ scripts/generate_map_settings.py -h
 
 """
 
@@ -25,7 +24,7 @@ from pg import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Import a BAF into a DRA map."
+        description="Generate display settings for a BAF that will be imported into a DRA map."
     )
 
     parser.add_argument(
@@ -36,27 +35,20 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
-        "-i",
-        "--guid",
-        default="60ab513e-197b-40a3-970b-3d8e27354775",
-        help="The map guid or sharing guid",
+        "-a",
+        "--assignments",
+        default="~/Downloads/NC/NC_2022_Congress_Official.csv",
+        help="Block-assignment file",
         type=str,
     )
     parser.add_argument(
         "-f",
         "--edits",
-        default="~/Downloads/NC/display_settings.json",
+        default="~/Downloads/NC/NC_2022_Congress_Official_display_settings.json",
         help="The display settings file",
         type=str,
     )
 
-    parser.add_argument(
-        "-n",
-        "--nodeploy",
-        dest="nodeploy",
-        action="store_true",
-        help="Do not save changes.",
-    )
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
@@ -154,33 +146,25 @@ def generate_display_settings(n: int) -> str:
 
 
 def main() -> None:
-    """Edit the properties of a DRA map."""
+    """Generate display settings for a BAF that will be imported into a DRA map."""
 
     args: Namespace = parse_args()
 
     xx: str = args.state
-    guid: str = args.guid
-    edits: str = os.path.abspath(os.path.expanduser(args.edits))
-    user: str = "alec@davesredistricting.org"
-    nodeploy: bool = args.nodeploy
+    assignments_csv: str = os.path.expanduser(args.assignments)
+    settings_json: str = os.path.expanduser(args.edits)
 
     verbose: bool = args.verbose
 
     #
 
-    # TODO - Todd: assign district colors (#49).
+    # TODO - Assign better district colors (#49).
 
     n: int = districts_by_state[xx][plan_type.lower()]
     display_settings: str = generate_display_settings(n)
 
-    with open(edits, "w") as text_file:
+    with open(settings_json, "w") as text_file:
         text_file.write(display_settings)
-
-    #
-
-    command: str = f"../dra-cli/editmap.js -i {guid} -f {edits} -u {user} {'-n' if nodeploy else ''}"
-    # print(command)
-    os.system(command)
 
     pass
 

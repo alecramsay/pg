@@ -85,7 +85,7 @@ def main() -> None:
 
     url: str = f"https://davesredistricting.org/join/{guid}"
 
-    ratings_json: str = f"{xx}_{yyyy}_{plan_type}_{label}_ratings.json"
+    ratings_json: str = f"{xx}_{year}_{plan_type}_{label}_ratings.json"
     ratings_path: str = output_dir + "/" + ratings_json
 
     command: str = f"../dra-cli/getmap.js -m -i {guid} | grep score_ >> {ratings_path}"
