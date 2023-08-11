@@ -41,7 +41,6 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-b",
         "--baseline",
-        # default="../baseline/maps/NC/NC20C_baseline_100.csv",
         help="Path to the baseline map",
         type=str,
     )
@@ -151,6 +150,7 @@ def main() -> None:
 
     base_csv: str = FileSpec(baseline).name + ".csv"
     command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
+    print(command)
     os.system(command)
 
     # Renumber & compare the maps to the baseline
@@ -178,6 +178,7 @@ def main() -> None:
         )
 
         command = f"scripts/diff_two_plans.py -s {xx} -o {output_dir} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
+        print(command)
         os.system(command)
 
     # Import the BAFs into DRA maps
@@ -196,6 +197,7 @@ def main() -> None:
         guids_txt: str = f"{xx}_{year}_Congress_{label}_guids.txt"
 
         command = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt}"
+        print(command)
         os.system(command)
 
         ## Import the intersection maps
@@ -204,6 +206,7 @@ def main() -> None:
             guids_txt: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
 
             command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -i"
+            print(command)
             os.system(command)
 
     # Create & save a dict of maps & guids
@@ -239,6 +242,7 @@ def main() -> None:
     print(">>> Generating a YAML fragment ...")
 
     command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"
+    print(command)
     os.system(command)
 
     # Generate intersection tables
@@ -250,6 +254,7 @@ def main() -> None:
         summary_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
 
         command = f"scripts/make_intersections_table.py -s {xx} -o {output_dir} -i {assignments_csv} -t {summary_csv}"
+        print(command)
         os.system(command)
 
     print("... done!\n")

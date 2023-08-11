@@ -6,7 +6,7 @@ Generate display settings for a BAF that will be imported into a DRA map.
 
 For example:
 
-$ scripts/generate_map_settings.py -s NC -a ~/Downloads/NC/NC_2022_Congress_Official.csv -f ~/Downloads/NC/NC_2022_Congress_Official_display_settings.json
+$ scripts/generate_map_settings.py -s NC -o ~/Downloads/NC/ -a NC_2022_Congress_Official.csv -f NC_2022_Congress_Official_display_settings.json
 
 For documentation, type:
 
@@ -36,16 +36,23 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/NC/",
+        help="Path to output directory",
+        type=str,
+    )
+    parser.add_argument(
         "-a",
         "--assignments",
-        default="~/Downloads/NC/NC_2022_Congress_Official.csv",
+        default="NC_2022_Congress_Official.csv",
         help="Block-assignment file",
         type=str,
     )
     parser.add_argument(
         "-f",
         "--edits",
-        default="~/Downloads/NC/NC_2022_Congress_Official_display_settings.json",
+        default="NC_2022_Congress_Official_display_settings.json",
         help="The display settings file",
         type=str,
     )
@@ -152,12 +159,13 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    assignments_csv: str = os.path.expanduser(args.assignments)
-    settings_json: str = os.path.expanduser(args.edits)
+    output_dir: str = os.path.expanduser(args.output)
+    assignments_csv: str = os.path.join(output_dir, args.assignments)
+    settings_json: str = os.path.join(output_dir, args.edits)
 
     verbose: bool = args.verbose
 
-    # TODO - HACK district colors
+    # TODO - HACK the district colors
 
     n: int = districts_by_state[xx][plan_type.lower()]
     display_settings: str = generate_display_settings(n)

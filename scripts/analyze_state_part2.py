@@ -7,7 +7,7 @@ Analyze the official & notable maps for a state compared to a given baseline map
 For example:
 
 $ scripts/analyze_state_part2.py
-$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/ -x
+$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/
 
 For documentation, type:
 
@@ -127,14 +127,16 @@ def main() -> None:
         assignments_csv: str = (
             f"{xx}_{year}_Congress_{label.capitalize().replace('-', '_')}.csv"
         )
-        assignments_path: str = os.path.join(output_dir, assignments_csv)
         edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
-        edits_path: str = os.path.join(output_dir, edits_json)
 
-        command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_path} -f {edits_path}"
+        command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_csv} -o {output_dir} -f {edits_json}"
+        print(command)
         os.system(command)
 
-        command = f"scripts/edit_map.py -s {xx} -i {guid} -f {edits_path}"
+        command = (
+            f"scripts/edit_map.py -s {xx} -i {guid} -o {output_dir} -f {edits_json}"
+        )
+        print(command)
         os.system(command)
 
     # Take a screenshot of each map
@@ -144,7 +146,8 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"]:
             continue
-        command = f"scripts/save_map_image -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
+        command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
+        print(command)
         os.system(command)
 
     # Pull the ratings for each map
@@ -154,7 +157,8 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"] or label.endswith("-intersections"):
             continue
-        command = f"scripts/pull_map_ratings -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
+        command = f"scripts/pull_map_ratings.py -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
+        print(command)
         os.system(command)
 
     # Plot the pairwise radar diagrams
@@ -168,7 +172,8 @@ def main() -> None:
             or label.endswith("-intersections")
         ):
             continue
-        command = f"scripts/plot_radar_diagram.py -s {xx} {label.capitalize()} Baseline -o {output_dir}"
+        command = f"scripts/plot_radar_diagram.py -s {xx} -l {label.capitalize()} -b Baseline -o {output_dir}"
+        print(command)
         os.system(command)
 
     # Write the ratings to a CSV
@@ -176,6 +181,7 @@ def main() -> None:
     print(">>> Writing the ratings to a CSV file ...")
 
     command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
+    print(command)
     os.system(command)
 
     print("... done!\n")

@@ -6,8 +6,8 @@ Edit the properties of a DRA map.
 
 For example:
 
-$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -f ~/Downloads/NC/display_settings.json
-$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -f ~/Downloads/NC/display_settings.json -n
+$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -o ~/Downloads/NC/ -f display_settings.json
+$ scripts/edit_map.py -s NC -i 532f03db-5243-4684-9863-166575c1ea1b -o ~/Downloads/NC/ -f display_settings.json -n
 
 For documentation, type:
 
@@ -43,13 +43,19 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/NC/",
+        help="Path to output directory",
+        type=str,
+    )
+    parser.add_argument(
         "-f",
         "--edits",
-        default="~/Downloads/NC/display_settings.json",
+        default="display_settings.json",
         help="The display settings file",
         type=str,
     )
-
     parser.add_argument(
         "-n",
         "--nodeploy",
@@ -57,6 +63,7 @@ def parse_args() -> Namespace:
         action="store_true",
         help="Do not save changes.",
     )
+
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
@@ -160,7 +167,8 @@ def main() -> None:
 
     xx: str = args.state
     guid: str = args.guid
-    edits: str = os.path.abspath(os.path.expanduser(args.edits))
+    output_dir: str = os.path.expanduser(args.output)
+    edits: str = os.path.join(output_dir, args.edits)
     user: str = "alec@davesredistricting.org"
     nodeploy: bool = args.nodeploy
 

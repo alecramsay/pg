@@ -58,7 +58,7 @@ const screenshotPath = pathInput ?? "screenshot.png";
 
     await canvas.screenshot({type: 'png', path: screenshotPath});
 
-    console.log("Done!");
+    // console.log("Done!");
 
   } catch (e)
   {

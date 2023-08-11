@@ -5,7 +5,7 @@ Plot a radar diagram comparing two maps
 
 For example:
 
-$ scripts/plot_radar_diagram.py -s NC -l Official -o ~/Downloads/
+$ scripts/plot_radar_diagram.py -s NC -l Official -o ~/Downloads/NC/
 
 For documentation, type:
 
@@ -52,7 +52,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-o",
         "--output",
-        default="~/Downloads/",
+        default="~/Downloads/NC/",
         help="Path to output directory",
         type=str,
     )
@@ -73,20 +73,24 @@ def main() -> None:
     xx: str = args.state
     current_subtype: str = args.current
     compare_subtype: str = args.compare
-    output: str = os.path.expanduser(args.output)
+    output_dir: str = os.path.expanduser(args.output)
+
+    verbose: bool = args.verbose
+
+    #
+
+    year1: str = cycle if current_subtype == "Baseline" else yyyy
+    year2: str = cycle if compare_subtype == "Baseline" else yyyy
 
     # Construct file paths
 
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
-
     current_path: str = os.path.join(
         output_dir,
-        file_name([xx, yyyy, plan_type, current_subtype, "ratings"], "_", "json"),
+        file_name([xx, year1, plan_type, current_subtype, "ratings"], "_", "json"),
     )
     compare_path: str = os.path.join(
         output_dir,
-        file_name([xx, yyyy, plan_type, compare_subtype, "ratings"], "_", "json"),
+        file_name([xx, year2, plan_type, compare_subtype, "ratings"], "_", "json"),
     )
 
     plot_path: str = os.path.join(
@@ -101,8 +105,8 @@ def main() -> None:
 
     # Plot radar diagram
 
-    current_name: str = f"{xx} {yyyy} {type} {current_subtype}"
-    compare_name: str = f"{xx} {yyyy} {type} {compare_subtype}"
+    current_name: str = f"{xx} {year1} {type} {current_subtype}"
+    compare_name: str = f"{xx} {year2} {type} {compare_subtype}"
 
     current_plan: Plan = Plan()
     current_plan.name = current_name

@@ -5,7 +5,7 @@ Write Official map, Notable maps, and Baseline map ratings to a table in a CSV.
 
 For example:
 
-$ scripts/write_ratings_table.py NC -o ~/Downloads/
+$ scripts/write_ratings_table.py -s NC -o ~/Downloads/NC/
 
 For documentation, type:
 
@@ -36,7 +36,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-o",
         "--output",
-        default="~/Downloads/",
+        default="~/Downloads/NC/",
         help="Path to output directory",
         type=str,
     )
@@ -55,14 +55,9 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    output: str = os.path.expanduser(args.output)
+    output_dir: str = os.path.expanduser(args.output)
 
     verbose: bool = args.verbose
-
-    #
-
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
 
     #
 

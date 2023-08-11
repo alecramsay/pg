@@ -6,7 +6,7 @@ Take a screenshot of a DRA map.
 
 For example:
 
-$ scripts/save_map_image -s NC -l Official -i 532f03db-5243-4684-9863-166575c1ea1b 
+$ scripts/save_map_image -s NC -l Official -i 532f03db-5243-4684-9863-166575c1ea1b -o ~/Downloads/NC/
 
 For documentation, type:
 
@@ -51,7 +51,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-o",
         "--output",
-        default="~/Downloads/",
+        default="~/Downloads/NC/",
         help="Path to output directory",
         type=str,
     )
@@ -72,16 +72,13 @@ def main() -> None:
     xx: str = args.state
     label: str = args.label
     guid: str = args.guid
-    output: str = os.path.expanduser(args.output)
+    output_dir: str = os.path.expanduser(args.output)
 
     verbose: bool = args.verbose
 
     #
 
     year: str = cycle if label == "Baseline" else yyyy
-
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
 
     url: str = f"https://davesredistricting.org/join/{guid}"
 
@@ -90,7 +87,7 @@ def main() -> None:
 
     # TODO - Take the screenshot, using some solution.
 
-    print(f"Taking screenshot of {xx} / {label} / {guid} ...")
+    print(f"Screenshot of {xx} / {label} / {guid} ...")
 
     command: str = f"node scripts/screenshot.js {url} {image_path}"
     # print(command)

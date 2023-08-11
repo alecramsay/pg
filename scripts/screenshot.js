@@ -111,7 +111,6 @@ var screenshotPath = pathInput !== null && pathInput !== void 0 ? pathInput : "s
                 // let dpr = await page.evaluate('window.devicePixelRatio');
                 // console.log(`DPR = ${dpr}`);
                 _a.sent();
-                console.log("Done!");
                 return [3 /*break*/, 12];
             case 9:
                 e_1 = _a.sent();
