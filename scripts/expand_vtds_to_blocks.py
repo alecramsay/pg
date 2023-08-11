@@ -34,18 +34,17 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
-    # TODO - ???
     parser.add_argument(
         "-o",
         "--output",
         default="~/Downloads/NC/",
-        help="Path to the output directory",
+        help="Path to the output root",
         type=str,
     )
     parser.add_argument(
         "-f",
         "--file",
-        default="~/Downloads/NC/NC20C_baseline_100.csv",
+        default="NC20C_baseline_100.csv",
         help="Precinct-assignment file to expand",
         type=str,
     )
@@ -81,6 +80,14 @@ def main() -> None:
 
     year: str = cycle if label == "Baseline" else yyyy
 
+    output_root: str = FileSpec(output).abs_path
+    output_dir: str = os.path.join(output_root, xx)
+    output_path: str = os.path.join(
+        output_dir, file_name([xx, year, "Congress", label], "_", "csv")
+    )
+
+    paf = os.path.join(output_dir, paf)
+
     # Unpickle blocks by vtd
 
     rel_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
@@ -89,15 +96,6 @@ def main() -> None:
     blocks_by_vtd: dict = read_pickle(rel_path)
 
     # Read the precinct-assignment file
-
-    output_dir: str = FileSpec(output).abs_path
-    output_path: str = os.path.join(
-        output_dir, file_name([xx, year, "Congress", label], "_", "csv")
-    )
-
-    # print("Expanding precinct-assignment file:")
-    # print(f"- Input:  {paf}")
-    # print(f"- Output: {output_path}")
 
     types: list = [str, int]
     vtd_assignments: list = read_csv(paf, types)  # A list of dicts

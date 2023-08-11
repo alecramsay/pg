@@ -6,7 +6,7 @@ Make the CSV for an intersections table.
 For example:
 
 $ scripts/make_intersections_table.py
-$ scripts/make_intersections_table.py -s NC -i assignments.csv -o summary.csv
+$ scripts/make_intersections_table.py -s NC -i assignments.csv -t summary.csv
 
 For documentation, type:
 
@@ -33,23 +33,31 @@ def parse_args() -> Namespace:
         "-s",
         "--state",
         default="NC",
-        help="The two-character state code (e.g., MD)",
+        help="The two-character state code (e.g., NC)",
         type=str,
     )
     parser.add_argument(
         "-i",
         "--intersections",
-        default="~/Downloads/NC/NC_2022_Congress_Proportional_intersections.csv",
-        help="Path to a base x compare plan intersections CSV",
+        default="NC_2022_Congress_Proportional_intersections.csv",
+        help="Resulting intersections CSV file",
+        type=str,
+    )
+    parser.add_argument(
+        "-t",
+        "--table",
+        default="NC_2022_Congress_Proportional_intersections_summary.csv",
+        help="Resulting intersections summary CSV file",
         type=str,
     )
     parser.add_argument(
         "-o",
-        "--summary",
-        default="~/Downloads/NC/NC_2022_Congress_Proportional_intersections_summary.csv",
-        help="Path to a base x compare plan intersections summary CSV",
+        "--output",
+        default="~/Downloads/",
+        help="Path to output directory",
         type=str,
     )
+
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
@@ -77,11 +85,20 @@ def main() -> None:
 
     xx: str = args.state
     assignments_csv: str = os.path.expanduser(args.intersections)
-    summary_csv: str = os.path.expanduser(args.summary)
+    summary_csv: str = os.path.expanduser(args.table)
+    output: str = os.path.expanduser(args.output)
+
+    verbose: bool = args.verbose
+
+    #
 
     n: int = districts_by_state[xx][plan_type.lower()]
 
-    verbose: bool = args.verbose
+    output_root: str = FileSpec(output).abs_path
+    output_dir: str = os.path.join(output_root, xx)
+
+    assignments_csv = os.path.join(output_dir, assignments_csv)
+    summary_csv = os.path.join(output_dir, summary_csv)
 
     # Load the population data
 

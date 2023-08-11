@@ -206,8 +206,8 @@ def main() -> None:
         )
         plan_path: str = os.path.join(output_dir, plan)
 
-        guids: str = f"{xx}_{year}_Congress_{label}_guids.txt"
-        guids_path: str = os.path.join(output_dir, guids)
+        guids_txt: str = f"{xx}_{year}_Congress_{label}_guids.txt"
+        guids_path: str = os.path.join(output_dir, guids_txt)
 
         command = (
             f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path}"
@@ -219,8 +219,8 @@ def main() -> None:
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
             plan_path = os.path.join(output_dir, plan)
 
-            guids: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
-            guids_path: str = os.path.join(output_dir, guids)
+            guids_txt: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
+            guids_path: str = os.path.join(output_dir, guids_txt)
 
             command: str = f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path} -i"
             os.system(command)
@@ -265,14 +265,10 @@ def main() -> None:
     print(">>> Generating intersection tables ...")
 
     for label in comparisons:
-        assignments_csv: str = os.path.join(
-            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
-        )
-        summary_csv: str = os.path.join(
-            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
-        )
+        assignments_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        summary_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
 
-        command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"
+        command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -t {summary_csv} -o {output_dir}"
         os.system(command)
 
     print("... done!\n")
