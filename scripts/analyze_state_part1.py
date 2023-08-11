@@ -216,10 +216,10 @@ def main() -> None:
         year: str = cycle if label == "Baseline" else yyyy
 
         primary_txt: str = os.path.join(
-            output_dir + f"{xx}_{year}_Congress_{label}_guids.txt"
+            output_dir, f"{xx}_{year}_Congress_{label}_guids.txt"
         )
         intersections_txt: str = os.path.join(
-            output_dir + f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
+            output_dir, f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
         )
 
         guid: str = get_map_guid(primary_txt)
@@ -249,7 +249,7 @@ def main() -> None:
         assignments_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
         summary_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
 
-        command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -t {summary_csv} -o {output_dir}"
+        command = f"scripts/make_intersections_table.py -s {xx} -o {output_dir} -i {assignments_csv} -t {summary_csv}"
         os.system(command)
 
     print("... done!\n")

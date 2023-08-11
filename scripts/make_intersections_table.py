@@ -37,6 +37,13 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/NC/",
+        help="Path to output directory",
+        type=str,
+    )
+    parser.add_argument(
         "-i",
         "--intersections",
         default="NC_2022_Congress_Proportional_intersections.csv",
@@ -48,13 +55,6 @@ def parse_args() -> Namespace:
         "--table",
         default="NC_2022_Congress_Proportional_intersections_summary.csv",
         help="Resulting intersections summary CSV file",
-        type=str,
-    )
-    parser.add_argument(
-        "-o",
-        "--output",
-        default="~/Downloads/",
-        help="Path to output directory",
         type=str,
     )
 
@@ -84,21 +84,15 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    assignments_csv: str = os.path.expanduser(args.intersections)
-    summary_csv: str = os.path.expanduser(args.table)
-    output: str = os.path.expanduser(args.output)
+    output_dir: str = os.path.expanduser(args.output)
+    assignments_csv: str = os.path.join(output_dir, args.intersections)
+    summary_csv: str = os.path.join(output_dir, args.table)
 
     verbose: bool = args.verbose
 
     #
 
     n: int = districts_by_state[xx][plan_type.lower()]
-
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
-
-    assignments_csv = os.path.join(output_dir, assignments_csv)
-    summary_csv = os.path.join(output_dir, summary_csv)
 
     # Load the population data
 

@@ -6,7 +6,7 @@ Generate a YAML fragment from the map guids JSON file.
 For example:
 
 $ scripts/write_yaml_fragment.py
-$ scripts/write_yaml_fragment.py -s NC -o ~/Downloads/
+$ scripts/write_yaml_fragment.py -s NC -o ~/Downloads/NC/
 
 For documentation, type:
 
@@ -39,7 +39,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-o",
         "--output",
-        default="~/Downloads/",
+        default="~/Downloads/NC/",
         help="Path to output directory",
         type=str,
     )
@@ -58,14 +58,11 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    output: str = os.path.expanduser(args.output)
+    output_dir: str = os.path.expanduser(args.output)
 
     verbose: bool = args.verbose
 
     #
-
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
 
     guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
     guids_path: str = os.path.join(output_dir, guids_json)
