@@ -161,36 +161,33 @@ def main() -> None:
     )
 
     for label in comparisons:
-        base_csv: str = (
-            output_dir
-            + "/"
-            + (
+        base_csv: str = os.path.join(
+            output_dir,
+            (
                 f"{xx}_{yyyy}_Congress_Official.csv"
                 if label == "Official"
                 else f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
-            )
+            ),
         )
-        compare_csv: str = (
-            output_dir
-            + "/"
-            + (
+        compare_csv: str = os.path.join(
+            output_dir,
+            (
                 f"{xx}_{cycle}_Congress_Baseline.csv"
                 if label == "Official"
                 else f"{xx}_{yyyy}_Congress_{label}.csv"
-            )
+            ),
         )
-        intersections_csv: str = (
-            output_dir + "/" + f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        intersections_csv: str = os.path.join(
+            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
         )
 
-        renumbered_csv: str = (
-            output_dir
-            + "/"
-            + (
+        renumbered_csv: str = os.path.join(
+            output_dir,
+            (
                 f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
                 if label == "Official"
                 else f"{xx}_{yyyy}_Congress_{label}_canonical.csv"
-            )
+            ),
         )
 
         command = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
@@ -203,6 +200,7 @@ def main() -> None:
 
     print(">>> Importing the BAFs into DRA ...")
 
+    ## Import the primary maps
     for label in comparisons + ["Baseline"]:
         year: str = cycle if label == "Baseline" else yyyy
 
@@ -211,20 +209,36 @@ def main() -> None:
             if label == "Official"
             else f"{xx}_{year}_Congress_{label}_canonical.csv"
         )
+        plan_path: str = os.path.join(output_dir, plan)
 
-        # TODO - Capture the output of the import command & save it for Part 2
+        guids: str = (
+            f"{xx}_{year}_Congress_Official_guids.txt"
+            if label == "Official"
+            else f"{xx}_{year}_Congress_{label}_guids.txt"
+        )
+        guids_path: str = os.path.join(output_dir, guids)
+
         command = (
-            f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label}"
+            f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path}"
         )
         if execute:
             os.system(command)
         else:
             print(command)
 
+        ## Import the intersection maps
         if label != "Baseline":
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
+            plan_path = os.path.join(output_dir, plan)
 
-            command: str = f"scripts/import_plan.py -s {xx} -f {output_dir + '/' + plan} -l {label} -i"
+            guids: str = (
+                f"{xx}_{year}_Congress_Official_intersections_guids.txt"
+                if label == "Official"
+                else f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
+            )
+            guids_path: str = os.path.join(output_dir, guids)
+
+            command: str = f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path} -i"
             if execute:
                 os.system(command)
             else:
@@ -251,11 +265,11 @@ def main() -> None:
     print(">>> Generating intersection tables ...")
 
     for label in comparisons:
-        assignments_csv: str = (
-            output_dir + f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        assignments_csv: str = os.path.join(
+            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
         )
-        summary_csv: str = (
-            output_dir + f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
+        summary_csv: str = os.path.join(
+            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
         )
 
         command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"

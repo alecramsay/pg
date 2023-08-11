@@ -80,21 +80,18 @@ def main() -> None:
     output_root: str = FileSpec(output).abs_path
     output_dir: str = os.path.join(output_root, xx)
 
-    current_path: str = (
-        output_dir
-        + "/"
-        + file_name([xx, yyyy, plan_type, current_subtype, "ratings"], "_", "json")
+    current_path: str = os.path.join(
+        output_dir,
+        file_name([xx, yyyy, plan_type, current_subtype, "ratings"], "_", "json"),
     )
-    compare_path: str = (
-        output_dir
-        + "/"
-        + file_name([xx, yyyy, plan_type, compare_subtype, "ratings"], "_", "json")
+    compare_path: str = os.path.join(
+        output_dir,
+        file_name([xx, yyyy, plan_type, compare_subtype, "ratings"], "_", "json"),
     )
 
-    plot_path: str = (
-        output_dir
-        + "/"
-        + file_name([xx, yyyy, plan_type, current_subtype, "radar"], "_", "png")
+    plot_path: str = os.path.join(
+        output_dir,
+        file_name([xx, yyyy, plan_type, current_subtype, "radar"], "_", "png"),
     )
 
     # Load ratings

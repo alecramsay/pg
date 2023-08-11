@@ -81,9 +81,10 @@ def main() -> None:
         if os.path.isfile(map_path):
             ratings: Ratings = cull_ratings(
                 read_json(
-                    output_dir
-                    + "/"
-                    + file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json")
+                    os.path.join(
+                        output_dir,
+                        file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json"),
+                    )
                 )
             )
 
@@ -100,7 +101,9 @@ def main() -> None:
             ratings_table.append(row)
 
     write_csv(
-        output_dir + "/" + file_name([xx, yyyy, plan_type, "ratings"], "_", "csv"),
+        os.path.join(
+            output_dir, file_name([xx, yyyy, plan_type, "ratings"], "_", "csv")
+        ),
         ratings_table,
         # rows,
         [

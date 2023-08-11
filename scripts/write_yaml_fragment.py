@@ -68,13 +68,13 @@ def main() -> None:
     output_dir: str = os.path.join(output_root, xx)
 
     guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
-    guids_path: str = output_dir + "/" + guids_json
+    guids_path: str = os.path.join(output_dir, guids_json)
     guids: dict[str, Any] = read_json(guids_path)
 
     # Translate the JSON into YAML
 
     guids_yaml: str = f"{xx}_{yyyy}_{plan_type}_map_guids.yaml"
-    yaml_path: str = output_dir + "/" + guids_yaml
+    yaml_path: str = os.path.join(output_dir, guids_yaml)
 
     lines: list[str] = []
     lines.append("{:# Generated at %m/%d/%Y @ %H:%M}".format(datetime.now()))

@@ -90,12 +90,14 @@ def main() -> None:
 
     # Read the precinct-assignment file
 
-    out_dir: str = FileSpec(output).abs_path + "/"
-    out_path: str = out_dir + file_name([xx, year, "Congress", label], "_", "csv")
+    output_dir: str = FileSpec(output).abs_path
+    output_path: str = os.path.join(
+        output_dir, file_name([xx, year, "Congress", label], "_", "csv")
+    )
 
     # print("Expanding precinct-assignment file:")
     # print(f"- Input:  {paf}")
-    # print(f"- Output: {out_path}")
+    # print(f"- Output: {output_path}")
 
     types: list = [str, int]
     vtd_assignments: list = read_csv(paf, types)  # A list of dicts
@@ -110,7 +112,7 @@ def main() -> None:
         for block in blocks_by_vtd[vtd]:
             block_assignments.append({"GEOID": block, "DISTRICT": district})
 
-    write_csv(out_path, block_assignments, ["GEOID", "DISTRICT"])
+    write_csv(output_path, block_assignments, ["GEOID", "DISTRICT"])
 
     pass
 

@@ -86,7 +86,7 @@ def main() -> None:
     url: str = f"https://davesredistricting.org/join/{guid}"
 
     image_png: str = f"{xx}_{yyyy}_{plan_type}_{label}_map.png"
-    image_path: str = output_dir + "/" + image_png
+    image_path: str = os.path.join(output_dir, image_png)
 
     # TODO - Take the screenshot, using some solution.
 

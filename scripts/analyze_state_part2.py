@@ -114,7 +114,7 @@ def main() -> None:
     print(">>> Loading the map guids ...")
 
     guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
-    guids_path: str = output_dir + "/" + guids_json
+    guids_path: str = os.path.join(output_dir, guids_json)
     guids: dict[str, Any] = read_json(guids_path)
 
     command: str = ""
