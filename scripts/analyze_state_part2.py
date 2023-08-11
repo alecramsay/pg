@@ -43,13 +43,6 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
-    parser.add_argument(
-        "-x",
-        "--execute",
-        dest="execute",
-        action="store_true",
-        help="Execute the commands",
-    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -72,7 +65,6 @@ def main() -> None:
 
     xx: str = args.state
     output: str = os.path.expanduser(args.output)
-    execute: bool = args.execute
 
     verbose: bool = args.verbose
 
@@ -140,16 +132,10 @@ def main() -> None:
         edits_path: str = os.path.join(output_dir, edits_json)
 
         command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_path} -f {edits_path}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
         command = f"scripts/edit_map.py -s {xx} -i {guid} -f {edits_path}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     # Take a screenshot of each map
 
@@ -159,10 +145,7 @@ def main() -> None:
         if label in ["name", "ready"]:
             continue
         command = f"scripts/save_map_image -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     # Pull the ratings for each map
 
@@ -172,10 +155,7 @@ def main() -> None:
         if label in ["name", "ready"] or label.endswith("-intersections"):
             continue
         command = f"scripts/pull_map_ratings -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     # Plot the pairwise radar diagrams
 
@@ -189,20 +169,14 @@ def main() -> None:
         ):
             continue
         command = f"scripts/plot_radar_diagram.py -s {xx} {label.capitalize()} Baseline -o {output_dir}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     # Write the ratings to a CSV
 
     print(">>> Writing the ratings to a CSV file ...")
 
     command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
-    if execute:
-        os.system(command)
-    else:
-        print(command)
+    os.system(command)
 
     print("... done!\n")
 

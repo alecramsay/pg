@@ -52,13 +52,6 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
-    parser.add_argument(
-        "-x",
-        "--execute",
-        dest="execute",
-        action="store_true",
-        help="Execute the commands",
-    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -98,7 +91,6 @@ def main() -> None:
         else f"../baseline/maps/{xx}/{xx}20C_baseline_100.csv"
     )
     output: str = os.path.expanduser(args.output)
-    execute: bool = args.execute
 
     verbose: bool = args.verbose
 
@@ -123,16 +115,14 @@ def main() -> None:
         print(f"ERROR - {xx} subdirectory already exists. Please remove it first.")
         exit(1)
     else:
-        if execute:
-            os.mkdir(output_dir)
+        os.mkdir(output_dir)
 
     # Copy CSVs for the official, notable, and baseline maps to the output directory,
     # building a list of comparison maps. Save it for Part 2.
 
     print(">>> Copying CSVs for the official, notable, and baseline maps ...")
 
-    if execute:
-        shutil.copy(base_path, output_dir)
+    shutil.copy(base_path, output_dir)
 
     maps_root: str = FileSpec(os.path.expanduser("data")).abs_path
     maps_dir: str = os.path.join(maps_root, xx)
@@ -150,8 +140,7 @@ def main() -> None:
     for label in potential_comparisons:
         map_path: str = os.path.join(maps_dir, f"{xx}_2022_Congress_{label}.csv")
         if os.path.isfile(map_path):
-            if execute:
-                shutil.copy(map_path, output_dir)
+            shutil.copy(map_path, output_dir)
             comparisons.append(label)
 
     command: str = ""
@@ -161,10 +150,7 @@ def main() -> None:
     print(">>> Expanding the baseline CSV to a block-assignment file ...")
 
     command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
-    if execute:
-        os.system(command)
-    else:
-        print(command)
+    os.system(command)
 
     # Renumber & compare the maps to the baseline
 
@@ -203,10 +189,7 @@ def main() -> None:
         )
 
         command = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     # Import the BAFs into DRA maps
 
@@ -229,10 +212,7 @@ def main() -> None:
         command = (
             f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path}"
         )
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
         ## Import the intersection maps
         if label != "Baseline":
@@ -243,10 +223,7 @@ def main() -> None:
             guids_path: str = os.path.join(output_dir, guids)
 
             command: str = f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path} -i"
-            if execute:
-                os.system(command)
-            else:
-                print(command)
+            os.system(command)
 
     # Create & save a dict of maps & guids
 
@@ -281,10 +258,7 @@ def main() -> None:
     print(">>> Generating a YAML fragment ...")
 
     command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"
-    if execute:
-        os.system(command)
-    else:
-        print(command)
+    os.system(command)
 
     # Generate intersection tables
 
@@ -299,10 +273,7 @@ def main() -> None:
         )
 
         command = f"scripts/make_intersections_table.py -s {xx} -i {assignments_csv} -o {summary_csv}"
-        if execute:
-            os.system(command)
-        else:
-            print(command)
+        os.system(command)
 
     print("... done!\n")
 
