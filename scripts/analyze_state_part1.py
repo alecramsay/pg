@@ -160,7 +160,7 @@ def main() -> None:
         ">>> Comparing maps to the baseline & canonicalizing districts to the official ids ..."
     )
 
-    for label in comparisons:
+    for label in comparisons:  # Does not include "Baseline"
         base_csv: str = os.path.join(
             output_dir,
             (
@@ -211,11 +211,7 @@ def main() -> None:
         )
         plan_path: str = os.path.join(output_dir, plan)
 
-        guids: str = (
-            f"{xx}_{year}_Congress_Official_guids.txt"
-            if label == "Official"
-            else f"{xx}_{year}_Congress_{label}_guids.txt"
-        )
+        guids: str = f"{xx}_{year}_Congress_{label}_guids.txt"
         guids_path: str = os.path.join(output_dir, guids)
 
         command = (
@@ -231,11 +227,7 @@ def main() -> None:
             plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
             plan_path = os.path.join(output_dir, plan)
 
-            guids: str = (
-                f"{xx}_{year}_Congress_Official_intersections_guids.txt"
-                if label == "Official"
-                else f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
-            )
+            guids: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
             guids_path: str = os.path.join(output_dir, guids)
 
             command: str = f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path} -i"
