@@ -45,7 +45,6 @@ def parse_args() -> Namespace:
         "-b",
         "--baseplan",
         default="NC_2022_Congress_Official.csv",
-        # default="~/Downloads/NC/NC_2022_Congress_Official.csv",
         help="Base plan (with the canonical district numbers)",
         type=str,
     )
@@ -53,7 +52,6 @@ def parse_args() -> Namespace:
         "-c",
         "--compareplan",
         default="NC_2020_Congress_Baseline.csv",
-        # default="~/Downloads/NC/NC_2020_Congress_Baseline.csv",
         help="Plan to compare to the base plan",
         type=str,
     )
@@ -61,7 +59,6 @@ def parse_args() -> Namespace:
         "-r",
         "--renumbered",
         default="NC_2020_Congress_Baseline_canonical.csv",
-        # default="~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv",
         help="Path to the renumbered compare plan",
         type=str,
     )
@@ -69,7 +66,6 @@ def parse_args() -> Namespace:
         "-i",
         "--intersections",
         default="NC_2020_Congress_Baseline_intersections.csv",
-        # default="~/Downloads/NC/NC_2020_Congress_Baseline_intersections.csv",
         help="Resulting intersections",
         type=str,
     )

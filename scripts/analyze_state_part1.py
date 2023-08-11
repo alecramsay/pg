@@ -188,30 +188,22 @@ def main() -> None:
     for label in comparisons + ["Baseline"]:
         year: str = cycle if label == "Baseline" else yyyy
 
-        plan: str = (
+        plan_csv: str = (
             f"{xx}_{year}_Congress_Official.csv"
             if label == "Official"
             else f"{xx}_{year}_Congress_{label}_canonical.csv"
         )
-        plan_path: str = os.path.join(output_dir, plan)
-
         guids_txt: str = f"{xx}_{year}_Congress_{label}_guids.txt"
-        guids_path: str = os.path.join(output_dir, guids_txt)
 
-        command = (
-            f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path}"
-        )
+        command = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt}"
         os.system(command)
 
         ## Import the intersection maps
         if label != "Baseline":
-            plan = f"{xx}_{year}_Congress_{label}_intersections.csv"
-            plan_path = os.path.join(output_dir, plan)
-
+            plan_csv = f"{xx}_{year}_Congress_{label}_intersections.csv"
             guids_txt: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
-            guids_path: str = os.path.join(output_dir, guids_txt)
 
-            command: str = f"scripts/import_plan.py -s {xx} -f {plan_path} -l {label} -g {guids_path} -i"
+            command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -i"
             os.system(command)
 
     # Create & save a dict of maps & guids

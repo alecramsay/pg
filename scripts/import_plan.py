@@ -6,8 +6,8 @@ Import a BAF into a DRA map.
 
 For example:
 
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2022_Congress_Official.csv -l Official -g ~/Downloads/NC/NC_2022_Congress_Official_guids.txt
-$ scripts/import_plan.py -s NC -f ~/Downloads/NC/NC_2022_Congress_Official_intersections.csv -l Official -g ~/Downloads/NC/NC_2022xw_Congress_Official_intersections_guids.txt -i
+$ scripts/import_plan.py -s NC -o ~/Downloads/NC/ -f NC_2022_Congress_Official.csv -l Official -g NC_2022_Congress_Official_guids.txt
+$ scripts/import_plan.py -s NC -o ~/Downloads/NC/ -f NC_2022_Congress_Official_intersections.csv -l Official -g NC_2022_Congress_Official_intersections_guids.txt -i
 
 For documentation, type:
 
@@ -36,9 +36,16 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/NC/",
+        help="Path to the output root",
+        type=str,
+    )
+    parser.add_argument(
         "-f",
         "--file",
-        default="~/Downloads/NC/NC_2022_Congress_Official.csv",
+        default="NC_2022_Congress_Official.csv",
         help="Path to the plan CSV",
         type=str,
     )
@@ -59,7 +66,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-g",
         "--guids",
-        default="~/Downloads/NC/NC_2022_Congress_Official_guids.txt",
+        default="NC_2022_Congress_Official_guids.txt",
         help="Path to the resulting DRA map GUIDs",
         type=str,
     )
@@ -78,10 +85,11 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    plan: str = os.path.expanduser(args.file)
+    output_dir: str = os.path.expanduser(args.output)
+    plan: str = os.path.join(output_dir, args.file)
     label: str = args.label
     intersections: bool = args.intersections
-    guids: str = os.path.expanduser(args.guids)
+    guids: str = os.path.join(output_dir, args.guids)
 
     verbose: bool = args.verbose
 
