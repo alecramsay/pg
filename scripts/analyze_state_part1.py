@@ -149,7 +149,8 @@ def main() -> None:
 
     print(">>> Expanding the baseline CSV to a block-assignment file ...")
 
-    command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_path}"
+    base_csv: str = FileSpec(baseline).name
+    command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
     os.system(command)
 
     # Renumber & compare the maps to the baseline
@@ -159,36 +160,24 @@ def main() -> None:
     )
 
     for label in comparisons:  # Does not include "Baseline"
-        base_csv: str = os.path.join(
-            output_dir,
-            (
-                f"{xx}_{yyyy}_Congress_Official.csv"
-                if label == "Official"
-                else f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
-            ),
+        base_csv: str = (
+            f"{xx}_{yyyy}_Congress_Official.csv"
+            if label == "Official"
+            else f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
         )
-        compare_csv: str = os.path.join(
-            output_dir,
-            (
-                f"{xx}_{cycle}_Congress_Baseline.csv"
-                if label == "Official"
-                else f"{xx}_{yyyy}_Congress_{label}.csv"
-            ),
+        compare_csv: str = (
+            f"{xx}_{cycle}_Congress_Baseline.csv"
+            if label == "Official"
+            else f"{xx}_{yyyy}_Congress_{label}.csv"
         )
-        intersections_csv: str = os.path.join(
-            output_dir, f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        intersections_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        renumbered_csv: str = (
+            f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
+            if label == "Official"
+            else f"{xx}_{yyyy}_Congress_{label}_canonical.csv"
         )
 
-        renumbered_csv: str = os.path.join(
-            output_dir,
-            (
-                f"{xx}_{cycle}_Congress_Baseline_canonical.csv"
-                if label == "Official"
-                else f"{xx}_{yyyy}_Congress_{label}_canonical.csv"
-            ),
-        )
-
-        command = f"scripts/diff_two_plans.py -s {xx} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
+        command = f"scripts/diff_two_plans.py -s {xx} -o {output_dir} -b {base_csv} -c {compare_csv}  -i {intersections_csv} -r {renumbered_csv}"
         os.system(command)
 
     # Import the BAFs into DRA maps

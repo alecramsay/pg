@@ -6,7 +6,7 @@ Expand a precinct-assignment file into a block-assignment file
 
 For example:
 
-$ scripts/expand_vtds_to_blocks.py -s NC -o ~/Downloads/NC/ -f ~/Downloads/NC/NC20C_baseline_100.csv
+$ scripts/expand_vtds_to_blocks.py -s NC -o ~/Downloads/NC/ -f NC20C_baseline_100.csv
 
 For documentation, type:
 
@@ -70,8 +70,8 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    output: str = os.path.expanduser(args.output)
-    paf: str = args.file
+    output_dir: str = os.path.expanduser(args.output)
+    paf: str = os.path.join(output_dir, args.file)
     label: str = args.label
 
     verbose: bool = args.verbose
@@ -79,14 +79,9 @@ def main() -> None:
     #
 
     year: str = cycle if label == "Baseline" else yyyy
-
-    output_root: str = FileSpec(output).abs_path
-    output_dir: str = os.path.join(output_root, xx)
-    output_path: str = os.path.join(
-        output_dir, file_name([xx, year, "Congress", label], "_", "csv")
+    expanded_path: str = os.path.join(
+        output_dir, file_name([xx, year, plan_type, label], "_", "csv")
     )
-
-    paf = os.path.join(output_dir, paf)
 
     # Unpickle blocks by vtd
 
@@ -110,7 +105,7 @@ def main() -> None:
         for block in blocks_by_vtd[vtd]:
             block_assignments.append({"GEOID": block, "DISTRICT": district})
 
-    write_csv(output_path, block_assignments, ["GEOID", "DISTRICT"])
+    write_csv(expanded_path, block_assignments, ["GEOID", "DISTRICT"])
 
     pass
 

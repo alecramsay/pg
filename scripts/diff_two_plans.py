@@ -6,7 +6,7 @@ Diff two plans, renumbering the compare map.
 For example:
 
 $ scripts/diff_two_plans.py
-$ scripts/diff_two_plans.py -s NC -b base.csv -c compare.csv -r new_compare.csv -i intersections.csv
+$ scripts/diff_two_plans.py -s NC -o ~/Downloads/NC/ -b base.csv -c compare.csv -r new_compare.csv -i intersections.csv
 
 For documentation, type:
 
@@ -35,31 +35,42 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-o",
+        "--output",
+        default="~/Downloads/NC/",
+        help="Path to the output root",
+        type=str,
+    )
+    parser.add_argument(
         "-b",
         "--baseplan",
-        default="~/Downloads/NC/NC_2022_Congress_Official.csv",
-        help="Path to the base plan (with the canonical district numbers)",
+        default="NC_2022_Congress_Official.csv",
+        # default="~/Downloads/NC/NC_2022_Congress_Official.csv",
+        help="Base plan (with the canonical district numbers)",
         type=str,
     )
     parser.add_argument(
         "-c",
         "--compareplan",
-        default="~/Downloads/NC/NC_2020_Congress_Baseline.csv",
-        help="Path to the plan to compare to the base plan",
+        default="NC_2020_Congress_Baseline.csv",
+        # default="~/Downloads/NC/NC_2020_Congress_Baseline.csv",
+        help="Plan to compare to the base plan",
         type=str,
     )
     parser.add_argument(
         "-r",
         "--renumbered",
-        default="~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv",
+        default="NC_2020_Congress_Baseline_canonical.csv",
+        # default="~/Downloads/NC/NC_2020_Congress_Baseline_canonical.csv",
         help="Path to the renumbered compare plan",
         type=str,
     )
     parser.add_argument(
         "-i",
         "--intersections",
-        default="~/Downloads/NC/NC_2020_Congress_Baseline_intersections.csv",
-        help="Path to the base x compare plan intersections",
+        default="NC_2020_Congress_Baseline_intersections.csv",
+        # default="~/Downloads/NC/NC_2020_Congress_Baseline_intersections.csv",
+        help="Resulting intersections",
         type=str,
     )
 
@@ -84,10 +95,11 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    base_csv: str = os.path.expanduser(args.baseplan)
-    compare_csv: str = os.path.expanduser(args.compareplan)
-    intersections_csv: str = os.path.expanduser(args.intersections)
-    renumbered_csv: str = os.path.expanduser(args.renumbered)
+    output_dir: str = os.path.expanduser(args.output)
+    base_csv: str = os.path.join(output_dir, args.baseplan)
+    compare_csv: str = os.path.join(output_dir, args.compareplan)
+    intersections_csv: str = os.path.join(output_dir, args.intersections)
+    renumbered_csv: str = os.path.join(output_dir, args.renumbered)
 
     verbose: bool = args.verbose
 
