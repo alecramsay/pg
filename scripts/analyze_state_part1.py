@@ -68,6 +68,18 @@ def parse_args() -> Namespace:
     return args
 
 
+def get_map_guid(file: str) -> str:
+    """Get the sharing GUID from importmap.js output"""
+
+    with open(file, "r") as f:
+        f.readline()
+        f.readline()
+        line: str = f.readline().strip()
+        guid: str = line.split(" ")[-1]
+
+        return guid
+
+
 def main() -> None:
     """Analyze the official & notable maps for a state compared to a given baseline map.
 
@@ -240,7 +252,29 @@ def main() -> None:
 
     print(">>> Creating & saving a dict of maps & guids ...")
 
-    # TODO - Loop over the echo output files & save the guids to a dict
+    guids: dict[str, str] = {}
+
+    for label in comparisons + ["Baseline"]:
+        year: str = cycle if label == "Baseline" else yyyy
+
+        primary_txt: str = os.path.join(
+            output_dir + f"{xx}_{year}_Congress_{label}_guids.txt"
+        )
+        intersections_txt: str = os.path.join(
+            output_dir + f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
+        )
+
+        guid: str = get_map_guid(primary_txt)
+        guids[label.lower()] = guid
+
+        if label != "Baseline":
+            guid: str = get_map_guid(intersections_txt)
+            guids[f"{label.lower()}-intersections"] = guid
+
+    guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
+    guids_path: str = os.path.join(output_dir, guids_json)
+
+    write_json(guids_path, guids)
 
     # Generate a YAML fragment
 
