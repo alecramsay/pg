@@ -149,7 +149,7 @@ def main() -> None:
 
     print(">>> Expanding the baseline CSV to a block-assignment file ...")
 
-    base_csv: str = FileSpec(baseline).name
+    base_csv: str = FileSpec(baseline).name + ".csv"
     command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
     os.system(command)
 

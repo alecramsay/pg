@@ -108,7 +108,7 @@ def main() -> None:
 
     # TODO - Todd: Fix the 'cores' command (#51)
 
-    print("First pass ...")
+    # First pass
     command: str = f"python3 {dccvt_py}/geoid.py cores \
         --assignments {assignments_csv} \
         --population {data_csv} \
@@ -118,7 +118,7 @@ def main() -> None:
     # print(command)
     os.system(command)
 
-    print("Second pass ...")
+    # Second pass
     assignments_csv = base_csv + " " + renumbered_csv
     command: str = f"python3 {dccvt_py}/geoid.py cores \
         --assignments {assignments_csv} \
