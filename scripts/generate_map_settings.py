@@ -179,7 +179,7 @@ def main() -> None:
     vtd_adjacencies: list[dict] = list()
     fieldnames: list[str] = ["one", "two"]
     with open(adjacencies_csv, "r", encoding="utf-8-sig") as file:
-        reader: DictReader[str] = DictReader(
+        reader: DictReader = DictReader(
             file, fieldnames=fieldnames, restkey=None, restval=None, dialect="excel"
         )
         for row in reader:
