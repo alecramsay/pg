@@ -70,7 +70,7 @@ def main() -> None:
 
     # Translate the JSON into YAML
 
-    guids_yaml: str = f"{xx}_{yyyy}_{plan_type}_map_guids.yaml"
+    guids_yaml: str = f"{xx}_{yyyy}_{plan_type}_map_guids.yml"
     yaml_path: str = os.path.join(output_dir, guids_yaml)
 
     lines: list[str] = []
