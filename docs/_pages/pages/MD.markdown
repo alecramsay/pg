@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: page
 title: Maryland
 permalink: states/MD/
 

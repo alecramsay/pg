@@ -13,7 +13,6 @@ $ scripts/DEPLOY.py -h
 
 """
 
-
 import argparse
 from argparse import ArgumentParser, Namespace
 
@@ -107,7 +106,10 @@ def main() -> None:
 
     print("... done!\n")
     print()
-    print("REMEMBER: Copy & paste the YAML fragment into the state.yml file.\n")
+    print("Post-deployment checklist:")
+    print("- Copy & paste the YAML fragment into the state.yml file.\n")
+    print("- Change state.md layout from 'page' to 'state.\n")
+    print("- Add qualitative analysis.\n")
 
 
 if __name__ == "__main__":

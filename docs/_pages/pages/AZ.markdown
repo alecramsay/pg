@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: page
 title: Arizona
 permalink: states/AZ/
 

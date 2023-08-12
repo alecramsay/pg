@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: page
 title: Louisiana
 permalink: states/LA/
 

@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: page
 title: Georgia
 permalink: states/GA/
 

@@ -7,7 +7,7 @@
   compact: b556aea8-e259-40e1-9b29-4e7572d6cbae
   splitting: 94c7b2b9-f8d0-4d89-aae1-53cfd9009f97
   baseline: d16848f7-22a0-41a5-b19e-719923c54ee3
-  ready: false # ready
+  ready: false
 - xx: AZ
   name: Arizona
   official: 4a3d07fd-382c-441c-9c8d-af5d52987b87
@@ -17,7 +17,7 @@
   compact: 970224ba-4373-48fd-9e3e-15527b63c9c5
   splitting: 7ff7eec5-1b01-422b-bb34-d78da0f8fcb8
   baseline: 82cdf840-22b9-4af7-9e5a-0c6a17c4b88c
-  ready: true
+  ready: false
 - xx: AR
   name: Arkansas
   official: bba50394-d34c-4f0d-9056-8b9e6a029bfd
@@ -27,7 +27,7 @@
   compact: c53002fd-1f4e-4f3f-86c8-00e738d7cbe5
   splitting: ea810d0f-a507-416e-a0f6-58adbf93df6e
   baseline: c82e8e31-bd27-4f10-bf28-cf92a67a6c79
-  ready: false # ready
+  ready: false
 - xx: CA
   name: California
   official: 4daa293f-a347-4ba0-926e-3caebce864ea
@@ -37,7 +37,7 @@
   compact: 42bf9029-6e68-481a-be75-a1f339248cba
   splitting: fbefc34b-ac86-4081-8731-b731d95e67f9
   baseline: 239aeac7-3a09-4d6a-98d8-3de61f890b70
-  ready: false # ready
+  ready: false
 - xx: CO
   name: Colorado
   official: 1d2c7749-d9bc-47b3-971f-e8025cc6d1da
@@ -47,7 +47,7 @@
   compact: e9e9c486-bb80-4ce5-9666-4466947f7ab0
   splitting: d639dbaf-cf30-4998-b794-7cfba3312a0b
   baseline: 867ed109-5f5b-4aa7-bc21-36f5d8b122c9
-  ready: false # ready
+  ready: false
 - xx: CT
   name: Connecticut
   official: 22a81014-0b6f-407d-acfa-99f464ed1039
@@ -57,7 +57,7 @@
   compact: d8e5dbfd-c7b1-48a9-a3ee-c606867acfe7
   splitting: 76865f59-03ed-4647-95a2-c6d64a7b9270
   baseline: 1dbaa1de-68f0-4547-b6e9-db81617eb904
-  ready: false # ready
+  ready: false
 - xx: FL
   name: Florida
   official: 2e7debf0-c99b-4b54-9b99-df65d413d629
@@ -67,7 +67,7 @@
   compact: 35789bfa-b77d-4a42-a86d-5ce161d24514
   splitting: 94248293-2880-49b1-9dc3-cb8ff77f3e58
   baseline: 25a30adb-d32e-4f5e-a45a-42b2e08183ef
-  ready: false # ready
+  ready: false
 - xx: GA
   name: Georgia
   official: e61aaae9-8af9-4339-8959-9c27f02e55d4
@@ -77,7 +77,7 @@
   compact: daec754f-45d0-43d3-bdbf-e8637e7cfe8d
   splitting: bf30be3a-0924-4790-a353-83ca0152504a
   baseline: a44aa7ca-8fa0-43a2-9ba2-2b7f45a3c0f0
-  ready: false # ready
+  ready: false
 - xx: IL
   name: Illinois
   official: a5e1ee97-3727-4be1-80c7-8bfa7c72ee13
@@ -87,7 +87,7 @@
   compact: 6ff3964a-0009-4cc0-a643-0f8f9b2096b8
   splitting: 0cfac142-a509-447c-95a7-77c3b87d467d
   baseline: 4dd9fe52-b38b-4f63-a041-36e3cd7afde0
-  ready: false # ready
+  ready: false
 - xx: IN
   name: Indiana
   official: da195dcd-381e-4598-bae4-9dad2ea12a8d
@@ -97,7 +97,7 @@
   compact: f59e9631-2abe-4753-bc3a-b9a5186d233c
   splitting: 07f032b2-ec89-4bde-8ec5-57224285172c
   baseline: 75a78afd-46b9-427f-9410-62204c3c5939
-  ready: false # ready
+  ready: false
 - xx: IA
   name: Iowa
   official: ccbacbb9-dac8-4c48-b30b-42b0a6627e8f
@@ -107,7 +107,7 @@
   compact: 3888d170-52fe-44fb-8428-d0e08b8cdcf5
   splitting: 311d779b-9cfc-4983-a589-a9d6877e3f1e
   baseline: 7292b0dc-4911-4878-9960-68ae3a6abc10
-  ready: false # ready
+  ready: false
 - xx: KS
   name: Kansas
   official: cd94aec1-6e84-48d6-8922-5eea4f4c471f
@@ -117,7 +117,7 @@
   compact: d86bf787-674a-4a6e-8cb8-e84c45762077
   splitting: 7ac2a17a-c287-41ff-b624-67efe0bea826
   baseline: 9901f45d-6169-4577-ba9b-43c2fe2893d8
-  ready: false # ready
+  ready: false
 - xx: KY
   name: Kentucky
   official: b38aeac3-297e-4ec4-9073-66215b9763c1
@@ -127,7 +127,7 @@
   compact: 424d91c3-a26e-4083-8790-06f8384d2c44
   splitting: 37c63cb2-3bec-418f-8fee-c841ddc5e3c1
   baseline: a3a061bc-3178-4ae6-bdf0-a525ad6639b2
-  ready: false # ready
+  ready: false
 - xx: LA
   name: Louisiana
   official: a56db05b-6066-4cdc-89f3-e0b12ab7ea37
@@ -137,7 +137,7 @@
   compact: fcc9a519-3aaa-4003-84cf-9807ec8bad4a
   splitting: 02689947-7712-4139-aa39-2e5ea6add817
   baseline: e59f8d73-e552-4fd3-98d0-368722302720
-  ready: false # ready
+  ready: false
 - xx: MD
   name: Maryland
   official: 96d5e235-58de-4a46-a443-f5b6fabe0244
@@ -147,7 +147,7 @@
   compact: 530f41fb-d39f-492a-9028-8886bd499eed
   splitting: d26ec0e1-f53a-4ebd-9aa8-7e18accb04af
   baseline: f6624aac-a170-4b52-a9b4-121322b12a9a
-  ready: true
+  ready: false
 - xx: MA
   name: Massachusetts
   official: 8b9bdb2d-da5e-43db-acf1-08175c1718ba
@@ -157,7 +157,7 @@
   compact: ff5a5d69-1c81-4ce2-927b-ddb010968b33
   splitting: 6e745232-b017-47de-b20a-09de51e720f1
   baseline: cfc4a446-c1d1-451e-affa-a79c52ea671e
-  ready: false # ready
+  ready: false
 - xx: MI
   name: Michigan
   official: 55420ff6-a8a2-4291-afb3-6ec8c93e6872
@@ -167,7 +167,7 @@
   compact: 6a943e97-c4d7-4111-939a-6eef1fb652d8
   splitting: b0c02efc-6507-4e73-93c2-1ced3d8d469f
   baseline: 0e074091-d3a7-4a79-bec7-a6c4641db018
-  ready: false # ready
+  ready: false
 - xx: MN
   name: Minnesota
   official: b382eee8-0eb8-4b5c-a9bb-7886972ed6b7
@@ -177,7 +177,7 @@
   compact: 64858a6b-6511-4f16-834f-776ab91205e0
   splitting: 1d7a0cc7-7199-42a8-805d-8f7e14c60d6e
   baseline: 41893bfd-df1e-49b7-9322-6c134575dd35
-  ready: false # ready
+  ready: false
 - xx: MS
   name: Mississippi
   official: 7edecbd8-cdc5-4972-bcab-07bbd38259bb
@@ -187,7 +187,7 @@
   compact: 9e1d67b8-162c-4c44-b15a-263d3ae6f026
   splitting: 35c56e88-6ac3-4f3e-b732-7e37221395c7
   baseline: 83d7ca09-2016-4b5a-b19c-e3009726557e
-  ready: false # ready
+  ready: false
 - xx: MO
   name: Missouri
   official: 57337b6a-45fc-4ee4-97a1-11540fd6c8a6
@@ -197,7 +197,7 @@
   compact: 9cc3d9c3-44c6-4a62-8db9-7846ac12688f
   splitting: abc98af0-3ef8-4861-96cc-40f7173d9d14
   baseline: d1fdc45c-7d5e-45f5-af95-832094008465
-  ready: false # ready
+  ready: false
 - xx: NE
   name: Nebraska
   official: 413dfcb2-0ec6-4459-9e3b-7cef2ddd8638
@@ -207,7 +207,7 @@
   compact: f7720b75-58d6-4e2d-bff0-894e2c7b5f41
   splitting: 4ff0b106-818d-4f7a-987a-39205bdcb008
   baseline: 9cda0d21-d033-45d8-b901-ada2d95e4a59
-  ready: false # ready
+  ready: false
 - xx: NV
   name: Nevada
   official: c4077907-6605-4fd3-9493-50527ceee352
@@ -217,7 +217,7 @@
   compact: 8da2d779-b8bd-4e27-bae7-340fa87a4376
   splitting: baa3cfad-e4f8-452c-9c5d-a71bd4efd9ff
   baseline: b11b591a-94cf-475f-bb54-8f186e2cf12a
-  ready: false # ready
+  ready: false
 - xx: NJ
   name: New Jersey
   official: 1f7c8393-0b8a-49ea-8fb4-60c393cfb661
@@ -227,7 +227,7 @@
   compact: f254884d-267e-43b4-9d7e-2d9812c13788
   splitting: a3afe5ca-4430-483f-82ca-39922fa5d3dc
   baseline: b687ee33-5fae-43ce-b161-d49a1ddfab98
-  ready: false # ready
+  ready: false
 - xx: NM
   name: New Mexico
   official: d2db917f-b700-4738-9a93-a38a43630c86
@@ -237,7 +237,7 @@
   compact: 769b245f-4c5d-4a93-98a5-6cd2e66420a2
   splitting: cd28107e-5ede-4f74-bbf5-dae7f54c17e3
   baseline: ce4101f0-3fed-4902-88d0-170b7d0e3ca9
-  ready: false # ready
+  ready: false
 - xx: NY
   name: New York
   official: 11dc2c25-27a6-4259-b3dc-8e24fa21a086
@@ -247,22 +247,23 @@
   compact: 6d9a1e16-c5d2-48a0-80f1-d06fe6d56b7f
   splitting: 149fe85d-04c2-4d11-b959-98fe52f1772b
   baseline: bea0efc4-52e7-4bbb-b942-67637ed4ab8a
-  ready: false # ready
+  ready: false
+# Generated at 08/11/2023 @ 08:08
 - xx: NC
   name: North Carolina
-  official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
-  proportional: eb89e54f-69aa-4742-90e9-83b696871348
-  competitive: 3ba3e193-414c-4a17-a9ef-57b326ede3d9
-  minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
-  compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
-  splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
-  baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
-  official-cores: 3aa54819-8006-4f2f-abd5-c8371dc01b85
-  proportional-cores: cecc5bfb-bda4-4c6b-8e5f-8d97bb42d7c4
-  competitive-cores: f14e53d1-7630-4875-9c71-49bd18b15fe9
-  minority-cores: 1e8877ef-a245-48bd-866e-05bfa4611e33
-  compact-cores: c5c10377-a683-467c-b3e9-2377de5a4c57
-  splitting-cores: 3b242926-c8e1-423b-b514-c04a4b6441fc
+  official: fcce6d56-df9c-4eaf-8c8a-f794c2a92c2f
+  proportional: 9041d31c-4f88-41e1-82fe-aeb25d97c88d
+  competitive: 69f8a84e-f38b-4746-ad1a-327dc423f5f0
+  minority: 0124b110-47f5-4226-86b9-bbef40ae006d
+  compact: 3a0047b6-3cad-47b0-8a4c-315833ca7492
+  splitting: 9145ede6-358b-41b9-94c6-22466debed83
+  baseline: 2fd622c4-93b2-4d43-93f4-2d7f065c950b
+  official-intersections: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
+  proportional-intersections: 9041d31c-4f88-41e1-82fe-aeb25d97c88d-intersections
+  competitive-intersections: 69f8a84e-f38b-4746-ad1a-327dc423f5f0-intersections
+  minority-intersections: 0124b110-47f5-4226-86b9-bbef40ae006d-intersections
+  compact-intersections: 3a0047b6-3cad-47b0-8a4c-315833ca7492-intersections
+  splitting-intersections: 9145ede6-358b-41b9-94c6-22466debed83-intersections
   ready: true
 - xx: OH
   name: Ohio
@@ -273,7 +274,7 @@
   compact: 486a1fd0-f56e-435b-8e69-a080e99fe58d
   splitting: 5c6e887d-49a8-426f-8b7b-5f3400cc62a1
   baseline: 82aca24a-0bf3-4e3d-abb2-ff51d934be01
-  ready: false # ready
+  ready: false
 - xx: OK
   name: Oklahoma
   official: bdd4c054-9a75-4117-9819-18673c1f9412
@@ -283,7 +284,7 @@
   compact: fbec07f7-2c67-4928-aedc-956f551aee08
   splitting: d47c3741-ec79-48d4-8c95-f938a526cf4b
   baseline: 09062ff7-ce80-42ad-bb8d-74cb9815e974
-  ready: false # ready
+  ready: false
 - xx: OR
   name: Oregon
   official: 9255d54b-36cc-4ca2-972d-fc330c975990
@@ -293,7 +294,7 @@
   compact: 6d9ec3b7-e462-401f-ac5b-9ef37b35f32e
   splitting: 6a9fdbbb-01ce-4a5d-8fcb-38788646368b
   baseline: 84976420-5049-4e8e-bafa-985d4a392d97
-  ready: false # ready
+  ready: false
 - xx: PA
   name: Pennsylvania
   official: bca4620c-bc4a-457e-a472-631ac20c3389
@@ -303,7 +304,7 @@
   compact: e0fa7e79-26a4-4d27-8028-745a84fea1c1
   splitting: dc16b2ec-4609-42ca-9ea8-02697564d52c
   baseline: 34f4ae9c-c4cb-42e4-b551-841bcf4a95f1
-  ready: true
+  ready: false
 - xx: SC
   name: South Carolina
   official: 68e91af2-1a68-4bc7-aa85-a48e52f07da3
@@ -313,7 +314,7 @@
   compact: bf225fbb-c06b-4a26-a00c-e98bd9344347
   splitting: 31408783-0ca1-4c94-abf4-20270ef87c22
   baseline: adb40672-45a8-43ba-bf72-a73bef7c98ab
-  ready: false # ready
+  ready: false
 - xx: TN
   name: Tennessee
   official: e142df57-8dd5-44c3-a316-c2675e0e2fe4
@@ -323,7 +324,7 @@
   compact: 57c3bb60-5f54-4cc1-a1b7-4942584fdc6f
   splitting: 512a7c6f-4dde-4773-a8b0-a933014e7982
   baseline: 9a80c60b-a2ec-4696-af5e-0653039fcbaf
-  ready: false # ready
+  ready: false
 - xx: TX
   name: Texas
   official: 89c7b67a-6164-42ee-89d4-072a4fca82c1
@@ -333,7 +334,7 @@
   compact: 3670b0b1-7083-4d20-9cee-5c5389dfdcf4
   splitting: 812ca788-8a2c-4300-ab53-3979518f16bb
   baseline: bb716f76-f6b9-4f61-8590-451007a1190b
-  ready: false # ready
+  ready: false
 - xx: UT
   name: Utah
   official: a2845eee-af70-4c54-944f-08abd5b05471
@@ -343,7 +344,7 @@
   compact: d4b7682f-e1df-40d0-9770-6d85a1176a12
   splitting: a26f10a5-cfeb-4989-919c-5df3c79dcb29
   baseline: e1d41beb-0f2f-4029-b31f-ffa1593e2d9e
-  ready: false # ready
+  ready: false
 - xx: VA
   name: Virginia
   official: 837303a3-ac0a-4fe3-b99e-b4e98f71d26a
@@ -353,7 +354,7 @@
   compact: 30a7dba3-43b0-4815-8ccd-7abbcfcf5cfa
   splitting: 9bd6b5b4-f8f6-4372-a45f-77b6b1668596
   baseline: c7cba809-9d12-428c-b013-9b4b9f9a5a91
-  ready: true
+  ready: false
 - xx: WA
   name: Washington
   official: be06fce9-90a2-4bc0-9659-8eacafcd4afc
@@ -363,7 +364,7 @@
   compact: 5ece8404-5181-4aef-8dbf-126029f60dad
   splitting: 3a2a23c8-d65c-4a5b-ab4f-35ccb3eab67d
   baseline: 989ac5b1-debe-4960-b7ca-d29d089c858d
-  ready: false # ready
+  ready: false
 - xx: WI
   name: Wisconsin
   official: 130feb94-6532-4102-91de-92777af7c0d9
@@ -373,7 +374,7 @@
   compact: ee9bc88a-f00a-4284-be14-a6b61b9ca203
   splitting: 4ad1f885-3b85-4dc7-bf36-605a122f4b13
   baseline: 4d17758d-3a3b-4b62-87a9-bac8da1fd645
-  ready: false # ready
+  ready: false
 - xx: ID
   name: Idaho
   official: ab09bc34-c83d-4327-9b59-c53c71682151
@@ -383,7 +384,7 @@
   compact: c04b3d59-ad9b-4d34-a56c-a40e4a2faaaf
   splitting: 0549f613-9577-4a0f-ba17-f821552e3512
   baseline: e6f75d1c-4756-4ebe-99fe-9012d6777ed8
-  ready: false # ready
+  ready: false
 - xx: MT
   name: Montana
   official: d7fd9cdb-4677-47b0-930a-f53f6b044b8f
@@ -393,7 +394,7 @@
   compact: 7ef9c6cc-9009-4a46-a135-b02a015e0588
   splitting: a8bbd540-253e-4c9b-aa51-492925c0a896
   baseline: 62590347-4639-4f63-b505-6bb2409c66eb
-  ready: false # ready
+  ready: false
 - xx: NH
   name: New Hampshire
   official: 8624cdac-7fd1-40ca-a47f-c196f8a84df7
@@ -403,7 +404,7 @@
   compact: 7a525a0e-d481-4f1a-a3c7-380134fabd02
   splitting: fddf7e78-d454-497f-b9a6-d5b5740f21d6
   baseline: 9309e340-f8f7-46f3-81dc-69805f9fbeca
-  ready: false # ready
+  ready: false
 - xx: RI
   name: Rhode Island
   official: ee4cfa0f-930b-4f74-9adc-e3b4fc939a63
@@ -413,7 +414,7 @@
   compact: 56621991-7577-42cf-ae24-8b1cb8fb0587
   splitting: 83816f12-ddf0-4a45-a49d-a9908e2922e1
   baseline: c7e73ead-eeb0-4a81-9708-caadff6428e6
-  ready: false # ready
+  ready: false
 - xx: WV
   name: West Virginia
   official: 8b2f8ec2-1d12-468a-b445-11c9f6097f74
@@ -423,24 +424,38 @@
   compact: d0785c40-b290-4c44-9f29-48f28edaf96e
   splitting: 0556f0d1-950d-4581-8777-67cc912d7280
   baseline: a0a0dbd0-e472-47c1-b3c6-e1e51219fabc
-  ready: false # ready
+  ready: false
+# Generated at 08/11/2023 @ 08:08
 - xx: XX
   name: North Carolina - Test
-  official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
-  proportional: eb89e54f-69aa-4742-90e9-83b696871348
-  competitive: 3ba3e193-414c-4a17-a9ef-57b326ede3d9
-  minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
-  compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
-  splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
-  baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
+  official: fcce6d56-df9c-4eaf-8c8a-f794c2a92c2f
+  proportional: 9041d31c-4f88-41e1-82fe-aeb25d97c88d
+  competitive: 69f8a84e-f38b-4746-ad1a-327dc423f5f0
+  minority: 0124b110-47f5-4226-86b9-bbef40ae006d
+  compact: 3a0047b6-3cad-47b0-8a4c-315833ca7492
+  splitting: 9145ede6-358b-41b9-94c6-22466debed83
+  baseline: 2fd622c4-93b2-4d43-93f4-2d7f065c950b
+  official-intersections: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
+  proportional-intersections: 9041d31c-4f88-41e1-82fe-aeb25d97c88d-intersections
+  competitive-intersections: 69f8a84e-f38b-4746-ad1a-327dc423f5f0-intersections
+  minority-intersections: 0124b110-47f5-4226-86b9-bbef40ae006d-intersections
+  compact-intersections: 3a0047b6-3cad-47b0-8a4c-315833ca7492-intersections
+  splitting-intersections: 9145ede6-358b-41b9-94c6-22466debed83-intersections
   ready: true
+# Generated at 08/11/2023 @ 08:08
 - xx: YY
-  name: North Carolina - Test
-  official: 7b11a99a-6418-44cb-bc0e-ab5e040f6bae
-  proportional: eb89e54f-69aa-4742-90e9-83b696871348
-  competitive: 3ba3e193-414c-4a17-a9ef-57b326ede3d9
-  minority: 565513d2-f7e5-492f-81f7-7cd10c054a18
-  compact: c9ed708a-3c2f-4b29-b55e-3bbfda14db7f
-  splitting: fbbde7c8-f8e6-47ff-ae18-8307f344a8f6
-  baseline: 5e651803-4c40-4b04-a5ca-0c4e267b7036
+  name: North Carolina - Test 2
+  official: fcce6d56-df9c-4eaf-8c8a-f794c2a92c2f
+  proportional: 9041d31c-4f88-41e1-82fe-aeb25d97c88d
+  competitive: 69f8a84e-f38b-4746-ad1a-327dc423f5f0
+  minority: 0124b110-47f5-4226-86b9-bbef40ae006d
+  compact: 3a0047b6-3cad-47b0-8a4c-315833ca7492
+  splitting: 9145ede6-358b-41b9-94c6-22466debed83
+  baseline: 2fd622c4-93b2-4d43-93f4-2d7f065c950b
+  official-intersections: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
+  proportional-intersections: 9041d31c-4f88-41e1-82fe-aeb25d97c88d-intersections
+  competitive-intersections: 69f8a84e-f38b-4746-ad1a-327dc423f5f0-intersections
+  minority-intersections: 0124b110-47f5-4226-86b9-bbef40ae006d-intersections
+  compact-intersections: 3a0047b6-3cad-47b0-8a4c-315833ca7492-intersections
+  splitting-intersections: 9145ede6-358b-41b9-94c6-22466debed83-intersections
   ready: true

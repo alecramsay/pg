@@ -13,7 +13,6 @@ $ scripts/BACKUP.py -h
 
 """
 
-
 import argparse
 from argparse import ArgumentParser, Namespace
 

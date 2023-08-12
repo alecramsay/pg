@@ -13,7 +13,6 @@ $ scripts/RESTORE.py -h
 
 """
 
-
 import argparse
 from argparse import ArgumentParser, Namespace
 

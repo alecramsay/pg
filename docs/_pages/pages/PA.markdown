@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: page
 title: Pennsylvania
 permalink: states/PA/
 
