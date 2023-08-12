@@ -10,4 +10,4 @@ map-width: 700
 xx: "GA"
 ---
 
-TODO: Summarize the tradeoffs for congressional redistricting inherent in GA's political geography.
+<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>

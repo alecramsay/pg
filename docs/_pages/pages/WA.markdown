@@ -10,4 +10,4 @@ map-width: 700
 xx: "WA"
 ---
 
-TODO: Summarize the tradeoffs for congressional redistricting inherent in WA's political geography.
+<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>

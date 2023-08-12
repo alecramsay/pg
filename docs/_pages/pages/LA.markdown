@@ -10,4 +10,4 @@ map-width: 700
 xx: "LA"
 ---
 
-TODO: Summarize the tradeoffs for congressional redistricting inherent in LA's political geography.
+<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
