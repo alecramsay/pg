@@ -4,8 +4,6 @@ title: Overall Workflow
 permalink: workflow_detailed/
 ---
 
-TODO: Update this to reflect the new post-baseline workflow.
-
 This note describes the detailed workflow that Alec used for creating the maps for this study:
 
 (1) Copied the Official maps
@@ -19,6 +17,9 @@ This note describes the detailed workflow that Alec used for creating the maps f
     - Copied the guid of the duplicate into pg/constants.py
     - Exported it
 
+    In the re-work, I simply started with these block-assignment files.
+    I chucked everything else.
+
 (2) Copied the Notable Maps
 
     - Copied the guids for the Notable Maps in DRA into pg/constants.py by hand
@@ -31,64 +32,32 @@ This note describes the detailed workflow that Alec used for creating the maps f
     - Copied the guid of the duplicate into pg/constants.py
     - Exported it
 
-(3) Pulled the ratings for these maps
+    In the re-work, I simply started with these block-assignment files.
+    I chucked everything else.
 
-    - Using the pull_ratings.py script (which uses guids in pg/constants.py)
-
+(3) This was pulling the ratings for these maps. In the re-work, that is integrated into the analyze_state scripts below.
 
 Then, for each state:
 
 (4) Created a baseline map using [the 'baseline' workflow](baseline_workflow.md) 
 
-(5) Imported it into DRA
-
-    - Using the import_base_map.sh script 
-
-(6) Opened the map in DRA & tweaked a few settings <<< This stuff can't be done at the CLI right now
-
-    - Set the Colors and Overlays -- 'Change Palette' to Plasma
-    - Copied the guid into pg/constants.py
-    - Exported the block-assignment file (the baseline is imported as a precinct-assignment file)
-
-    - Renamed the resulting CSV to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-    - Moved it to the data/XX/ folder
-
-(7) Tweaked each duplicated Official and Notable map in DRA <<< This stuff can't be done at the CLI right now
-
-    - Added the baseline map as a Custom Overlay -- no fill, no labels, (line thickness = 1) <<< TODO: Do we still want to do this?
-    - Saved the images
-
-        XX_2022_Congress_Compact_map.png
-		XX_2022_Congress_Competitive_map.png
-		XX_2022_Congress_Minority_map.png
-		XX_2022_Congress_Official_map.png
-		XX_2022_Congress_Proportional_map.png
-		XX_2022_Congress_Splitting_map.png
-
-    - Moved them to the docs/assets/images/ folder
-
-(8) Analyzed the Official & Notable maps relative to the baseline map
-
-    - scripts/analyze_state.py -s XX ...
-
-    - Tweaked each district cores map in DRA (same settings as above) <<< This stuff can't be done at the CLI right now
-    - Saved the images
-	
-        XX_2022_Congress_Compact_district_cores.png
-		XX_2022_Congress_Competitive_district_cores.png
-		XX_2022_Congress_Minority_district_cores.png
-		XX_2022_Congress_Official_district_cores.png
-		XX_2022_Congress_Proportional_district_cores.png
-		XX_2022_Congress_Splitting_district_cores.png
-
-	- Moved them to the docs/assets/images/ folder
-
-(9) Added population deviation & runtimes to the abstract spreadsheet
+    Added population deviation & runtimes to the abstract spreadsheet
 
     - cat intermediate/XX/XX20C_log_100.txt | awk 'END{print}'
-	
-(10) Turned the state on in the website
 
-    - Added the Share link guid to states.yml and 
-    - Flipped the 'ready' property for the state to 'true' <<< TODO: Is this necessary? I don't see where it's used.
-    - On the state's page in docs/_pages/pages/XX.markdown, changed the layout to 'state' and removed the NYI one-liner.
+(5) Analyzed the official & notable maps relative to the baseline map
+
+    - scripts/analyze_state_part1.py -s XX
+    - scripts/analyze_state_part2.py -s XX
+
+(6) Deployed the artifacts
+
+    - scripts/DEPLOY.py -s XX
+
+(7) Turned the state on in the website
+
+    - Copy & pasted the YAML fragment into the state.yml file. 
+    - Changed the state.md layout from 'page' to 'state.
+    - Added qualitative analysis.
+
+--------

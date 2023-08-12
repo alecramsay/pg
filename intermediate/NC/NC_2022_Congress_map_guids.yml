@@ -1,0 +1,17 @@
+# Generated at 08/11/2023 @ 08:08
+- xx: NC
+  name: North Carolina
+  official: fcce6d56-df9c-4eaf-8c8a-f794c2a92c2f
+  proportional: 9041d31c-4f88-41e1-82fe-aeb25d97c88d
+  competitive: 69f8a84e-f38b-4746-ad1a-327dc423f5f0
+  minority: 0124b110-47f5-4226-86b9-bbef40ae006d
+  compact: 3a0047b6-3cad-47b0-8a4c-315833ca7492
+  splitting: 9145ede6-358b-41b9-94c6-22466debed83
+  baseline: 2fd622c4-93b2-4d43-93f4-2d7f065c950b
+  official-intersections: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
+  proportional-intersections: 9041d31c-4f88-41e1-82fe-aeb25d97c88d-intersections
+  competitive-intersections: 69f8a84e-f38b-4746-ad1a-327dc423f5f0-intersections
+  minority-intersections: 0124b110-47f5-4226-86b9-bbef40ae006d-intersections
+  compact-intersections: 3a0047b6-3cad-47b0-8a4c-315833ca7492-intersections
+  splitting-intersections: 9145ede6-358b-41b9-94c6-22466debed83-intersections
+  ready: true

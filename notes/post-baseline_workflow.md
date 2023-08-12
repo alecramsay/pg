@@ -1,5 +1,7 @@
 # Post-Baseline Workflow
 
+TODO - DELETE: I've implemented this.
+
 This note describes the workflow (and ultimately a command) 
 to generate all the artifacts necessary for the website or a side-by-side analysis,
 given a baseline map for a state.
