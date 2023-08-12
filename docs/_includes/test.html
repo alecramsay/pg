@@ -17,16 +17,16 @@
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
 
-{% capture cores-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_district_cores.png
+{% capture intersections-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_intersections_map.png
 {% endcapture %}
-{% assign cores-png = cores-png | strip_newlines %}
+{% assign intersections-png = intersections-png | strip_newlines %}
 
-{% capture cores-csv %}
+{% capture intersections-csv %}
 {{ xx }}_2022_Congress_{{ label }}_intersections_summary
 {% endcapture %}
-{% assign cores-csv = cores-csv | strip_newlines %}
-{% assign cores = site.data[cores-csv] %}
+{% assign intersections-csv = intersections-csv | strip_newlines %}
+{% assign intersections = site.data[intersections-csv] %}
 
 {% assign state = site.data.states | where:"xx", xx | first %}
 
@@ -40,16 +40,15 @@ https://davesredistricting.org/join/{{ state[label-lower] }}
 {% endcapture %}
 {% assign map-link = map-link | strip_newlines %}
 
-{% assign cores-label = label-lower | append: '-cores' %}
+{% assign intersections-label = label-lower | append: '-intersections' %}
 
-{% capture cores-link %}
-https://davesredistricting.org/join/{{ state[cores-label] }}
+{% capture intersections-link %}
+https://davesredistricting.org/join/{{ state[intersections-label] }}
 {% endcapture %}
-{% assign cores-link = cores-link | strip_newlines %}
+{% assign intersections-link = intersections-link | strip_newlines %}
 
 <div id="{{ label }}" class="tabcontent">
     <p>This is the {{ label-qualified }} map:</p>
-    <!-- TODO: Remove baseline overlay? -->
     <p style="text-align: left">
         <a href="{{ map-link }}">
             <img src="{{ map-png }}" alt="Map" title="Click to view the map in Dave's Redistricting"
@@ -58,41 +57,39 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
     </p>
 
     <p>These are the intersections of the {{ label-lower }} districts with the baseline districts:</p>
-    <!-- TODO: Canonicalize the district ids -->
     <p style="text-align: left">
-        <a href="{{ cores-link }}">
-            <img src="{{ cores-png }}" alt="Regions" title="Click to view the map in Dave's Redistricting"
+        <a href="{{ intersections-link }}">
+            <img src="{{ intersections-png }}" alt="Intersections" title="Click to view the map in Dave's Redistricting"
                 width="{{ page.map-width }}" />
         </a>
     </p>
 
     <!-- Grid -->
-    <!-- TODO: Canonicalize the district ids -->
-    <div id="{{ label-lower }}-cores-table" class="ag-theme-alpine">
+    <div id="{{ label-lower }}-intersections-table" class="ag-theme-alpine">
     </div>
 
     <script type="text/javascript" charset="utf-8">
-        const cores{{ label }}Columns = [
+        const intersections{{ label }}Columns = [
             {headerName: 'ID', field: 'DISTRICT', width: 100, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
             {headerName: 'Population', field: 'POPULATION', width: 150, valueFormatter: numberWithCommas, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             {headerName: '% of District', field: 'DISTRICT%', width: 160, valueFormatter: percentage, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             // {headerName: 'Cumulative %', field: 'CUMULATIVE%', width: 120, valueFormatter: percentage, ...rightJustifiedColumn},
         ];
 
-        const cores{{ label }}Options = {
-            columnDefs: cores{{ label }}Columns,
+        const intersections{{ label }}Options = {
+            columnDefs: intersections{{ label }}Columns,
                 domLayout: 'autoHeight',
                     onGridReady: (event) => {render{{ label }}Table(event.api)}
         };
 
-        var eCoresGridDiv = document.getElementById('{{ label-lower }}-cores-table');
-        new agGrid.Grid(eCoresGridDiv, cores{{ label }}Options);
+        var eCoresGridDiv = document.getElementById('{{ label-lower }}-intersections-table');
+        new agGrid.Grid(eCoresGridDiv, intersections{{ label }}Options);
 
-        const cores{{ label }}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ cores-csv }}.csv';
+        const intersections{{ label }}CSV = 'https://raw.githubusercontent.com/alecramsay/pg/main/docs/_data/{{ intersections-csv }}.csv';
 
         function render{{ label }}Table(api)
         {
-            Papa.parse(cores{{ label }}CSV, {
+            Papa.parse(intersections{{ label }}CSV, {
                 header: true,
                 download: true,
                 complete: response =>
