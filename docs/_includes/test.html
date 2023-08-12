@@ -73,7 +73,7 @@ https://davesredistricting.org/join/{{ state[cores-label] }}
 
     <script type="text/javascript" charset="utf-8">
         const cores{{ label }}Columns = [
-            {headerName: 'ID', field: 'DISTRICT', width: 60, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
+            {headerName: 'ID', field: 'DISTRICT', width: 100, sortable: true, comparator: numericComparator, ...rightJustifiedColumn, unSortIcon: true},
             {headerName: 'Population', field: 'POPULATION', width: 150, valueFormatter: numberWithCommas, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             {headerName: '% of District', field: 'DISTRICT%', width: 160, valueFormatter: percentage, sortable: true, comparator: numericComparator, sortingOrder: ['desc', 'asc'], ...rightJustifiedColumn},
             // {headerName: 'Cumulative %', field: 'CUMULATIVE%', width: 120, valueFormatter: percentage, ...rightJustifiedColumn},
