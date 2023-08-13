@@ -12,11 +12,6 @@ For documentation, type:
 
 $ scripts/make_intersections_table.py -h
 
-TODO
-
-- Can this consume quoted BAF CSV's?
-- Produce correctly quoted summary.CSV's for the grid code
-
 """
 
 import argparse
@@ -74,8 +69,8 @@ def parse_args() -> Namespace:
 def compare_compound_ids(x: dict, y: dict) -> int:
     """Order compound district IDs by first component, then second component."""
 
-    x1, x2 = x["DISTRICT"].split("/")
-    y1, y2 = y["DISTRICT"].split("/")
+    x1, x2 = x["DISTRICT"].strip('"').split("/")
+    y1, y2 = y["DISTRICT"].strip('"').split("/")
 
     if x1 == y1:
         return int(x2) - int(y2)
@@ -137,9 +132,10 @@ def main() -> None:
     intersections_summary: list[dict] = list()
 
     for id, pop in intersections.items():
+        quoted_id: str = f'"{id}"'
         intersections_summary.append(
             {
-                "DISTRICT": id,
+                "DISTRICT": quoted_id,
                 "POPULATION": pop,
                 "DISTRICT%": round(pop / district_pop, 4),
             }
