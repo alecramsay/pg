@@ -6,11 +6,16 @@ Make the CSV for an intersections table.
 For example:
 
 $ scripts/make_intersections_table.py
-$ scripts/make_intersections_table.py -s NC -i assignments.csv -t summary.csv
+$ scripts/make_intersections_table.py -s NC -o ~/Downloads/NC/ -i assignments.csv -t summary.csv
 
 For documentation, type:
 
 $ scripts/make_intersections_table.py -h
+
+TODO
+
+- Can this consume quoted BAF CSV's?
+- Produce correctly quoted summary.CSV's for the grid code
 
 """
 
