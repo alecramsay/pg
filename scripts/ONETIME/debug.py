@@ -62,9 +62,11 @@ precinct_by_block: dict[str, str] = {
     row["BLOCK"]: row["PRECINCT"] for row in block_precinct
 }
 
-# Condense unique block assignments to non-unique precinct assignments
+# Invert the districts by *precinct* and
+# Create a precinct-to-districts mapping
 
-district_by_precinct: dict[str, set[int]] = dict()
+precincts_by_district: dict[int, set[str]] = dict()
+districts_by_precinct: dict[str, set[int]] = dict()
 
 for row in district_by_block:
     block: str = row["GEOID20"]
@@ -72,30 +74,31 @@ for row in district_by_block:
 
     precinct: str = precinct_by_block[block]
 
-    if precinct not in district_by_precinct:
-        district_by_precinct[precinct] = set()
+    if district not in precincts_by_district:
+        precincts_by_district[district] = set()
 
-    district_by_precinct[precinct].add(district)
+    if precinct not in districts_by_precinct:
+        districts_by_precinct[precinct] = set()
 
+    precincts_by_district[district].add(precinct)
+    districts_by_precinct[precinct].add(district)
 
-# Invert precincts by district, handling split precincts
+# Construct an approximate district graph
 
-precinct_by_district: dict[int, set[str]] = dict()
+district_graph: dict[int, set[int]] = dict()
 
-for precinct in district_by_precinct:
-    for district in district_by_precinct[precinct]:
-        if district not in precinct_by_district:
-            precinct_by_district[district] = set()
-        precinct_by_district[district].add(precinct)
+for district in precincts_by_district:
+    district_graph[district] = set()
 
-# Construct a pseudo district graph
+    for precinct in precincts_by_district[district]:
+        for neighbor in precinct_graph[precinct]:
+            neighbor_districts: set[int] = districts_by_precinct[neighbor]
 
-district_graph: dict[str, list[str]] = dict()
-
-# For each precinct in a district
-# - Find the neighboring precincts
-# - Find the districts of all the neighboring precincts
-# - ...
-# Handle split precincts case
+            for neighbor_district in neighbor_districts:
+                if (
+                    neighbor_district != district
+                    and neighbor_district not in district_graph[district]
+                ):
+                    district_graph[district].add(neighbor_district)
 
 pass
