@@ -65,8 +65,8 @@ def parse_args() -> Namespace:
     return args
 
 
-def color_district(id: int) -> str:
-    """Translate a 1-N district id to a color hex code.
+def pick_color(id: int) -> str:
+    """Translate a 1-N color index to a color hex code.
 
     The DRA color grid is 13 x 12 (or 12 x 12, if you skip the partial first row).
     These are 6 colors in the Plasma colormap, repeated as necessary.
@@ -95,9 +95,113 @@ def color_district(id: int) -> str:
     return color
 
 
-def generate_display_settings(n: int) -> str:
+def assign_district_colors(xx: str, assignments_csv: str) -> dict[int, str]:
+    """Assign colors to districts, based on adjacency."""
+
+    ## First, read the block-assignment file for the map to be colored.
+
+    district_by_block: list[dict] = read_csv(assignments_csv, [str, int])
+
+    ## Then, construct a pseudo district graph, using the precinct graph.
+
+    # Read the precinct adjacencies
+
+    unit: str = "vtd"  # TODO: extend for BG's
+
+    adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
+        [xx, cycle, unit, "adjacencies"], "_", "csv"
+    )
+
+    precinct_adjacencies: list[dict] = list()
+    fieldnames: list[str] = ["one", "two"]
+    with open(adjacencies_csv, "r", encoding="utf-8-sig") as file:
+        reader: DictReader = DictReader(
+            file, fieldnames=fieldnames, restkey=None, restval=None, dialect="excel"
+        )
+        for row in reader:
+            precinct_adjacencies.append(row)
+
+    # Convert the adjacency pairs to a graph
+
+    precinct_graph: dict[str, list[str]] = dict()
+    for row in precinct_adjacencies:
+        if row["one"] not in precinct_graph:
+            precinct_graph[row["one"]] = []
+        if row["two"] not in precinct_graph:
+            precinct_graph[row["two"]] = []
+        precinct_graph[row["one"]].append(row["two"])
+        precinct_graph[row["two"]].append(row["one"])
+
+    # Read the block-to-precinct mapping
+
+    types: list = [str, str]
+    block_precinct_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
+        [xx, cycle, "block", unit], "_", "csv"
+    )
+    block_precinct: list[dict] = read_csv(block_precinct_csv, types)
+    precinct_by_block: dict[str, str] = {
+        row["BLOCK"]: row["PRECINCT"] for row in block_precinct
+    }
+
+    # Invert the districts by *precinct* and
+    # Create a precinct-to-districts mapping
+
+    precincts_by_district: dict[int, set[str]] = dict()
+    districts_by_precinct: dict[str, set[int]] = dict()
+
+    for row in district_by_block:
+        block: str = row["GEOID20"]
+        district: int = row["District"]
+
+        precinct: str = precinct_by_block[block]
+
+        if district not in precincts_by_district:
+            precincts_by_district[district] = set()
+
+        if precinct not in districts_by_precinct:
+            districts_by_precinct[precinct] = set()
+
+        precincts_by_district[district].add(precinct)
+        districts_by_precinct[precinct].add(district)
+
+    # Construct an approximate district graph
+
+    district_graph: dict[int, set[int]] = dict()
+
+    for district in precincts_by_district:
+        district_graph[district] = set()
+
+        for precinct in precincts_by_district[district]:
+            for neighbor in precinct_graph[precinct]:
+                neighbor_districts: set[int] = districts_by_precinct[neighbor]
+
+                for neighbor_district in neighbor_districts:
+                    if (
+                        neighbor_district != district
+                        and neighbor_district not in district_graph[district]
+                    ):
+                        district_graph[district].add(neighbor_district)
+
+    ## Convert the district graph to a networkx graph & assign colors to the districts
+
+    G: nx.Graph = nx.Graph()
+    elist: list[tuple[int, int]] = [
+        (x, y) for x in district_graph for y in district_graph[x]
+    ]
+    G.add_edges_from(elist)
+
+    d: dict[int, int] = nx.coloring.greedy_color(G)
+    # d = nx.coloring.greedy_color(G, strategy="largest_first")
+
+    district_colors: dict[int, str] = {k: pick_color(v) for k, v in d.items()}
+
+    return district_colors
+
+
+def generate_display_settings(district_colors: dict[int, str]) -> str:
     """Generate the display settings for a DRA map, given a number of districts."""
 
+    n: int = len(district_colors)
     meta: str = "{\n" '\t"meta": {\n' '\t\t"palette": "plasma_r"\n' "\t},\n"
 
     owner: str = (
@@ -131,7 +235,7 @@ def generate_display_settings(n: int) -> str:
     districts.append(district_header)
 
     for id in range(1, n + 1):
-        color: str = color_district(id)
+        color: str = district_colors[id]
 
         district: str = (
             "\t\t{\n"
@@ -165,47 +269,10 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    # TODO - HACK the district colors
+    # Assign colors to districts
 
-    n: int = districts_by_state[xx][plan_type.lower()]
-    display_settings: str = generate_display_settings(n)
-
-    # TODO - Assign better district colors (#49).
-
-    ## Read the precinct adjacencies & convert them a graph
-    adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-        [xx, cycle, "vtd", "adjacencies"], "_", "csv"
-    )
-    vtd_adjacencies: list[dict] = list()
-    fieldnames: list[str] = ["one", "two"]
-    with open(adjacencies_csv, "r", encoding="utf-8-sig") as file:
-        reader: DictReader = DictReader(
-            file, fieldnames=fieldnames, restkey=None, restval=None, dialect="excel"
-        )
-        for row in reader:
-            vtd_adjacencies.append(row)
-
-    vtd_graph: dict[str, list[str]] = dict()
-    for row in vtd_adjacencies:
-        if row["one"] not in vtd_graph:
-            vtd_graph[row["one"]] = []
-        if row["two"] not in vtd_graph:
-            vtd_graph[row["two"]] = []
-        vtd_graph[row["one"]].append(row["two"])
-        vtd_graph[row["two"]].append(row["one"])
-
-    ## Read the block-to-vtd mapping
-    types: list = [str, str]
-    block_vtd_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-        [xx, cycle, "block", "vtd"], "_", "csv"
-    )
-    block_vtd: list[dict] = read_csv(block_vtd_csv, types)
-
-    ## Condense block assignments to non-unique precinct assignments
-
-    ## Invert precincts by district
-
-    ## Construct a pseudo district graph
+    district_colors: dict[int, str] = assign_district_colors(xx, assignments_csv)
+    display_settings: str = generate_display_settings(district_colors)
 
     # Write the display settings file
 
