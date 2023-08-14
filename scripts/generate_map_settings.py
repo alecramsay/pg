@@ -19,6 +19,7 @@ from argparse import ArgumentParser, Namespace
 
 import os
 from csv import DictReader
+import networkx as nx
 
 from pg import *
 
