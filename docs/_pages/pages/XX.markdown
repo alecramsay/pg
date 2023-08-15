@@ -14,9 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Tweaked monospace font
-- Fiddled with column widths
-- Wired up test templates to new artifacts
-- Widened from-to column
-- Fixing intersections png and map not showing up
-- Testing summary format
+- Updated intersections_summaries CSV's
