@@ -6,11 +6,11 @@ Quote fields in a CSV file.
 
 For example:
 
-$ scripts/quote_fields.py -f ~/Downloads/sample.csv
+$ scripts/quote_compound_district_ids.py -f ~/Downloads/sample.csv
 
 For documentation, type:
 
-$ scripts/quote_fields.py -h
+$ scripts/quote_compound_district_ids.py -h
 
 """
 
@@ -30,7 +30,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-f",
         "--file",
-        default="~/Downloads/sample.csv",
+        default="~/Downloads/NC/NC_2022_Congress_Official_intersections.csv",
         help="Path to file to quote in place",
         type=str,
     )
@@ -63,8 +63,10 @@ def main() -> None:
             if fields[0][0] == "\ufeff":
                 fields[0] = fields[0][1:]
 
-            quoted_line: str = '","'.join(fields)
-            quoted_line = f'"{quoted_line}"\n'
+            geoid: str = fields[0]
+            district: str = '"' + fields[1] + '"'
+
+            quoted_line: str = geoid + "," + district + "\n"
 
             # print(quoted_line)
             quoted_lines.append(quoted_line)

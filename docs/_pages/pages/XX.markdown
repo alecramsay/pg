@@ -14,4 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Updated intersections_summaries CSV's
+- Updated intersections.csv and intersections_summary.csv

@@ -181,6 +181,12 @@ def main() -> None:
         print(command)
         os.system(command)
 
+        # Quote the compound district ids
+        intersections_csv = output_dir + intersections_csv
+        command = f"scripts/quote_compound_district_ids.py -f {intersections_csv}"
+        print(command)
+        os.system(command)
+
     # Import the BAFs into DRA maps
 
     print(">>> Importing the BAFs into DRA ...")
