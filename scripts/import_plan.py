@@ -120,6 +120,8 @@ def main() -> None:
 
     #
 
+    xid: str = f"{xx}_{year}_Congress_{label}"
+
     """
     On success, the importmap.js script echoes something like this:
     
@@ -130,7 +132,7 @@ def main() -> None:
     Capture these for downstream processing.
     """
 
-    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag} &> {guids}"
+    command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -x {xid} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag} &> {guids}"
     # print(command)
     os.system(command)
 
