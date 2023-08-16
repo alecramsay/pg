@@ -182,7 +182,7 @@ def main() -> None:
         os.system(command)
 
         # Quote the compound district ids
-        intersections_csv = output_dir + intersections_csv
+        intersections_csv = os.path.join(output_dir, intersections_csv)
         command = f"scripts/quote_compound_district_ids.py -f {intersections_csv}"
         print(command)
         os.system(command)

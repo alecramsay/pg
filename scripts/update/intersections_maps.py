@@ -83,9 +83,7 @@ def main() -> None:
         plan_csv = f"{xx}_{year}_Congress_{label}_intersections.csv"
         guid: str = guids[label.lower()]
 
-        command: str = (
-            f"../dra-cli/importmap.js -u {user} -f {output_dir + plan_csv} -x {guid}"
-        )
+        command: str = f"../dra-cli/importmap.js -u {user} -f {os.path.join(output_dir, plan_csv)} -x {guid}"
         print(command)
         os.system(command)
 
