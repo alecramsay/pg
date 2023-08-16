@@ -143,7 +143,7 @@ def main() -> None:
 
     print(">>> Generating a YAML fragment ...")
 
-    command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"
+    command = f"scripts/write_yaml_fragment.py -s {xx} -o {output_dir}"  # TODO - Flesh this out fully
     print(command)
     os.system(command)
 

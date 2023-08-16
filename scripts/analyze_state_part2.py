@@ -129,6 +129,7 @@ def main() -> None:
         )
         edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
 
+        # TODO - Flag intersection maps
         command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_csv} -o {output_dir} -f {edits_json}"
         print(command)
         os.system(command)

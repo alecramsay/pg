@@ -7,6 +7,7 @@ Generate display settings for a BAF that will be imported into a DRA map.
 For example:
 
 $ scripts/generate_map_settings.py -s NC -o ~/Downloads/NC/ -a NC_2022_Congress_Official.csv -f NC_2022_Congress_Official_display_settings.json
+$ scripts/generate_map_settings.py -s NC -o ~/Downloads/NC/ -a NC_2022_Congress_Official_intersections.csv -f NC_2022_Congress_Official_intersections_display_settings.json -i
 
 For documentation, type:
 
@@ -57,6 +58,13 @@ def parse_args() -> Namespace:
         help="The display settings file",
         type=str,
     )
+    parser.add_argument(
+        "-i",
+        "--intersections",
+        dest="intersections",
+        action="store_true",
+        help="Intersections map",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -96,12 +104,13 @@ def pick_color(id: int) -> str:
     return color
 
 
-def assign_district_colors(xx: str, assignments_csv: str) -> dict[int, str]:
+def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, str]:
     """Assign colors to districts, based on adjacency."""
 
     ## First, read the block-assignment file for the map to be colored.
 
-    district_by_block: list[dict] = read_csv(assignments_csv, [str, int])
+    district_by_block: list[dict] = assignments
+    # district_by_block: list[dict] = read_csv(assignments_csv, [str, int])
 
     ## Then, construct a pseudo district graph, using the precinct graph.
 
@@ -151,8 +160,8 @@ def assign_district_colors(xx: str, assignments_csv: str) -> dict[int, str]:
     districts_by_precinct: dict[str, set[int]] = dict()
 
     for row in district_by_block:
-        block: str = row["GEOID20"]
-        district: int = row["District"]
+        block: str = row["GEOID"] if "GEOID" in row else row["GEOID20"]
+        district: int = row["DISTRICT"] if "DISTRICT" in row else row["District"]
 
         precinct: str = precinct_by_block[block]
 
@@ -194,15 +203,19 @@ def assign_district_colors(xx: str, assignments_csv: str) -> dict[int, str]:
     d: dict[int, int] = nx.coloring.greedy_color(G)
     # d = nx.coloring.greedy_color(G, strategy="largest_first")
 
-    district_colors: dict[int, str] = {k: pick_color(v) for k, v in d.items()}
+    district_colors: dict[int | str, str] = dict()
+    for i in range(1, len(d) + 1):
+        district_colors[i] = pick_color(d[i])
+
+    # district_colors: dict[int | str, str] = {k: pick_color(v) for k, v in d.items()}
 
     return district_colors
 
 
-def generate_display_settings(district_colors: dict[int, str]) -> str:
+def generate_display_settings(district_colors: dict[int | str, str]) -> str:
     """Generate the display settings for a DRA map, given a number of districts."""
 
-    n: int = len(district_colors)
+    # n: int = len(district_colors)
     meta: str = "{\n" '\t"meta": {\n' '\t\t"palette": "plasma_r"\n' "\t},\n"
 
     owner: str = (
@@ -235,7 +248,8 @@ def generate_display_settings(district_colors: dict[int, str]) -> str:
     districts: list[str] = []
     districts.append(district_header)
 
-    for id in range(1, n + 1):
+    for i, id in enumerate(district_colors):
+        j: int = i + 1
         color: str = district_colors[id]
 
         district: str = (
@@ -246,7 +260,7 @@ def generate_display_settings(district_colors: dict[int, str]) -> str:
             f'\t\t\t"label": "{id}",\n'
             f'\t\t\t"color": "{color}",\n'
             '\t\t\t"target": 0,\n'
-            f'\t\t\t"order": {id}\n'
+            f'\t\t\t"order": {j}\n'
             "\t\t}"
         )
 
@@ -267,12 +281,57 @@ def main() -> None:
     output_dir: str = os.path.expanduser(args.output)
     assignments_csv: str = os.path.join(output_dir, args.assignments)
     settings_json: str = os.path.join(output_dir, args.edits)
+    intersections: bool = args.intersections
 
     verbose: bool = args.verbose
 
+    #
+
+    field_types: list = [str, str] if intersections else [str, int]
+    district_by_block: list[dict] = read_csv(assignments_csv, field_types)
+    assignments: list[dict] = list()
+
+    id_index_mapping: dict[str, int] = dict()
+    index_id_mapping: dict[int, str] = dict()
+
+    if not intersections:
+        assignments = district_by_block
+    else:
+        # Map the compound district ids to integers 1-N, so colors can be assigned
+
+        summary_csv: str = args.assignments.replace(
+            "_intersections.csv", "_intersections_summary.csv"
+        )
+        summary_csv = os.path.join(output_dir, summary_csv)
+        summary: list[dict] = read_csv(summary_csv, [str, float, float])
+
+        for i, row in enumerate(summary):
+            j: int = i + 1
+            id: str = row["DISTRICT"]
+            id_index_mapping[id] = j
+
+        index_id_mapping = dict((v, k) for k, v in id_index_mapping.items())
+
+        for row in district_by_block:
+            block: str = row["GEOID"] if "GEOID" in row else row["GEOID20"]
+            district: str = row["DISTRICT"] if "DISTRICT" in row else row["District"]
+            mapped: dict = {
+                "DISTRICT": id_index_mapping[district],
+                "GEOID": block,
+            }
+            assignments.append(mapped)
+
     # Assign colors to districts
 
-    district_colors: dict[int, str] = assign_district_colors(xx, assignments_csv)
+    district_colors: dict[int | str, str] = assign_district_colors(xx, assignments)
+
+    if intersections:
+        temp: dict[int | str, str] = dict()
+        for k, v in index_id_mapping.items():
+            temp[v] = district_colors[k]
+
+        district_colors = temp
+
     display_settings: str = generate_display_settings(district_colors)
 
     # Write the display settings file
