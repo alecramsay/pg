@@ -118,19 +118,26 @@ def main() -> None:
         ">>> Assigning district colors & editing the display properties of each map ..."
     )
 
-    for label, guid in guids.items():
+    for label, guid in guids.items():  # NOTE - Missing maps are not enumerated
         if label in ["name", "ready"]:
             continue
 
-        year: str = cycle if label == "Baseline" else yyyy
+        intersections: bool = True if label.endswith("-intersections") else False
+        intersections_flag: str = "-i" if intersections else ""
 
-        assignments_csv: str = (
-            f"{xx}_{year}_Congress_{label.capitalize().replace('-', '_')}.csv"
-        )
+        year: str = cycle if label.capitalize() == "Baseline" else yyyy
+        map_type: str = ""
+        if label == "official":
+            map_type = label.capitalize()
+        elif intersections:
+            map_type = label.capitalize().replace("-", "_")
+        else:
+            map_type = f"{label.capitalize()}_canonical"
+
+        assignments_csv: str = f"{xx}_{year}_Congress_{map_type}.csv"
         edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
 
-        # TODO - Flag intersection maps
-        command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_csv} -o {output_dir} -f {edits_json}"
+        command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_csv} -o {output_dir} -f {edits_json} {intersections_flag}"
         print(command)
         os.system(command)
 
