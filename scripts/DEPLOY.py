@@ -109,7 +109,8 @@ def main() -> None:
     print("Post-deployment checklist:")
     print("[ ] - Copy & paste the YAML fragment into the state.yml file.")
     print("[ ] - Change state.md layout from 'page' to 'state.")
-    print("[ ] Add qualitative analysis.")
+    print("[ ] - Add qualitative analysis.")
+    print()
 
 
 if __name__ == "__main__":

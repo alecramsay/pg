@@ -70,6 +70,13 @@ def parse_args() -> Namespace:
         help="Path to the resulting DRA map GUIDs",
         type=str,
     )
+    parser.add_argument(
+        "-p",
+        "--prefix",
+        default="081623",
+        help="xid prefix (e.g., 081623)",
+        type=str,
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -90,6 +97,7 @@ def main() -> None:
     label: str = args.label
     intersections: bool = args.intersections
     guids: str = os.path.join(output_dir, args.guids)
+    prefix: str = args.prefix
 
     verbose: bool = args.verbose
 
@@ -120,7 +128,11 @@ def main() -> None:
 
     #
 
-    xid: str = f"{xx}_{year}_Congress_{label}"
+    xid: str = (
+        f"{prefix}_{xx}_{year}_Congress_{label}"
+        if not intersections
+        else f"{prefix}_{xx}_{year}_Congress_{label}_intersections"
+    )
 
     """
     On success, the importmap.js script echoes something like this:

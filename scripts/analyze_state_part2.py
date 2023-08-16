@@ -186,6 +186,9 @@ def main() -> None:
     os.system(command)
 
     print("... done!\n")
+    print()
+    print("Now you can deploy the state's artifacts to the website.")
+    print()
 
 
 if __name__ == "__main__":

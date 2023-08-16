@@ -8,6 +8,7 @@ For example:
 
 $ scripts/analyze_state_part1.py
 $ scripts/analyze_state_part1.py -s NC
+$ scripts/analyze_state_part1.py -s NC -p 081623
 $ scripts/analyze_state_part1.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
@@ -51,6 +52,13 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    parser.add_argument(
+        "-p",
+        "--prefix",
+        default="081623",
+        help="xid prefix (e.g., 081623)",
+        type=str,
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -90,6 +98,7 @@ def main() -> None:
         else f"../baseline/maps/{xx}/{xx}20C_baseline_100.csv"
     )
     output: str = os.path.expanduser(args.output)
+    prefix: str = args.prefix
 
     verbose: bool = args.verbose
 
@@ -202,7 +211,7 @@ def main() -> None:
         )
         guids_txt: str = f"{xx}_{year}_Congress_{label}_guids.txt"
 
-        command = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt}"
+        command = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -p {prefix}"
         print(command)
         os.system(command)
 
@@ -264,6 +273,9 @@ def main() -> None:
         os.system(command)
 
     print("... done!\n")
+    print()
+    print("Confirm that the maps have been imported into DRA, and then run Part 2.")
+    print()
 
 
 if __name__ == "__main__":

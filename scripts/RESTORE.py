@@ -80,6 +80,7 @@ def main() -> None:
     shutil.copytree(backup_dir, output_dir)
 
     print("... done!\n")
+    print()
 
 
 if __name__ == "__main__":
