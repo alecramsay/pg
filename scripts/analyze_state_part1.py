@@ -104,6 +104,8 @@ def main() -> None:
 
     print(f"Analyzing {xx} maps...")
 
+    ### SETUP ###
+
     # Validate arguments & create the output directory
 
     print(">>> Validating arguments & creating the output directory ...")
@@ -125,12 +127,9 @@ def main() -> None:
     else:
         os.mkdir(output_dir)
 
-    # Copy CSVs for the official, notable, and baseline maps to the output directory,
-    # building a list of comparison maps. Save it for Part 2.
+    # Build a list of comparison maps
 
-    print(">>> Copying CSVs for the official, notable, and baseline maps ...")
-
-    shutil.copy(base_path, output_dir)
+    print(">>> Building a list of comparison maps ...")
 
     maps_root: str = FileSpec(os.path.expanduser("data")).abs_path
     maps_dir: str = os.path.join(maps_root, xx)
@@ -148,10 +147,22 @@ def main() -> None:
     for label in potential_comparisons:
         map_path: str = os.path.join(maps_dir, f"{xx}_2022_Congress_{label}.csv")
         if os.path.isfile(map_path):
-            shutil.copy(map_path, output_dir)
             comparisons.append(label)
 
     command: str = ""
+
+    ### EXECUTION ###
+
+    # Copy CSVs for the official, notable, and baseline maps to the output directory.
+
+    print(">>> Copying CSVs for the official, notable, and baseline maps ...")
+
+    shutil.copy(base_path, output_dir)
+
+    for label in comparisons:
+        map_path: str = os.path.join(maps_dir, f"{xx}_2022_Congress_{label}.csv")
+        if os.path.isfile(map_path):
+            shutil.copy(map_path, output_dir)
 
     # Expand the baseline map to blocks
 
@@ -193,6 +204,18 @@ def main() -> None:
         # Quote the compound district ids
         intersections_csv = os.path.join(output_dir, intersections_csv)
         command = f"scripts/quote_compound_district_ids.py -f {intersections_csv}"
+        print(command)
+        os.system(command)
+
+        # Generate intersection tables
+
+    print(">>> Generating intersection tables ...")
+
+    for label in comparisons:
+        assignments_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
+        summary_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
+
+        command = f"scripts/make_intersections_table.py -s {xx} -o {output_dir} -i {assignments_csv} -t {summary_csv}"
         print(command)
         os.system(command)
 
@@ -260,17 +283,7 @@ def main() -> None:
     print(command)
     os.system(command)
 
-    # Generate intersection tables
-
-    print(">>> Generating intersection tables ...")
-
-    for label in comparisons:
-        assignments_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections.csv"
-        summary_csv: str = f"{xx}_{yyyy}_Congress_{label}_intersections_summary.csv"
-
-        command = f"scripts/make_intersections_table.py -s {xx} -o {output_dir} -i {assignments_csv} -t {summary_csv}"
-        print(command)
-        os.system(command)
+    ###
 
     print("... done!\n")
     print()
