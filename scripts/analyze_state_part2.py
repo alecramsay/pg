@@ -194,6 +194,8 @@ def main() -> None:
         print(command)
         os.system(command)
 
+    ###
+
     print("... done!\n")
     print()
     print("Now you can deploy the state's artifacts to the website.")

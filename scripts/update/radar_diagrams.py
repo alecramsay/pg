@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Update ratings.
+Update radar diagrams.
 
 For example:
 
-$ scripts/update/ratings.py
-$ scripts/update/ratings.py -s NC -o ~/Downloads/
+$ scripts/update/radar_diagrams.py
+$ scripts/update/radar_diagrams.py -s NC -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/update/ratings.py -h
+$ scripts/update/radar_diagrams.py -h
 
 """
 
@@ -24,7 +24,9 @@ from pg import *
 
 
 def parse_args() -> Namespace:
-    parser: ArgumentParser = argparse.ArgumentParser(description="Update ratings.")
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Update radar diagrams."
+    )
 
     parser.add_argument(
         "-s",
@@ -50,7 +52,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Update ratings."""
+    """Update radar diagrams."""
 
     args: Namespace = parse_args()
 
@@ -59,7 +61,7 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    print(f"Updating ratings for {xx} ...")
+    print(f"Updating radar diagrams for {xx} ...")
 
     ### SETUP ###
 
@@ -102,22 +104,22 @@ def main() -> None:
 
     ### EXECUTION ###
 
-    # Pull the ratings for each map & write the ratings to a CSV
+    # Plot the pairwise radar diagrams
 
-    print(">>> Pulling the ratings for each map ...")
+    print(">>> Plotting the pairwise radar diagrams ...")
 
     for label, guid in guids.items():
-        if label in ["name", "ready"] or label.endswith("-intersections"):
+        if (
+            label in ["name", "ready"]
+            or label == "baseline"
+            or label.endswith("-intersections")
+        ):
             continue
-        command = f"scripts/pull_map_ratings.py -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
+        command = f"scripts/plot_radar_diagram.py -s {xx} -l {label.capitalize()} -b Baseline -o {output_dir}"
         print(command)
         os.system(command)
 
-    print(">>> Writing the ratings to a CSV file ...")
-
-    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
-    print(command)
-    os.system(command)
+    ###
 
     print("... done!\n")
     print()
