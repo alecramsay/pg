@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Update ratings.
+Update screenshots.
 
 For example:
 
-$ scripts/update/ratings.py
-$ scripts/update/ratings.py -s NC -o ~/Downloads/
+$ scripts/update/screenshots.py
+$ scripts/update/screenshots.py -s NC -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/update/ratings.py -h
+$ scripts/update/screenshots.py -h
 
 """
 
@@ -24,7 +24,7 @@ from pg import *
 
 
 def parse_args() -> Namespace:
-    parser: ArgumentParser = argparse.ArgumentParser(description="Update ratings.")
+    parser: ArgumentParser = argparse.ArgumentParser(description="Update screenshots.")
 
     parser.add_argument(
         "-s",
@@ -50,7 +50,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Update ratings."""
+    """Update screenshots."""
 
     args: Namespace = parse_args()
 
@@ -59,7 +59,7 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    print(f"Updating ratings for {xx} ...")
+    print(f"Updating screenshots for {xx} ...")
 
     ### SETUP ###
 
@@ -102,22 +102,16 @@ def main() -> None:
 
     ### EXECUTION ###
 
-    # Pull the ratings for each map & write the ratings to a CSV
+    # Take a screenshot of each map
 
-    print(">>> Pulling the ratings for each map ...")
+    print(">>> Taking a screenshot of each map ...")
 
     for label, guid in guids.items():
-        if label in ["name", "ready"] or label.endswith("-intersections"):
+        if label in ["name", "ready"]:
             continue
-        command = f"scripts/pull_map_ratings.py -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
+        command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
         print(command)
         os.system(command)
-
-    print(">>> Writing the ratings to a CSV file ...")
-
-    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
-    print(command)
-    os.system(command)
 
     ###
 
