@@ -70,6 +70,8 @@ def main() -> None:
 
     print(f"Analyzing {xx} maps...")
 
+    ### SETUP ###
+
     # Validate arguments & create the output directory
 
     print(">>> Validating arguments ...")
@@ -110,6 +112,8 @@ def main() -> None:
     guids: dict[str, Any] = read_json(guids_path)
 
     command: str = ""
+
+    ### EXECUTION ###
 
     # Assign colors to districts for each map, and
     # Edit the display properties of each map
@@ -158,7 +162,7 @@ def main() -> None:
         print(command)
         os.system(command)
 
-    # Pull the ratings for each map
+    # Pull the ratings for each map & write the ratings to a CSV
 
     print(">>> Pulling the ratings for each map ...")
 
@@ -168,6 +172,12 @@ def main() -> None:
         command = f"scripts/pull_map_ratings.py -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
         print(command)
         os.system(command)
+
+    print(">>> Writing the ratings to a CSV file ...")
+
+    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
+    print(command)
+    os.system(command)
 
     # Plot the pairwise radar diagrams
 
@@ -183,14 +193,6 @@ def main() -> None:
         command = f"scripts/plot_radar_diagram.py -s {xx} -l {label.capitalize()} -b Baseline -o {output_dir}"
         print(command)
         os.system(command)
-
-    # Write the ratings to a CSV
-
-    print(">>> Writing the ratings to a CSV file ...")
-
-    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
-    print(command)
-    os.system(command)
 
     print("... done!\n")
     print()
