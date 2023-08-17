@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Analyze the official & notable maps for a state compared to a given baseline map
-(2 of 2 scripts)
+Update district colors.
 
 For example:
 
-$ scripts/analyze_state_part2.py
-$ scripts/analyze_state_part2.py -s NC -o ~/Downloads/
+$ scripts/update/district_colors.py
+$ scripts/update/district_colors.py -s NC -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/analyze_state_part2.py -h
+$ scripts/update/district_colors.py -h
 
 """
 
@@ -26,7 +25,7 @@ from pg import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Analyze the official & notable maps for a state compared to a given baseline map (2 of 2)"
+        description="Update district colors."
     )
 
     parser.add_argument(
@@ -53,13 +52,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Analyze the official & notable maps for a state compared to a given baseline map.
-
-    Part 2 of 2:
-    - First run analyze_state_part1.py
-    - After the maps are imported into DRA, run this command
-
-    """
+    """Update district colors."""
 
     args: Namespace = parse_args()
 
@@ -68,13 +61,11 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    print(f"Analyzing {xx} maps...")
+    print(f"Updating district_colors for {xx} ...")
 
     ### SETUP ###
 
     # Validate arguments & create the output directory
-
-    print(">>> Validating arguments ...")
 
     output_root: str = FileSpec(output).abs_path
     if not os.path.isdir(output_root):
@@ -104,8 +95,6 @@ def main() -> None:
             comparisons.append(label)
 
     # Load the map guids from Part 1
-
-    print(">>> Loading the map guids ...")
 
     guids_json: str = f"{xx}_{yyyy}_{plan_type}_map_guids.json"
     guids_path: str = os.path.join(output_dir, guids_json)
@@ -142,71 +131,9 @@ def main() -> None:
         print(command)
         os.system(command)
 
-    # Edit the display properties of each map
-
-    print(">>> Editing the display properties of each map ...")
-
-    for label, guid in guids.items():  # NOTE - Missing maps are not enumerated
-        if label in ["name", "ready"]:
-            continue
-
-        year: str = cycle if label.capitalize() == "Baseline" else yyyy
-        edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
-
-        command = (
-            f"scripts/edit_map.py -s {xx} -i {guid} -o {output_dir} -f {edits_json}"
-        )
-        print(command)
-        os.system(command)
-
-    # Take a screenshot of each map
-
-    print(">>> Taking a screenshot of each map ...")
-
-    for label, guid in guids.items():
-        if label in ["name", "ready"]:
-            continue
-        command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
-        print(command)
-        os.system(command)
-
-    # Pull the ratings for each map & write the ratings to a CSV
-
-    print(">>> Pulling the ratings for each map ...")
-
-    for label, guid in guids.items():
-        if label in ["name", "ready"] or label.endswith("-intersections"):
-            continue
-        command = f"scripts/pull_map_ratings.py -s {xx} -l {label.capitalize()} -i {guid} -o {output_dir}"
-        print(command)
-        os.system(command)
-
-    print(">>> Writing the ratings to a CSV file ...")
-
-    command = f"scripts/write_ratings_table.py -s {xx} -o {output_dir}"
-    print(command)
-    os.system(command)
-
-    # Plot the pairwise radar diagrams
-
-    print(">>> Plotting the pairwise radar diagrams ...")
-
-    for label, guid in guids.items():
-        if (
-            label in ["name", "ready"]
-            or label == "baseline"
-            or label.endswith("-intersections")
-        ):
-            continue
-        command = f"scripts/plot_radar_diagram.py -s {xx} -l {label.capitalize()} -b Baseline -o {output_dir}"
-        print(command)
-        os.system(command)
-
     ###
 
     print("... done!\n")
-    print()
-    print("Now you can deploy the state's artifacts to the website.")
     print()
 
 
