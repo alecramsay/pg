@@ -6,7 +6,7 @@ Take a screenshot of a DRA map.
 
 For example:
 
-$ scripts/save_map_image -s NC -l Official -i 532f03db-5243-4684-9863-166575c1ea1b -o ~/Downloads/NC/
+$ scripts/save_map_image.py -s NC -l Official -i 532f03db-5243-4684-9863-166575c1ea1b -o ~/Downloads/NC/
 
 For documentation, type:
 

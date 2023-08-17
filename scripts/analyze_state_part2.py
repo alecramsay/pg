@@ -115,12 +115,9 @@ def main() -> None:
 
     ### EXECUTION ###
 
-    # Assign colors to districts for each map, and
-    # Edit the display properties of each map
+    # Assign colors to districts for each map
 
-    print(
-        ">>> Assigning district colors & editing the display properties of each map ..."
-    )
+    print(">>> Assigning district colors for each map ...")
 
     for label, guid in guids.items():  # NOTE - Missing maps are not enumerated
         if label in ["name", "ready"]:
@@ -144,6 +141,16 @@ def main() -> None:
         command = f"scripts/generate_map_settings.py -s {xx} -a {assignments_csv} -o {output_dir} -f {edits_json} {intersections_flag}"
         print(command)
         os.system(command)
+
+    # Edit the display properties of each map
+
+    print(">>> Editing the display properties of each map ...")
+
+    for label, guid in guids.items():  # NOTE - Missing maps are not enumerated
+        if label in ["name", "ready"]:
+            continue
+
+        edits_json: str = f"{xx}_{year}_{plan_type}_{label.capitalize().replace('-', '_')}_display_settings.json"
 
         command = (
             f"scripts/edit_map.py -s {xx} -i {guid} -o {output_dir} -f {edits_json}"
