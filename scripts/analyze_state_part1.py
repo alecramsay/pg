@@ -52,6 +52,7 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    # TODO - Figure this out
     parser.add_argument(
         "-p",
         "--prefix",

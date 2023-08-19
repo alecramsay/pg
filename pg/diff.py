@@ -10,7 +10,7 @@ from .readwrite import *
 from .helpers import *
 
 
-# TODO - DELETE
+# TODO - DELETE after MD
 # def diff_two_plans_WRAPPER(to_plan: Plan, from_plan: Plan) -> list[Region]:
 #     """Isolate the class knowledge in this wrapper, so diff_two_plans() doesn't depend on it."""
 
@@ -73,7 +73,7 @@ def compare_compound_ids(x_id: str, y_id: str) -> int:
 
 ### HELPERS ###
 
-# TODO - DELETE
+# TODO - DELETE after MD
 # def validate_plans(inverted_plans) -> bool:
 #     """Validate that all plans have the same number of blocks."""
 
