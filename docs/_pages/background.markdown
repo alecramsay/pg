@@ -113,7 +113,7 @@ For each state, we compare these six maps to the baseline districts we generated
 ## Method 
 
 At first Alec tried to reimplement Gulotta's C++ moment of inertia code in Python with
-only partial success. Fortunately, he shared what he was working on with his friend.
+only partial success. Fortunately, he shared what he was working on with his friend,
 Todd Proebsting, Todd got intrigued, and then he developed a solution based on 
 [Balzer's work](Capacity-Constrained Voronoi Tessellations: Computation and Applications).
 The evolution of our heuristic approach for finding the lowest energy assignment of precincts to districts 
