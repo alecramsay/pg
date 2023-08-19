@@ -21,6 +21,7 @@ from argparse import ArgumentParser, Namespace
 import os
 from csv import DictReader
 import networkx as nx
+import functools
 
 from pg import *
 
@@ -207,12 +208,58 @@ def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, 
     for i in range(1, len(d) + 1):
         district_colors[i] = pick_color(d[i])
 
-    # district_colors: dict[int | str, str] = {k: pick_color(v) for k, v in d.items()}
-
     return district_colors
 
 
-def generate_display_settings(district_colors: dict[int | str, str]) -> str:
+def canonicalize_for_sorting(compound_id: str) -> str:
+    """
+    The DRA district id canonicalization function to match:
+
+    // Normalize any numeric part to have four digits with padded leading zeros
+    // so alphabetic sorting will result in correct numeric sort for mixed alphanumber
+    // district labels.
+    export function canonicalSortingDistrictID(districtID: string): string
+    {
+    let a = reNumeric.exec(districtID);
+    if (a && a.length == 4)
+    {
+        let s = a[2];
+        if (s.length > 0)
+        {
+        switch (s.length)
+        {
+            case 1: s = `000${s}`;  break;
+            case 2: s = `00${s}`;  break;
+            case 3: s = `0${s}`;  break;
+        }
+        a[2] = s;
+        }
+        districtID = `${a[1]}${a[2]}${a[3]}`;
+    }
+    return districtID;
+    }
+    """
+
+    canonical_id: str = compound_id[0].zfill(4) + compound_id[1:]
+
+    return canonical_id
+
+
+def compare_canonical_ids(x_id: str, y_id: str) -> int:
+    """Put compound district IDs in canonical DRA sort order."""
+
+    x: str = canonicalize_for_sorting(x_id)
+    y: str = canonicalize_for_sorting(y_id)
+
+    if x < y:
+        return -1
+    elif y > x:
+        return 1
+    else:
+        return 0
+
+
+def generate_display_settings(ids: list, orders: list, colors: list) -> str:
     """Generate the display settings for a DRA map, given a number of districts."""
 
     # n: int = len(district_colors)
@@ -248,9 +295,10 @@ def generate_display_settings(district_colors: dict[int | str, str]) -> str:
     districts: list[str] = []
     districts.append(district_header)
 
-    for i, id in enumerate(district_colors):
-        j: int = i + 1
-        color: str = district_colors[id]
+    # for i, id in enumerate(district_colors):
+    for id, order, color in zip(ids, orders, colors):
+        # j: int = i + 1
+        # color: str = district_colors[id]
 
         district: str = (
             "\t\t{\n"
@@ -260,7 +308,7 @@ def generate_display_settings(district_colors: dict[int | str, str]) -> str:
             f'\t\t\t"label": "{id}",\n'
             f'\t\t\t"color": "{color}",\n'
             '\t\t\t"target": 0,\n'
-            f'\t\t\t"order": {j}\n'
+            f'\t\t\t"order": {order}\n'
             "\t\t}"
         )
 
@@ -287,36 +335,35 @@ def main() -> None:
 
     #
 
+    n: int = districts_by_state[xx][plan_type.lower()]
+
+    # Read the block-assignment file
+
     field_types: list = [str, str] if intersections else [str, int]
     district_by_block: list[dict] = read_csv(assignments_csv, field_types)
-    assignments: list[dict] = list()
 
-    id_index_mapping: dict[str, int] = dict()
-    index_id_mapping: dict[int, str] = dict()
+    assignments: list[dict] = list() if intersections else district_by_block
 
-    if not intersections:
-        assignments = district_by_block
-    else:
-        # Map the compound district ids to integers 1-N, so colors can be assigned
+    # Map compound district ids to int's 1-N, so colors can be assigned
 
-        summary_csv: str = args.assignments.replace(
-            "_intersections.csv", "_intersections_summary.csv"
-        )
-        summary_csv = os.path.join(output_dir, summary_csv)
-        summary: list[dict] = read_csv(summary_csv, [str, float, float])
+    scan_order: dict[str, int] = dict()
+    reverse_scan_order: dict[int, str] = dict()
+    district_ids: list[str] = list()
 
-        for i, row in enumerate(summary):
-            j: int = i + 1
-            id: str = row["DISTRICT"]
-            id_index_mapping[id] = j
-
-        index_id_mapping = dict((v, k) for k, v in id_index_mapping.items())
-
+    if intersections:
+        i: int = 1
         for row in district_by_block:
             block: str = row["GEOID"] if "GEOID" in row else row["GEOID20"]
             district: str = row["DISTRICT"] if "DISTRICT" in row else row["District"]
+
+            if district not in scan_order:
+                scan_order[district] = i
+                reverse_scan_order[i] = district
+                district_ids.append(district)
+                i += 1
+
             mapped: dict = {
-                "DISTRICT": id_index_mapping[district],
+                "DISTRICT": scan_order[district],
                 "GEOID": block,
             }
             assignments.append(mapped)
@@ -327,12 +374,37 @@ def main() -> None:
 
     if intersections:
         temp: dict[int | str, str] = dict()
-        for k, v in index_id_mapping.items():
+        for k, v in reverse_scan_order.items():
             temp[v] = district_colors[k]
 
         district_colors = temp
 
-    display_settings: str = generate_display_settings(district_colors)
+    # Generate display settings for a DRA map
+
+    sort_order: list = (
+        list(range(1, n + 1))
+        if not intersections
+        else sorted(list(district_ids), key=functools.cmp_to_key(compare_canonical_ids))
+    )
+    ui_order: list = (
+        list(range(1, n + 1))
+        if not intersections
+        else [
+            dict(
+                zip(
+                    sorted(
+                        list(district_ids),
+                        key=functools.cmp_to_key(compare_compound_ids),
+                    ),
+                    range(1, len(district_ids) + 1),
+                )
+            )[x]
+            for x in sort_order
+        ]
+    )
+    colors: list[str] = [district_colors[i] for i in sort_order]
+
+    display_settings: str = generate_display_settings(sort_order, ui_order, colors)
 
     # Write the display settings file
 

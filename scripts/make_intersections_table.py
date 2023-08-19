@@ -66,16 +66,10 @@ def parse_args() -> Namespace:
     return args
 
 
-def compare_compound_ids(x: dict, y: dict) -> int:
+def compare_summaries(x: dict, y: dict) -> int:
     """Order compound district IDs by first component, then second component."""
 
-    x1, x2 = x["DISTRICT"].strip('"').split("/")
-    y1, y2 = y["DISTRICT"].strip('"').split("/")
-
-    if x1 == y1:
-        return int(x2) - int(y2)
-    else:
-        return int(x1) - int(y1)
+    return compare_compound_ids(x["DISTRICT"].strip('"'), y["DISTRICT"].strip('"'))
 
 
 def main() -> None:
@@ -142,7 +136,7 @@ def main() -> None:
         )
 
     intersections_summary = sorted(
-        intersections_summary, key=functools.cmp_to_key(compare_compound_ids)
+        intersections_summary, key=functools.cmp_to_key(compare_summaries)
     )
 
     write_csv(
