@@ -110,9 +110,9 @@ def main() -> None:
         if label in ["name", "ready"]:
             continue
 
-        # NOTE - Only take screenshots of the primary maps
-        if label.endswith("-intersections"):
-            continue
+        # NOTE - Only take some screenshots
+        # if label not in ["official"]:
+        #     continue
 
         command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
         print(command)
