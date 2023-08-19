@@ -109,6 +109,11 @@ def main() -> None:
     for label, guid in guids.items():
         if label in ["name", "ready"]:
             continue
+
+        # NOTE - Only take screenshots of the intersection maps
+        # if not label.endswith("-intersections"):
+        #     continue
+
         command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
         print(command)
         os.system(command)

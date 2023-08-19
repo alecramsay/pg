@@ -14,5 +14,4 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Updated district colors
-- Redeployed
+- Updated intersections screenshots
