@@ -1,17 +1,17 @@
-# Generated at 08/11/2023 @ 08:08
+# Generated at 08/16/2023 @ 07:24
 - xx: NC
   name: North Carolina
-  official: fcce6d56-df9c-4eaf-8c8a-f794c2a92c2f
-  proportional: 9041d31c-4f88-41e1-82fe-aeb25d97c88d
-  competitive: 69f8a84e-f38b-4746-ad1a-327dc423f5f0
-  minority: 0124b110-47f5-4226-86b9-bbef40ae006d
-  compact: 3a0047b6-3cad-47b0-8a4c-315833ca7492
-  splitting: 9145ede6-358b-41b9-94c6-22466debed83
-  baseline: 2fd622c4-93b2-4d43-93f4-2d7f065c950b
-  official-intersections: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
-  proportional-intersections: 9041d31c-4f88-41e1-82fe-aeb25d97c88d-intersections
-  competitive-intersections: 69f8a84e-f38b-4746-ad1a-327dc423f5f0-intersections
-  minority-intersections: 0124b110-47f5-4226-86b9-bbef40ae006d-intersections
-  compact-intersections: 3a0047b6-3cad-47b0-8a4c-315833ca7492-intersections
-  splitting-intersections: 9145ede6-358b-41b9-94c6-22466debed83-intersections
+  official: 2d664fff-9375-4354-88d3-bde3a9bbca5a
+  proportional: 6f929ec7-0ae5-4b5b-90b6-bb5435fb475e
+  competitive: 918598d9-13f6-44c6-9b4e-84f393fd6e03
+  minority: 1d66dfc3-d2b4-4dd7-a5e9-157ce113a28c
+  compact: 21bbe7c5-0a26-4955-806f-08fc108a070b
+  splitting: d27b85a4-54fe-41a6-95c3-c98a602eafd9
+  baseline: 8975783a-3e20-43b6-81e3-110050b2ebed
+  official-intersections: 7b21719c-7f4b-448c-9d87-413429edeb88
+  proportional-intersections: 6f929ec7-0ae5-4b5b-90b6-bb5435fb475e-intersections
+  competitive-intersections: 918598d9-13f6-44c6-9b4e-84f393fd6e03-intersections
+  minority-intersections: 1d66dfc3-d2b4-4dd7-a5e9-157ce113a28c-intersections
+  compact-intersections: 21bbe7c5-0a26-4955-806f-08fc108a070b-intersections
+  splitting-intersections: d27b85a4-54fe-41a6-95c3-c98a602eafd9-intersections
   ready: true

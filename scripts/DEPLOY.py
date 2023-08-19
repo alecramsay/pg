@@ -94,13 +94,13 @@ def main() -> None:
     for file in os.listdir(intermediate):
         source: str = os.path.join(intermediate, file)
         if fnmatch.fnmatch(file, "*.png"):
-            shutil.move(source, images)
+            shutil.move(source, os.path.join(images, file))
         elif fnmatch.fnmatch(file, "*_summary.csv"):
-            shutil.move(source, site_data)
+            shutil.move(source, os.path.join(site_data, file))
         elif fnmatch.fnmatch(file, "*_ratings.csv"):
-            shutil.move(source, site_data)
+            shutil.move(source, os.path.join(site_data, file))
         elif fnmatch.fnmatch(file, "*Baseline.csv"):
-            shutil.copy(source, data)
+            shutil.copy(source, os.path.join(data, file))
         else:
             pass  # Leave the file in the intermediate directory
 

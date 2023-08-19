@@ -14,4 +14,5 @@ TODO - Insert summary analysis here.
 
 NOTES
 
-- Updated intersections.csv and intersections_summary.csv
+- Updated district colors
+- Redeployed

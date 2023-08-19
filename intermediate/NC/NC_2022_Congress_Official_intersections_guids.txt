@@ -1,3 +1,3 @@
-importmap: import succeeded: /Users/alecramsay/Downloads/NC/NC_2022_Congress_Official_intersections.csv (elapsed: 0:17)
-importmap: guid: 1f0d3a02-d747-44f6-b829-465d867c46b2
-importmap: shareguid: 1799a3c3-3a92-4f95-bd6c-c0760ea77a35
+importmap: import succeeded: /Users/alecramsay/Downloads/NC/NC_2022_Congress_Official_intersections.csv (elapsed: 0:28)
+importmap: guid: 647f3528-ddfd-4c7f-aa4b-99552c6f9609
+importmap: shareguid: 7b21719c-7f4b-448c-9d87-413429edeb88
