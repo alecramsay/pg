@@ -15,4 +15,5 @@ TODO - Insert summary analysis here.
 NOTES
 
 - Updated intersections screenshots
-- Updated primary screenshots (take 2)
+- Updated primary screenshots
+- Fixed ratings table

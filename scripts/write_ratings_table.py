@@ -10,7 +10,6 @@ $ scripts/write_ratings_table.py -s NC -o ~/Downloads/NC/
 For documentation, type:
 
 $ scripts/write_ratings_table.py -h
-
 """
 
 import argparse
@@ -72,13 +71,15 @@ def main() -> None:
         "Splitting",
         "Baseline",
     ]:
-        map_path: str = os.path.join(output_dir, f"{xx}_2022_Congress_{label}.csv")
+        year: str = cycle if label == "Baseline" else yyyy
+
+        map_path: str = os.path.join(output_dir, f"{xx}_{year}_Congress_{label}.csv")
         if os.path.isfile(map_path):
             ratings: Ratings = cull_ratings(
                 read_json(
                     os.path.join(
                         output_dir,
-                        file_name([xx, yyyy, plan_type, label, "ratings"], "_", "json"),
+                        file_name([xx, year, plan_type, label, "ratings"], "_", "json"),
                     )
                 )
             )
