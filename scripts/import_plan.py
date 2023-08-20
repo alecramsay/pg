@@ -145,7 +145,8 @@ def main() -> None:
     """
 
     command: str = f"../dra-cli/importmap.js -u {user} -f {plan} -x {xid} -T {plan_type.lower()} -N '{name}' -D '{description}' -L {tag} &> {guids}"
-    # print(command)
+    if verbose:
+        print(command)
     os.system(command)
 
     pass

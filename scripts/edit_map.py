@@ -89,7 +89,8 @@ def main() -> None:
     #
 
     command: str = f"../dra-cli/editmap.js -i {guid} -f {edits} -u {user} {'-n' if nodeploy else ''}"
-    # print(command)
+    if verbose:
+        print(command)
     os.system(command)
 
     pass

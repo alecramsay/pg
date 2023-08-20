@@ -81,7 +81,8 @@ def main() -> None:
     year: str = cycle if label == "Baseline" else yyyy
 
     command: str = f"scripts/pull_map_ratings.sh {xx} {year} {plan_type} {label} {guid} {output_dir}"
-    # print(command)
+    if verbose:
+        print(command)
     os.system(command)
 
     pass

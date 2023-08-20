@@ -112,9 +112,10 @@ def main() -> None:
     command: str = f"python3 {dccvt_py}/geoid.py cores \
         --assignments {assignments_csv} \
         --population {data_csv} \
-        --maxcores {os.path.expanduser('~/Downloads/NC/ignore.csv')} \
+        --maxcores {os.path.expanduser(f'~/Downloads/{xx}/ignore.csv')} \
         --renumber {renumbered_csv}"
-    # print(command)
+    if verbose:
+        print(command)
     os.system(command)
 
     # Second pass
@@ -122,7 +123,8 @@ def main() -> None:
     command: str = f"python3 {dccvt_py}/geoid.py cores \
         --assignments {assignments_csv} \
         --diff {intersections_csv}"
-    # print(command)
+    if verbose:
+        print(command)
     os.system(command)
 
     pass
