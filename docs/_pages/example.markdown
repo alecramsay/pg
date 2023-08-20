@@ -10,9 +10,10 @@ map-width: 700
 ---
 
 This is an annotated example of the analysis of a state's political geography, using North Carolina as an example.
-There is a separate page for each state. 
+[Annotations below are shown in square brackets like this.]
 
-At the top is a summary of what the various exhibits reveal. That is not shown here.
+[There is a separate page for each state. 
+At the top is a summary of what the various exhibits reveal. That is not shown here.]
 
 {% assign xx = page.xx %}
 
@@ -217,9 +218,13 @@ First with a set of pairwise radar diagrams.]
 [At the bottom are a set of tabs, one for each of the six maps compared to the baseline map. 
 For each map, there is: 
 
-* an image of the map which you can click on to see in DRA, 
+* an image of the selected comparison map, 
 * an image of the regions formed by intersecting the district boundaries of the two maps, and
-* a table showing data for each intersecting region]
+* a table showing data for each intersecting region
+
+The intersecting regions are labeled "#/#" where the first # is the district in the baseline map,
+and the second # is the district in the comparison map.
+You can click on the images to see the maps in DRA.]
 
 <p>These tabs compare the district boundaries of official map and the five notable maps with the baseline map:</p>
 
