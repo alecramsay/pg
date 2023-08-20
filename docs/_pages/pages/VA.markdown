@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Virginia
 permalink: states/VA/
 

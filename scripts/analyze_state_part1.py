@@ -92,7 +92,7 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    # xx = "AZ"  # TODO - Remove this line
+    xx = "VA"  # TODO - Remove this line
     baseline: str = (
         os.path.expanduser(args.baseline)
         if args.baseline
