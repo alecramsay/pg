@@ -39,7 +39,7 @@ This note describes the detailed workflow that Alec used for creating the maps f
 
 Then, for each state:
 
-(3) Created a baseline map using [the 'baseline' workflow](baseline_workflow.md) 
+(3) Created a baseline map using [the 'baseline' workflow](baseline_workflow.markdown) 
 
     Added population deviation & runtimes to the abstract spreadsheet
 

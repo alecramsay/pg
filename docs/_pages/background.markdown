@@ -158,7 +158,7 @@ Due to the size of these files, none are stored in a GitHub repository, except t
 
 ## Workflow
 
-Alec's overall workflow is described [here](workflow.md).
+Alec's overall workflow is described [here](workflow.markdown).
 
 ---
 

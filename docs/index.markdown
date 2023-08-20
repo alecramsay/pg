@@ -33,7 +33,7 @@ The contrasts put policy choices in bold relief.
 
 You can see a representative example of this analysis on the [Example](./_pages/example.markdown) page.
 You can choose a specific state to look at, on the [States](./_pages/states.markdown) page.
-*Note: This is still a work in progress, but we've added the results for AZ, MD, NC, PA, and VA.*
+*Note: This is still a work in progress, but we've added the results for NC and MD.*
 
 The important results here are twofold:
 
