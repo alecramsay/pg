@@ -158,6 +158,11 @@ districts_by_state: dict[str, Any] = {
 }
 
 
+"""
+NOTE 
+- Legacy metadata, before retooling the workflow at the command line.
+- The guids tell you what Notable Maps I cloned.
+
 ### OFFICIAL, NOTABLE, AND BASELINE MAPS ###
 
 # Official congressional maps on 11/07/2022
@@ -914,5 +919,5 @@ baseline_maps: dict[str, str] = {
     "WV": "a0a0dbd0-e472-47c1-b3c6-e1e51219fabc",  # 07/16/23
 }
 
-
+"""
 ### END ###
