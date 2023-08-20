@@ -18,11 +18,10 @@ At the top is a summary of what the various exhibits reveal. That is not shown h
 
 <!-- SUMMARY ANALYSIS -->
 
-{{ content }}
-
-{% assign xx = page.xx %}
-
 <!-- BASELINE DISTRICTS -->
+
+[First the baseline districts are shown.
+You can click on the image to go to the map in DRA.]
 
 {% capture baseline-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
@@ -48,8 +47,10 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <h3>Ratings vs. Baseline</h3>
 
-Next, the ratings for the Official and Notable Maps are compare to the ratings of the baseline map.
-First there are a set of pairwise radar diagrams. They compare the Official map and the five Notable Maps that maximizing proportionality, competitiveness, minority representation, compactness, and splitting to the baseline map for the state.
+[Then the ratings for the Official and the five Notable Maps that maximizing proportionality, 
+competitiveness, minority representation, compactness, and splitting are compared to the ratings 
+of the baseline map.
+First with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
@@ -94,7 +95,7 @@ First there are a set of pairwise radar diagrams. They compare the Official map 
 
 <!-- RATINGS TABLE -->
 
-Then the ratings are shown in tabular form for convenience.
+[Then in tabular form for convenience.]
 
 {% capture ratings-file %}
 {{ xx }}_2022_Congress_ratings
@@ -213,15 +214,12 @@ Then the ratings are shown in tabular form for convenience.
 
 <h3>Districts vs. Baseline</h3>
 
-At the bottom are a set of tabs, one for each of the six comparison maps. For each map, there is: 
+[At the bottom are a set of tabs, one for each of the six maps compared to the baseline map. 
+For each map, there is: 
 
-* a pairwise radar diagram
-* the map with the baseline district lines overlaid on it, 
-* a map of the regions formed by intersecting the district boundaries of the two maps, and
-* a table showing data for each region
-
-Note: The "BASELINE" and "OTHER" columns shows the districts that intersect to form the region.
-The first is the district in the baseline map, and the second is the district in the comparison map.
+* an image of the map which you can click on to see in DRA, 
+* an image of the regions formed by intersecting the district boundaries of the two maps, and
+* a table showing data for each intersecting region]
 
 <p>These tabs compare the district boundaries of official map and the five notable maps with the baseline map:</p>
 
