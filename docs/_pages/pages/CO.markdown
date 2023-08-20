@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Colorado
 permalink: states/CO/
 
@@ -10,4 +10,4 @@ map-width: 700
 xx: "CO"
 ---
 
-<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
+TODO: Describe the tradeoffs for redistricting CO.

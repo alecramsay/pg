@@ -64,7 +64,7 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    xx = "VA"  # TODO - Remove this line
+    # xx = "CO"  # TODO - Remove this line
     output: str = os.path.expanduser(args.output)
 
     verbose: bool = args.verbose

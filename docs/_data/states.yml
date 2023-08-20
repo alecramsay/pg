@@ -32,3 +32,20 @@
   compact-intersections: 8339a7f6-dad8-4bce-ac00-88db0c147f38-intersections
   splitting-intersections: ca4adcc4-5537-4683-ab7a-5902ac94cc34-intersections
   ready: true
+# Generated at 08/20/2023 @ 13:39
+- xx: CO
+  name: Colorado
+  official: a794f66c-c304-4b99-af5f-34e464b04cc3
+  proportional: 88e8f788-9e58-49cf-827b-10dd2db5eaa1
+  competitive: 64807a1f-dd80-4318-9b3f-387253eb5b99
+  minority: 33a1cdc1-525e-418e-ae90-077c55ff553e
+  compact: 85b4be5d-2e2a-4d54-b7dc-02344174a6ad
+  splitting: 101a067b-f1e2-4c9e-9e34-cea81b3fde67
+  baseline: 3d0c9ba4-bcd7-4f0f-a177-4bad93884091
+  official-intersections: 65f03ca6-6d22-4fd8-a3a0-8e60c26b8a5c
+  proportional-intersections: 88e8f788-9e58-49cf-827b-10dd2db5eaa1-intersections
+  competitive-intersections: 64807a1f-dd80-4318-9b3f-387253eb5b99-intersections
+  minority-intersections: 33a1cdc1-525e-418e-ae90-077c55ff553e-intersections
+  compact-intersections: 85b4be5d-2e2a-4d54-b7dc-02344174a6ad-intersections
+  splitting-intersections: 101a067b-f1e2-4c9e-9e34-cea81b3fde67-intersections
+  ready: true
