@@ -23,6 +23,7 @@ from argparse import ArgumentParser, Namespace
 
 import os
 import shutil
+import datetime
 
 from pg import *
 
@@ -52,11 +53,9 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
-    # TODO - Figure this out
     parser.add_argument(
         "-p",
         "--prefix",
-        default="081623",
         help="xid prefix (e.g., 081623)",
         type=str,
     )
@@ -99,7 +98,11 @@ def main() -> None:
         else f"../baseline/maps/{xx}/{xx}20C_baseline_100.csv"
     )
     output: str = os.path.expanduser(args.output)
-    prefix: str = args.prefix
+    prefix: str = (
+        args.prefix
+        if args.prefix is not None
+        else f'{datetime.datetime.now().strftime("%m%d%y")}'
+    )
 
     verbose: bool = args.verbose
 
@@ -127,6 +130,13 @@ def main() -> None:
         exit(1)
     else:
         os.mkdir(output_dir)
+
+    # Log the map prefix
+
+    xid_path: str = os.path.join(output_dir, f"{xx}_{yyyy}_{plan_type}_xid_prefix.txt")
+
+    with open(xid_path, "w") as f:
+        f.write(f"Map prefix: {prefix}")
 
     # Build a list of comparison maps
 

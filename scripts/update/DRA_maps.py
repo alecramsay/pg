@@ -49,11 +49,9 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
-    # TODO - Figure this out
     parser.add_argument(
         "-p",
         "--prefix",
-        default="081623",
         help="xid prefix (e.g., 081623)",
         type=str,
     )
@@ -79,6 +77,10 @@ def main() -> None:
     )
     output: str = os.path.expanduser(args.output)
     prefix: str = args.prefix
+
+    if args.prefix is not None:
+        print(f"ERROR - A map prefix is required.")
+        exit(1)
 
     verbose: bool = args.verbose
 
@@ -115,8 +117,6 @@ def main() -> None:
     command: str = ""
 
     ### EXECUTION ###
-
-    # TODO - Figure this out
 
     # Import the BAFs into DRA maps
 
