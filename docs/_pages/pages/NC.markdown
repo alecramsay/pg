@@ -11,7 +11,7 @@ xx: "NC"
 ---
 
 The baseline congressional districts are naturally relatively proportional and compact (81 and 79, respectively),
-but have only moderate competitiveness (56) and opportunity for minority representation (50), and poor county-district splitting (14).
+but have only moderate competitiveness (56) and opportunity for minority representation (50) and poor county-district splitting (14).
 
 -   Proportionality can be improved somewhat (81 &#x2192; 100) without giving up on other baseline values.
     County-district splitting can also be significantly improved at the same time (14 &#x2192; 76).
