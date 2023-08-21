@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Editing the home page (08-20-23)
 - Added CO (08-20-23)
 - Tried GA which failed (08-20-23)
 - Added VA (08-20-23)
