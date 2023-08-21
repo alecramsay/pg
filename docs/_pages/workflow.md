@@ -4,15 +4,26 @@ title: Overall Workflow
 permalink: workflow/
 ---
 
-This note describes the high-level workflow that Alec used for creating the maps for this study:
+This note describes the workflow that Alec used for creating the artifacts for this website:
 
-(1) Copied the Official maps from DRA
-
-(2) Copied the Notable Maps from DRA
+(1) Exported block-assignment files for the official &amp; notable maps in DRA
 
 Then, for each state:
 
-(3) Created a baseline map using [the 'baseline' workflow](baseline_workflow.markdown) 
+(2) Created a baseline map using [the 'baseline' workflow](./_pages/baseline_workflow.markdown) 
 
-(4) Analyzed the official & notable maps relative to the baseline map
+(3) Analyzed the official & notable maps relative to the baseline map
+
+    - scripts/analyze_state_part1.py -s XX
+    - scripts/analyze_state_part2.py -s XX
+
+(4) Deployed the artifacts
+
+    - scripts/DEPLOY.py -s XX
+
+(5) Turned the state on in the website
+
+    - Copy & pasted the YAML fragment into the state.yml file
+    - Changed the state.md layout from 'page' to 'state'
+    - Added qualitative analysis
 

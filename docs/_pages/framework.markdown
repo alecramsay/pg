@@ -8,9 +8,7 @@ Aside from the obvious politics,
 one can think about the problem of drawing redistricting maps as involving three C's:
 
 -   Constraints
-
 -   Criteria, and
-
 -   Context
 
 Each is described below. This site introduces an important concept for understanding context: baseline districts.
@@ -20,10 +18,8 @@ Each is described below. This site introduces an important concept for understan
 Valid redistricting plans satisfy three basic requirements:[^1]
 
 -   Complete -- the whole state must be assigned to districts[^2]
-
 -   Contiguous -- every area within a district must be connected to
     every other area within the district, and have
-
 -   'Roughly equal' populations -- for congressional districts, the
     'roughly equal' threshold is \~0.75%.[^3]
 
@@ -38,14 +34,10 @@ People consider many criteria when evaluating redistricting plans,
 including:
 
 -   Those with straightforward formulas, like measures of compactness
-
 -   Much debated partisan measures of bias & responsiveness
-
 -   How much counties, cities, and communities are split by districts
-
 -   Whether districts are VRA compliant---a complex analysis that
     requires experts, and
-
 -   More qualitative considerations for which there are no established
     metrics, such as the effects on incumbents and preservation of
     district cores
@@ -59,13 +51,9 @@ selected (or invented) raw metrics for each, and then normalized the raw
 measurements to a common \[0--100\] scale where bigger is better.
 
 -   Proportionality
-
 -   Competitiveness
-
 -   Opportunity for minority representation
-
 -   Compactness, and
-
 -   County--District splitting
 
 For each of these dimensions, the published map with the highest rating

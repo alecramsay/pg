@@ -4,8 +4,7 @@ title: Method
 permalink: method/
 ---
 
-The method for generating baseline districts that Todd & I 
-developed evolved through an exploratory process.
+The method for generating baseline districts that Todd & I developed evolved through an exploratory process.
 Note that in all cases we used Cartesian (flat earth) calculations, as opposed to geodesic (spherical) calculations.
 Over short distances, these calculations are sufficiently accurate for our purposes.
 
@@ -47,4 +46,4 @@ This is the method as it stands today (elliding I/O details) <= TODO: flesh this
 -   TODO: Consolidate -- What is the one-liner on what this does?
 -   TODO: Complete -- Ditto
 
-Alec used this solution in Step 4 of the overall workflow described [here](workflow.markdown).
+Alec used this solution in Step 2 of the overall workflow described [here](./_pages/workflow.markdown).

@@ -161,7 +161,7 @@ districts_by_state: dict[str, Any] = {
 """
 NOTE 
 - Legacy metadata, before retooling the workflow at the command line.
-- The guids tell you what Notable Maps I cloned.
+- The guids tell you what notable maps I cloned.
 
 ### OFFICIAL, NOTABLE, AND BASELINE MAPS ###
 
@@ -260,9 +260,9 @@ officials_copy: dict[str, str] = {
     "WV": "8b2f8ec2-1d12-468a-b445-11c9f6097f74",
 }  # Duplicated 11-16-22 (except for states w/ 2 congressional districts)
 
-# Notable Maps for 42 states with 2 or congressional districts (except HI and ME -- see above)
+# notable maps for 42 states with 2 or congressional districts (except HI and ME -- see above)
 # Pulled 11/07/2022 (except for states w/ 2 congressional districts)
-# These were the *reported* Notable Maps. We used a few different ones for the analysis.
+# These were the *reported* notable maps. We used a few different ones for the analysis.
 notable_maps: dict[str, dict] = {
     "AL": {
         "proportional": "5d573512-b4c2-4f6f-ae2d-c922a10f44fb",

@@ -6,23 +6,23 @@ This site characterizes some major policy tradeoffs inherent in congressional re
 
 Along the way, we make a series of claims:
 
-1. We call the distribution and concentration of where people live in a state its "population geography" and claim that 
+1.  We call the distribution and concentration of where people live in a state its "population geography" and claim that 
     a state's unique population geography can be characterized in a well-defined set of districts that satisfy basic legal constraints, 
     i.e., districts are contiguous and have 'roughly equal' populations.
     We call these "baseline districts." 
     Since it only depends on population, the baseline map is the "least information" redistricting plan for the state.[^2] 
-2. Because valid redistricting plans must have 'roughly equal' populations, they are, to a large degree, constrained by this underlying population geography. 
+2.  Because valid redistricting plans must have 'roughly equal' populations, they are, to a large degree, constrained by this underlying population geography. 
     The boundaries of baseline districts can only be distorted so much before they become visibly engineered towards specific, typically partisan and/or racial, ends. 
     Hence, even when a plan optimizes on one dimension, such as proportionality, it tends to share many of the same precinct assignments as the baseline map producing 
     identifiable "district cores."
-3. Conversely, because a mapmaker uses considerable data &#8212; e.g., voting age population, demographics, past election results, etc. &#8212; to draw districts that 
+3.  Conversely, because a mapmaker uses considerable data &#8212; e.g., voting age population, demographics, past election results, etc. &#8212; to draw districts that 
     reflect their preferred mix of policy objectives, the boundaries in such a "high information" plans reflect that data and those decisions.
-4. Moreover, due to the complex *blend* of demographic, economic, cultural, and political attributes determined by a state's underlying population geography, 
+4.  Moreover, due to the complex *blend* of demographic, economic, cultural, and political attributes determined by a state's underlying population geography, 
     redistricting often tradeoffs between various policy objectives, such as proportionality, competitiveness, opportunity for minority representation, compactness, 
     and county-district splitting, among others. 
     Sometimes two macro goals can be pursued in tandem, but often they are in tension with each other. 
     For example, a plan that maximizes proportionality might not be very compact, or vice versa.
-5. Finally, because the tradeoffs for a state ultimately depend on its population geography, they can be characterized *a priori*.
+5.  Finally, because the tradeoffs for a state ultimately depend on its population geography, they can be characterized *a priori*.
 
 We show these tradeoffs for congressional redistricting for 42 states apportioned two or more congressional districts in the 2020 census.
 (We excluded Hawaii and Maine, due to data issues.)
@@ -36,7 +36,7 @@ Baseline districts characterize the underlying "population geography" of a state
 which constrains every other valid map to some degree. 
 
 To illustrate the inherent redistricting tradeoffs states, we compared the
-the five [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) for each state
+the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) for each state
 from [Dave's Redistricting](https://davesredistricting.org/) (DRA) 
 &#8212; these maximize proportionality, competitiveness, minority representation, compactness, and county--district splitting &#8212; 
 as well as the official map for each state to the baseline districts.
@@ -47,24 +47,26 @@ You can choose a specific state to look at, on the [States](./_pages/states.mark
 
 *Note: This is still a work in progress, but you can see this analysis applied to NC, VA, and CO.*
 
-There are two important results from this analysis:
+We encourage two overarching takeaways:
 
-1. The baseline districts for a state are the districts that maximize population compactness (minimize energy).[^3]
-2. Redistricting a state involves inherent tradeoffs that can be *a priori* revealed by comparing policy-maximizing maps to the baseline districts.
+1. The baseline districts for a state should be the districts that maximize population compactness (minimize energy),[^3] and
+2. Redistricting a state involves inherent tradeoffs that can be *a priori* revealed by comparing policy-maximizing maps to these baseline districts.
 
 The specifics of our heuristic approach to generating baseline districts are *not* the main contribution of this study.
 Neither are the specific baseline maps we generated, though we think they are good proxies for the lowest energy maps for states and interesting in their own right.
 If someone else can find a lower energy map for a state that meets the definitional constraints of a baseline map, great:
 it should be considered the baseline instead.[^4]
 
+You can find more details about our approach in the [Background](./_pages/background.markdown) page.
+
 ## Future Research
 
 We imagine many potential areas of future research, including:
 
-- Finding lower energy baseline maps for states, using our heuristic approach or some other method
-- Proposing alternative definitions of baseline districts[^5]
-- Exploring baseline districts as the seed maps for generating large ensembles of maps
-- Using the same technique to analyze state legislative redistricting
+-   Finding lower energy baselines using our approach or varying some aspect of our approach 
+    &#8212 one can imagine many [variations](./_pages/variations.markdown) 
+-   Exploring baseline districts as the seed maps for generating large ensembles of maps
+-   Using the same technique to analyze state legislative redistricting
 
 ## Acknowledgements
 
@@ -79,7 +81,7 @@ patiently persisting in the adaptation of Balzer's algorithm to redistricting wi
 
 [^1]: The name of this site &#8212; Redistricting Almanac &#8212; is a nod to FiveThirtyEight's magisterial
     [Atlas of Redistricting](https://medium.com/dra-2020/atlas-of-redistricting-maps-14ea4d0874e5). 
-    The [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
+    The [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) in DRA were directly inspired by the Atlas.
     We use the term "almanac" here instead, to suggest that this analysis could be updated periodically as new data are released,
     e.g., in 2030.
 
@@ -88,5 +90,3 @@ patiently persisting in the adaptation of Balzer's algorithm to redistricting wi
 [^3]: Here "energy" means energy as Balzer defined it in formula 2.13 in "Capacity-Constrained Voronoi Tessellations: Computation and Applications." TODO: provide a link to the paper? a one-line summary of the formula?
 
 [^4]: You can even imagine a contest with prize money for finding the lowest energy map for a state.
-
-[^5]: Our baseline maps are the lowest energy maps that meet four constraints: complete, contiguous, doesn't split any precincts, and has a population deviation of 2% or less.

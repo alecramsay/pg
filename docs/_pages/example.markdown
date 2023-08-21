@@ -48,7 +48,7 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <h3>Ratings vs. Baseline</h3>
 
-[Then the ratings for the Official and the five Notable Maps that maximizing proportionality, 
+[Then the ratings for the official and the five notable maps that maximizing proportionality, 
 competitiveness, minority representation, compactness, and splitting are compared to the ratings 
 of the baseline map.
 First with a set of pairwise radar diagrams.]

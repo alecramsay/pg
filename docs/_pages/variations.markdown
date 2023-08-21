@@ -7,6 +7,7 @@ permalink: variations/
 The main contribution of this site is a framework for understanding the redistricting process as
 the trading off of a mix of policy objectives in the context of an underlying population distribution.
 We instantiate that framework and use it to illustrate the tradeoffs in congressional redistricting state by state.
+
 We hope others will adopt this general approach, even if they make different specific choices.
 
 ### Data
@@ -42,7 +43,7 @@ We hope others will adopt this general approach, even if they make different spe
   One might want to use newer maps that have been adopted (e.g., as a result of court challenges).
 - Similarly, as a *proxy* for the maps in a state that optimize the five key dimension rated in DRA
   &#8212; proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting &#8212;
-  we use a snapshot of DRA's [Notable Maps](https://medium.com/dra-2020/notable-maps-66d744933a48)
+  we use a snapshot of DRA's [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48)
   at a point in time with some minor corrections and modifications, 
   Instead of using this user-generated content, one might want to select maps from a large ensemble of
   automatically generated maps (e.g., using Markov chain Monte Carlo (MCMC)).
