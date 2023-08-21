@@ -46,4 +46,4 @@ This is the method as it stands today (elliding I/O details) <= TODO: flesh this
 -   TODO: Consolidate -- What is the one-liner on what this does?
 -   TODO: Complete -- Ditto
 
-Alec used this solution in Step 2 of the overall workflow described [here](./_pages/workflow.markdown).
+Alec used this solution in Step 2 of the overall workflow described [here](./workflow.markdown).

@@ -64,7 +64,7 @@ You can find more details about our approach in the [Background](./_pages/backgr
 We imagine many potential areas of future research, including:
 
 -   Finding lower energy baselines using our approach or varying some aspect of our approach 
-    &#8212 one can imagine many [variations](./_pages/variations.markdown) 
+    &#8212; one can imagine many [variations](./_pages/variations.markdown) 
 -   Exploring baseline districts as the seed maps for generating large ensembles of maps
 -   Using the same technique to analyze state legislative redistricting
 

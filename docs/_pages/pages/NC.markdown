@@ -23,7 +23,5 @@ Those are the policy tradeoffs.
 An average of 62% of population-weighted precincts assignments are shared between a notable map and the baseline.
 
 The official map was ordered by the NC Supreme Court and challenged in Moore v. Harper.
-Relative to the baseline map, 
-the it reduces county-district splitting significantly (14 &#x2192; 57) 
-at the expense of some compactness (79 &#x2192; 61) and
-competitiveness (56 &#x2192; 30).
+Relative to the baseline map, it reduces county-district splitting significantly (14 &#x2192; 57) 
+at the expense of some compactness (79 &#x2192; 61) and competitiveness (56 &#x2192; 30).

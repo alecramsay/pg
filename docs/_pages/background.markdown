@@ -116,7 +116,7 @@ but met with only partial success. Fortunately, he shared what he was working on
 Todd Proebsting, he got intrigued, and then Todd developed a solution based on 
 Balzer's [Capacity-Constrained Voronoi Tessellations: Computation and Applications](TODO).
 The evolution of our heuristic approach for finding the lowest energy assignment of precincts to districts 
-is described [here](./_pages/method.markdown).
+is described [here](./method.markdown).
 
 To generate the baseline maps presented here, we ran this process 100 times for each state
 using random starting points and the 2020 Census VTD shapes and population data.[^4]
@@ -155,7 +155,7 @@ Due to the size of these files, none are stored in a GitHub repository, except t
 
 ## Workflow
 
-Alec's overall workflow is described [here](./_pages/workflow.markdown).
+Alec's overall workflow is described [here](./workflow.markdown).
 
 ---
 

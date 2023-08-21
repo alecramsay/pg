@@ -10,7 +10,7 @@ This note describes the workflow that Alec used for creating the artifacts for t
 
 Then, for each state:
 
-(2) Created a baseline map using [the 'baseline' workflow](./_pages/baseline_workflow.markdown) 
+(2) Created a baseline map using [the 'baseline' workflow](./baseline_workflow.markdown) 
 
 (3) Analyzed the official & notable maps relative to the baseline map
 
