@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Edited the rest of the site; tweaks (08-21-23)) 
+- Edited the rest of the site (08-21-23)) 
 - Editing the home page (08-20-23)
 - Added CO (08-20-23)
 - Tried GA which failed (08-20-23)
