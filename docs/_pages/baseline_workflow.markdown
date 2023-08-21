@@ -44,6 +44,8 @@ Extract the population & coordinates of precincts and put it into the format tha
 scripts/extract_data.py -s XX
 ```
 
+TODO - Alec: Add a script to extract the precinct to block mapping
+
 ## Extract a graph of precincts
 
 Similarly, extract a graph of the precincts and put them into the format that Todd's dccvt package expects.
