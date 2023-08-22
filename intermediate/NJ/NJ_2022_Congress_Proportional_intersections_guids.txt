@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NJ/NJ_2022_Congress_Proportional_intersections.csv (elapsed: 0:11)
+importmap: guid: 4d974c1e-9d9c-4637-bafb-636acbadbc75
+importmap: shareguid: 324e3fa6-74d0-4ad6-a5d2-4a0d67fb3499

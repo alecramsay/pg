@@ -1,0 +1,421 @@
+{
+	"meta": {
+		"palette": "plasma_r"
+	},
+	"districtprops": [
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "",
+			"color": "",
+			"target": 0,
+			"order": 0
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "1/1",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 1
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "1/2",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 2
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/10",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 32
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/11",
+			"color": "#fca735",
+			"target": 0,
+			"order": 33
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/12",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 34
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/5",
+			"color": "#fca735",
+			"target": 0,
+			"order": 29
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/8",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 30
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "10/9",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 31
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "11/10",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 37
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "11/11",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 38
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "11/12",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 39
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "11/7",
+			"color": "#fca735",
+			"target": 0,
+			"order": 35
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "11/8",
+			"color": "#fca735",
+			"target": 0,
+			"order": 36
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "12/11",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 43
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "12/12",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 44
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "12/4",
+			"color": "#fca735",
+			"target": 0,
+			"order": 40
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "12/6",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 41
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "12/7",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 42
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "2/1",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 3
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "2/2",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 4
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "2/3",
+			"color": "#fca735",
+			"target": 0,
+			"order": 5
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3/1",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 6
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3/3",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 7
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3/4",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 8
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3/6",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 9
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3/7",
+			"color": "#fca735",
+			"target": 0,
+			"order": 10
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "4/3",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 11
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "4/4",
+			"color": "#fca735",
+			"target": 0,
+			"order": 12
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "4/6",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 13
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "5/5",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 14
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "5/9",
+			"color": "#c5407e",
+			"target": 0,
+			"order": 15
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "6/12",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 18
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "6/4",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 16
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "6/6",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 17
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "7/11",
+			"color": "#fca735",
+			"target": 0,
+			"order": 20
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "7/7",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 19
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "8/10",
+			"color": "#fca735",
+			"target": 0,
+			"order": 24
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "8/5",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 21
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "8/8",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 22
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "8/9",
+			"color": "#fca735",
+			"target": 0,
+			"order": 23
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "9/10",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 27
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "9/11",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 28
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "9/5",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 25
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "9/9",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 26
+		}
+	],
+	"owner": {
+		"UserID": "owner",
+		"bShowMap": true,
+		"bShowVotingDistricts": true,
+		"bShowDistrictLines": false,
+		"bShowNewDistrictLines": true,
+		"bShowDistrictLabels": true,
+		"bShowLandmarks": false
+	}
+}
