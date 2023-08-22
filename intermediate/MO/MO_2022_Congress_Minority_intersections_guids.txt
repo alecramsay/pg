@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MO/MO_2022_Congress_Minority_intersections.csv (elapsed: 0:15)
+importmap: guid: aa2b3e58-835d-45e3-b4c8-527764953c1b
+importmap: shareguid: a4b80968-d57a-4cd0-9814-2dc818bed494

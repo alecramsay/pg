@@ -202,3 +202,20 @@
   compact-intersections: 1d7fea8b-844e-47b8-805c-18577d784845-intersections
   splitting-intersections: b063754d-e714-475e-8ac7-f4735ef5b50d-intersections
   ready: true
+# Generated at 08/21/2023 @ 15:03
+- xx: MO
+  name: Missouri
+  official: d4e5aa5d-6ba5-44ee-9020-5949c4609420
+  proportional: e309208d-970a-4d6a-9471-97658fd63eef
+  competitive: 35ecdc99-a527-4118-8015-9a91a18de917
+  minority: 3584ea37-6ccf-4a9a-a0a4-e514bbfe9a8e
+  compact: 1b708d5d-a007-4cf1-bc50-d589e86ad58b
+  splitting: 7f9168e8-dd2e-4a91-aee6-6515a9ff1e35
+  baseline: 939ec0e3-7e66-445f-b849-a3f32ed0f6ea
+  official-intersections: 28d32e33-e083-4957-926f-509ad42b136c
+  proportional-intersections: e309208d-970a-4d6a-9471-97658fd63eef-intersections
+  competitive-intersections: 35ecdc99-a527-4118-8015-9a91a18de917-intersections
+  minority-intersections: 3584ea37-6ccf-4a9a-a0a4-e514bbfe9a8e-intersections
+  compact-intersections: 1b708d5d-a007-4cf1-bc50-d589e86ad58b-intersections
+  splitting-intersections: 7f9168e8-dd2e-4a91-aee6-6515a9ff1e35-intersections
+  ready: true
