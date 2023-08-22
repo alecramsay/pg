@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/KY/KY_2022_Congress_Competitive_intersections.csv (elapsed: 0:09)
+importmap: guid: 5a434f14-8e1f-47c1-8b84-753a742ff7e1
+importmap: shareguid: 98d2223c-39f1-4f96-83e8-4bd8836e30bb

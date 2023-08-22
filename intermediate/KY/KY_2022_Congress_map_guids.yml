@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:31
+- xx: KY
+  name: Kentucky
+  official: c4a89f7b-6f37-479d-aa58-985244bdf6bd
+  proportional: c21e12cf-330c-45b6-954a-2493e530a8d9
+  competitive: 503c3b12-911c-4cbd-b9c6-b005800faaa5
+  minority: 28107f71-1248-4581-bae0-be092f2d02c8
+  compact: a7c26b04-e43b-4ec1-b238-19cbab4ad9cb
+  splitting: 066a58a4-c5ab-43bd-8438-3c1e04020fac
+  baseline: da0c3d97-cdd1-4ba8-9216-b177b1d4d4f3
+  official-intersections: d8f09a26-78cd-4e8c-91f7-a32c10b70ac9
+  proportional-intersections: c21e12cf-330c-45b6-954a-2493e530a8d9-intersections
+  competitive-intersections: 503c3b12-911c-4cbd-b9c6-b005800faaa5-intersections
+  minority-intersections: 28107f71-1248-4581-bae0-be092f2d02c8-intersections
+  compact-intersections: a7c26b04-e43b-4ec1-b238-19cbab4ad9cb-intersections
+  splitting-intersections: 066a58a4-c5ab-43bd-8438-3c1e04020fac-intersections
+  ready: true

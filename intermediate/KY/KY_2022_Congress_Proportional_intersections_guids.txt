@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/KY/KY_2022_Congress_Proportional_intersections.csv (elapsed: 0:12)
+importmap: guid: af97fe2f-e936-446e-872d-2b11bc9c4447
+importmap: shareguid: f1da8252-f15f-4da0-8677-1aaae778f625
