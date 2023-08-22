@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MS/MS_2022_Congress_Minority_canonical.csv (elapsed: 0:09)
+importmap: guid: f0c068d9-0e85-4ac3-b6ac-69953e580be6
+importmap: shareguid: 75192539-ed9c-46de-9120-b0807d9d61e0

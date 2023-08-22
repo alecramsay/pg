@@ -185,3 +185,20 @@
   compact-intersections: d5c129c1-91e9-4b24-abc8-c7f2164d4187-intersections
   splitting-intersections: 108a1c11-db7d-46b8-8fc6-a6e30144a047-intersections
   ready: true
+# Generated at 08/21/2023 @ 14:57
+- xx: MS
+  name: Mississippi
+  official: 6c88e882-5c9e-4a97-ad6e-ce5612d51d3f
+  proportional: eafe567c-8927-4cff-9793-ddf84b8ce0d8
+  competitive: c59a48ba-4476-4884-9608-1baa05cdc275
+  minority: 75192539-ed9c-46de-9120-b0807d9d61e0
+  compact: 1d7fea8b-844e-47b8-805c-18577d784845
+  splitting: b063754d-e714-475e-8ac7-f4735ef5b50d
+  baseline: 4f364fb6-1184-43b7-8f19-a6d2a5b489dd
+  official-intersections: 8763cc83-db1c-461c-b779-b85312670c81
+  proportional-intersections: eafe567c-8927-4cff-9793-ddf84b8ce0d8-intersections
+  competitive-intersections: c59a48ba-4476-4884-9608-1baa05cdc275-intersections
+  minority-intersections: 75192539-ed9c-46de-9120-b0807d9d61e0-intersections
+  compact-intersections: 1d7fea8b-844e-47b8-805c-18577d784845-intersections
+  splitting-intersections: b063754d-e714-475e-8ac7-f4735ef5b50d-intersections
+  ready: true
