@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:44
+- xx: MA
+  name: Massachusetts
+  official: fc4efcb0-ef84-45c4-ae49-73fc355b9cdb
+  proportional: 30e375dd-90bd-4ba4-be0e-a898dcdd5281
+  competitive: 2b637c1b-e9d6-4b64-9c19-160fcaaea311
+  minority: 3b8092f7-1af6-429a-a026-793f4e97d42c
+  compact: fd2e6ac7-4b6c-4194-bd7f-7c5530079f81
+  splitting: 7bb7c7fb-052c-4fc6-b10f-4a1da6ebaa9d
+  baseline: d82acc3d-71d5-4120-bcf0-0597a74c98e0
+  official-intersections: ec0a1c37-5488-47e0-9147-5966c6f0a902
+  proportional-intersections: 30e375dd-90bd-4ba4-be0e-a898dcdd5281-intersections
+  competitive-intersections: 2b637c1b-e9d6-4b64-9c19-160fcaaea311-intersections
+  minority-intersections: 3b8092f7-1af6-429a-a026-793f4e97d42c-intersections
+  compact-intersections: fd2e6ac7-4b6c-4194-bd7f-7c5530079f81-intersections
+  splitting-intersections: 7bb7c7fb-052c-4fc6-b10f-4a1da6ebaa9d-intersections
+  ready: true
