@@ -92,7 +92,7 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    # xx = "WI"  # TODO - Remove this line
+    xx = "OR"  # TODO - To run a specific state in the debugger
     baseline: str = (
         os.path.expanduser(args.baseline)
         if args.baseline
