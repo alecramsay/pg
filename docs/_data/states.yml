@@ -287,3 +287,20 @@
   compact-intersections: 212a6913-f1a7-42b5-9d41-49480a62cfc2-intersections
   splitting-intersections: 5b670edf-d65a-4a91-b6ed-27edb9a1cc49-intersections
   ready: true
+# Generated at 08/21/2023 @ 15:31
+- xx: PA
+  name: Pennsylvania
+  official: 02f7a1e7-0dc9-4cd2-b346-482fbb9bc28c
+  proportional: ce956496-0b73-426b-b2e7-c9b469bb6acf
+  competitive: ee2beb63-b3e0-4c7e-96d1-9af5b3378df7
+  minority: 27093e3b-b571-45c0-af63-35dcf8bc865a
+  compact: 732c1604-6711-4bc7-b581-8bdf7ca3d8fe
+  splitting: 7daee132-526d-4b07-a763-33a49cdbab72
+  baseline: cb26c20b-d0d1-4971-a65b-9bae4b37b4d4
+  official-intersections: d52b15b1-10c3-463b-bf87-6f82e7a3c1bb
+  proportional-intersections: ce956496-0b73-426b-b2e7-c9b469bb6acf-intersections
+  competitive-intersections: ee2beb63-b3e0-4c7e-96d1-9af5b3378df7-intersections
+  minority-intersections: 27093e3b-b571-45c0-af63-35dcf8bc865a-intersections
+  compact-intersections: 732c1604-6711-4bc7-b581-8bdf7ca3d8fe-intersections
+  splitting-intersections: 7daee132-526d-4b07-a763-33a49cdbab72-intersections
+  ready: true
