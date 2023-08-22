@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/AR/AR_2022_Congress_Competitive_intersections.csv (elapsed: 0:09)
+importmap: guid: 15e6d677-710c-4d45-a513-2493ffc9d5f1
+importmap: shareguid: 81add125-074f-439e-82e3-4143413cb233

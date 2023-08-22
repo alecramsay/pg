@@ -66,4 +66,22 @@
   compact-intersections: a3f0116b-2e8f-4d59-b96a-be5170afce5c-intersections
   splitting-intersections: d597194a-a012-490d-9c9f-6ea2f7a05957-intersections
   ready: true
+# Generated at 08/21/2023 @ 14:08
+- xx: AR
+  name: Arkansas
+  official: 9a657bb8-5ea3-4946-9a68-61f33a6e0537
+  proportional: f8a20dc2-e962-480c-bce4-c8abe7c71ad8
+  competitive: 55d9ec16-b0e2-47f3-8425-818d4feb872c
+  minority: 9b66129b-ea1b-4ba3-bbad-06fb1dc7f5e9
+  compact: 755fe464-f613-4ac8-8b9f-0913ba1e287b
+  splitting: 5d60e9b2-d6fa-49ed-b427-39ce39adf165
+  baseline: 0851c0e0-89e7-4a37-9da1-0bed3efa90c6
+  official-intersections: a5dbc9fd-bcb9-4792-990b-99925f5a4426
+  proportional-intersections: f8a20dc2-e962-480c-bce4-c8abe7c71ad8-intersections
+  competitive-intersections: 55d9ec16-b0e2-47f3-8425-818d4feb872c-intersections
+  minority-intersections: 9b66129b-ea1b-4ba3-bbad-06fb1dc7f5e9-intersections
+  compact-intersections: 755fe464-f613-4ac8-8b9f-0913ba1e287b-intersections
+  splitting-intersections: 5d60e9b2-d6fa-49ed-b427-39ce39adf165-intersections
+  ready: true
+
 
