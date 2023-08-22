@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:39
+- xx: LA
+  name: Louisiana
+  official: 2c4e3e97-0c1d-4d24-b89c-5ab55f9e4c10
+  proportional: 8b6a0a3d-d4c2-496f-9511-fe8aef571bfc
+  competitive: 35f11696-a41f-4699-92d0-323d3078eb2e
+  minority: e71d9390-62d1-4f3c-b08a-02410371dadf
+  compact: 833c2c14-2442-4d35-bf6a-2938b7a1a148
+  splitting: bb1606f1-b08a-4a64-a86b-16beb8c246a1
+  baseline: 6f2bb669-b8c6-4670-8990-f71c5461d08d
+  official-intersections: 872be6ef-207f-4103-8204-60ed6a0e531c
+  proportional-intersections: 8b6a0a3d-d4c2-496f-9511-fe8aef571bfc-intersections
+  competitive-intersections: 35f11696-a41f-4699-92d0-323d3078eb2e-intersections
+  minority-intersections: e71d9390-62d1-4f3c-b08a-02410371dadf-intersections
+  compact-intersections: 833c2c14-2442-4d35-bf6a-2938b7a1a148-intersections
+  splitting-intersections: bb1606f1-b08a-4a64-a86b-16beb8c246a1-intersections
+  ready: true
