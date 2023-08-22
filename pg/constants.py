@@ -72,6 +72,14 @@ VT 1
 WY 1
 """
 
+
+def study_unit(state: str) -> str:
+    if state in ["CA", "OR", "WV"]:
+        return "bg"
+    else:
+        return "vtd"
+
+
 ### ENVIRONMENT CONSTANTS ###
 
 rawdata_dir: str = "../../../local/pg/rawdata"

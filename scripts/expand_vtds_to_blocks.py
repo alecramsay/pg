@@ -6,11 +6,11 @@ Expand a precinct-assignment file into a block-assignment file
 
 For example:
 
-$ scripts/expand_vtds_to_blocks.py -s NC -o ~/Downloads/NC/ -f NC20C_baseline_100.csv
+$ scripts/expand_precincts_to_blocks.py -s NC -o ~/Downloads/NC/ -f NC20C_baseline_100.csv
 
 For documentation, type:
 
-$ scripts/expand_vtds_to_blocks.py -h
+$ scripts/expand_precincts_to_blocks.py -h
 
 """
 
@@ -78,31 +78,32 @@ def main() -> None:
 
     #
 
+    unit: str = study_unit(xx)
     year: str = cycle if label == "Baseline" else yyyy
     expanded_path: str = os.path.join(
         output_dir, file_name([xx, year, plan_type, label], "_", "csv")
     )
 
-    # Unpickle blocks by vtd
+    # Unpickle blocks by vtd or bg
 
     rel_path: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
-        [xx, cycle, "vtd", "blocks"], "_", "pickle"
+        [xx, cycle, unit, "blocks"], "_", "pickle"
     )
-    blocks_by_vtd: dict = read_pickle(rel_path)
+    blocks_by_precinct: dict = read_pickle(rel_path)
 
     # Read the precinct-assignment file
 
     types: list = [str, int]
-    vtd_assignments: list = read_csv(paf, types)  # A list of dicts
+    precinct_assignments: list = read_csv(paf, types)  # A list of dicts
 
     # Map vtd assignments to block assignments
 
     block_assignments: list = list()
-    for vtd_assignment in vtd_assignments:
-        vtd: str = vtd_assignment["GEOID"]
-        district: int = vtd_assignment["DISTRICT"]
+    for assignment in precinct_assignments:
+        precinct: str = assignment["GEOID"]
+        district: int = assignment["DISTRICT"]
 
-        for block in blocks_by_vtd[vtd]:
+        for block in blocks_by_precinct[precinct]:
             block_assignments.append({"GEOID": block, "DISTRICT": district})
 
     write_csv(expanded_path, block_assignments, ["GEOID", "DISTRICT"])

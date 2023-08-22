@@ -117,7 +117,7 @@ def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, 
 
     # Read the precinct adjacencies
 
-    unit: str = "vtd"  # TODO: extend for BG's
+    unit: str = study_unit(xx)
 
     adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
         [xx, cycle, unit, "adjacencies"], "_", "csv"

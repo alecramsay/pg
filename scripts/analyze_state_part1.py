@@ -92,7 +92,7 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    xx = "AL"  # TODO - Remove this line
+    # xx = "WI"  # TODO - Remove this line
     baseline: str = (
         os.path.expanduser(args.baseline)
         if args.baseline
@@ -181,7 +181,9 @@ def main() -> None:
     print(">>> Expanding the baseline CSV to a block-assignment file ...")
 
     base_csv: str = FileSpec(baseline).name + ".csv"
-    command = f"scripts/expand_vtds_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
+    command = (
+        f"scripts/expand_precincts_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
+    )
     print(command)
     os.system(command)
 
