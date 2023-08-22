@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:21
+- xx: IN
+  name: Indiana
+  official: 1f33195d-8b15-41fe-9e40-f6360c41891b
+  proportional: e825a012-e71d-4a8c-baf4-3e65679c44e4
+  competitive: 46466f6e-fec1-4ad4-810f-4252d74fb1d6
+  minority: 16649a06-2948-4055-b912-14565e16ebca
+  compact: e4c843ff-bfcb-4cd1-9972-f91faef37139
+  splitting: 871bbd9e-d0fa-4a62-b8d4-82384fbaa89f
+  baseline: e2653f99-83b4-48f3-aea9-a0406fe0899c
+  official-intersections: 226a0790-891d-4b18-be0f-e9c20de9fc99
+  proportional-intersections: e825a012-e71d-4a8c-baf4-3e65679c44e4-intersections
+  competitive-intersections: 46466f6e-fec1-4ad4-810f-4252d74fb1d6-intersections
+  minority-intersections: 16649a06-2948-4055-b912-14565e16ebca-intersections
+  compact-intersections: e4c843ff-bfcb-4cd1-9972-f91faef37139-intersections
+  splitting-intersections: 871bbd9e-d0fa-4a62-b8d4-82384fbaa89f-intersections
+  ready: true
