@@ -253,3 +253,20 @@
   compact-intersections: 91b5c1e1-3dba-4f71-9fea-f0425081626f-intersections
   splitting-intersections: 9aa3fbc2-29a1-4d27-b11e-18abf0cbec94-intersections
   ready: true
+# Generated at 08/21/2023 @ 15:17
+- xx: NM
+  name: New Mexico
+  official: fb7ba3ca-fe7f-4f13-98b1-d7c178194898
+  proportional: cfadc4f9-d394-41d3-b58c-aebe9929d9e2
+  competitive: 62286e40-169e-4476-962f-7d6a656bcbcb
+  minority: f371f94a-228e-4eac-990c-9151eaf850f1
+  compact: e9e3add3-7476-4233-a794-45021fcc159f
+  splitting: 239915f8-43da-4bbe-ad0f-4015760b278b
+  baseline: ba86f4f2-5840-4534-b4c6-516f6b3d88da
+  official-intersections: 49ef7b61-29f3-4f37-be2d-739781978953
+  proportional-intersections: cfadc4f9-d394-41d3-b58c-aebe9929d9e2-intersections
+  competitive-intersections: 62286e40-169e-4476-962f-7d6a656bcbcb-intersections
+  minority-intersections: f371f94a-228e-4eac-990c-9151eaf850f1-intersections
+  compact-intersections: e9e3add3-7476-4233-a794-45021fcc159f-intersections
+  splitting-intersections: 239915f8-43da-4bbe-ad0f-4015760b278b-intersections
+  ready: true

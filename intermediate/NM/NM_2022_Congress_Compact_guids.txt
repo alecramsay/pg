@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NM/NM_2022_Congress_Compact_canonical.csv (elapsed: 0:08)
+importmap: guid: 321cdda5-e361-46af-9e00-0057ffb46da9
+importmap: shareguid: e9e3add3-7476-4233-a794-45021fcc159f

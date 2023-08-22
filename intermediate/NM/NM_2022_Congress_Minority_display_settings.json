@@ -1,0 +1,52 @@
+{
+	"meta": {
+		"palette": "plasma_r"
+	},
+	"districtprops": [
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "",
+			"color": "",
+			"target": 0,
+			"order": 0
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "1",
+			"color": "#f0f823",
+			"target": 0,
+			"order": 1
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "2",
+			"color": "#0f0787",
+			"target": 0,
+			"order": 2
+		},
+		{
+			"lat": 0,
+			"lon": 0,
+			"fontsize": -1,
+			"label": "3",
+			"color": "#8b09a5",
+			"target": 0,
+			"order": 3
+		}
+	],
+	"owner": {
+		"UserID": "owner",
+		"bShowMap": true,
+		"bShowVotingDistricts": true,
+		"bShowDistrictLines": false,
+		"bShowNewDistrictLines": true,
+		"bShowDistrictLabels": true,
+		"bShowLandmarks": false
+	}
+}
