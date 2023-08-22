@@ -100,6 +100,20 @@
   compact-intersections: e4c843ff-bfcb-4cd1-9972-f91faef37139-intersections
   splitting-intersections: 871bbd9e-d0fa-4a62-b8d4-82384fbaa89f-intersections
   ready: true
-
-
-
+# Generated at 08/21/2023 @ 14:25
+- xx: IA
+  name: Iowa
+  official: d75c5664-48cd-4af9-9a23-895bff08fb51
+  proportional: 5a124d90-a6b1-4c03-9624-4aad5b94f158
+  competitive: 562504f5-fd7e-4c16-ab0a-d12ecf5d1d6d
+  minority: cbc3e0a8-58ae-48cd-8503-a682145477db
+  compact: aa0ef631-5f61-4450-8bcd-c11c2b8eb2fb
+  splitting: 6053f120-80ba-43ee-b59f-a01b248f59b2
+  baseline: e657540a-0f8a-40a1-975d-9b8ffbf29f90
+  official-intersections: ba838948-dca9-4fde-b961-47bed218a920
+  proportional-intersections: 5a124d90-a6b1-4c03-9624-4aad5b94f158-intersections
+  competitive-intersections: 562504f5-fd7e-4c16-ab0a-d12ecf5d1d6d-intersections
+  minority-intersections: cbc3e0a8-58ae-48cd-8503-a682145477db-intersections
+  compact-intersections: aa0ef631-5f61-4450-8bcd-c11c2b8eb2fb-intersections
+  splitting-intersections: 6053f120-80ba-43ee-b59f-a01b248f59b2-intersections
+  ready: true

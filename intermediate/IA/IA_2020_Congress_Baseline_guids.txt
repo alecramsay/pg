@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/IA/IA_2020_Congress_Baseline_canonical.csv (elapsed: 0:08)
+importmap: guid: 8865a744-5a57-4f16-b54f-d517fb6a7730
+importmap: shareguid: e657540a-0f8a-40a1-975d-9b8ffbf29f90

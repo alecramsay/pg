@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/IA/IA_2022_Congress_Splitting_intersections.csv (elapsed: 0:08)
+importmap: guid: e9fa23df-fc12-4d79-ad28-14d8d36b0cec
+importmap: shareguid: abd207e4-c80d-49c7-a97c-b9304caa6174
