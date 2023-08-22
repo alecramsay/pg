@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 15:24
+- xx: OK
+  name: Oklahoma
+  official: 2f14c343-7453-418f-bf40-a37c7486c5b9
+  proportional: 994e91bf-c51b-4982-81c0-ee64a505a4cd
+  competitive: 0455ce23-4f95-41c4-a662-1cb5d90f76c4
+  minority: b0139df5-0420-4f85-b87e-035d5b0bc062
+  compact: 212a6913-f1a7-42b5-9d41-49480a62cfc2
+  splitting: 5b670edf-d65a-4a91-b6ed-27edb9a1cc49
+  baseline: 77ce1919-1c45-4fe3-aa27-4e2305d21d89
+  official-intersections: 17102595-411b-4d19-8b17-39a924b03060
+  proportional-intersections: 994e91bf-c51b-4982-81c0-ee64a505a4cd-intersections
+  competitive-intersections: 0455ce23-4f95-41c4-a662-1cb5d90f76c4-intersections
+  minority-intersections: b0139df5-0420-4f85-b87e-035d5b0bc062-intersections
+  compact-intersections: 212a6913-f1a7-42b5-9d41-49480a62cfc2-intersections
+  splitting-intersections: 5b670edf-d65a-4a91-b6ed-27edb9a1cc49-intersections
+  ready: true
