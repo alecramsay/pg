@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 15:09
+- xx: NV
+  name: Nevada
+  official: f5853e23-39dd-484e-aceb-4024df0518df
+  proportional: 9e528ece-27b0-4c85-9193-8e4cad30c4e3
+  competitive: c9ddf1ec-e8d9-43b0-8ff3-3d7888ad3fff
+  minority: c7fe7a67-8e07-4282-bcf0-d9bc5a61effe
+  compact: 2637e8e5-68b4-489c-a26f-b85a7684f39e
+  splitting: 71fad5d5-88be-49f2-abdc-b023d4a36233
+  baseline: aad53a95-1af7-4822-9025-a79a87411edd
+  official-intersections: cdf2a419-fd7f-43f6-96a7-38ff7c5be8b3
+  proportional-intersections: 9e528ece-27b0-4c85-9193-8e4cad30c4e3-intersections
+  competitive-intersections: c9ddf1ec-e8d9-43b0-8ff3-3d7888ad3fff-intersections
+  minority-intersections: c7fe7a67-8e07-4282-bcf0-d9bc5a61effe-intersections
+  compact-intersections: 2637e8e5-68b4-489c-a26f-b85a7684f39e-intersections
+  splitting-intersections: 71fad5d5-88be-49f2-abdc-b023d4a36233-intersections
+  ready: true

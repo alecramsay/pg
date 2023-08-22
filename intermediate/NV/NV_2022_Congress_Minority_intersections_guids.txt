@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NV/NV_2022_Congress_Minority_intersections.csv (elapsed: 0:08)
+importmap: guid: b37645b3-df1f-4e87-a1df-97c656e1a329
+importmap: shareguid: 81911a26-4dad-470d-a7e9-c21eccc9d707
