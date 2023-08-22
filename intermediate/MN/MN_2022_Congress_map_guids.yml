@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:51
+- xx: MN
+  name: Minnesota
+  official: 6289043d-a8f9-4c99-8a98-cb2b40896f97
+  proportional: ed565ac2-1006-4bc2-865f-aae4818a99bf
+  competitive: 61215c8d-6933-4c80-929d-512b3a415ace
+  minority: a60d5115-2d87-4b8c-8f69-af84b86fd6d3
+  compact: d5c129c1-91e9-4b24-abc8-c7f2164d4187
+  splitting: 108a1c11-db7d-46b8-8fc6-a6e30144a047
+  baseline: 1aed91cd-e96b-4fe1-bf79-8091c2916c7a
+  official-intersections: 5f6ae4ca-1cc8-4e7f-b55c-92fc7858bba7
+  proportional-intersections: ed565ac2-1006-4bc2-865f-aae4818a99bf-intersections
+  competitive-intersections: 61215c8d-6933-4c80-929d-512b3a415ace-intersections
+  minority-intersections: a60d5115-2d87-4b8c-8f69-af84b86fd6d3-intersections
+  compact-intersections: d5c129c1-91e9-4b24-abc8-c7f2164d4187-intersections
+  splitting-intersections: 108a1c11-db7d-46b8-8fc6-a6e30144a047-intersections
+  ready: true

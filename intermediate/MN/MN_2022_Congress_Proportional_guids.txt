@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MN/MN_2022_Congress_Proportional_canonical.csv (elapsed: 0:13)
+importmap: guid: c2357230-33d2-4880-afa2-757ab4382bc0
+importmap: shareguid: ed565ac2-1006-4bc2-865f-aae4818a99bf
