@@ -20,3 +20,6 @@ This page describes the DRA capabilities that I (Alec) took advantage of in deve
 - Edit map settings by GUID -- I set core display properties for each map at the CLI [(7 + 6) x 42 => 546].
 - Save a map image -- this is the right-click Chrome hack. This capability is *not* currently exposed at the DRA CLI, but we figured out how to replicate the feature at the command line.
 - Pull ratings for a map by GUID -- I pulled ratings for each map at the CLI [(7 + 6) x 42 => 546].
+
+Altogether, I generate 85 artifacts per state or 3,570 in total, 
+of which 1,092 are visible (the rest intermediate/restart files).

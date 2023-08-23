@@ -2,7 +2,12 @@
 layout: default
 ---
 
-This site characterizes some major policy tradeoffs inherent in congressional redistricting state by state.[^1]
+This site characterizes policy tradeoffs inherent in congressional redistricting state by state.[^1]
+In contrast to the *Compare* feature in [Dave's Redistricting](https://davesredistricting.org/) (DRA) 
+&#8212; which compares a given map to maps that optimize for 
+proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting &#8212; 
+we compare these five policy-maximizing maps and the official map to a common baseline set of districts
+to illustrate some major quantifiable policy tradeoffs for congressional redistricting in each state.
 
 Along the way, we make a series of claims:
 
@@ -36,9 +41,8 @@ Baseline districts characterize the underlying "population geography" of a state
 which constrains every other valid map to some degree. 
 
 To illustrate the inherent redistricting tradeoffs states, we compared the
-the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) for each state
-from [Dave's Redistricting](https://davesredistricting.org/) (DRA) 
-&#8212; these maximize proportionality, competitiveness, minority representation, compactness, and county--district splitting &#8212; 
+the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) for each state from DRA
+&#8212; these optimize proportionality, competitiveness, minority representation, compactness, and county--district splitting &#8212; 
 as well as the official map for each state to the baseline districts.
 These contrasts put policy choices in bold relief.
 

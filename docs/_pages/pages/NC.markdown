@@ -20,7 +20,7 @@ but have only moderate competitiveness (56) and opportunity for minority represe
 -   Compactness can also be improved somewhat (79 &#x2192; 98) but at the expense of some competitiveness (56 &#x2192; 35).
 -   County-district splitting can be minimized (14 &#x2192; 90) at the expense of some competitiveness (56 &#x2192; 28).
 
-Those are the policy tradeoffs.
+Those are some major quantifiable policy tradeoffs.
 An average of 62% of population-weighted precincts assignments are shared between notable maps and the baseline.
 
 The official map was ordered by the NC Supreme Court and challenged in Moore v. Harper.
