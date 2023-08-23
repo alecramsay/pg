@@ -372,3 +372,20 @@
   compact-intersections: 9805f109-57bf-4a1f-beee-5024e951b210-intersections
   splitting-intersections: d3b81439-541a-4ea8-95f8-ed75fb229d46-intersections
   ready: true
+# Generated at 08/22/2023 @ 06:38
+- xx: WV
+  name: West Virginia
+  official: 56a0e4e0-bdda-48eb-b6b4-e116eb9b09b4
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact: c18fcba0-bd67-4e0d-97f2-03374f2afc2a
+  splitting: e8c18304-93b6-4274-8cf5-c62d67de3f70
+  baseline: 5880e732-bee0-4547-ac2c-be54c9e362c5
+  official-intersections: baaff30c-6024-4c4b-bb2e-a7555fcebdfe
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact-intersections: c18fcba0-bd67-4e0d-97f2-03374f2afc2a-intersections
+  splitting-intersections: e8c18304-93b6-4274-8cf5-c62d67de3f70-intersections
+  ready: true
