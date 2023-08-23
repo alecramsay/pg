@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 14:15
+- xx: ID
+  name: Idaho
+  official: 1fcdae92-ac77-4325-8339-084549b953e1
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive: f94f3b4d-fecb-4ce4-b0c7-d8c623fb2ed2
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact: d979c9bd-7819-4a04-9b26-57e547027498
+  splitting: b9828fcb-80b9-4676-82e2-a2e8bf13fac2
+  baseline: 663ec6e6-c83c-4963-8b83-310f88ba2bbd
+  official-intersections: 172dbf28-6b7e-4fb7-ad67-0b54764226d6
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive-intersections: f94f3b4d-fecb-4ce4-b0c7-d8c623fb2ed2-intersections
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact-intersections: d979c9bd-7819-4a04-9b26-57e547027498-intersections
+  splitting-intersections: b9828fcb-80b9-4676-82e2-a2e8bf13fac2-intersections
+  ready: true
