@@ -89,7 +89,7 @@ def main() -> None:
 
     print(f"Screenshot of {xx} / {label} / {guid} ...")
 
-    command: str = f"node scripts/screenshot.js {url} {image_path}"
+    command: str = f"node scripts/puppeteer_screenshot.js {url} {image_path}"
     if verbose:
         print(command)
     os.system(command)

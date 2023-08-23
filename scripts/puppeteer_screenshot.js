@@ -3,11 +3,11 @@
 // Thanks to Steve Marx for working out the basics of how to do this!
 //
 // To build:
-// tsc scripts/screenshot.ts
+// tsc scripts/puppeteer_screenshot.ts
 //
 // To run:
-// node scripts/screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a /Users/alecramsay/Downloads/screenshot.png
-// node scripts/screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a /Users/alecramsay/Downloads/screenshot.png
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -48,7 +48,7 @@ var _this = this;
 var puppeteer = require('puppeteer');
 var _a = process.argv.slice(2), url = _a[0], pathInput = _a[1];
 if (url === undefined) {
-    throw new Error("Usage: node screenshot.js <url> [<screenshot PNG path>]");
+    throw new Error("Usage: node puppeteer_screenshot.js <url> [<screenshot PNG path>]");
 }
 var screenshotPath = pathInput !== null && pathInput !== void 0 ? pathInput : "screenshot.png";
 (function () { return __awaiter(_this, void 0, void 0, function () {

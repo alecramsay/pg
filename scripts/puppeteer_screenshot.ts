@@ -3,18 +3,18 @@
 // Thanks to Steve Marx for working out the basics of how to do this!
 //
 // To build:
-// tsc scripts/screenshot.ts
+// tsc scripts/puppeteer_screenshot.ts
 //
 // To run:
-// node scripts/screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a /Users/alecramsay/Downloads/screenshot.png
-// node scripts/screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a /Users/alecramsay/Downloads/screenshot.png
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a
 
 const puppeteer = require('puppeteer');
 
 const [url, pathInput] = process.argv.slice(2);
 if (url === undefined)
 {
-  throw new Error("Usage: node screenshot.js <url> [<screenshot PNG path>]");
+  throw new Error("Usage: node puppeteer_screenshot.js <url> [<screenshot PNG path>]");
 }
 
 const screenshotPath = pathInput ?? "screenshot.png";
