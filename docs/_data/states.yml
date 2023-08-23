@@ -355,3 +355,20 @@
   compact-intersections: 946a59c6-8d35-4278-91fb-f0274f8ef14e-intersections
   splitting-intersections: 712a8e4d-5320-4bf5-b548-63a18c441f30-intersections
   ready: true
+# Generated at 08/22/2023 @ 06:33
+- xx: OR
+  name: Oregon
+  official: 50fae1e0-4380-4e74-8897-3a4b269013ae
+  proportional: 7d7eed42-fa60-4a3d-b0f8-e248e6530923
+  competitive: b1d487ac-478b-4c0e-93d6-8c898ceb1db8
+  minority: 24abef72-40e7-48e8-acf9-9586660f9d79
+  compact: 9805f109-57bf-4a1f-beee-5024e951b210
+  splitting: d3b81439-541a-4ea8-95f8-ed75fb229d46
+  baseline: 7f68e6d2-4be7-4ce3-90e8-52fda63c229e
+  official-intersections: d6fa372a-3b40-4031-860c-ba1b7a3320c0
+  proportional-intersections: 7d7eed42-fa60-4a3d-b0f8-e248e6530923-intersections
+  competitive-intersections: b1d487ac-478b-4c0e-93d6-8c898ceb1db8-intersections
+  minority-intersections: 24abef72-40e7-48e8-acf9-9586660f9d79-intersections
+  compact-intersections: 9805f109-57bf-4a1f-beee-5024e951b210-intersections
+  splitting-intersections: d3b81439-541a-4ea8-95f8-ed75fb229d46-intersections
+  ready: true
