@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 15:33
+- xx: RI
+  name: Rhode Island
+  official: f4e9a4d4-e1f1-46ef-a241-0d5189b0ac1a
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive: d539c7f2-9dfd-4c91-9ff7-6fcaa6188f64
+  minority: 031057b1-a824-49e6-ba93-144a40212829
+  compact: e8b026e6-5bda-4959-9924-92e35bb5a7bc
+  splitting: 682fd759-2811-4eee-824b-fa47262daaa4
+  baseline: 457f9732-5dd8-45e3-b6a0-3dc10cee06f3
+  official-intersections: c754e0bb-6b02-451b-9831-b6354d436700
+  proportional: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  competitive-intersections: d539c7f2-9dfd-4c91-9ff7-6fcaa6188f64-intersections
+  minority-intersections: 031057b1-a824-49e6-ba93-144a40212829-intersections
+  compact-intersections: e8b026e6-5bda-4959-9924-92e35bb5a7bc-intersections
+  splitting-intersections: 682fd759-2811-4eee-824b-fa47262daaa4-intersections
+  ready: true

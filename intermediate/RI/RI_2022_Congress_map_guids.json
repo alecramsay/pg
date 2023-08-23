@@ -1,0 +1,13 @@
+{
+    "official": "f4e9a4d4-e1f1-46ef-a241-0d5189b0ac1a",
+    "official-intersections": "c754e0bb-6b02-451b-9831-b6354d436700",
+    "competitive": "d539c7f2-9dfd-4c91-9ff7-6fcaa6188f64",
+    "competitive-intersections": "01883817-374a-4f5e-a880-d4f9909a7a28",
+    "minority": "031057b1-a824-49e6-ba93-144a40212829",
+    "minority-intersections": "f5d3acd3-0029-42a0-ae18-223fcf9c52df",
+    "compact": "e8b026e6-5bda-4959-9924-92e35bb5a7bc",
+    "compact-intersections": "26e4fa14-a4a9-4041-861d-4af11ff48e70",
+    "splitting": "682fd759-2811-4eee-824b-fa47262daaa4",
+    "splitting-intersections": "f314051b-1bc3-4f6f-97cf-b45d7ea5832d",
+    "baseline": "457f9732-5dd8-45e3-b6a0-3dc10cee06f3"
+}
