@@ -338,3 +338,20 @@
   compact-intersections: 935b3b10-1229-4e55-b17c-634260fb1ede-intersections
   splitting-intersections: 5cba05c7-bb1b-4c23-9c22-78a533aa87c4-intersections
   ready: true
+# Generated at 08/21/2023 @ 15:51
+- xx: WA
+  name: Washington
+  official: e105d496-7c19-4c24-b4ca-d1ee940f9d95
+  proportional: 788e5848-cb4d-4a78-869c-01873234f933
+  competitive: d287f786-dcf0-4b12-9698-bcef1b4a197a
+  minority: 80b07efb-0306-4000-8a3b-be10bb21d764
+  compact: 946a59c6-8d35-4278-91fb-f0274f8ef14e
+  splitting: 712a8e4d-5320-4bf5-b548-63a18c441f30
+  baseline: 8775e20b-01ba-48ba-8164-d510f017ed26
+  official-intersections: 3d782a7d-2d3f-452d-8771-948d973e97a9
+  proportional-intersections: 788e5848-cb4d-4a78-869c-01873234f933-intersections
+  competitive-intersections: d287f786-dcf0-4b12-9698-bcef1b4a197a-intersections
+  minority-intersections: 80b07efb-0306-4000-8a3b-be10bb21d764-intersections
+  compact-intersections: 946a59c6-8d35-4278-91fb-f0274f8ef14e-intersections
+  splitting-intersections: 712a8e4d-5320-4bf5-b548-63a18c441f30-intersections
+  ready: true

@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/WA/WA_2022_Congress_Competitive_intersections.csv (elapsed: 0:13)
+importmap: guid: f6babc6b-ce0c-4f16-8339-75137765886c
+importmap: shareguid: 103512fa-2621-4870-940d-c2e2b2096ca4

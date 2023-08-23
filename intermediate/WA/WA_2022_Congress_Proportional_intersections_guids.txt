@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/WA/WA_2022_Congress_Proportional_intersections.csv (elapsed: 0:11)
+importmap: guid: b20b9cda-972b-4c9b-a023-aab55c282fea
+importmap: shareguid: ceb99278-26d9-4f59-a86c-aa99487fd6be

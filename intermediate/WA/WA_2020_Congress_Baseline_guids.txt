@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/WA/WA_2020_Congress_Baseline_canonical.csv (elapsed: 0:09)
+importmap: guid: 2592230f-6ad5-49ab-b403-88a5ec987e1f
+importmap: shareguid: 8775e20b-01ba-48ba-8164-d510f017ed26
