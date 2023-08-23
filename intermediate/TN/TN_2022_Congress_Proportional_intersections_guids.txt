@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TN/TN_2022_Congress_Proportional_intersections.csv (elapsed: 0:09)
+importmap: guid: 79783dfd-1973-4695-bd69-4851682e7bf1
+importmap: shareguid: c96cbe47-b056-4772-b824-12b75cca4c89

@@ -1,0 +1,17 @@
+# Generated at 08/21/2023 @ 15:43
+- xx: TN
+  name: Tennessee
+  official: 48f83fae-7bbf-4d85-9e23-dae98374957b
+  proportional: 49e2337b-ebff-4f82-885b-bf50eaece8a6
+  competitive: 0a94ba50-0c20-480b-8ac0-f7ad53d5a926
+  minority: b10dc321-5d14-4396-9568-362c8ab8e15f
+  compact: 935b3b10-1229-4e55-b17c-634260fb1ede
+  splitting: 5cba05c7-bb1b-4c23-9c22-78a533aa87c4
+  baseline: da3c2e19-8701-4942-86a5-c1721bd2bd4d
+  official-intersections: f69a228c-4653-445a-811c-803766f4d512
+  proportional-intersections: 49e2337b-ebff-4f82-885b-bf50eaece8a6-intersections
+  competitive-intersections: 0a94ba50-0c20-480b-8ac0-f7ad53d5a926-intersections
+  minority-intersections: b10dc321-5d14-4396-9568-362c8ab8e15f-intersections
+  compact-intersections: 935b3b10-1229-4e55-b17c-634260fb1ede-intersections
+  splitting-intersections: 5cba05c7-bb1b-4c23-9c22-78a533aa87c4-intersections
+  ready: true
