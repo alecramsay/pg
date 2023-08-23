@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/SC/SC_2022_Congress_Proportional_canonical.csv (elapsed: 0:09)
+importmap: guid: 24648f95-bec3-4cd3-abfe-71003f4f8881
+importmap: shareguid: e323112f-a4f2-4a28-b5d0-67e4428a21b1

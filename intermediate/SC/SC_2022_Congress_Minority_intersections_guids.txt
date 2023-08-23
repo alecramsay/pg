@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/SC/SC_2022_Congress_Minority_intersections.csv (elapsed: 0:10)
+importmap: guid: 948744e3-e627-4a53-9758-941fb1edd044
+importmap: shareguid: c6f71c8d-2f55-4d7c-81ec-415e9b6eb1b0

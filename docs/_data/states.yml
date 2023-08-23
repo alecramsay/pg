@@ -304,3 +304,20 @@
   compact-intersections: 732c1604-6711-4bc7-b581-8bdf7ca3d8fe-intersections
   splitting-intersections: 7daee132-526d-4b07-a763-33a49cdbab72-intersections
   ready: true
+# Generated at 08/21/2023 @ 15:38
+- xx: SC
+  name: South Carolina
+  official: 464f9d87-c15a-4943-ab22-cfd15bee8c73
+  proportional: e323112f-a4f2-4a28-b5d0-67e4428a21b1
+  competitive: e7bff212-7f84-4359-aea7-4cfb39d8cf69
+  minority: c1926021-6f67-499f-9884-af416f6e031f
+  compact: be3f9f2a-d4f0-4981-96ff-3b350b3d1fe0
+  splitting: 4f682caf-7479-412b-b94a-60f4f0f06315
+  baseline: 60e6fbc3-22e7-4199-9a22-f00dc3bf4f91
+  official-intersections: 00ccbef8-935d-47c0-a829-2a677b19a74e
+  proportional-intersections: e323112f-a4f2-4a28-b5d0-67e4428a21b1-intersections
+  competitive-intersections: e7bff212-7f84-4359-aea7-4cfb39d8cf69-intersections
+  minority-intersections: c1926021-6f67-499f-9884-af416f6e031f-intersections
+  compact-intersections: be3f9f2a-d4f0-4981-96ff-3b350b3d1fe0-intersections
+  splitting-intersections: 4f682caf-7479-412b-b94a-60f4f0f06315-intersections
+  ready: true

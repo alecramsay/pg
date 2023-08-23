@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/SC/SC_2022_Congress_Proportional_intersections.csv (elapsed: 0:08)
+importmap: guid: 90df7098-44d4-4e22-aa29-9b4cd47b8ca2
+importmap: shareguid: 52110041-779c-45f4-97b3-7ad7c88009b1
