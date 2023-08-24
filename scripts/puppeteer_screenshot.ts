@@ -6,8 +6,8 @@
 // tsc scripts/puppeteer_screenshot.ts
 //
 // To run:
-// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a /Users/alecramsay/Downloads/screenshot.png
-// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/820378d9-43a4-43c5-aa31-999e6da2702a
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/2d664fff-9375-4354-88d3-bde3a9bbca5a /Users/alecramsay/Downloads/screenshot.png
+// node scripts/puppeteer_screenshot.js https://davesredistricting.org/join/2d664fff-9375-4354-88d3-bde3a9bbca5a
 
 const puppeteer = require('puppeteer');
 
@@ -34,17 +34,7 @@ const screenshotPath = pathInput ?? "screenshot.png";
     // 2381,1481
 
     await page.setViewport({width: 2381, height: 1481});
-    // await page.setViewport({width: 2381, height: 1481, deviceScaleFactor: 2});
 
-    // Device Scale Factor:
-    // https://cloudinary.com/glossary/device-pixel-ratio
-    // https://github.com/puppeteer/puppeteer/issues/2372 <<<
-    // await page._client.send('Emulation.clearDeviceMetricsOverride');
-    // https://github.com/puppeteer/puppeteer/blob/v10.4.0/docs/api.md#class-cdpsession
-    // const client = await page.target().createCDPSession();
-    // await client.send('Emulation.clearDeviceMetricsOverride');
-
-    // console.log("Loading the map. This can take 30 seconds or so... ");
     await page.goto(url, {waitUntil: ['load', 'domcontentloaded', 'networkidle0'], timeout: 0});
 
     await page.addStyleTag({
@@ -53,12 +43,7 @@ const screenshotPath = pathInput ?? "screenshot.png";
 
     const canvas = await page.$('canvas');
 
-    // let dpr = await page.evaluate('window.devicePixelRatio');
-    // console.log(`DPR = ${dpr}`);
-
     await canvas.screenshot({type: 'png', path: screenshotPath});
-
-    // console.log("Done!");
 
   } catch (e)
   {
@@ -69,9 +54,3 @@ const screenshotPath = pathInput ?? "screenshot.png";
   }
 })();
 
-// Resources:
-// - https://developer.chrome.com/blog/headless-chrome/
-// - https://developer.chrome.com/docs/puppeteer/
-// - https://pptr.dev/
-//
-// - chrome://version/

@@ -78,11 +78,8 @@ def main() -> None:
 
     # Chrome
     chrome_options = Options()
-    # chrome_options.add_argument("--disable-gpu")
-    # chrome_options.add_argument("--no-sandbox")
-    # chrome_options.add_argument("--lang=en")
     chrome_options.add_argument("--headless=new")
-    chrome_options.add_argument("--force-device-scale-factor=2.0")
+    # chrome_options.add_argument("--force-device-scale-factor=2.0")
 
     with quitting(webdriver.Chrome(options=chrome_options)) as browser:
         # browser.set_user_verified(True)
@@ -93,13 +90,10 @@ def main() -> None:
 
         browser.get(url)
 
+        # HACK: Wait for the map to load.
         time.sleep(10)
 
-        # style_script = """
-        #     var style = document.createElement('style');
-        #     style.textContent = '.mapboxgl-control-container { display: none; }';
-        #     document.head.appendChild(style);
-        # """
+        # Hide the occluding elements.
         style_script = """
             var style = document.createElement('style');
             style.textContent = '.MuiModal-backdrop, .MuiDialog-container, .MuiButtonBase-root, .MuiTypography-root, .mapboxgl-control-container { display: none; }';
