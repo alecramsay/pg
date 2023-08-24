@@ -1,4 +1,4 @@
-// Take a screenshot of map in DRA, using headless Chrome.
+// Take a screenshot of map in DRA, using puppeteer.
 //
 // Thanks to Steve Marx for working out the basics of how to do this!
 //
