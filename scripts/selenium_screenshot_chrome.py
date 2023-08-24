@@ -23,13 +23,14 @@ import sys
 import contextlib
 import time
 
-# import datetime
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.action_chains import ActionChains
 
 
 def parse_args() -> Namespace:
@@ -104,6 +105,12 @@ def main() -> None:
         WebDriverWait(browser, 30).until(
             EC.presence_of_element_located((By.TAG_NAME, "canvas"))
         )
+
+        # Zoom in - This doesn't seem to work.
+        # zoomAction = ActionChains(browser)
+        # canvas = browser.find_element(By.TAG_NAME, "canvas")
+        # for i in range(2):
+        #     zoomAction.send_keys_to_element(canvas, Keys.CONTROL, "+").perform()
 
         canvas = browser.find_element(By.TAG_NAME, "canvas")
 
