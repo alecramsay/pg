@@ -7,7 +7,8 @@ Take a screenshot of map in DRA, using Python Selenium.
 For example:
 
 $ scripts/selenium_screenshot_chrome.py
-$ scripts/selenium_screenshot_chrome.py https://davesredistricting.org/join/2d664fff-9375-4354-88d3-bde3a9bbca5a /Users/alecramsay/Downloads/screenshot.png
+$ scripts/selenium_screenshot_chrome.py -u https://davesredistricting.org/join/2d664fff-9375-4354-88d3-bde3a9bbca5a -i /Users/alecramsay/Downloads/map.png
+$ scripts/selenium_screenshot_chrome.py -u https://davesredistricting.org/join/7b21719c-7f4b-448c-9d87-413429edeb88 -i /Users/alecramsay/Downloads/map_intersections.png
 
 For documentation, type:
 
@@ -48,7 +49,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--image",
-        default="~/Downloads/screenshot.png",
+        default="~/Downloads/map.png",
         help="Path to resulting screenshot image",
         type=str,
     )
