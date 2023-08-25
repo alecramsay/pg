@@ -9,7 +9,11 @@
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
 
-{% assign map-exists = site.static_files | where: "path", map-png  %}
+{% capture map-path %}
+/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
+{% endcapture %}
+{% assign map-path = map-path | strip_newlines %}
+{% assign map-exists = site.static_files | where: "path", map-path  %}
 
 {% capture radar-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
