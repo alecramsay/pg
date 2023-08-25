@@ -5,10 +5,17 @@
 {% assign label-lower = label | downcase %}
 
 {% capture map-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
+{{ xx }}_2022_Congress_{{ label }}_map.png
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
-{% assign map-exists = site.static_files | where: "path", map-png  %}
+
+{% capture map-path %}
+{{ site.baseurl }}/assets/images/{{ map-png }}
+{% endcapture %}
+{% assign map-path = map-path | strip_newlines %}
+
+{% assign path = page.id | replace: page.slug , ""  | prepend: '/assets/ | append: map-png  %}
+{% assign map-exists = site.static_files | where: "path", path  %}
 
 {% capture radar-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
@@ -50,7 +57,7 @@ https://davesredistricting.org/join/{{ state[intersections-label] }}
     <p>This is the {{ label-qualified }} map:</p>
     <p style="text-align: left">
         <a href="{{ map-link }}">
-            <img src="{{ map-png }}" alt="Map" title="Click to view the map in Dave's Redistricting"
+            <img src="{{ map-path }}" alt="Map" title="Click to view the map in Dave's Redistricting"
                 width="{{ page.map-width }}" />
         </a>
     </p>

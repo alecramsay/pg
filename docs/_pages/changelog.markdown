@@ -6,12 +6,12 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Handling missing maps, e.g., WV (08-25-23)
+- Handling missing maps, e.g., WV, ... (08-25-23)
 - US clickmap mods (08-25-23)
 - Ran SC, TN, WA, OR, WV, ID, RI (08-23-23)
 - Ran AL, AR, IN, IA, KY, LA, MA, MN, MS, MO, NV, NJ, NM, OK, PA (08-22-23)
 - Added calc_overlaps.py script (08-21-23)
-- Edited the rest of the site (08-21-23)) 
+- Edited the rest of the site (08-21-23) 
 - Editing the home page (08-20-23)
 - Added CO (08-20-23)
 - Tried GA which failed (08-20-23)
