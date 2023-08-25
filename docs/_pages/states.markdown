@@ -4,7 +4,7 @@ title: Select a State
 permalink: states/
 ---
 
- <img src="{{ site.baseurl }}/assets/images/us_map_42.png" alt="USA" usemap="#usmap" style="border:none;">
+ <img src="{{ site.baseurl }}/assets/images/us_map.png" alt="USA" usemap="#usmap" style="border:none;">
 
 <map name="usmap">
   <div class="tooltip">
