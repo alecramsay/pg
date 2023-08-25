@@ -4,15 +4,20 @@
 {% assign label-qualified = site.data.maps[include.index].qualified-label | downcase %}
 {% assign label-lower = label | downcase %}
 
-{% capture radar-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
+{% capture map-exists %}
+{{ xx }}_2022_Congress_{{ label }}_map.png
 {% endcapture %}
-{% assign radar-png = radar-png | strip_newlines %}
+{% assign map-exists = map-exists | strip_newlines %}
 
 {% capture map-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
+
+{% capture radar-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
+{% endcapture %}
+{% assign radar-png = radar-png | strip_newlines %}
 
 {% capture intersections-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_intersections_map.png
@@ -44,6 +49,7 @@ https://davesredistricting.org/join/{{ state[intersections-label] }}
 {% endcapture %}
 {% assign intersections-link = intersections-link | strip_newlines %}
 
+{% if map-exists in site.static_files %}
 <div id="{{ label }}" class="tabcontent">
     <p>This is the {{ label-qualified }} map:</p>
     <p style="text-align: left">
@@ -102,3 +108,8 @@ https://davesredistricting.org/join/{{ state[intersections-label] }}
         }
     </script>
 </div>
+{% else %}
+<div id="{{ label }}" class="tabcontent">
+    <p>There is no {{ label-qualified }} map.</p>
+</div>
+{% endif %}
