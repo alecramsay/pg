@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Handling missing maps (08-25-23)
+- Handling missing maps, e.g., WV (08-25-23)
 - US clickmap mods (08-25-23)
 - Ran SC, TN, WA, OR, WV, ID, RI (08-23-23)
 - Ran AL, AR, IN, IA, KY, LA, MA, MN, MS, MO, NV, NJ, NM, OK, PA (08-22-23)
