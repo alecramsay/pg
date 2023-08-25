@@ -9,12 +9,11 @@
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
 
-{% capture map-path %}
-{{ site.baseurl }}/assets/images/{{ map-png }}
+{% capture path %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
 {% endcapture %}
-{% assign map-path = map-path | strip_newlines %}
+{% assign path = path | strip_newlines %}
 
-{% assign path = page.id | replace: page.slug , ""  | prepend: '/assets/ | append: {{ map-png }}  %}
 {% assign map-exists = site.static_files | where: "path", path  %}
 
 {% capture radar-png %}
