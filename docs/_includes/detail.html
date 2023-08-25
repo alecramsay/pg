@@ -4,15 +4,11 @@
 {% assign label-qualified = site.data.maps[include.index].qualified-label | downcase %}
 {% assign label-lower = label | downcase %}
 
-{% capture map-exists %}
-{{ xx }}_2022_Congress_{{ label }}_map.png
-{% endcapture %}
-{% assign map-exists = map-exists | strip_newlines %}
-
 {% capture map-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_map.png
 {% endcapture %}
 {% assign map-png = map-png | strip_newlines %}
+{% assign map-exists = site.static_files | where: "path", map-png  %}
 
 {% capture radar-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_{{ label }}_radar.png
@@ -49,7 +45,7 @@ https://davesredistricting.org/join/{{ state[intersections-label] }}
 {% endcapture %}
 {% assign intersections-link = intersections-link | strip_newlines %}
 
-{% if map-exists in site.static_files %}
+{% if map-exists.size != 0 %}
 <div id="{{ label }}" class="tabcontent">
     <p>This is the {{ label-qualified }} map:</p>
     <p style="text-align: left">
