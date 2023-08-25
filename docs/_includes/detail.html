@@ -14,7 +14,7 @@
 {% endcapture %}
 {% assign map-path = map-path | strip_newlines %}
 
-{% assign path = page.id | replace: page.slug , ""  | prepend: '/assets/ | append: map-png  %}
+{% assign path = page.id | replace: page.slug , ""  | prepend: '/assets/ | append: {{ map-png }}  %}
 {% assign map-exists = site.static_files | where: "path", path  %}
 
 {% capture radar-png %}
