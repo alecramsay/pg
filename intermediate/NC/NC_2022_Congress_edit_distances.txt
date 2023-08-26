@@ -1,0 +1,4 @@
+XX/precincts   Official   Proportional Competitive    Minority     Compact     Splitting  
+------------ ------------ ------------ ------------ ------------ ------------ ------------
+          NC          947          907        1,273        1,295          835        1,007 edits
+       2,666           13            0            0            0          127            0 splits
