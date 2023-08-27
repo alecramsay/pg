@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TX/TX_2022_Congress_Splitting_intersections.csv (elapsed: 0:35)
+importmap: guid: 145a1478-dd9a-40e7-b208-071943872903
+importmap: shareguid: 9c1fcb02-4f4b-4e5a-89f1-05386f26e84d

@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TX/TX_2022_Congress_Official_intersections.csv (elapsed: 0:48)
+importmap: guid: fd29f7be-f717-4d37-8a96-e0bd53a4cbb2
+importmap: shareguid: f524f3f4-0eb9-48ab-8436-0013fe26dc28

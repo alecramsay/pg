@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 08:18
+- xx: TX
+  name: Texas
+  official: 2444fdf9-c4fb-42ef-a319-829f4791d449
+  proportional: 69a28f78-9f44-4141-96a4-f5857d62a7ab
+  competitive: f514890f-5f2a-4c9f-bfd8-5188df27e8f6
+  minority: b9df9a33-3f94-42c7-abcb-6e5576eb449c
+  compact: a1635eae-7917-47ad-a8a4-a0876c2692bd
+  splitting: 91f0d866-a417-4d26-9205-1125eb95c483
+  baseline: f437b631-9b31-42ea-b5d6-247af2b489b5
+  official-intersections: f524f3f4-0eb9-48ab-8436-0013fe26dc28
+  proportional-intersections: 69a28f78-9f44-4141-96a4-f5857d62a7ab-intersections
+  competitive-intersections: f514890f-5f2a-4c9f-bfd8-5188df27e8f6-intersections
+  minority-intersections: b9df9a33-3f94-42c7-abcb-6e5576eb449c-intersections
+  compact-intersections: a1635eae-7917-47ad-a8a4-a0876c2692bd-intersections
+  splitting-intersections: 91f0d866-a417-4d26-9205-1125eb95c483-intersections
+  ready: true

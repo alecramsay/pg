@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TX/TX_2022_Congress_Minority_canonical.csv (elapsed: 0:32)
+importmap: guid: 6014da43-5221-4cef-9e93-2ab9eefa16ce
+importmap: shareguid: b9df9a33-3f94-42c7-abcb-6e5576eb449c

@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TX/TX_2022_Congress_Minority_intersections.csv (elapsed: 0:35)
+importmap: guid: 15ead4bc-c710-408e-8683-bc18dcc55e95
+importmap: shareguid: a3a822b7-4e18-4cc6-99e9-c6f73bb95f7f

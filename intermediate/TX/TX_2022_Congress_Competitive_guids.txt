@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/TX/TX_2022_Congress_Competitive_canonical.csv (elapsed: 0:37)
+importmap: guid: 0acaba0b-32f9-43f1-996f-88a8eac7db44
+importmap: shareguid: f514890f-5f2a-4c9f-bfd8-5188df27e8f6
