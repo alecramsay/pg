@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MD/MD_2020_Congress_Baseline_canonical.csv (elapsed: 0:06)
+importmap: guid: 5d7b650e-9520-4b68-8eb1-0bd51c73828f
+importmap: shareguid: 82591957-5248-45a0-8409-a1a800368b26

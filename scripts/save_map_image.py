@@ -87,7 +87,7 @@ def main() -> None:
 
     # TODO - Take the screenshot, using some solution (#52).
 
-    print(f"Screenshot of {xx} / {label} / {guid} ...")
+    # print(f"Screenshot of {xx} / {label} / {guid} ...")
 
     command: str = f"node scripts/puppeteer_screenshot.js {url} {image_path}"
     if verbose:

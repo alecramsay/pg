@@ -6,7 +6,8 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Added script to calculate edit distances (08-26-23).
+- Trying Todd's fixes (08-27-23)
+- Added script to calculate edit distances (08-26-23)
 - Handling missing maps, e.g., WV (08-25-23)
 - US clickmap mods (08-25-23)
 - Ran SC, TN, WA, OR, WV, ID, RI (08-23-23)

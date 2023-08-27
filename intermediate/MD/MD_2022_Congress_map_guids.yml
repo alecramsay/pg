@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 06:03
+- xx: MD
+  name: Maryland
+  official: ecd313c8-b570-41ca-981f-e4bb24ebc5c7
+  proportional: 5aaa9bda-ab03-45f8-b796-c4f219525877
+  competitive: c435ee73-f2a3-4a6b-aa50-93af2acaeac1
+  minority: da731d0b-fb63-490c-add7-30782463d660
+  compact: d6fb853d-dae1-490b-8c8b-381ea80bce0d
+  splitting: 50c1c728-033d-47d2-a00b-2463b7464788
+  baseline: 82591957-5248-45a0-8409-a1a800368b26
+  official-intersections: 4ed1b688-b927-4cd4-8338-d1ff9967d3c9
+  proportional-intersections: 5aaa9bda-ab03-45f8-b796-c4f219525877-intersections
+  competitive-intersections: c435ee73-f2a3-4a6b-aa50-93af2acaeac1-intersections
+  minority-intersections: da731d0b-fb63-490c-add7-30782463d660-intersections
+  compact-intersections: d6fb853d-dae1-490b-8c8b-381ea80bce0d-intersections
+  splitting-intersections: 50c1c728-033d-47d2-a00b-2463b7464788-intersections
+  ready: true
