@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 06:10
+- xx: GA
+  name: Georgia
+  official: 7043001d-3972-436d-ba18-dda090f00e87
+  proportional: 2a0edc00-2130-46d9-80ce-681d0aae7e06
+  competitive: bede2188-6ec6-40c9-b85a-0af31e48f8da
+  minority: 79030f35-2fc8-493f-8762-40f540d96ebc
+  compact: 9cd2ed7a-881a-4223-8f15-b7311f1adc12
+  splitting: 04e06b4f-5a09-4f89-873d-0f2a72abf7bb
+  baseline: dad690f0-f224-4fb8-88c8-9d88d901baee
+  official-intersections: 68c805e5-7172-4051-aba6-6fcafa3f3f1c
+  proportional-intersections: 2a0edc00-2130-46d9-80ce-681d0aae7e06-intersections
+  competitive-intersections: bede2188-6ec6-40c9-b85a-0af31e48f8da-intersections
+  minority-intersections: 79030f35-2fc8-493f-8762-40f540d96ebc-intersections
+  compact-intersections: 9cd2ed7a-881a-4223-8f15-b7311f1adc12-intersections
+  splitting-intersections: 04e06b4f-5a09-4f89-873d-0f2a72abf7bb-intersections
+  ready: true
