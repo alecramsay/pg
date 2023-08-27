@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/KS/KS_2022_Congress_Competitive_canonical.csv (elapsed: 0:12)
+importmap: guid: df3a2363-b0cb-49e5-b9ec-0a7ec45833f8
+importmap: shareguid: 258ebdcd-6a26-4dfc-bac4-cd941ab854d0

@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 07:14
+- xx: KS
+  name: Kansas
+  official: e41d3fc5-f1bf-4a4f-a674-615f4cb7d2c7
+  proportional: d8d48718-a3c5-4078-b7db-f5e19d0c8f42
+  competitive: 258ebdcd-6a26-4dfc-bac4-cd941ab854d0
+  minority: 62ffe1b4-b5a5-4e55-ba23-8cdeb3324437
+  compact: c9354521-a861-4012-9590-2a9825ffa7b9
+  splitting: c9ac6e94-2484-4d12-ad84-8e50bbab073c
+  baseline: e548c90d-17fd-49c2-adb9-46d3a6dc98c6
+  official-intersections: 6af00960-677b-476e-9f53-b79aa5de6e52
+  proportional-intersections: d8d48718-a3c5-4078-b7db-f5e19d0c8f42-intersections
+  competitive-intersections: 258ebdcd-6a26-4dfc-bac4-cd941ab854d0-intersections
+  minority-intersections: 62ffe1b4-b5a5-4e55-ba23-8cdeb3324437-intersections
+  compact-intersections: c9354521-a861-4012-9590-2a9825ffa7b9-intersections
+  splitting-intersections: c9ac6e94-2484-4d12-ad84-8e50bbab073c-intersections
+  ready: true

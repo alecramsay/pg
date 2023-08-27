@@ -185,6 +185,7 @@ def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, 
         for precinct in precincts_by_district[district]:
             for neighbor in precinct_graph[precinct]:
                 if neighbor not in districts_by_precinct:
+                    print(f"Warning: {neighbor} not in districts_by_precinct!")
                     continue
 
                 neighbor_districts: set[int] = districts_by_precinct[neighbor]
