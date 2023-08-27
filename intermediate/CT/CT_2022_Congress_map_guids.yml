@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 07:00
+- xx: CT
+  name: Connecticut
+  official: 3b91cb13-9611-4b75-92b8-21944f96d882
+  proportional: 2c838700-dc1f-47dc-b5ab-230df1735204
+  competitive: d905c662-217d-4f43-8012-29824c57008b
+  minority: 6c2b71e4-4122-4903-bf80-1ab0a477d0b8
+  compact: 737f1622-ab4f-4458-96a9-e52cac672626
+  splitting: 27fdb170-8888-4f77-98af-58415b30da8a
+  baseline: bfb4ede6-da39-4f7a-a700-8f4848b19ae8
+  official-intersections: b7a50572-1afb-4939-b429-2da3cd25b5a3
+  proportional-intersections: 2c838700-dc1f-47dc-b5ab-230df1735204-intersections
+  competitive-intersections: d905c662-217d-4f43-8012-29824c57008b-intersections
+  minority-intersections: 6c2b71e4-4122-4903-bf80-1ab0a477d0b8-intersections
+  compact-intersections: 737f1622-ab4f-4458-96a9-e52cac672626-intersections
+  splitting-intersections: 27fdb170-8888-4f77-98af-58415b30da8a-intersections
+  ready: true
