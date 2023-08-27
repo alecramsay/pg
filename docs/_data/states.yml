@@ -627,3 +627,20 @@
   compact-intersections: d0362712-747b-43de-ab20-dd4ecb8dac92-intersections
   splitting-intersections: cad377c9-0ae7-4b9e-b095-324fec644199-intersections
   ready: true
+# Generated at 08/27/2023 @ 08:07
+- xx: MI
+  name: Michigan
+  official: 8ab372c1-6947-435c-83d6-4d76769f7d9f
+  proportional: 6806856a-3bb7-4aeb-9806-849193389272
+  competitive: 12dec602-0cd7-422c-b3a4-df0a76d70305
+  minority: 81db7530-dec0-451e-8775-912b33ab5a7a
+  compact: c70a51db-2dda-4258-9543-b07374e50d33
+  splitting: 7060a88a-d340-4674-9f44-c75db98893cc
+  baseline: b985485e-2b17-48db-9f78-1f7725e757d9
+  official-intersections: 483faea2-9097-44ab-9f6a-ea71db218083
+  proportional-intersections: 6806856a-3bb7-4aeb-9806-849193389272-intersections
+  competitive-intersections: 12dec602-0cd7-422c-b3a4-df0a76d70305-intersections
+  minority-intersections: 81db7530-dec0-451e-8775-912b33ab5a7a-intersections
+  compact-intersections: c70a51db-2dda-4258-9543-b07374e50d33-intersections
+  splitting-intersections: 7060a88a-d340-4674-9f44-c75db98893cc-intersections
+  ready: true

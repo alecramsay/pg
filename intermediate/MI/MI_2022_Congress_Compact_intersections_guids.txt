@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MI/MI_2022_Congress_Compact_intersections.csv (elapsed: 0:12)
+importmap: guid: 249e5f0b-450d-487c-b45b-7e86c9c34675
+importmap: shareguid: 049e1766-e0d4-446b-95e2-49a3cf7b790d

@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/MI/MI_2022_Congress_Competitive_intersections.csv (elapsed: 0:14)
+importmap: guid: 4e9aba89-44d3-430b-a537-272dc2a1c98b
+importmap: shareguid: 28ce37e1-35d9-48df-be99-d708115cd931
