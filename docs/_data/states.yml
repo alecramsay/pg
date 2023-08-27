@@ -525,3 +525,20 @@
   compact-intersections: c9354521-a861-4012-9590-2a9825ffa7b9-intersections
   splitting-intersections: c9ac6e94-2484-4d12-ad84-8e50bbab073c-intersections
   ready: true
+# Generated at 08/27/2023 @ 07:30
+- xx: NY
+  name: New York
+  official: 164d1f9a-131a-42a5-b394-57c626490311
+  proportional: cf96eba4-d158-4ae1-aa45-a16ef2e2de04
+  competitive: 357e5365-d111-443d-a208-519ce9fea20f
+  minority: a7867cab-04ea-4991-bda9-14d38b7cfd88
+  compact: e359639b-c513-4db4-8d3c-f8c578304fd8
+  splitting: 0f745bce-89cb-49ad-b674-ed1145a6567f
+  baseline: c518b204-b08f-43dd-9ce6-1a6d0d170430
+  official-intersections: 257df890-d707-4947-973c-c3d08df8b701
+  proportional-intersections: cf96eba4-d158-4ae1-aa45-a16ef2e2de04-intersections
+  competitive-intersections: 357e5365-d111-443d-a208-519ce9fea20f-intersections
+  minority-intersections: a7867cab-04ea-4991-bda9-14d38b7cfd88-intersections
+  compact-intersections: e359639b-c513-4db4-8d3c-f8c578304fd8-intersections
+  splitting-intersections: 0f745bce-89cb-49ad-b674-ed1145a6567f-intersections
+  ready: true

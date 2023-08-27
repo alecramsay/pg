@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NY/NY_2020_Congress_Baseline_canonical.csv (elapsed: 0:14)
+importmap: guid: 29a0d700-6e68-407e-a7bf-f59928fd99f3
+importmap: shareguid: c518b204-b08f-43dd-9ce6-1a6d0d170430
