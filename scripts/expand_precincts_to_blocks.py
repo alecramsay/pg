@@ -76,6 +76,12 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
+    # Debug
+
+    # xx = "FL"
+    # output_dir = os.path.expanduser("~/Downloads/FL/")
+    # paf = os.path.join(output_dir, "FL20C_baseline_100.csv")
+
     #
 
     unit: str = study_unit(xx)
@@ -102,6 +108,10 @@ def main() -> None:
     for assignment in precinct_assignments:
         precinct: str = assignment["GEOID"]
         district: int = assignment["DISTRICT"]
+
+        if precinct not in blocks_by_precinct:
+            print(f"Warning: {precinct} not in blocks_by_precinct!")
+            continue
 
         for block in blocks_by_precinct[precinct]:
             block_assignments.append({"GEOID": block, "DISTRICT": district})

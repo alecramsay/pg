@@ -717,7 +717,9 @@ districts_by_state: dict[str, Any] = {
 #     },
 #     "NE": {
 #         "proportional": "a2d83af8-8aab-492f-9f10-9be4b9a263f1",
+#         This next map is bad! 2x number of districts
 #         "competitive": "64d87e1d-766e-4907-9324-bfec457e1711",  # copy of "c15b16b9-65f9-4814-9958-1aeec10d3ab0"
+#         Replaced w/ "f9e38118-22d8-4493-a12d-509b7711324a"
 #         "minority": "eb4be8c9-3ea4-494f-a98d-226f597bd5da",
 #         "compact": "f7720b75-58d6-4e2d-bff0-894e2c7b5f41",
 #         "splitting": "4ff0b106-818d-4f7a-987a-39205bdcb008",
