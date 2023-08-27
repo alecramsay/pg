@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 07:36
+- xx: OH
+  name: Ohio
+  official: 03ad0ba3-4a22-4024-bb20-c9f4c92f5f1a
+  proportional: 1ea9be3e-09a8-4fc9-bc66-ee4a94ee26d1
+  competitive: ad2c7d8f-5314-4b38-950e-ee0cc76e6069
+  minority: ae84a5c4-6533-4099-ae54-d094950920b1
+  compact: 969be0e1-f760-43aa-a3e0-b9d3775b1139
+  splitting: f7049ea5-3846-4966-8418-7826ec64f5de
+  baseline: beda8f58-ee6c-44f7-ab27-0d077bae24ef
+  official-intersections: c12e5778-ada9-4074-b138-da4f46f01ec4
+  proportional-intersections: 1ea9be3e-09a8-4fc9-bc66-ee4a94ee26d1-intersections
+  competitive-intersections: ad2c7d8f-5314-4b38-950e-ee0cc76e6069-intersections
+  minority-intersections: ae84a5c4-6533-4099-ae54-d094950920b1-intersections
+  compact-intersections: 969be0e1-f760-43aa-a3e0-b9d3775b1139-intersections
+  splitting-intersections: f7049ea5-3846-4966-8418-7826ec64f5de-intersections
+  ready: true
