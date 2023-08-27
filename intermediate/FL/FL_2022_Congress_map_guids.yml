@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 11:45
+- xx: FL
+  name: Florida
+  official: ba0ac868-f81e-448c-8c09-f9e530c11fdd
+  proportional: 011e1613-eca7-4bd9-be56-3ea4856d9391
+  competitive: feec1657-0df6-47e9-b18d-056dd1513a04
+  minority: 90207eaf-56ed-4a0c-9107-9ef17ca47d60
+  compact: 4165672c-cff9-49c9-bf3b-16cd497c4ea1
+  splitting: 2c11ee20-4aeb-4005-b238-112a0b34f0eb
+  baseline: f567c02b-3574-48f9-b822-0a4b188db994
+  official-intersections: c5ad3aac-3cd7-4f77-8b8b-a947ad398d3b
+  proportional-intersections: 011e1613-eca7-4bd9-be56-3ea4856d9391-intersections
+  competitive-intersections: feec1657-0df6-47e9-b18d-056dd1513a04-intersections
+  minority-intersections: 90207eaf-56ed-4a0c-9107-9ef17ca47d60-intersections
+  compact-intersections: 4165672c-cff9-49c9-bf3b-16cd497c4ea1-intersections
+  splitting-intersections: 2c11ee20-4aeb-4005-b238-112a0b34f0eb-intersections
+  ready: true
