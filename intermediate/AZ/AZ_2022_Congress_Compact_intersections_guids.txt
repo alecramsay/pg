@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/AZ/AZ_2022_Congress_Compact_intersections.csv (elapsed: 0:11)
+importmap: guid: ea68f154-895e-4416-b352-b08f5a5f9668
+importmap: shareguid: 37e7b0a9-afa0-4434-817c-fbdd5b58cc2c

@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/AZ/AZ_2022_Congress_Compact_canonical.csv (elapsed: 0:11)
+importmap: guid: 830ac42c-123d-4c17-b708-f637b32c0993
+importmap: shareguid: e38fd1ee-bcae-4233-85a7-bd2a576de7cd

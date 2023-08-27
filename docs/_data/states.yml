@@ -457,3 +457,20 @@
   compact-intersections: 9cd2ed7a-881a-4223-8f15-b7311f1adc12-intersections
   splitting-intersections: 04e06b4f-5a09-4f89-873d-0f2a72abf7bb-intersections
   ready: true
+# Generated at 08/27/2023 @ 06:55
+- xx: AZ
+  name: Arizona
+  official: c05b6639-943c-4235-b8be-14f6e6d149f2
+  proportional: 961e2a8a-5960-4804-903e-cd56b9d0e50b
+  competitive: 5d5b2a13-0dcf-46d0-9717-d5471a4c13f1
+  minority: 48898639-51aa-41cc-ae6f-3ac8aa3fae17
+  compact: e38fd1ee-bcae-4233-85a7-bd2a576de7cd
+  splitting: 20c2241d-5f05-4245-9e47-f4a5423081bb
+  baseline: 2c239cf6-3203-4d09-a145-628fecb9fdb6
+  official-intersections: 9699e95b-ea00-4cf9-a1e1-9c9cb0ce2f9e
+  proportional-intersections: 961e2a8a-5960-4804-903e-cd56b9d0e50b-intersections
+  competitive-intersections: 5d5b2a13-0dcf-46d0-9717-d5471a4c13f1-intersections
+  minority-intersections: 48898639-51aa-41cc-ae6f-3ac8aa3fae17-intersections
+  compact-intersections: e38fd1ee-bcae-4233-85a7-bd2a576de7cd-intersections
+  splitting-intersections: 20c2241d-5f05-4245-9e47-f4a5423081bb-intersections
+  ready: true
