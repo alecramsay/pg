@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 07:42
+- xx: UT
+  name: Utah
+  official: 8662f728-f8f3-466a-b54e-15bd83aa7065
+  proportional: 00452134-14e9-4d0d-829a-01b6d7a90c37
+  competitive: db0c660e-b60b-4564-9eeb-171546a45c8f
+  minority: 16c1e271-a351-4601-8204-78776fc5cc07
+  compact: 2b21b810-c460-4a1f-9029-15dc0f39e0f2
+  splitting: fef69c8f-790f-41c9-86c0-17d4f7ca8cae
+  baseline: 3a765094-ea54-48d0-a716-c6a2e2445598
+  official-intersections: bd93eba9-c079-444f-bc1d-f775c5d6c987
+  proportional-intersections: 00452134-14e9-4d0d-829a-01b6d7a90c37-intersections
+  competitive-intersections: db0c660e-b60b-4564-9eeb-171546a45c8f-intersections
+  minority-intersections: 16c1e271-a351-4601-8204-78776fc5cc07-intersections
+  compact-intersections: 2b21b810-c460-4a1f-9029-15dc0f39e0f2-intersections
+  splitting-intersections: fef69c8f-790f-41c9-86c0-17d4f7ca8cae-intersections
+  ready: true
