@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/WI/WI_2022_Congress_Compact_intersections.csv (elapsed: 0:14)
+importmap: guid: d7d80a75-fee1-4598-bfe3-b1a496c9d714
+importmap: shareguid: 0b268ac6-3928-4989-aa38-67093d21693e

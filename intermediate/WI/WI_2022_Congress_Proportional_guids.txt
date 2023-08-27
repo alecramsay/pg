@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/WI/WI_2022_Congress_Proportional_canonical.csv (elapsed: 0:13)
+importmap: guid: bffd6a0e-3c5d-4399-bd57-df2103e1f44e
+importmap: shareguid: 71267c17-7e68-4e5d-9a54-687fe1ab2b49

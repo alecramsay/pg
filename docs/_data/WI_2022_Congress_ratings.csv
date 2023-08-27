@@ -1,0 +1,8 @@
+Map,Proportionality,Competitiveness,Minority,Compactness,Splitting
+Official,40,38,50,50,40
+Most Proportional,100,31,47,88,79
+Most Competitive,79,100,0,39,28
+Best Minority,72,35,50,54,28
+Most Compact,85,22,45,99,32
+Least Splitting,70,43,47,36,94
+Baseline,52,38,49,74,18

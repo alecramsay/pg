@@ -1,0 +1,17 @@
+# Generated at 08/27/2023 @ 08:23
+- xx: WI
+  name: Wisconsin
+  official: 72aa4a80-a461-43d6-be10-bd78cc8a3804
+  proportional: 71267c17-7e68-4e5d-9a54-687fe1ab2b49
+  competitive: feeadb35-3f16-4366-9c69-e1c44754c271
+  minority: 483119e7-629a-4a0d-8b4c-5389fff3d155
+  compact: c7b88c88-8232-43da-96b9-4673fbc0372e
+  splitting: 59588077-fd9d-489e-9d4f-9f874608b1b4
+  baseline: 59c8157d-026a-42c8-af1f-0d9bed69a9cb
+  official-intersections: 0847ff1e-50b0-4a11-b2a7-0b154b7ad386
+  proportional-intersections: 71267c17-7e68-4e5d-9a54-687fe1ab2b49-intersections
+  competitive-intersections: feeadb35-3f16-4366-9c69-e1c44754c271-intersections
+  minority-intersections: 483119e7-629a-4a0d-8b4c-5389fff3d155-intersections
+  compact-intersections: c7b88c88-8232-43da-96b9-4673fbc0372e-intersections
+  splitting-intersections: 59588077-fd9d-489e-9d4f-9f874608b1b4-intersections
+  ready: true
