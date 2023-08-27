@@ -184,6 +184,9 @@ def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, 
 
         for precinct in precincts_by_district[district]:
             for neighbor in precinct_graph[precinct]:
+                if neighbor not in districts_by_precinct:
+                    continue
+
                 neighbor_districts: set[int] = districts_by_precinct[neighbor]
 
                 for neighbor_district in neighbor_districts:
@@ -332,6 +335,15 @@ def main() -> None:
     intersections: bool = args.intersections
 
     verbose: bool = args.verbose
+
+    # Debug
+
+    # xx = "IL"
+    # output_dir: str = os.path.expanduser("~/Downloads/IL/")
+    # assignments_csv: str = os.path.join(output_dir, "IL_2022_Congress_Official.csv")
+    # settings_json: str = os.path.join(
+    #     output_dir, "IL_2022_Congress_Official_display_settings.json"
+    # )
 
     #
 

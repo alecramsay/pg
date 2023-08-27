@@ -491,3 +491,20 @@
   compact-intersections: 737f1622-ab4f-4458-96a9-e52cac672626-intersections
   splitting-intersections: 27fdb170-8888-4f77-98af-58415b30da8a-intersections
   ready: true
+# Generated at 08/27/2023 @ 07:10
+- xx: IL
+  name: Illinois
+  official: 3da76d97-d00e-4a1d-b970-23c3526e7950
+  proportional: db424b32-98ff-4611-9e02-4bf33d174994
+  competitive: 5a5695f4-b47e-4d12-a110-7f59fd3c56ca
+  minority: 7b91b2b1-0308-4149-9d15-0ecaa1fd9f5e
+  compact: dc66ae08-0f17-4526-9064-824df4704c72
+  splitting: 36a15380-be09-427e-b40d-3198ee14d6b7
+  baseline: fb33a00f-d378-445f-9a46-1af37513a035
+  official-intersections: 29a221b3-ff23-4f81-9c9a-2edf3e7d4457
+  proportional-intersections: db424b32-98ff-4611-9e02-4bf33d174994-intersections
+  competitive-intersections: 5a5695f4-b47e-4d12-a110-7f59fd3c56ca-intersections
+  minority-intersections: 7b91b2b1-0308-4149-9d15-0ecaa1fd9f5e-intersections
+  compact-intersections: dc66ae08-0f17-4526-9064-824df4704c72-intersections
+  splitting-intersections: 36a15380-be09-427e-b40d-3198ee14d6b7-intersections
+  ready: true
