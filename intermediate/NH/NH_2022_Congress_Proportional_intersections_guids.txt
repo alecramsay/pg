@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NH/NH_2022_Congress_Proportional_intersections.csv (elapsed: 0:05)
+importmap: guid: c04aff2c-08a3-41f7-8de7-3ff06afa953c
+importmap: shareguid: 8724c9d8-32b3-4d91-9d6c-f489300b24aa

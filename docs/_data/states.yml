@@ -610,3 +610,20 @@
   compact-intersections: 56f6f7b9-0403-4037-81cc-4972ad5bb92f-intersections
   splitting-intersections: b17800f1-06dc-49a5-a30b-53a32e85bd34-intersections
   ready: true
+# Generated at 08/27/2023 @ 08:01
+- xx: NH
+  name: New Hampshire
+  official: a01fe1a5-2522-4f03-bf29-d52a1d8e7c83
+  proportional: fd558454-064c-42ca-b95b-f597954ffb12
+  competitive: e57b1ee1-2b6f-47f3-8f3d-703a3b943946
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact: d0362712-747b-43de-ab20-dd4ecb8dac92
+  splitting: cad377c9-0ae7-4b9e-b095-324fec644199
+  baseline: bab61a3b-50c7-4385-9d4a-e6e21786ffee
+  official-intersections: 84d9fdeb-3ef6-4da7-afd2-1f170da69e50
+  proportional-intersections: fd558454-064c-42ca-b95b-f597954ffb12-intersections
+  competitive-intersections: e57b1ee1-2b6f-47f3-8f3d-703a3b943946-intersections
+  minority: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  compact-intersections: d0362712-747b-43de-ab20-dd4ecb8dac92-intersections
+  splitting-intersections: cad377c9-0ae7-4b9e-b095-324fec644199-intersections
+  ready: true

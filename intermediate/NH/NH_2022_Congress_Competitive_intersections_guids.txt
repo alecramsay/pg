@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/NH/NH_2022_Congress_Competitive_intersections.csv (elapsed: 0:06)
+importmap: guid: 728dc2d6-800b-40c2-b1aa-5b18bdde1c03
+importmap: shareguid: f7cafe66-416d-4306-a587-235f93382890
