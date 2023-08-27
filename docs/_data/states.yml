@@ -576,3 +576,20 @@
   compact-intersections: 2b21b810-c460-4a1f-9029-15dc0f39e0f2-intersections
   splitting-intersections: fef69c8f-790f-41c9-86c0-17d4f7ca8cae-intersections
   ready: true
+# Generated at 08/27/2023 @ 07:53
+- xx: CA
+  name: California
+  official: 06f1281f-a771-4ed0-a07c-3cfdda19710a
+  proportional: edb3c821-099c-41a7-9102-99d9ba5043de
+  competitive: 126edaf3-0a90-4741-acc7-0d65bcda0a5a
+  minority: 56129585-8f26-4f2d-b406-622eac5fd43b
+  compact: 03f62388-252c-4e59-88f3-4e896461d123
+  splitting: 7841a6a5-c239-4928-9c28-c8575519dc99
+  baseline: ebdca782-996d-401c-9b19-10e63e7ee477
+  official-intersections: dcbebc42-780a-43f0-b489-fa836220e33b
+  proportional-intersections: edb3c821-099c-41a7-9102-99d9ba5043de-intersections
+  competitive-intersections: 126edaf3-0a90-4741-acc7-0d65bcda0a5a-intersections
+  minority-intersections: 56129585-8f26-4f2d-b406-622eac5fd43b-intersections
+  compact-intersections: 03f62388-252c-4e59-88f3-4e896461d123-intersections
+  splitting-intersections: 7841a6a5-c239-4928-9c28-c8575519dc99-intersections
+  ready: true

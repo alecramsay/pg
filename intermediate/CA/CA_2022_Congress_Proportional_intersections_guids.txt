@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/CA/CA_2022_Congress_Proportional_intersections.csv (elapsed: 0:40)
+importmap: guid: 53019d84-49f1-4f2c-920c-191f113f4aa3
+importmap: shareguid: 55310846-f5c2-4d46-a4e1-e4060827cef1

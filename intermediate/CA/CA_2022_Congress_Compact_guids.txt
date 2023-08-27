@@ -1,0 +1,3 @@
+importmap: import succeeded: /Users/alecramsay/Downloads/CA/CA_2022_Congress_Compact_canonical.csv (elapsed: 0:33)
+importmap: guid: 397ff3c6-cb02-4cda-9a1f-e2e67abb5af5
+importmap: shareguid: 03f62388-252c-4e59-88f3-4e896461d123
