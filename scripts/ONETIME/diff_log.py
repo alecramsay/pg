@@ -135,13 +135,13 @@ def main() -> None:
     command = (
         f"scripts/expand_precincts_to_blocks.py -s {xx} -o {output_dir} -f {base_csv}"
     )
-    print(command)
+    # print(command)
     os.system(command)
 
     # Renumber & compare the maps to the baseline
 
     print()
-    print("Diffing notable & official maps for {xx} against the baseline:")
+    print(f"Diffing notable & official maps for {xx} against the baseline:")
     print()
 
     for label in comparisons:  # Does not include "Baseline"

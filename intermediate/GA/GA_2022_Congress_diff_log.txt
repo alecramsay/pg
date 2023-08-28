@@ -1,0 +1,11 @@
+Diffing notable & official maps for GA against the baseline:
+
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2022_Congress_Official.csv -c GA_2020_Congress_Baseline.csv  -i GA_2022_Congress_Official_intersections.csv -r GA_2020_Congress_Baseline_canonical.csv
+Warning Info:  districts {9} will be arbitrarily renumbered
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2020_Congress_Baseline_canonical.csv -c GA_2022_Congress_Proportional.csv  -i GA_2022_Congress_Proportional_intersections.csv -r GA_2022_Congress_Proportional_canonical.csv
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2020_Congress_Baseline_canonical.csv -c GA_2022_Congress_Competitive.csv  -i GA_2022_Congress_Competitive_intersections.csv -r GA_2022_Congress_Competitive_canonical.csv
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2020_Congress_Baseline_canonical.csv -c GA_2022_Congress_Minority.csv  -i GA_2022_Congress_Minority_intersections.csv -r GA_2022_Congress_Minority_canonical.csv
+Warning Info:  districts {9} will be arbitrarily renumbered
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2020_Congress_Baseline_canonical.csv -c GA_2022_Congress_Compact.csv  -i GA_2022_Congress_Compact_intersections.csv -r GA_2022_Congress_Compact_canonical.csv
+Warning Info:  districts {2} will be arbitrarily renumbered
+scripts/diff_two_plans.py -s GA -o /Users/alecramsay/Downloads/GA_diffs -b GA_2020_Congress_Baseline_canonical.csv -c GA_2022_Congress_Splitting.csv  -i GA_2022_Congress_Splitting_intersections.csv -r GA_2022_Congress_Splitting_canonical.csv

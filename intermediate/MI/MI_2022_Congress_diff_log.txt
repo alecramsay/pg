@@ -1,0 +1,9 @@
+Diffing notable & official maps for MI against the baseline:
+
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2022_Congress_Official.csv -c MI_2020_Congress_Baseline.csv  -i MI_2022_Congress_Official_intersections.csv -r MI_2020_Congress_Baseline_canonical.csv
+Warning Info:  districts {5} will be arbitrarily renumbered
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2020_Congress_Baseline_canonical.csv -c MI_2022_Congress_Proportional.csv  -i MI_2022_Congress_Proportional_intersections.csv -r MI_2022_Congress_Proportional_canonical.csv
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2020_Congress_Baseline_canonical.csv -c MI_2022_Congress_Competitive.csv  -i MI_2022_Congress_Competitive_intersections.csv -r MI_2022_Congress_Competitive_canonical.csv
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2020_Congress_Baseline_canonical.csv -c MI_2022_Congress_Minority.csv  -i MI_2022_Congress_Minority_intersections.csv -r MI_2022_Congress_Minority_canonical.csv
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2020_Congress_Baseline_canonical.csv -c MI_2022_Congress_Compact.csv  -i MI_2022_Congress_Compact_intersections.csv -r MI_2022_Congress_Compact_canonical.csv
+scripts/diff_two_plans.py -s MI -o /Users/alecramsay/Downloads/MI_diffs -b MI_2020_Congress_Baseline_canonical.csv -c MI_2022_Congress_Splitting.csv  -i MI_2022_Congress_Splitting_intersections.csv -r MI_2022_Congress_Splitting_canonical.csv

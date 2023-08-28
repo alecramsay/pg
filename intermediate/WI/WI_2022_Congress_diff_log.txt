@@ -1,0 +1,9 @@
+Diffing notable & official maps for WI against the baseline:
+
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2022_Congress_Official.csv -c WI_2020_Congress_Baseline.csv  -i WI_2022_Congress_Official_intersections.csv -r WI_2020_Congress_Baseline_canonical.csv
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2020_Congress_Baseline_canonical.csv -c WI_2022_Congress_Proportional.csv  -i WI_2022_Congress_Proportional_intersections.csv -r WI_2022_Congress_Proportional_canonical.csv
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2020_Congress_Baseline_canonical.csv -c WI_2022_Congress_Competitive.csv  -i WI_2022_Congress_Competitive_intersections.csv -r WI_2022_Congress_Competitive_canonical.csv
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2020_Congress_Baseline_canonical.csv -c WI_2022_Congress_Minority.csv  -i WI_2022_Congress_Minority_intersections.csv -r WI_2022_Congress_Minority_canonical.csv
+Warning Info:  districts {6} will be arbitrarily renumbered
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2020_Congress_Baseline_canonical.csv -c WI_2022_Congress_Compact.csv  -i WI_2022_Congress_Compact_intersections.csv -r WI_2022_Congress_Compact_canonical.csv
+scripts/diff_two_plans.py -s WI -o /Users/alecramsay/Downloads/WI_diffs -b WI_2020_Congress_Baseline_canonical.csv -c WI_2022_Congress_Splitting.csv  -i WI_2022_Congress_Splitting_intersections.csv -r WI_2022_Congress_Splitting_canonical.csv
