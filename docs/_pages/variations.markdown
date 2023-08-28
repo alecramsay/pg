@@ -36,6 +36,8 @@ We hope others will adopt this general approach, even if they make different spe
   using a different objective functions than the energy function we used; or
   using an altogether different approach, such as Markov chain Monte Carlo (MCMC),
   for exploring the space of possible baseline maps.
+- One can also imagine looking for "peephole optimizations" &#8212; single precinct moves and/or swaps &#8212; 
+  that would decrease total energy.
 
 ### Maps
 

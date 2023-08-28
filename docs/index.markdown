@@ -1,6 +1,10 @@
 ---
 layout: default
+
 xx: "NC"
+small-radar-width: 300
+big-radar-width: 500
+map-width: 700
 ---
 
 This site characterizes policy tradeoffs inherent in congressional redistricting state by state.[^1]
@@ -9,6 +13,8 @@ In contrast to the *Compare* feature in [Dave's Redistricting](https://davesredi
 proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting &#8212; 
 we compare these five policy-maximizing maps and the official map to a common baseline set of districts
 to illustrate some major quantifiable policy tradeoffs for congressional redistricting in each state.
+
+By our definition (elaborated below), each state has exactly one baseline. This is the baseline map for North Carolina.
 
 {% assign xx = page.xx %}
 
@@ -45,7 +51,7 @@ Along the way, we make a series of claims:
 3.  Conversely, because a mapmaker uses considerable data &#8212; e.g., voting age population, demographics, past election results, etc. &#8212; to draw districts that 
     reflect their preferred mix of policy objectives, the boundaries in such a "high information" plans reflect that data and those decisions.
 4.  Moreover, due to the complex *blend* of demographic, economic, cultural, and political attributes determined by a state's underlying population geography, 
-    redistricting often tradeoffs between various policy objectives, such as proportionality, competitiveness, opportunity for minority representation, compactness, 
+    redistricting often involves tradeoffs between various policy objectives, such as proportionality, competitiveness, opportunity for minority representation, compactness, 
     and county-district splitting, among others. 
     Sometimes two macro goals can be pursued in tandem, but often they are in tension with each other. 
     For example, a plan that maximizes proportionality might not be very compact, or vice versa.
@@ -96,10 +102,8 @@ We imagine many potential areas of future research, including:
 
 ## Acknowledgements
 
-Alec would like to thank his DRA colleague Terry Crowley for making the large scope of this project feasible, 
-the DRA user community for pushing the dimensional limits of congressional redistricting in each state with their notable maps, and
-Todd Proebsting for realizing the concept of baseline districts in code &#8212;
-patiently persisting in the adaptation of Balzer's algorithm to redistricting with all its real world, complicating issues.
+Alec would like to thank his DRA colleague Terry Crowley for making the large scope of this project feasible and
+the DRA user community for pushing the dimensional limits of congressional redistricting in each state with their notable maps.
 
 ---
 

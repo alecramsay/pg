@@ -4,7 +4,7 @@ title: Method
 permalink: method/
 ---
 
-The method for generating baseline districts that Todd & I developed evolved through an exploratory process.
+The method for generating baseline districts that we developed evolved through an exploratory process.
 Note that in all cases we used Cartesian (flat earth) calculations, as opposed to geodesic (spherical) calculations.
 Over short distances, these calculations are sufficiently accurate for our purposes.
 
@@ -13,8 +13,10 @@ Over short distances, these calculations are sufficiently accurate for our purpo
 -   When Todd got involved, he found and implemented Balzer's algorithm for computing Voronoi tessellations, 
     adapting it slightly to redistricting. With that in hand, we proceeded through a series of experiments.
 -   First, we got Balzer to work with single pass, using various geographic granularities, e.g. blockgroups (BGs), blocks.
--   Then, to try to make the resulting maps stable -- invariant to specific starting points -- we generated maps by iterating on 
-    BGs (100x), used those runs to find characteristic district centroids, and then did a final finish run using blocks. 
+-   Balzer starts with some randomly generated assumptions, which may lead to different ending equilibria.
+    So then we added many runs to find the best among competing minima.
+    We generated maps by iterating on 
+    BGs 100x, used those runs to find characteristic district centroids, and then did a final finish run using blocks. 
     Not surprisingly in retrospect, the block granularity resulted in a huge number of split precincts -- basically every precinct along every district boundary!
 -   At that point, Alec realized that he was forgetting a redistricting fundamental -- that precincts (VTDs) are basically the atomic unit 
     of assignment, except when a few are split to achieve extreme population equality.
@@ -37,13 +39,13 @@ Over short distances, these calculations are sufficiently accurate for our purpo
 This is the method as it stands today (elliding I/O details) <= TODO: flesh this out with Todd
 
 -   Generate random district centroids ("sites", in Balzer terminology).
--   Assign each precinct to the nearest centroid. TODO - is this right? NOTE - The results may not be contiguous.
--   Run Balzer, to create an initial, population balanced, but not necessarily contiguous set of assignments with lowest energy.
--   Modify those assignments to make the districts contiguous but possibly not 'roughly equal' in population.
--   Run Balzer again, to create the lowest energy contiguous set of assignments, still possibly not 'roughly equal' in population.
--   Rebalance the assignments so that the districts remain contiguous and now are 'roughly equal' in population.
--   Run Balzer a third time, to create population balanced, contiguous, lowest energy assignments.
--   TODO: Consolidate -- What is the one-liner on what this does?
--   TODO: Complete -- Ditto
+-   Iteratively find the unassigned precinct closest to a district/site that hasn't yet reached its population target and assign that precinct to that district. 
+    Theses results may not be contiguous.
+-   Run Balzer again, to create the lowest energy contiguous set of assignments, still possibly not ‘roughly equal’ in population.
+    Rebalance the assignments so that the districts remain contiguous and now are ‘roughly equal’ in population.
+    Run Balzer a third time, to create population balanced, contiguous, lowest energy assignments.
+-   The previous steps leave some precincts split across districts. 
+    This final step is to un-split those precincts by making them entirely assigned to one district or the other.
+    The heuristic tries to keep districts as balanced as possible while re-assigning these populations.
 
 Alec used this solution in Step 2 of the overall workflow described [here](./workflow.markdown).
