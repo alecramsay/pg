@@ -5,12 +5,12 @@ Update the DRA map guids and YAML fragment for a state.
 
 For example:
 
-$ scripts/map_guids.py
-$ scripts/map_guids.py -s NC
+$ scripts/update/map_guids.py
+$ scripts/update/map_guids.py -s NC
 
 For documentation, type:
 
-$ scripts/map_guids.py -h
+$ scripts/update/map_guids.py -h
 
 """
 

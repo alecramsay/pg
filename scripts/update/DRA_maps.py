@@ -5,13 +5,13 @@ Update the DRA maps for a state.
 
 For example:
 
-$ scripts/DRA_maps.py
-$ scripts/DRA_maps.py -s NC
-$ scripts/DRA_maps.py -s NC -p 081623
+$ scripts/update/DRA_maps.py
+$ scripts/update/DRA_maps.py -s NC
+$ scripts/update/DRA_maps.py -s NC -p 081623
 
 For documentation, type:
 
-$ scripts/DRA_maps.py -h
+$ scripts/update/DRA_maps.py -h
 
 """
 
@@ -78,7 +78,7 @@ def main() -> None:
     output: str = os.path.expanduser(args.output)
     prefix: str = args.prefix
 
-    if args.prefix is not None:
+    if args.prefix is None:
         print(f"ERROR - A map prefix is required.")
         exit(1)
 
@@ -142,7 +142,7 @@ def main() -> None:
             plan_csv = f"{xx}_{year}_Congress_{label}_intersections.csv"
             guids_txt: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
 
-            command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -i"
+            command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -p {prefix} -i"
             print(command)
             os.system(command)
 

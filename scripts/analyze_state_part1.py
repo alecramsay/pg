@@ -257,7 +257,7 @@ def main() -> None:
             plan_csv = f"{xx}_{year}_Congress_{label}_intersections.csv"
             guids_txt: str = f"{xx}_{year}_Congress_{label}_intersections_guids.txt"
 
-            command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -i"
+            command: str = f"scripts/import_plan.py -s {xx} -o {output_dir} -f {plan_csv} -l {label} -g {guids_txt} -p {prefix} -i"
             print(command)
             os.system(command)
 

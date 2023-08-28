@@ -5,13 +5,13 @@ Update official, notable, and baseline plan copies.
 
 For example:
 
-$ scripts/plan_copies.py
-$ scripts/plan_copies.py -s NC
-$ scripts/plan_copies.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
+$ scripts/update/plan_copies.py
+$ scripts/update/plan_copies.py -s NC
+$ scripts/update/plan_copies.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/plan_copies.py -h
+$ scripts/update/plan_copies.py -h
 
 """
 

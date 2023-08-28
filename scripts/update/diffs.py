@@ -5,12 +5,12 @@ Update intersections and canonicalized BAFs for a state.
 
 For example:
 
-$ scripts/diffs.py
-$ scripts/diffs.py -s NC
+$ scripts/update/diffs.py
+$ scripts/update/diffs.py -s NC
 
 For documentation, type:
 
-$ scripts/diffs.py -h
+$ scripts/update/diffs.py -h
 
 """
 

@@ -678,3 +678,20 @@
   compact-intersections: c7b88c88-8232-43da-96b9-4673fbc0372e-intersections
   splitting-intersections: 59588077-fd9d-489e-9d4f-9f874608b1b4-intersections
   ready: true
+# Generated at 08/28/2023 @ 06:31
+- xx: NE
+  name: Nebraska
+  official: d6762ec8-9197-44b4-853f-638ddb762039
+  proportional: 927b4c6a-ed07-4baf-bbfb-9f533974b9f3
+  competitive: 45c4fe5a-1bf6-4344-943a-30f25763dffa
+  minority: 5ecf3bcc-dce7-4265-9b9f-d0d50bf552b7
+  compact: 010aee5e-af0f-46f5-bf66-26531b48f95a
+  splitting: c61a382a-9827-419b-b25b-f072c8a3c268
+  baseline: accfe8dc-25a4-4655-a73c-5d5ccdf21141
+  official-intersections: 4dbcf10f-fae4-4159-ad12-c1d7f8520106
+  proportional-intersections: 927b4c6a-ed07-4baf-bbfb-9f533974b9f3-intersections
+  competitive-intersections: 45c4fe5a-1bf6-4344-943a-30f25763dffa-intersections
+  minority-intersections: 5ecf3bcc-dce7-4265-9b9f-d0d50bf552b7-intersections
+  compact-intersections: 010aee5e-af0f-46f5-bf66-26531b48f95a-intersections
+  splitting-intersections: c61a382a-9827-419b-b25b-f072c8a3c268-intersections
+  ready: true

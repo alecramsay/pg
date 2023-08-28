@@ -5,13 +5,13 @@ Expand baseline precinct-assignment file to a block-assignment file.
 
 For example:
 
-$ scripts/baseline_BAF.py
-$ scripts/baseline_BAF.py -s NC
-$ scripts/baseline_BAF.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
+$ scripts/update/baseline_BAF.py
+$ scripts/update/baseline_BAF.py -s NC
+$ scripts/update/baseline_BAF.py -s NC -b ../baseline/maps/NC/NC20C_baseline_100.csv -o ~/Downloads/
 
 For documentation, type:
 
-$ scripts/baseline_BAF.py -h
+$ scripts/update/baseline_BAF.py -h
 
 """
 
