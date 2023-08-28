@@ -1,5 +1,6 @@
 ---
 layout: default
+xx: "NC"
 ---
 
 This site characterizes policy tradeoffs inherent in congressional redistricting state by state.[^1]
@@ -8,6 +9,27 @@ In contrast to the *Compare* feature in [Dave's Redistricting](https://davesredi
 proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting &#8212; 
 we compare these five policy-maximizing maps and the official map to a common baseline set of districts
 to illustrate some major quantifiable policy tradeoffs for congressional redistricting in each state.
+
+{% assign xx = page.xx %}
+
+{% capture baseline-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
+{% endcapture %}
+{% assign baseline-png = baseline-png | strip_newlines %}
+
+{% assign state = site.data.states | where:"xx", xx | first %}
+
+{% capture baseline-link %}
+https://davesredistricting.org/join/{{ state["baseline"] }}
+{% endcapture %}
+{% assign baseline-link = baseline-link | strip_newlines %}
+
+<p style="text-align: left">
+    <a href="{{ baseline-link }}">
+        <img src="{{ baseline-png }}" alt="Baseline districts" title="Click to view the map in Dave's Redistricting"
+            width="{{ page.map-width }}" />
+    </a>
+</p>
 
 Along the way, we make a series of claims:
 

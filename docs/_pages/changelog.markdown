@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Content mods (08-28-23)
 - Ran the remaining states, including FL (08-28-23)
 - Trying Todd's fixes on MD & GA (08-27-23)
 - Added script to calculate edit distances (08-26-23)
