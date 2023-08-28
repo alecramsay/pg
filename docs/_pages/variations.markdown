@@ -33,11 +33,10 @@ We hope others will adopt this general approach, even if they make different spe
   increasing the number of iterations (e.g., 1000); 
   relaxing or tightening the 2% population deviation threshold;
   trying to keep cities and/or counties intact, if possible;
-  using a different objective functions than the energy function we used; or
+  using a different objective functions than the energy function we used; 
+  looking for "peephole optimizations" &#8212; single precinct moves and/or swaps &#8212; that would decrease total energy; or
   using an altogether different approach, such as Markov chain Monte Carlo (MCMC),
   for exploring the space of possible baseline maps.
-- One can also imagine looking for "peephole optimizations" &#8212; single precinct moves and/or swaps &#8212; 
-  that would decrease total energy.
 
 ### Maps
 
