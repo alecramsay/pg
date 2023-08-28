@@ -1,3 +1,3 @@
-importmap: import succeeded: /Users/alecramsay/Downloads/FL/FL_2022_Congress_Minority_canonical.csv (elapsed: 0:20)
-importmap: guid: 9b58e240-e5df-4daf-9a3b-6aec0a8baedd
-importmap: shareguid: 90207eaf-56ed-4a0c-9107-9ef17ca47d60
+importmap: import succeeded: /Users/alecramsay/Downloads/FL/FL_2022_Congress_Minority_canonical.csv (elapsed: 0:23)
+importmap: guid: b0a93be6-0822-4b31-b239-e54208a2ceab
+importmap: shareguid: a03436a7-4e21-4eef-8d12-bf86b119cc40

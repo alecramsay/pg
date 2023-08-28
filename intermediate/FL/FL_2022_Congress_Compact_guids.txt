@@ -1,3 +1,3 @@
-importmap: import succeeded: /Users/alecramsay/Downloads/FL/FL_2022_Congress_Compact_canonical.csv (elapsed: 0:23)
-importmap: guid: c966aea4-54c6-44eb-b390-f2cf092df0f0
-importmap: shareguid: 4165672c-cff9-49c9-bf3b-16cd497c4ea1
+importmap: import succeeded: /Users/alecramsay/Downloads/FL/FL_2022_Congress_Compact_canonical.csv (elapsed: 0:22)
+importmap: guid: d142ff87-40ba-40e1-a97c-261e20fe8679
+importmap: shareguid: 6f6498dd-7309-48bb-858c-32a7fb757318

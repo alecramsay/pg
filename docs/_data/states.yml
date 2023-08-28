@@ -695,3 +695,20 @@
   compact-intersections: 010aee5e-af0f-46f5-bf66-26531b48f95a-intersections
   splitting-intersections: c61a382a-9827-419b-b25b-f072c8a3c268-intersections
   ready: true
+# Generated at 08/28/2023 @ 07:26
+- xx: FL
+  name: Florida
+  official: 9d1b0fd9-fdd0-4c57-be97-618b5c5ffedb
+  proportional: aa9882e6-4ac4-44b2-a40c-94c269d3d576
+  competitive: 749b5574-b564-42dc-9334-a96084a72f27
+  minority: a03436a7-4e21-4eef-8d12-bf86b119cc40
+  compact: 6f6498dd-7309-48bb-858c-32a7fb757318
+  splitting: 3e129fc0-097a-4319-8080-ccf7872108c7
+  baseline: 6f1d37dd-682b-45af-b000-9b19be55b44f
+  official-intersections: 8c9b7299-0d77-44d0-96f9-e860be39b391
+  proportional-intersections: aa9882e6-4ac4-44b2-a40c-94c269d3d576-intersections
+  competitive-intersections: 749b5574-b564-42dc-9334-a96084a72f27-intersections
+  minority-intersections: a03436a7-4e21-4eef-8d12-bf86b119cc40-intersections
+  compact-intersections: 6f6498dd-7309-48bb-858c-32a7fb757318-intersections
+  splitting-intersections: 3e129fc0-097a-4319-8080-ccf7872108c7-intersections
+  ready: true
