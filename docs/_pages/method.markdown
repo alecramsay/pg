@@ -18,7 +18,8 @@ This is the rough arc of the evolution:
     which may lead to different ending equilibria.
     So we started doing multiple runs (100),
     used those runs to find characteristic district centroids, and 
-    then did a final finish run using centroids as starting points. 
+    then did a final finish run using those centroids as starting points. 
+-   At some point, we switched to simply choosing the best among competing minima.
 -   Not surprisingly in retrospect, the block granularity resulted in a huge number of split precincts 
     &#8212; basically every precinct along every district boundary!
 -   Alec realized that he was forgetting a redistricting fundamental &#8212; 
