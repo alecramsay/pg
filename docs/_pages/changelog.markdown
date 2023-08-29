@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Revised qualitative analysis for NC (08-29-23)
 - Increased boldness in ratings table (08-29-23)
 - More content edits ... (08-29-23)
 - Initial content edits (08-28-23)
