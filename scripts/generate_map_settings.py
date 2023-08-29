@@ -88,6 +88,8 @@ def pick_color(id: int) -> str:
     5 - #f48948 -  5 x  1 :  4 x  1
     6 - #8b09a5 - 10 x  6 :  9 x  6
 
+    White is #ffffff.
+
     """
 
     colors: list[str] = [
@@ -381,6 +383,7 @@ def main() -> None:
             }
             assignments.append(mapped)
 
+    # TODO - Modify this to use two-tone coloring for intersections maps
     # Assign colors to districts
 
     district_colors: dict[int | str, str] = assign_district_colors(xx, assignments)
