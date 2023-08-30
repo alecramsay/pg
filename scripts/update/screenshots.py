@@ -40,6 +40,13 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    parser.add_argument(
+        "-i",
+        "--intersections",
+        dest="intersections",
+        action="store_true",
+        help="Only do intersections",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -56,6 +63,7 @@ def main() -> None:
 
     xx: str = args.state
     output: str = os.path.expanduser(args.output)
+    only_intersections: bool = args.intersections
 
     verbose: bool = args.verbose
 
@@ -110,9 +118,10 @@ def main() -> None:
         if label in ["name", "ready"]:
             continue
 
-        # NOTE - Only take some screenshots
-        # if label not in ["official"]:
-        #     continue
+        is_intersection: bool = True if label.endswith("-intersections") else False
+
+        if only_intersections and not is_intersection:
+            continue
 
         command = f"scripts/save_map_image.py -s {xx} -l {label.capitalize().replace('-', '_')} -i {guid}  -o {output_dir}"
         print(command)

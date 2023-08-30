@@ -42,6 +42,13 @@ def parse_args() -> Namespace:
         help="Path to output directory",
         type=str,
     )
+    parser.add_argument(
+        "-i",
+        "--intersections",
+        dest="intersections",
+        action="store_true",
+        help="Only do intersections",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -58,6 +65,7 @@ def main() -> None:
 
     xx: str = args.state
     output: str = os.path.expanduser(args.output)
+    only_intersections: bool = args.intersections
 
     verbose: bool = args.verbose
 
@@ -112,14 +120,17 @@ def main() -> None:
         if label in ["name", "ready"]:
             continue
 
-        intersections: bool = True if label.endswith("-intersections") else False
-        intersections_flag: str = "-i" if intersections else ""
+        is_intersection: bool = True if label.endswith("-intersections") else False
+        intersections_flag: str = "-i" if is_intersection else ""
+
+        if only_intersections and not is_intersection:
+            continue
 
         year: str = cycle if label.capitalize() == "Baseline" else yyyy
         map_type: str = ""
         if label == "official":
             map_type = label.capitalize()
-        elif intersections:
+        elif is_intersection:
             map_type = label.capitalize().replace("-", "_")
         else:
             map_type = f"{label.capitalize()}_canonical"
