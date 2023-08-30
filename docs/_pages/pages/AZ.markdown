@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Arizona
 permalink: states/AZ/
 
@@ -10,18 +10,28 @@ map-width: 700
 xx: "AZ"
 ---
 
-The baseline congressional districts have middling proportionality (71), 
+The Baseline congressional districts have middling proportionality (71), 
 opportunity for minority representation (67), and compactness (70), and
 poor competitiveness (32) and county-district splitting (21).
 
-All five dimensions can be improved upon and nearly optimized at the same time without tradeoffs
-(71 &#x2192; 100, 32 &#x2192; 100, 67 &#x2192; 98, 70 &#x2192; 100, and 21 &#x2192; 83).
+These are some major quantifiable policy tradeoffs, relative to the Baseline map:
 
-There are essentially no policy tradeoffs.
-An average of 54% of population-weighted precincts assignments are shared between a notable map and the baseline.
+-   **Most Proportional** &#8212; This map is more proportional (71 &#x2192; 100) 
+    and more proportional, compact, and splits fewer counties &amp; districts (71 &#x2192; 100, 70 &#x2192; 100, and 21 &#x2192; 80, respectively).
+-   **Most Competitive** &#8212; This map is more competitive (32 &#x2192; 100) 
+    and more proportional, compact, and splits fewer counties &amp; districts (71 &#x2192; 100, 70 &#x2192; 100, and 21 &#x2192; 80, respectively).
+-   **Best Minority** &#8212; This map has more opportunity for minority representation (67 &#x2192; 98) 
+    and is more competitive and splits fewer counties &amp; districts (32 &#x2192; 53 and 21 &#x2192; 52, respectively)
+    but is less compact (70 &#x2192; 42).
+-   **Most Compact** &#8212; This map is more compact (70 &#x2192; 100) and also
+    more proportional, more competitive, and splits fewer counties &amp; districts (71 &#x2192; 100, 32 &#x2192; 100, and 21 &#x2192; 80, respectively).
+-   **Least Splitting** &#8212; This map splits fewer counties &amp; districts (21 &#x2192; 85) 
+    but less compact (70 &#x2192; 50).
 
-Relative to the baseline map, 
-the official map marginally improves proportionality (71 &#x2192; 82),
-competitiveness (32 &#x2192; 44), and
-opportunity for minority representation (67 &#x2192; 84)
-at the expense of some compactness (70 &#x2192; 51).
+An average of 54% of population-weighted precincts assignments are shared between the Notable and Baseline maps.
+
+Relative to the Baseline map, 
+the Official map is more proportional (71 &#x2192; 82),
+more competitive (32 &#x2192; 44), and
+has greater opportunity for minority representation (67 &#x2192; 84)
+is less compact (70 &#x2192; 51).

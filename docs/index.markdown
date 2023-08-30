@@ -80,7 +80,7 @@ These contrasts put policy choices in bold relief.
 You can see a representative example of this analysis on the [Example](./_pages/example.markdown) page.
 You can choose a specific state to look at, on the [States](./_pages/states.markdown) page.
 
-*Note: This site is still a work in progress, but you can see this analysis applied to NC, VA, and CO.*
+*Note: This site is still a work in progress, but you can see this analysis applied to AZ, CO, MD, NC, PA, and VA.*
 
 We encourage two overarching takeaways:
 

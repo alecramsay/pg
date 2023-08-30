@@ -13,22 +13,22 @@ xx: "NC"
 The Baseline congressional districts are naturally relatively proportional and compact (81 and 79, respectively),
 but have only moderate competitiveness (56) and opportunity for minority representation (50) and poor county-district splitting (14).
 
-These are some major quantifiable policy tradeoffs:
+These are some major quantifiable policy tradeoffs, relative to the Baseline map:
 
--   **Proportionality** &#8212; The Most Proportional map is somewhat proportional than the Baseline map (81 &#x2192; 100) 
-    without giving up on other Baseline ratings.
-    At the same time, it is also much better on county-district splitting than the Baseline map (14 &#x2192; 76).
--   **Competitiveness** &#8212; The Most Competitive map is much more competitive than the Baseline map (56 &#x2192; 100) 
-    but much less compact (79 &#x2192; 24).
--   **Minority** &#8212; The Best Minority map has much greater opportunity for minority representation than the Baseline map (50 &#x2192; 92) 
-    but is much less compact (79 &#x2192; 26) and less competitive (56 &#x2192; 17).
--   **Compactness** &#8212; The Most Compact map is somewhat more compact than the Baseline map (79 &#x2192; 98) 
-    but is somewhat less competitive (56 &#x2192; 35).
--   **Splitting** &#8212; The Least Splitting map splits far fewer counties &amp; districts than the Baseline map (14 &#x2192; 90) 
-    but is somewhat less competitiven (56 &#x2192; 28).
+-   **Most Proportional** &#8212; This map is more proportional (81 &#x2192; 100) 
+    without giving up on other ratings.
+    At the same time, it splits fewer counties &amp; districts (14 &#x2192; 76).
+-   **Most Competitive** &#8212; This map is more competitive (56 &#x2192; 100) 
+    but less compact (79 &#x2192; 24).
+-   **Best Minority** &#8212; This map has greater opportunity for minority representation (50 &#x2192; 92) 
+    but is less compact (79 &#x2192; 26) and less competitive (56 &#x2192; 17).
+-   **Most Compact** &#8212; This map is more compact (79 &#x2192; 98) 
+    but is less competitive (56 &#x2192; 35).
+-   **Least Splitting** &#8212; This map splits fewer counties &amp; districts (14 &#x2192; 90) 
+    but is less competitiven (56 &#x2192; 28).
 
 An average of 62% of population-weighted precincts assignments are shared between the Notable and Baseline maps.
 
 The Official map was ordered by the NC Supreme Court and challenged in Moore v. Harper.
 Relative to the Baseline map, it splits fewer counties &amp; districts (14 &#x2192; 57)
-but is less competitive (56 &#x2192; 30) and is a little less compact (79 &#x2192; 61). 
+but is less competitive (56 &#x2192; 30) and is less compact (79 &#x2192; 61). 
