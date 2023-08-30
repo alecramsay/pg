@@ -10,7 +10,7 @@ map-width: 700
 xx: "PA"
 ---
 
-The Baseline congressional districts are re naturally relatively proportional and compact (86 and 81, respectively),
+The Baseline congressional districts are naturally relatively proportional and compact (86 and 81, respectively),
 have only moderate competitiveness (46) and opportunity for minority representation (47), and poor county-district splitting (0).
 
 These are some major quantifiable policy tradeoffs, relative to the Baseline map:
