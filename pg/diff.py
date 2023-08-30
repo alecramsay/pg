@@ -10,21 +10,6 @@ from .readwrite import *
 from .helpers import *
 
 
-# TODO - DELETE after MD
-# def diff_two_plans_WRAPPER(to_plan: Plan, from_plan: Plan) -> list[Region]:
-#     """Isolate the class knowledge in this wrapper, so diff_two_plans() doesn't depend on it."""
-
-#     to_districts: dict[int, District] = to_plan.districts()
-#     from_districts: dict[int, District] = from_plan.districts()
-#     assert from_plan.state is not None
-#     assert from_plan.state.features is not None
-#     features: dict[str, Feature] = from_plan.state.features
-
-#     regions: list[Region] = diff_two_plans(to_districts, from_districts, features)
-
-#     return regions
-
-
 def diff_two_plans(
     to_districts: dict[int, District],
     from_districts: dict[int, District],
@@ -69,26 +54,6 @@ def compare_compound_ids(x_id: str, y_id: str) -> int:
         return int(x2) - int(y2)
     else:
         return int(x1) - int(y1)
-
-
-### HELPERS ###
-
-# TODO - DELETE after MD
-# def validate_plans(inverted_plans) -> bool:
-#     """Validate that all plans have the same number of blocks."""
-
-#     blocks_by_plan: list[int] = []
-
-#     for plan in inverted_plans:
-#         n: int = 0
-#         for k, v in plan.items():
-#             n += len(v["geoids"])
-#         blocks_by_plan.append(n)
-
-#     n = blocks_by_plan[0]
-#     all_same: bool = all(x == n for x in blocks_by_plan)
-
-#     return all_same
 
 
 ### END ###

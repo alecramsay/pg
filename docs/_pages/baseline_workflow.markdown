@@ -44,7 +44,13 @@ Extract the population & coordinates of precincts and put it into the format tha
 scripts/extract_data.py -s XX
 ```
 
-TODO - Alec: Add a script to extract the precinct to block mapping
+Create block-to-VTD and VTD-to-block mappings 
+(or block-to-BG and BG-to-block mappings for the states that use BG's instead of VTD's).
+
+```
+scripts/extract_blocks_by_vtd.py -s XX
+scripts/extract_blocks_by_bg.py -s XX
+```
 
 ## Extract a graph of precincts
 

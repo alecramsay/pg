@@ -85,9 +85,7 @@ def main() -> None:
     image_png: str = f"{xx}_{year}_{plan_type}_{label}_map.png"
     image_path: str = os.path.join(output_dir, image_png)
 
-    # TODO - Take the screenshot, using some solution (#52).
-
-    # print(f"Screenshot of {xx} / {label} / {guid} ...")
+    # Take the screenshot, using some solution (#52).
 
     command: str = f"node scripts/puppeteer_screenshot.js {url} {image_path}"
     if verbose:

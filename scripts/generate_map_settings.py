@@ -107,28 +107,6 @@ def pick_color(id: int) -> str:
     return color
 
 
-# TODO
-# def pick_two_tone_color(id: int, core: bool) -> str:
-#     """Translate a 1-N district # to a core (dark) / not core (light) color hex code."""
-
-#     dark: list[str] = [
-#         "#0f0787",
-#         "#c5407e",
-#         "#8b09a5",
-#     ]
-#     light: list[str] = [
-#         "#f0f823",
-#         "#fca735",
-#         "#f48948",
-#     ]
-#     n_colors: int = 3
-
-#     color: str = dark[(id - 1) % n_colors] if core else "#ffffff"
-#     # color: str = dark[(id - 1) % n_colors] if core else light[(id - 1) % n_colors]
-
-#     return color
-
-
 def assign_district_colors(xx: str, assignments: list[dict]) -> dict[int | str, str]:
     """Assign colors to districts, based on adjacency."""
 
@@ -370,16 +348,6 @@ def main() -> None:
     verbose: bool = args.verbose
 
     # Debug
-    # TODO
-
-    # assignments_csv = os.path.join(
-    #     output_dir, "NC_2022_Congress_Proportional_intersections.csv"
-    # )
-    # settings_json = os.path.join(
-    #     output_dir, "NC_2022_Congress_Proportional_intersections_display_settings.json"
-    # )
-    # intersections = True
-    # verbose = True
 
     #
 
@@ -392,8 +360,7 @@ def main() -> None:
 
     assignments: list[dict] = list() if intersections else district_by_block
 
-    # TODO - Map compound district ids to int's 1-N, so colors can be assigned
-    # TODO - Collect compound district ids for intersections maps
+    # Map compound district ids to int's 1-N, so colors can be assigned
 
     scan_order: dict[str, int] = dict()
     reverse_scan_order: dict[int, str] = dict()
@@ -445,29 +412,6 @@ def main() -> None:
     # Assign colors to districts
 
     district_colors = assign_district_colors(xx, assignments)
-
-    # TODO
-    # district_colors: dict[int | str, str] = dict()
-    # if not intersections:
-    #     # For maps, based on adjacency
-    #     district_colors = assign_district_colors(xx, assignments)
-    # else:
-    #     # For intersections maps, based on core/non-core intersections
-    #     # i: int = 1
-
-    #     for id in sorted(
-    #         list(district_ids),
-    #         key=functools.cmp_to_key(compare_compound_ids),
-    #     ):
-    #         b, c = id.split("/")
-
-    #         color: str = (
-    #             pick_two_tone_color(int(b), core=True)
-    #             if b == c
-    #             else pick_two_tone_color(int(c), core=False)
-    #         )
-    #         district_colors[id] = color
-    #         # i += 1
 
     if intersections:
         temp: dict[int | str, str] = dict()

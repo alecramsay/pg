@@ -60,7 +60,7 @@ district_by_block: list[dict] = read_csv(assignments_csv, [str, int])
 
 # Read the precinct adjacencies
 
-unit: str = "vtd"  # TODO: extend for BG's
+unit: str = "vtd"  # Extend for BG's
 
 adjacencies_csv: str = path_to_file([preprocessed_data_dir, xx]) + file_name(
     [xx, cycle, unit, "adjacencies"], "_", "csv"
