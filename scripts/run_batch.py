@@ -10,15 +10,17 @@ $ scripts/run_batch.py
 
 import os
 
-# from baseline import *
+from pg import *
 
-states: list[str] = ["MD", "PA", "VA", "AZ", "CO"]
+states: list[str] = [
+    xx for xx in sorted(study_states) if xx not in ["NC", "MD", "PA", "VA", "AZ", "CO"]
+]
 
 for xx in sorted(states):
-    command: str = ""
+    command: str = f"{xx}"
 
     # command = f"scripts/update/district_colors.py -s {xx} -i"
-    # command = f"scripts/update/map_settings.py -s {xx} -i"
+    command = f"scripts/update/map_settings.py -s {xx} -i"
     # command = f"scripts/update/screenshots.py -s {xx} -i"
     # command = f"scripts/BACKUP.py -s {xx}"
     # NOTE - Hand deploy the updated files!

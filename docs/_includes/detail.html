@@ -1,7 +1,7 @@
 <!-- A tab for map index = [Official, {{ label }}, Competitive, Minority, Compact, Splitting] -->
 
 {% assign label = site.data.maps[include.index].label %}
-{% assign label-qualified = site.data.maps[include.index].qualified-label | downcase %}
+{% assign label-qualified = site.data.maps[include.index].qualified-label %}
 {% assign label-lower = label | downcase %}
 
 {% capture map-png %}
@@ -60,7 +60,7 @@ https://davesredistricting.org/join/{{ state[intersections-label] }}
         </a>
     </p>
 
-    <p>These are the intersections of the {{ label-lower }} districts with the baseline districts:</p>
+    <p>These are the district cores between the {{ label }} and Baseline maps that have the maximum total population:</p>
     <p style="text-align: left">
         <a href="{{ intersections-link }}">
             <img src="{{ intersections-png }}" alt="Intersections" title="Click to view the map in Dave's Redistricting"
