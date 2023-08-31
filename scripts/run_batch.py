@@ -21,8 +21,8 @@ for xx in sorted(states):
 
     # command = f"scripts/update/district_colors.py -s {xx} -i"
     # command = f"scripts/update/map_settings.py -s {xx} -i"
-    command = f"scripts/update/screenshots.py -s {xx} -i"
-    # command = f"scripts/BACKUP.py -s {xx}"
+    # command = f"scripts/update/screenshots.py -s {xx} -i"
+    command = f"scripts/BACKUP.py -s {xx}"
     # NOTE - Hand deploy the updated files!
 
     print(command)
