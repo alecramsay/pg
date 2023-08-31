@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Updated intersection maps & images for MD, PA, VA, AZ, and CO (08-30-23)
 - Updated intersection maps & images for NC (08-30-23)
 - Revised qualitative analysis for NC, MD, PA, VA, AZ, and CO (08-30-23)
 - Increased boldness in ratings table (08-29-23)
