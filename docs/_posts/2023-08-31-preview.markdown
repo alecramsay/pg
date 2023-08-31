@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Preview"
+date:   2023-08-31 -6:00:00 -0600
+categories: news
+---
+The site is now live and ready for feedback.
+
+Six states are available in this preview:
+
+- NC -- Alec *always* starts with NC!
+- MD
+- PA
+- VA
+- AZ, and
+- CO
+
+We welcome any and all feedback, from typos to fundamental substantive comments and everything in between.
+And, of course, questions.

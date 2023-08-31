@@ -16,16 +16,16 @@ poor competitiveness (32) and county-district splitting (21).
 
 These are some major quantifiable policy tradeoffs, relative to the Baseline map:
 
--   **Most Proportional** &#8212; This map is more proportional (71 &#x2192; 100) 
+-   The **Most Proportional** map is more proportional (71 &#x2192; 100) 
     and more proportional, compact, and splits fewer counties &amp; districts (71 &#x2192; 100, 70 &#x2192; 100, and 21 &#x2192; 80, respectively).
--   **Most Competitive** &#8212; This map is more competitive (32 &#x2192; 100) 
+-   The **Most Competitive** map is more competitive (32 &#x2192; 100) 
     and more proportional, compact, and splits fewer counties &amp; districts (71 &#x2192; 100, 70 &#x2192; 100, and 21 &#x2192; 80, respectively).
--   **Best Minority** &#8212; This map has more opportunity for minority representation (67 &#x2192; 98) 
+-   The **Best Minority** map has more opportunity for minority representation (67 &#x2192; 98) 
     and is more competitive and splits fewer counties &amp; districts (32 &#x2192; 53 and 21 &#x2192; 52, respectively)
     but is less compact (70 &#x2192; 42).
--   **Most Compact** &#8212; This map is more compact (70 &#x2192; 100) and also
+-   The **Most Compact** map is more compact (70 &#x2192; 100) and also
     more proportional, more competitive, and splits fewer counties &amp; districts (71 &#x2192; 100, 32 &#x2192; 100, and 21 &#x2192; 80, respectively).
--   **Least Splitting** &#8212; This map splits fewer counties &amp; districts (21 &#x2192; 85) 
+-   The **Least Splitting** map splits fewer counties &amp; districts (21 &#x2192; 85) 
     but less compact (70 &#x2192; 50).
 
 An average of 54% of population-weighted precincts assignments are shared between the Notable and Baseline maps.

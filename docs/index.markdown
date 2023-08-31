@@ -106,8 +106,10 @@ We imagine many potential areas of future research, including:
 
 ## Acknowledgements
 
-Alec would like to thank his DRA colleague Terry Crowley for making the large scope of this project feasible and
-the DRA user community for pushing the dimensional limits of congressional redistricting in each state with their notable maps.
+We would like to thank Dave's Redistricting (DRA) which we use as a platform to present our analyses, and 
+the DRA user community for pushing the dimensional limits of congressional redistricting in each state 
+with their notable maps.
+Alec would like to thank his colleague Terry Crowley for making the large scope of this project feasible.
 
 ---
 

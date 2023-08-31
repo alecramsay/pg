@@ -15,6 +15,7 @@ This page explains what we did and why we did it.
 - [Method](#method)
 - [Data](#data)
 - [Workflow](#workflow)
+- [Code](#code)
 
 ## Motivation
 
@@ -156,6 +157,18 @@ Due to the size of these files, none are stored in a GitHub repository, except t
 ## Workflow
 
 Alec's overall workflow is described [here](./workflow.markdown).
+
+## Code 
+
+This site was developed using the code in three GitHub repositories:
+
+-   Alec's [pg repository](https://github.com/alecramsay/pg)
+-   Alec's [baseline repository](https://github.com/alecramsay/baseline), and
+-   Todd's [dccvt repository](https://github.com/proebsting/dccvt)
+
+The site is homed in the first.
+The code in that repository uses the code in the other two to generate baseline maps, and
+analyze the official and notable maps relative to them.
 
 ---
 
