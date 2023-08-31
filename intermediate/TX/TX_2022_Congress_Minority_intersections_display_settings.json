@@ -26,7 +26,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "1/14",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 3
 		},
@@ -35,7 +35,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "1/6",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 2
 		},
@@ -53,7 +53,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "10/14",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 44
 		},
@@ -62,7 +62,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "10/17",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 45
 		},
@@ -71,7 +71,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "10/38",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 46
 		},
@@ -80,7 +80,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "10/8",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 42
 		},
@@ -98,7 +98,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "11/13",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 48
 		},
@@ -107,7 +107,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "11/16",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 49
 		},
@@ -116,7 +116,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "11/19",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 50
 		},
@@ -125,7 +125,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "11/23",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 51
 		},
@@ -143,7 +143,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "12/24",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 53
 		},
@@ -152,7 +152,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "12/25",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 54
 		},
@@ -161,7 +161,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "12/33",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 55
 		},
@@ -170,7 +170,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "13/11",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 56
 		},
@@ -188,7 +188,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "13/19",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 58
 		},
@@ -197,7 +197,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "14/1",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 59
 		},
@@ -215,7 +215,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "14/36",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 62
 		},
@@ -224,7 +224,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "14/8",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 60
 		},
@@ -242,7 +242,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "15/23",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 64
 		},
@@ -251,7 +251,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "15/27",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 65
 		},
@@ -260,7 +260,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "15/34",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 66
 		},
@@ -269,7 +269,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "16/11",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 67
 		},
@@ -296,7 +296,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "17/19",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 70
 		},
@@ -305,7 +305,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "17/31",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 71
 		},
@@ -323,7 +323,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "18/2",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 72
 		},
@@ -332,7 +332,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "18/22",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 75
 		},
@@ -341,7 +341,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "18/38",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 76
 		},
@@ -350,7 +350,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "18/7",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 73
 		},
@@ -359,7 +359,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "19/12",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 78
 		},
@@ -377,7 +377,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "19/23",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 80
 		},
@@ -386,7 +386,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "19/24",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 81
 		},
@@ -395,7 +395,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "19/25",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 82
 		},
@@ -404,7 +404,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "19/6",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 77
 		},
@@ -413,7 +413,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/14",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 7
 		},
@@ -431,7 +431,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/29",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 8
 		},
@@ -440,7 +440,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/36",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 9
 		},
@@ -449,7 +449,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/38",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 10
 		},
@@ -458,7 +458,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/7",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 5
 		},
@@ -467,7 +467,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "2/8",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 6
 		},
@@ -485,7 +485,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "20/21",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 84
 		},
@@ -494,7 +494,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "20/28",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 85
 		},
@@ -503,7 +503,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "21/19",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 86
 		},
@@ -512,7 +512,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "21/20",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 87
 		},
@@ -530,7 +530,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "21/23",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 89
 		},
@@ -539,7 +539,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "21/35",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 90
 		},
@@ -548,7 +548,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "22/10",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 92
 		},
@@ -557,7 +557,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "22/18",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 93
 		},
@@ -575,7 +575,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "22/27",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 95
 		},
@@ -584,7 +584,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "22/9",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 91
 		},
@@ -593,7 +593,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "23/11",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 96
 		},
@@ -602,7 +602,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "23/21",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 97
 		},
@@ -620,7 +620,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "23/28",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 99
 		},
@@ -629,7 +629,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "23/34",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 100
 		},
@@ -647,7 +647,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "24/26",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 104
 		},
@@ -656,7 +656,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "24/33",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 105
 		},
@@ -665,7 +665,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "24/4",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 101
 		},
@@ -674,7 +674,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "24/6",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 102
 		},
@@ -683,7 +683,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "25/12",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 106
 		},
@@ -692,7 +692,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "25/17",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 107
 		},
@@ -701,7 +701,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "25/19",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 108
 		},
@@ -719,7 +719,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "25/30",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 110
 		},
@@ -728,7 +728,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "25/33",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 111
 		},
@@ -746,7 +746,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "26/3",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 112
 		},
@@ -755,7 +755,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "26/32",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 115
 		},
@@ -764,7 +764,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "26/4",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 113
 		},
@@ -773,7 +773,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "27/10",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 116
 		},
@@ -791,7 +791,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "27/28",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 118
 		},
@@ -800,7 +800,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "27/34",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 119
 		},
@@ -809,7 +809,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "28/10",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 120
 		},
@@ -818,7 +818,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "28/20",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 121
 		},
@@ -836,7 +836,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "28/35",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 123
 		},
@@ -845,7 +845,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "29/2",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 124
 		},
@@ -863,7 +863,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "29/7",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 125
 		},
@@ -872,7 +872,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "3/25",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 15
 		},
@@ -890,7 +890,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "3/4",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 12
 		},
@@ -899,7 +899,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "3/5",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 13
 		},
@@ -908,7 +908,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "3/6",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 14
 		},
@@ -917,7 +917,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "30/19",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 127
 		},
@@ -926,7 +926,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "30/25",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 128
 		},
@@ -944,7 +944,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "30/32",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 130
 		},
@@ -953,7 +953,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "31/19",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 131
 		},
@@ -971,7 +971,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "31/35",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 133
 		},
@@ -980,7 +980,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "31/37",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 134
 		},
@@ -989,7 +989,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "32/3",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 135
 		},
@@ -998,7 +998,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "32/30",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 137
 		},
@@ -1016,7 +1016,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "32/5",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 136
 		},
@@ -1025,7 +1025,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "33/12",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 139
 		},
@@ -1034,7 +1034,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "33/24",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 140
 		},
@@ -1043,7 +1043,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "33/26",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 141
 		},
@@ -1052,7 +1052,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "33/30",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 142
 		},
@@ -1061,7 +1061,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "33/32",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 143
 		},
@@ -1079,7 +1079,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "34/15",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 145
 		},
@@ -1097,7 +1097,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "35/10",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 147
 		},
@@ -1106,7 +1106,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "35/19",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 148
 		},
@@ -1115,7 +1115,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "35/28",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 149
 		},
@@ -1124,7 +1124,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "35/31",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 150
 		},
@@ -1142,7 +1142,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "35/37",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 152
 		},
@@ -1151,7 +1151,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "36/29",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 154
 		},
@@ -1169,7 +1169,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "36/9",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 153
 		},
@@ -1178,7 +1178,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "37/10",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 156
 		},
@@ -1187,7 +1187,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "37/31",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 157
 		},
@@ -1205,7 +1205,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "38/18",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 159
 		},
@@ -1223,7 +1223,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "4/26",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 19
 		},
@@ -1232,7 +1232,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "4/3",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 16
 		},
@@ -1250,7 +1250,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "4/6",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 18
 		},
@@ -1259,7 +1259,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "5/25",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 21
 		},
@@ -1268,7 +1268,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "5/30",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 22
 		},
@@ -1277,7 +1277,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "5/32",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 23
 		},
@@ -1295,7 +1295,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "6/1",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 24
 		},
@@ -1304,7 +1304,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "6/14",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 27
 		},
@@ -1313,7 +1313,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "6/17",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 28
 		},
@@ -1322,7 +1322,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "6/25",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 29
 		},
@@ -1331,7 +1331,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "6/4",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 25
 		},
@@ -1349,7 +1349,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "7/18",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 33
 		},
@@ -1358,7 +1358,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "7/2",
-			"color": "#f48948",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 30
 		},
@@ -1367,7 +1367,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "7/22",
-			"color": "#0f0787",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 34
 		},
@@ -1385,7 +1385,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "7/9",
-			"color": "#c5407e",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 32
 		},
@@ -1394,7 +1394,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "8/38",
-			"color": "#8b09a5",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 37
 		},
@@ -1403,7 +1403,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "8/7",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 35
 		},
@@ -1421,7 +1421,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "9/2",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 38
 		},
@@ -1430,7 +1430,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "9/27",
-			"color": "#fca735",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 41
 		},
@@ -1439,7 +1439,7 @@
 			"lon": 0,
 			"fontsize": -1,
 			"label": "9/7",
-			"color": "#f0f823",
+			"color": "#ffffff",
 			"target": 0,
 			"order": 39
 		},
