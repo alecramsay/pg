@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Edited the example page to match the new template (09-01-23)
 - Deployed the updated intersections images for all states (08-31-23)
 - A few final edits for preview (08-31-23)
 - Updated intersection maps & images for MD, PA, VA, AZ, and CO (08-30-23)

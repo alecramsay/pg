@@ -21,7 +21,7 @@ At the top is a summary of what the various exhibits reveal. That is not shown h
 
 <!-- BASELINE DISTRICTS -->
 
-[First the baseline districts are shown.
+[First the Baseline districts are shown.
 You can click on the image to go to the map in DRA.]
 
 {% capture baseline-png %}
@@ -38,7 +38,7 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <h3>Baseline Districts</h3>
 
-<p>These are the baseline congressional districts:</p>
+<p>These are the Baseline congressional districts:</p>
 <p style="text-align: left">
     <a href="{{ baseline-link }}">
         <img src="{{ baseline-png }}" alt="Baseline districts" title="Click to view the map in Dave's Redistricting"
@@ -48,14 +48,14 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <h3>Ratings vs. Baseline</h3>
 
-[Then the ratings for the official and the five notable maps that maximizing proportionality, 
+[Then the ratings for the Official and the five notable maps that maximizing proportionality, 
 competitiveness, minority representation, compactness, and splitting are compared to the ratings 
-of the baseline map.
+of the Baseline map.
 First with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of official map and the five notable maps with the baseline map:</p>
+<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Baseline map:</p>
 
 <table style="border:0px">
     <tr>
@@ -215,18 +215,19 @@ First with a set of pairwise radar diagrams.]
 
 <h3>Districts vs. Baseline</h3>
 
-[At the bottom are a set of tabs, one for each of the six maps compared to the baseline map. 
+[At the bottom are a set of tabs, one for each of the six maps compared to the Baseline map. 
 For each map, there is: 
 
 * an image of the selected comparison map, 
-* an image of the regions formed by intersecting the district boundaries of the two maps, and
+* an image of the regions formed by intersecting the district boundaries of the two maps with the district "cores" highlighted, and
 * a table showing data for each intersecting region
 
-The intersecting regions are labeled "#/#" where the first # is the district in the baseline map,
+The intersecting regions are labeled "#/#" where the first # is the district in the Baseline map,
 and the second # is the district in the comparison map.
+The from/to labels for district cores are the same, the same district id in both maps.
 You can click on the images to see the maps in DRA.]
 
-<p>These tabs compare the district boundaries of official map and the five notable maps with the baseline map:</p>
+<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
 
 <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 
