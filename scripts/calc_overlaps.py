@@ -80,6 +80,7 @@ def main() -> None:
     ]
 
     print()
+    print(f"Overlaps for {xx}:")
 
     for label in notable_maps:
         summary_path: str = os.path.join(
@@ -89,13 +90,17 @@ def main() -> None:
             summary: list[dict] = read_csv(summary_path, summary_types)
             summary = sorted(summary, key=itemgetter("DISTRICT%"), reverse=True)
 
-            overlaps.append(sum([x["DISTRICT%"] for x in summary][:n]) / n)
+            overlap: float = sum([x["DISTRICT%"] for x in summary][:n]) / n
+            overlaps.append(overlap)
+            # overlaps.append(sum([x["DISTRICT%"] for x in summary][:n]) / n)
+
+            print(f"- {label} overlap: {overlap * 100:.1f}%")
 
         else:
             print(f"NOTE - {summary_path} not found.")
 
     average_overlap: float = sum(overlaps * 100) / len(overlaps)
-    print(f"Average overlap for {xx}: {average_overlap:.1f}%")
+    print(f"Average: {average_overlap:.1f}%")
     print()
 
     pass
