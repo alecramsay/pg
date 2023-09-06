@@ -20,6 +20,7 @@ from argparse import ArgumentParser, Namespace
 
 import os
 from operator import itemgetter
+import copy
 
 from pg import *
 
@@ -72,7 +73,7 @@ def main() -> None:
 
     summary_types: list = [str, int, float]
 
-    overlaps: list[dict] = list()
+    overlaps: dict[str, float] = dict()
     total: float = 0.0
 
     notable_maps: list[str] = [
@@ -93,25 +94,37 @@ def main() -> None:
 
             overlap: float = sum([x["DISTRICT%"] for x in summary][:n]) / n
             total += overlap
-            overlaps.append({"label": label, "overlap": overlap})
+            overlaps[label] = overlap
 
         else:
             print(f"NOTE - {summary_path} not found.")
             exit(1)
 
     average_overlap: float = total / len(overlaps)
-    overlaps.append({"label": "Average", "overlap": average_overlap})
+    overlaps["Average"] = average_overlap
 
     # Gather ratings info
 
     ratings_path: str = os.path.join(
         data_root, file_name([xx, yyyy, plan_type, "ratings"], "_", "csv")
     )
-    ratings: list[dict] = read_csv(ratings_path, [str, int, int, int, int, int])
+    ratings_table: list[dict] = read_csv(ratings_path, [str, int, int, int, int, int])
 
-    baseline_ratings: dict = dict(ratings[-1])
+    baseline_ratings: dict = dict(ratings_table[-1])
     baseline_ratings.pop("Map")
-    ratings = ratings[:-1]
+    ratings_table = ratings_table[:-1]
+
+    ratings_dict: dict[str, dict] = dict()
+    for row in ratings_table:
+        ratings_dict[row["Map"]] = dict(row)
+        ratings_dict[row["Map"]].pop("Map")
+
+    deltas: dict[str, dict] = copy.deepcopy(ratings_dict)
+    for label, ratings in deltas.items():
+        for metric in ratings:
+            deltas[label][metric] -= baseline_ratings[metric]
+
+    # TODO - Write the summary
 
     pass
 
