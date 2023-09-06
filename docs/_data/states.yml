@@ -712,3 +712,20 @@
   compact-intersections: 6f6498dd-7309-48bb-858c-32a7fb757318-intersections
   splitting-intersections: 3e129fc0-097a-4319-8080-ccf7872108c7-intersections
   ready: true
+# For testing
+- xx: XX
+  name: North Carolina
+  official: 2d664fff-9375-4354-88d3-bde3a9bbca5a
+  proportional: 6f929ec7-0ae5-4b5b-90b6-bb5435fb475e
+  competitive: 918598d9-13f6-44c6-9b4e-84f393fd6e03
+  minority: 1d66dfc3-d2b4-4dd7-a5e9-157ce113a28c
+  compact: 21bbe7c5-0a26-4955-806f-08fc108a070b
+  splitting: d27b85a4-54fe-41a6-95c3-c98a602eafd9
+  baseline: 8975783a-3e20-43b6-81e3-110050b2ebed
+  official-intersections: 7b21719c-7f4b-448c-9d87-413429edeb88
+  proportional-intersections: 6f929ec7-0ae5-4b5b-90b6-bb5435fb475e-intersections
+  competitive-intersections: 918598d9-13f6-44c6-9b4e-84f393fd6e03-intersections
+  minority-intersections: 1d66dfc3-d2b4-4dd7-a5e9-157ce113a28c-intersections
+  compact-intersections: 21bbe7c5-0a26-4955-806f-08fc108a070b-intersections
+  splitting-intersections: d27b85a4-54fe-41a6-95c3-c98a602eafd9-intersections
+  ready: true

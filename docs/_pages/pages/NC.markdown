@@ -27,7 +27,7 @@ These are some major quantifiable policy tradeoffs, relative to the Baseline map
 -   The **Least Splitting** map splits fewer counties &amp; districts (14 &#x2192; 90) 
     but is less competitiven (56 &#x2192; 28).
 
-An average of 62% of population-weighted precincts assignments are shared between the Notable and Baseline maps.
+An average of 62% of population-weighted precinct assignments are shared between the Notable and Baseline maps.
 
 The Official map was ordered by the NC Supreme Court and challenged in Moore v. Harper.
 Relative to the Baseline map, it splits fewer counties &amp; districts (14 &#x2192; 57)
