@@ -7,7 +7,7 @@ small-radar-width: 300
 big-radar-width: 500
 map-width: 700
 
-xx: "NC"
+xx: "XX"
 ---
 
 {% assign xx = page.xx %}
