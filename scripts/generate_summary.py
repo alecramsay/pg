@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Calculate the average overlap between the notable & baseline maps.
+Generate a state summary.
 
 For example:
 
-$ scripts/calc_overlaps.py
-$ scripts/calc_overlaps.py -s NC
+$ scripts/generate_summary.py
+$ scripts/generate_summary -s NC
 
 For documentation, type:
 
-$ scripts/calc_overlaps.py -h
+$ scripts/generate_summary.py -h
 
 """
 
@@ -26,7 +26,7 @@ from pg import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Calculate the average overlap between the notable & baseline maps."
+        description="Generate a state summary."
     )
 
     parser.add_argument(
@@ -53,7 +53,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Calculate the average overlap between the notable & baseline maps."""
+    """Generate a state summary."""
 
     args: Namespace = parse_args()
 
@@ -62,14 +62,15 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    #
+    # Gather the overlaps info
 
     n: int = districts_by_state[xx][plan_type.lower()]
 
     summary_root: str = "docs/_data"
     summary_types: list = [str, int, float]
 
-    overlaps: list[float] = list()
+    overlaps: list[dict] = list()
+    total: float = 0.0
 
     notable_maps: list[str] = [
         "Proportional",
@@ -78,9 +79,6 @@ def main() -> None:
         "Compact",
         "Splitting",
     ]
-
-    print()
-    print(f"Overlaps for {xx}:")
 
     for label in notable_maps:
         summary_path: str = os.path.join(
@@ -91,17 +89,17 @@ def main() -> None:
             summary = sorted(summary, key=itemgetter("DISTRICT%"), reverse=True)
 
             overlap: float = sum([x["DISTRICT%"] for x in summary][:n]) / n
-            overlaps.append(overlap)
-            # overlaps.append(sum([x["DISTRICT%"] for x in summary][:n]) / n)
+            total += overlap
+            overlaps.append({"label": label, "overlap": overlap})
 
             print(f"- {label} overlap: {overlap * 100:.1f}%")
 
         else:
             print(f"NOTE - {summary_path} not found.")
+            exit(1)
 
-    average_overlap: float = sum(overlaps * 100) / len(overlaps)
-    print(f"Average: {average_overlap:.1f}%")
-    print()
+    average_overlap: float = total / len(overlaps)
+    overlaps.append({"label": "Average", "overlap": average_overlap})
 
     pass
 

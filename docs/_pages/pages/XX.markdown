@@ -10,4 +10,5 @@ map-width: 700
 xx: "NC"
 ---
 
-{% include XX.html %}
+{% assign xx = page.xx %}
+{% include {{ xx }}.html %}
