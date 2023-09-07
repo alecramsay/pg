@@ -169,8 +169,12 @@ def main() -> None:
 
     lines.append("<br><br>")
 
-    line = f"Relative to the Baseline ratings &#8212; proportionality: {0}, competitiveness: {1}, minority: {2}, compactness: {3}, splitting: {4} &#8212; the notable maps illustrate some major quantifiable policy trade-offs:".format(
-        baseline_ratings
+    line = "Relative to the Baseline ratings &#8212; proportionality: {0}, competitiveness: {1}, minority: {2}, compactness: {3}, splitting: {4} &#8212; the notable maps illustrate some major quantifiable policy trade-offs:".format(
+        baseline_ratings["Proportionality"],
+        baseline_ratings["Competitiveness"],
+        baseline_ratings["Minority"],
+        baseline_ratings["Compactness"],
+        baseline_ratings["Splitting"],
     )
     lines.append(line)
 
