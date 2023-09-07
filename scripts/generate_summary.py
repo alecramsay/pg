@@ -164,12 +164,10 @@ def main() -> None:
         lines.append(line)
     lines.append("</ul>")
 
-    lines.append("<br>")
-
     line = f"The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section."
     lines.append(line)
 
-    lines.append("<br>")
+    lines.append("<br><br>")
 
     line = f"Relative to the Baseline ratings &#8212; proportionality: {0}, competitiveness: {1}, minority: {2}, compactness: {3}, splitting: {4} &#8212; the notable maps illustrate some major quantifiable policy trade-offs:".format(
         baseline_ratings
@@ -186,8 +184,6 @@ def main() -> None:
         lines.append(line)
     lines.append("</ul>")
 
-    lines.append("<br>")
-
     official_relative: list[int] = [
         deltas["Official"][metric] for metric in deltas["Official"]
     ]
@@ -197,7 +193,7 @@ def main() -> None:
     line = f"The Official map trades-off {official_relative} for {official_absolute} ratings."
     lines.append(line)
 
-    lines.append("<br>")
+    lines.append("<br><br>")
 
     line = f"The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section."
     lines.append(line)
