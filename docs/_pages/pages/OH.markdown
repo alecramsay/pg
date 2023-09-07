@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: state
 title: Ohio
 permalink: states/OH/
 
@@ -10,4 +10,5 @@ map-width: 700
 xx: "OH"
 ---
 
-<p>{{ page.xx }} has not been analyzed yet. Please check back later.</p>
+{% assign xx = page.xx %}
+{% include {{ xx }}_summary.html %}

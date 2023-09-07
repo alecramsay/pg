@@ -78,6 +78,9 @@ def main() -> None:
 
     #
 
+    if verbose:
+        print(f"Summarizing {xx}...")
+
     # Build a list of comparison maps
 
     maps_root: str = FileSpec(os.path.expanduser("data")).abs_path
@@ -167,8 +170,6 @@ def main() -> None:
     line = f"<p>The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section.</p>"
     lines.append(line)
 
-    # lines.append("<br><br>")
-
     baseline_absolute: list[int] = [
         baseline_ratings[metric] for metric in baseline_ratings
     ]
@@ -193,8 +194,6 @@ def main() -> None:
     ]
     line = f"<p>The Official map trades-off {official_relative} for {official_absolute} ratings.</p>"
     lines.append(line)
-
-    # lines.append("<br><br>")
 
     line = f"<p>The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section.</p>"
     lines.append(line)
