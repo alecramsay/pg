@@ -153,7 +153,7 @@ def main() -> None:
     lines: list[str] = list()
     line: str = ""
 
-    line = f"An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are shared between the comparison notable maps and the Baseline map:"
+    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are shared between the comparison notable maps and the Baseline map:</p>"
     lines.append(line)
 
     lines.append("<ul>")
@@ -164,15 +164,15 @@ def main() -> None:
         lines.append(line)
     lines.append("</ul>")
 
-    line = f"The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section."
+    line = f"<p>The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section.</p>"
     lines.append(line)
 
-    lines.append("<br><br>")
+    # lines.append("<br><br>")
 
     baseline_absolute: list[int] = [
         baseline_ratings[metric] for metric in baseline_ratings
     ]
-    line = f"Relative to the Baseline ratings &#8212; {baseline_absolute}, for proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, respectively &#8212; the notable maps illustrate some major quantifiable policy trade-offs:"
+    line = f"<p>Relative to the Baseline ratings &#8212; {baseline_absolute}, for proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, respectively &#8212; the notable maps illustrate some major quantifiable policy trade-offs:</p>"
     lines.append(line)
 
     lines.append("<ul>")
@@ -191,12 +191,12 @@ def main() -> None:
     official_absolute: list[int] = [
         ratings_dict["Official"][metric] for metric in ratings_dict["Official"]
     ]
-    line = f"The Official map trades-off {official_relative} for {official_absolute} ratings."
+    line = f"<p>The Official map trades-off {official_relative} for {official_absolute} ratings.</p>"
     lines.append(line)
 
-    lines.append("<br><br>")
+    # lines.append("<br><br>")
 
-    line = f"The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section."
+    line = f"<p>The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section.</p>"
     lines.append(line)
 
     html_path: str = os.path.join(output_dir, f"{xx}_summary.html")
