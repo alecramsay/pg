@@ -6,7 +6,7 @@ Generate a state summary.
 For example:
 
 $ scripts/generate_summary.py
-$ scripts/generate_summary -s NC
+$ scripts/generate_summary.py -s NC
 
 For documentation, type:
 
@@ -53,6 +53,19 @@ def parse_args() -> Namespace:
     return args
 
 
+def qualify_label(label: str) -> str:
+    """Add the adjective to the notable label."""
+
+    if label in ["Proportional", "Competitive", "Compact"]:
+        return f"Most {label}"
+    elif label == "Minority":
+        return "Best Minority"
+    elif label == "Splitting":
+        return "Least Splitting"
+    else:
+        return label
+
+
 def main() -> None:
     """Generate a state summary."""
 
@@ -65,7 +78,24 @@ def main() -> None:
 
     #
 
-    data_root: str = "docs/_data"
+    # Build a list of comparison maps
+
+    maps_root: str = FileSpec(os.path.expanduser("data")).abs_path
+    maps_dir: str = os.path.join(maps_root, xx)
+
+    potential_notables: list[str] = [
+        "Proportional",
+        "Competitive",
+        "Minority",
+        "Compact",
+        "Splitting",
+    ]
+    notable_maps: list[str] = []
+
+    for label in potential_notables:
+        map_path: str = os.path.join(maps_dir, f"{xx}_2022_Congress_{label}.csv")
+        if os.path.isfile(map_path):
+            notable_maps.append(label)
 
     # Gather the overlaps info
 
@@ -76,13 +106,7 @@ def main() -> None:
     overlaps: dict[str, float] = dict()
     total: float = 0.0
 
-    notable_maps: list[str] = [
-        "Proportional",
-        "Competitive",
-        "Minority",
-        "Compact",
-        "Splitting",
-    ]
+    data_root: str = "docs/_data"
 
     for label in notable_maps:
         summary_path: str = os.path.join(
@@ -124,7 +148,62 @@ def main() -> None:
         for metric in ratings:
             deltas[label][metric] -= baseline_ratings[metric]
 
-    # TODO - Write the summary
+    # Write the summary
+
+    lines: list[str] = list()
+    line: str = ""
+
+    line = f"An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are shared between the comparison notable maps and the Baseline map:"
+    lines.append(line)
+
+    lines.append("<ul>")
+    for label, overlap in overlaps.items():
+        if label == "Average":
+            continue
+        line = f"  <li>{qualify_label(label)}: {overlap * 100:.1f}%</li>"
+        lines.append(line)
+    lines.append("</ul>")
+
+    lines.append("<br>")
+
+    line = f"The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section."
+    lines.append(line)
+
+    lines.append("<br>")
+
+    line = f"Relative to the Baseline ratings &#8212; proportionality: {0}, competitiveness: {1}, minority: {2}, compactness: {3}, splitting: {4} &#8212; the notable maps illustrate some major quantifiable policy trade-offs:".format(
+        baseline_ratings
+    )
+    lines.append(line)
+
+    lines.append("<ul>")
+    for label, ratings in ratings_dict.items():
+        if label in ["Official", "Baseline"]:
+            continue
+        relative: list[int] = [deltas[label][metric] for metric in deltas[label]]
+        absolute: list[int] = [ratings[metric] for metric in ratings]
+        line = f"  <li>{qualify_label(label)}: {relative} &rarr; {absolute}</li>"
+        lines.append(line)
+    lines.append("</ul>")
+
+    lines.append("<br>")
+
+    official_relative: list[int] = [
+        deltas["Official"][metric] for metric in deltas["Official"]
+    ]
+    official_absolute: list[int] = [
+        ratings_dict["Official"][metric] for metric in ratings_dict["Official"]
+    ]
+    line = f"The Official map trades-off {official_relative} for {official_absolute} ratings."
+    lines.append(line)
+
+    lines.append("<br>")
+
+    line = f"The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section."
+    lines.append(line)
+
+    for l in lines:
+        print(l)
 
     pass
 
