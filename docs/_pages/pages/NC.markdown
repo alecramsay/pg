@@ -25,7 +25,7 @@ These are some major quantifiable policy tradeoffs, relative to the Baseline map
 -   The **Most Compact** map is more compact (79 &#x2192; 98) 
     but is less competitive (56 &#x2192; 35).
 -   The **Least Splitting** map splits fewer counties &amp; districts (14 &#x2192; 90) 
-    but is less competitiven (56 &#x2192; 28).
+    but is less competitive (56 &#x2192; 28).
 
 An average of 62% of population-weighted precinct assignments are shared between the Notable and Baseline maps.
 
