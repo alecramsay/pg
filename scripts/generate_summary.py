@@ -202,8 +202,11 @@ def main() -> None:
     line = f"The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section."
     lines.append(line)
 
-    for l in lines:
-        print(l)
+    html_path: str = os.path.join(output_dir, f"{xx}_summary.html")
+
+    with open(html_path, "w") as f:
+        for line in lines:
+            f.write(line + "\n")
 
     pass
 

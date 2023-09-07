@@ -11,4 +11,4 @@ xx: "NC"
 ---
 
 {% assign xx = page.xx %}
-{% include {{ xx }}.html %}
+{% include {{ xx }}_summary.html %}
