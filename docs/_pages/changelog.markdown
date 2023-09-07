@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Investigating auto-generated summary analyses ... updated (09-07-23)
+- Investigating auto-generated summary analyses (09-07-23)
 - Edited the example page to match the new template (09-01-23)
 - Deployed the updated intersections images for all states (08-31-23)
 - A few final edits for preview (08-31-23)
