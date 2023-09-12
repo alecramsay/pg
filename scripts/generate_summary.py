@@ -40,7 +40,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-o",
         "--output",
-        default="~/Downloads/",
+        default="~/Downloads/_includes/",
         help="Path to output directory",
         type=str,
     )
@@ -156,14 +156,14 @@ def main() -> None:
     lines: list[str] = list()
     line: str = ""
 
-    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are shared between the comparison notable maps and the Baseline map:</p>"
+    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are the same for comparison <a href='https://medium.com/dra-2020/notable-maps-66d744933a48'>notable maps from Dave’s Redistricting (DRA)</a> and the Baseline map:</p>"
     lines.append(line)
 
     lines.append("<ul>")
     for label, overlap in overlaps.items():
         if label == "Average":
             continue
-        line = f"  <li>{qualify_label(label)}: {overlap * 100:.1f}%</li>"
+        line = f"  <li>The {qualify_label(label)} map: {overlap * 100:.1f}%</li>"
         lines.append(line)
     lines.append("</ul>")
 
@@ -182,7 +182,7 @@ def main() -> None:
             continue
         relative: list[int] = [deltas[label][metric] for metric in deltas[label]]
         absolute: list[int] = [ratings[metric] for metric in ratings]
-        line = f"  <li>{qualify_label(label)}: {relative} &rarr; {absolute}</li>"
+        line = f"  <li>The {qualify_label(label)} map trades-off {relative} for {absolute} ratings.</li>"
         lines.append(line)
     lines.append("</ul>")
 
