@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Updated state template & example pages (09-12-23)
+- Updated state template & example pages ... (09-12-23)
 - Added script to calculate the overall average overlap (09-12-23)
 - Investigating auto-generated summary analyses; added other states (09-07-23)
 - Edited the example page to match the new template (09-01-23)
