@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Added script to calculate the overall average overlap (09-12-23)
 - Investigating auto-generated summary analyses; added other states (09-07-23)
 - Edited the example page to match the new template (09-01-23)
 - Deployed the updated intersections images for all states (08-31-23)
@@ -14,7 +15,7 @@ This page tracks major changes to the site, in reverse chronological order:
 - Updated intersection maps & images for NC (08-30-23)
 - Revised qualitative analysis for NC, MD, PA, VA, AZ, and CO (08-30-23)
 - Increased boldness in ratings table (08-29-23)
-- More content edits ... (08-29-23)
+- More content edits (08-29-23)
 - Initial content edits (08-28-23)
 - Ran the remaining states, including FL (08-28-23)
 - Trying Todd's fixes on MD & GA (08-27-23)
