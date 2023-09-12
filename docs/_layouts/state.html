@@ -36,7 +36,62 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
     </a>
 </p>
 
-<h3>Ratings vs. Baseline</h3>
+<!-- MAPS TABS -->
+
+<h3>Overlaps: Districts vs. Baseline</h3>
+
+<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
+
+<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
+        site.data.maps[0].qualified-label }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
+        site.data.maps[1].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
+        site.data.maps[2].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
+        site.data.maps[3].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
+        site.data.maps[4].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
+        site.data.maps[5].qualified-label
+        }}</button>
+</div>
+
+<!-- Tab content -->
+
+<!-- Official -->
+{% include detail.html index=0 %}
+
+<!-- Most Proportional -->
+{% include detail.html index=1 %}
+
+<!-- Most Competitive -->
+{% include detail.html index=2 %}
+
+<!-- Best Minority -->
+{% include detail.html index=3 %}
+
+<!-- Most Compact -->
+{% include detail.html index=4 %}
+
+<!-- Least Splitting -->
+{% include detail.html index=5 %}
+
+<!-- Show the Official tab by default -->
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+  
+<h3>Trade-offs: Ratings vs. Baseline</h3>
 
 <!-- RADAR DIAGRAMS -->
 
@@ -192,59 +247,4 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
         })
     }
 
-</script>
-
-<!-- MAPS TABS -->
-
-<h3>Districts vs. Baseline</h3>
-
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
-
-<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
-
-<!-- Tab links -->
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
-        site.data.maps[0].qualified-label }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
-        site.data.maps[1].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
-        site.data.maps[2].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
-        site.data.maps[3].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
-        site.data.maps[4].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
-        site.data.maps[5].qualified-label
-        }}</button>
-</div>
-
-<!-- Tab content -->
-
-<!-- Official -->
-{% include detail.html index=0 %}
-
-<!-- Most Proportional -->
-{% include detail.html index=1 %}
-
-<!-- Most Competitive -->
-{% include detail.html index=2 %}
-
-<!-- Best Minority -->
-{% include detail.html index=3 %}
-
-<!-- Most Compact -->
-{% include detail.html index=4 %}
-
-<!-- Least Splitting -->
-{% include detail.html index=5 %}
-
-<!-- Show the Official tab by default -->
-<script>
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
 </script>

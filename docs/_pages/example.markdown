@@ -12,17 +12,14 @@ map-width: 700
 This is an annotated example of the analysis of a state's political geography, using North Carolina as an example.
 [Annotations below are shown in square brackets like this.]
 
+<!-- SUMMARY ANALYSIS -->
+
 [There is a separate page for each state. 
 At the top is a summary of what the various exhibits reveal. That is not shown here.]
 
 {% assign xx = page.xx %}
 
-<!-- SUMMARY ANALYSIS -->
-
 <!-- BASELINE DISTRICTS -->
-
-[First the Baseline districts are shown.
-You can click on the image to go to the map in DRA.]
 
 {% capture baseline-png %}
 {{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
@@ -38,6 +35,9 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <h3>Baseline Districts</h3>
 
+[First the Baseline districts are shown.
+You can click on the image to go to the map in DRA.]
+
 <p>These are the Baseline congressional districts:</p>
 <p style="text-align: left">
     <a href="{{ baseline-link }}">
@@ -46,16 +46,83 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
     </a>
 </p>
 
-<h3>Ratings vs. Baseline</h3>
+<!-- MAPS TABS -->
 
-[Then the ratings for the Official and the five notable maps that maximizing proportionality, 
-competitiveness, minority representation, compactness, and splitting are compared to the ratings 
+<h3>Overlaps: Districts vs. Baseline</h3>
+
+[Then each of the six maps are compared to the Baseline map. 
+For each map, there is: 
+
+* an image of the selected comparison map, 
+* an image of the regions formed by intersecting the district boundaries of the two maps with the district "cores" highlighted, and
+* a table showing data for each intersecting region
+
+The intersecting regions are labeled "#/#" where the first # is the district in the Baseline map,
+and the second # is the district in the comparison map.
+The from/to labels for district cores are the same, the same district id in both maps.
+You can click on the images to see the maps in DRA.]
+
+<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
+
+<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
+        site.data.maps[0].qualified-label }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
+        site.data.maps[1].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
+        site.data.maps[2].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
+        site.data.maps[3].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
+        site.data.maps[4].qualified-label
+        }}</button>
+    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
+        site.data.maps[5].qualified-label
+        }}</button>
+</div>
+
+<!-- Tab content -->
+
+<!-- Official -->
+{% include detail.html index=0 %}
+
+<!-- Most Proportional -->
+{% include detail.html index=1 %}
+
+<!-- Most Competitive -->
+{% include detail.html index=2 %}
+
+<!-- Best Minority -->
+{% include detail.html index=3 %}
+
+<!-- Most Compact -->
+{% include detail.html index=4 %}
+
+<!-- Least Splitting -->
+{% include detail.html index=5 %}
+
+<!-- Show the Official tab by default -->
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+  
+<h3>Trade-offs: Ratings vs. Baseline</h3>
+
+[The ratings for the Official and the five notable maps that maximize proportionality, 
+competitiveness, minority representation, compactness, and splitting are then compared to the ratings 
 of the Baseline map.
 First with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Baseline map:</p>
+<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Baseline map (orange = baseline map; green = comparison map):</p>
 
 <table style="border:0px">
     <tr>
@@ -66,29 +133,29 @@ First with a set of pairwise radar diagrams.]
         </td>
         <td style="border:0px">
             <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Proportional_radar.png"
-                alt="{{ site.data.maps[1].qualified-label }}" title="{{ site.data.maps[1].qualified-label }}"
+                alt="There is no most proportional map." title="{{ site.data.maps[1].qualified-label }}"
                 width="{{ page.small-radar-width }}" />
         </td>
         <td style="border:0px">
             <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Competitive_radar.png"
-                alt="{{ site.data.maps[2].qualified-label }}" title="{{ site.data.maps[2].qualified-label }}"
+                alt="There is no most competitive map." title="{{ site.data.maps[2].qualified-label }}"
                 width="{{ page.small-radar-width }}" />
         </td>
     </tr>
     <tr>
         <td style="border:0px">
             <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Minority_radar.png"
-                alt="{{ site.data.maps[3].qualified-label }}" title="{{ site.data.maps[3].qualified-label }}"
+                alt="There is no best minority map." title="{{ site.data.maps[3].qualified-label }}"
                 width="{{ page.small-radar-width }}" />
         </td>
         <td style="border:0px">
             <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Compact_radar.png"
-                alt="{{ site.data.maps[4].qualified-label }}" title="{{ site.data.maps[4].qualified-label }}"
+                alt="There is no most compact map." title="{{ site.data.maps[4].qualified-label }}"
                 width="{{ page.small-radar-width }}" />
         </td>
         <td style="border:0px">
             <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Splitting_radar.png"
-                alt="{{ site.data.maps[3].qualified-label }}" title="{{ site.data.maps[3].qualified-label }}"
+                alt="There is no least splitting map." title="{{ site.data.maps[3].qualified-label }}"
                 width="{{ page.small-radar-width }}" />
         </td>
     </tr>
@@ -111,7 +178,7 @@ First with a set of pairwise radar diagrams.]
     }
 
     .bold-row {
-        font-weight: bold;
+        font-weight: 900;
     }
 
     #official-intersections-table {
@@ -209,71 +276,4 @@ First with a set of pairwise radar diagrams.]
         })
     }
 
-</script>
-
-<!-- MAPS TABS -->
-
-<h3>Districts vs. Baseline</h3>
-
-[At the bottom are a set of tabs, one for each of the six maps compared to the Baseline map. 
-For each map, there is: 
-
-* an image of the selected comparison map, 
-* an image of the regions formed by intersecting the district boundaries of the two maps with the district "cores" highlighted, and
-* a table showing data for each intersecting region
-
-The intersecting regions are labeled "#/#" where the first # is the district in the Baseline map,
-and the second # is the district in the comparison map.
-The from/to labels for district cores are the same, the same district id in both maps.
-You can click on the images to see the maps in DRA.]
-
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
-
-<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
-
-<!-- Tab links -->
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
-        site.data.maps[0].qualified-label }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
-        site.data.maps[1].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
-        site.data.maps[2].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
-        site.data.maps[3].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
-        site.data.maps[4].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
-        site.data.maps[5].qualified-label
-        }}</button>
-</div>
-
-<!-- Tab content -->
-
-<!-- Official -->
-{% include detail.html index=0 %}
-
-<!-- Most Proportional -->
-{% include detail.html index=1 %}
-
-<!-- Most Competitive -->
-{% include detail.html index=2 %}
-
-<!-- Best Minority -->
-{% include detail.html index=3 %}
-
-<!-- Most Compact -->
-{% include detail.html index=4 %}
-
-<!-- Least Splitting -->
-{% include detail.html index=5 %}
-
-<!-- Show the Official tab by default -->
-<script>
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
 </script>
