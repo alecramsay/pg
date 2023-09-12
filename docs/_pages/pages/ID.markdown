@@ -1,13 +1,13 @@
 ---
 layout: state
-title: Arizona
-permalink: states/AZ/
+title: Idaho
+permalink: states/ID/
 
 small-radar-width: 300
 big-radar-width: 500
 map-width: 700
 
-xx: "AZ"
+xx: "ID"
 ---
 
 {% assign xx = page.xx %}
