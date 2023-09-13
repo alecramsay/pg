@@ -14,7 +14,6 @@ This page explains what we did and why we did it.
 - [Scope](#scope)
 - [Method](#method)
 - [Data](#data)
-- [Workflow](#workflow)
 - [Code](#code)
 
 ## Motivation
@@ -153,10 +152,6 @@ Census data:
 - The Name Lookup tables for friendly precinct (VTD) names are from https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
 
 Due to the size of these files, none are stored in a GitHub repository, except the block-assignment files.
-
-## Workflow
-
-Alec's overall workflow is described [here](./workflow.markdown).
 
 ## Code 
 
