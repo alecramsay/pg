@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Fixed rearranged state template (09-13-23)
 - Added missing state pages (ID, MT, NH, RI) (09-12-23)
 - Updated state template & example pages (09-12-23)
 - Added script to calculate the overall average overlap (09-12-23)
