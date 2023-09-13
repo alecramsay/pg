@@ -67,4 +67,3 @@ This is the method as it stands today (elliding I/O details):
 -   We do this 100 times, and then pick the best (lowest energy) of the 100 runs that satisfies the other constraints
     (contiguous, population deviation less than 2%).
 
-Alec used this solution in Step 2 of the overall workflow described [here](./workflow.markdown).

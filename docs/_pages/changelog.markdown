@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Moved supplemental markdown pages out of the main pages directory (09-13-23)
 - Incorporated revised site layout & temporary home page title (09-13-23)
 - Fixed rearranged state template & example page (09-13-23)
 - Added missing state pages (ID, MT, NH, RI) (09-12-23)
