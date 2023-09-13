@@ -7,6 +7,8 @@ big-radar-width: 500
 map-width: 700
 ---
 
+<h2>Redistricting Almanac: 2022</h2>
+
 This site characterizes policy tradeoffs inherent in congressional redistricting state by state.[^1]
 In contrast to the *Compare* feature in [Dave's Redistricting](https://davesredistricting.org/) (DRA) 
 &#8212; which compares a given map to maps that optimize for 
