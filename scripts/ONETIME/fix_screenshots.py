@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Run a batch of commands.
+Retake some screenshots that were bad.
 
 For example:
 
-$ scripts/run_batch.py
+$ scripts/fix_screenshots.py
 
 """
 
