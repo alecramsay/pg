@@ -4,7 +4,7 @@ Retake some screenshots that were bad.
 
 For example:
 
-$ scripts/fix_screenshots.py
+$ scripts/ONETIME/fix_screenshots.py
 
 """
 
@@ -14,24 +14,24 @@ from pg import *
 
 maps: list[dict[str, str]] = [
     {"xx": "AR", "label": "Official_intersections"},
-    {"xx": "IA", "label": "Proportional"},
-    {"xx": "KY", "label": "Official"},
-    {"xx": "LA", "label": "Minority"},
-    {"xx": "MA", "label": "Official"},
-    {"xx": "MS", "label": "Compact"},
-    {"xx": "NJ", "label": "Official_intersections"},
-    {"xx": "NM", "label": "Minority"},
-    {"xx": "WA", "label": "Proportional_intersections"},
-    {"xx": "WA", "label": "Competitive"},
-    {"xx": "WA", "label": "Competitive_intersections"},
-    {"xx": "CT", "label": "Compact"},
-    {"xx": "IL", "label": "Minority"},
-    {"xx": "KS", "label": "Proportional"},
-    {"xx": "NY", "label": "Compact"},
-    {"xx": "NY", "label": "Splitting_intersections"},
-    {"xx": "UT", "label": "Official"},
-    {"xx": "UT", "label": "Compact_intersections"},
-    {"xx": "WI", "label": "Official_intersections"},
+    # {"xx": "IA", "label": "Proportional"},
+    # {"xx": "KY", "label": "Official"},
+    # {"xx": "LA", "label": "Minority"},
+    # {"xx": "MA", "label": "Official"},
+    # {"xx": "MS", "label": "Compact"},
+    # {"xx": "NJ", "label": "Official_intersections"},
+    # {"xx": "NM", "label": "Minority"},
+    # {"xx": "WA", "label": "Proportional_intersections"},
+    # {"xx": "WA", "label": "Competitive"},
+    # {"xx": "WA", "label": "Competitive_intersections"},
+    # {"xx": "CT", "label": "Compact"},
+    # {"xx": "IL", "label": "Minority"},
+    # {"xx": "KS", "label": "Proportional"},
+    # {"xx": "NY", "label": "Compact"},
+    # {"xx": "NY", "label": "Splitting_intersections"},
+    # {"xx": "UT", "label": "Official"},
+    # {"xx": "UT", "label": "Compact_intersections"},
+    # {"xx": "WI", "label": "Official_intersections"},
 ]
 
 for m in maps:
