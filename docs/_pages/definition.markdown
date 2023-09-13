@@ -8,7 +8,7 @@ Our baseline districts minimize the total moment of inertia (or energy) of distr
 
 The population compactness of a single district is the population-weighted squared distance of the precincts from the district centroid:
 
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+TODO
 
 where
 
