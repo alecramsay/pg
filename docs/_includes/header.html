@@ -2,9 +2,7 @@
 	<div class="container">
 		<nav>
 			<ul>
-				<!-- {% for page in site.pages %} {% if page.title %}
-				<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-				{% endif %} {% endfor %} -->
+				<li><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
 				<li><a href="{{ '/example' | prepend: site.baseurl }}">Example</a></li>
 				<li><a href="{{ '/states' | prepend: site.baseurl }}">States</a></li>
 				<li><a href="{{ '/background' | prepend: site.baseurl }}">Background</a></li>
@@ -18,5 +16,5 @@
 </aside>
 
 <header>
-	<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+	<!-- <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1> -->
 </header>
