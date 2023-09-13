@@ -8,9 +8,11 @@ Our baseline districts minimize the total moment of inertia (or energy) of distr
 
 The population compactness of a single district is the population-weighted squared distance of the precincts from the district centroid:
 
-```math
-PC=\sum_{1}^n p(x)*d(x,s)^2
-```
+<!-- MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+$$PC=\sum_{1}^n p(x)*d(x,s)^2$$
 
 where
 
