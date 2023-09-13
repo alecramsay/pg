@@ -46,6 +46,9 @@ You can click on the image to go to the map in DRA.]
     </a>
 </p>
 
+<!-- Common grid functionality -->
+<script src="{{ site.baseurl }}/assets/js/grid.js"></script>
+
 <!-- MAPS TABS -->
 
 <h3>Overlaps: Districts vs. Baseline</h3>
@@ -225,9 +228,6 @@ First with a set of pairwise radar diagrams.]
 
 <div id="ratings-table" class="ag-theme-alpine">
 </div>
-
-<!-- Common grid functionality -->
-<script src="{{ site.baseurl }}/assets/js/grid.js"></script>
 
 <!-- Grid -->
 <script type="text/javascript" charset="utf-8">
