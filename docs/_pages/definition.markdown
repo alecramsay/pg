@@ -16,11 +16,11 @@ $$PC=\sum_{1}^n p(x)*d(x,s)^2$$
 
 where
 
-- *x* is a precinct assigned to the district
-- *p(x)* is the population of the precinct
+- $x$ is a precinct assigned to the district
+- $p(x)$ is the population of the precinct
 - precinct locations are the lat/lon of the precinct’s centroid
-- *s* is the district centroid, which is the population-weighted average location of the precincts assigned to the district
-- *d* is the distance function using planar Euclidean distances, treating one degree of latitude to be equal to one degree of longitude, independent of where on the globe the computation is being done
+- $s$ is the district centroid, which is the population-weighted average location of the precincts assigned to the district
+- $d$ is the distance function using planar Euclidean distances, treating one degree of latitude to be equal to one degree of longitude, independent of where on the globe the computation is being done
 
 Our baseline maps meet four additional constraints:
 

@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Added definition page with formula (09-13-23).
+- Added definition page with tweaked formula (09-13-23).
 - Fixed some bad screenshots. Fixed AR again (09-13-23).
 - Moved supplemental markdown pages out of the main pages directory (09-13-23)
 - Incorporated revised site layout & temporary home page title (09-13-23)
