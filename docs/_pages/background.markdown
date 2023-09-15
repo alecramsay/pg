@@ -146,10 +146,10 @@ DRA data:
 
 Census data:
 
-- The block shapes were downloaded from [census.gov](https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/) on 10/06/22.
-- The VTD shapefiles come from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/.
-- The precint (VTD) to block mapping files come from https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html.
-- The Name Lookup tables for friendly precinct (VTD) names are from https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
+- The block shapes were downloaded from [https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/](https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/) on 10/06/22.
+- The VTD shapefiles come from [https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/](https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/).
+- The precint (VTD) to block mapping files come from [https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html](https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html).
+- The Name Lookup tables for friendly precinct (VTD) names are from [https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html](https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html)
 
 Due to the size of these files, none are stored in a GitHub repository, except the block-assignment files.
 
