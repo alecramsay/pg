@@ -24,24 +24,24 @@ This page explains what we did and why we did it.
 
 -   \[Code\](#code)
 
-**Bolded** terms are defined on the \[Glossary](./\_pages/glossary.markdown) page.
+From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.markdown) page.
 
 **Motivation**
 
 The **notable maps** in \[Dave\'s Redistricting\](https://davesredistricting.org/) (DRA) 
-are the maps that individually maximize five quantifiable policy dimensions:
+are the **maps** that individually maximize five quantifiable policy dimensions:
 proportionality, competitiveness, opportunity for minority
 representation, compactness, and county\--district splitting. For the
 2020 congressional redistricting cycle, these maps demonstrated that
 there were tradeoffs between these objectives. For example, compact
-districts aren't always fair, and vice versa.\[\^1\]
+**districts** aren't always fair, and vice versa.\[\^1\]
 
 This led to the two hypotheses that motivated this research:
 
 1.  In contrast to the notable and official maps that use a broad
     > spectrum of data, our first hypothesis was that there are
     > well-defined **root districts** for a state that only depend on
-    > total census population -- While Alec had introduced the concept
+    > **total population** -- While Alec had introduced the concept
     > several years ago as "baseline districts,"\[\^2\] he had not
     > written code to generate them automatically.
 
@@ -58,16 +58,16 @@ To the extent that the latter were true, it would formalize our
 intuition that the essence of redistricting can be thought of as the
 rubber band-like stretching of the boundaries of root districts to
 achieve a mix of policy goals, e.g., partisan fairness, competitiveness,
-etc. In other words, redistricting plans are fundamentally informed by
+etc. In other words, redistricting **plans** are fundamentally informed by
 the context of a state\'s population geography. Perhaps implicitly, one
 effectively has to start with the root districts and modify their
 boundaries.
 
 **Concept**
 
-We define the **root map** for a state that characterizes the population
+We define the root map for a state that characterizes the population
 geography of a state as the districts of a valid map. Since it only
-depends on total census population by precinct, it is the *least
+depends on total population by **precinct**, it is the *least
 information* map -- all other maps incorporate more information into
 their district boundaries. We generate an approximate root map for a state, 
 using Balzer's \[capacity-constrained Voronoi tessellations\](TODO: need a link).\[\^3\] 
@@ -102,7 +102,7 @@ Our plan mirrored our hypotheses:
     > Models\" at MCM 07. Alec\'s plan was to simply reimplement it in
     > Python.
 
-2.  Then compare each **notable map** & official map to the root map for
+2.  Then compare each notable map & official map to the root map for
     > the state -- Given the number of maps involved (252 = 42 x 6),
     > Alec planned to develop a pipeline of tools to automate as much of
     > the workflow as possible to produce the artifacts for this web
@@ -120,7 +120,7 @@ difficult data issues, leaving 42 states.
 
 This analysis uses maps drawn in Dave\'s Redistricting. Besides the
 official maps used for the 2022 congressional elections, it uses the
-five **notable maps** for each state that have the highest ratings for
+five notable maps for each state that have the highest ratings for
 proportionality, competitiveness, minority representation, compactness,
 
 and county\--district splitting. While these are not definitively the
@@ -153,7 +153,7 @@ three constraints:
 
 2.  Didn\'t split any precincts, and
 
-3.  Had a population deviation of 2% or less
+3.  Had a **population deviation** of 2% or less
 
 The specifics of our heuristic approach are *not* the main contribution
 of this study. Nor are the specific root maps we generated, though we
@@ -169,15 +169,15 @@ The data used came from two sources.
 
 DRA data:
 
--   The block-assignment files for the official and notable maps were
+-   The **block-assignment files** for the official and notable maps were
     > exported from DRA on 10/06/22. A few of the maps violated basic
     > requirements (like contiguity) and were replaced by the next best
     > maps that didn\'t.
 
--   Block, blockgroup, and tract-level census data were downloaded from
+-   **Block**-level census data were downloaded from
     > the dra2020/dra-data repository on 10/06/22.
 
--   VTD-level census data came from https://github.com/dra2020/vtd_data
+-   Precinct-level census data came from https://github.com/dra2020/vtd_data
     > on 10/06/22.
 
 Census data:
@@ -186,13 +186,13 @@ Census data:
     > \[census.gov\](https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/)
     > on 10/06/22.
 
--   The VTD shapefiles come from
+-   The precinct shapefiles come from
     > https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/.
 
--   The precinct (VTD) to block mapping files came from
+-   The precinct to block mapping files came from
     > https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html.
 
--   The Name Lookup tables for friendly precinct (VTD) names are from
+-   The Name Lookup tables for friendly precinct names are from
     > https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
 
 Due to the size of these files, none are stored in a GitHub repository,
@@ -229,6 +229,6 @@ Comparison)\[https://medium.com/redistricting-deep-dive/baseline-congressional-d
 the precincts. There are lots of practical issues and real-world
 complications to deal with.
 
-\[\^4\]: CA, OR, and WV don\'t have VTDs, so we used blockgroups instead
+\[\^4\]: CA, OR, and WV don\'t have precincts (VTDs), so we used blockgroups instead
 like DRA. Also, the official Florida data is pretty messed up, so we
 used DRA\'s GeoJSON file of corrected Florida VTDs.

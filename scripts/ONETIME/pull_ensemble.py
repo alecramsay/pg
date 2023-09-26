@@ -8,10 +8,17 @@ GENERATE BLOCK-ASSIGNMENT FILES FROM AN R ENSEMBLE
 - https://dataverse.harvard.edu/file.xhtml?fileId=6392711&version=14.0
 - https://stackoverflow.com/questions/40996175/loading-a-rds-file-in-pandas
 
+- https://rpy2.github.io/doc/latest/html/introduction.html
+
 """
 
 import os
-import pyreadr
+import rpy2.robjects as robjects
+from rpy2.robjects import pandas2ri
+
+# from rpy2.robjects.conversion import localconverter
+
+# import pyreadr
 
 from pg import *
 
@@ -19,15 +26,26 @@ xx: str = "NC"
 
 data_dir: str = "/Users/alecramsay/local"
 rds_file: str = f"{xx}_cd_2020_plans.rds"
+rds_path: str = os.path.join(data_dir, rds_file)
 
-#
+# pyreadr
 
-result = pyreadr.read_r(os.path.join(data_dir, rds_file))  # also works for RData
+"""
+result = pyreadr.read_r(rds_path)  # also works for RData
 
 # done!
 # result is a dictionary where keys are the name of objects and the values python
 # objects. In the case of Rds there is only one object with None as key
 df = result[None]  # extract the pandas data frame
+"""
+
+# rpy2
+
+pandas2ri.activate()
+readRDS = robjects.r["readRDS"]
+df = readRDS(rds_path)
+# df = pandas2ri.ri2py(df)
+# do something with the dataframe
 
 #
 
