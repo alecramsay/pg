@@ -53,7 +53,7 @@ Specifically:
     > political considerations.\
     > \
     > **Bolded** terms are defined on the
-    > \[Definitions](./\_pages/definitions.markdown) page.
+    > \[Glossary](./\_pages/glossary.markdown) page.
 
 2.  We hypothesize that maximizing **population compactness** is a good
     > heuristic for generating a proximal root map. Roughly speaking,

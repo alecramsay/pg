@@ -24,7 +24,7 @@ This page explains what we did and why we did it.
 
 -   \[Code\](#code)
 
-**Bolded** terms are defined on the \[Definitions](./\_pages/definitions.markdown) page.
+**Bolded** terms are defined on the \[Glossary](./\_pages/glossary.markdown) page.
 
 **Motivation**
 
