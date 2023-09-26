@@ -34,7 +34,7 @@ the five **maps** that individually maximize those **ratings**, i.e.,
 most proportional, least splitting, etc.
 
 **Plan:** A redistricting plan or map partitions a state's **population
-geography** into legislative **districts**. To be a valid plan, the
+geography** into legislative **districts**. To be a **valid plan**, the
 districts must be contiguous and have 'roughly equal' population.
 
 **Population compactness:** One heuristic for generating an approximate
@@ -87,11 +87,11 @@ opportunity for minority representation, compactness, and splitting. The
 use a scale of \[0--100\] where bigger is always better.
 
 **Root map:** The **map** for a state that has the greatest **total
-population** of its **common core districts** wrto other valid maps of
-all valid maps for the state. In other words, it has the lowest total
-**edit distance** from all other valid maps. As definitively identifying
-the root districts for a state is computationally infeasible, one can
-use heuristics to generate an *approximate* root map.
+population** of its **common core districts** wrto other valid maps. 
+In other words, it has the lowest total **edit distance** from all other 
+valid maps. As definitively identifying the root districts for a state is 
+computationally infeasible, one can use heuristics to generate an 
+*approximate* root map.
 
 **Total population:** The number of people of all ages for a census
 geography, such as a **block** or **precinct**. Contrast this with
