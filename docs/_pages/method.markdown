@@ -4,7 +4,7 @@ title: Method
 permalink: method/
 ---
 
-The method for generating baseline districts that we developed evolved through an exploratory process.
+The method for generating root districts that we developed evolved through an exploratory process.
 Note that in all cases we used Cartesian (flat earth) calculations, as opposed to geodesic (spherical) calculations.
 Over short distances, these calculations are sufficiently accurate for our purposes.
 This is the rough arc of the evolution:

@@ -44,7 +44,7 @@ Figure 1: The root congressional districts for North Carolina
 
 Specifically:
 
-1.  We introduce the concept of a **root plan** (or **root map**) that
+1.  We introduce the concept of a **root plan** or **root map** that
     > characterizes a state's unique **population geography** as a set
     > of districts. They are solely a function of total census
     > population by geographic unit (**block** or **precinct**). We
