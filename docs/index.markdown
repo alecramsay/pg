@@ -68,18 +68,18 @@ In more detail:
     heuristic for generating a proximal root map. Roughly speaking,
     the resulting districts form a
     [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram).
-    \
+ 
     We impose three additional constraints on our approximation:
-    \
+
     -   Each district is contiguous
     -   No precincts are split, and
     -   **Population deviation** is 2% or less
-    \
+
     From an initial, random districting, our algorithm greedily searches
     for the most population-compact districting. Because this algorithm is
     not guaranteed to find the best districting, we run it 100 times and
     take the best qualifying map.
-    \
+
     By this definition, each state has exactly one root map.
 
 3.  We generate root maps for 42 states apportioned two or more
@@ -104,7 +104,7 @@ In more detail:
     major quantifiable policy trade-offs inherent in congressional
     redistricting for each state. These contrasts put policy choices
     framed by the underlying population geography in sharp relief.\
-    \
+
     Our root maps are not normative, not what we think redistricting
     plans *should* be. By definition, they are the natural starting
     point of redistricting. All redistricting plans for a state are

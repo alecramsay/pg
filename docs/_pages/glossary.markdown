@@ -54,18 +54,14 @@ of the **precincts** from the **district** centroid:
 > where
 
 -   \\( x \\) is **precinct** assigned to the **district**
-
 -   \\( p(x) \\) is its **total population**
-
 -   locations are the lat/lon of the **precinct's** centroid
-
 -   \\( s \\) is the **district** centroid, which is the population-weighted
-    > average location of the **precincts** assigned to the **district**
-
+    average location of the **precincts** assigned to the **district**
 -   \\( d \\) is the distance function using planar Euclidean distances,
-    > treating one degree of latitude to be equal to one degree of
-    > longitude, independent of where on the globe the computation is
-    > being done
+    treating one degree of latitude to be equal to one degree of
+    longitude, independent of where on the globe the computation is
+    being done
 
 **Population deviation:** The population of the most populous district
 minus the population of the least populous district divided by the
