@@ -28,7 +28,7 @@ to transform one **map** into the other.
 
 **Map:** A synonym for **plan**. We use the terms interchangeably.
 
-**Notable map:** In DRA, the \[notable maps\]
+**Notable map:** In DRA, the [notable maps]
 (https://medium.com/dra-2020/notable-maps-66d744933a48) for a state are
 the five **maps** that individually maximize those **ratings**, i.e.,
 most proportional, least splitting, etc.
@@ -49,7 +49,7 @@ of the **precincts** from the **district** centroid:
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-\\[ PC=\sum_{1}^n (p(x)*d(x,s)^2) \\]
+\[ PC=\sum_{1}^n (p(x)*d(x,s)^2) \]
 
 > where
 
@@ -83,8 +83,8 @@ districts).
 **Ratings:** Dave's Redistricting (DRA) rates five quantifiable
 dimensions of redistricting **maps**: proportionality, competitiveness,
 opportunity for minority representation, compactness, and splitting. The
-\[ratings\](https://medium.com/dra-2020/ratings-deep-dive-c03290659b7)
-use a scale of \[0--100\] where bigger is always better.
+[ratings](https://medium.com/dra-2020/ratings-deep-dive-c03290659b7)
+use a scale of [0--100] where bigger is always better.
 
 **Root map:** The **map** for a state that has the greatest **total
 population** of its **common core districts** wrto other valid maps. 
