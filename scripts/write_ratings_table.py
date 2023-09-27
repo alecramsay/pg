@@ -85,8 +85,9 @@ def main() -> None:
             )
 
             row: dict = dict()
+            map_label: str = label if label != "Baseline" else "Root"
             row = {
-                "Map": qualify_label(label),
+                "Map": qualify_label(map_label),
                 "Proportionality": ratings.proportionality,
                 "Competitiveness": ratings.competitiveness,
                 "Minority": ratings.minority_opportunity,
