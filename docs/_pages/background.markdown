@@ -166,8 +166,7 @@ DRA data:
     maps that didn\'t.
 -   **Block**-level census data were downloaded from
     the dra2020/dra-data repository on 10/06/22.
--   Precinct-level census data came from https://github.com/dra2020/vtd_data
-    on 10/06/22.
+-   Precinct-level census data came from dra2020/vtd_data repository on 10/06/22.
 
 Census data:
 
@@ -200,7 +199,7 @@ notable maps relative to them.
 
 [^1]: [Compact Districts Aren'tFair](https://medium.com/dra-2020/compact-districts-arent-fair-7c17c2ff5d7e).
 
-[^2]: See (Baseline Congressional Districts: A Benchmark for Comparison)[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3].
+[^2]: See [Baseline Congressional Districts: A Benchmark for Comparison](https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3).
 
 [^3]: It turns out, one cannot simply run a Voronoi algorithm over the precincts. There are lots of practical issues and real-world complications to deal with.
 
