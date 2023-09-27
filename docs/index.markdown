@@ -39,14 +39,6 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 </p>
 Figure 1: The root congressional districts for North Carolina
 
-**Contents**
-
--   \[Details\](#details)
-
--   \[Next Steps\](#nextsteps)
-
--   \[Acknowledgements\](#acknowledgements)
-
 **Details**
 
 We explore two ideas here:
