@@ -156,7 +156,7 @@ def main() -> None:
     lines: list[str] = list()
     line: str = ""
 
-    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are the same for comparison <a href='https://medium.com/dra-2020/notable-maps-66d744933a48'>notable maps from Dave’s Redistricting (DRA)</a> and the Baseline map:</p>"
+    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are the same for comparison <a href='https://medium.com/dra-2020/notable-maps-66d744933a48'>notable maps from Dave’s Redistricting (DRA)</a> and the Root map:</p>"
     lines.append(line)
 
     lines.append("<ul>")
@@ -167,18 +167,18 @@ def main() -> None:
         lines.append(line)
     lines.append("</ul>")
 
-    line = f"<p>The overlaps are described in detail below in the “Overlaps: Districts vs. Baseline” section.</p>"
+    line = f"<p>The overlaps are described in detail below in the “Overlaps: Districts vs. Root” section.</p>"
     lines.append(line)
 
     baseline_absolute: list[int] = [
         baseline_ratings[metric] for metric in baseline_ratings
     ]
-    line = f"<p>Relative to the Baseline ratings &#8212; {baseline_absolute}, for proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, respectively &#8212; the notable maps illustrate some major quantifiable policy trade-offs:</p>"
+    line = f"<p>Relative to the Root map ratings &#8212; {baseline_absolute}, for proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, respectively &#8212; the notable maps illustrate some major quantifiable policy trade-offs:</p>"
     lines.append(line)
 
     lines.append("<ul>")
     for label, ratings in ratings_dict.items():
-        if label in ["Official", "Baseline"]:
+        if label in ["Official", "Baseline", "Root"]:
             continue
         relative: list[int] = [deltas[label][metric] for metric in deltas[label]]
         absolute: list[int] = [ratings[metric] for metric in ratings]
@@ -195,7 +195,7 @@ def main() -> None:
     line = f"<p>The Official map trades-off {official_relative} for {official_absolute} ratings.</p>"
     lines.append(line)
 
-    line = f"<p>The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Baseline” section.</p>"
+    line = f"<p>The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Root” section.</p>"
     lines.append(line)
 
     html_path: str = os.path.join(output_dir, f"{xx}_summary.html")
