@@ -62,8 +62,8 @@ We define the root map for a state that characterizes the population
 geography of a state as the districts of a valid map. Since it only
 depends on total population by **precinct**, it is the *least
 information* map -- all other maps incorporate more information into
-their district boundaries. We generate an approximate root map for a state, 
-using Balzer's [capacity-constrained Voronoi tessellations](TODO: need a link).[^3] 
+their district boundaries. We generate an approximate root map for a state, using 
+Balzer\'s [Capacity-Constrained Voronoi Tessellations: Computation and Applications](http://nbn-resolving.de/urn:nbn:de:bsz:352-opus-84645).[^3] 
 In physics terms, these
 approximate root districts can be thought of as minimizing the **moment
 of inertia** or energy, or maximizing **population compactness**. The
@@ -132,7 +132,7 @@ At first Alec tried to reimplement Gulotta\'s C++ moment of inertia code
 in Python but met with only partial success. Fortunately, he shared what
 he was working on with his friend, Todd Proebsting, he got intrigued,
 and then Todd developed a solution based on 
-Balzer\'s [Capacity-Constrained Voronoi Tessellations: Computation and Applications](TODO: need a link). 
+Balzer\'s algorithm. 
 The evolution of our heuristic
 approach for finding the lowest energy assignment of precincts to
 districts is described [here](./method.markdown).

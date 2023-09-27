@@ -28,8 +28,8 @@ to transform one **map** into the other.
 
 **Map:** A synonym for **plan**. We use the terms interchangeably.
 
-**Notable map:** In DRA, the [notable maps]
-(https://medium.com/dra-2020/notable-maps-66d744933a48) for a state are
+**Notable map:** In DRA, the [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) 
+for a state are
 the five **maps** that individually maximize those **ratings**, i.e.,
 most proportional, least splitting, etc.
 
