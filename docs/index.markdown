@@ -132,7 +132,7 @@ Going forward, we want to test two further hypotheses:
     > Voronoi algorithm and b) explore rectangular tilings.
 
 2.  Our population compactness heuristic and its variants (from #1) are
-    > among the maps with the largest district cores with respect to
+    > among the maps with the largest common core districts with respect to
     > other maps in a large ensemble of randomly generated maps for a
     > state.
 

@@ -33,15 +33,15 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 {% endcapture %}
 {% assign baseline-link = baseline-link | strip_newlines %}
 
-<h3>Baseline Districts</h3>
+<h3>Root Districts</h3>
 
-[First the Baseline districts are shown.
+[First the Root districts are shown.
 You can click on the image to go to the map in DRA.]
 
-<p>These are the Baseline congressional districts:</p>
+<p>These are the Root congressional districts:</p>
 <p style="text-align: left">
     <a href="{{ baseline-link }}">
-        <img src="{{ baseline-png }}" alt="Baseline districts" title="Click to view the map in Dave's Redistricting"
+        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
             width="{{ page.map-width }}" />
     </a>
 </p>
@@ -51,21 +51,21 @@ You can click on the image to go to the map in DRA.]
 
 <!-- MAPS TABS -->
 
-<h3>Overlaps: Districts vs. Baseline</h3>
+<h3>Overlaps: Districts vs. Root</h3>
 
-[Then each of the six maps are compared to the Baseline map. 
+[Then each of the six maps are compared to the Root map. 
 For each map, there is: 
 
 * an image of the selected comparison map, 
-* an image of the regions formed by intersecting the district boundaries of the two maps with the district "cores" highlighted, and
+* an image of the regions formed by intersecting the district boundaries of the two maps with the common core districts highlighted, and
 * a table showing data for each intersecting region
 
-The intersecting regions are labeled "#/#" where the first # is the district in the Baseline map,
+The intersecting regions are labeled "#/#" where the first # is the district in the Root map,
 and the second # is the district in the comparison map.
 The from/to labels for district cores are the same, the same district id in both maps.
 You can click on the images to see the maps in DRA.]
 
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Baseline map:</p>
+<p>These tabs compare the district boundaries of Official map and the five notable maps with the Root map:</p>
 
 <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 
@@ -116,7 +116,7 @@ You can click on the images to see the maps in DRA.]
   document.getElementById("defaultOpen").click();
 </script>
   
-<h3>Trade-offs: Ratings vs. Baseline</h3>
+<h3>Trade-offs: Ratings vs. Root</h3>
 
 [The ratings for the Official and the five notable maps that maximize proportionality, 
 competitiveness, minority representation, compactness, and splitting are then compared to the ratings 
@@ -125,7 +125,7 @@ First with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Baseline map (orange = baseline map; green = comparison map):</p>
+<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Root map (orange = root map; green = comparison map):</p>
 
 <table style="border:0px">
     <tr>
@@ -246,7 +246,8 @@ First with a set of pairwise radar diagrams.]
             // resizable: true,
         },
         rowClassRules: {
-            'bold-row': function (params) {return params.data.Map === "Official" || params.data.Map === "Baseline";},
+            'bold-row': function (params) {return params.data.Map === "Official" || params.data.Map === "Root";},
+			// 'bold-row': function (params) {return params.data.Map === "Official" || params.data.Map === "Baseline";},
         },
         columnDefs: ratingsColumns,
         domLayout: 'autoHeight',

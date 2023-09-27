@@ -40,7 +40,7 @@ including:
     requires experts, and
 -   More qualitative considerations for which there are no established
     metrics, such as the effects on incumbents and preservation of
-    district cores
+    common core districts
 
 In contrast to constraints, criteria have a better/worse dimension, even
 if it is not readily quantifiable or there is debate about which metrics
