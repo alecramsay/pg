@@ -33,11 +33,11 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <p style="text-align: left">
     <a href="{{ baseline-link }}">
-        <img src="{{ baseline-png }}" alt="Baseline districts" title="Click to view the map in Dave's Redistricting"
+        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
             width="{{ page.map-width }}" />
     </a>
 </p>
-Figure 1: The root congressional districts for North Carolina
+<p style="text-align: center"><small>Figure 1: The root congressional districts for North Carolina</small></p>
 
 **Details**
 
