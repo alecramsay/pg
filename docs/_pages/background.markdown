@@ -27,7 +27,7 @@ proportionality, competitiveness, opportunity for minority
 representation, compactness, and county\--district splitting. For the
 2020 congressional redistricting cycle, these maps demonstrated that
 there were tradeoffs between these objectives. For example, compact
-**districts** aren't always fair, and vice versa.[\^1]
+**districts** aren't always fair, and vice versa.[^1]
 
 This led to the two hypotheses that motivated this research:
 
@@ -35,7 +35,7 @@ This led to the two hypotheses that motivated this research:
     spectrum of data, our first hypothesis was that there are
     well-defined **root districts** for a state that only depend on
     **total population** -- While Alec had introduced the concept
-    several years ago as "baseline districts,"[\^2] he had not
+    several years ago as "baseline districts,"[^2] he had not
     written code to generate them automatically.
 
 2.  Our second hypothesis was that the districts for the notable maps
@@ -63,7 +63,7 @@ geography of a state as the districts of a valid map. Since it only
 depends on total population by **precinct**, it is the *least
 information* map -- all other maps incorporate more information into
 their district boundaries. We generate an approximate root map for a state, 
-using Balzer's [capacity-constrained Voronoi tessellations](TODO: need a link).[\^3] 
+using Balzer's [capacity-constrained Voronoi tessellations](TODO: need a link).[^3] 
 In physics terms, these
 approximate root districts can be thought of as minimizing the **moment
 of inertia** or energy, or maximizing **population compactness**. The
@@ -139,7 +139,7 @@ districts is described [here](./method.markdown).
 
 To generate the root maps presented here, we ran this process 100 times
 for each state using random starting points and the 2020 Census VTD shapes and
-population data.[\^4] Then we selected the lowest energy map that met
+population data.[^4] Then we selected the lowest energy map that met
 three constraints:
 
 1.  Contiguous
@@ -198,16 +198,16 @@ notable maps relative to them.
 
 **Footnotes**
 
-[\^1]: [Compact Districts Aren't
+[^1]: [Compact Districts Aren't
 Fair](https://medium.com/dra-2020/compact-districts-arent-fair-7c17c2ff5d7e).
 
-[\^2]: See (Baseline Congressional Districts: A Benchmark for
+[^2]: See (Baseline Congressional Districts: A Benchmark for
 Comparison)[https://medium.com/redistricting-deep-dive/baseline-congressional-districts-a-benchmark-for-comparison-83b670608db3].
 
-[\^3]: It turns out, one cannot simply run a Voronoi algorithm over
+[^3]: It turns out, one cannot simply run a Voronoi algorithm over
 the precincts. There are lots of practical issues and real-world
 complications to deal with.
 
-[\^4]: CA, OR, and WV don\'t have precincts (VTDs), so we used blockgroups instead
+[^4]: CA, OR, and WV don\'t have precincts (VTDs), so we used blockgroups instead
 like DRA. Also, the official Florida data is pretty messed up, so we
 used DRA\'s GeoJSON file of corrected Florida VTDs.

@@ -103,7 +103,7 @@ In more detail:
     for these divergent maps to those for the root map showing some
     major quantifiable policy trade-offs inherent in congressional
     redistricting for each state. These contrasts put policy choices
-    framed by the underlying population geography in sharp relief.\
+    framed by the underlying population geography in sharp relief.
 
     Our root maps are not normative, not what we think redistricting
     plans *should* be. By definition, they are the natural starting
