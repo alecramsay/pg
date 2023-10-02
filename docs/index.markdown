@@ -14,6 +14,8 @@ The population geography of a state frames these trade-offs.
 The choices that mapmakers made are revealed by comparing their map to a map 
 representing that underlying population geography. 
 
+*NOTE: This site is not ready for review yet. We're making major changes to the content.*
+
 You can see an example of these trade-offs on the [Example](./_pages/example.markdown) page. 
 You can choose a specific state on the [States](./_pages/states.markdown) page.
 

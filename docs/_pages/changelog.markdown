@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Added "Not ready yet" disclaimer (10-02-23).
 - Finished content edits (09-27-23).
 - Added a glossary revised content (09-26-23).
 - Revised state-independent content (09-21-23).
