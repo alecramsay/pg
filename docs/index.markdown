@@ -57,7 +57,8 @@ In more detail:
 
 1.  We introduce the concept of a **root plan** or **root map** that
     partitions a state's unique **population geography** into a set
-    of districts with the lowest overall **edit distance** to other valid maps. 
+    of districts with the lowest overall **edit distance** to all other valid maps.
+    Due to computational limitations, one can only *approximate* the root map. 
 
 2.  We argue that maximally **population compact** districts are the natural starting point for redistricting. 
 
@@ -66,12 +67,12 @@ In more detail:
 
     The most geometrically compact map also tends to have low overall edit distances to other valid maps
     &#8212; slightly lower than population compact maps. 
-    But as Chief Justice Earl Warren said in his landmark Reynold v. Sims decision, 
+    But as Chief Justice Earl Warren said in his landmark *Reynold v. Sims* decision, 
     "Legislators represent people, not trees or acres." so we prefer the population compactness heuristic.
 
     We believe it is natural to think of the maximally population-compact map for a state as a reference map 
-    and other maps in terms of deltas from it. 
-    Our heuristic for approximating a root map is to maximize population compactness.
+    and other maps in terms of deltas from it.
+    Hence, the heuristic we use to approximate root maps is to maximize population compactness.
 
     Roughly speaking, population-compact districts form a
     [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram).
