@@ -11,10 +11,8 @@ map-width: 700
 
 Redistricting involves trade-offs between various policy objectives. 
 The population geography of a state frames these trade-offs. 
-The choices that mapmakers made are revealed by comparing their map to a map 
-representing that underlying population geography. 
-
-*NOTE: This site is not ready for review yet. We're making major changes to the content.*
+The choices that mapmakers made are revealed by comparing their map 
+to the natural starting point for redistricting.
 
 You can see an example of these trade-offs on the [Example](./_pages/example.markdown) page. 
 You can choose a specific state on the [States](./_pages/states.markdown) page.
@@ -45,11 +43,10 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 We explore two ideas here:
 
--   The population geography of a state characterized as a set of
-    districts is the natural starting point of redistricting -- all
-    redistricting plans for a state are informed by them; and
+-   The most population compact map is the natural starting point for redistricting
+    &#8212; all redistricting plans for a state are informed by it; and
 
--   Comparing redistricting plans to it highlights the mix of policy
+-   Comparing redistricting plans to that starting point highlights the mix of policy
     choices (trade-offs) that the mapmakers made.
 
 By population geography we mean how many people live where in a state.
@@ -59,16 +56,24 @@ From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.m
 In more detail:
 
 1.  We introduce the concept of a **root plan** or **root map** that
-    characterizes a state's unique **population geography** as a set
-    of districts. They are solely a function of total census
-    population by geographic unit (**block** or **precinct**). We
-    don't incorporate other criteria, such as preserving city or
-    county boundaries, because the point is to abstract away any
-    political considerations.
+    partitions a state's unique **population geography** into a set
+    of districts with the lowest overall **edit distance** to other valid maps. 
 
-2.  We hypothesize that maximizing **population compactness** is a good
-    heuristic for generating a proximal root map. Roughly speaking,
-    the resulting districts form a
+2.  We argue that maximally **population compact** districts are the natural starting point for redistricting. 
+
+    The fundamental principle of these maps is that people that live near each other will tend to be in the same district. 
+    Moreover, this is a good heuristic for generating maps have very low overall edit distances to other valid maps. 
+
+    The most geometrically compact map also tends to have low overall edit distances to other valid maps
+    &#8212; slightly lower than population compact maps. 
+    But as Chief Justice Earl Warren said in his landmark Reynold v. Sims decision, 
+    "Legislators represent people, not trees or acres." so we prefer the population compactness heuristic.
+
+    We believe it is natural to think of the maximally population-compact map for a state as a reference map 
+    and other maps in terms of deltas from it. 
+    Our heuristic approximating a root map is to maximize population compactness.
+
+    Roughly speaking, the resulting districts form a
     [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram).
  
     We impose three additional constraints on our approximation:
@@ -84,7 +89,7 @@ In more detail:
 
     By this definition, each state has exactly one root map.
 
-3.  We generate root maps for 42 states apportioned two or more
+3.  We generate proximal root maps for 42 states apportioned two or more
     congressional districts in the 2020 census. We exclude Hawaii and
     Maine, due to data issues.
 
@@ -120,21 +125,6 @@ In more detail:
 You can see a representative example of this analysis on the
 [Example](./\_pages/example.markdown) page. You can choose a specific
 state to look at, on the [States](./\_pages/states.markdown) page.
-
-**Next Steps**
-
-Going forward, we want to test two further hypotheses:
-
-1.  Root maps are relatively robust and relatively invariant to the
-    specific approach used to generating approximations -- We have
-    used Balzer's capacity-constrained Voronoi tessellations. We want
-    to a\) explore alternate distance functions for our Balzer's
-    Voronoi algorithm and b\) explore rectangular tilings.
-
-2.  Our population compactness heuristic and its variants (from #1) are
-    among the maps with the largest common core districts with respect to
-    other maps in a large ensemble of randomly generated maps for a
-    state.
 
 **Acknowledgements**
 
