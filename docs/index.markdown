@@ -71,9 +71,9 @@ In more detail:
 
     We believe it is natural to think of the maximally population-compact map for a state as a reference map 
     and other maps in terms of deltas from it. 
-    Our heuristic approximating a root map is to maximize population compactness.
+    Our heuristic for approximating a root map is to maximize population compactness.
 
-    Roughly speaking, the resulting districts form a
+    Roughly speaking, population-compact districts form a
     [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram).
  
     We impose three additional constraints on our approximation:

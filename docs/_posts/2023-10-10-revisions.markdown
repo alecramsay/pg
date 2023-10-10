@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Revised based on preview feedback"
-date:   2023-09-27 -6:00:00 -0600
+date:   2023-10-10 -6:00:00 -0600
 categories: news
 ---
 The site has now been updated to incorporate initial preview feedback.
