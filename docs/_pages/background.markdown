@@ -19,7 +19,7 @@ This page explains what we did and why we did it.
 
 From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.markdown) page.
 
-**Motivation**
+### Motivation
 
 The **notable maps** in [Dave\'s Redistricting](https://davesredistricting.org/) (DRA) 
 are the **maps** that individually maximize five quantifiable policy dimensions:
@@ -56,7 +56,7 @@ the context of a state\'s population geography. Perhaps implicitly, one
 effectively has to start with the root districts and modify their
 boundaries.
 
-**Concept**
+### Concept
 
 We define the root map for a state that characterizes the population
 geography of a state as the districts of a valid map. Since it only
@@ -80,7 +80,7 @@ are not only the implicit starting point for redistricting a state --
 redistricting does *not* start with a blank canvas! -- but they can also
 be used to illustrate the tradeoffs inherent in redistricting a state.
 
-**Plan**
+### Plan
 
 Our plan mirrored our hypotheses:
 
@@ -105,7 +105,7 @@ Of course, the latter depended on the former: without a well-defined,
 defensible root map, there would be no easy way to compare the notable
 maps for a state.
 
-**Scope**
+### Scope
 
 We chose to study the states apportioned two or more congressional
 districts in the 2020 census. Hawaii and Maine had to be skipped due to
@@ -126,7 +126,7 @@ the tradeoffs between these quantifiable policy dimensions in a state.
 For each state, we compare these six maps to the root districts we
 generated.
 
-**Method**
+### Method
 
 At first Alec tried to reimplement Gulotta\'s C++ moment of inertia code
 in Python but met with only partial success. Fortunately, he shared what
@@ -154,7 +154,7 @@ interesting in their own right. The important contribution here is the
 they reveal about other maps, the tradeoffs inherent in a state\'s
 political geography.
 
-**Data**
+### Data
 
 The data used came from two sources.
 
@@ -163,7 +163,9 @@ DRA data:
 -   The **block-assignment files** for the official and notable maps were
     exported from DRA on 10/06/22. A few of the maps violated basic
     requirements (like contiguity) and were replaced by the next best
-    maps that didn\'t.
+    maps that didn\'t. The partisan ratings for these maps depend on [the
+    election data in DRA](https://davesredistricting.org/maps#aboutdata)
+    which mostly comes from the VEST team.
 -   **Block**-level census data were downloaded from
     the dra2020/dra-data repository on 10/06/22.
 -   Precinct-level census data came from dra2020/vtd_data repository on 10/06/22.
@@ -178,11 +180,11 @@ Census data:
 Due to the size of these files, none are stored in a GitHub repository,
 except the block-assignment files.
 
-**Workflow**
+### Workflow
 
 Our overall workflow is described [here](./workflow.markdown).
 
-**Code**
+### Code
 
 This site was developed using the code in three GitHub repositories:
 
@@ -195,7 +197,7 @@ The site is homed in the first. The code in that repository uses the
 code in the other two to generate root maps and analyze the official and
 notable maps relative to them.
 
-**Footnotes**
+### Footnotes
 
 [^1]: [Compact Districts Aren'tFair](https://medium.com/dra-2020/compact-districts-arent-fair-7c17c2ff5d7e).
 

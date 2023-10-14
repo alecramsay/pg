@@ -39,7 +39,7 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 </p>
 <p style="text-align: left"><small>Figure 1: The root congressional districts for North Carolina</small></p>
 
-**Details**
+### Details
 
 We explore two ideas here:
 
@@ -127,11 +127,12 @@ You can see a representative example of this analysis on the
 [Example](./\_pages/example.markdown) page. You can choose a specific
 state to look at, on the [States](./\_pages/states.markdown) page.
 
-**Acknowledgements**
+### Acknowledgements
 
-We would like to thank Dave\'s Redistricting for the input data
-and the wonderful platform for sharing our maps and the DRA user
-community for pushing the dimensional limits of congressional
-redistricting in each state with their notable maps. We would like to
-especially thank Terry Crowley for making the large scope of this
-project feasible.
+We would like to thank DRA for the input data and
+the wonderful platform for sharing our maps, 
+the DRA user community for pushing the dimensional limits of congressional
+redistricting in each state with their notable maps, and 
+the VEST team for their election data making the partisan ratings in DRA possible. 
+We would like to especially thank Terry Crowley for making 
+the large scope of this project feasible.
