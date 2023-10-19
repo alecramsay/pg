@@ -72,8 +72,8 @@ geometric approaches. These root districts characterize the **population
 geography** of a state, i.e., how many people live where.
 
 Map drawers use lots of additional information 
-&#8212; demographic data, election results, municipal boundaries, etc. &#8212;  
-to, in effect, stretch these root district boundaries 
+&#8212; demographic data, election results, municipal boundaries, etc. &#8212; to, 
+in effect, stretch these root district boundaries 
 to achieve their desired mix of policy goals, e.g., more
 proportional, less county splitting, etc. Consequently, root districts
 are not only the implicit starting point for redistricting a state &#8212;
@@ -182,7 +182,7 @@ except the block-assignment files.
 
 ### Workflow
 
-Our overall workflow is described [here](./workflow.markdown).
+Our overall workflow is described [here](./more/workflow.markdown).
 
 ### Code
 
