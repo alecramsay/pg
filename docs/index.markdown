@@ -113,12 +113,12 @@ In more detail:
     redistricting for each state. These contrasts put policy choices
     framed by the underlying population geography in sharp relief.
 
-    Again, these root maps are not normative&#8212; 
-    they aren't what we think redistricting plans *should* be.
+    Again, these root maps are not normative 
+    &#8212; they aren't what we think redistricting plans *should* be.
     Given their very low overall edit distance to other valid maps,
     all redistricting plans for a state are unavoidably informed by them, and
-    they are easy to understand conceptually&#8212;
-    people who live near each other will tend to be in the same district.
+    they are easy to understand conceptually 
+    &#8212; people who live near each other will tend to be in the same district.
 
     Hence, they provide a good baseline against which to evaluate and compare plans.
 
@@ -136,7 +136,7 @@ We would like to thank DRA for the input data and
 the wonderful platform for sharing our maps, 
 the DRA user community for pushing the dimensional limits of congressional
 redistricting in each state with their notable maps, and 
-the [VEST(https://dataverse.harvard.edu/dataverse/electionscience)] team 
+the [VEST](https://dataverse.harvard.edu/dataverse/electionscience) team 
 for their election data making the partisan ratings in DRA possible. 
 We would also like to especially thank Terry Crowley for making 
 the large scope of this project feasible.

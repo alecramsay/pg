@@ -8,7 +8,7 @@ The site is now live and ready for feedback.
 
 Six states are available in this preview:
 
-- NC -- Alec *always* starts with NC!
+- NC &#8212; We *always* start with NC!
 - MD
 - PA
 - VA

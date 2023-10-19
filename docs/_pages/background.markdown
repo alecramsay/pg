@@ -34,13 +34,13 @@ This led to the two hypotheses that motivated this research:
 1.  In contrast to the notable and official maps that use a broad
     spectrum of data, our first hypothesis was that there are
     well-defined **root districts** for a state that only depend on
-    **total population** -- While Alec had introduced the concept
+    **total population** &#8212; While Alec had introduced the concept
     several years ago as "baseline districts,"[^2] he had not
     written code to generate them automatically.
 
 2.  Our second hypothesis was that the districts for the notable maps
-    for a state overlap significantly. It seems obvious that --
-    barring extremely serpentine districts -- valid redistricting maps
+    for a state overlap significantly. It seems obvious that &#8212;
+    barring extremely serpentine districts &#8212; valid redistricting maps
     for a state *must* share common core areas because of the
     underlying **population geography** for a state, i.e., how many
     people live where. This is precisely what is characterized by our
@@ -61,7 +61,7 @@ boundaries.
 We define the root map for a state that characterizes the population
 geography of a state as the districts of a valid map. Since it only
 depends on total population by **precinct**, it is the *least
-information* map -- all other maps incorporate more information into
+information* map &#8212; all other maps incorporate more information into
 their district boundaries. We generate an approximate root map for a state, using 
 Balzer\'s [Capacity-Constrained Voronoi Tessellations: Computation and Applications](http://nbn-resolving.de/urn:nbn:de:bsz:352-opus-84645).[^3] 
 In physics terms, these
@@ -72,12 +72,12 @@ geometric approaches. These root districts characterize the **population
 geography** of a state, i.e., how many people live where.
 
 Map drawers use lots of additional information 
--- demographic data, election results, municipal boundaries, etc. -- 
+&#8212; demographic data, election results, municipal boundaries, etc. &#8212;  
 to, in effect, stretch these root district boundaries 
 to achieve their desired mix of policy goals, e.g., more
 proportional, less county splitting, etc. Consequently, root districts
-are not only the implicit starting point for redistricting a state --
-redistricting does *not* start with a blank canvas! -- but they can also
+are not only the implicit starting point for redistricting a state &#8212;
+redistricting does *not* start with a blank canvas! &#8212; but they can also
 be used to illustrate the tradeoffs inherent in redistricting a state.
 
 ### Plan
@@ -85,7 +85,7 @@ be used to illustrate the tradeoffs inherent in redistricting a state.
 Our plan mirrored our hypotheses:
 
 1.  First, develop an automated method for generating approximate root
-    districts -- Justin Levitt had keyed Alec into the idea that root
+    districts &#8212; Justin Levitt had keyed Alec into the idea that root
     districts are maximally population compact (vs. geometrically
     compact), based on the physics concept of moment of inertia. Some
     searching led Alec to Andrew Spann, Dan Gulotta, Daniel Kane\'s
@@ -96,7 +96,7 @@ Our plan mirrored our hypotheses:
     Python.
 
 2.  Then compare each notable map & official map to the root map for
-    the state -- Given the number of maps involved (252 = 42 x 6),
+    the state &#8212; Given the number of maps involved (252 = 42 x 6),
     Alec planned to develop a pipeline of tools to automate as much of
     the workflow as possible to produce the artifacts for this web
     site.

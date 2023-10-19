@@ -17,10 +17,10 @@ Each is described below. This site introduces an important concept for understan
 
 Valid redistricting plans satisfy three basic requirements:[^1]
 
--   Complete -- the whole state must be assigned to districts[^2]
--   Contiguous -- every area within a district must be connected to
+-   Complete &#8212; the whole state must be assigned to districts[^2]
+-   Contiguous &#8212; every area within a district must be connected to
     every other area within the district, and have
--   'Roughly equal' populations -- for congressional districts, the
+-   'Roughly equal' populations &#8212; for congressional districts, the
     'roughly equal' threshold is \~0.75%.[^3]
 
 While assessing whether a plan satisfies a requirement can require a

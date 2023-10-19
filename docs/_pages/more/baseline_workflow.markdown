@@ -86,4 +86,4 @@ Designate the lowest energy contiguous candidate with population deviation <= 2%
 -   Copy it to the maps/XX directory as XX20C_baseline_100.csv.
 
 
-The specific workflow for each state -- along with command arguments -- are in the workflows/ directory of Alec's baseline repository.
+The specific workflow for each state &#8212; along with command arguments &#8212; are in the workflows/ directory of Alec's baseline repository.
