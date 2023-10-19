@@ -62,17 +62,14 @@ In more detail:
 
 2.  We argue that maximally **population compact** districts are the natural starting point for redistricting. 
 
-    The fundamental principle of these maps is that people that live near each other will tend to be in the same district. 
-    Moreover, this is a good heuristic for generating maps have very low overall edit distances to other valid maps. 
+    The fundamental principle of these maps is that people who live near each other will tend to be in the same district. 
+    Moreover, they are a good heuristic for approximating root maps. 
 
-    The most geometrically compact map also tends to have low overall edit distances to other valid maps
+    Maps that are highly compact geometrically also tend to have low overall edit distances to other valid maps
     &#8212; slightly lower than population compact maps. 
     But as Chief Justice Earl Warren said in his landmark *Reynold v. Sims* decision, 
-    "Legislators represent people, not trees or acres." so we prefer the population compactness heuristic.
-
-    We believe it is natural to think of the maximally population-compact map for a state as a reference map 
-    and other maps in terms of deltas from it.
-    Hence, the heuristic we use to approximate root maps is to maximize population compactness.
+    "Legislators represent people, not trees or acres." 
+    so the heuristic we use to approximate root maps is to maximize population compactness.
 
     Roughly speaking, population-compact districts form a
     [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram).
@@ -88,38 +85,44 @@ In more detail:
     not guaranteed to find the best districting, we run it 100 times and
     take the best qualifying map.
 
-    By this definition, each state has exactly one root map.
+3.  We also believe it is logical to think of other maps in terms of deltas from these root maps.
+    A root map isn't a priori (or independently) normative though.
+    Think of it like the origin on a set of axes:
+    it's simply the place from which you describe other points.
 
-3.  We generate proximal root maps for 42 states apportioned two or more
+4.  We generate proximal root maps for 42 states apportioned two or more
     congressional districts in the 2020 census. We exclude Hawaii and
     Maine, due to data issues.
 
-4.  We compare these root maps to the five **notable maps**
+5.  We compare these root maps to the five **notable maps**
     from Dave's Redistricting (DRA)
     for each state that individually optimize for proportionality,
     competitiveness, minority representation, compactness, and
     county-district splitting.
 
-5.  Despite optimizing on these different dimensions, these maps share
+6.  Despite optimizing on these different dimensions, these maps share
     substantial **common core districts** with the root map, an average of
     nearly two thirds of the population-weighted assignments (65.9%).
     This reinforces our hypothesis that maximizing the overall
     population compactness of districts is a good way to characterize
     population geography.
 
-6.  Then we compare the DRA **ratings**
+7.  Then we compare the DRA **ratings**
     for these divergent maps to those for the root map showing some
     major quantifiable policy trade-offs inherent in congressional
     redistricting for each state. These contrasts put policy choices
     framed by the underlying population geography in sharp relief.
 
-    Our root maps are not normative, not what we think redistricting
-    plans *should* be. By definition, they are the natural starting
-    point of redistricting. All redistricting plans for a state are
-    unavoidably informed by them, so they provide a good baseline
-    against which to evaluate and compare plans.
+    Again, these root maps are not normative&#8212; 
+    they aren't what we think redistricting plans *should* be.
+    Given their very low overall edit distance to other valid maps,
+    all redistricting plans for a state are unavoidably informed by them, and
+    they are easy to understand conceptually&#8212;
+    people who live near each other will tend to be in the same district.
 
-7.  Finally, we compare the official map for each state to the root
+    Hence, they provide a good baseline against which to evaluate and compare plans.
+
+8.  Finally, we compare the official map for each state to the root
     districts showing the mix of policy choices (trade-offs) that each
     state made.
 
@@ -133,6 +136,7 @@ We would like to thank DRA for the input data and
 the wonderful platform for sharing our maps, 
 the DRA user community for pushing the dimensional limits of congressional
 redistricting in each state with their notable maps, and 
-the VEST team for their election data making the partisan ratings in DRA possible. 
-We would like to especially thank Terry Crowley for making 
+the [VEST(https://dataverse.harvard.edu/dataverse/electionscience)] team 
+for their election data making the partisan ratings in DRA possible. 
+We would also like to especially thank Terry Crowley for making 
 the large scope of this project feasible.
