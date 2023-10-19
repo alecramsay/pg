@@ -24,7 +24,7 @@ From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.m
 The **notable maps** in [Dave\'s Redistricting](https://davesredistricting.org/) (DRA) 
 are the **maps** that individually maximize five quantifiable policy dimensions:
 proportionality, competitiveness, opportunity for minority
-representation, compactness, and county\--district splitting. For the
+representation, compactness, and county-district splitting. For the
 2020 congressional redistricting cycle, these maps demonstrated that
 there were tradeoffs between these objectives. For example, compact
 **districts** aren't always fair, and vice versa.[^1]
@@ -116,7 +116,7 @@ official maps used for the 2022 congressional elections, it uses the
 five notable maps for each state that have the highest ratings for
 proportionality, competitiveness, minority representation, compactness,
 
-and county\--district splitting. While these are not definitively the
+and county-district splitting. While these are not definitively the
 *best* on their respective dimensions (i.e., globally optimal), DRA
 users work hard to find maps that optimize these dimensions and have
 their map be selected as the notable map, so they are good proxies for
