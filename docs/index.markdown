@@ -54,10 +54,10 @@ that use a scale of [0--100] where bigger is always better.
 We do the same for the official map. 
 These comparisons show some major quantifiable trade-offs inherent in congressional redistricting for a state.
 
-You can see an example of this analysis on the [Example](./\_pages/example.markdown) page. 
-You can choose a specific state to look at, on the [States](./\_pages/states.markdown) page.
-A detailed description of and the rationale for our method is on the [Details](./\_pages/details.markdown) page. 
-Key terms are defined on the [Glossary](./\_pages/glossary.markdown) page.
+You can see an example of this analysis on the [Example](./_pages/example.markdown) page. 
+You can choose a specific state to look at, on the [States](./_pages/states.markdown) page.
+A detailed description of and the rationale for our method is on the [Details](./_pages/details.markdown) page. 
+Key terms are defined on the [Glossary](./_pages/glossary.markdown) page.
 
 ### Acknowledgements
 
