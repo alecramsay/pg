@@ -89,6 +89,3 @@ In more detail:
     districts showing the mix of policy choices (trade-offs) that each
     state made.
 
-You can see a representative example of this analysis on the
-[Example](./\_pages/example.markdown) page. You can choose a specific
-state to look at, on the [States](./\_pages/states.markdown) page.
