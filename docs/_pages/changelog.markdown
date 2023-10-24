@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- New home / details factoring (10-24-23).
 - More content tweaks (10-14-23).
 - Final content edits (10-10-23).
 - Added "Not yet ready" disclaimer (10-02-23).
