@@ -17,7 +17,7 @@ This page explains what we did and why we did it.
 -   [Workflow](#workflow)
 -   [Code](#code)
 
-From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.markdown) page.
+From here on, **bolded** terms are defined on the [Glossary](./glossary.markdown) page.
 
 ### Motivation
 

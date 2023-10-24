@@ -14,7 +14,7 @@ We explore two ideas here:
 
 By population geography we mean how many people live where in a state.
 
-From here on, **bolded** terms are defined on the [Glossary](./_pages/glossary.markdown) page.
+From here on, **bolded** terms are defined on the [Glossary](./glossary.markdown) page.
 
 In more detail:
 
@@ -89,3 +89,4 @@ In more detail:
     districts showing the mix of policy choices (trade-offs) that each
     state made.
 
+For more background, see the [Background](./background.markdown) page. 
