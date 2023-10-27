@@ -12,6 +12,8 @@ For documentation, type:
 
 $ scripts/generate_summary.py -h
 
+NOTE - Create an _includes directory in ~/Downloads, before running this.
+
 """
 
 

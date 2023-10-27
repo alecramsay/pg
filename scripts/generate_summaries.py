@@ -7,6 +7,8 @@ For example:
 
 $ scripts/generate_summaries.py
 
+NOTE - Create an _includes directory in ~/Downloads, before running this.
+
 """
 
 import os
