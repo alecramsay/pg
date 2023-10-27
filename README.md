@@ -1,6 +1,6 @@
 # pg
 
-The [Redistricting Alamanac: 2022](https://alecramsay.github.io/pg/)
+This [website](https://alecramsay.github.io/pg/)
 explores the tradeoffs for congressional redistricting inherent in states' political geography. 
 
 ## Dependencies
