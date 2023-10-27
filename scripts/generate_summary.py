@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Generate a state summary.
+Generate a state summary & district details.
 
 For example:
 
@@ -151,40 +151,28 @@ def main() -> None:
         for metric in ratings:
             deltas[label][metric] -= baseline_ratings[metric]
 
-    # Write the summary
+    # Build the summary
 
-    lines: list[str] = list()
+    summary_lines: list[str] = list()
+    districts_lines: list[str] = list()
     line: str = ""
 
-    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are the same for comparison <a href='https://medium.com/dra-2020/notable-maps-66d744933a48'>notable maps from Dave’s Redistricting (DRA)</a> and the Root map:</p>"
-    lines.append(line)
+    line = f"<p>An average of {average_overlap * 100:.0f}% of population-weighted precinct assignments are the same for comparison <b>notable maps</b> and the <b>root map</b>:</p>"
+    districts_lines.append(line)
 
-    lines.append("<ul>")
+    districts_lines.append("<ul>")
     for label, overlap in overlaps.items():
         if label == "Average":
             continue
         line = f"  <li>The {qualify_label(label)} map: {overlap * 100:.1f}%</li>"
-        lines.append(line)
-    lines.append("</ul>")
+        districts_lines.append(line)
+    districts_lines.append("</ul>")
 
-    line = f"<p>The overlaps are described in detail below in the “Overlaps: Districts vs. Root” section.</p>"
-    lines.append(line)
+    # Build the districts details
 
     baseline_absolute: list[int] = [
         baseline_ratings[metric] for metric in baseline_ratings
     ]
-    line = f"<p>Relative to the Root map ratings &#8212; {baseline_absolute}, for proportionality, competitiveness, opportunity for minority representation, compactness, and county-district splitting, respectively &#8212; the notable maps illustrate some major quantifiable policy trade-offs:</p>"
-    lines.append(line)
-
-    lines.append("<ul>")
-    for label, ratings in ratings_dict.items():
-        if label in ["Official", "Baseline", "Root"]:
-            continue
-        relative: list[int] = [deltas[label][metric] for metric in deltas[label]]
-        absolute: list[int] = [ratings[metric] for metric in ratings]
-        line = f"  <li>The {qualify_label(label)} map trades-off {relative} for {absolute} ratings.</li>"
-        lines.append(line)
-    lines.append("</ul>")
 
     official_relative: list[int] = [
         deltas["Official"][metric] for metric in deltas["Official"]
@@ -192,16 +180,40 @@ def main() -> None:
     official_absolute: list[int] = [
         ratings_dict["Official"][metric] for metric in ratings_dict["Official"]
     ]
-    line = f"<p>The Official map trades-off {official_relative} for {official_absolute} ratings.</p>"
-    lines.append(line)
+    line = (
+        f"<p>The official congressional map makes trades-offs {official_relative}"
+        f"<p>relative to the <b>root map</b> ratings {baseline_absolute}"
+        f"to yield {official_absolute} proportionality, competitiveness, minority opportunity, compactness, and county-district splitting ratings, respectively.</p>"
+    )
+    summary_lines.append(line)
 
-    line = f"<p>The trade-offs are described in more detail below in the “Trade-offs: Ratings vs. Root” section.</p>"
-    lines.append(line)
+    line = f"<p>Similarly, the <b>notable maps</b> suggest some major quantifiable policy trade-offs:</p>"
+    summary_lines.append(line)
+
+    summary_lines.append("<ul>")
+    for label, ratings in ratings_dict.items():
+        if label in ["Official", "Baseline", "Root"]:
+            continue
+        relative: list[int] = [deltas[label][metric] for metric in deltas[label]]
+        absolute: list[int] = [ratings[metric] for metric in ratings]
+        line = f"  <li>The {qualify_label(label)} map trades-off {relative} for {absolute} ratings.</li>"
+        summary_lines.append(line)
+    summary_lines.append("</ul>")
+
+    # Write the summary file
 
     html_path: str = os.path.join(output_dir, f"{xx}_summary.html")
 
     with open(html_path, "w") as f:
-        for line in lines:
+        for line in summary_lines:
+            f.write(line + "\n")
+
+    # Write the district details file
+
+    html_path: str = os.path.join(output_dir, f"{xx}_districts.html")
+
+    with open(html_path, "w") as f:
+        for line in districts_lines:
             f.write(line + "\n")
 
     pass
