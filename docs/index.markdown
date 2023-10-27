@@ -58,11 +58,3 @@ You can see an example of this analysis on the [Example](./_pages/example.markdo
 You can choose a specific state to look at, on the [States](./_pages/states.markdown) page.
 A detailed description of and the rationale for our method is on the [Details](./_pages/details.markdown) page. 
 Key terms are defined on the [Glossary](./_pages/glossary.markdown) page.
-
-### Acknowledgements
-
-We would like to thank DRA for the input data and the wonderful platform for sharing our maps, 
-their user community for pushing the limits of congressional redistricting with their notable maps, 
-the [VEST](https://dataverse.harvard.edu/dataverse/electionscience) team
-for the election data making the partisan ratings possible, and 
-Terry Crowley for making the large scope of this project feasible.
