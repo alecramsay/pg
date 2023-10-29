@@ -7,54 +7,61 @@ big-radar-width: 500
 map-width: 700
 ---
 
-<h2>Trade-offs in Redistricting</h2>
+<h2>Redistricting Trade-offs Revealed</h2>
 
 Redistricting involves trade-offs between various policy objectives. 
-The population geography of a state &#8212; how many people live where &#8212; frames these trade-offs. 
-A mapmaker’s choices are revealed by comparing their map to the natural starting point for redistricting in that state.
+The trade-offs that a state made in drawing their official congressional map are 
+revealed by comparing it to the natural starting point for redistricting in that state. 
+The range of alternatives that the mapmakers had are similarly illuminated using maps that optimize for 
+proportionality, competitiveness, minority representation, compactness, and county-district splitting. 
 
 {% assign xx = page.xx %}
 
-{% capture baseline-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
-{% endcapture %}
-{% assign baseline-png = baseline-png | strip_newlines %}
+<table style="border:0px">
+    <tr>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Official_radar.png"
+                alt="{{ site.data.maps[0].label }}" title="{{ site.data.maps[0].label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Proportional_radar.png"
+                alt="There is no most proportional map." title="{{ site.data.maps[1].qualified-label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Competitive_radar.png"
+                alt="There is no most competitive map." title="{{ site.data.maps[2].qualified-label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+    </tr>
+    <tr>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Minority_radar.png"
+                alt="There is no best minority map." title="{{ site.data.maps[3].qualified-label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Compact_radar.png"
+                alt="There is no most compact map." title="{{ site.data.maps[4].qualified-label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+        <td style="border:0px">
+            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Splitting_radar.png"
+                alt="There is no least splitting map." title="{{ site.data.maps[3].qualified-label }}"
+                width="{{ page.small-radar-width }}" />
+        </td>
+    </tr>
+</table>
 
-{% assign state = site.data.states | where:"xx", xx | first %}
+<p style="text-align: left"><small>Figure 1: The official and five notable maps for NC compared to the root map</small></p>
 
-{% capture baseline-link %}
-https://davesredistricting.org/join/{{ state["baseline"] }}
-{% endcapture %}
-{% assign baseline-link = baseline-link | strip_newlines %}
+That natural starting point for redistricting is a map where 
+people who live near each other tend to be in the same district. 
+For simplicity, we call this the **root map** or **root plan**.
 
-<p style="text-align: left">
-    <a href="{{ baseline-link }}">
-        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
-            width="{{ page.map-width }}" />
-    </a>
-</p>
-<p style="text-align: left"><small>Figure 1: The root congressional districts for North Carolina</small></p>
+You can see an example of this analysis on the [Example](./_pages/example.markdown) page, and 
+you can pick a state to look at on the [States](./_pages/states.markdown) page.
 
-
-That natural starting point for redistricting is a map that is maximally population compact 
-&#8212; people who live near each other tend to be in the same district. 
-We call this a root map.
-
-Other maps for a state can be described as deltas from it, 
-like the points in a coordinate system are described relative to the origin. 
-Root maps aren’t normative. 
-The potential plans for a state are unavoidably informed by the root map 
-which makes it a good baseline against which to compare them.
-
-For each state, we compare the five [notable maps](https://medium.com/dra-2020/notable-maps-66d744933a48) 
-in [Dave's Redistricting](https://davesredistricting.org/) (DRA) 
-&#8212; which optimize for proportionality, competitiveness, minority representation, compactness, and county-district splitting &#8212; to the root map using 
-the DRA [ratings](https://medium.com/dra-2020/ratings-deep-dive-c03290659b7)
-that use a scale of [0--100] where bigger is always better. 
-We do the same for the official map. 
-These comparisons show some major quantifiable trade-offs inherent in congressional redistricting for a state.
-
-You can see an example of this analysis on the [Example](./_pages/example.markdown) page. 
-You can choose a specific state to look at, on the [States](./_pages/states.markdown) page.
-A detailed description of and the rationale for our method is on the [Details](./_pages/details.markdown) page. 
-Key terms are defined on the [Glossary](./_pages/glossary.markdown) page.
+A detailed description of and the rationale for our method is on the [How It Works](./_pages/details.markdown) page. 
+Key terms are bolded and defined on the [Glossary](./_pages/glossary.markdown) page.
