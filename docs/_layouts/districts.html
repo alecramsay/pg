@@ -6,7 +6,7 @@ big-radar-width: 500
 map-width: 700
 ---
 
-<!-- SUMMARY ANALYSIS -->
+<!-- DISTRICT ANALYSIS -->
 
 {{ content }}
 
@@ -26,9 +26,7 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 {% endcapture %}
 {% assign baseline-link = baseline-link | strip_newlines %}
 
-<h3>Root Districts</h3>
-
-<p>These are the Root congressional districts:</p>
+<p>These are the root congressional districts:</p>
 <p style="text-align: left">
     <a href="{{ baseline-link }}">
         <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
@@ -42,9 +40,7 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 
 <!-- MAPS TABS -->
 
-<h3>Overlaps: Districts vs. Root</h3>
-
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Root map:</p>
+<p>These tabs compare the district boundaries of official map and the five notable maps with the root map:</p>
 
 <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 
@@ -95,58 +91,6 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
   document.getElementById("defaultOpen").click();
 </script>
   
-<h3>Trade-offs: Ratings vs. Root</h3>
-
-<!-- RADAR DIAGRAMS -->
-
-<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Root map (orange = root map; green = comparison map):</p>
-
-<table style="border:0px">
-    <tr>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Official_radar.png"
-                alt="{{ site.data.maps[0].label }}" title="{{ site.data.maps[0].label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Proportional_radar.png"
-                alt="There is no most proportional map." title="{{ site.data.maps[1].qualified-label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Competitive_radar.png"
-                alt="There is no most competitive map." title="{{ site.data.maps[2].qualified-label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-    </tr>
-    <tr>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Minority_radar.png"
-                alt="There is no best minority map." title="{{ site.data.maps[3].qualified-label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Compact_radar.png"
-                alt="There is no most compact map." title="{{ site.data.maps[4].qualified-label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-        <td style="border:0px">
-            <img src="{{ site.baseurl }}/assets/images/{{ xx }}_2022_Congress_Splitting_radar.png"
-                alt="There is no least splitting map." title="{{ site.data.maps[3].qualified-label }}"
-                width="{{ page.small-radar-width }}" />
-        </td>
-    </tr>
-</table>
-
-<!-- RATINGS TABLE -->
-
-{% capture ratings-file %}
-{{ xx }}_2022_Congress_ratings
-{% endcapture %}
-{% assign ratings-file = ratings-file | strip_newlines %}
-
-{% assign ratings = site.data[ratings-file] %}
-
 <style>
     #ratings-table {
         width: 900px;

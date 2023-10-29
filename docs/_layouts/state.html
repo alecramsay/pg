@@ -12,94 +12,9 @@ map-width: 700
 
 {% assign xx = page.xx %}
 
-<!-- BASELINE DISTRICTS -->
-
-{% capture baseline-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
-{% endcapture %}
-{% assign baseline-png = baseline-png | strip_newlines %}
-
-{% assign state = site.data.states | where:"xx", xx | first %}
-
-{% capture baseline-link %}
-https://davesredistricting.org/join/{{ state["baseline"] }}
-{% endcapture %}
-{% assign baseline-link = baseline-link | strip_newlines %}
-
-<h3>Root Districts</h3>
-
-<p>These are the Root congressional districts:</p>
-<p style="text-align: left">
-    <a href="{{ baseline-link }}">
-        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
-            width="{{ page.map-width }}" />
-    </a>
-</p>
-
-
-<!-- Common grid functionality -->
-<script src="{{ site.baseurl }}/assets/js/grid.js"></script>
-
-<!-- MAPS TABS -->
-
-<h3>Overlaps: Districts vs. Root</h3>
-
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Root map:</p>
-
-<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
-
-<!-- Tab links -->
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
-        site.data.maps[0].qualified-label }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
-        site.data.maps[1].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
-        site.data.maps[2].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
-        site.data.maps[3].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
-        site.data.maps[4].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
-        site.data.maps[5].qualified-label
-        }}</button>
-</div>
-
-<!-- Tab content -->
-
-<!-- Official -->
-{% include detail.html index=0 %}
-
-<!-- Most Proportional -->
-{% include detail.html index=1 %}
-
-<!-- Most Competitive -->
-{% include detail.html index=2 %}
-
-<!-- Best Minority -->
-{% include detail.html index=3 %}
-
-<!-- Most Compact -->
-{% include detail.html index=4 %}
-
-<!-- Least Splitting -->
-{% include detail.html index=5 %}
-
-<!-- Show the Official tab by default -->
-<script>
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
-</script>
-  
-<h3>Trade-offs: Ratings vs. Root</h3>
-
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Root map (orange = root map; green = comparison map):</p>
+<p>These radar diagrams compare the ratings of official map and the five notable maps with the root map (orange = root map; green = comparison map):</p>
 
 <table style="border:0px">
     <tr>
@@ -146,6 +61,8 @@ https://davesredistricting.org/join/{{ state["baseline"] }}
 {% assign ratings-file = ratings-file | strip_newlines %}
 
 {% assign ratings = site.data[ratings-file] %}
+
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="{{ xx }}_districts.html">here</a>.</p>
 
 <style>
     #ratings-table {
