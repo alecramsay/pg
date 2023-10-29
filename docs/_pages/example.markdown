@@ -23,7 +23,7 @@ This is an annotated example of the analysis of a state's political geography, u
 competitiveness, minority representation, compactness, and splitting are then compared to the ratings of the root map.]
 
 [The first comparison is graphical with a set of pairwise radar diagrams.
-These show that North Carolina's official congressional trades-off some competitiveness and compactness for less county-district splitting. 
+These show that North Carolina's official congressional map trades-off some competitiveness and compactness for less county-district splitting. 
 They also show that North Carolina could have produced a maximally competitive map by reducing compactness or 
 given minorities the greatest opportunity for representation by reducing both competitiveness and compactness.]
 
