@@ -19,113 +19,14 @@ At the top is a summary of what the various exhibits reveal. That is not shown h
 
 {% assign xx = page.xx %}
 
-<!-- BASELINE DISTRICTS -->
-
-{% capture baseline-png %}
-{{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
-{% endcapture %}
-{% assign baseline-png = baseline-png | strip_newlines %}
-
-{% assign state = site.data.states | where:"xx", xx | first %}
-
-{% capture baseline-link %}
-https://davesredistricting.org/join/{{ state["baseline"] }}
-{% endcapture %}
-{% assign baseline-link = baseline-link | strip_newlines %}
-
-<h3>Root Districts</h3>
-
-[First the Root districts are shown.
-You can click on the image to go to the map in DRA.]
-
-<p>These are the Root congressional districts:</p>
-<p style="text-align: left">
-    <a href="{{ baseline-link }}">
-        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
-            width="{{ page.map-width }}" />
-    </a>
-</p>
-
-<!-- Common grid functionality -->
-<script src="{{ site.baseurl }}/assets/js/grid.js"></script>
-
-<!-- MAPS TABS -->
-
-<h3>Overlaps: Districts vs. Root</h3>
-
-[Then each of the six maps are compared to the Root map. 
-For each map, there is: 
-
-* an image of the selected comparison map, 
-* an image of the regions formed by intersecting the district boundaries of the two maps with the common core districts highlighted, and
-* a table showing data for each intersecting region
-
-The intersecting regions are labeled "#/#" where the first # is the district in the Root map,
-and the second # is the district in the comparison map.
-The from/to labels for district cores are the same, the same district id in both maps.
-You can click on the images to see the maps in DRA.]
-
-<p>These tabs compare the district boundaries of Official map and the five notable maps with the Root map:</p>
-
-<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
-
-<!-- Tab links -->
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[0].label }}')" id="defaultOpen">{{
-        site.data.maps[0].qualified-label }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[1].label }}')">{{
-        site.data.maps[1].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[2].label }}')">{{
-        site.data.maps[2].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[3].label }}')">{{
-        site.data.maps[3].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[4].label }}')">{{
-        site.data.maps[4].qualified-label
-        }}</button>
-    <button class="tablinks" onclick="openTab(event, '{{ site.data.maps[5].label }}')">{{
-        site.data.maps[5].qualified-label
-        }}</button>
-</div>
-
-<!-- Tab content -->
-
-<!-- Official -->
-{% include detail.html index=0 %}
-
-<!-- Most Proportional -->
-{% include detail.html index=1 %}
-
-<!-- Most Competitive -->
-{% include detail.html index=2 %}
-
-<!-- Best Minority -->
-{% include detail.html index=3 %}
-
-<!-- Most Compact -->
-{% include detail.html index=4 %}
-
-<!-- Least Splitting -->
-{% include detail.html index=5 %}
-
-<!-- Show the Official tab by default -->
-<script>
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
-</script>
-  
-<h3>Trade-offs: Ratings vs. Root</h3>
-
-[The ratings for the Official and the five notable maps that maximize proportionality, 
+[The ratings for the official and the five notable maps that maximize proportionality, 
 competitiveness, minority representation, compactness, and splitting are then compared to the ratings 
-of the Baseline map.
+of the root map.
 First with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of Official map and the five notable maps with the Root map (orange = root map; green = comparison map):</p>
+<p>These radar diagrams compare the ratings of 0fficial map and the five notable maps with the root map (orange = root map; green = comparison map):</p>
 
 <table style="border:0px">
     <tr>
@@ -228,6 +129,10 @@ First with a set of pairwise radar diagrams.]
 
 <div id="ratings-table" class="ag-theme-alpine">
 </div>
+
+[At the end, there's a link to a detailed comparison of the district boundaries across these six maps.]
+
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="{{ xx }}-districts.html">here</a>.</p>
 
 <!-- Grid -->
 <script type="text/javascript" charset="utf-8">
