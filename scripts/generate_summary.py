@@ -171,12 +171,12 @@ def main() -> None:
     districts_lines.append("</ul>")
 
     # Build the districts details
+    # NOTE - These lists are enclosed in square brackets. I've edited the results to use parentheses.
 
     baseline_absolute: list[int] = [
         baseline_ratings[metric] for metric in baseline_ratings
     ]
 
-    # NOTE - These lists are enclosed in square brackets. I've edited the results to use parentheses.
     official_relative: list[int] = [
         deltas["Official"][metric] for metric in deltas["Official"]
     ]

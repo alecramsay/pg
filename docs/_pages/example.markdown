@@ -10,23 +10,23 @@ map-width: 700
 ---
 
 This is an annotated example of the analysis of a state's political geography, using North Carolina as an example.
+
 [Annotations below are shown in square brackets like this.]
 
 <!-- SUMMARY ANALYSIS -->
 
-[There is a separate page for each state. 
-At the top is a summary of what the various exhibits reveal. That is not shown here.]
+[At the top is a textual summary of the trade-offs. That is not shown here.]
 
 {% assign xx = page.xx %}
 
 [The ratings for the official and the five notable maps that maximize proportionality, 
 competitiveness, minority representation, compactness, and splitting are then compared to the ratings 
 of the root map.
-First with a set of pairwise radar diagrams.]
+The first comparison is graphical with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
-<p>These radar diagrams compare the ratings of 0fficial map and the five notable maps with the root map (orange = root map; green = comparison map):</p>
+<p>These radar diagrams compare the ratings of official map and the five notable maps with the root map (orange = root map; green = comparison map):</p>
 
 <table style="border:0px">
     <tr>
@@ -67,7 +67,7 @@ First with a set of pairwise radar diagrams.]
 
 <!-- RATINGS TABLE -->
 
-[Then in tabular form for convenience.]
+[The second comparison shows the ratings in tabular form for convenience.]
 
 {% capture ratings-file %}
 {{ xx }}_2022_Congress_ratings
@@ -132,7 +132,7 @@ First with a set of pairwise radar diagrams.]
 
 [At the end, there's a link to a detailed comparison of the district boundaries across these six maps.]
 
-<p>You can see a detailed comparison of the district boundaries in these maps <a href="{{ xx }}-districts.html">here</a>.</p>
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts.html">here</a>.</p>
 
 <!-- Grid -->
 <script type="text/javascript" charset="utf-8">
