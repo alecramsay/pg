@@ -54,7 +54,7 @@ proportionality, competitiveness, minority representation, compactness, and coun
     </tr>
 </table>
 
-<p style="text-align: left"><small>Figure 1: The official and five notable maps for NC compared to the root map</small></p>
+<p style="text-align: left"><small>Figure 1: The official and five notable maps for North Carolina compared to the root map</small></p>
 
 That natural starting point for redistricting is a map where 
 people who live near each other tend to be in the same district. 

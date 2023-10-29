@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: districts
 title: District Details for Arkansas
 permalink: states/AR-districts/
 

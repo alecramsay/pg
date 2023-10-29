@@ -183,8 +183,8 @@ def main() -> None:
         ratings_dict["Official"][metric] for metric in ratings_dict["Official"]
     ]
     line = (
-        f"<p>The official congressional map makes trades-offs {official_relative}"
-        f"<p>relative to the <b>root map</b> ratings {baseline_absolute}"
+        f"<p>The official congressional map makes trades-offs {official_relative} "
+        f"relative to the <b>root map</b> ratings {baseline_absolute} "
         f"to yield {official_absolute} proportionality, competitiveness, minority opportunity, compactness, and county-district splitting ratings, respectively.</p>"
     )
     summary_lines.append(line)

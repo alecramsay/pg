@@ -1,5 +1,5 @@
 ---
-layout: state
+layout: districts
 title: District Details for Georgia
 permalink: states/GA-districts/
 
