@@ -19,10 +19,10 @@ This is an annotated example of the analysis of a state's political geography, u
 
 {% assign xx = page.xx %}
 
-[The ratings for the official and the five notable maps that maximize proportionality, 
-competitiveness, minority representation, compactness, and splitting are then compared to the ratings 
-of the root map.
-The first comparison is graphical with a set of pairwise radar diagrams.]
+[Then the ratings for the official and the five notable maps that maximize proportionality, 
+competitiveness, minority representation, compactness, and splitting are then compared to the ratings of the root map.]
+
+[The first comparison is graphical with a set of pairwise radar diagrams.]
 
 <!-- RADAR DIAGRAMS -->
 
@@ -132,7 +132,7 @@ The first comparison is graphical with a set of pairwise radar diagrams.]
 
 [At the end, there's a link to a detailed comparison of the district boundaries across these six maps.]
 
-<p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts.html">here</a>.</p>
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts/">here</a>.</p>
 
 <!-- Grid -->
 <script type="text/javascript" charset="utf-8">
