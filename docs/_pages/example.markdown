@@ -9,15 +9,14 @@ big-radar-width: 500
 map-width: 700
 ---
 
-This is an annotated example of the analysis of a state's political geography, using North Carolina as an example.
-
-<p style="color:DodgerBlue;">Annotations below are shown in square brackets like this.</p>
+<p style="color:DodgerBlue;">This is an annotated example of the analysis of a state's political geography, using North Carolina as an example. The annotations below are shown in blue text like this.</p>
 
 <!-- SUMMARY ANALYSIS -->
 
 <p style="color:DodgerBlue;">At the top is a textual summary of the trade-offs. That is not shown here.</p>
 
 {% assign xx = page.xx %}
+{% include {{ xx }}_summary.html %}
 
 <p style="color:DodgerBlue;">Then the ratings for the official and the five notable maps that maximize proportionality, 
 competitiveness, minority representation, compactness, and splitting are then compared to the ratings of the root map.</p>
