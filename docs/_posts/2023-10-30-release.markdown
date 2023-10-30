@@ -4,7 +4,11 @@ title:  "Ship it!"
 date:   2023-10-30 -8:00:00 -0800
 categories: news
 ---
-The site is now live. We appreciate all the early feeddback we got from reviewers.
+This site is now live!
+
+We appreciate all the early feeddback we got from reviewers.
+If you previewed an early version, the structure and format has changed quite a bit
+even though the content hasn't.
 
 We welcome any and all feedback, from typos to fundamental substantive comments and everything in between.
 And, of course, questions.
