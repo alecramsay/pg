@@ -11,22 +11,22 @@ map-width: 700
 
 This is an annotated example of the analysis of a state's political geography, using North Carolina as an example.
 
-[Annotations below are shown in square brackets like this.]
+<p style="color:DodgerBlue;">Annotations below are shown in square brackets like this.</p>
 
 <!-- SUMMARY ANALYSIS -->
 
-[At the top is a textual summary of the trade-offs. That is not shown here.]
+<p style="color:DodgerBlue;">At the top is a textual summary of the trade-offs. That is not shown here.</p>
 
 {% assign xx = page.xx %}
 
-[Then the ratings for the official and the five notable maps that maximize proportionality, 
-competitiveness, minority representation, compactness, and splitting are then compared to the ratings of the root map.]
+<p style="color:DodgerBlue;">Then the ratings for the official and the five notable maps that maximize proportionality, 
+competitiveness, minority representation, compactness, and splitting are then compared to the ratings of the root map.</p>
 
-[The first comparison is graphical with a set of pairwise radar diagrams.
+<p style="color:DodgerBlue;">The first comparison is graphical with a set of pairwise radar diagrams.
 These show that North Carolina's official congressional map trades-off some competitiveness and compactness for less county-district splitting. 
 They also show that North Carolina could have produced a maximally competitive map by reducing compactness.
 Similarly, they could have given minorities the greatest opportunity for representation,
-by reducing both competitiveness and compactness while still retaining a large degree of partisan proportionality.]
+by reducing both competitiveness and compactness while still retaining a large degree of partisan proportionality.</p>
 
 <!-- RADAR DIAGRAMS -->
 
@@ -71,7 +71,7 @@ by reducing both competitiveness and compactness while still retaining a large d
 
 <!-- RATINGS TABLE -->
 
-[The second comparison shows the ratings in tabular form for convenience.]
+<p style="color:DodgerBlue;">The second comparison shows the ratings in tabular form for convenience.</p>
 
 {% capture ratings-file %}
 {{ xx }}_2022_Congress_ratings
@@ -134,7 +134,7 @@ by reducing both competitiveness and compactness while still retaining a large d
 <div id="ratings-table" class="ag-theme-alpine">
 </div>
 
-[At the end, there's a link to a detailed comparison of the district boundaries across these six maps.]
+<p style="color:DodgerBlue;">At the end, there's a link to a detailed comparison of the district boundaries across these six maps.</p>
 
 <p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts/">here</a>.</p>
 
