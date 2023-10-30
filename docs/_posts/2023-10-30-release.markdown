@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Ship it!"
+date:   2023-10-30 -8:00:00 -0800
+categories: news
+---
+The site is now live. We appreciate all the early feeddback we got from reviewers.
+
+We welcome any and all feedback, from typos to fundamental substantive comments and everything in between.
+And, of course, questions.

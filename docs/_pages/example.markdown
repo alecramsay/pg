@@ -24,8 +24,9 @@ competitiveness, minority representation, compactness, and splitting are then co
 
 [The first comparison is graphical with a set of pairwise radar diagrams.
 These show that North Carolina's official congressional map trades-off some competitiveness and compactness for less county-district splitting. 
-They also show that North Carolina could have produced a maximally competitive map by reducing compactness or 
-given minorities the greatest opportunity for representation by reducing both competitiveness and compactness.]
+They also show that North Carolina could have produced a maximally competitive map by reducing compactness.
+Similarly, they could have given minorities the greatest opportunity for representation,
+by reducing both competitiveness and compactness while still retaining a large degree of partisan proportionality.]
 
 <!-- RADAR DIAGRAMS -->
 
