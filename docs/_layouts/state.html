@@ -62,8 +62,6 @@ map-width: 700
 
 {% assign ratings = site.data[ratings-file] %}
 
-<p>You can see a detailed comparison of the district boundaries in these maps <a href="../{{ xx }}-districts/">here</a>.</p>
-
 <style>
     #ratings-table {
         width: 900px;
@@ -165,5 +163,28 @@ map-width: 700
             }
         })
     }
-
 </script>
+	
+<!-- BASELINE DISTRICTS -->
+
+{% capture baseline-png %}
+{{ site.baseurl }}/assets/images/{{ xx }}_2020_Congress_Baseline_map.png
+{% endcapture %}
+{% assign baseline-png = baseline-png | strip_newlines %}
+
+{% assign state = site.data.states | where:"xx", xx | first %}
+
+{% capture baseline-link %}
+https://davesredistricting.org/join/{{ state["baseline"] }}
+{% endcapture %}
+{% assign baseline-link = baseline-link | strip_newlines %}
+
+<p>These are the root congressional districts:</p>
+<p style="text-align: left">
+    <a href="{{ baseline-link }}">
+        <img src="{{ baseline-png }}" alt="Root districts" title="Click to view the map in Dave's Redistricting"
+            width="{{ page.map-width }}" />
+    </a>
+</p>
+
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="../{{ xx }}-districts/">here</a>.</p>
