@@ -6,6 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
+- Changed copyright to my personal email address (10-30-23).
 - Final refactoring with blog post (10-30-23).
 - New home / details factoring, futzing with links (10-24-23).
 - More content tweaks (10-14-23).

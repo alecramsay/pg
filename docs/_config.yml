@@ -1,9 +1,9 @@
 # file: `_config.yml`
 
-title: Redistricting Almanac&#58; 2022
+title: Redistricting Trade-offs Illuminated
 author:
   name:  Alec Ramsay
-  email: alec@davesredistricting.org
+  email: a73cram5ay@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Explores the tradeoffs for redistricting inherent in states' political geography 
 baseurl: /pg
