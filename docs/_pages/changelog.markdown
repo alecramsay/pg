@@ -6,7 +6,7 @@ permalink: changelog/
 
 This page tracks major changes to the site, in reverse chronological order:
 
-- Final refactoring ... ... (10-29-23).
+- Final refactoring (10-29-23).
 - New home / details factoring, futzing with links (10-24-23).
 - More content tweaks (10-14-23).
 - Final content edits (10-10-23).

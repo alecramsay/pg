@@ -70,6 +70,9 @@ by reducing both competitiveness and compactness while still retaining a large d
 
 <!-- RATINGS TABLE -->
 
+<!-- Common grid functionality -->
+<script src="{{ site.baseurl }}/assets/js/grid.js"></script>
+
 <p style="color:DodgerBlue;">The second comparison shows the ratings in tabular form for convenience.</p>
 
 {% capture ratings-file %}
@@ -133,10 +136,6 @@ by reducing both competitiveness and compactness while still retaining a large d
 <div id="ratings-table" class="ag-theme-alpine">
 </div>
 
-<p style="color:DodgerBlue;">At the end, there's a link to a detailed comparison of the district boundaries across these six maps.</p>
-
-<p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts/">here</a>.</p>
-
 <!-- Grid -->
 <script type="text/javascript" charset="utf-8">
     const ratingsColumns = [
@@ -186,3 +185,8 @@ by reducing both competitiveness and compactness while still retaining a large d
     }
 
 </script>
+	
+<p style="color:DodgerBlue;">At the end, there's a link to a detailed comparison of the district boundaries across these six maps.</p>
+
+<p>You can see a detailed comparison of the district boundaries in these maps <a href="../states/{{ xx }}-districts/">here</a>.</p>
+	
