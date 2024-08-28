@@ -9,6 +9,8 @@ map-width: 700
 
 <h2>Redistricting Trade-offs Illuminated</h2>
 
+*Note: this site has been superceded by [Trade-offs in Redistricting](https://rdatools.github.io/tradeoffs/).*
+
 Redistricting involves trade-offs between various policy objectives. 
 The trade-offs that a state made in drawing their official 2022 congressional map are 
 revealed by comparing it to the natural starting point for redistricting in that state. 
